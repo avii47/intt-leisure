@@ -5,6 +5,11 @@ import './App.css';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import DiscoverSection from './components/DiscoverSection';
+import MindfulnessTourismSection from './components/MindfulnessTourismSection';
+import AboutSection from './components/AboutSection';
+import ServicesSection from './components/ServicesSection';
+import TestimonialSection from './components/TestimonialSection';
+import FooterSection from './components/FooterSection';
 
 function App() {
   return (
@@ -12,6 +17,11 @@ function App() {
       <Navbar />
       <HeroSection />
       <DiscoverSection />
+      <MindfulnessTourismSection />
+      <AboutSection />
+      <ServicesSection />
+      <TestimonialSection />
+      <FooterSection />
     </div>
   );
 }

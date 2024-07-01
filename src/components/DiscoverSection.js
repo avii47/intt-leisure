@@ -3,25 +3,35 @@ import ContentCard from '../components/ContentCard';
 
 const DiscoverSection = () => {
 
-    const content = {
-        'img': 'https://img.freepik.com/free-photo/thoughtful-pretty-girl-trying-calm-down-sitting-lotus-pose-marble-slab_8353-6639.jpg?t=st=1719571074~exp=1719574674~hmac=97fd683e6e394b72a9bab8fa369857bceb413055afed3d19bb40e5060a962a1f&w=996',
-        'title': 'Connect with Nature and Rejuvenate Your Soul',
-        'sub': 'Embraced by verdant jungle with panoramic views of the Indian Ocean'
+    const content1 = {
+      'img': 'https://img.freepik.com/free-photo/close-up-kid-meditating-mat_23-2149101612.jpg?t=st=1719801378~exp=1719804978~hmac=3e4d591b0fae80b0628488c60a0e3917a69ac930587c97450e94aa5d431cc24d&w=996',
+      'title': 'What is the original concept of Mindfulness?',
+      'sub': 'The research backed technique that elevate a leader into the next level'
+    }
+    const content2 = {
+      'img': 'https://www.rideekanda.com/uploads/2022/1/rideekanda_forest_monastery_sri_lanka_50.jpg',
+      'title': 'How can you practice it in Sri Lanka?',
+      'sub': 'Sri Lanka, the place where authentic mindfulness practice is preserve over 2500 year'
+    }
+    const content3 = {
+      'img': 'https://img.freepik.com/free-photo/woman-sitting-yoga-pose-beach_1098-1454.jpg?t=st=1719801604~exp=1719805204~hmac=901c52a24550ba8e1142ec57d4236bf6941d556a38a6aa1a5c19ba5a49e560dd&w=996',
+      'title': 'What benefits you will have with mindfulness practice? ',
+      'sub': ' Get a a truly rejuvenating and life-changing experience through practice'
     }
 
+
   return (
-    <section id="discover-section" className="section">
-      <div className="discover-content">
+    <section id="discover-section" className="section justify-content-center d-flex">
+      <div className="discover-content justify-content-center">
         <h6>Discover</h6>
-        <hr style={{ width: '60px' }} />
-        <h3>Rediscover yourself with Mindfulness Tours and Retreats</h3>
-        <p>Embraced by verdant jungle with panoramic views of the Indian Ocean, ÀNI Sri Lanka, an all-inclusive luxury private resort, welcomes exclusively your family and friends alone to this private beachfront estate on the island’s fabled south coast.</p>
+        <hr style={{ width: '60px', marginLeft: '470px' }} />
+        <h3>What is Mindfulness?</h3>
+        <p>The original concept of Mindfulness backed by reserch</p>
         <div className="d-flex discover-cards">
-          <ContentCard content={content}></ContentCard>
+          <ContentCard content={content1}></ContentCard>
+          <ContentCard content={content2}></ContentCard>
+          <ContentCard content={content3}></ContentCard>
         </div>
-        <br /><br />
-        <button type="button" className="btn btn-outline-dark">Explore</button>
-        <button type="button" className="btn btn-link" style={{ textDecoration: 'none' }}>Learn more ></button>
       </div>
     </section>
   );
