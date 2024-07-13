@@ -1,0 +1,38 @@
+.navbar-container{
+    padding-top: 1.563rem;
+    padding-bottom: 1.563rem;
+    justify-content: center;
+    background-color: transparent !important;
+    transition: background-color 0.3s ease-in-out;
+}
+.navbar-scrolled {
+    background-color: white !important;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+.navbar-scrolled .nav-item{
+    color: black;
+}
+.logo {
+    height: 5rem;
+}
+.nav-container{
+    width: 85rem;
+    justify-content: center;
+}
+.nav-item {
+    width: 7.5rem;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+}
+.nav-item:hover {
+    font-weight: 800;
+    transition: 0.3s ease-in-out;
+}
+.navbar-offcanvas{
+    max-width: 70%;
+}
+.nav-item-container .navbar-offcanvas{
+    margin-left: -50rem !important
+}

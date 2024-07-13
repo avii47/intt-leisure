@@ -1,0 +1,48 @@
+
+.footer-content{
+    padding: 0 12rem 0 12rem;
+}
+.ft-social-icon{
+    margin-top: 1.1rem;
+    margin-right: 1.8rem;
+    font-size: 25px;
+}
+.pg-link{
+    text-align: left;
+}
+.page-list{
+    list-style: none;
+    margin-left: -2rem;
+}
+.page-list li{
+    margin-top: 0.5rem;
+}
+.btn-footer{
+    font-size: 10px;
+    align-content: start;
+}
+.btn-footer-email{
+    width: 23.625rem;
+    height: 2.4rem;
+    margin-right: 1.25rem;
+}
+.btn-footer-subscribe{
+    width: 9.375rem;
+}
+@media only screen and (max-width: 470px) {
+    .btn-footer-email{
+      width: 10rem;
+      margin-left: 1rem;
+    }
+    .btn-footer-subscribe{
+      width: 6rem;
+    }
+    .footer-content{
+        padding: 0 2rem 0 2rem;
+    }
+    .pg-link{
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        text-align: center;
+    }
+}

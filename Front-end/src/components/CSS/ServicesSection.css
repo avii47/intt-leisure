@@ -1,0 +1,20 @@
+.services-content{
+    padding-left: 5.375rem;
+}
+.service-slider{
+    display: flex;
+    overflow-x: scroll;
+    gap: 1.8rem;
+    width: 100vw;
+    padding-left: 10%;
+}
+.service-slider::-webkit-scrollbar { 
+    display: none;  
+}
+.service-pg{
+    padding: 0 2rem 0 2rem;
+}
+.mobile-view .services-content{
+    padding-left: 0%;
+}
+

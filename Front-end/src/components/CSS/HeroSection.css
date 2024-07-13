@@ -1,0 +1,84 @@
+.hero-section {
+    height: 100vh;
+    width: 100%;
+}
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.overlayer {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5) !important;
+}
+.hero-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.mobile-view .hero-content{
+    width: 100vw;
+    padding: 0 2rem 0 2rem;
+}
+.hero-heading-section{
+    height: 12.5rem;
+    margin-top: 10rem;
+}
+.hero-heading{
+    font-size: 3.3rem;
+    font-weight: 600;
+    letter-spacing: 0.15rem;
+}
+.bottom-viewbar-content{
+    flex-wrap: wrap;
+}
+.bottom-viewbar {
+    flex-wrap: wrap;
+    position: absolute;
+    margin-top: 35.125rem;
+    background-color: white;
+    color: rgba(0, 0, 0, 0.573);
+    height: 3.6rem;
+    width: 80%;
+    padding: 0 0 20px 20px;
+    justify-content: center;
+}
+.bottom-viewbar-text {
+    font-size: 16px;
+    padding-top: 1rem;
+}
+.bottom-viewbar-img {
+    height: 1.875rem;
+    margin-top: 0.7rem;
+    margin-left: 1.875rem;
+    margin-right: 1.25rem;
+}
+.social-icon {
+    margin-top: 1.1rem;
+    padding-left: 1.875rem;
+}
+.social-icon:hover {
+    color: black;
+    transition: 0.1s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+

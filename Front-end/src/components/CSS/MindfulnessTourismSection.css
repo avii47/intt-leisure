@@ -1,0 +1,33 @@
+.mindfulness-tourism-section {
+    position: relative;
+    overflow: hidden;
+    height: 31.25rem;
+    margin-bottom: 3.125rem;
+    margin-top: 10rem;
+}
+.mindfulness-tourism-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/src/assets/images/Rectangle 9.png"), linear-gradient(rgba(0, 0, 0, 0.14),rgba(0, 0, 0, 0.09));
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    background-blend-mode: overlay;
+}
+.mindfulness-tourism-content {
+    position: relative;
+    z-index: 2; 
+    margin-top: 10rem;
+    align-content: center;
+    color: rgb(255, 255, 255);
+}
+@media only screen and (max-width: 495px) {
+    .mindfulness-tourism-content{
+      margin-left: -2.5rem;
+      margin-top: 7.5rem;
+    }
+}

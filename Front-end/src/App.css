@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+  overflow-x: hidden;
+}
+.section {
+  padding-top: 3.125rem;
+  font-size: smaller;
+}
+.font-primary {
+  font-family: "Playfair", Display;
+}
+.font-secondary {
+  font-family: "Inter", sans-serif;
+}
