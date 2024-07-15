@@ -45,8 +45,6 @@ const AboutSection = () => {
   return (
     <section id="about-section" className={`section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="about-content justify-content-center">
-        <h6 className='font-secondary'>Discover</h6>
-        <hr style={{ width: '4.2rem' }} /><br></br>
         <h3 className='font-primary'>Rediscover yourself with Mindfulness Tours and Retreats</h3>
         <p className='font-secondary'>Embraced by verdant jungle with panoramic views of the Indian Ocean, ÀNI Sri Lanka, an all-inclusive luxury private resort, welcomes exclusively your family and friends alone to this private beachfront estate on the island’s fabled south coast.</p>
 

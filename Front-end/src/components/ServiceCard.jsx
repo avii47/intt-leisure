@@ -8,8 +8,8 @@ const ServiceCard = ({content}) => {
             <img className='crd-img' src={`${content.img}`} alt="Meditation" />
         
             <div className="card-content">
-                <h3 className='font-primary'>{content.title}</h3>
-                <p className='font-secondary'>{content.sub}</p>
+                <h4 className='font-primary'>{content.title}</h4>
+                <p style={{ fontSize: '15px' }} className='font-secondary'>{content.sub}</p>
             </div>
         </div>
     );

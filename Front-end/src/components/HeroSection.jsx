@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './CSS/HeroSection.css';
+import Lottie from 'lottie-react'
 import img_01 from '../assets/images/Manolead-01.png';
 import img_02 from '../assets/images/FCC-Signature 1.png';
 import video from '../assets/vd1.mp4';
+import animationData from '../assets/icons/down-arrow2.json'
 
 const HeroSection = () => {
 
@@ -31,9 +33,10 @@ const HeroSection = () => {
               <h1 className='hero-heading font-primary'>Experience Mindfulness Vacation</h1>
               <p className='font-secondary'>Connect with the Ultimate Luxury of Mindfulness in Sri Lanka<br></br>
               Transform Your Next Vacation into a Journey of Self-Discovery</p>
+              <Lottie style={{ height: '70px', marginTop:'120px' }} className='arrow-icon' animationData={animationData}></Lottie>
           </div>
           <div className="bottom-viewbar d-flex">
-              <h5 className="bottom-viewbar-text">Introduced By Manolead</h5>
+              <h5 className="bottom-viewbar-text">Introduced By</h5>
               <img src={img_01} alt="" className='bottom-viewbar-img'/>
               <img src={img_02} alt="" className='bottom-viewbar-img'/>
               <i className="fa-brands fa-facebook social-icon"></i>

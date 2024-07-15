@@ -20,10 +20,10 @@ const MindfulnessTourismSection = () => {
   }, []);
 
   return (
-    <section id="mindfulness-tourism-section" className="section mindfulness-tourism-section">
+    <section id="mindfulness-tourism-section" className="mindfulness-tourism-section">
       <div className="mindfulness-tourism-container">
-        <div className="mindfulness-tourism-content" style={{ textAlign: 'left', padding: '0% 10% 0% 40%' }}>
-        <h6 className='font-secondary' style={{ marginTop: '-6rem'}}>Explore</h6>
+        <div className="mindfulness-tourism-content" style={{ textAlign: 'left', padding: '0% 10% 0% 50%' }}>
+              <h6 className='font-secondary' style={{ marginTop: '-6rem'}}>Explore</h6>
               <hr style={{ width: '3.5rem' }} />
               <h3 className='font-primary'>Mindfulness Tourism</h3>
               <p className='font-secondary'>Embraced by verdant jungle with panoramic views of the Indian Ocean, ÀNI Sri Lanka, an all-inclusive luxury private resort, welcomes exclusively your family and friends alone to this private beachfront estate on the island’s fabled south coast.</p>

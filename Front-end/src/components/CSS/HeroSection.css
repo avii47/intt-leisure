@@ -31,7 +31,7 @@ video {
 }
 .hero-heading-section{
     height: 12.5rem;
-    margin-top: 10rem;
+    margin-top: 18rem;
 }
 .hero-heading{
     font-size: 3.3rem;
@@ -43,8 +43,8 @@ video {
 }
 .bottom-viewbar {
     flex-wrap: wrap;
-    position: absolute;
-    margin-top: 35.125rem;
+    position: relative;
+    margin-top: 150px;
     background-color: white;
     color: rgba(0, 0, 0, 0.573);
     height: 3.6rem;

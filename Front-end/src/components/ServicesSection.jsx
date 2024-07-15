@@ -54,11 +54,11 @@ const ServicesSection = () => {
   ];
 
       return (
-        <div id='service-section' className={`section d-flex justify-content-center ${isMobileView ? 'mobile-view' : ''}`}>
+        <div id='service-section' style={{  }} className={`section d-flex justify-content-center ${isMobileView ? 'mobile-view' : ''}`}>
             <div className='services-content justify-content-center'>
-                <h6>Discover</h6>
-                <hr style={{ width: '4.2rem', margin: 'auto' }} /><br></br>
-                <h3>Our Services</h3>
+                <h6 className='font-secondary'>Explore Our Services</h6>
+                <hr style={{ width: '10rem', margin: 'auto' }} /><br></br>
+                <h3 className='font-primary'>Choose Your Journey</h3>
                 <p className='service-pg'>As you immerse yourself in this enchanting destination, we invite you to participate in profound self-reflection and practice alongside us.</p>
 
                 <div className='service-slider d-flex'>

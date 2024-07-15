@@ -54,9 +54,9 @@ function MyNavbar() {
               <Offcanvas.Body>
                 <Nav className="flex-grow-1 pe-3 nav-item-container font-secondary">
                   <Nav.Link className="nav-item" href="#Hero-section">PAGE 01</Nav.Link>
-                  <Nav.Link className="nav-item" href="#discover-section">PAGE 02</Nav.Link>
-                  <Nav.Link className="nav-item" href="#mindfulness-tourism-section">PAGE 03</Nav.Link>
-                  <Nav.Link className="nav-item" href="#about-section">PAGE 04</Nav.Link>
+                  <Nav.Link className="nav-item" href="#mindfulness-tourism-section">PAGE 02</Nav.Link>
+                  <Nav.Link className="nav-item" href="#about-section">PAGE 03</Nav.Link>
+                  <Nav.Link className="nav-item" href="#service-section">PAGE 04</Nav.Link>
                   <Nav.Link className="nav-item" href="#service-section">PAGE 05</Nav.Link>
                 </Nav>
                 <br />

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './CSS/ConnectAppSection.css';
-import img1 from '../assets/images/Rectangle 9.png';
 
 const ConnectAppSection = () => {
 
@@ -22,9 +21,9 @@ const ConnectAppSection = () => {
 
 
     return (
-        <section id="connect-app-section" className="section connect-app-section">
+        <section id="connect-app-section" className="connect-app-section">
             <div className="connect-app-container">
-                <div className="connect-app-content" style={{ textAlign: 'left', padding: '0% 10% 0% 40%' }}>
+                <div className="connect-app-content" style={{ textAlign: 'left', padding: '0% 10% 0% 50%' }}>
                     <h6 className='font-secondary' style={{ marginTop: '-6rem'}}>Connect</h6>
                     <hr style={{ width: '3.5rem' }} />
                     <h3 className='font-primary'>Keep the vacation bliss alive! </h3>

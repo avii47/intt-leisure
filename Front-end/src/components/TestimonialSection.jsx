@@ -23,9 +23,16 @@ const TestimonialSection = () => {
     return (
       <section id="testimonial-section" className={`section container justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`}>
         <div className="testimonial-content">
-            <div className="row">
-              <div className="col-lg testimonial-img-coontainer" style={{marginBottom: '4rem'}}>
-                <img className='testimonial-img' src="https://calvin.edu/contentAsset/image/ea8def4a-a584-4bdc-a551-6891e0c7cc09/binaryimage/filter/Resize,Jpeg/resize_w/660/jpeg_q/75" alt=""/>
+            <div className="row" style={{ gap:'60px' }}>
+              <div className="col-lg testimonial-video-coontainer" style={{}}>
+                <iframe
+                  className='testimonial-iframe'
+                  src='https://www.youtube.com/embed/E7wJTI-1dvQ'
+                  frameborder='0'
+                  allow='autoplay; encrypted-media'
+                  allowFullScreen
+                  title='video'
+                />
               </div>
               <div className="col-lg testimonial-text" style={{  }}>
                 <h5>Testimonial</h5>

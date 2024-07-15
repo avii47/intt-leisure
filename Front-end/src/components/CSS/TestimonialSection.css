@@ -1,20 +1,16 @@
 .testimonial-content{
-    padding: 10rem 2rem 0 2rem;
-}
-.testimonial-img{
-    margin-left: -100px;
-}
-.testimonial-img-coontainer{
+    padding: 5rem 5rem 0 5rem;
 }
 .mobile-view .testimonial-img-coontainer{
     display: flex;
     margin-bottom: 4rem;
     margin-right: 1rem;
 }
-.testimonial-img{
-    max-height: 30rem;
-    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
-                  -6px -6px 10px -1px rgba(0,0,0,0.15);
+.testimonial-iframe{
+    width: 100%;
+    height: 90%;
+    border-radius: 0.5rem;
+    margin-top: 0.938rem;
 }
 .testimonial-text{
     min-width: 16rem;
