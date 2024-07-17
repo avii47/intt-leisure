@@ -21,20 +21,20 @@ const TestimonialSection = () => {
 
 
     return (
-      <section id="testimonial-section" className={`section container justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`}>
-        <div className="testimonial-content">
-            <div className="row" style={{ gap:'60px' }}>
-              <div className="col-lg testimonial-video-coontainer" style={{}}>
+      <section id="testimonial-section" className={`section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`}>
+        <div className="testimonial-content" style={{}}>
+            <div className="row" style={{ gap:'90px' }}>
+              <div className="col-md testimonial-video-coontainer">
                 <iframe
                   className='testimonial-iframe'
-                  src='https://www.youtube.com/embed/E7wJTI-1dvQ'
+                  src='https://www.youtube.com/embed/9YnZwjumA1c'
                   frameborder='0'
                   allow='autoplay; encrypted-media'
                   allowFullScreen
                   title='video'
                 />
               </div>
-              <div className="col-lg testimonial-text" style={{  }}>
+              <div className="col-md testimonial-text" style={{}}>
                 <h5>Testimonial</h5>
                 <hr style={{ width: '7rem' }} />
                 <i class="fa-solid fa-star star"></i>

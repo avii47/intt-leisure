@@ -13,7 +13,7 @@ function MyNavbar() {
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
-      if (offset > 0) { // Change the navbar background as soon as the user starts scrolling
+      if (offset > 0) { 
         setScrolled(true);
       } else {
         setScrolled(false);

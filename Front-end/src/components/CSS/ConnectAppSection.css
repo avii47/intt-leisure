@@ -17,6 +17,7 @@
     background-position: center;
     z-index: 1;
     background-blend-mode: overlay;
+    background-attachment: fixed;
 }
 .connect-app-content {
     position: relative;

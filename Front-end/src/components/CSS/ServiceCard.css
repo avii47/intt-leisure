@@ -41,6 +41,28 @@
     min-width: 300px;
 }
 
+@keyframes fadeInLeft {
+    from {
+      opacity: 0.5;
+      transform: translateX(50%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+  
+.service-card {
+    opacity: 0;
+    transform: translateX(50%);
+    transition: opacity 1s, transform 1s;
+}
+  
+.service-card.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 
   
 

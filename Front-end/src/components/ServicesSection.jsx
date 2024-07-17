@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './CSS/ServicesSection.css';
 import ServiceCard from './ServiceCard';
 
 const ServicesSection = () => {
 
   const [isMobileView, setIsMobileView] = useState(false);
+  const serviceCardsRef = useRef([]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -19,6 +20,33 @@ const ServicesSection = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, index * 200); 
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    serviceCardsRef.current.forEach(card => {
+      if (card) {
+        observer.observe(card);
+      }
+    });
+
+    return () => {
+      serviceCardsRef.current.forEach(card => {
+        if (card) {
+          observer.unobserve(card);
+        }
+      });
+    };
+  }, [serviceCardsRef]);
 
   const contentData = [
     {
@@ -54,7 +82,7 @@ const ServicesSection = () => {
   ];
 
       return (
-        <div id='service-section' style={{  }} className={`section d-flex justify-content-center ${isMobileView ? 'mobile-view' : ''}`}>
+        <div id='service-section' className={`section d-flex justify-content-center ${isMobileView ? 'mobile-view' : ''}`}>
             <div className='services-content justify-content-center'>
                 <h6 className='font-secondary'>Explore Our Services</h6>
                 <hr style={{ width: '10rem', margin: 'auto' }} /><br></br>
@@ -63,7 +91,13 @@ const ServicesSection = () => {
 
                 <div className='service-slider d-flex'>
                   {contentData.map((content, index) => (
-                    <ServiceCard key={index} content={content} />
+                    <ServiceCard
+                      className={`service-card card card-item${index}`}
+                      key={index}
+                      content={content}
+                      ref={el => serviceCardsRef.current[index] = el}
+                      style={{ '--animation-order': index }}
+                    />
                   ))}
                 </div>
             </div>
