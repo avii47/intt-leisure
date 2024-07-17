@@ -1,11 +1,11 @@
-.mindfulness-tourism-section {
+/* .mindfulness-tourism-section {
     position: relative;
     overflow: hidden;
     height: 31.25rem;
     margin-bottom: 3.125rem;
     margin-top: 10rem;
-}
-.mindfulness-tourism-section::before {
+} */
+/* .mindfulness-tourism-section::before {
     content: "";
     position: absolute;
     top: 0;
@@ -17,12 +17,13 @@
     background-position: center;
     z-index: 1;
     background-blend-mode: overlay;
-}
-.mindfulness-tourism-content {
+} */
+/* .mindfulness-tourism-content {
     position: relative;
     z-index: 2; 
     margin-top: 12rem;
-    align-content: center;
+    text-align: left;
+    padding: 0% 10% 0% 50%;
     color: rgb(255, 255, 255);
 }
 @media only screen and (max-width: 495px) {
@@ -30,4 +31,50 @@
       margin-left: -2.5rem;
       margin-top: 7.5rem;
     }
+} */
+
+.mindfulness-tourism-section {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 31.25rem;
+    margin-bottom: 3.125rem;
+    margin-top: 10rem;
+    display: flex;
 }
+
+.mindfulness-tourism-content {
+    position: absolute !important;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: left;
+    padding: 10% 10% 0% 50%;
+}
+.mindfulness-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.overlayert {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.212) ; */
+}
+.mindfulness-tourism-section:hover .mindfulness-img{
+    transform: scale(1.03);
+    transition: all 0.4s ease;
+}
+/* .mindfulness-tourism-section:hover .overlayert{
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.212) !important;
+} */

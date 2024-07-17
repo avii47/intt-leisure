@@ -1,6 +1,7 @@
 .hero-section {
     height: 100vh;
     width: 100%;
+    position: relative;
 }
 video {
     width: 100%;
@@ -30,13 +31,18 @@ video {
     padding: 0 2rem 0 2rem;
 }
 .hero-heading-section{
-    height: 12.5rem;
-    margin-top: 18rem;
+    width: 100%;
+    height: 100%;
+    padding-top: 20%;
 }
 .hero-heading{
     font-size: 3.3rem;
     font-weight: 600;
     letter-spacing: 0.15rem;
+}
+.arrow-icon{
+    height: 4.375rem;
+    margin-top: 9.375rem;
 }
 .bottom-viewbar-content{
     flex-wrap: wrap;
@@ -44,12 +50,11 @@ video {
 .bottom-viewbar {
     flex-wrap: wrap;
     position: relative;
-    margin-top: 150px;
     background-color: white;
     color: rgba(0, 0, 0, 0.573);
     height: 3.6rem;
     width: 80%;
-    padding: 0 0 20px 20px;
+    padding: 0 0 1.25rem 1.25rem;
     justify-content: center;
 }
 .bottom-viewbar-text {
@@ -69,6 +74,14 @@ video {
 .social-icon:hover {
     color: black;
     transition: 0.1s ease-in-out;
+}
+.mobile-view .bottom-viewbar{
+    width: 100%;
+    margin-top: 5px;
+    padding-top: 5px
+}
+.mobile-view {
+
 }
 
 
