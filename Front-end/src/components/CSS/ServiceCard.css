@@ -36,9 +36,16 @@
 } 
 .card-content p {
     font-size: 16px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 1s ease, transform 1s ease;
 }
 .mobile-view .service-card{
     min-width: 300px;
+}
+.service-card:hover .card-content p {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 @keyframes fadeInLeft {

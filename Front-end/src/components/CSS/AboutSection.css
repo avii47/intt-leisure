@@ -1,6 +1,6 @@
 .about-content{
     padding: 0 12rem 0 14.2rem;
-    text-align: left;
+    text-align: center;
 }
 .about-cards{
     display: flex;
@@ -8,6 +8,7 @@
     gap: 2rem;
     padding-bottom: 2rem;
     scrollbar-width: none;
+    justify-content: center;
 }
 .about-cards::-webkit-scrollbar { 
     display: none;  
