@@ -1,0 +1,12 @@
+.icon-card{
+    height: 300px;
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(83, 174, 248, 0.342);
+    /* background-color: #FDF9F7; */
+}
+.iconCard-icon{
+    height: 150px;
+    margin-bottom: 30px;
+}
