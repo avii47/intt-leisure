@@ -1,14 +1,14 @@
 .services-content{
-    padding-left: 5.375rem;
+    
 }
-.service-slider{
+/* .service-slider{
     display: flex;
     overflow-x: scroll !important;
     gap: 1.8rem;
     width: 100vw;
-    padding-left: 10%;
+    padding-left: 12%;
     margin-top: 20px;
-}
+} */
 .service-slider::-webkit-scrollbar { 
     display: none;  
 }
@@ -19,5 +19,77 @@
 }
 .mobile-view .services-content{
     padding-left: 0%;
+}
+
+
+
+
+
+
+
+
+
+
+.why-chooseus-content {
+    padding: 0 12rem 0 12rem;
+    width: 100%;
+    text-align: center;
+}
+
+.service-slider-wrapper {
+    position: relative;
+    width: 80vw;
+    margin-top: 3.75rem;
+}
+
+.service-slider {
+    display: flex;
+    justify-content: left;
+    padding-left: 3%;
+    gap: 2.8rem;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    width: 100vw;
+}
+
+.service-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-button2 {
+    position: absolute;
+    top: -20%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.scroll-button.left2 {
+    left: 0;
+}
+
+.scroll-button.right2 {
+    right: 0;
+}
+.mobile-view .scroll-button2{
+    top: -15%;
+}
+.mobile-view .service-slider {
+    width: 100vw;
+    padding: 0 2rem 0 2rem;
+}
+.mobile-view .right2 {
+    margin-left: 50% !important;
+}
+.mobile-view .left2 {
+    margin-left: 40% !important;
+}
+.nav-icon{
+    height: 30px;
 }
 

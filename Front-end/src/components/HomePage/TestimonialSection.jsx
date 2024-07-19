@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import '../CSS/TestimonialSection.css';
 
 const TestimonialSection = () => {
 
   const [isMobileView, setIsMobileView] = useState(false);
+  const sectionRef1 = useRef(null);
+  const sectionRef2 = useRef(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -20,12 +22,56 @@ const TestimonialSection = () => {
   }, []);
 
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    if (sectionRef1.current) {
+      observer.observe(sectionRef1.current);
+    }
+
+    return () => {
+      if (sectionRef1.current) {
+        observer.unobserve(sectionRef1.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    if (sectionRef2.current) {
+      observer.observe(sectionRef2.current);
+    }
+
+    return () => {
+      if (sectionRef2.current) {
+        observer.unobserve(sectionRef2.current);
+      }
+    };
+  }, []);
+
+
     return (
       <section id="testimonial-section" className={`section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`}>
         <div className="testimonial-content" style={{}}>
             <div className="row" style={{ gap:'90px' }}>
               <div className="col-md testimonial-video-coontainer">
                 <iframe
+                  ref={sectionRef1}
                   className='testimonial-iframe'
                   src='https://www.youtube.com/embed/9YnZwjumA1c'
                   frameborder='0'
@@ -34,7 +80,7 @@ const TestimonialSection = () => {
                   title='video'
                 />
               </div>
-              <div className="col-md testimonial-text" style={{}}>
+              <div className="col-md testimonial-text" ref={sectionRef2} style={{}}>
                 <h5>Testimonial</h5>
                 <hr style={{ width: '7rem' }} />
                 <i class="fa-solid fa-star star"></i>

@@ -24,6 +24,32 @@ const AboutSection = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const section = document.getElementById('about-section');
+    const heading = document.getElementById('about-heading');
+    const cardSection = document.getElementById('about-cards');
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          heading.classList.add('animate-heading');
+          cardSection.classList.add('animate-cards');
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => {
+      if (section) {
+        observer.unobserve(section);
+      }
+    };
+  }, []);
+
   const contentData = [
     {
       'img': img_01,
@@ -45,10 +71,11 @@ const AboutSection = () => {
   return (
     <section id="about-section" className={`section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="about-content justify-content-center">
-        <h3 className='font-primary'>Rediscover yourself with Mindfulness Tours and Retreats</h3>
-        <p className='font-secondary' style={{fontSize: '16px'}}>Embraced by verdant jungle with panoramic views of the Indian Ocean, ÀNI Sri Lanka, an all-inclusive luxury private resort, <br></br> welcomes exclusively your family and friends alone to this private beachfront estate on the island’s fabled south coast.</p>
-
-        <div className="d-flex about-cards ">
+        <div id='about-heading' className='about-heading'>
+          <h3 className='font-primary'>Rediscover yourself with Mindfulness Tours and Retreats</h3>
+          <p className='font-secondary' style={{fontSize: '16px'}}>Embraced by verdant jungle with panoramic views of the Indian Ocean, ÀNI Sri Lanka, an all-inclusive luxury private resort, <br></br> welcomes exclusively your family and friends alone to this private beachfront estate on the island’s fabled south coast.</p>
+        </div>
+        <div id='about-cards' className="d-flex about-cards">
             {contentData.map((content, index) => (
               <ContentCard key={index} content={content} />
             ))}

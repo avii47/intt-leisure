@@ -1,0 +1,53 @@
+
+.why-chooseus-content {
+    padding: 0 12rem 0 12rem;
+    width: 100%;
+    text-align: center;
+}
+
+.icon-container-wrapper {
+    position: relative;
+    width: 80vw;
+    margin-top: 3.75rem;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: left;
+    gap: 3.2rem;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+.icon-container::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-button {
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.scroll-button.left {
+    left: 0;
+}
+
+.scroll-button.right {
+    right: 0;
+}
+
+.mobile-view .why-chooseus-content {
+    width: 100vw;
+    padding: 0 2rem 0 2rem;
+}
+.nav-icon{
+    height: 30px;
+}
