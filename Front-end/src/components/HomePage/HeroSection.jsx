@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
 import '../CSS/HeroSection.css';
 import Lottie from 'lottie-react'
 import img_01 from '../../assets/images/Manolead-01.png';
@@ -23,13 +23,37 @@ const HeroSection = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  useEffect(() => {
+    const section = document.getElementById('Hero-section');
+    const heading = document.getElementById('hero-heading');
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          heading.classList.add('animate-heading');
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => {
+      if (section) {
+        observer.unobserve(section);
+      }
+    };
+  }, []);
   
   return (
     <div id="Hero-section" className={`hero-section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="overlayer"></div>
         <video src={video} autoPlay loop muted />
         <div className="hero-content">
-          <div className="hero-heading-section">
+          <div id='hero-heading' className="hero-heading-section">
               <h1 className='hero-heading font-primary'>Experience Mindfulness Vacation</h1>
               <p className='font-secondary'>Connect with the Ultimate Luxury of Mindfulness in Sri Lanka<br></br>
                 Transform Your Next Vacation into a Journey of Self-Discovery</p>

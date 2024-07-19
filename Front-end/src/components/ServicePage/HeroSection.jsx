@@ -20,13 +20,37 @@ const HeroSection = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  useEffect(() => {
+    const section = document.getElementById('Hero-section');
+    const heading = document.getElementById('hero-heading');
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          heading.classList.add('animate-heading');
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => {
+      if (section) {
+        observer.unobserve(section);
+      }
+    };
+  }, []);
   
   return (
     <div id="Hero-section" className={`hero-section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="overlayer"></div>
         <img className='service-hero-img' src="https://img.freepik.com/free-photo/full-shot-woman-meditating-mat_23-2149996120.jpg?t=st=1721206452~exp=1721210052~hmac=d1de86b8c04f88f43b72eb72a05dbb3f72a530c4947c6cee21f04e0377e6239d&w=1380" alt="" />
         <div className="hero-content">
-          <div className="hero-heading-section">
+          <div id='hero-heading' className="hero-heading-section">
               <h1 className='hero-heading font-primary'>Choose Your Journey</h1>
               <p className='font-secondary'>Explore Our Services</p>
               <Lottie className='arrow-icon' animationData={animationData}></Lottie>

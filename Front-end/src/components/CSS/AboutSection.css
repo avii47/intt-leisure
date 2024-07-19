@@ -1,5 +1,5 @@
 .about-content{
-    padding: 0 12rem 0 14.2rem;
+    padding: 0 12rem 0 12rem;
     text-align: center;
 }
 .about-cards{
@@ -9,6 +9,10 @@
     padding-bottom: 2rem;
     scrollbar-width: none;
     justify-content: center;
+
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
 }
 .about-cards::-webkit-scrollbar { 
     display: none;  
@@ -16,4 +20,22 @@
 .mobile-view .about-content{
     width: 100vw;
     padding: 0 2rem 0 2rem;
+}
+.mobile-view .about-cards{
+    width: 100vw;
+    padding-right: 20%;
+    justify-content: left;
+}
+.about-heading{
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+.animate-heading{
+    opacity: 1;
+    transform: translateY(0);
+}
+.animate-cards{
+    opacity: 1;
+    transform: translateY(0);
 }

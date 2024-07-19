@@ -49,7 +49,7 @@ const MindfulnessTourismSection = () => {
   return (
     <section id="mindfulness-tourism-section" className="mindfulness-tourism-section">
       <div className="overlayert"></div>
-      <img src={img} className="mindfulness-img" alt="" />
+      <img src="https://img.freepik.com/free-photo/long-shot-young-woman-enjoying-nature-around-her_23-2148943424.jpg?t=st=1721372736~exp=1721376336~hmac=3538f9cbebd34df3be4c0e659e1bd3f9a2322d9ab681aa6da26b140b1ec1508d&w=1380" className="mindfulness-img" alt="" />
       <div className="mindfulness-tourism-content" style={{}}>
             <h6 className='font-secondary' style={{ marginTop: '-6rem'}}>Explore</h6>
             <hr style={{ width: '3.5rem' }} />
