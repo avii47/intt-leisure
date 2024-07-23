@@ -142,19 +142,19 @@ const ServicesSection = () => {
                 <p className='service-pg font-secondary'>As you immerse yourself in this enchanting destination, we invite you to participate in profound self-reflection and practice alongside us.</p>
 
                 <div className="service-slider-wrapper">
-                  {showLeftButton2 && <button style={{marginLeft: '46%'}} className="scroll-button2 left2" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}
-                  {showRightButton2 && <button style={{marginLeft: '49%'}} className="scroll-button2 right2" onClick={() => scrollContainer('right')}><img className='nav-icon' src={right_arrow}></img></button>}
+                  {showLeftButton2 && <button style={{}} className="scroll-button2 left2" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}
+                  {showRightButton2 && <button style={{}} className="scroll-button2 right2" onClick={() => scrollContainer('right')}><img className='nav-icon' src={right_arrow}></img></button>}
                   <div className='service-slider d-flex ' ref={containerRef2}>
-                  {contentData.map((content, index) => (
-                    <ServiceCard
-                      className={`service-card card card-item${index}`}
-                      key={index}
-                      content={content}
-                      ref={el => serviceCardsRef.current[index] = el}
-                      style={{ '--animation-order': index }}
-                    />
-                  ))}
-                </div>
+                    {contentData.map((content, index) => (
+                      <ServiceCard
+                        className={`service-card card card-item${index}`}
+                        key={index}
+                        content={content}
+                        ref={el => serviceCardsRef.current[index] = el}
+                        style={{ '--animation-order': index }}
+                      />
+                    ))}
+                  </div>
                   
                 </div>
 
