@@ -16,9 +16,9 @@ const FooterSection = () => {
                     <i class="fa-brands fa-square-facebook ft-social-icon"></i>
                     <i class="fa-brands fa-pinterest-square ft-social-icon" ></i>
                     <i class="fa-brands fa-square-instagram ft-social-icon"></i><br></br>
-                    <i className="fa-brands fa-linkedin ft-social-icon"></i>
+                    <i className="fa-brands fa-linkedin ft-social-icon"><a href="https://www.linkedin.com/company/intt-leisure/"></a></i>
                     <i class="fa-brands fa-square-x-twitter ft-social-icon"></i>
-                    <i class="fa-brands fa-square-youtube ft-social-icon"></i>
+                    <i class="fa-brands fa-square-youtube ft-social-icon"><a href="https://www.youtube.com/@travelglobe405"></a></i>
                   </div>
                   <div className="col-md-6 pg-link" style={{  }}>
                     <h6>Pages</h6>

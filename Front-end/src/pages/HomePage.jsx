@@ -7,6 +7,8 @@ import TestimonialSection from '../components/HomePage/TestimonialSection';
 import ConnectAppSection from '../components/HomePage/ConnectAppSection';
 import FooterSection from '../components/HomePage/FooterSection';
 
+import EventsNewsSection from '../components/HomePage/Events&NewsSection';
+
 
 const HomePage = () => {
     return (
@@ -18,6 +20,7 @@ const HomePage = () => {
             <ServicesSection />
             <TestimonialSection />
             <ConnectAppSection />
+            <EventsNewsSection />
             <FooterSection />
         </>
     )

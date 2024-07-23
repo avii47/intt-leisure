@@ -5,8 +5,8 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import './CSS/GallerySection.css';
-import ServiceCard from './ImageCard';
+import '../CSS/GallerySection.css';
+import ServiceCard from '../HomePage/ImageCard';
 
 import { EffectCoverflow,Pagination,Navigation } from 'swiper/modules';
 
@@ -16,8 +16,7 @@ const ImageViewer = () => {
             <div className='services-content'>
                 <h6>Discover</h6>
                 <hr style={{ width: '4.2rem', margin: 'auto' }} /><br></br>
-                <h3>Our Services</h3>
-                <p>As you immerse yourself in this enchanting destination, we invite you to participate in profound self-reflection and practice alongside us.</p>
+                <h3 className='font-primary'>Latest Events & News</h3>
                 <Swiper
                     effect={'coverflow'}
                     grabCursor={true}

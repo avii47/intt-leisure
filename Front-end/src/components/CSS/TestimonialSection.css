@@ -36,7 +36,7 @@
 
 @keyframes slideInFromLeft {
     0% {
-        transform: translateX(-50%);
+        transform: translateX(-10%);
         opacity: 0;
     }
     100% {
@@ -47,7 +47,7 @@
 
 @keyframes slideInFromRight {
     0% {
-        transform: translateX(50%);
+        transform: translateX(10%);
         opacity: 0;
     }
     100% {
