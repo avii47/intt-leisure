@@ -1,10 +1,6 @@
-
-.why-chooseus-content {
-    padding: 0 12rem 0 12rem;
-    width: 100%;
+.services-content{
     text-align: center;
 }
-
 .service-slider-wrapper {
     position: relative;
     width: 80vw;
@@ -14,7 +10,6 @@
 .service-slider {
     display: flex;
     justify-content: left;
-    padding-left: 3%;
     gap: 2.8rem;
     overflow-x: scroll;
     scrollbar-width: none;
@@ -45,21 +40,20 @@
 .scroll-button2.right2 {
     margin-left: 49%;
 }
-.mobile-view .left2 {
-    margin-left: 40% !important;
-}
 .mobile-view .scroll-button2{
-    top: -15%;
+    top: 110%;
+    margin-left: -5%;
 }
 .mobile-view .service-slider {
     width: 100vw;
-    padding: 0 2rem 0 2rem;
+    padding: 0 4rem 0 1rem;
 }
 .mobile-view .right2 {
-    margin-left: 50% !important;
+   margin-left: 5%;
 }
-.mobile-view .left2 {
-    margin-left: 40% !important;
+.mobile-view .services-content {
+    width: 100vw;
+    padding: 0 2rem 0 2rem;
 }
 .nav-icon{
     height: 30px;

@@ -116,9 +116,9 @@ const updateButtons = () => {
   return (
     <section id="eventsNews-section" className={`section justify-content-left d-flex ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="eventsNews-content justify-content-left">
-      <h3 className='font-primary' style={{marginLeft:'2%'}}>Latest Events & News</h3>
+      <h3 className='font-primary'>Latest Events & News</h3>
         <div className='eventsNews-wrapper'>
-          <div className='nav-icons d-flex' style={{}}>
+          <div className='nav-icons d-flex'>
             {showLeftButton3 && <button className="scroll-button3 left3" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}
             {showRightButton3 && <button className="scroll-button3 right3" onClick={() => scrollContainer('right')}><img className='nav-icon' src={right_arrow}></img></button>}
           </div>

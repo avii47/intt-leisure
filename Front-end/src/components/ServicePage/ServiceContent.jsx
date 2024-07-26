@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import '../CSS/AboutSection.css';
-import Button from 'react-bootstrap/Button';
+import '../CSS/ServicePage.css';
 import img_01 from '../../assets/images/Rectangle 25.png';
 import img_02 from '../../assets/images/Rectangle 28.png';
 import img_03 from '../../assets/images/img3.jpg';
-import ContentCard from '../HomePage/ContentCard';
+import ContentCard from '../ServicePage/ServiceContentCard';
 
 const ServiceContent = () => {
 
@@ -27,37 +26,69 @@ const ServiceContent = () => {
   const contentData = [
     {
       'img': img_01,
-      'title': 'Mindful Tours',
-      'sub': 'Embraced by verdant jungle with panoramic views of the Indian Ocean, ÀNI Sri Lanka'
-    },
-    {
-      'img': img_03,
-      'title': 'Excursions',
-      'sub': 'Best places to have the environment to practice mindfulness with ease.'
-    },
-    {
-      'img': img_02,
-      'title': 'Our Expertise',
+      'title': 'Corporate',
       'sub': 'Well trained experts to guide you through the journey.'
     },
     {
       'img': img_02,
-      'title': 'Our Expertise',
+      'title': 'Mindfulness Seekers',
+      'sub': 'Well trained experts to guide you through the journey.'
+    },
+    {
+      'img': img_03,
+      'title': 'Leaders',
+      'sub': 'Well trained experts to guide you through the journey.'
+    },
+    {
+      'img': img_02,
+      'title': 'Students & Educators',
+      'sub': 'Well trained experts to guide you through the journey.'
+    },
+    {
+      'img': img_02,
+      'title': 'Destinations',
+      'sub': 'Well trained experts to guide you through the journey.'
+    },
+    {
+      'img': img_02,
+      'title': 'Destinations',
       'sub': 'Well trained experts to guide you through the journey.'
     },
       
   ];
 
-  return (
-    <section id="about-section" className={`section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`}>
-      <div className="about-content justify-content-center">
+  useEffect(() => {
+    const section = document.getElementById('service-content-section');
+    const cardSection = document.getElementById('service-content-cards-container');
 
-        <div className="d-flex about-cards">
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          cardSection.classList.add('animate-cards');
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => {
+      if (section) {
+        observer.unobserve(section);
+      }
+    };
+  }, []);
+
+  return (
+    <section id="service-content-section"  className={`section service-content-section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`}>
+      <div className="service-section-content justify-content-center">
+        <div id='service-content-cards-container' className="d-flex service-content-cards-container">
             {contentData.map((content, index) => (
               <ContentCard key={index} content={content} />
             ))}
         </div>
-        <Button variant="outline-dark">Learn more ></Button>
       </div>
     </section>
   );
