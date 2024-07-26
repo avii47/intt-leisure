@@ -104,7 +104,7 @@ const ServicesSection = () => {
 
         const scrollContainer = (direction) => {
           if (containerRef2.current) {
-              const scrollAmount = containerRef2.current.offsetWidth / 2;
+              const scrollAmount = containerRef2.current.offsetWidth * 0.89;
               containerRef2.current.scrollBy({
                   left: direction === 'left' ? -scrollAmount : scrollAmount,
                   behavior: 'smooth',
@@ -139,7 +139,7 @@ const ServicesSection = () => {
                 <h6 className='font-secondary'>Explore Our Services</h6>
                 <hr style={{ width: '10rem', margin: 'auto' }} /><br></br>
                 <h3 className='font-primary'>Choose Your Journey</h3>
-                <p className='service-pg font-secondary'>As you immerse yourself in this enchanting destination, we invite you to participate in profound self-reflection and practice alongside us.</p>
+                <p className='ont-secondary' style={{fontSize:'16px'}}>As you immerse yourself in this enchanting destination, we invite you to participate in profound self-reflection and practice alongside us.</p>
 
                 <div className="service-slider-wrapper">
                   {showLeftButton2 && <button style={{}} className="scroll-button2 left2" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}

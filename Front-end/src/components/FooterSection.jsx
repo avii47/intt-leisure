@@ -1,6 +1,6 @@
 import React from 'react';
-import '../CSS/FooterSection.css';
-import logo from '../../assets/images/INTT LEISURE VERTICLE.png';
+import './CSS/FooterSection.css';
+import logo from '../assets/images/INTT LEISURE VERTICLE.png';
 
 const FooterSection = () => {
     return (
@@ -8,11 +8,11 @@ const FooterSection = () => {
         <div className="footer-content">
 
             <div className="row d-flex">
-              <div className="col-lg" style={{  }}>
+              <div className="col-lg">
                 <div className="row d-flex">
-                  <div className="col-md-6" style={{  }}>
-                    <img style={{ marginLeft:'-1.3rem' }} src={logo} alt="" /><br></br><br></br>
-                    <h6 style={{ marginLeft:'-4rem' }}>Follow us on</h6>
+                  <div className="col-md-6">
+                    <img style={{ marginLeft:'' }} src={logo} alt="" /><br></br><br></br>
+                    <h6>Follow us on</h6>
                     <i class="fa-brands fa-square-facebook ft-social-icon"></i>
                     <i class="fa-brands fa-pinterest-square ft-social-icon" ></i>
                     <i class="fa-brands fa-square-instagram ft-social-icon"></i><br></br>
@@ -20,7 +20,7 @@ const FooterSection = () => {
                     <i class="fa-brands fa-square-x-twitter ft-social-icon"></i>
                     <i class="fa-brands fa-square-youtube ft-social-icon"><a href="https://www.youtube.com/@travelglobe405"></a></i>
                   </div>
-                  <div className="col-md-6 pg-link" style={{  }}>
+                  <div className="col-md-6 pg-link">
                     <h6>Pages</h6>
                     <ul className="page-list">
                       <li style={{ marginTop: '2rem' }}>Page 01</li>

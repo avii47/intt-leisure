@@ -1,0 +1,14 @@
+.contactus-content-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contactus-section-content {
+    padding: 0 12rem 0 12rem;
+    display: flex;
+    flex-wrap: wrap; 
+    text-align: center;
+}
+.top-text{
+    padding: 0 15.5% 0 15.5%;
+}

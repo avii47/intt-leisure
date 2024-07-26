@@ -10,6 +10,12 @@ import left_arrow from '../../assets/icons/left-arrow.png';
 import right_arrow from '../../assets/icons/right-arrow.png';
 import IconCard from '../HomePage/IconCard';
 
+
+import img5 from '../../assets/icons/Icon_WCU_Color-01.png';
+import img6 from '../../assets/icons/Icon_WCU_Color-02.png';
+import img7 from '../../assets/icons/Icon_WCU_Gray.png';
+import img8 from '../../assets/icons/Icon_WCU_15pt.png';
+
 const WhyChooseUsSection = () => {
 
   const [isMobileView, setIsMobileView] = useState(false);
@@ -34,22 +40,22 @@ const WhyChooseUsSection = () => {
 
   const contentData = [
     {
-      img: unique_excursions,
+      img: img5,
       title: 'Unique Excursions',
       sub: 'A workshop was conducted at the university of Moratuwa on the 19th of June 2023.',
     },
     {
-      img: authentic_practices,
+      img: img6,
       title: 'Authentic Practices',
       sub: 'A workshop was conducted at the university of Moratuwa on the 19th of June 2023.',
     },
     {
-      img: experties,
+      img: img7,
       title: 'Expertised Team',
       sub: 'A workshop was conducted at the university of Moratuwa on the 19th of June 2023.',
     },
     {
-      img: forbes,
+      img: img8,
       title: 'Forbes Expert',
       sub: 'A workshop was conducted at the university of Moratuwa on the 19th of June 2023.',
     },
@@ -67,7 +73,7 @@ const WhyChooseUsSection = () => {
 
   const scrollContainer = (direction) => {
     if (containerRef.current) {
-      const scrollAmount = containerRef.current.offsetWidth / 2;
+      const scrollAmount = containerRef.current.offsetWidth * 0.75;
       containerRef.current.scrollBy({
         left: direction === 'left' ? -scrollAmount : scrollAmount,
         behavior: 'smooth',
@@ -132,8 +138,11 @@ const WhyChooseUsSection = () => {
         <br></br>
         <p className='font-secondary' style={{ fontSize: '16px' }}>A workshop was conducted at the university of Moratuwa on the 19th of June 2023.The workshop focused on enhancing the staff of the University of Moratuwa’s understanding and application of Appreciative Inquiry in the context of mindfulness-based leadership. Throughout the workshop, participants had the opportunity to listen to informative speeches delivered by Dr. GB Hewawa, sam and Jim.</p>
         <div className="icon-container-wrapper" >
-          {showLeftButton && <button className="scroll-button left" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}
-          <div className='icon-container d-flex' ref={containerRef}>
+          <div className='nav-icons d-flex'>
+            {showLeftButton && <button className="scroll-button left" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}
+            {showRightButton && <button className="scroll-button right" onClick={() => scrollContainer('right')}><img className='nav-icon' src={right_arrow}></img></button>}
+          </div>
+          <div className='icon-container d-flex ' ref={containerRef}>
             {contentData.map((content, index) => (
               <IconCard
                 className={`icon-card`}
@@ -144,7 +153,7 @@ const WhyChooseUsSection = () => {
               />
             ))}
           </div>
-          {showRightButton && <button className="scroll-button right" onClick={() => scrollContainer('right')}><img className='nav-icon' src={right_arrow}></img></button>}
+          
         </div>
       </div>
     </section>

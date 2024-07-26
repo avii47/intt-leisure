@@ -1,0 +1,99 @@
+.aboutus-content-section{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.aboutus-section-content {
+    padding: 0 12rem 0 12rem;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: left;
+}
+.top-text{
+    padding: 0 15.5% 0 15.5%;
+}
+.aboutus-content-cards-container{
+    justify-content: center;
+    min-height: 56.25rem;
+    width: 100%;
+}
+.aboutus-content-cards-container img{
+    max-width: 500px;
+    height: 300px;
+    object-fit: cover;
+}
+.about-rw{
+    margin-top: 9.375rem;
+}
+.text1{
+    padding-Top: 30px; 
+    padding-Left:100px;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+.text2{
+    padding-Top:30px; 
+    text-Align:right; 
+    padding-Right:100px;
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+.text3{
+    padding-Top:30px; 
+    padding-Left:100px;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+.mobile-view .about-rw{
+    margin-top: 5rem;
+}
+.mobile-view .aboutus-section-content{
+    padding: 2rem 2rem 2rem 2rem !important;
+    justify-content: center;
+}
+.mobile-view .top-text{
+    padding: 0 0 15% 0;
+}
+.mobile-view .aboutus-content-cards-container img{
+    width: 85vw;
+    height: auto;
+    object-fit: cover;
+}
+.mobile-view .text1 {
+    padding-Left:0.938rem;
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+.mobile-view .text2 {
+    text-align: left;
+    padding-Left:0.938rem;
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+.mobile-view .text3 {
+    padding-Left:0.938rem;
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+@media only screen and (max-width: 1225px) {
+    .text1{
+       padding-left: 30%;
+    }
+    .text3{
+        padding-left: 30%;
+     }
+}
+@media only screen and (max-width: 1045px) {
+
+}
+.animate-text{
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}

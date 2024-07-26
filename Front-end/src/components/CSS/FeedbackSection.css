@@ -1,0 +1,17 @@
+.feedback-section{
+    margin-top: 100px;
+    padding: 100px;
+    justify-content: center;
+    background-color: #fff7d9;
+}
+.feedback-content{
+    text-align: center;
+}
+.feedback-ft{
+    width: 46.875rem;
+    margin-bottom: 1rem;
+}
+.in-f{
+    background-color: #fff7d9;
+    border: 1px solid rgba(128, 128, 128, 0.562);
+}

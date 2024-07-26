@@ -5,9 +5,8 @@ import AboutSection from '../components/HomePage/AboutSection';
 import ServicesSection from '../components/HomePage/ServicesSection';
 import TestimonialSection from '../components/HomePage/TestimonialSection';
 import ConnectAppSection from '../components/HomePage/ConnectAppSection';
-import FooterSection from '../components/HomePage/FooterSection';
-
 import EventsNewsSection from '../components/HomePage/Events&NewsSection';
+import FooterSection from '../components/FooterSection';
 
 
 const HomePage = () => {

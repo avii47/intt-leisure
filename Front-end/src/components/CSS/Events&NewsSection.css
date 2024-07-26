@@ -11,7 +11,6 @@
 .eventsNews-cards {
     display: flex;
     justify-content: left;
-    margin-left: 2%;
     padding-right: 20%;
     padding-bottom: 1%;
     gap: 2.8rem;
