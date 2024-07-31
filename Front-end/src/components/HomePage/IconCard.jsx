@@ -1,5 +1,5 @@
 import React from 'react';
-import  '../CSS/IconCard.css'
+import  '../CSS/Home/IconCard.css'
 
 const IconCard = React.forwardRef(({content, className, style}, ref) => {
     return (

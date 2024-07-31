@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import '../CSS/GallerySection.css';
+import '../CSS/Home/GallerySection.css';
 import ServiceCard from '../HomePage/ImageCard';
 
 import { EffectCoverflow,Pagination,Navigation } from 'swiper/modules';

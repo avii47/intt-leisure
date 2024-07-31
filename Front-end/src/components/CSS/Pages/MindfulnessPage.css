@@ -1,11 +1,11 @@
-.aboutus-content-section{
+.mindfulness-content-section{
     text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.aboutus-section-content {
-    padding: 0 12rem 0 12rem;
+.mindfulness-section-content {
+    padding: 0 12rem 12rem 12rem;
     display: flex;
     flex-wrap: wrap; 
     justify-content: left;
@@ -13,17 +13,17 @@
 .top-text{
     padding: 0 15.5% 0 15.5%;
 }
-.aboutus-content-cards-container{
+.mindfulness-content-cards-container{
     justify-content: center;
     min-height: 56.25rem;
     width: 100%;
 }
-.aboutus-content-cards-container img{
+.mindfulness-content-cards-container img{
     max-width: 500px;
     height: 300px;
     object-fit: cover;
 }
-.about-rw{
+.mindfulness-rw{
     margin-top: 9.375rem;
 }
 .text1{
@@ -48,17 +48,17 @@
     transform: translateX(-100px);
     transition: opacity 1s ease, transform 1s ease;
 }
-.mobile-view .about-rw{
+.mobile-view .mindfulness-rw{
     margin-top: 5rem;
 }
-.mobile-view .aboutus-section-content{
+.mobile-view .mindfulness-section-content{
     padding: 2rem 2rem 2rem 2rem !important;
     justify-content: center;
 }
 .mobile-view .top-text{
     padding: 0 0 15% 0;
 }
-.mobile-view .aboutus-content-cards-container img{
+.mobile-view .mindfulness-content-cards-container img{
     width: 85vw;
     height: auto;
     object-fit: cover;

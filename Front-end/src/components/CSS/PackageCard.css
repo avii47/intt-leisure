@@ -1,25 +1,24 @@
-.service-content-card{
+.package-card{
     flex: 1 1 18.75rem; 
-    margin: 0.625rem;
-    max-width: 30rem;
-    height: 27rem;
+    max-width: 14.4rem;
+    height: 9.6rem;
     text-align: left;
 }
-.service-content-image-zoom-container {
+.package-image-zoom-container {
     overflow: hidden;
     position: relative;
 }
-.service-content-card-img{
+.package-card-img{
     width: 100%;
     height: 100%;
     transition: transform 0.3s ease-out;
 }
-.service-content-card-title{
+.package-card-title{
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 18px;
 }
-.service-content-card:hover{
+.package-card:hover{
     transition: 0.2s ease-in-out; 
     box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
     top: -4px;
@@ -32,25 +31,25 @@
 .sc-sub{
     display: none;
 }
-.service-content-card:hover .sc-title{
+.package-card:hover .sc-title{
     padding-top: 0px;
     transition: all 0.5s ease-in-out;
 }
-.service-content-card:hover .sc-sub{
+.package-card:hover .sc-sub{
     display: block;
 }
-.service-content-card-body{
+.package-card-body{
     text-align: left;
     padding: 20px;
 }
-.service-content-card-sub{
+.package-card-sub{
     font-size: 15px;
 }
-.mobile-view .service-content-card{
+.mobile-view .package-card{
     width: 300px;
     margin-inline: auto;
 }
-.mobile-view .service-card-img{
+.mobile-view .package-card-img{
     width: 300px;
     height: 200px ;
 }

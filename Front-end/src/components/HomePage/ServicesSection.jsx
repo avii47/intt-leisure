@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import '../CSS/ServicesSection.css';
+import '../CSS/Home/ServicesSection.css';
 import left_arrow from '../../assets/icons/left-arrow.png';
 import right_arrow from '../../assets/icons/right-arrow.png';
 import ServiceCard from './ServiceCard';

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import '../CSS/MindfulnessTourismSection.css';
-import img from '../../assets/images/Rectangle 9 (1).png';
+import '../CSS/Home/MindfulnessTourismSection.css';
+import img from '../../assets/images/mindfulness-section-bg.png';
 
 const MindfulnessTourismSection = () => {
 

@@ -15,7 +15,7 @@
     font-weight: 250;
 }
 .logo {
-    height: 5rem;
+    height: 1.875rem;
 }
 .nav-container{
     width: 85rem;
@@ -38,6 +38,9 @@
 }
 .navbar-offcanvas{
     max-width: 60%;
+}
+.btn-book{
+    margin-left: 14.375rem;
 }
 .mobile-view .btn-book{
     display: none;

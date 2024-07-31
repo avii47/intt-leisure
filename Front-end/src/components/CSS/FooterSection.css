@@ -1,64 +1,7 @@
-/* 
-.footer-content{
-    padding: 0 12rem 3rem 12rem;
-}
-.ft-social-icon{
-    margin-top: 1.1rem;
-    margin-right: 1.8rem;
-    font-size: 25px;
-}
-.pg-link{
-    text-align: left;
-}
-.page-list{
-    list-style: none;
-    margin-left: -2rem;
-}
-.page-list li{
-    margin-top: 0.5rem;
-}
-.btn-footer{
-    font-size: 10px;
-    align-content: start;
-}
-.btn-footer-email{
-    width: 23.625rem;
-    height: 2.4rem;
-    margin-right: 1.25rem;
-}
-.btn-footer-subscribe{
-    width: 9.375rem;
-}
-@media only screen and (max-width: 470px) {
-    .btn-footer-email{
-        width: 10rem;
-        margin-left: 1rem;
-    }
-    .btn-footer-subscribe{
-        width: 6rem;
-    }
-    .footer-content{
-        padding: 0 2rem 0 2rem;
-    }
-    .pg-link{
-        margin-top: 4rem;
-        margin-bottom: 4rem;
-        text-align: center;
-    }
-} */
 
-
-
-
-
-
-
-
-/* Footer.css */
 .footer {
     background-color: #d3d3d3;
     color: #333;
-    padding: 20px;
     text-align: center;
     padding: 1rem 15rem 1rem 15rem;
   }
@@ -69,37 +12,33 @@
 }
   .footer-nav a,
   .footer-bottom a {
-    margin: 0 10px;
+    margin: 0 0.625rem;
     text-decoration: none;
     color: #333;
   }
   
   .footer-subscription {
-    margin: 20px 0;
+    margin: 1.25rem 0;
     text-align: left;
-  }
-  
-  .footer-subscription h3 {
-    margin-bottom: 10px;
   }
   
   .subscription-form {
     display: flex;
-    gap: 20px;
+    gap: 1.25rem;
     justify-content: left;
-    margin: 10px 0;
+    margin: 0.625rem 0;
   }
   
   .subscription-form input {
-    width: 400px;
-    padding: 10px;
+    width: 25rem;
+    padding: 0.625rem;
     border: 1px solid #ccc;
     border-radius: 4px;
   }
   
   .subscription-form button {
-    width: 280px;
-    padding: 10px;
+    width: 17.5rem;
+    padding: 0.625rem;
     border: none;
     background-color: #333;
     color: #fff;
@@ -107,7 +46,8 @@
     cursor: pointer;
   }
   .footer-contact{
-    margin: 20px 100px;
+    margin-top: 1.25rem;
+    margin-left: 9.375rem;
     text-align: left;
   }
   
@@ -116,23 +56,28 @@
   }
   
   .footer-logos img {
-    margin: 10px;
-    height: 50px;
+    margin: 0.625rem;
+    height: 3.125rem;
   }
   
   .footer-social .social-icons a {
-    margin: 0 5px;
+    margin: 0 0.313rem;
   }
   
   .footer-social img {
-    height: 30px;
+    height: 1.875rem;
   }
   
   .footer-bottom {
-    margin: 20px 0;
+    margin: 1.25rem 0;
   }
   
   .footer-copyright {
-    margin-top: 10px;
+    margin-top: 0.625rem;
   }
-  
+  .ft-social-icon{
+    font-size: 1.563rem;
+}
+.contact-icons{
+  height: 2rem;
+}

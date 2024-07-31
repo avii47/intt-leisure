@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import '../CSS/WhyChooseUsSection.css';
+import '../CSS/Home/WhyChooseUsSection.css';
 import authentic_practices from '../../assets/icons/Authentic Practices.png';
 import experties from '../../assets/icons/expertise.png';
 import unique_excursions from '../../assets/icons/Unique Excursions.png';

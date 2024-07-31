@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../CSS/AboutSection.css';
+import '../CSS/Home/AboutSection.css';
 import Button from 'react-bootstrap/Button';
 import img_01 from '../../assets/images/Rectangle 25.png';
 import img_02 from '../../assets/images/Rectangle 28.png';
