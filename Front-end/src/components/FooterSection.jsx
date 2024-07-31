@@ -1,69 +1,115 @@
+// Footer.js
 import React from 'react';
-import './CSS/FooterSection.css';
+import addressIcon from '../assets/icons/icons8-location-pin-50.png';
+import callIcon from '../assets/icons/icons8-call-50.png';
+import emailIcon from '../assets/icons/icons8-email-50.png';
 import logo from '../assets/images/INTT LEISURE VERTICLE.png';
+import ft_icon1 from '../assets/images/footer-icon1.png';
+import ft_icon2 from '../assets/images/footer-icon2.png';
+import './CSS/FooterSection.css';
 
-const FooterSection = () => {
-    return (
-      <section id="footer-section" className="section footer-section justify-content-center">
-        <div className="footer-content">
+const Footer = () => {
+  return (
+    <footer className="footer" >
+      <div className="footer-nav d-flex" style={{ width:'100%'}}>
+        <div>
+            <a  href="#page01">SERVICES</a>
+        </div>
+        <div>
+            <a href="#page02">MINDFULNESS</a>
+        </div>
+        <div>
+            <a href="#page03">EVENTS & NEWS</a>
+        </div>
+        <div>
+            <a href="#page04">WHY CHOOSE US</a>
+        </div>
+        <div>
+            <a href="#page05">CONTACT US</a>
+        </div>
+      </div><hr></hr>
 
-            <div className="row d-flex">
-              <div className="col-lg">
-                <div className="row d-flex">
-                  <div className="col-md-6">
-                    <img style={{ marginLeft:'' }} src={logo} alt="" /><br></br><br></br>
-                    <h6>Follow us on</h6>
-                    <i class="fa-brands fa-square-facebook ft-social-icon"></i>
-                    <i class="fa-brands fa-pinterest-square ft-social-icon" ></i>
-                    <i class="fa-brands fa-square-instagram ft-social-icon"></i><br></br>
-                    <i className="fa-brands fa-linkedin ft-social-icon"><a href="https://www.linkedin.com/company/intt-leisure/"></a></i>
-                    <i class="fa-brands fa-square-x-twitter ft-social-icon"></i>
-                    <i class="fa-brands fa-square-youtube ft-social-icon"><a href="https://www.youtube.com/@travelglobe405"></a></i>
-                  </div>
-                  <div className="col-md-6 pg-link">
-                    <h6>Pages</h6>
-                    <ul className="page-list">
-                      <li style={{ marginTop: '2rem' }}>Page 01</li>
-                      <li>Page 02</li>
-                      <li>Page 03</li>
-                      <li>Page 04</li>
-                      <li>Page 05</li>
-                    </ul>
-                    
-                  </div>
-                </div>
-
-              </div>
-              <div className="col-lg">
-                <div className="row d-flex">
-                    <div className="" style={{ textAlign: 'left' }}>
-                      <h6><strong>Connect</strong></h6>
-                      <p>Keep the vacation bliss alive! Join us to deepen your mindfulness practice and turn tranquility into a lasting lifestyle. Register now and stay connected to your inner peace!</p>
-                      <p>
-                          <button className='btn-footer-email'>Your email</button>
-                          <button className='btn btn-dark'>Learn more ></button>
-                      </p>
-                      <p>By subscribing you agree to our Privacy Policy and consent to receive updates from our company.</p>
-                    </div>
-                </div>
-              </div>
+      <div className='col-12 d-flex'>
+        <div className="col-8">
+            <div className="footer-subscription">
+                <h3>Connect</h3>
+                <p>
+                    Keep the vacation bliss alive! Join us to deepen your mindfulness
+                    practice and turn tranquility into a lasting lifestyle. Register now
+                    and stay connected to your inner peace!
+                </p>
+                <form className="subscription-form">
+                    <input type="email" placeholder="Your Email" />
+                    <button type="submit">Learn More &gt;</button>
+                </form>
+                <p>
+                    By subscribing you agree to our Privacy Policy and consent to receive
+                    updates from our company.
+                </p>
             </div>
-            
-            <br></br><br></br>
-            <hr></hr>
-            <div className='row' style={{ fontSize: '10px' }}>
-                <div className='col-6' style={{ textAlign: 'left' }}>
-                    <p>C 2024 inttleisure.com. All rights reserves.</p>
-                </div>
-                <div className='col-6' style={{ textAlign: 'right' }}>
-                    <button className='btn btn-footer'>Privacy Policy</button>
-                    <button className='btn btn-footer'>Terms of Service</button>
-                    <button className='btn btn-footer'>Cookies Settings</button>
-                </div>
+        </div>
+        <div className="col-5">
+            <div className="footer-contact">
+                <address className='d-flex'>
+                  <div className="col-1">
+                    <img src={addressIcon} className='contact-icons' alt="" />
+                  </div>
+                  <div className="col-12" style={{marginLeft:'20px'}}>
+                    <h5>Delmege Tours</h5>
+                    No. 101, Vinayalankara Mawatha,<br />
+                    Colombo 10, Sri Lanka.
+                  </div>
+                </address>
+                <address className='d-flex'>
+                  <div className="col-1">
+                    <img src={callIcon} className='contact-icons' alt="" />
+                  </div>
+                  <div className="col-12" style={{marginLeft:'20px'}}>
+                    <a href="tel:0094770437293">+94 77 4 48 48 48</a><br />
+                  </div>
+                </address>
+                <address className='d-flex'>
+                  <div className="col-1">
+                    <img src={emailIcon} className='contact-icons' alt="" />
+                  </div>
+                  <div className="col-12" style={{marginLeft:'20px'}}>
+                    <a href="mailto:isuru.tours@delmege.com">sales@intterminal.com</a>
+                  </div>
+                </address>
             </div>
-          </div>
-      </section>
-    );
-  };
+        </div>
+      </div>
 
-export default FooterSection;
+
+      <div className="footer-logos">
+        <img src={ft_icon1} alt="PATA Logo" />
+        <img src={ft_icon2} alt="IATA Logo" />
+        <img src="agent-logo.png" alt="Accredited Agent Logo" />
+        <img src="other-logo.png" alt="Other Logo" />
+      </div>
+      <div className="footer-bottom">
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms of Service</a>
+        <a href="#cookies">Cookies Settings</a>
+      </div>
+      <div className="footer-social">
+        <img src={logo} style={{height:'50px', margin:'30px'}} alt="" />
+        <h5>Follow Us On</h5>
+        <div className="social-icons d-flex" style={{gap:'20px', justifyContent:'center', marginTop:'20px'}}>
+            <i className="fa-brands fa-square-facebook ft-social-icon"></i>
+            <i className="fa-brands fa-pinterest-square ft-social-icon" ></i>
+            <i className="fa-brands fa-square-instagram ft-social-icon"></i>
+            <i className="fa-brands fa-linkedin ft-social-icon"></i>
+            <i className="fa-brands fa-square-x-twitter ft-social-icon"></i>
+            <i className="fa-brands fa-square-youtube ft-social-icon"></i>
+        </div>
+      </div>
+      <hr></hr>
+      <div className="footer-copyright">
+        <p>&copy; 2024 inttleisure.com. All rights reserved.</p>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

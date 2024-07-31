@@ -1,0 +1,59 @@
+.bookNow-content-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.bookNow-section-content {
+    padding: 0 12rem 12rem 12rem;
+    display: flex;
+    flex-wrap: wrap; 
+    text-align: left;
+
+    height: 100vh;
+    overflow: hidden;
+}
+.date-container{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+    height: 100px;
+    background-color: rgba(194, 196, 195, 0.671);
+}
+.check-in{
+    border-right: solid 1px black;
+}
+.check-in-date{
+    height: 100%;
+    width: 60px;
+}
+.check-out{
+    padding-left: 50px;
+}
+.package-card-container{
+    display: flex;
+    overflow-y: auto;
+    flex-wrap: wrap; 
+    column-gap: 2rem;
+    row-gap: 2rem;
+    scrollbar-width: none;
+    justify-content: center;
+    align-items: start;
+    margin-bottom: 50px;
+}
+.package-card-container::-webkit-scrollbar {
+    display: none;
+}
+.scrollable-content {
+    overflow-y: auto;
+    height: 100%;
+} 
+.scrollable-content::-webkit-scrollbar {
+    display: none;
+}
+.booking-summary-col {
+    position: sticky;
+    top: 0;
+    padding-left: 100px;
+    height: fit-content;
+}

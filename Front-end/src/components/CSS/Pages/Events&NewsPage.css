@@ -1,0 +1,26 @@
+.eventsNews-content-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.eventsNews-section-content {
+    padding: 0 12rem 12rem 12rem;
+    flex-wrap: wrap; 
+    text-align: left;
+}
+.eventsNews-img{
+    height: 18.75rem;
+    margin-bottom: 1.25rem;
+}
+.eventsNews-txt{
+    padding-left: 5%;
+}
+.event-card {
+    margin-bottom: 5rem;
+}
+.news-card{
+    margin-bottom: 5rem;
+}
+.news-cards-container{
+    gap: 30px;
+}

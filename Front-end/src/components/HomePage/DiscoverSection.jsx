@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './CSS/DiscoverSection.css';
+import './CSS/Home/DiscoverSection.css';
 import ContentCard from './ContentCard';
 
 const DiscoverSection = () => {

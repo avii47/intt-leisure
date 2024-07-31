@@ -1,0 +1,59 @@
+.destination-card{
+    margin-top: 20px;
+    width: 500px;
+    height: 300px;
+    text-align: left;
+}
+.destination-image-zoom-container {
+    overflow: hidden;
+    position: relative;
+}
+.destination-card-img{
+    width: 500px;
+    height: 300px;;
+    transition: transform 0.3s ease-out;
+}
+.card-text {
+    position: relative;
+    text-align: left;
+    width: 300px;
+    height: 90px;
+    top: -120px;
+    left: 200px;
+    background-color: rgba(255, 255, 255, 0.514); 
+    padding: 7px;
+    border-radius: 5px 0 0 5px;
+} 
+.destination-card:hover .card-text{
+    background-color: rgb(255, 255, 255); 
+    transition: 1s linear;
+} 
+.destination-card:hover{
+    transition: 0.2s ease-in-out; 
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    top: -4px;
+    border: 1px solid #cccccc;
+}
+.destination-card:hover .destination-card-img{
+    transform: scale(1.1); 
+}
+.mobile-view .destination-card{
+    width: 300px;
+    height: 200px;
+    margin-bottom: 50px;
+}
+.mobile-view .destination-card-img{
+    width: 300px;
+    height: 200px;
+}
+.mobile-view .card-text h5{
+    font-size: 15px;
+    margin-top: -5px;
+}
+.mobile-view .card-text{
+    font-size: 12px;
+    width: 200px;
+    height: 70px;
+    top: -90px;
+    left: 100px;
+}

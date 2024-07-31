@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import '../CSS/Events&NewsSection.css';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import '../CSS/Home/Events&NewsSection.css';
 import left_arrow from '../../assets/icons/left-arrow.png';
 import right_arrow from '../../assets/icons/right-arrow.png';
 import ContentCard from './ContentCard';
@@ -11,6 +12,8 @@ const EventsNewsSection = () => {
   const cardRef3 = useRef(null);
   const [showLeftButton3, setShowLeftButton] = useState(false);
   const [showRightButton3, setShowRightButton] = useState(true);
+  const location = useLocation(); // Get the current path
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     const handleResize = () => {
@@ -113,6 +116,10 @@ const updateButtons = () => {
     };
 }, []);
 
+const handleOnClick = (path) => {
+  navigate(path);
+};
+
   return (
     <section id="eventsNews-section" className={`section justify-content-left d-flex ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="eventsNews-content justify-content-left">
@@ -123,7 +130,7 @@ const updateButtons = () => {
             {showRightButton3 && <button className="scroll-button3 right3" onClick={() => scrollContainer('right')}><img className='nav-icon' src={right_arrow}></img></button>}
           </div>
 
-          <div id='eventsNews-cards' className="d-flex eventsNews-cards" ref={containerRef3}>
+          <div id='eventsNews-cards' className="d-flex eventsNews-cards" ref={containerRef3} onClick={() => handleOnClick('/events&news')}>
             {contentData.map((content, index) => (
               <ContentCard key={index} content={content} ref={cardRef3}/>
             ))}

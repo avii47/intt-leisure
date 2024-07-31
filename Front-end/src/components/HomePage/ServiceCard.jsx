@@ -1,5 +1,5 @@
 import React from 'react';
-import '../CSS/ServiceCard.css';
+import '../CSS/Home/ServiceCard.css';
 
 const ServiceCard = React.forwardRef(({ content, className, style }, ref) => {
   return (

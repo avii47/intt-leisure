@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../assets/images/INTT LEISURE VERTICLE.png';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
@@ -11,6 +11,8 @@ import './CSS/Navbar.css';
 function MyNavbar() {
   const [scrolled, setScrolled] = useState(false);
   const [isMobileView, setIsMobileView] = useState(false);
+  const location = useLocation(); // Get the current path
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,6 +44,10 @@ function MyNavbar() {
     };
   }, []);
 
+  const handleOnClick = (path) => {
+    navigate(path);
+  };
+
   return (
     <>
       {['xl'].map((expand) => (
@@ -52,8 +58,8 @@ function MyNavbar() {
           className={`bg-body-tertiary mb-3 navbar-container ${scrolled ? 'navbar-scrolled' : ''}  ${isMobileView ? 'mobile-view' : ''}`}
         >
           <Container fluid className={`nav-container`}>
-            <Navbar.Brand href="#Hero-section">
-              <img className="logo" src={logo} alt="Logo" style={{ height: '30px' }} />
+            <Navbar.Brand  as={Link} to="/">
+              <img className="logo" src={logo} alt="Logo"/>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
@@ -67,16 +73,11 @@ function MyNavbar() {
                   <h3>INTT Leisure</h3>
                 </Offcanvas.Title>
               </Offcanvas.Header>
-              <Offcanvas.Body style={{ }}>
+              <Offcanvas.Body>
                 <Nav className="flex-grow-1 pe-3 nav-item-container font-secondary">
-                  {/* <Nav.Link className="nav-item" >SERVICES</Nav.Link>
-                  <Nav.Link className="nav-item" >MINDFULNESS</Nav.Link>
-                  <Nav.Link className="nav-item" >DESTINATIONS</Nav.Link>
-                  <Nav.Link className="nav-item" >WHY CHOOSE US</Nav.Link>
-                  <Nav.Link className="nav-item" >CONTACT US</Nav.Link> */}
                   <Nav.Link className="nav-item" as={Link} to="/services">SERVICES</Nav.Link>
-                  <Nav.Link className="nav-item" as={Link} to="/services">MINDFULNESS</Nav.Link>
-                  <Nav.Link className="nav-item" as={Link} to="/services">EVENTS & NEWS</Nav.Link>
+                  <Nav.Link className="nav-item" as={Link} to="/mindfulness">MINDFULNESS</Nav.Link>
+                  <Nav.Link className="nav-item" as={Link} to="/destinations">DESTINATIONS</Nav.Link>
                   <Nav.Link className="nav-item" as={Link} to="/why-choose-us">WHY CHOOSE US</Nav.Link>
                   <Nav.Link className="nav-item" as={Link} to="/contact-us">CONTACT US</Nav.Link>
                 </Nav>
@@ -85,7 +86,7 @@ function MyNavbar() {
               </Offcanvas.Body>
               
             </Navbar.Offcanvas>
-            <Button style={{ marginLeft:'14.375rem' }} variant={scrolled ? "outline-dark" : "outline-light"} className="btn-book">
+            <Button style={{ marginLeft:'14.375rem' }} variant={scrolled ? "outline-dark" : "outline-light"} className="btn-book" as={Link} to="/bookNow">
                 Book Now
             </Button>
           </Container>

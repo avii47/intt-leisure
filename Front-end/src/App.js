@@ -7,19 +7,12 @@ import Navbar from './components/Navbar';
 
 import HomePage from '../src/pages/HomePage';
 import ServicePage from '../src/pages/ServicePage';
+import DestinationsPage from '../src/pages/DestinationsPage';
+import EventsNewsPage from '../src/pages/Events&News';
+import MindfulnessPage from '../src/pages/MindfulnessPage';
 import AboutUsPage from '../src/pages/AboutUsPage';
 import ContactUsPage from '../src/pages/ContactUsPage';
-
-// function App() {
-//   return (
-//     <div className="App">
-//         <Navbar />
-//         <HomePage />
-//     </div>
-//   );
-// }
-
-// export default App;
+import BooknowPage from '../src/pages/BookNowPage';
 
 function App() {
   return (
@@ -27,8 +20,12 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/services" element={<ServicePage />} />
+        <Route path="/mindfulness" element={<MindfulnessPage />} />
+        <Route path="/destinations" element={<DestinationsPage />} />
         <Route path="/why-choose-us" element={<AboutUsPage />} />
         <Route path="/contact-us" element={<ContactUsPage />} />
+        <Route path="/events&news" element={<EventsNewsPage />} />
+        <Route path="/bookNow" element={<BooknowPage />} />
         <Route path="/" element={<HomePage />} />
       </Routes>
     </Router>
