@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PackageCard from '../BookNowPage/PackageCard'
 import '../CSS/Pages/BookNowPage.css';
 
@@ -6,6 +6,7 @@ const BookNowContent = () => {
 
   const img4 = 'https://img.freepik.com/free-photo/grunge-gray-concrete-textured-background_53876-145492.jpg?t=st=1722571110~exp=1722574710~hmac=dbe2ce48dbeca59499ad4867b3fd0ab0b1cdf15ea16e35d33162d12e12ef02e3&w=1380'
   const [isMobileView, setIsMobileView] = useState(false);
+  const targetRef = useRef(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -83,13 +84,40 @@ const BookNowContent = () => {
       'sub': 'MINDFULNESS AT RITIGALA',
       'text': 'Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.'
     },
-      
   ];
+
+  const summaryRef = useRef(null);
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const contentHeight = contentRef.current.getBoundingClientRect().height;
+      const viewportHeight = window.innerHeight;
+      const scrollY = window.scrollY;
+      const summaryHeight = summaryRef.current.getBoundingClientRect().height;
+
+      if (scrollY + viewportHeight >= contentRef.current.offsetTop + contentHeight) {
+        summaryRef.current.style.position = 'absolute';
+        summaryRef.current.style.top = `${contentHeight - summaryHeight }px`;
+      } else if (scrollY >= contentRef.current.offsetTop) {
+        summaryRef.current.style.position = 'fixed';
+        summaryRef.current.style.top = '80';
+      } else {
+        summaryRef.current.style.position = 'static';
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
 
   return (
     <section id="bookNow-content-section" className={`section bookNow-content-section d-flex ${isMobileView ? 'mobile-view' : ''}`}>
-      <div className="bookNow-section-content d-flex flex-nowrap">
+      <div id="target" className="bookNow-section-content d-flex flex-nowrap" ref={contentRef}>
         <div className='col-12 d-flex'>
             <div className="col-6 scrollable-content">
                 <h3 className='font-primary'>Book your journey with us!</h3><br></br><br></br>
@@ -137,7 +165,7 @@ const BookNowContent = () => {
                 </div>
                 <textarea name="message" id="" style={{width:'100%'}} rows={8} placeholder='Message'></textarea>
             </div>
-            <div className="col-6 booking-summary-col">
+            <div className="col-6 booking-summary-col" ref={summaryRef}>
               <div className='booking-summary-content'>
                 <h3 className='font-primary'>Booking Summary</h3><br></br><br></br>
                 <div class="form-group">
@@ -152,6 +180,19 @@ const BookNowContent = () => {
                   <input className="form-control form-control-sm" type="text" placeholder="" />
                   <label class="label-text">Mobile</label>
                 </div>
+                <div class="form-group">
+                  <input className="form-control form-control-sm" type="text" placeholder="" />
+                  <label class="label-text">Duration of your stay</label>
+                </div>
+                <div class="form-group">
+                  <input className="form-control form-control-sm" type="text" placeholder="" />
+                  <label class="label-text">Package Details</label>
+                </div>
+                <div class="form-group">
+                  <input className="form-control form-control-sm" type="text" placeholder="" />
+                  <label class="label-text">Total</label>
+                </div>
+                <button className='btn btn-dark btn-book-f'>Book Now</button>
               </div>
                 
                 

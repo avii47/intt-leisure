@@ -3,12 +3,13 @@
     padding-bottom: 1rem;
     justify-content: center !important;
     background-color: transparent !important;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
 }
 .navbar-scrolled {
     background-color: white !important;
     color: rgb(0, 0, 0);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.5s ease-in-out;
 }
 .navbar-scrolled .nav-item{
     color: black;
