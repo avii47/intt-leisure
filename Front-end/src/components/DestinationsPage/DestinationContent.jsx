@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import '../CSS/Pages/DestinationsPage.css';
 import DestinationCard from '../DestinationsPage/DestinationCards';
-// import img_01 from '../../assets/images/events-img1.png';
-// import img_02 from '../../assets/images/events-img2.png';
-// import img_03 from '../../assets/images/events-img3.png';
-// import img_04 from '../../assets/images/news-img.png';
+import img_01 from '../../assets/images/stock-photo-elephants-couple-in-yala-national-park-sri-lanka-2432394461.jpg';
+import img_02 from '../../assets/images/stock-photo-instagram-effect-of-polonnaruwa-ancient-vatadage-that-is-an-ancient-structure-built-for-hold-the-685384048.jpg';
+import img_03 from '../../assets/images/stock-photo-kandy-sri-lanka-july-sri-lankan-traditional-handcrafted-goods-for-sale-in-a-shop-at-2223350811.jpg';
+import img_04 from '../../assets/images/stock-photo-the-sri-lankan-leopard-is-a-subspecies-of-leopard-found-only-in-sri-lanka-a-small-island-nation-2301123729.jpg';
 
 const DestinationsContent = () => {
-
-  const img_01 = 'https://img.freepik.com/free-photo/resort-sky-bay-travel-exotic_1232-4572.jpg?t=st=1722259982~exp=1722263582~hmac=a0e37219e319cb4ad1cedec6d68c1413dbc1f9abf18292483db2a0ad3cc31c24&w=1380'
 
   const [isMobileView, setIsMobileView] = useState(false);
 
@@ -59,17 +57,17 @@ const DestinationsContent = () => {
         text: 'Well trained experts to guide you through the journey.'
     },
     {
-        img: img_01,
+        img: img_02,
         title: 'Corporate',
         text: 'Well trained experts to guide you through the journey.'
     },
     {
-        img: img_01,
+        img: img_03,
         title: 'Corporate',
         text: 'Well trained experts to guide you through the journey.'
     },
     {
-        img: img_01,
+        img: img_04,
         title: 'Corporate',
         text: 'Well trained experts to guide you through the journey.'
     },

@@ -7,7 +7,7 @@ import ContentCard from '../ServicePage/ServiceContentCard';
 
 const ServiceContent = () => {
 
-  const img4 = 'https://img.freepik.com/free-photo/business-woman-gray-jacket-enjoying-music-while-sitting-workplace-white-office_197531-10691.jpg?t=st=1722326018~exp=1722329618~hmac=664bb3f19e1c854d3a319c2da3751044c9ae2180e9f3c4370378ae712184d3be&w=1380'
+  const img4 = 'https://img.freepik.com/free-photo/grunge-gray-concrete-textured-background_53876-145492.jpg?t=st=1722571110~exp=1722574710~hmac=dbe2ce48dbeca59499ad4867b3fd0ab0b1cdf15ea16e35d33162d12e12ef02e3&w=1380'
   const [isMobileView, setIsMobileView] = useState(false);
 
   useEffect(() => {

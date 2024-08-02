@@ -136,14 +136,14 @@ const ServicesSection = () => {
       return (
         <div id='service-section' className={`section d-flex justify-content-center ${isMobileView ? 'mobile-view' : ''}`}>
             <div className='services-content justify-content-center'>
-                <h6 className='font-secondary'>Explore Our Services</h6>
-                <hr style={{ width: '10rem', margin: 'auto' }} /><br></br>
-                <h3 className='font-primary'>Choose Your Journey</h3>
-                <p className='ont-secondary' style={{fontSize:'16px'}}>As you immerse yourself in this enchanting destination, we invite you to participate in profound self-reflection and practice alongside us.</p>
+                <h6 className='font-secondary left-align'>Explore Our Services</h6>
+                <hr style={{ width: '10rem' }} /><br></br>
+                <h3 className='font-primary left-align'>Choose Your Journey</h3>
+                <p className='ont-secondary left-align' style={{fontSize:'18px'}}>As you immerse yourself in this enchanting destination, we invite you to participate in profound self-reflection and practice alongside us.</p>
 
                 <div className="service-slider-wrapper">
-                  {showLeftButton2 && <button style={{}} className="scroll-button2 left2" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}
-                  {showRightButton2 && <button style={{}} className="scroll-button2 right2" onClick={() => scrollContainer('right')}><img className='nav-icon' src={right_arrow}></img></button>}
+                  {showLeftButton2 && <button className="scroll-button2 left2" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}
+                  {showRightButton2 && <button className="scroll-button2 right2" onClick={() => scrollContainer('right')}><img className='nav-icon' src={right_arrow}></img></button>}
                   <div className='service-slider d-flex ' ref={containerRef2}>
                     {contentData.map((content, index) => (
                       <ServiceCard

@@ -1,20 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../CSS/Home/WhyChooseUsSection.css';
-import authentic_practices from '../../assets/icons/Authentic Practices.png';
-import experties from '../../assets/icons/expertise.png';
-import unique_excursions from '../../assets/icons/Unique Excursions.png';
-import travel from '../../assets/icons/traveling-icon.png';
-import forbes from '../../assets/icons/forbes-icon.png';
-import service from '../../assets/icons/service-icon.png';
 import left_arrow from '../../assets/icons/left-arrow.png';
 import right_arrow from '../../assets/icons/right-arrow.png';
 import IconCard from '../HomePage/IconCard';
 
-
-import img5 from '../../assets/icons/Icon_WCU_Color-01.png';
-import img6 from '../../assets/icons/Icon_WCU_Color-02.png';
-import img7 from '../../assets/icons/Icon_WCU_Gray.png';
-import img8 from '../../assets/icons/Icon_WCU_15pt.png';
+import authentic_practice_icon from '../../assets/icons/Icons_WCU_Authentic Practice.png';
+import forbes_certified_coach_icon from '../../assets/icons/Icons_WCU_Forbes Cerified Coach.png'
+import eyes_of_locals_icon from '../../assets/icons/Icons_WCU_Eyes of Locals.png'
+import backed_by_research_icon from '../../assets/icons/Icons_WCU_Backed By Research-06.png'
+import ancient_root_icon from '../../assets/icons/Icons_WCU_Ancient Roots.png';
+import travel_wisdom_icon from '../../assets/icons/Icons_WCU_Travel Wisdom.png';
 
 const WhyChooseUsSection = () => {
 
@@ -40,34 +35,34 @@ const WhyChooseUsSection = () => {
 
   const contentData = [
     {
-      img: img5,
-      title: 'Unique Excursions',
-      sub: 'A workshop was conducted at the university of Moratuwa on the 19th of June 2023.',
+      img: authentic_practice_icon,
+      title: 'Authentic practice (Results)',
+      sub: 'Our mindfulness techniques follow Buddha’s original teachings, offering a distinct approach from Western ideologies.',
     },
     {
-      img: img6,
-      title: 'Authentic Practices',
-      sub: 'A workshop was conducted at the university of Moratuwa on the 19th of June 2023.',
+      img: forbes_certified_coach_icon,
+      title: 'Forbes-Certified Coach',
+      sub: 'All mindfulness programs are designed by Dr. Gamini Hewawasam, a Forbes-certified coach specializing in mindfulness in leadership.',
     },
     {
-      img: img7,
-      title: 'Expertised Team',
-      sub: 'A workshop was conducted at the university of Moratuwa on the 19th of June 2023.',
+      img: eyes_of_locals_icon,
+      title: 'Eyes of locals',
+      sub: 'Discover Sri Lanka through the eyes of locals. As natives, we offer an authentic journey deeply rooted in our heritage and heartfelt connection to the land.',
     },
     {
-      img: img8,
-      title: 'Forbes Expert',
-      sub: 'A workshop was conducted at the university of Moratuwa on the 19th of June 2023.',
+      img: backed_by_research_icon,
+      title: 'Backed by Research',
+      sub: 'Our approach to mindfulness is rooted in extensive research, and we are dedicated to sharing its profound benefits with you.',
     },
     {
-      img: travel,
-      title: 'Traveling Expert',
-      sub: 'A workshop was conducted at the university of Moratuwa on the 19th of June 2023.',
+      img: ancient_root_icon,
+      title: 'Ancient Roots (Locations)',
+      sub: 'We have carefully chosen the locations for you, where these profound mindful practices have thrived.',
     },
     {
-      img: service,
-      title: '24/7 Service',
-      sub: 'A workshop was conducted at the university of Moratuwa on the 19th of June 2023.',
+      img: travel_wisdom_icon,
+      title: 'Travel Wisdom',
+      sub: 'With our team of travel experts, your mindfulness vacation will be managed with the highest level of expertise and care',
     },
   ];
 

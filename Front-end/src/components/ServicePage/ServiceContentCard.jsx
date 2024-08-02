@@ -14,7 +14,7 @@ const ServiceContentCard = ({content}) => (
             </div>
             <div className="service-content-card-body">
                 <p className="service-content-card-sub font-secondary">{content.text}</p>
-                <button className='btn btn-outline-secondary'>View Packages ></button>
+                <button className='btn btn-outline-secondary btn-sm' style={{border:'none'}}>View Packages ></button>
             </div>
         </div>
   );
