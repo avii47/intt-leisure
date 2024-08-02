@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../CSS/Pages/MindfulnessPage.css';
 import img_01 from '../../assets/images/Rectangle 25.png';
-import img_02 from '../../assets/images/Rectangle 28.png';
+import img_02 from '../../assets/images/aboutUs-bg.png';
 import img_03 from '../../assets/images/img3.jpg';
 import img_04 from '../../assets/images/Rectangle 90 (2).png';
 

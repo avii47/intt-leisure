@@ -50,7 +50,7 @@ const ContactUsContent = () => {
       <div className="contactus-section-content">
         <div className='top-text'>
           <h4 className='font-primary' style={{ fontSize: '30px' }}><b>Thank You Messege</b></h4><br></br><br></br>
-          <p className='font-secondary' style={{ fontSize: '20px', marginBottom:'60px' }}>A workshop was conducted at the university of Moratuwa on the 19th of June 2023.The workshop focused on enhancing the staff of the University of Moratuwa’s understanding and application of Appreciative Inquiry in the context of mindfulness-based leadership. Throughout the workshop, participants had the opportunity to listen to informative speeches delivered by Dr. GB Hewawa, sam and Jim Ludema. Following the speeches, participants actively engaged in interactive Q&A sessions where they sought clarification, shared their perspectives, and explored how these concepts could be directly applied within the university’s specific context.</p>
+          <p className='font-secondary' style={{ fontSize: '20px', marginBottom:'60px' }}>Thank you for choosing us for your transformative journey. Every leader is unique, so we begin by understanding you deeply to craft a mindfulness vacation that's perfectly tailored to your needs. Share your details below, and our team of experts will be just a click away.</p>
           <p className='font-secondary' style={{ fontSize: '20px' }}>
             +94 774 48 48 48 <br></br><br></br>
             nfo@intterminal.com <br></br><br></br>

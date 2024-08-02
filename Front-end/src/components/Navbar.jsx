@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import logo from '../assets/images/INTT LEISURE VERTICLE.png';
+import logo_color from '../assets/images/INTT LEISURE VERTICLE.png';
+import logo_dark from '../assets/icons/INTT Leisure Logo-01.png';
+import logo_light from '../assets/icons/INTT Leisure Logo-02.png';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -58,8 +60,8 @@ function MyNavbar() {
           className={`bg-body-tertiary mb-3 navbar-container ${scrolled ? 'navbar-scrolled' : ''}  ${isMobileView ? 'mobile-view' : ''}`}
         >
           <Container fluid className={`nav-container`}>
-            <Navbar.Brand  as={Link} to="/">
-              <img className="logo" src={logo} alt="Logo"/>
+            <Navbar.Brand  as={Link} to="/" >
+              <img className="logo" src={scrolled ? logo_dark : logo_light} alt="Logo"/>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
@@ -75,9 +77,9 @@ function MyNavbar() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="flex-grow-1 pe-3 nav-item-container font-secondary">
-                  <Nav.Link className="nav-item" as={Link} to="/services">SERVICES</Nav.Link>
                   <Nav.Link className="nav-item" as={Link} to="/mindfulness">MINDFULNESS</Nav.Link>
                   <Nav.Link className="nav-item" as={Link} to="/destinations">DESTINATIONS</Nav.Link>
+                  <Nav.Link className="nav-item" as={Link} to="/services">SERVICES</Nav.Link>
                   <Nav.Link className="nav-item" as={Link} to="/why-choose-us">WHY CHOOSE US</Nav.Link>
                   <Nav.Link className="nav-item" as={Link} to="/contact-us">CONTACT US</Nav.Link>
                 </Nav>

@@ -1,6 +1,6 @@
 .navbar-container{
-    padding-top: 1.563rem;
-    padding-bottom: 1.563rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     justify-content: center !important;
     background-color: transparent !important;
     transition: background-color 0.3s ease-in-out;
@@ -15,7 +15,7 @@
     font-weight: 250;
 }
 .logo {
-    height: 1.875rem;
+    height: 5rem;
 }
 .nav-container{
     width: 85rem;

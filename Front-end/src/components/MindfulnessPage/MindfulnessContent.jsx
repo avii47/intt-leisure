@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../CSS/Pages/MindfulnessPage.css';
 import img_01 from '../../assets/images/Rectangle 25.png';
-import img_02 from '../../assets/images/Rectangle 28.png';
+import img_02 from '../../assets/images/aboutUs-bg.png';
 import img_03 from '../../assets/images/img3.jpg';
 import img_04 from '../../assets/images/Rectangle 90 (2).png';
 
@@ -131,7 +131,7 @@ const MindfulnessContent = () => {
 
           <div id='rw3' className='row col-12 d-flex mindfulness-rw'>
             <div className='col-md-6' style={{ textAlign: 'right' }}>
-              <img src={img_01} alt="" />
+              <img src={img_02} alt="" />
             </div>
             <div id='text3' className='col-md-6 text3'>
               <h6>Explore</h6><hr style={{ width: '60px' }}></hr>

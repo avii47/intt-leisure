@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../CSS/Home/MindfulnessTourismSection.css';
-import img from '../../assets/images/mindfulness-section-bg.png';
+import img from '../../assets/images/AdobeStock_234737823.jpeg';
 
 const MindfulnessTourismSection = () => {
 
@@ -54,7 +54,7 @@ const MindfulnessTourismSection = () => {
             <h6 className='font-secondary' style={{ marginTop: '-6rem'}}>Explore</h6>
             <hr style={{ width: '3.5rem' }} />
             <h3 className='font-primary'>Mindfulness Tourism</h3>
-            <p className='font-secondary'>Embraced by verdant jungle with panoramic views of the Indian Ocean, ÀNI Sri Lanka, an all-inclusive luxury private resort, welcomes exclusively your family and friends alone to this private beachfront estate on the island’s fabled south coast.</p>
+            <p className='font-secondary'>Experience mindfulness in Sri Lanka with techniques backed by research and teachings rooted in original practices. Our approach is distinct from common Western ideologies, offering a unique way to deepen your mindfulness practice and find true relaxation.</p>
             <br></br>
             <button type="button" className="btn btn-outline-light" style={{width:'150px'}}>Learn more ></button>
       </div>

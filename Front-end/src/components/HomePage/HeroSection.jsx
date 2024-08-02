@@ -54,9 +54,9 @@ const HeroSection = () => {
         <video src={video} autoPlay loop muted />
         <div className="hero-content">
           <div id='hero-heading' className="hero-heading-section">
-              <h1 className='hero-heading font-primary'>Experience Mindfulness Vacation</h1>
-              <p className='font-secondary'>Connect with the Ultimate Luxury of Mindfulness in Sri Lanka<br></br>
-                Transform Your Next Vacation into a Journey of Self-Discovery</p>
+              <h1 className='hero-heading font-primary'>Mindfulness Vacations for Business Leaders</h1>
+              <p className='font-secondary'>leaders change the world and we change how they experience it. Backed by research on Buddha’s teachings,<br></br>
+               our Sri Lankan retreats offer business leaders a unique mindfulness escape from stress, distinct from Western approaches.</p>
               <Lottie className='arrow-icon' animationData={animationData}></Lottie>
           </div>
           <div className="bottom-viewbar d-flex">

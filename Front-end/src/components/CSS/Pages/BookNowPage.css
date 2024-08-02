@@ -41,9 +41,6 @@
     align-items: start;
     margin-bottom: 50px;
 }
-.package-card-container::-webkit-scrollbar {
-    display: none;
-}
 .scrollable-content {
     overflow-y: auto;
     height: 100%;
@@ -56,4 +53,65 @@
     top: 0;
     padding-left: 100px;
     height: fit-content;
+}
+.booking-summary-content{
+    border-radius: 8px;
+    padding-left: 10%;
+    position:static !important;
+}
+
+
+.text-field-bottom-line {
+    border-radius: 0%;
+    border: none;
+    border-bottom: 1px solid #000; /* Adjust the color and thickness as needed */
+    outline: none;
+    width: 100%; /* Adjust width as needed */
+    padding: 5px 0; /* Adjust padding as needed */
+  }
+  
+  .text-field-bottom-line::placeholder {
+    color: #aaa; /* Adjust placeholder color as needed */
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form-group {
+    position: relative !important;
+    margin-bottom: 30px !important;
+}
+.form-control {
+    border: none !important;
+    border-bottom: 1px solid #000 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background-color: rgba(255, 255, 255, 0) !important;
+}
+.label-text {
+    position: absolute;
+    top: 0.1rem; 
+    left: 10px;
+    color: #000; 
+    font-size: 16px;
+    font-weight: 400;
+    pointer-events: none; 
+    transition: top 0.3s, font-size 0.3s;
+}
+.form-control:focus {
+    outline: none !important;
+}
+.form-control:focus + .label-text,
+.form-control:not(:placeholder-shown) + .label-text {
+    top: -1.25rem; 
+    font-size: 0.8rem !important; 
 }
