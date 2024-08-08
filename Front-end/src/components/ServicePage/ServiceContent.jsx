@@ -1,28 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useMobileView } from '../../contexts/MobileViewContext';
 import '../CSS/Pages/ServicePage.css';
-import img_01 from '../../assets/images/Rectangle 25.png';
-import img_02 from '../../assets/images/Rectangle 28.png';
-import img_03 from '../../assets/images/img3.jpg';
 import ContentCard from '../ServicePage/ServiceContentCard';
 
 const ServiceContent = () => {
 
+  const isMobileView = useMobileView();
   const img4 = 'https://img.freepik.com/free-photo/grunge-gray-concrete-textured-background_53876-145492.jpg?t=st=1722571110~exp=1722574710~hmac=dbe2ce48dbeca59499ad4867b3fd0ab0b1cdf15ea16e35d33162d12e12ef02e3&w=1380'
-  const [isMobileView, setIsMobileView] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobileView(window.innerWidth <= 1000); 
-    };
-
-    handleResize();
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
 
   const contentData = [
     {

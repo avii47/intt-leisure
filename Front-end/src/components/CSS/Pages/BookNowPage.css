@@ -9,8 +9,6 @@
     display: flex;
     flex-wrap: wrap; 
     text-align: left;
-
-    
     overflow: hidden;
 }
 .date-container{
@@ -18,7 +16,8 @@
     gap: 10px;
     margin-bottom: 10px;
     padding: 20px;
-    height: 100px;
+    height: 80px;
+    border-radius: 10px;
     background-color: rgba(194, 196, 195, 0.671);
 }
 .check-in{
@@ -29,7 +28,7 @@
     width: 60px;
 }
 .check-out{
-    padding-left: 50px;
+    padding-left: 20px;
 }
 .package-card-container{
     display: flex;
@@ -51,21 +50,13 @@
 }
 .booking-summary-col {
     position: relative;
-    top: 50px;
     padding: 50px;
-    width: 40%;
+    width: 100%;
     margin-left: 100px;
     border-radius: 10px;
     height: fit-content;
     background-color: #fff7d9;
 }
-.booking-summary-content{
-    border-radius: 8px;
-    padding-left: 10%;
-    /* position:static !important; */
-}
-
-
 .text-field-bottom-line {
     border-radius: 0%;
     border: none;
@@ -75,25 +66,12 @@
     padding: 5px 0; 
   }
   
-  .text-field-bottom-line::placeholder {
+.text-field-bottom-line::placeholder {
     color: #aaa; 
-  }
-  .btn-book-f{
+}
+.btn-book-f{
     margin-top: 50px;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 .form-group {
     position: relative !important;
     margin-bottom: 30px !important;
@@ -123,3 +101,66 @@
     top: -1.25rem; 
     font-size: 0.8rem !important; 
 }
+.book-icons{
+    font-size: 30px;
+}
+.stay-input{
+    align-items: center;
+}
+
+.mobile-view .bookNow-section-content{
+    padding: 2rem 2rem 30rem 2rem;
+}
+.mobile-view .main-col{
+    flex-direction: column;
+}
+.mobile-view .scrollable-content{
+    width: 85vw;
+}
+.mobile-view .date-container{
+    gap: 0px;
+    margin-bottom: 10px;
+    padding: 10px;
+    height: 70px;
+}
+.mobile-view .book-icons{
+    font-size: 20px;
+}
+.mobile-view .date-input{
+    width: 105%;
+    margin-left: -20%;
+}
+.mobile-view .book-text{
+    margin: 10px !important;
+    font-size: 10px;
+    width: 120px;
+}
+.mobile-view .check-out{
+    padding-left: 10px;
+}
+.mobile-view .count-input{
+    width: 40%;
+}
+.mobile-view .in1{
+    margin-left: -30%;
+    width: 30%;
+}
+.mobile-view .package-card-container{
+    flex-wrap: nowrap; 
+    column-gap: 1rem;
+    row-gap: 0rem;
+    scrollbar-width: none;
+    height: 100px;
+    width: 85vw;
+    justify-content: left;
+    align-items: normal;
+    overflow-x: scroll;
+}
+.mobile-view .booking-summary-col{
+    width: 85vw;
+    margin-top: -75%;
+    margin-left: -0%;
+    margin-bottom: 0%;
+}
+
+ 

@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo_color from '../assets/images/INTT LEISURE VERTICLE.png';
@@ -8,13 +9,15 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { useMobileView } from '../contexts/MobileViewContext';
 import './CSS/Navbar.css';
 
 function MyNavbar() {
   const [scrolled, setScrolled] = useState(false);
-  const [isMobileView, setIsMobileView] = useState(false);
-  const location = useLocation(); // Get the current path
+  const location = useLocation(); 
   const navigate = useNavigate(); 
+
+  const isMobileView = useMobileView();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,24 +34,7 @@ function MyNavbar() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobileView(window.innerWidth <= 1000); 
-    };
-
-    handleResize();
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-  const handleOnClick = (path) => {
-    navigate(path);
-  };
+  
 
   return (
     <>
@@ -60,11 +46,12 @@ function MyNavbar() {
           className={`bg-body-tertiary mb-3 navbar-container ${scrolled ? 'navbar-scrolled' : ''}  ${isMobileView ? 'mobile-view' : ''}`}
         >
           <Container fluid className={`nav-container`}>
-            <Navbar.Brand  as={Link} to="/" >
+            <Navbar.Brand id="callOne"  as={Link} to="/" >
               <img className="logo" src={scrolled ? logo_dark : logo_light} alt="Logo"/>
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className="custom-toggler" />
             <Navbar.Offcanvas
+              
               className="navbar-offcanvas"
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
@@ -76,15 +63,14 @@ function MyNavbar() {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <Nav className="flex-grow-1 pe-3 nav-item-container font-secondary">
-                  <Nav.Link className="nav-item" as={Link} to="/mindfulness">MINDFULNESS</Nav.Link>
-                  <Nav.Link className="nav-item" as={Link} to="/destinations">DESTINATIONS</Nav.Link>
-                  <Nav.Link className="nav-item" as={Link} to="/services">SERVICES</Nav.Link>
-                  <Nav.Link className="nav-item" as={Link} to="/why-choose-us">WHY CHOOSE US</Nav.Link>
-                  <Nav.Link className="nav-item" as={Link} to="/contact-us">CONTACT US</Nav.Link>
+                <Nav className={`flex-grow-1 pe-3 nav-item-container font-secondary ${isMobileView ? 'mobile-view' : ''}`}>
+                  <Nav.Link className={`nav-item ${location.pathname === '/mindfulness' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/mindfulness">MINDFULNESS</Nav.Link>
+                  <Nav.Link className={`nav-item ${location.pathname === '/destinations' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/destinations">DESTINATIONS</Nav.Link>
+                  <Nav.Link className={`nav-item ${location.pathname === '/services' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/services">EXPERIENCE</Nav.Link>
+                  <Nav.Link className={`nav-item ${location.pathname === '/why-choose-us' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/why-choose-us">WHY CHOOSE US</Nav.Link>
+                  <Nav.Link className={`nav-item ${location.pathname === '/contact-us' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/contact-us">CONTACT US</Nav.Link>
                 </Nav>
                 <br />
-
               </Offcanvas.Body>
               
             </Navbar.Offcanvas>

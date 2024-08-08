@@ -12,7 +12,7 @@ const HeroSection = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobileView(window.innerWidth <= 1000); 
+      setIsMobileView(window.innerWidth <= 1200); 
     };
 
     handleResize();
@@ -55,15 +55,14 @@ const HeroSection = () => {
         <div className="hero-content">
           <div id='hero-heading' className="hero-heading-section">
               <h1 className='hero-heading font-primary'>Mindfulness Vacations for Business Leaders</h1>
-              <p className='font-secondary'>leaders change the world and we change how they experience it. Backed by research on Buddha’s teachings,<br></br>
-               our Sri Lankan retreats offer business leaders a unique mindfulness escape from stress, distinct from Western approaches.</p>
+              <p className='font-secondary'>Leaders change the world and we change how they experience it. </p>
               <Lottie className='arrow-icon' animationData={animationData}></Lottie>
           </div>
           <div className="bottom-viewbar d-flex">
               <h5 className="bottom-viewbar-text">Introduced By</h5>
               <img src={img_01} alt="" className='bottom-viewbar-img'/>
-              <img src={img_02} alt="" className='bottom-viewbar-img'/>
-              <div className='' style={{}}>
+              <img src={img_02} alt="" className='bottom-viewbar-img img2'/>
+              <div className='social-icon-section'>
                 <i className="fa-brands fa-facebook social-icon"></i>
                 <i className="fa-brands fa-linkedin social-icon"></i>
                 <i className="fa-brands fa-youtube social-icon"></i>

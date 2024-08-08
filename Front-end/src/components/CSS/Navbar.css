@@ -3,16 +3,16 @@
     padding-bottom: 1rem;
     justify-content: center !important;
     background-color: transparent !important;
-    transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
 }
 .navbar-scrolled {
     background-color: white !important;
     color: rgb(0, 0, 0);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
 }
 .navbar-scrolled .nav-item{
-    color: black;
+    /* color: black; */
     font-weight: 250;
 }
 .logo {
@@ -31,14 +31,70 @@
     text-align: center;
     font-weight: 150;
     letter-spacing: 1px;
-    color: rgb(255, 255, 255);
+    
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+.mobile-view .nav-item{
+    color: black !important;
+    font-weight: 400;
+    transition: 0.3s ease-in-out;
+}
+.mobile-view .nav-item.active{
+    color: black !important;
+    font-weight: bold;
+    background-color: rgb(206, 205, 205);
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+.nav-item.active {
+    color: white !important;
+    font-weight: bold;
+}
+.navbar-scrolled .nav-item.active {
+    color: black !important;
+    font-weight: bold;
+    animation: fadeIn 0.3s;
+}
+.nav-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    left: 50%;
+    background: #ffffff; 
+    transition: width 0.3s ease, left 0.3s ease;
+    -webkit-transition: width 0.3s ease, left 0.3s ease;
+}
+.nav-item:hover::after {
+    width: 70%; 
+    left: 15%;  
+  }
+.nav-item.active {
+    font-weight: bold;
+}
+.nav-item.active::after {
+    width: 70%; 
+    left: 15%; 
+}
+.navbar-scrolled .nav-item::after{
+    background: black; 
+}
+.navbar-scrolled .nav-item:hover {
+    color: black;
+    transition: 0.3s ease-in-out;
 }
 .nav-item:hover {
-    font-weight: 700;
+    color: white;
     transition: 0.3s ease-in-out;
 }
 .navbar-offcanvas{
     max-width: 60%;
+    background-color: rgb(255, 255, 255);
 }
 .btn-book{
     margin-left: 14.375rem;
@@ -46,3 +102,21 @@
 .mobile-view .btn-book{
     display: none;
 }
+.custom-toggler {
+    border-color: transparent;
+}  
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+} 
+.navbar-scrolled .custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.scrolled {
+    color: black;
+}
+.nt-scrolled {
+    color: white;
+}
+
+
+

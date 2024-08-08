@@ -1,42 +1,43 @@
 
-.footer {
+
+.footer-content{
+    padding: 3rem 15rem 2rem 15rem;
     background-color: #d3d3d3;
     color: #333;
     text-align: center;
-    padding: 1rem 15rem 1rem 15rem;
-  }
+}
 .footer-nav{
     gap: 5rem;
     width: 100%;
     justify-content: center;
 }
-  .footer-nav a,
-  .footer-bottom a {
+.footer-nav a,
+.footer-bottom a {
     margin: 0 0.625rem;
     text-decoration: none;
     color: #333;
-  }
+}
   
-  .footer-subscription {
+.footer-subscription {
     margin: 1.25rem 0;
     text-align: left;
-  }
+}
   
-  .subscription-form {
+.subscription-form {
     display: flex;
     gap: 1.25rem;
     justify-content: left;
     margin: 0.625rem 0;
-  }
+}
   
-  .subscription-form input {
+.subscription-form input {
     width: 25rem;
     padding: 0.625rem;
     border: 1px solid #ccc;
     border-radius: 4px;
-  }
+}
   
-  .subscription-form button {
+.subscription-form button {
     width: 17.5rem;
     padding: 0.625rem;
     border: none;
@@ -44,40 +45,85 @@
     color: #fff;
     border-radius: 4px;
     cursor: pointer;
-  }
-  .footer-contact{
+}
+.footer-contact{
     margin-top: 1.25rem;
     margin-left: 9.375rem;
     text-align: left;
-  }
+}
   
-  .footer-contact address {
+.footer-contact address {
     font-style: normal;
-  }
+}
   
-  .footer-logos img {
+.footer-logos img {
     margin: 0.625rem;
     height: 3.125rem;
-  }
+}
   
-  .footer-social .social-icons a {
+.footer-social .social-icons a {
     margin: 0 0.313rem;
-  }
+}
   
-  .footer-social img {
+.footer-social img {
     height: 1.875rem;
-  }
+}
   
-  .footer-bottom {
+.footer-bottom {
     margin: 1.25rem 0;
-  }
+}
   
-  .footer-copyright {
+.footer-copyright {
     margin-top: 0.625rem;
-  }
-  .ft-social-icon{
+}
+.ft-social-icon{
     font-size: 1.563rem;
 }
 .contact-icons{
   height: 2rem;
+}
+.link-text{
+  text-decoration: none;
+  color: black;
+}
+
+.mobile-view .footer-content{
+  padding: 2rem 2rem 2rem 2rem;
+}
+.mobile-view .footer-nav{
+  flex-direction: column;
+  gap: 10px;
+}
+.mobile-view .footer-2nd-row{
+    flex-direction: column;
+}
+.mobile-view .subscription-form input{
+    height: 40px;
+    font-size: small;
+}
+.mobile-view .subscription-form button{
+    height: 40px;
+    font-size: small;
+}
+.mobile-view .footer-contact{
+    margin: 0;
+    padding: 5% 15%;
+}
+.mobile-view .footer-logos{
+    margin: 0;
+}
+.mobile-view .footer-logos img{
+    height: 2.1rem;
+}
+.mobile-view .footer-bottom{
+    margin-top: 40;
+    margin-left: 0;
+    font-size: small;
+}
+.mobile-view .footer-social{
+    margin: 0;
+}
+.mobile-view .footer-copyright{
+    margin: 0;
+    padding-top: 40px;
 }

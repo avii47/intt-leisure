@@ -9,7 +9,7 @@ const TestimonialSection = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobileView(window.innerWidth <= 1000); 
+      setIsMobileView(window.innerWidth <= 1200); 
     };
 
     handleResize();
