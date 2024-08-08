@@ -21,7 +21,7 @@ const WhyChooseUsSection = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobileView(window.innerWidth <= 1000);
+      setIsMobileView(window.innerWidth <= 1200);
     };
 
     handleResize();
@@ -132,8 +132,8 @@ const WhyChooseUsSection = () => {
         <hr style={{ width: '200px', margin: 'auto' }}></hr>
         <br></br>
         <p className='font-secondary' style={{ fontSize: '16px' }}>A workshop was conducted at the university of Moratuwa on the 19th of June 2023.The workshop focused on enhancing the staff of the University of Moratuwa’s understanding and application of Appreciative Inquiry in the context of mindfulness-based leadership. Throughout the workshop, participants had the opportunity to listen to informative speeches delivered by Dr. GB Hewawa, sam and Jim.</p>
-        <div className="icon-container-wrapper" >
-          <div className='nav-icons d-flex'>
+        <div className="icon-container-wrapper">
+          <div className='nav-icons'>
             {showLeftButton && <button className="scroll-button left" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}
             {showRightButton && <button className="scroll-button right" onClick={() => scrollContainer('right')}><img className='nav-icon' src={right_arrow}></img></button>}
           </div>

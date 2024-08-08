@@ -1,24 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useMobileView } from '../../contexts/MobileViewContext';
 import '../CSS/Pages/ContactUsPage.css';
 
 const ContactUsContent = () => {
 
-  const [isMobileView, setIsMobileView] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobileView(window.innerWidth <= 1000); 
-    };
-
-    handleResize();
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
+  const isMobileView = useMobileView();
 
   useEffect(() => {
     const section = document.getElementById('rw1');
