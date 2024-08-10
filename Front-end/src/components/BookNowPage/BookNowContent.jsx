@@ -108,12 +108,12 @@ const BookNowContent = () => {
             <div className="date-container d-flex">
               <div className="col-6 d-flex check-in stay-input">
                 <i class="fa-solid fa-calendar-days book-icons"></i>
-                <h6 className='book-text' style={{ margin: '0px 40px 0px 20px' }}>Check in</h6>
+                <p className='book-text' style={{ margin: '0px 12px' }}>Check in</p>
                 <DatePicker className='date-input' selected={startDate} onChange={(date) => setStartDate(date)} />
               </div>
               <div className="col-6 d-flex check-out stay-input">
                 <i class="fa-solid fa-calendar-days book-icons"></i>
-                <h6 className='book-text' style={{ margin: '0px 50px 0px 20px' }}>Check out</h6>
+                <p className='book-text' style={{ margin: '0px 12px' }}>Check out</p>
                 <DatePicker className='date-input' selected={startDate} onChange={(date) => setStartDate(date)} />
               </div>
             </div>
@@ -123,13 +123,13 @@ const BookNowContent = () => {
             <div className="date-container d-flex">
               <div className="col-6 d-flex check-in stay-input">
                 <i class="fa-solid fa-person book-icons"></i>
-                <h6 className='book-text' style={{ margin: '20px' }}>No of adults</h6>
-                <input className='count-input in1'  name="age" type="number" />
+                <p className='book-text' style={{ margin: '0px 12px' }}>No of adults</p>
+                <input className='count-input in1' name="age" type="number" />
               </div>
               <div className="col-6 d-flex check-out stay-input">
                 <i class="fa-solid fa-child-reaching book-icons"></i>
-                <h6 className='book-text' style={{ margin: '20px' }}>No of children</h6>
-                <input className='count-input'  name="age" type="number" />
+                <p className='book-text' style={{ margin: '0px 12px' }}>No of children</p>
+                <input className='count-input' name="age" type="number" />
               </div>
             </div>
             <br />
@@ -185,7 +185,7 @@ const BookNowContent = () => {
             <StickyContainer>
               <Sticky topOffset={-200} bottomOffset={200}>
                 {({ style, isSticky }) => (
-                  <div className="col-6 booking-summary-col sidebar" style={{ ...style, marginTop: isSticky ? '200px' : '0px', width: isSticky ? '650px': '650px' }}>
+                  <div className="col-6 booking-summary-col " style={{ ...style, marginTop: isSticky ? '200px' : '0px', width: isSticky ? '500px': '500px' }}>
                     <div className='booking-summary-content content-wrapper'>
                       <h3 className='font-primary'>Booking Summary</h3>
                       <br /><br />

@@ -11,7 +11,6 @@
     display: flex;
     flex-wrap: wrap; 
     column-gap: 5.5rem;
-    row-gap: 5rem;
     scrollbar-width: none;
     justify-content: center;
     align-items: start;
@@ -19,7 +18,7 @@
     margin-top: 50px;
     margin-left: -10px;
 
-    opacity: 0;
+    opacity: 1;
     transform: translateY(30px);
     transition: opacity 1s ease, transform 1s ease;
 }

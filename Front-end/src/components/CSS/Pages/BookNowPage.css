@@ -11,24 +11,29 @@
     text-align: left;
     overflow: hidden;
 }
+.main-col{
+    gap: 100px;
+}
 .date-container{
     display: flex;
     gap: 10px;
     margin-bottom: 10px;
-    padding: 20px;
+    padding: 10px;
     height: 80px;
     border-radius: 10px;
     background-color: rgba(194, 196, 195, 0.671);
 }
+.stay-input{
+    align-items: center;
+}
+.date-input{
+    width: 80%;
+}
 .check-in{
     border-right: solid 1px black;
 }
-.check-in-date{
-    height: 100%;
-    width: 60px;
-}
-.check-out{
-    padding-left: 20px;
+.count-input{
+    width: 70px;
 }
 .package-card-container{
     display: flex;
@@ -51,8 +56,7 @@
 .booking-summary-col {
     position: relative;
     padding: 50px;
-    width: 100%;
-    margin-left: 100px;
+    width: 70%;
     border-radius: 10px;
     height: fit-content;
     background-color: #fff7d9;
@@ -64,7 +68,7 @@
     outline: none;
     width: 100%; 
     padding: 5px 0; 
-  }
+}
   
 .text-field-bottom-line::placeholder {
     color: #aaa; 
@@ -104,9 +108,7 @@
 .book-icons{
     font-size: 30px;
 }
-.stay-input{
-    align-items: center;
-}
+
 
 .mobile-view .bookNow-section-content{
     padding: 2rem 2rem 30rem 2rem;
