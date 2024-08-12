@@ -47,11 +47,10 @@ function MyNavbar() {
         >
           <Container fluid className={`nav-container`}>
             <Navbar.Brand id="callOne"  as={Link} to="/" >
-              <img className="logo" src={scrolled ? logo_dark : logo_light} alt="Logo"/>
+              <img loading="lazy" className="logo" src={scrolled ? logo_dark : logo_light} alt="Logo"/>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className="custom-toggler" />
             <Navbar.Offcanvas
-              
               className="navbar-offcanvas"
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}

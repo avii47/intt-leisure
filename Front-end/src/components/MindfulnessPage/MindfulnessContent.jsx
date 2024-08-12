@@ -93,7 +93,7 @@ const MindfulnessContent = () => {
         <div id='mindfulness-content-cards-container' className="mindfulness-content-cards-container">
           <div id='rw1' className='row col-12 d-flex mindfulness-rw'>
             <div className='col-md-6' style={{ textAlign: 'right' }}>
-              <img src={img_01} alt="" />
+              <img loading='lazy' src={img_01} alt="authentic practices img" />
             </div>
             <div id='text1' className='col-md-6 text1'>
               <h6>Explore</h6><hr style={{ width: '60px' }}></hr>
@@ -111,13 +111,13 @@ const MindfulnessContent = () => {
               <button style={{ marginTop: '20px' }} className='btn btn-dark'>Learn more ></button>
             </div>
             <div className='col-md-6 order-1 order-md-2'>
-              <img src={img_04} alt="" />
+              <img loading='lazy' src={img_04} alt="unique excursions img" />
             </div>
           </div>
 
           <div id='rw3' className='row col-12 d-flex mindfulness-rw'>
             <div className='col-md-6' style={{ textAlign: 'right' }}>
-              <img src={img_02} alt="" />
+              <img loading='lazy' src={img_02} alt="expertise img" />
             </div>
             <div id='text3' className='col-md-6 text3'>
               <h6>Explore</h6><hr style={{ width: '60px' }}></hr>
