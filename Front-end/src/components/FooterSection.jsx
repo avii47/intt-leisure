@@ -6,6 +6,8 @@ import emailIcon from '../assets/icons/icons8-email-50.png';
 import logo from '../assets/images/INTT LEISURE VERTICLE.png';
 import ft_icon1 from '../assets/images/footer-icon1.png';
 import ft_icon2 from '../assets/images/footer-icon2.png';
+import ft_icon3 from '../assets/images/footer-icon3.png';
+import ft_icon4 from '../assets/images/footer-icon4.png';
 import './CSS/FooterSection.css';
 
 const Footer = () => {
@@ -17,19 +19,16 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-nav d-flex col-md-12" >
           <div>
-              <a  href="#page01">SERVICES</a>
+              <a  href="/mindfulness">MINDFULNESS</a>
           </div>
           <div>
-              <a href="#page02">MINDFULNESS</a>
+              <a href="/services">EXPERIENCE</a>
           </div>
           <div>
-              <a href="#page03">EVENTS & NEWS</a>
+              <a href="/why-choose-us">WHY CHOOSE US</a>
           </div>
           <div>
-              <a href="#page04">WHY CHOOSE US</a>
-          </div>
-          <div>
-              <a href="#page05">CONTACT US</a>
+              <a href="/contact-us">CONTACT US</a>
           </div>
         </div>
         <hr></hr>
@@ -45,7 +44,7 @@ const Footer = () => {
                   </p>
                   <form className="subscription-form">
                       <input type="email" placeholder="Your Email" />
-                      <button type="submit">Learn More &gt;</button>
+                      <button type="submit">Subscribe Now &gt;</button>
                   </form>
                   <p>
                       By subscribing you agree to our Privacy Policy and consent to receive
@@ -59,10 +58,12 @@ const Footer = () => {
                     <div className="col-1">
                       <img src={addressIcon} className='contact-icons' alt="" />
                     </div>
-                    <div className="col-12" style={{marginLeft:'20px'}}>
+                    <div className="col-11" style={{marginLeft:'20px', width:'300px'}}>
                       <h5>INT Leasure</h5>
-                      No. 101, Vinayalankara Mawatha,<br />
-                      Colombo 10, Sri Lanka.
+                      No.26/6<br />
+                      Major LV Gunarathna Mawatha,<br />
+                      Station Road, Dehiwala-Mount Lavinia,<br />
+                      Sri Lanka
                     </div>
                   </address>
                   <address className='d-flex'>
@@ -89,8 +90,8 @@ const Footer = () => {
         <div className="footer-logos">
           <img src={ft_icon1} alt="PATA Logo" />
           <img src={ft_icon2} alt="IATA Logo" />
-          <img src="agent-logo.png" alt="logo 01" />
-          <img src="other-logo.png" alt="logo 02" />
+          <img src={ft_icon3} alt="logo 01" />
+          <img src={ft_icon4} alt="logo 02" />
         </div>
         <div className="footer-bottom">
           <a href="#privacy">Privacy Policy</a>

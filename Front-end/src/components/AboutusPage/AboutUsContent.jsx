@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { useMobileView } from '../../contexts/MobileViewContext';
-import '../CSS/Pages/MindfulnessPage.css';
-import img_01 from '../../assets/images/Rectangle 25.png';
-import img_02 from '../../assets/images/aboutUs-bg.png';
-import img_03 from '../../assets/images/img3.jpg';
-import img_04 from '../../assets/images/Rectangle 90 (2).png';
+import '../CSS/Pages/AboutUsPage.css';
+
+import img_01 from '../../assets/icons/Icons_WCU_Authentic Practice.png';
+import img_02 from '../../assets/icons/Icons_WCU_Forbes Cerified Coach.png'
+import img_03 from '../../assets/icons/Icons_WCU_Eyes of Locals.png'
 
 const AboutUsContent = () => {
 
   const isMobileView = useMobileView();
 
   useEffect(() => {
-    const section = document.getElementById('rw1');
-    const textSection = document.getElementById('text1');
+    const section = document.getElementById('rw4');
+    const textSection = document.getElementById('text4');
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -35,8 +35,8 @@ const AboutUsContent = () => {
   }, []);
 
   useEffect(() => {
-    const section = document.getElementById('rw2');
-    const textSection = document.getElementById('text2');
+    const section = document.getElementById('rw5');
+    const textSection = document.getElementById('text5');
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -59,8 +59,8 @@ const AboutUsContent = () => {
   }, []);
 
   useEffect(() => {
-    const section = document.getElementById('rw3');
-    const textSection = document.getElementById('text3');
+    const section = document.getElementById('rw6');
+    const textSection = document.getElementById('text6');
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -85,44 +85,41 @@ const AboutUsContent = () => {
   return (
     <section id="aboutus-content-section" className={`section aboutus-content-section d-flex ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="aboutus-section-content">
-        <div className='top-text'>
+        
           <h4 className='font-primary' style={{ fontSize: '30px' }}><b>Why Us</b>?</h4>
-          <p className='font-secondary' style={{ fontSize: '20px' }}>A workshop was conducted at the university of Moratuwa on the 19th of June 2023.The workshop focused on enhancing the staff of the University of Moratuwa’s understanding and application of Appreciative Inquiry in the context of mindfulness-based leadership. Throughout the workshop, participants had the opportunity to listen to informative speeches delivered by Dr. GB Hewawa, sam and Jim Ludema. Following the speeches, participants actively engaged in interactive Q&A sessions where they sought clarification, shared their perspectives, and explored how these concepts could be directly applied within the university’s specific context.</p>
-        </div>
+          <p className='font-secondary' style={{ fontSize: '20px' }}>A workshop was conducted at the university of Moratuwa on the 19th of June 2023.The workshop focused on enhancing the staff of the University of Moratuwa’s understanding and application of Appreciative Inquiry in the context of mindfulness-based leadership. Throughout the workshop, participants had the.</p>
+        
 
         <div id='aboutus-content-cards-container' className="aboutus-content-cards-container">
-          <div id='rw1' className='row col-12 d-flex about-rw'>
-            <div className='col-md-6' style={{ textAlign: 'right' }}>
-              <img src={img_01} alt="" />
+          <div id='rw4' className='row col-12 d-flex about-rw' style={{ justifyContent:'center', marginTop:'100px' }}>
+            <div className='col-md-3' style={{ }}>
+              <img src={img_01} style={{ height:'200PX' }} alt="" />
             </div>
-            <div id='text1' className='col-md-6 text1'>
-              <h6>Explore</h6><hr style={{ width: '60px' }}></hr>
-              <h3>Authentic Practices</h3>
-              <p>About Mindfulness Tours</p>
+            <div id='text4' className='col-md-5 text4'>
+              <h3>Authentic practice (Results)</h3>
+              <p style={{ width:'500px' }}>Our mindfulness techniques follow Buddha’s original teachings, offering a distinct approach from Western ideologies.</p>
               <button style={{ marginTop: '20px' }} className='btn btn-dark'>Learn more ></button>
             </div>
           </div>
 
-          <div id='rw2' className='row col-12 d-flex about-rw'>
-            <div id='text2' className='col-12 col-md-6 order-2 order-md-1 text2'>
-              <h6>Explore</h6><hr style={{ width: '60px', marginLeft: 'auto', marginRight: '0' }}></hr>
-              <h3>Unique Excursions</h3>
-              <p>About Mindfulness Tours</p>
+          <div id='rw5' className='row col-12 d-flex about-rw' style={{ justifyContent:'center',marginTop:'100px' }}>
+            <div id='text5' className='col-md-6 order-2 order-md-1 text5' style={{marginLeft:'150px' }}>
+              <h3>Forbes-Certified Coach</h3>
+              <p style={{ width:'500px' }}>All mindfulness programs are designed by Dr. Gamini Hewawasam, a Forbes-certified coach specializing in mindfulness in leadership.</p>
               <button style={{ marginTop: '20px' }} className='btn btn-dark'>Learn more ></button>
             </div>
-            <div className='col-12 col-md-6 order-1 order-md-2'>
-              <img src={img_04} alt="" />
+            <div className='col-md-3 order-1 order-md-2'>
+              <img src={img_02} style={{ height:'200PX' }} alt="" />
             </div>
           </div>
 
-          <div id='rw3' className='row col-12 d-flex about-rw'>
-            <div className='col-md-6' style={{ textAlign: 'right' }}>
-              <img src={img_01} alt="" />
+          <div id='rw6' className='row col-12 d-flex about-rw' style={{ justifyContent:'center',marginTop:'100px', marginBottom:'100px' }}>
+            <div className='col-md-3' style={{ textAlign: 'right' }}>
+              <img src={img_03} style={{ height:'200PX' }} alt="" />
             </div>
-            <div id='text3' className='col-md-6 text3'>
-              <h6>Explore</h6><hr style={{ width: '60px' }}></hr>
-              <h3>Our Expertise</h3>
-              <p>About Mindfulness Tours</p>
+            <div id='text6' className='col-md-6 text6'>
+              <h3>Eyes of locals</h3>
+              <p style={{ width:'500px' }}>Discover Sri Lanka through the eyes of locals. As natives, we offer an authentic journey deeply rooted in our heritage and heartfelt connection to the land.</p>
               <button style={{ marginTop: '20px' }} className='btn btn-dark'>Learn more ></button>
             </div>
           </div>

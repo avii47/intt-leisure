@@ -1,7 +1,7 @@
 .service-content-card{
     flex: 1 1 18.75rem; 
     max-width: 30rem;
-    height: 22rem;
+    height: fit-content;
     text-align: left;
 }
 .service-content-image-zoom-container {

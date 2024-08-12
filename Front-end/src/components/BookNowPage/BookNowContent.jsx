@@ -213,13 +213,15 @@ const BookNowContent = () => {
                         <input className="form-control form-control-sm" type="text" placeholder="" />
                         <label className="label-text">Total</label>
                       </div>
-                      <button className='btn btn-dark btn-book-f'>Book Now</button>
                     </div>
                   </div>
                 )}
               </Sticky>
             </StickyContainer>
           )}
+        </div>
+        <div className="col-12 d-flex" style={{ justifyContent:'center' }}>
+          <button className='btn btn-dark btn-book-f'>Proceed</button>
         </div>
       </div>
     </section>

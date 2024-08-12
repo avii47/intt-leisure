@@ -1,47 +1,46 @@
-.mindfulness-content-section{
+.aboutus-content-section{
     text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.mindfulness-section-content {
+.aboutus-section-content {
     padding: 0 12rem 12rem 12rem;
     display: flex;
     flex-wrap: wrap; 
     justify-content: left;
 }
-.top-text{
+.top-textt{
     padding: 0 15.5% 0 15.5%;
 }
-.mindfulness-content-cards-container{
+.aboutus-content-cards-container{
     justify-content: center;
     min-height: 56.25rem;
     width: 100%;
 }
-.mindfulness-content-cards-container img{
+.aboutus-content-cards-container img{
     max-width: 500px;
     height: 300px;
     object-fit: cover;
 }
-.mindfulness-rw{
+.about-rw{
     margin-top: 9.375rem;
 }
-.text1{
+.text4{
     padding-Top: 30px; 
     padding-Left:100px;
     opacity: 0;
     transform: translateX(-100px);
     transition: opacity 1s ease, transform 1s ease;
 }
-.text2{
+.text5{
     padding-Top:30px;  
     padding-Right:100px;
-    padding-left: 60px;
     opacity: 0;
     transform: translateX(100px);
     transition: opacity 1s ease, transform 1s ease;
 }
-.text3{
+.text6{
     padding-Top:30px; 
     padding-Left:100px;
     opacity: 0;

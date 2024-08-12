@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../CSS/Home/MindfulnessTourismSection.css';
-import img from '../../assets/images/AdobeStock_234737823.jpeg';
+import img from '../../assets/images/Mindfulness Tourism.png';
 
 const MindfulnessTourismSection = () => {
 

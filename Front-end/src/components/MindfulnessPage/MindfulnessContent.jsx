@@ -85,10 +85,10 @@ const MindfulnessContent = () => {
   return (
     <section id="mindfulness-content-section" className={`section mindfulness-content-section d-flex ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="mindfulness-section-content">
-        <div className='top-text'>
+        
           <h4 className='font-primary' style={{ fontSize: '30px' }}><b>What is Mindfulness Tourism</b>?</h4>
           <p className='font-secondary' style={{ fontSize: '20px', textAlign:'justify' }}>Connect with the Ultimate Luxury of Mindfulness in Sri Lanka. A workshop was conducted at the university of Moratuwa on the 19th of June 2023.The workshop focused on enhancing the staff of the University of Moratuwa’s understanding and application of Appreciative Inquiry in the context of mindfulness-based leadership. Throughout the workshop, participants had the opportunity to listen to informative speeches delivered by Dr. GB Hewawa, sam and Jim Ludema. Following the speeches, participants actively engaged in interactive Q&A sessions where they sought clarification, shared their perspectives, and explored how these concepts could be directly applied within the university’s specific context.</p>
-        </div>
+        
 
         <div id='mindfulness-content-cards-container' className="mindfulness-content-cards-container">
           <div id='rw1' className='row col-12 d-flex mindfulness-rw'>
@@ -104,13 +104,13 @@ const MindfulnessContent = () => {
           </div>
 
           <div id='rw2' className='row col-12 d-flex mindfulness-rw'>
-            <div id='text2' className='col-12 col-md-6 order-2 order-md-1 text2'>
-              <h6>Explore</h6><hr style={{ width: '60px', marginLeft: 'auto', marginRight: '0' }}></hr>
+            <div id='text2' className='col-md-6 order-2 order-md-1 text2'>
+              <h6>Explore</h6><hr style={{ width: '60px' }}></hr>
               <h3>Unique Excursions</h3>
               <p>About Mindfulness Tours</p>
               <button style={{ marginTop: '20px' }} className='btn btn-dark'>Learn more ></button>
             </div>
-            <div className='col-12 col-md-6 order-1 order-md-2'>
+            <div className='col-md-6 order-1 order-md-2'>
               <img src={img_04} alt="" />
             </div>
           </div>
