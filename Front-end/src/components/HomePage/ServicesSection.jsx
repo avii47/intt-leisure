@@ -12,9 +12,11 @@ const ServicesSection = () => {
         const [showRightButton2, setShowRightButton] = useState(true);
         const containerRef2 = useRef(null);
 
+        const img4 = 'https://img.freepik.com/free-photo/grunge-gray-concrete-textured-background_53876-145492.jpg?t=st=1722571110~exp=1722574710~hmac=dbe2ce48dbeca59499ad4867b3fd0ab0b1cdf15ea16e35d33162d12e12ef02e3&w=1380'
+
         useEffect(() => {
           const handleResize = () => {
-            setIsMobileView(window.innerWidth <= 1000); 
+            setIsMobileView(window.innerWidth <= 1200); 
           };
 
           handleResize();
@@ -55,47 +57,47 @@ const ServicesSection = () => {
 
         const contentData = [
           {
-            img: 'https://img.freepik.com/free-photo/close-up-kid-meditating-mat_23-2149101612.jpg?t=st=1719801378~exp=1719804978~hmac=3e4d591b0fae80b0628488c60a0e3917a69ac930587c97450e94aa5d431cc24d&w=996',
+            img: img4,
             title: 'What is the original concept of Mindfulness?',
             sub: 'The research backed technique that elevate a leader into the next level',
           },
           {
-            img: 'https://www.rideekanda.com/uploads/2022/1/rideekanda_forest_monastery_sri_lanka_50.jpg',
+            img: img4,
             title: 'How can you practice it in Sri Lanka?',
             sub: 'Sri Lanka, the place where authentic mindfulness practice is preserve over 2500 year',
           },
           {
-            img: 'https://img.freepik.com/free-photo/woman-sitting-yoga-pose-beach_1098-1454.jpg?t=st=1719801604~exp=1719805204~hmac=901c52a24550ba8e1142ec57d4236bf6941d556a38a6aa1a5c19ba5a49e560dd&w=996',
+            img: img4,
             title: 'What benefits you will have with mindfulness practice?',
             sub: 'Get a truly rejuvenating and life-changing experience through practice',
           },
           {
-            img: 'https://img.freepik.com/free-photo/full-shot-woman-meditating-indoors_23-2149832724.jpg?t=st=1721301710~exp=1721305310~hmac=6792a4728205df3a2c4753e4e86bfb99e4aec1afdede37e512a48eedd52b9b7a&w=1380',
+            img: img4,
             title: 'What benefits you will have with mindfulness practice?',
             sub: 'Get a truly rejuvenating and life-changing experience through practice',
           },
           {
-            img: 'https://img.freepik.com/free-photo/group-young-sporty-people-sitting-sukhasana-exercise_1163-4943.jpg?t=st=1721301844~exp=1721305444~hmac=75d370cc88a46e6e580e002d4f961b37e3a267b239f4ed4832f1a3fe97c70337&w=1380',
+            img: img4,
             title: 'What benefits you will have with mindfulness practice?',
             sub: 'Get a truly rejuvenating and life-changing experience through practice',
           },
           {
-            img: 'https://img.freepik.com/free-photo/woman-sitting-yoga-pose-beach_1098-1454.jpg?t=st=1719801604~exp=1719805204~hmac=901c52a24550ba8e1142ec57d4236bf6941d556a38a6aa1a5c19ba5a49e560dd&w=996',
+            img: img4,
             title: 'What benefits you will have with mindfulness practice?',
             sub: 'Get a truly rejuvenating and life-changing experience through practice',
           },
           {
-            img: 'https://img.freepik.com/free-photo/full-shot-woman-meditating-indoors_23-2149832724.jpg?t=st=1721301710~exp=1721305310~hmac=6792a4728205df3a2c4753e4e86bfb99e4aec1afdede37e512a48eedd52b9b7a&w=1380',
+            img: img4,
             title: 'What benefits you will have with mindfulness practice?',
             sub: 'Get a truly rejuvenating and life-changing experience through practice',
           },
           {
-            img: 'https://img.freepik.com/free-photo/group-young-sporty-people-sitting-sukhasana-exercise_1163-4943.jpg?t=st=1721301844~exp=1721305444~hmac=75d370cc88a46e6e580e002d4f961b37e3a267b239f4ed4832f1a3fe97c70337&w=1380',
+            img: img4,
             title: 'What benefits you will have with mindfulness practice?',
             sub: 'Get a truly rejuvenating and life-changing experience through practice',
           },
           {
-            img: 'https://img.freepik.com/free-photo/woman-sitting-yoga-pose-beach_1098-1454.jpg?t=st=1719801604~exp=1719805204~hmac=901c52a24550ba8e1142ec57d4236bf6941d556a38a6aa1a5c19ba5a49e560dd&w=996',
+            img: img4,
             title: 'What benefits you will have with mindfulness practice?',
             sub: 'Get a truly rejuvenating and life-changing experience through practice',
           },

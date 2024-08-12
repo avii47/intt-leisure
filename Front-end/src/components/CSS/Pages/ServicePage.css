@@ -1,10 +1,9 @@
 .service-content-section{
-    padding: 12rem 12rem 12rem 12rem;
-    text-align: left;
-    display: flex;
     flex-direction: column;
 }
 .service-section-content {
+    padding: 2rem 12rem 12rem 12rem;
+    text-align: left;
     display: flex;
     flex-wrap: wrap; 
 }
@@ -12,7 +11,6 @@
     display: flex;
     flex-wrap: wrap; 
     column-gap: 5.5rem;
-    row-gap: 5rem;
     scrollbar-width: none;
     justify-content: center;
     align-items: start;
@@ -20,7 +18,7 @@
     margin-top: 50px;
     margin-left: -10px;
 
-    opacity: 0;
+    opacity: 1;
     transform: translateY(30px);
     transition: opacity 1s ease, transform 1s ease;
 }
@@ -28,8 +26,17 @@
     opacity: 1;
     transform: translateY(0);
 }
-.mobile-view .service-content-section{
+.mobile-view .service-section-content{
     padding: 2rem 2rem 5rem 2rem;
+}
+.mobile-view .service-content-cards-container{
+    opacity: 1;
+}
+.mobile-view .service-content-card{
+    height: 23rem;
+    margin: 0;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    border: 1px solid #cccccc;
 }
 .left-align{
     text-align: left;

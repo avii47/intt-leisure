@@ -15,7 +15,7 @@ const HomePage = () => {
             <HeroSection />
             <MindfulnessTourismSection />
             <WhyChooseUsSection />
-            <AboutSection />
+            {/* <AboutSection /> */}
             <ServicesSection />
             <TestimonialSection />
             <ConnectAppSection />

@@ -1,24 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useMobileView } from '../../contexts/MobileViewContext';
 import '../CSS/Pages/ContactUsPage.css';
 
 const ContactUsContent = () => {
 
-  const [isMobileView, setIsMobileView] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobileView(window.innerWidth <= 1000); 
-    };
-
-    handleResize();
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
+  const isMobileView = useMobileView();
 
   useEffect(() => {
     const section = document.getElementById('rw1');
@@ -49,7 +35,6 @@ const ContactUsContent = () => {
     <section id="contactus-content-section" className={`section contactus-content-section d-flex ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="contactus-section-content">
         <div className='top-text'>
-          <h4 className='font-primary' style={{ fontSize: '30px' }}><b>Thank You Messege</b></h4><br></br><br></br>
           <p className='font-secondary' style={{ fontSize: '20px', marginBottom:'60px' }}>Thank you for choosing us for your transformative journey. Every leader is unique, so we begin by understanding you deeply to craft a mindfulness vacation that's perfectly tailored to your needs. Share your details below, and our team of experts will be just a click away.</p>
           <p className='font-secondary' style={{ fontSize: '20px' }}>
             +94 774 48 48 48 <br></br><br></br>

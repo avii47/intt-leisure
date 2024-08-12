@@ -9,27 +9,34 @@
     display: flex;
     flex-wrap: wrap; 
     text-align: left;
-
-    
     overflow: hidden;
+}
+.main-col{
+    gap: 100px;
 }
 .date-container{
     display: flex;
     gap: 10px;
     margin-bottom: 10px;
-    padding: 20px;
-    height: 100px;
+    padding: 10px;
+    height: 80px;
+    border-radius: 10px;
     background-color: rgba(194, 196, 195, 0.671);
+}
+.stay-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.date-input{
+    width: 100%;
+    margin-right: -70px;
 }
 .check-in{
     border-right: solid 1px black;
 }
-.check-in-date{
-    height: 100%;
-    width: 60px;
-}
-.check-out{
-    padding-left: 50px;
+.count-input{
+    width: 70px;
 }
 .package-card-container{
     display: flex;
@@ -51,21 +58,12 @@
 }
 .booking-summary-col {
     position: relative;
-    top: 50px;
     padding: 50px;
-    width: 40%;
-    margin-left: 100px;
+    width: 70%;
     border-radius: 10px;
     height: fit-content;
     background-color: #fff7d9;
 }
-.booking-summary-content{
-    border-radius: 8px;
-    padding-left: 10%;
-    /* position:static !important; */
-}
-
-
 .text-field-bottom-line {
     border-radius: 0%;
     border: none;
@@ -73,27 +71,15 @@
     outline: none;
     width: 100%; 
     padding: 5px 0; 
-  }
+}
   
-  .text-field-bottom-line::placeholder {
+.text-field-bottom-line::placeholder {
     color: #aaa; 
-  }
-  .btn-book-f{
-    margin-top: 50px;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
+.btn-book-f{
+    margin-top: 100px;
+    width: 300px;
+}
 .form-group {
     position: relative !important;
     margin-bottom: 30px !important;
@@ -123,3 +109,64 @@
     top: -1.25rem; 
     font-size: 0.8rem !important; 
 }
+.book-icons{
+    font-size: 30px;
+}
+
+
+.mobile-view .bookNow-section-content{
+    padding: 2rem 2rem 30rem 2rem;
+}
+.mobile-view .main-col{
+    flex-direction: column;
+}
+.mobile-view .scrollable-content{
+    width: 85vw;
+}
+.mobile-view .date-container{
+    gap: 0px;
+    margin-bottom: 10px;
+    padding: 10px;
+    height: 70px;
+}
+.mobile-view .book-icons{
+    font-size: 20px;
+}
+.mobile-view .date-input{
+    width: 105%;
+    margin-left: -20%;
+}
+.mobile-view .book-text{
+    margin: 10px !important;
+    font-size: 10px;
+    width: 120px;
+}
+.mobile-view .check-out{
+    padding-left: 10px;
+}
+.mobile-view .count-input{
+    width: 40%;
+}
+.mobile-view .in1{
+    margin-left: -30%;
+    width: 30%;
+}
+.mobile-view .package-card-container{
+    flex-wrap: nowrap; 
+    column-gap: 1rem;
+    row-gap: 0rem;
+    scrollbar-width: none;
+    height: 100px;
+    width: 85vw;
+    justify-content: left;
+    align-items: normal;
+    overflow-x: scroll;
+}
+.mobile-view .booking-summary-col{
+    width: 85vw;
+    margin-top: -75%;
+    margin-left: -0%;
+    margin-bottom: 0%;
+}
+
+ 

@@ -11,7 +11,7 @@ const AboutUsPage = () => {
     return (
         <>
             <HeroSection img={AboutUsImg} title={title} sub={sub} />
-            {/* <AboutUsContent /> */}
+            <AboutUsContent />
             <FooterSection />
         </>
     )

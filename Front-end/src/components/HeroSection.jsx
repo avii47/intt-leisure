@@ -1,25 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useMobileView } from '../contexts/MobileViewContext';
 import './CSS/HeroSection.css';
 import Lottie from 'lottie-react'
 import animationData from '../assets/icons/down-arrow2.json'
 
 const HeroSection = ({img,title,sub}) => {
 
-  const [isMobileView, setIsMobileView] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobileView(window.innerWidth <= 1000); 
-    };
-
-    handleResize();
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  const isMobileView = useMobileView();
 
   useEffect(() => {
     const section = document.getElementById('Hero-section');

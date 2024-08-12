@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../CSS/Home/MindfulnessTourismSection.css';
-import img from '../../assets/images/AdobeStock_234737823.jpeg';
+import img from '../../assets/images/Mindfulness Tourism.png';
 
 const MindfulnessTourismSection = () => {
 
@@ -34,7 +34,7 @@ const MindfulnessTourismSection = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobileView(window.innerWidth <= 1000); 
+      setIsMobileView(window.innerWidth <= 1200); 
     };
 
     handleResize();
@@ -47,16 +47,18 @@ const MindfulnessTourismSection = () => {
   }, []);
 
   return (
-    <section id="mindfulness-tourism-section" className="mindfulness-tourism-section">
+    <section id="mindfulness-tourism-section" className={`mindfulness-tourism-section ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="overlayert"></div>
       <img src={img} className="mindfulness-img" alt="" />
-      <div className="mindfulness-tourism-content" style={{}}>
+      <div className="mindfulness-tourism-content">
+        <div>
             <h6 className='font-secondary' style={{ marginTop: '-6rem'}}>Explore</h6>
             <hr style={{ width: '3.5rem' }} />
             <h3 className='font-primary'>Mindfulness Tourism</h3>
             <p className='font-secondary'>Experience mindfulness in Sri Lanka with techniques backed by research and teachings rooted in original practices. Our approach is distinct from common Western ideologies, offering a unique way to deepen your mindfulness practice and find true relaxation.</p>
             <br></br>
             <button type="button" className="btn btn-outline-light" style={{width:'150px'}}>Learn more ></button>
+        </div>
       </div>
     </section>
   );

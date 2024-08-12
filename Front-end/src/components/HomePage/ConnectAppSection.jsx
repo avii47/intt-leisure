@@ -7,7 +7,7 @@ const ConnectAppSection = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobileView(window.innerWidth <= 1000); 
+      setIsMobileView(window.innerWidth <= 1200); 
     };
 
     handleResize();
@@ -21,10 +21,11 @@ const ConnectAppSection = () => {
 
 
     return (
-        <section id="connect-app-section" className="connect-app-section">
+        <section id="connect-app-section" className={`connect-app-section ${isMobileView ? 'mobile-view' : ''}`}>
             <div className="connect-app-container">
-                <div className="connect-app-content" style={{ textAlign: 'left', padding: '0% 10% 0% 50%' }}>
-                    <h6 className='font-secondary' style={{ marginTop: '-6rem'}}>Connect</h6>
+                <div className="connect-app-content">
+                  <div>
+                  <h6 className='font-secondary' style={{ marginTop: '-6rem'}}>Connect</h6>
                     <hr style={{ width: '3.5rem' }} />
                     <h3 className='font-primary'>Keep the vacation bliss alive! </h3>
                     <p className='font-secondary'>Join us to deepen your mindfulness practice and turn tranquility into a lasting lifestyle. Register now and stay connected to your inner peace!</p>
@@ -32,8 +33,10 @@ const ConnectAppSection = () => {
                     <p>
                       <button type="button" className="btn btn-outline-light" style={{}}>Learn more ></button>
                     </p>
+                  </div>
+
                 </div>
-      </div>
+            </div>
         </section>
     );
   };

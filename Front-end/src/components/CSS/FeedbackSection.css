@@ -15,3 +15,10 @@
     background-color: #fff7d9;
     border: 1px solid rgba(128, 128, 128, 0.562);
 }
+.mobile-view .feedback-ft{
+    width: 85vw;
+}
+.mobile-view .feedback-content{
+    width: 100vw;
+    padding: 5%;
+}
