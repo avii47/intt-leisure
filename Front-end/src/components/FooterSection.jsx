@@ -37,7 +37,7 @@ const Footer = () => {
           <div className="col-md-8">
               <div className="footer-subscription">
                   <h3>Connect</h3>
-                  <p >
+                  <p>
                       Keep the vacation bliss alive! Join us to deepen your mindfulness
                       practice and turn tranquility into a lasting lifestyle. Register now
                       and stay connected to your inner peace!
@@ -56,7 +56,7 @@ const Footer = () => {
               <div className="footer-contact">
                   <address className='d-flex'>
                     <div className="col-1">
-                      <img src={addressIcon} className='contact-icons' alt="" />
+                      <img loading="lazy" src={addressIcon} className='contact-icons' alt="address icon" />
                     </div>
                     <div className="col-11" style={{marginLeft:'20px', width:'300px'}}>
                       <h5>INT Leasure</h5>
@@ -68,7 +68,7 @@ const Footer = () => {
                   </address>
                   <address className='d-flex'>
                     <div className="col-1">
-                      <img src={callIcon} className='contact-icons' alt="" />
+                      <img loading="lazy" src={callIcon} className='contact-icons' alt="call icon" />
                     </div>
                     <div className="col-12" style={{marginLeft:'20px'}}>
                       <a href="tel:0094770437293" className='link-text'>+94 77 4 48 48 48</a><br />
@@ -76,7 +76,7 @@ const Footer = () => {
                   </address>
                   <address className='d-flex'>
                     <div className="col-1">
-                      <img src={emailIcon} className='contact-icons' alt="" />
+                      <img loading="lazy" src={emailIcon} className='contact-icons' alt="email icon" />
                     </div>
                     <div className="col-12" style={{marginLeft:'20px'}}>
                       <a href="mailto:isuru.tours@delmege.com" className='link-text'>info@intterminal.com</a>
@@ -88,18 +88,18 @@ const Footer = () => {
 
 
         <div className="footer-logos">
-          <img src={ft_icon1} alt="PATA Logo" />
-          <img src={ft_icon2} alt="IATA Logo" />
-          <img src={ft_icon3} alt="logo 01" />
-          <img src={ft_icon4} alt="logo 02" />
+          <img loading="lazy" src={ft_icon1} alt="pata Logo" />
+          <img loading="lazy" src={ft_icon2} alt="iata Logo" />
+          <img loading="lazy" src={ft_icon3} alt="manolead logo" />
+          <img loading="lazy" src={ft_icon4} alt="intterminal logo" />
         </div>
         <div className="footer-bottom">
-          <a href="#privacy">Privacy Policy</a>
-          <a href="#terms">Terms of Service</a>
-          <a href="#cookies">Cookies Settings</a>
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+          <a href="/cookies">Cookies Settings</a>
         </div>
         <div className="footer-social">
-          <img src={logo} style={{height:'50px', margin:'30px'}} alt="" />
+          <img loading="lazy" src={logo} style={{height:'50px', margin:'30px'}} alt="logo" />
           <h5>Follow Us On</h5>
           <div className="social-icons d-flex" style={{gap:'20px', justifyContent:'center', marginTop:'20px'}}>
               <i className="fa-brands fa-square-facebook ft-social-icon"></i>
