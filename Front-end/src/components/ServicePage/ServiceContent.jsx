@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy } from 'react';
 import { useMobileView } from '../../contexts/MobileViewContext';
 import '../CSS/Pages/ServicePage.css';
-import ContentCard from '../ServicePage/ServiceContentCard';
+
+const ContentCard = lazy(() => import('./ServiceContentCard'));
 
 const ServiceContent = () => {
 

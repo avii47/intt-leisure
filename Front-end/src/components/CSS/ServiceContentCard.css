@@ -1,6 +1,6 @@
 .service-content-card{
-    flex: 1 1 18.75rem; 
-    max-width: 30rem;
+    flex: 1 1 20rem; 
+    max-width:30rem;
     height: fit-content;
     text-align: left;
 }

@@ -114,10 +114,10 @@ const AboutUsContent = () => {
           </div>
 
           <div id='rw6' className='row col-12 d-flex about-rw' style={{ justifyContent:'center',marginTop:'100px', marginBottom:'100px' }}>
-            <div className='col-md-3' style={{ textAlign: 'right' }}>
+            <div className='col-md-3' style={{  }}>
               <img src={img_03} style={{ height:'200PX' }} alt="" />
             </div>
-            <div id='text6' className='col-md-6 text6'>
+            <div id='text6' className='col-md-5 text6'>
               <h3>Eyes of locals</h3>
               <p style={{ width:'500px' }}>Discover Sri Lanka through the eyes of locals. As natives, we offer an authentic journey deeply rooted in our heritage and heartfelt connection to the land.</p>
               <button style={{ marginTop: '20px' }} className='btn btn-dark'>Learn more ></button>

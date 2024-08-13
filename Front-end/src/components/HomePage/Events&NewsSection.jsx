@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, lazy } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import '../CSS/Home/Events&NewsSection.css';
 import left_arrow from '../../assets/icons/left-arrow.png';
 import right_arrow from '../../assets/icons/right-arrow.png';
-import ContentCard from './ContentCard';
 
+const ContentCard = lazy(() => import('./ContentCard'));
 
 const EventsNewsSection = () => {
 
@@ -128,7 +128,7 @@ const handleOnClick = (path) => {
       <div className="eventsNews-content justify-content-left">
       <h3 className='font-primary'>Latest Events & News</h3>
         <div className='eventsNews-wrapper'>
-          <div className='nav-icons d-flex'>
+          <div className='d-flex'>
             {showLeftButton3 && <button className="scroll-button3 left3" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}
             {showRightButton3 && <button className="scroll-button3 right3" onClick={() => scrollContainer('right')}><img className='nav-icon' src={right_arrow}></img></button>}
           </div>

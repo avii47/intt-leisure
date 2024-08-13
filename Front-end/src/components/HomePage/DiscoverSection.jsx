@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy } from 'react';
 import './CSS/Home/DiscoverSection.css';
-import ContentCard from './ContentCard';
+
+const ContentCard = lazy(() => import('./ContentCard'));
 
 const DiscoverSection = () => {
   const [isMobileView, setIsMobileView] = useState(false);

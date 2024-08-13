@@ -9,8 +9,10 @@
     transition: all 1s ease;
 }
 .testimonial-text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     min-width: 16rem;
-    text-align: left;
     font-size: 28px;
     opacity: 0;
     transition: all 1s ease;

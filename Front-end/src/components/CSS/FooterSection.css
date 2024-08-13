@@ -55,10 +55,17 @@
 .footer-contact address {
     font-style: normal;
 }
+
+.footer-logos{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
   
 .footer-logos img {
-    margin: 0.625rem;
-    height: 3.125rem;
+    height: 15rem;
+    margin: -3rem 0 0rem 0;
 }
   
 .footer-social .social-icons a {
@@ -67,10 +74,6 @@
   
 .footer-social img {
     height: 1.875rem;
-}
-  
-.footer-bottom {
-    margin: 1.25rem 0;
 }
   
 .footer-copyright {

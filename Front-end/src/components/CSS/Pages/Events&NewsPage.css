@@ -9,14 +9,20 @@
     text-align: left;
 }
 .eventsNews-img{
-    height: 18.75rem;
+    max-height: 18.75rem;
     margin-bottom: 1.25rem;
 }
 .eventsNews-txt{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     padding-left: 5%;
+    height: 18.75rem;
+    min-width: 200px;
 }
 .event-card {
     margin-bottom: 5rem;
+    display: flex;
 }
 .news-card{
     margin-bottom: 5rem;

@@ -49,10 +49,10 @@ const MindfulnessTourismSection = () => {
   return (
     <section id="mindfulness-tourism-section" className={`mindfulness-tourism-section ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="overlayert"></div>
-      <img src={img} className="mindfulness-img" alt="" />
+      <img src={img} className="mindfulness-img" alt="mindfulness-img" loading='lazy'/>
       <div className="mindfulness-tourism-content">
         <div>
-            <h6 className='font-secondary' style={{ marginTop: '-6rem'}}>Explore</h6>
+            <h6 className='font-secondary'>Explore</h6>
             <hr style={{ width: '3.5rem' }} />
             <h3 className='font-primary'>Mindfulness Tourism</h3>
             <p className='font-secondary'>Experience mindfulness in Sri Lanka with techniques backed by research and teachings rooted in original practices. Our approach is distinct from common Western ideologies, offering a unique way to deepen your mindfulness practice and find true relaxation.</p>

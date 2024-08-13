@@ -185,7 +185,7 @@ const BookNowContent = () => {
             <StickyContainer>
               <Sticky topOffset={-200} bottomOffset={200}>
                 {({ style, isSticky }) => (
-                  <div className="col-6 booking-summary-col " style={{ ...style, marginTop: isSticky ? '200px' : '0px', width: isSticky ? '500px': '500px' }}>
+                  <div className="col-6 booking-summary-col " style={{ ...style, marginTop: isSticky ? '170px' : '0px', width: isSticky ? '500px': '500px' }}>
                     <div className='booking-summary-content content-wrapper'>
                       <h3 className='font-primary'>Booking Summary</h3>
                       <br /><br />
@@ -220,7 +220,7 @@ const BookNowContent = () => {
             </StickyContainer>
           )}
         </div>
-        <div className="col-12 d-flex" style={{ justifyContent:'center' }}>
+        <div className="col-12 d-flex bottom-btn-container">
           <button className='btn btn-dark btn-book-f'>Proceed</button>
         </div>
       </div>

@@ -1,22 +1,22 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import '../CSS/HeroSection.css';
-import Lottie from 'lottie-react'
+import Lottie from 'lottie-react';
 import img_01 from '../../assets/images/Manolead-01.png';
 import img_02 from '../../assets/images/FCC-Signature 1.png';
-import video from '../../assets/INTT Leisure - Hero Page.mp4';
-import animationData from '../../assets/icons/down-arrow2.json'
+import animationData from '../../assets/icons/down-arrow2.json';
 
 const HeroSection = () => {
-
   const [isMobileView, setIsMobileView] = useState(false);
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const [isCursorMoving, setIsCursorMoving] = useState(true);
+  let inactivityTimeout;
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobileView(window.innerWidth <= 1200); 
+      setIsMobileView(window.innerWidth <= 1200);
     };
 
     handleResize();
-
     window.addEventListener('resize', handleResize);
 
     return () => {
@@ -32,6 +32,7 @@ const HeroSection = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           heading.classList.add('animate-heading');
+          setVideoLoaded(true);
         }
       },
       { threshold: 0.5 }
@@ -47,30 +48,56 @@ const HeroSection = () => {
       }
     };
   }, []);
-  
+
+  useEffect(() => {
+    const handleMouseMove = () => {
+      setIsCursorMoving(true);
+      clearTimeout(inactivityTimeout);
+
+      inactivityTimeout = setTimeout(() => {
+        setIsCursorMoving(false);
+      }, 2000); // 2 seconds of inactivity to hide the overlayer and heading
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      clearTimeout(inactivityTimeout);
+    };
+  }, []);
+
   return (
     <div id="Hero-section" className={`hero-section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`}>
-      <div className="overlayer"></div>
-        <video src={video} autoPlay loop muted />
-        <div className="hero-content">
-          <div id='hero-heading' className="hero-heading-section">
-              <h1 className='hero-heading font-primary'>Mindfulness Vacations for Business Leaders</h1>
-              <p className='font-secondary'>Leaders change the world and we change how they experience it. </p>
-              <Lottie className='arrow-icon' animationData={animationData}></Lottie>
+      <div className={`overlayer ${isCursorMoving ? '' : 'hidden'}`}></div>
+      {videoLoaded && (
+        <video
+          src={require('../../assets/Intt Leisure - Hero Page new.mp4')}
+          type="video/mp4"
+          autoPlay
+          loop
+          muted
+          preload="auto"
+        />
+      )}
+      <div className="hero-content">
+        <div id="hero-heading" className={`hero-heading-section ${isCursorMoving ? '' : 'hidden'}`}>
+          <h1 className="hero-heading font-primary">Mindfulness Vacations for Business Leaders</h1>
+          <p className="font-secondary">Leaders change the world and we change how they experience it.</p>
+          <Lottie className="arrow-icon" animationData={animationData}></Lottie>
+        </div>
+        <div className={`bottom-viewbar d-flex ${isCursorMoving ? 'slide-up' : 'slide-down'}`}>
+          <h5 className="bottom-viewbar-text">Introduced By</h5>
+          <img src={img_01} alt="manolead-logo" className="bottom-viewbar-img" loading='lazy'/>
+          <img src={img_02} alt="forbes logo" className="bottom-viewbar-img img2" loading='lazy'/>
+          <div className="social-icon-section">
+            <i className="fa-brands fa-facebook social-icon"></i>
+            <i className="fa-brands fa-linkedin social-icon"></i>
+            <i className="fa-brands fa-youtube social-icon"></i>
+            <i className="fa-brands fa-instagram social-icon"></i>
           </div>
-          <div className="bottom-viewbar d-flex">
-              <h5 className="bottom-viewbar-text">Introduced By</h5>
-              <img src={img_01} alt="" className='bottom-viewbar-img'/>
-              <img src={img_02} alt="" className='bottom-viewbar-img img2'/>
-              <div className='social-icon-section'>
-                <i className="fa-brands fa-facebook social-icon"></i>
-                <i className="fa-brands fa-linkedin social-icon"></i>
-                <i className="fa-brands fa-youtube social-icon"></i>
-                <i className="fa-brands fa-instagram social-icon"></i>
-              </div>
-
-          </div>
-        </div>  
+        </div>
+      </div>
     </div>
   );
 };

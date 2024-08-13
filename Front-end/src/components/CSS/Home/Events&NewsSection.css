@@ -11,13 +11,11 @@
 .eventsNews-cards {
     display: flex;
     justify-content: left;
-    padding-right: 20%;
     padding-bottom: 1%;
     gap: 2.8rem;
     overflow-x: scroll;
     scrollbar-width: none;
     scroll-behavior: smooth;
-    width: 100vw;
 
     opacity: 0;
     transform: translateY(30px);
@@ -25,6 +23,9 @@
 }
 .eventsNews-cards::-webkit-scrollbar {
     display: none;
+}
+.nav-icons2{
+    margin-left: -30px;
 }
 .scroll-button3 {
     position: absolute;

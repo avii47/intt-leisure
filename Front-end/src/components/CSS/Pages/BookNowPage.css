@@ -31,12 +31,18 @@
 .date-input{
     width: 100%;
     margin-right: -70px;
+    background-color: rgba(194, 196, 195, 0.671);
+    border: 1px solid black;
+    border-radius: 3px;
 }
 .check-in{
     border-right: solid 1px black;
 }
 .count-input{
     width: 70px;
+    background-color: rgba(194, 196, 195, 0.671);
+    border: 1px solid black;
+    border-radius: 3px;
 }
 .package-card-container{
     display: flex;
@@ -62,7 +68,7 @@
     width: 70%;
     border-radius: 10px;
     height: fit-content;
-    background-color: #fff7d9;
+    background-color: rgba(194, 196, 195, 0.671);
 }
 .text-field-bottom-line {
     border-radius: 0%;
@@ -76,8 +82,16 @@
 .text-field-bottom-line::placeholder {
     color: #aaa; 
 }
+.bottom-btn-container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    padding: 25px;
+    background-color: #fff7d9;
+}
 .btn-book-f{
-    margin-top: 100px;
     width: 300px;
 }
 .form-group {
