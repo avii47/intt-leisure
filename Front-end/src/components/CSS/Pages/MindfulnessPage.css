@@ -14,19 +14,18 @@
     justify-content: center;
     min-height: 56.25rem;
     width: 100%;
-    padding: 0 16%;
+    padding: 0 14%;
 }
 .mindfulness-content-cards-container img{
     max-width: 500px;
     height: 300px;
-    object-fit: cover;
 }
 .mindfulness-rw{
     margin-top: 9.375rem;
 }
 .text1{
     padding-Top: 30px; 
-    padding-Left:100px;
+    padding-Left:65px;
     opacity: 0;
     transform: translateX(-100px);
     transition: opacity 1s ease, transform 1s ease;
@@ -40,7 +39,7 @@
 }
 .text3{
     padding-Top:30px; 
-    padding-Left:100px;
+    padding-Left:65px;
     opacity: 0;
     transform: translateX(-100px);
     transition: opacity 1s ease, transform 1s ease;
