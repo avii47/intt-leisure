@@ -89,7 +89,7 @@ const MindfulnessContent = () => {
         <p className='font-secondary' style={{ fontSize: '20px', textAlign:'justify' }}>Connect with the Ultimate Luxury of Mindfulness in Sri Lanka. A workshop was conducted at the university of Moratuwa on the 19th of June 2023.The workshop focused on enhancing the staff of the University of Moratuwa’s understanding and application of Appreciative Inquiry in the context of mindfulness-based leadership. Throughout the workshop, participants had the opportunity to listen to informative speeches delivered by Dr. GB Hewawa, sam and Jim Ludema. Following the speeches, participants actively engaged in interactive Q&A sessions where they sought clarification, shared their perspectives, and explored how these concepts could be directly applied within the university’s specific context.</p>
         <div id='mindfulness-content-cards-container' className="mindfulness-content-cards-container">
           <div id='rw1' className='row col-12 d-flex mindfulness-rw'>
-            <div className='col-md-6' style={{ textAlign: 'right' }}>
+            <div className='col-md-6' style={{  }}>
               <img loading='lazy' src={img_01} alt="authentic practices img" />
             </div>
             <div id='text1' className='col-md-6 text1'>
@@ -107,13 +107,13 @@ const MindfulnessContent = () => {
               <p>About Mindfulness Tours</p>
               <button style={{ marginTop: '20px' }} className='btn btn-dark'>Learn more ></button>
             </div>
-            <div className='col-md-6 order-1 order-md-2'>
+            <div className='col-md-6 order-1 order-md-2' style={{textAlign:'right'}}>
               <img loading='lazy' src={img_04} alt="unique excursions img" />
             </div>
           </div>
 
           <div id='rw3' className='row col-12 d-flex mindfulness-rw'>
-            <div className='col-md-6' style={{ textAlign: 'right' }}>
+            <div className='col-md-6' style={{  }}>
               <img loading='lazy' src={img_02} alt="expertise img" />
             </div>
             <div id='text3' className='col-md-6 text3'>
