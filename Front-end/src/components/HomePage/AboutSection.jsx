@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy } from 'react';
 import '../CSS/Home/AboutSection.css';
 import Button from 'react-bootstrap/Button';
 import img_01 from '../../assets/images/Rectangle 25.png';
 import img_02 from '../../assets/images/Rectangle 28.png';
 import img_03 from '../../assets/images/img3.jpg';
-import ContentCard from './ContentCard';
+
+const ContentCard = lazy(() => import('./ContentCard'));
 
 const AboutSection = () => {
 

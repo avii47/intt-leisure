@@ -131,7 +131,7 @@ const WhyChooseUsSection = () => {
         <h3 className='font-primary'>Why Choose Us?</h3>
         <hr style={{ width: '200px', margin: 'auto' }}></hr>
         <br></br>
-        <p className='font-secondary' style={{ fontSize: '16px' }}>A workshop was conducted at the university of Moratuwa on the 19th of June 2023.The workshop focused on enhancing the staff of the University of Moratuwa’s understanding and application of Appreciative Inquiry in the context of mindfulness-based leadership. Throughout the workshop, participants had the opportunity to listen to informative speeches delivered by Dr. GB Hewawa, sam and Jim.</p>
+        <p className='font-secondary' style={{ fontSize: '16px' }}>A workshop was conducted at the university of Moratuwa on the 19th of June 2023.The workshop focused on enhancing the staff of the <br /> University of Moratuwa’s understanding and application of Appreciative Inquiry in the context of mindfulness-based leadership.</p>
         <div className="icon-container-wrapper">
           <div className='nav-icons'>
             {showLeftButton && <button className="scroll-button left" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}

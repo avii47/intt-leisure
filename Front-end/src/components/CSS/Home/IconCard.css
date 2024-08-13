@@ -1,8 +1,7 @@
 .icon-card{
     height: fit-content;
-    min-width: 300px;
-    text-align: center;
-    padding: 20px;
+    min-width: 330px;
+    justify-content: center;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 1s ease, transform 1s ease;
@@ -14,6 +13,11 @@
     margin-top: 5px;
     margin-bottom: 30px;
     border-radius: 15px;
+}
+.icon-discription{
+    height: 90px;
+    /* text-align: justify;
+    text-align-last: center; */
 }
 .icon-card:hover .iconCard-img{
     transform: scale(1.1);

@@ -25,13 +25,13 @@ const ConnectAppSection = () => {
             <div className="connect-app-container">
                 <div className="connect-app-content">
                   <div>
-                  <h6 className='font-secondary' style={{ marginTop: '-6rem'}}>Connect</h6>
+                  <h6 className='font-secondary'>Connect</h6>
                     <hr style={{ width: '3.5rem' }} />
                     <h3 className='font-primary'>Keep the vacation bliss alive! </h3>
                     <p className='font-secondary'>Join us to deepen your mindfulness practice and turn tranquility into a lasting lifestyle. Register now and stay connected to your inner peace!</p>
                     <br></br>
                     <p>
-                      <button type="button" className="btn btn-outline-light" style={{}}>Learn more ></button>
+                      <button type="button" className="btn btn-outline-light">Learn more ></button>
                     </p>
                   </div>
 

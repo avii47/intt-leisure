@@ -13,8 +13,9 @@
     display: flex;
     justify-content: left;
     margin-top: 1rem;
-    padding-right: 30%;
-    gap: 2.8rem;
+    padding-right: 50px;
+    gap: 3.5rem;
+    overflow-y: hidden;
     overflow-x: scroll;
     scrollbar-width: none;
     scroll-behavior: smooth;

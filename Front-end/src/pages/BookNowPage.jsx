@@ -1,19 +1,29 @@
-import HeroSection from '../components/HeroSection'
-import BookNowContent from '../components/BookNowPage/BookNowContent'
-import FooterSection from '../components/FooterSection'
+import React, { Suspense, lazy } from 'react';
+// import HeroSection from '../components/HeroSection'
+// import BookNowContent from '../components/BookNowPage/BookNowContent'
+// import FooterSection from '../components/FooterSection'
 import bg from '../assets/images/Book-now-bg.jpg'
 
+const HeroSection = lazy(() => import('../components/HeroSection'));
+const BookNowContent = lazy(() => import('../components/BookNowPage/BookNowContent'));
+const FooterSection = lazy(() => import('../components/FooterSection'));
+
 const BookNowPage = () => {
-    // const img = 'https://img.freepik.com/free-photo/young-woman-sitting-blanket-reading-book_23-2147911502.jpg?t=st=1722335308~exp=1722338908~hmac=c76276d9d9ea2943dcea0645a15a9ec4c4ff70e31d95c926dac4b659997dd3f3&w=1380'
     const img = bg;
     const title = 'Book Now';
     const sub = 'Connect with the Ultimate Luxury of Mindfulness in Sri Lanka';
 
     return (
         <>
-            <HeroSection img={img} title={title} sub={sub} />
-            <BookNowContent />
-            <FooterSection />
+            <Suspense fallback={<div>Loading...</div>}>
+                <HeroSection img={img} title={title} sub={sub} />
+            </Suspense>
+            <Suspense fallback={<div>Loading...</div>}>
+                <BookNowContent />
+            </Suspense>
+            <Suspense fallback={<div>Loading...</div>}>
+                <FooterSection />
+            </Suspense>
         </>
     )
 }

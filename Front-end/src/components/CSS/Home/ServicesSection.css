@@ -1,5 +1,5 @@
 .services-content{
-    text-align: center;
+   
 }
 .service-slider-wrapper {
     position: relative;
@@ -34,11 +34,11 @@
 }
 
 .scroll-button2.left2 {
-    margin-left: 46%;
+    margin-left: 94%;
 }
 
 .scroll-button2.right2 {
-    margin-left: 49%;
+    margin-left: 97%;
 }
 .mobile-view .scroll-button2{
     top: 110%;

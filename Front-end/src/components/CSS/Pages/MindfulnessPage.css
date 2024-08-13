@@ -10,13 +10,11 @@
     flex-wrap: wrap; 
     justify-content: left;
 }
-.top-text{
-    padding: 0 15.5% 0 15.5%;
-}
 .mindfulness-content-cards-container{
     justify-content: center;
     min-height: 56.25rem;
     width: 100%;
+    padding: 0 16%;
 }
 .mindfulness-content-cards-container img{
     max-width: 500px;
@@ -35,8 +33,7 @@
 }
 .text2{
     padding-Top:30px;  
-    padding-Right:100px;
-    padding-left: 60px;
+    padding-Right:50px;
     opacity: 0;
     transform: translateX(100px);
     transition: opacity 1s ease, transform 1s ease;

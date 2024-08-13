@@ -37,7 +37,7 @@ const Footer = () => {
           <div className="col-md-8">
               <div className="footer-subscription">
                   <h3>Connect</h3>
-                  <p>
+                  <p style={{margin:'22px 0'}}>
                       Keep the vacation bliss alive! Join us to deepen your mindfulness
                       practice and turn tranquility into a lasting lifestyle. Register now
                       and stay connected to your inner peace!
@@ -90,8 +90,8 @@ const Footer = () => {
         <div className="footer-logos">
           <img loading="lazy" src={ft_icon1} alt="pata Logo" />
           <img loading="lazy" src={ft_icon2} alt="iata Logo" />
-          <img loading="lazy" src={ft_icon3} alt="manolead logo" />
-          <img loading="lazy" src={ft_icon4} alt="intterminal logo" />
+          {/* <img loading="lazy" src={ft_icon3} alt="manolead logo" />
+          <img loading="lazy" src={ft_icon4} alt="intterminal logo" /> */}
         </div>
         <div className="footer-bottom">
           <a href="/privacy">Privacy Policy</a>

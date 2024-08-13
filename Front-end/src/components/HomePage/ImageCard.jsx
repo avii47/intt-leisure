@@ -5,7 +5,7 @@ const ImageCard = ({ imageSrc, topic, paragraph }) => {
     return (
         <div className="card">
             <div className="image-container">
-                <img src={imageSrc} alt="Card" className="card-image" />
+                <img src={imageSrc} alt="card-img" className="card-image" loading='lazy'/>
                 <div className="overlay">
                     <h3>{topic}</h3>
                     <p>{paragraph}</p><br></br>
