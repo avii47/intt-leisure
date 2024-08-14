@@ -74,8 +74,8 @@ const ServiceContent = () => {
   }, []);
 
   return (
-    <section id="service-content-section"  className={`section service-content-section d-flex ${isMobileView ? 'mobile-view' : ''}`}>
-      <div className="service-section-content">
+    <section id="service-content-section"  className={`section justify-content-center service-content-section d-flex ${isMobileView ? 'mobile-view' : ''}`}>
+      <div className="service-section-content justify-content-center">
         <h3 className='font-primary'><b>Choose your Journey</b></h3>
         <p className='font-secondary'>Connect with the Ultimate Luxury of Mindfulness in Sri Lanka. A workshop was conducted at the university of Moratuwa on the 19th of June 2023.The workshop focused on enhancing the staff of the University of Moratuwa’s understanding and </p>
         <div id='service-content-cards-container' className="d-flex service-content-cards-container">

@@ -5,7 +5,7 @@
     justify-content: center;
 }
 .mindfulness-section-content {
-    width: 80vw;
+    padding: 0 12rem 12rem 12rem;
     display: flex;
     flex-wrap: wrap; 
 }
@@ -13,12 +13,6 @@
     justify-content: center;
     min-height: 56.25rem;
     width: 100%;
-}
-@media (min-width: 2000px) {
-    .service-content-card {
-        flex: 1 1 20rem; 
-        max-width:20rem;
-    }
 }
 .mindfulness-content-cards-container img{
     max-height: 300px;
