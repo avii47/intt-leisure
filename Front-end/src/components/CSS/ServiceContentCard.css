@@ -1,6 +1,6 @@
 .service-content-card{
-    flex: 1 1 25rem; 
-    max-width:25rem;
+    flex: 1 1 20rem; 
+    max-width:20rem;
     height: fit-content;
     text-align: left;
 }
@@ -8,10 +8,10 @@
     overflow: hidden;
     position: relative;
 }
-@media (min-width: 2100px) {
+@media (max-width: 2000px) {
     .service-content-card {
-        flex: 1 1 20rem; 
-        max-width:20rem;
+        flex: 1 1 25rem; 
+        max-width:25rem;
     }
 }
 
