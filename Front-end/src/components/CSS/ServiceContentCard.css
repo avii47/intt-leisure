@@ -8,10 +8,16 @@
     overflow: hidden;
     position: relative;
 }
-@media (max-width: 1530px) {
+@media (max-width: 2000px) {
     .service-content-card {
         flex: 1 1 25rem; 
         max-width:25rem;
+    }
+}
+@media (max-width: 1600px) {
+    .service-content-card {
+        flex: 1 1 20rem; 
+        max-width:20rem;
     }
 }
 
