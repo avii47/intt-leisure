@@ -138,10 +138,10 @@ const ServicesSection = () => {
       return (
         <div id='service-section' className={`section d-flex justify-content-center ${isMobileView ? 'mobile-view' : ''}`}>
             <div className='services-content justify-content-center'>
-                <h6 className='font-secondary left-align'>Explore Our Services</h6>
-                <hr style={{ width: '10rem' }} /><br></br>
+                <h6 className='font-secondary left-align'>Experience the Experience</h6>
+                <hr style={{ width: '13rem' }} /><br></br>
                 <h3 className='font-primary left-align'>Choose Your Journey</h3>
-                <p className='ont-secondary left-align' style={{fontSize:'18px'}}>As you immerse yourself in this enchanting destination, we invite you to participate in profound self-reflection and practice alongside us.</p>
+                <p className='ont-secondary left-align'>As you immerse yourself in this enchanting destination, we invite you to participate in profound self-reflection and practice alongside us.</p>
 
                 <div className="service-slider-wrapper">
                   {showLeftButton2 && <button className="scroll-button2 left2" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}

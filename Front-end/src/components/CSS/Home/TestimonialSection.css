@@ -1,9 +1,10 @@
 .testimonial-content{
-    padding: 5rem 12rem 0 12rem;
+    /* padding: 5rem 12rem 0 12rem; */
 }
 .testimonial-iframe{
-    width: 39.5rem;
-    height: 21.875rem;
+    width: 100%;
+    height: 26rem;
+    margin-left: -10px;
     border-radius: 0.5rem;
     opacity: 0;
     transition: all 1s ease;

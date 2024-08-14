@@ -1,6 +1,7 @@
 .content-card{
     margin-top: 20px;
     width: 300px;
+    font-size: smaller;
 }
 .mobile-view .content-card{
     width: 300px;
@@ -35,5 +36,5 @@
     padding-right: 10px;
 }
 .card-sub{
-    height: 50px;
+    height: fit-content;
 }
