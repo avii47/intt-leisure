@@ -67,8 +67,8 @@ const TestimonialSection = () => {
 
     return (
       <section id="testimonial-section" className={`section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`}>
-        <div className="testimonial-content" style={{}}>
-            <div className="row" style={{ gap:'90px' }}>
+        <div className="testimonial-content">
+            <div className="row" style={{ gap:'60px', width:'80vw' }}>
               <div className="col-md testimonial-video-coontainer">
                 <iframe
                   loading='lazy'

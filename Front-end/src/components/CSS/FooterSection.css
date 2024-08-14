@@ -1,8 +1,9 @@
-
-
-.footer-content{
-    padding: 3rem 15rem 2rem 15rem;
+.footer{
     background-color: #d3d3d3;
+}
+.footer-content{
+    width: 80vw;
+    padding: 2% 0 5% 0;
     color: #333;
     text-align: center;
 }
@@ -77,10 +78,14 @@
 }
   
 .footer-copyright {
-    margin-top: 0.625rem;
+    margin-top: 2rem;
 }
 .ft-social-icon{
     font-size: 1.563rem;
+    color: rgba(0, 0, 0, 0.658);
+}
+.ft-social-icon:hover{
+    color: rgb(0, 0, 0);
 }
 .contact-icons{
   height: 1.3rem;

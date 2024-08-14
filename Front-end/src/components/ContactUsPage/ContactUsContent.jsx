@@ -37,7 +37,7 @@ const ContactUsContent = () => {
         <div className='top-text'>
           <p className='font-secondary' style={{ fontSize: '20px', marginBottom:'60px' }}>Thank you for choosing us for your transformative journey. Every leader is unique, so we begin by understanding you deeply to craft a mindfulness vacation that's perfectly tailored to your needs. Share your details below, and our team of experts will be just a click away.</p>
           <p className='font-secondary' style={{ fontSize: '20px' }}>
-            +94 774 48 48 48 <br></br><br></br>
+            +1 312-242-1662 <br></br><br></br>
             info@intterminal.com <br></br><br></br>
             Mon - Fri 8:00 - 18:00 / Sunday 8:00 - 14:00
           </p>

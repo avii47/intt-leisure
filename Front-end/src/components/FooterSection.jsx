@@ -15,8 +15,8 @@ const Footer = () => {
   const isMobileView = useMobileView();
 
   return (
-    <footer className={`footer ${isMobileView ? 'mobile-view' : ''}`} >
-      <div className="footer-content">
+    <footer className={`footer justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`} >
+      <div className="footer-content justify-content-center">
         <div className="footer-nav d-flex col-md-12" >
           <div>
               <a  href="/mindfulness">MINDFULNESS</a>
@@ -59,7 +59,7 @@ const Footer = () => {
                       <img loading="lazy" src={addressIcon} className='contact-icons' alt="address icon" />
                     </div>
                     <div className="col-11" style={{marginLeft:'20px', width:'300px'}}>
-                      <h5>INT Leasure</h5>
+                      <h5>INTT Leisure</h5>
                       No.26/6<br />
                       Major LV Gunarathna Mawatha,<br />
                       Station Road, Dehiwala-Mount Lavinia,<br />
@@ -71,7 +71,7 @@ const Footer = () => {
                       <img loading="lazy" src={callIcon} className='contact-icons' alt="call icon" />
                     </div>
                     <div className="col-12" style={{marginLeft:'20px'}}>
-                      <a href="tel:0094770437293" className='link-text'>+94 77 4 48 48 48</a><br />
+                      <a href="tel:0094770437293" className='link-text'>+1 312-242-1662</a><br />
                     </div>
                   </address>
                   <address className='d-flex'>
@@ -102,12 +102,24 @@ const Footer = () => {
           <img loading="lazy" src={logo} style={{height:'50px', margin:'30px'}} alt="logo" />
           <h5>Follow Us On</h5>
           <div className="social-icons d-flex" style={{gap:'20px', justifyContent:'center', marginTop:'20px'}}>
+            <a href="https://www.facebook.com/inttleisure" target="_blank" rel="noopener noreferrer">
               <i className="fa-brands fa-square-facebook ft-social-icon"></i>
-              <i className="fa-brands fa-pinterest-square ft-social-icon" ></i>
+            </a>
+            <a href="https://www.pinterest.com/your-profile" target="_blank" rel="noopener noreferrer">
+              <i className="fa-brands fa-pinterest-square ft-social-icon"></i>
+            </a>
+            <a href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer">
               <i className="fa-brands fa-square-instagram ft-social-icon"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/intt-leisure" target="_blank" rel="noopener noreferrer">
               <i className="fa-brands fa-linkedin ft-social-icon"></i>
+            </a>
+            <a href="https://twitter.com/your-profile" target="_blank" rel="noopener noreferrer">
               <i className="fa-brands fa-square-x-twitter ft-social-icon"></i>
+            </a>
+            <a href="https://www.youtube.com/@travelglobe405" target="_blank" rel="noopener noreferrer">
               <i className="fa-brands fa-square-youtube ft-social-icon"></i>
+            </a>
           </div>
         </div>
         {/* <hr></hr> */}
@@ -115,8 +127,6 @@ const Footer = () => {
           <p>&copy; 2024 inttleisure.com. All rights reserved.</p>
         </div>
       </div>
-
-
     </footer>
   );
 };

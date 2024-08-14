@@ -2,8 +2,7 @@
     position: relative;
     overflow: hidden;
     height: 31.25rem;
-    margin-bottom: 3.125rem;
-    margin-top: 10rem;
+    margin-top: 12rem;
 }
 .connect-app-section::before {
     content: "";

@@ -124,8 +124,8 @@ const handleOnClick = (path) => {
 };
 
   return (
-    <section id="eventsNews-section" className={`section justify-content-left d-flex ${isMobileView ? 'mobile-view' : ''}`}>
-      <div className="eventsNews-content justify-content-left">
+    <section id="eventsNews-section" className={`section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`}>
+      <div className="eventsNews-content justify-content-center">
       <h3 className='font-primary'>Latest Events & News</h3>
         <div className='eventsNews-wrapper'>
           <div className='d-flex'>
