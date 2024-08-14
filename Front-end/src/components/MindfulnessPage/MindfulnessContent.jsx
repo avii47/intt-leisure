@@ -83,7 +83,7 @@ const MindfulnessContent = () => {
   }, []);
 
   return (
-    <section id="mindfulness-content-section" className={`section mindfulness-content-section d-flex ${isMobileView ? 'mobile-view' : ''}`}>
+    <section id="mindfulness-content-section" className={`section mindfulness-content-section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="mindfulness-section-content">
         <h4 className='font-primary' style={{ fontSize: '30px' }}><b>What is Mindfulness Tourism</b>?</h4>
         <p className='font-secondary' style={{ fontSize: '20px', textAlign:'justify' }}>Connect with the Ultimate Luxury of Mindfulness in Sri Lanka. A workshop was conducted at the university of Moratuwa on the 19th of June 2023.The workshop focused on enhancing the staff of the University of Moratuwa’s understanding and application of Appreciative Inquiry in the context of mindfulness-based leadership. Throughout the workshop, participants had the opportunity to listen to informative speeches delivered by Dr. GB Hewawa, sam and Jim Ludema. Following the speeches, participants actively engaged in interactive Q&A sessions where they sought clarification, shared their perspectives, and explored how these concepts could be directly applied within the university’s specific context.</p>
