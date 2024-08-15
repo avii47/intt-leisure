@@ -29,6 +29,10 @@
     padding: 0% 10% 0% 50%;
     flex-direction: row;
     align-items: center;
+    background: linear-gradient(to right, transparent 50%, #000000af 0%);
+}
+.connect-app-content-text{
+    padding-left: 50px;
 }
 /* @media only screen and (max-width: 495px) {
     .connect-app-content{

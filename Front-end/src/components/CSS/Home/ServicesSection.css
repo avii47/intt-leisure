@@ -10,7 +10,7 @@
 .service-slider {
     display: flex;
     justify-content: left;
-    gap: 2.8rem;
+    gap: 1.875rem;
     overflow-x: scroll;
     scrollbar-width: none;
     scroll-behavior: smooth;

@@ -52,7 +52,7 @@ const MindfulnessTourismSection = () => {
       <img src={img} className="mindfulness-img" alt="mindfulness-img" loading='lazy'/>
       <div className="mindfulness-tourism-content">
         <div style={{paddingLeft:'70px'}}>
-            <h6 className='font-secondary'>Explore</h6>
+            <h6 className='font-secondary' style={{fontWeight:'250', fontSize:'15px'}}>Explore</h6>
             <hr style={{ width: '3.5rem', marginTop:'-1px' }} />
             <h3 className='font-primary'>Mindfulness Tourism</h3>
             <p className='font-secondary' style={{fontWeight:'250', marginTop:'20px'}}>Experience mindfulness in Sri Lanka with techniques backed by research and teachings rooted in original practices. Our approach is distinct from common Western ideologies, offering a unique way to deepen your mindfulness practice and find true relaxation.</p>

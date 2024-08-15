@@ -12,7 +12,7 @@ const ServicesSection = () => {
         const [showRightButton2, setShowRightButton] = useState(true);
         const containerRef2 = useRef(null);
 
-        const img4 = 'https://img.freepik.com/free-photo/grunge-gray-concrete-textured-background_53876-145492.jpg?t=st=1722571110~exp=1722574710~hmac=dbe2ce48dbeca59499ad4867b3fd0ab0b1cdf15ea16e35d33162d12e12ef02e3&w=1380'
+        const img4 = 'https://img.freepik.com/premium-photo/woman-sits-rock-front-lake-with-reflection-tree-water_955289-41220.jpg?w=826'
 
         useEffect(() => {
           const handleResize = () => {
@@ -106,7 +106,7 @@ const ServicesSection = () => {
 
         const scrollContainer = (direction) => {
           if (containerRef2.current) {
-              const scrollAmount = containerRef2.current.offsetWidth * 0.89;
+              const scrollAmount = containerRef2.current.offsetWidth * 0.6;
               containerRef2.current.scrollBy({
                   left: direction === 'left' ? -scrollAmount : scrollAmount,
                   behavior: 'smooth',
@@ -138,10 +138,10 @@ const ServicesSection = () => {
       return (
         <div id='service-section' className={`section d-flex justify-content-center ${isMobileView ? 'mobile-view' : ''}`}>
             <div className='services-content justify-content-center'>
-                <h6 className='font-secondary left-align'>Experience the Experience</h6>
+                <h6 className='font-secondary left-align' style={{fontSize:'15px', fontWeight:'350'}}>Experience the Experience</h6>
                 <hr style={{ width: '13rem' }} /><br></br>
                 <h3 className='font-primary left-align'>Choose Your Journey</h3>
-                <p className='ont-secondary left-align'>As you immerse yourself in this enchanting destination, we invite you to participate in profound self-reflection and practice alongside us.</p>
+                <p className='font-secondary left-align'>As you immerse yourself in this enchanting destination, we invite you to participate in profound self-reflection and practice alongside us.</p>
 
                 <div className="service-slider-wrapper">
                   {showLeftButton2 && <button className="scroll-button2 left2" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}

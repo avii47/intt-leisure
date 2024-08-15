@@ -8,7 +8,7 @@ const EventsNewsContent = lazy(() => import('../components/Events&NewsPage/Event
 const FooterSection = lazy(() => import('../components/FooterSection'));
 
 const ContactUsPage = () => {
-    const img = 'https://img.freepik.com/free-photo/group-people-taking-interview-outdoors_23-2149032381.jpg?t=st=1722240323~exp=1722243923~hmac=f8549aaa2337e0db5ef2134a7d64d62945b7ed782bb56176c1f3910c557287c0&w=1380'
+    const img = 'https://img.freepik.com/free-photo/man-practicing-yoga-mindfulness_23-2151745660.jpg?t=st=1723722070~exp=1723725670~hmac=27995bf5933ef729a74c2c28ab87b740f6feae24a6810e2c5cf31dc703b3c270&w=1480'
     const title = 'Events & News';
     const sub = 'Connect with the Ultimate Luxury of Mindfulness in Sri Lanka';
     

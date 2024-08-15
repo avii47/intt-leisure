@@ -27,3 +27,8 @@
     opacity: 1;
     transform: translateY(0);
 }
+.icon-card-bottom-line{
+    height: 2px;
+    background-color: #d18222; 
+    border: none; 
+}

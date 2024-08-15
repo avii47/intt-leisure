@@ -127,7 +127,7 @@ const AboutUsContent = () => {
           </div>
         </div> */}
 
-        <h2 className='font-primary'><b>At the heart of our mindfulness vacations is Dr. Gamini Hewawasam</b></h2>
+        <h3 className='font-primary'>At the heart of our mindfulness vacations is Dr. Gamini Hewawasam</h3>
         <p className='font-secondary about-p'>A Forbes Coach Council member and a leading practitioner of the original form of mindfulness. With over 12 years of experience in the travel industry in the USA, Dr. Hewawasam has recognized a gap between traditional mindfulness teachings preserved in Sri Lanka and their often diluted Western practices.</p>
         <div style={{display:'flex', justifyContent:'center', width:'100%'}}>
           <img className='about-img' src={img} alt="about us image" loading='lazy'/>

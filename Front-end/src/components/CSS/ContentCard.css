@@ -37,4 +37,6 @@
 }
 .card-sub{
     height: fit-content;
+    letter-spacing: 0px;
+    font-size: 13px;
 }
