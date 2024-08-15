@@ -25,8 +25,8 @@
     align-self: center;
 }
 .nav-item {
-    width: 12.5rem;
-    font-size: 15px;
+    width:10rem;
+    font-size: 14px;
     text-align: center;
     font-weight: 250;
     letter-spacing: 1px;
@@ -97,7 +97,7 @@
 }
 .btn-book{
     margin-left: 5rem;
-    width: 200px;
+    width: 150px;
 }
 .mobile-view .btn-book{
     display: none;

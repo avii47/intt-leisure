@@ -128,10 +128,10 @@ const WhyChooseUsSection = () => {
   return (
     <section id="why-chooseus-Section" className={`section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="why-chooseus-content justify-content-center">
-        <h3 className='font-primary'>What makes us unique?</h3>
+        <h3 className='font-primary'>What Makes Us Unique?</h3>
         <hr style={{ width: '400px', marginTop:'-1px' }}></hr>
         <br></br>
-        <p className='font-secondary'>A workshop was conducted at the university of Moratuwa on the 19th of June 2023.The workshop focused on enhancing the staff of the University of Moratuwa’s understanding and application of Appreciative Inquiry in the context of mindfulness-based leadership.</p>
+        <p className='font-secondary'>Experience authentic mindfulness according to Buddha’s teachings, designed by Forbes-certified coach Dr. Gamini Hewawasam. Rooted in Sri Lankan heritage and backed by research, our programs guide you through ancient practices in carefully chosen locations, ensuring a seamless, expert-managed journey.</p>
         <div className="icon-container-wrapper">
           <div className='nav-icons'>
             {showLeftButton && <button className="scroll-button left" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}
