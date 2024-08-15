@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy } from 'react';
 import '../CSS/Pages/Events&NewsPage.css';
-import EventCard from '../Events&NewsPage/EventCard';
+// import EventCard from '../Events&NewsPage/EventCard';
 import { useMobileView } from '../../contexts/MobileViewContext';
-import NewsCard from '../Events&NewsPage/NewsCard';
+// import NewsCard from '../Events&NewsPage/NewsCard';
 import img_01 from '../../assets/images/events-img1.png';
 import img_02 from '../../assets/images/events-img2.png';
 import img_03 from '../../assets/images/events-img3.png';
 import img_04 from '../../assets/images/news-img.png';
+
+const EventCard = lazy(() => import('../Events&NewsPage/EventCard'));
+const NewsCard = lazy(() => import('../Events&NewsPage/NewsCard'));
 
 const EventsNewsContent = () => {
 
@@ -124,14 +127,14 @@ const EventsNewsContent = () => {
   ];
 
   return (
-    <section id="eventsNews-content-section" className={`section eventsNews-content-section d-flex ${isMobileView ? 'mobile-view' : ''}`}>
-      <div className="eventsNews-section-content">
+    <section id="eventsNews-content-section" className={`section eventsNews-content-section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`}>
+      <div className="eventsNews-section-content justify-content-center">
       <h3 className='font-primary' style={{marginBottom:'50px'}}><b>Upcoming Events</b></h3>
         <div className="events-cards-container">
             {eventstData.map((content, index) => (
               <EventCard key={index} content={content} />
             ))}
-        </div>
+        </div><br></br>
         <h3 className='font-primary' style={{marginBottom:'50px'}}><b>Latest Events & News</b></h3>
         <div className="news-cards-container d-flex">
             {newsData.map((content, index) => (
