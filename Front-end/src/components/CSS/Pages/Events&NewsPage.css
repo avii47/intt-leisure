@@ -1,15 +1,14 @@
 .eventsNews-content-section{
     display: flex;
-    flex-direction: column;
     justify-content: center;
 }
 .eventsNews-section-content {
-    padding: 0 12rem 12rem 12rem;
+    width: 80vw;
     flex-wrap: wrap; 
     text-align: left;
 }
 .eventsNews-img{
-    max-height: 18.75rem;
+    width: 100%;
     margin-bottom: 1.25rem;
 }
 .eventsNews-txt{
@@ -17,15 +16,17 @@
     flex-direction: row;
     align-items: center;
     padding-left: 5%;
-    height: 18.75rem;
-    min-width: 200px;
+    height: 15.5rem;
+}
+.news-card-btn{
+    width: 10rem;
 }
 .event-card {
     margin-bottom: 5rem;
     display: flex;
 }
 .news-card{
-    margin-bottom: 5rem;
+    margin-bottom: 12rem;
 }
 .news-cards-container{
     gap: 30px;
