@@ -7,10 +7,13 @@
   overflow: hidden;
 }
 .font-primary {
-  font-family: "Playfair", Display;
+  font-family: "Playfair Display", serif;
+  font-size: 38px;
 }
 .font-secondary {
   font-family: "Inter", sans-serif;
+  font-size: 16PX;
+  letter-spacing: 1px;
 }
 .main-container {
   width: 100%;

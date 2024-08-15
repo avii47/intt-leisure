@@ -41,7 +41,7 @@ video {
     transition: opacity 1s ease, transform 1s ease;
 }
 .hero-heading{
-    font-size: 3.3rem;
+    font-size: 55px;
     font-weight: 500;
     letter-spacing: 0.15rem;
 }

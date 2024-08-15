@@ -1,11 +1,10 @@
 .bookNow-content-section{
     display: flex;
-    width: 100%;
-    flex-direction: column;
     justify-content: center;
+    padding-bottom: 12rem;
 }
 .bookNow-section-content {
-    padding: 0 12rem 12rem 12rem;
+    width: 80vw;
     display: flex;
     flex-wrap: wrap; 
     text-align: left;
@@ -65,7 +64,6 @@
 .booking-summary-col {
     position: relative;
     padding: 50px;
-    width: 70%;
     border-radius: 10px;
     height: fit-content;
     background-color: rgba(194, 196, 195, 0.671);
@@ -124,6 +122,13 @@
 }
 .book-icons{
     font-size: 30px;
+}
+.book-now-heading{
+    font-size: 20px;
+}
+.bookNow-section-content h3 {
+    font-size: 28px;
+    letter-spacing: 1px;
 }
 
 

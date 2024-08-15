@@ -85,34 +85,40 @@ const MindfulnessContent = () => {
   return (
     <section id="mindfulness-content-section" className={`section mindfulness-content-section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="mindfulness-section-content">
-        <h4 className='font-primary' style={{ fontSize: '30px' }}><b>What is Mindfulness Tourism</b>?</h4>
-        <p className='font-secondary' style={{ fontSize: '20px', textAlign:'justify' }}>Connect with the Ultimate Luxury of Mindfulness in Sri Lanka. A workshop was conducted at the university of Moratuwa on the 19th of June 2023.The workshop focused on enhancing the staff of the University of Moratuwa’s understanding and application of Appreciative Inquiry in the context of mindfulness-based leadership. Throughout the workshop, participants had the opportunity to listen to informative speeches delivered by Dr. GB Hewawa, sam and Jim Ludema. Following the speeches, participants actively engaged in interactive Q&A sessions where they sought clarification, shared their perspectives, and explored how these concepts could be directly applied within the university’s specific context.</p>
+        <h3 className='font-primary'>What is Mindfulness Tourism?</h3>
+        <p className='font-secondary' style={{ textAlign:'justify' }}>What exactly is Mindful Tourism? We often hear about mindfulness, but how often do we participate in Mindful Tourism? It’s a distinct approach rooted in Sri Lanka's authentic mindfulness teachings and bolstered by solid research. Partnering with INTT Leisure for a mindful tour offers a transformative experience tailored for leaders and professionals. Each moment of your journey is meticulously designed to deepen your mindfulness practice. Our experts guide you through techniques that aren’t just theoretical—they’re backed by action research conducted by Dr. Gamini Hewawasam, specifically tested and proven to be effective for leaders</p>
         <div id='mindfulness-content-cards-container' className="mindfulness-content-cards-container">
           <div id='rw1' className='row col-12 d-flex mindfulness-rw'>
             <div className='col-md-6' style={{  }}>
               <img loading='lazy' src={img_01} alt="authentic practices img" />
             </div>
-            <div id='text1' className='col-md-6 text1'>
-              <h6>Explore</h6><hr style={{ width: '60px' }}></hr>
-              <h3>Authentic Practices</h3>
-              <p>About Mindfulness Tours</p>
-              <button style={{ marginTop: '20px' }} className='btn btn-dark'>Learn more ></button>
+            <div id='text1' className='col-md-6 text1 font-secondary'>
+              <div>
+                <h6 style={{fontWeight:'350', fontSize:'15px'}}>Explore</h6>
+                <hr style={{ width: '3.7rem', marginTop:'-1px' }} />
+                <h3 style={{fontSize:'28px'}}>Authentic Practices</h3>
+                <p>Experience the unadulterated essence of mindfulness, untainted by modern adaptations. Our approach is a testament to the timeless wisdom of the Buddha's teachings, carefully preserved and passed down through generations in Sri Lanka.</p>
+                <button style={{ marginTop: '20px' }} className='btn btn-dark'>Learn more ></button>
+              </div>
             </div>
           </div>
 
           <div id='rw2' className='row col-12 d-flex mindfulness-rw'>
-            <div id='text2' className='col-md-6 order-2 order-md-1 text2'>
-              <h6>Explore</h6><hr style={{ width: '60px' }}></hr>
-              <h3>Unique Excursions</h3>
-              <p>About Mindfulness Tours</p>
-              <button style={{ marginTop: '20px' }} className='btn btn-dark'>Learn more ></button>
+            <div id='text2' className='col-md-6 order-2 order-md-1 text2 font-secondary'>
+              <div>
+                <h6 style={{fontWeight:'350', fontSize:'15px'}}>Explore</h6>
+                <hr style={{ width: '3.7rem', marginTop:'-1px' }} />
+                <h3 style={{fontSize:'28px'}}>Unique Excursions</h3>
+                <p>These mindfulness practices guided by experts at INTT Leisure have been conducted on business leaders from Fortune 100 companies and are shown to be effective through proven results.</p>
+                <button style={{ marginTop: '20px' }} className='btn btn-dark'>Learn more ></button>
+              </div>
             </div>
             <div className='col-md-6 order-1 order-md-2' style={{textAlign:'right'}}>
               <img loading='lazy' src={img_04} alt="unique excursions img" />
             </div>
           </div>
 
-          <div id='rw3' className='row col-12 d-flex mindfulness-rw'>
+          {/* <div id='rw3' className='row col-12 d-flex mindfulness-rw'>
             <div className='col-md-6' style={{  }}>
               <img loading='lazy' src={img_02} alt="expertise img" />
             </div>
@@ -122,7 +128,7 @@ const MindfulnessContent = () => {
               <p>About Mindfulness Tours</p>
               <button style={{ marginTop: '20px' }} className='btn btn-dark'>Learn more ></button>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

@@ -38,10 +38,15 @@
     border: 1px solid #cccccc;
 }
 .sc-title{
-    padding-top: 25px;
+    font-family: "Playfair Display", serif;
+    letter-spacing: 1px;
+    padding-top: 42px;
     transition: all 0.5s ease-in-out;
 }
 .sc-sub{
+    font-size: 13px;
+    font-weight: 250;
+    letter-spacing: 0px;
     display: none;
 }
 .service-content-card:hover .sc-title{
@@ -56,7 +61,8 @@
     padding: 20px;
 }
 .service-content-card-sub{
-    font-size: 15px;
+    font-size: 13px;
+    letter-spacing: 0px;
 }
 .mobile-view .service-content-card{
     width: 300px;

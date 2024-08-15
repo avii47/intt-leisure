@@ -128,8 +128,8 @@ const WhyChooseUsSection = () => {
   return (
     <section id="why-chooseus-Section" className={`section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="why-chooseus-content justify-content-center">
-        <h3 className='font-primary'>Why Choose Us?</h3>
-        <hr style={{ width: '200px' }}></hr>
+        <h3 className='font-primary'>What makes us unique?</h3>
+        <hr style={{ width: '400px', marginTop:'-1px' }}></hr>
         <br></br>
         <p className='font-secondary'>A workshop was conducted at the university of Moratuwa on the 19th of June 2023.The workshop focused on enhancing the staff of the University of Moratuwa’s understanding and application of Appreciative Inquiry in the context of mindfulness-based leadership.</p>
         <div className="icon-container-wrapper">

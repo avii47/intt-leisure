@@ -12,14 +12,13 @@
     transition: background-color 0.2s ease-in-out;
 }
 .navbar-scrolled .nav-item{
-    /* color: black; */
     font-weight: 250;
 }
 .logo {
     height: 5rem;
 }
 .nav-container{
-    width: 85rem;
+    width: 80vw;
 }
 .nav-item-container{
     column-gap: 0px;
@@ -29,7 +28,7 @@
     width: 12.5rem;
     font-size: 15px;
     text-align: center;
-    font-weight: 150;
+    font-weight: 250;
     letter-spacing: 1px;
     
     position: relative;
@@ -97,7 +96,8 @@
     background-color: rgb(255, 255, 255);
 }
 .btn-book{
-    margin-left: 14.375rem;
+    margin-left: 5rem;
+    width: 200px;
 }
 .mobile-view .btn-book{
     display: none;

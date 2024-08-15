@@ -48,7 +48,7 @@ const FeedbackSection = () => {
   return (
     <section id="feedback-section" className={`section feedback-section d-flex ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="feedback-content">
-        <h3 style={{marginBottom:'50px'}}>Get In Touch With Us</h3>
+        <h3 className='font-primary' style={{marginBottom:'50px'}}>Get In Touch With Us</h3>
         <form className="feedback-form">
             <div className="form-group feedback-ft">
               <input type="text" className="form-control in-f" id="name" placeholder="Name" required />
@@ -61,8 +61,8 @@ const FeedbackSection = () => {
             </div>
             <div className="form-group feedback-ft">
               <textarea className="form-control in-f" id="message" rows="6" placeholder="Message" required></textarea>
-            </div>
-            <button type="submit" className="btn btn-dark">Submit</button>
+            </div><br></br>
+            <button type="submit" className="btn btn-dark" style={{width:'200px'}}>Submit</button>
         </form>
       </div>
     </section>

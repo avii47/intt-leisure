@@ -256,7 +256,7 @@ const BookNowContent = () => {
 
     if (!textSection) {
       console.warn("Element with ID 'text1' not found.");
-      return; // Exit the effect early if textSection is null
+      return; 
     }
 
     const observer = new IntersectionObserver(
@@ -437,7 +437,9 @@ const BookNowContent = () => {
                   <input className="form-control form-control-sm" type="text" placeholder="" readOnly />
                   <label className="label-text">Total</label>
                 </div>
-                <button className='btn btn-dark btn-book-f'>Book Now</button>
+                <div className="col-12 d-flex bottom-btn-container">
+                    <button className='btn btn-dark btn-book-f'>Proceed</button>
+                </div>
               </div>
             </div>
           ) : (

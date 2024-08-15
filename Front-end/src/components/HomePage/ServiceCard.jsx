@@ -7,8 +7,8 @@ const ServiceCard = React.forwardRef(({ content, className, style }, ref) => {
       <div className="overlayer"></div>
       <img className='crd-img' src={content.img} alt="serviceCard-img" loading='lazy'/>
       <div className="card-content">
-        <h4 className='font-primary'>{content.title}</h4>
-        <p style={{ fontSize: '15px' }} className='font-secondary'>{content.sub}</p>
+        <h4 className='font-primary' style={{fontSize:'28px', letterSpacing:'1px'}}>Midfulness for Leaders</h4>
+        <p style={{ letterSpacing:'0px', fontWeight:'250' }} className='font-secondary'>{content.sub}</p>
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ const ContentCard = ({content}) => (
                 <img className="card-img top" src={`${content.img}`}></img>
             </div>
             <div className="content-card-body">
-                <h5 className="card-title font-secondary" style={{fontSize:'18px'}}>{content.title}</h5>
+                <h5 className="card-title font-secondary">{content.title}</h5>
                 <p className="card-sub font-secondary">{content.sub}</p>
             </div>
         </div>
