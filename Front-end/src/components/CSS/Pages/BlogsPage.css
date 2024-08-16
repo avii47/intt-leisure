@@ -1,0 +1,104 @@
+.blogs-content-section{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10%;
+}
+.blogs-section-content {
+    width: 40vw;
+    flex-wrap: wrap; 
+    text-align: left;
+}
+.blogs-img{
+    width: 100%;
+    margin: 40px 0;
+}
+.h1-more{
+    display: none;
+}
+.topics{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    row-gap: 50px;
+}
+.topics ul {
+    padding: 0;
+    margin: 0;
+}
+.topics li{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    width: 500px;
+    padding: 2%;
+    border-radius: 8px;
+}
+.topics li:hover{
+    background-color: rgb(199, 199, 199);
+    transition: 0.2s all linear;
+}
+.topics li:hover i{
+    display: inline;
+    transition: 0.2s all linear;
+}
+.topics a{
+    text-decoration: none;
+    color: black;
+}
+.topics li i{
+    margin-left: 50px;
+    display: none;
+}
+.content{
+    padding-bottom: 50px;
+}
+.content h5{
+    letter-spacing: 0px;
+    font-weight: 600;
+    margin-top: 50px;
+}
+.recommended{
+    margin-top: 50px;
+}
+.recommended li{
+    height: auto;
+    padding: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    border-radius: 8px;
+}
+.recommended li:hover{
+    background-color: rgb(199, 199, 199);
+    transition: 0.2s all linear;
+}
+.recommended li i{
+    font-size: 20px;
+}
+.recommended li a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+.slide-down {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+.slide-down.expand {
+    max-height: 500px; /* Adjust based on your content's height */
+    transition: max-height 0.2s ease-in;
+}

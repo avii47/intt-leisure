@@ -67,7 +67,7 @@ function MyNavbar() {
                   {/* <Nav.Link className={`nav-item ${location.pathname === '/destinations' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/destinations">DESTINATIONS</Nav.Link> */}
                   <Nav.Link className={`nav-item ${location.pathname === '/services' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/services">EXPERIENCE</Nav.Link>
                   <Nav.Link className={`nav-item ${location.pathname === '/why-choose-us' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/why-choose-us">WHY CHOOSE US</Nav.Link>
-                  <Nav.Link className={`nav-item ${location.pathname === '/ex' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/ex">EXPLORE</Nav.Link>
+                  <Nav.Link className={`nav-item ${location.pathname === '/blogs' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/blogs">EXPLORE</Nav.Link>
                   <Nav.Link className={`nav-item ${location.pathname === '/contact-us' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/contact-us">CONTACT US</Nav.Link>
                 </Nav>
                 <br />

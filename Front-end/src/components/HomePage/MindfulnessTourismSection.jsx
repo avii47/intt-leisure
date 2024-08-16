@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import '../CSS/Home/MindfulnessTourismSection.css';
 import img from '../../assets/images/Mindfulness Tourism.jpg';
 
 const MindfulnessTourismSection = () => {
 
   const [isMobileView, setIsMobileView] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const section = document.getElementById('mindfulness-tourism-section');
@@ -46,6 +48,10 @@ const MindfulnessTourismSection = () => {
     };
   }, []);
 
+  const handleOnClick = (path) => {
+    navigate(path);
+  };
+
   return (
     <section id="mindfulness-tourism-section" className={`mindfulness-tourism-section ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="overlayert"></div>
@@ -57,7 +63,7 @@ const MindfulnessTourismSection = () => {
             <h3 className='font-primary'>Mindfulness Tourism</h3>
             <p className='font-secondary' style={{fontWeight:'250', marginTop:'20px'}}>Experience mindfulness in Sri Lanka with techniques backed by research and teachings rooted in original practices. Our approach is distinct from common Western ideologies, offering a unique way to deepen your mindfulness practice and find true relaxation.</p>
             <br></br>
-            <button type="button" className="btn btn-light" style={{width:'150px'}}>Learn more ></button>
+            <button type="button" className="btn btn-light" onClick={() => handleOnClick('/mindfulness')} style={{width:'150px'}}>Learn more ></button>
         </div>
       </div>
     </section>
