@@ -135,15 +135,15 @@ const MindfulnessContent = () => {
           <ContentBlock
             image={img_01}
             title="Authentic Practices"
-            text="Experience the unadulterated essence of mindfulness..."
+            text="Experience the unadulterated essence of mindfulness, untainted by modern adaptations. Our approach is a testament to the timeless wisdom of the Buddha's teachings, carefully preserved and passed down through generations in Sri Lanka."
             buttonText="Learn more >"
             imagePosition="left"
           />
 
           <ContentBlock
-            image={img_01}
+            image={img_02}
             title="Unique Excursions"
-            text="These mindfulness practices guided by experts..."
+            text="These mindfulness practices guided by experts at INTT Leisure have been conducted on business leaders from Fortune 100 companies and are shown to be effective through proven results."
             buttonText="Learn more >"
             imagePosition="right"
           />

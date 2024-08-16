@@ -22,7 +22,7 @@
 }
 .nav-item-container{
     column-gap: 0px;
-    align-self: center;
+    justify-content: center;
 }
 .nav-item {
     width:10rem;
