@@ -6,6 +6,8 @@ import img_02 from '../../assets/images/aboutUs-bg.png';
 import img_03 from '../../assets/images/img3.jpg';
 import img_04 from '../../assets/images/Rectangle 90 (2).png';
 
+import ContentBlock from '../MindfulnessCard'
+
 const MindfulnessContent = () => {
 
   const isMobileView = useMobileView();
@@ -88,7 +90,7 @@ const MindfulnessContent = () => {
         <h3 className='font-primary'>What is Mindfulness Tourism?</h3>
         <p className='font-secondary' style={{ textAlign:'justify', marginTop:'10px' }}>What exactly is Mindful Tourism? We often hear about mindfulness, but how often do we participate in Mindful Tourism? It’s a distinct approach rooted in Sri Lanka's authentic mindfulness teachings and bolstered by solid research. Partnering with INTT Leisure for a mindful tour offers a transformative experience tailored for leaders and professionals. Each moment of your journey is meticulously designed to deepen your mindfulness practice. Our experts guide you through techniques that aren’t just theoretical—they’re backed by action research conducted by Dr. Gamini Hewawasam, specifically tested and proven to be effective for leaders</p>
         <div id='mindfulness-content-cards-container' className="mindfulness-content-cards-container">
-          <div id='rw1' className='row col-12 d-flex mindfulness-rw'>
+          {/* <div id='rw1' className='row col-12 d-flex mindfulness-rw'>
             <div className='col-md-6' style={{  }}>
               <img loading='lazy' src={img_01} alt="authentic practices img" />
             </div>
@@ -116,7 +118,7 @@ const MindfulnessContent = () => {
             <div className='col-md-6 order-1 order-md-2' style={{textAlign:'right'}}>
               <img loading='lazy' src={img_04} alt="unique excursions img" />
             </div>
-          </div>
+          </div> */}
 
           {/* <div id='rw3' className='row col-12 d-flex mindfulness-rw'>
             <div className='col-md-6' style={{  }}>
@@ -129,6 +131,23 @@ const MindfulnessContent = () => {
               <button style={{ marginTop: '20px' }} className='btn btn-dark'>Learn more ></button>
             </div>
           </div> */}
+
+          <ContentBlock
+            image={img_01}
+            title="Authentic Practices"
+            text="Experience the unadulterated essence of mindfulness..."
+            buttonText="Learn more >"
+            imagePosition="left"
+          />
+
+          <ContentBlock
+            image={img_01}
+            title="Unique Excursions"
+            text="These mindfulness practices guided by experts..."
+            buttonText="Learn more >"
+            imagePosition="right"
+          />
+
         </div>
       </div>
     </section>

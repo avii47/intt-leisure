@@ -1,15 +1,14 @@
 .eventsNews-content-section{
     display: flex;
-    flex-direction: column;
     justify-content: center;
 }
 .eventsNews-section-content {
-    padding: 0 12rem 12rem 12rem;
+    width: 80vw;
     flex-wrap: wrap; 
     text-align: left;
 }
 .eventsNews-img{
-    max-height: 18.75rem;
+    width: 100%;
     margin-bottom: 1.25rem;
 }
 .eventsNews-txt{
