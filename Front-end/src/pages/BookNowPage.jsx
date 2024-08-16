@@ -1,7 +1,4 @@
 import React, { Suspense, lazy } from 'react';
-// import HeroSection from '../components/HeroSection'
-// import BookNowContent from '../components/BookNowPage/BookNowContent'
-// import FooterSection from '../components/FooterSection'
 import bg from '../assets/images/Book-now-bg.jpg'
 
 const HeroSection = lazy(() => import('../components/HeroSection'));

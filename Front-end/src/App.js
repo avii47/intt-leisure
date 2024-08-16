@@ -15,6 +15,7 @@ const MindfulnessPage = lazy(() => import('../src/pages/MindfulnessPage'));
 const AboutUsPage = lazy(() => import('../src/pages/AboutUsPage'));
 const ContactUsPage = lazy(() => import('../src/pages/ContactUsPage'));
 const BookNowPage = lazy(() => import('../src/pages/BookNowPage'));
+const BlogsPage = lazy(() => import('../src/pages/BlogsPage'));
 
 const pageVariants = {
   initial: {
@@ -106,6 +107,14 @@ const App = () => {
               element={
                 <motion.div initial="initial" animate="enter" exit="exit" variants={pageVariants} className="page-transition">
                   <BookNowPage />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/blogs"
+              element={
+                <motion.div initial="initial" animate="enter" exit="exit" variants={pageVariants} className="page-transition">
+                  <BlogsPage />
                 </motion.div>
               }
             />
