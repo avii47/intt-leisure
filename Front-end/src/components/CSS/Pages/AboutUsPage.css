@@ -1,111 +1,58 @@
 .aboutus-content-section{
-    text-align: left;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    padding-bottom: 10%;
 }
 .aboutus-section-content {
-    padding: 0 12rem 12rem 12rem;
-    display: flex;
+    width: 80vw;
     flex-wrap: wrap; 
-    justify-content: left;
-}
-.top-textt{
-    padding: 0 15.5% 0 15.5%;
-}
-.aboutus-content-cards-container{
-    justify-content: center;
-    min-height: 56.25rem;
-    width: 100%;
-}
-.aboutus-content-cards-container img{
-    max-width: 500px;
-    height: 300px;
-    object-fit: cover;
-}
-.about-rw{
-    margin-top: 9.375rem;
-}
-.text4{
-    padding-Top: 30px; 
-    padding-Left:100px;
-    opacity: 0;
-    transform: translateX(-100px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-.text5{
-    padding-Top:30px;  
-    padding-Right:100px;
-    opacity: 0;
-    transform: translateX(100px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-.text6{
-    padding-Top:30px; 
-    padding-Left:100px;
-    opacity: 0;
-    transform: translateX(-100px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-.mobile-view .mindfulness-rw{
-    margin-top: 5rem;
-}
-.mobile-view .mindfulness-section-content{
-    padding: 2rem 2rem 2rem 2rem !important;
-    justify-content: center;
-}
-.mobile-view .top-text{
-    padding: 0 0 15% 0;
-}
-.mobile-view .mindfulness-content-cards-container img{
-    width: 85vw;
-    height: auto;
-    object-fit: cover;
-}
-.mobile-view .text1 {
-    padding-Left:0.938rem;
-    opacity: 0;
-    transform: translateX(100px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-.mobile-view .text2 {
     text-align: left;
-    padding-Left:0.938rem;
-    opacity: 0;
-    transform: translateX(100px);
-    transition: opacity 1s ease, transform 1s ease;
 }
-.mobile-view .text3 {
-    padding-Left:0.938rem;
-    opacity: 0;
-    transform: translateX(100px);
-    transition: opacity 1s ease, transform 1s ease;
+.top-section{
+    justify-content: space-between; 
 }
-@media only screen and (max-width: 1225px) {
-    .text1{
-       padding-left: 30%;
-    }
-    .text3{
-        padding-left: 30%;
-     }
+.top-section a{
+    color: black;
+    text-decoration: none;
 }
-@media only screen and (max-width: 1045px) {
-
+.topic-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 80px;
+    border-radius: 10px;
+    background-color: #aeaeae;
 }
-.animate-text{
-    opacity: 1 !important;
-    transform: translateX(0) !important;
+.topic-item-text{
+    font-size: 20px;
 }
-
-
-
-.about-img{
-    height: 400px;
-    margin-bottom: 50px;
+.why-choose-item{
+    margin-top: 100px;
 }
-.about-p{
-    margin: 10px 0 50px 0;
+.txt-col{
+    text-align: justify;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
-.about-p2{
-    margin: 20px 0 0px 0;
+.stoty-img{
+    height: 700px;
+}
+.our-missionVision{
+    width: 100vw;
+    margin-left: -190px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #aeaeae;
+    padding: 10%;
+}
+.ceo-message{
+    margin-left: -190px;
+    padding: 10%;
+    width: 100vw;
+    color: white;
+    background-color: #aeaeae;
 }

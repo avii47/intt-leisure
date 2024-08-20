@@ -2,8 +2,8 @@ import React from 'react';
 import '../CSS/ServiceContentCard.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-const ServiceContentCard = ({content}) => (
-        <div className="service-content-card">
+const ServiceContentCard = ({content, onClick}) => (
+        <div className="service-content-card" onClick={onClick}>
             <div class="service-content-image-zoom-container">
             <div className="sc-overlayer"></div>
                 <img loading='lazy' className="service-content-card-img top" src={`${content.img}`} alt='service image'></img>

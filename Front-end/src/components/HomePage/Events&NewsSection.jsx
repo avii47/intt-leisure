@@ -3,6 +3,10 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import '../CSS/Home/Events&NewsSection.css';
 import left_arrow from '../../assets/icons/left-arrow.png';
 import right_arrow from '../../assets/icons/right-arrow.png';
+import img_01 from '../../assets/images/events-img1.png';
+import img_02 from '../../assets/images/events-img2.png';
+import img_03 from '../../assets/images/events-img3.png';
+import img_05 from '../../assets/images/img24.png';
 
 const ContentCard = lazy(() => import('./ContentCard'));
 
@@ -58,19 +62,19 @@ const EventsNewsSection = () => {
 
   const contentData = [
     {
-      'img': img4,
-      'sub': 'Embraced by verdant jungle with panoramic views of the Indian Ocean, ÀNI Sri Lanka'
+      'img': img_05,
+      'sub': 'Wisdom in the times of Crisis'
     },
     {
-      'img': img4,
-      'sub': 'Best places to have the environment to practice mindfulness with ease.'
+      'img': img_03,
+      'sub': 'Integrating Appreciative Inquiry into Mindfulness-based Leadership'
     },
     {
-      'img': img4,
-      'sub': 'Well trained experts to guide you through the journey.'
+      'img': img_01,
+      'sub': 'Exploring the Impact of Mindfulness on Leadership'
     },
     {
-      'img': img4,
+      'img': img_02,
       'sub': 'Well trained experts to guide you through the journey.'
     },
     {

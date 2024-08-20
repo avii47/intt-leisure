@@ -1,4 +1,5 @@
 import React, { useState, useEffect, lazy } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useMobileView } from '../../contexts/MobileViewContext';
 import '../CSS/Pages/ServicePage.css';
 
@@ -7,6 +8,7 @@ const ContentCard = lazy(() => import('./ServiceContentCard'));
 const ServiceContent = () => {
 
   const isMobileView = useMobileView();
+  const navigate = useNavigate(); 
   const img4 = 'https://img.freepik.com/free-photo/grunge-gray-concrete-textured-background_53876-145492.jpg?t=st=1722571110~exp=1722574710~hmac=dbe2ce48dbeca59499ad4867b3fd0ab0b1cdf15ea16e35d33162d12e12ef02e3&w=1380'
 
   const contentData = [
@@ -73,6 +75,10 @@ const ServiceContent = () => {
     };
   }, []);
 
+  const handleServiceCardClick = (id) => {
+    navigate(`/services/${id}`); // Navigate to the blog content route with the blog ID
+  };
+
   return (
     <section id="service-content-section"  className={`section justify-content-center service-content-section d-flex ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="service-section-content justify-content-center">
@@ -80,7 +86,7 @@ const ServiceContent = () => {
         <p className='font-secondary' style={{ marginTop:'10px' }}>Connect with the Ultimate Luxury of Mindfulness in Sri Lanka. A workshop was conducted at the university of Moratuwa on the 19th of June 2023.The workshop focused on enhancing the staff of the University of Moratuwa’s understanding and </p>
         <div id='service-content-cards-container' className="d-flex service-content-cards-container">
             {contentData.map((content, index) => (
-              <ContentCard key={index} content={content} />
+              <ContentCard key={index} content={content} onClick={() => handleServiceCardClick(content.id)} />
             ))}
         </div>
       </div>

@@ -1,54 +1,15 @@
 import React, { useState, useEffect, lazy } from 'react';
+import { useParams } from 'react-router-dom';
 import { useMobileView } from '../../contexts/MobileViewContext';
 import '../CSS/Pages/BlogsPage.css';
 
-const ReadMoreComponent = lazy(() => import('../BlogsPage/ReadMoreCom'));
-
 const BlogsContent = () => {
+
+  const { blogId } = useParams();
 
   const isMobileView = useMobileView();
   const img1 = 'https://img.freepik.com/free-photo/businessman-with-landscapes-background-double-exposure_155003-32409.jpg?t=st=1723790774~exp=1723794374~hmac=33df0c5585157587ed51972751ef6293aba75113fcb755b37ecd3e1cde928fab&w=1380';
   const img2 = 'https://img.freepik.com/free-photo/medium-shot-people-sitting_23-2148686537.jpg?t=st=1723802838~exp=1723806438~hmac=237f4639453991056783ce322f64e408e2b2b83405cf1d21e77224d1ce05ca77&w=1380'
-
-  useEffect(() => {
-    const section = document.getElementById('rw1');
-    const textSection = document.getElementById('text1');
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          textSection.classList.add('animate-text');
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (section) {
-      observer.observe(section);
-    }
-
-    return () => {
-      if (section) {
-        observer.unobserve(section);
-      }
-    };
-  }, []);
-
-  const read = (topic) => {
-    const text1 = document.getElementById('text1');
-    const text2 = document.getElementById('text2');
-    const text3 = document.getElementById('text3');
-    const text4 = document.getElementById('text4');
-    const text5 = document.getElementById('text5');
-    const text6 = document.getElementById('text6');
-
-    switch (topic) {
-        case 'topic1':
-            document.getElementById('text1').style.display = 'block'
-
-    }
-  }
-
 
   return (
     <section id="blogs-content-section" className={`section blogs-content-section d-flex ${isMobileView ? 'mobile-view' : ''}`}>
@@ -69,55 +30,14 @@ const BlogsContent = () => {
         <h3 className='font-primary' style={{fontSize:'28px'}}>A Practical Guide For Corporate Leaders</h3>
         <p className='font-secondary'>Incorporating mindful breathing into your daily routine is a great way to attain a state of calmness and clarity. Here is a process that you can use to pursue the practice of Ānāpānasati.</p>
 
-        {/*<ReadMoreComponent 
-            topic="Prepare The Mind And Body" 
-            shortText="First, find a comfortable place to begin your breathing exercise. Sit with your back straight, as posture can impact your mood and ability to relax. Next, begin to detach from the surrounding environment and external distractors. Then move away from internal distractions, like thoughts focused on memories or imagining the future." 
-            fullText={[
-                "Turn your attention to your subjective experience. Look at your body from the inside and really feel its presence. Notice sensations that may arise within you during this moment and attempt to name them.",
-                "These steps can help you disengage with external pressures and internal distractions, creating a foundation of calmness. This is useful in workplace scenarios like preparing for an important meeting because you'll be more focused on the present moment, ultimately enhancing your clarity and effectiveness."
-            ]}
-        /><br></br>
-
-        <ReadMoreComponent 
-            topic="Observe And Relax The Breath" 
-            shortText="Pay attention to the natural rhythm of your breathing, and notice the duration of your inhalation and exhalation. Notice the feelings throughout your entire body as you breathe in and breathe out. Feel the physical sensations of breathing throughout the body and observe any changes that come with it. Continue breathing in and out as you progressively relax your body." 
-            fullText={[
-                "By observing and relaxing your breath, you can reduce physical tension and promote a state of calmness. This is particularly useful in high-stress situations where maintaining your composure is crucial, such as delivering a presentation.",
-            ]}
-        /><br></br>
-
-        <ReadMoreComponent 
-            topic="Experience Mental And Physical Comfort" 
-            shortText="Now, begin to explore internal happiness. Notice any positive feelings that arise as you begin to feel relaxed, and feel the comfort that flows through your relaxed body. Then observe whether other mental activity comes up. Calm any agitating thoughts by returning to the rhythm of your breath." 
-            fullText={[
-                "This process can help you enhance your ability to think clearly and make balanced decisions. For instance, during a negotiation, mental and physical relaxation is beneficial before formulating and executing decisions. You're much more likely to be efficient and confident because you'll feel grounded.",
-            ]}
-        /><br></br>
-
-        <ReadMoreComponent 
-            topic="Enhance And Stabilize The Mood" 
-            shortText="Be aware of your mood/emotional state at this moment, and approach it without judgment. Give your attention to positive emotions, but allow every feeling to settle naturally. Then free yourself from emotional turbulence by letting go." 
-            fullText={[
-                "Stabilizing your mood is key to establishing emotional resilience, which enables you to handle challenges with greater equanimity. If you're facing a crisis, use these steps to remain calm and composed so it becomes easier to guide your team more profitably and effectively.",
-            ]}
-        /><br></br>
-
-        <ReadMoreComponent 
-            topic="Gain Insight And Freedom" 
-            shortText="Recognize the transient nature of experiences, and detach from fleeting emotions. Focus on calming mental agitation so you can finally experience the liberation that comes with a calm, clear mind." 
-            fullText={[
-                "These final stages of mindful breathing can provide you with the mental space for profound insights and a sense of freedom from habitual reactions. This enables the ability to approach problems with a fresh perspective and innovative solutions. For example, if you're working on a complex project, freeing your mind allows new insights to enter so you can foster creativity and strategic thinking.",
-            ]}
-        /><br></br> */}
-
         <div className="topics font-secondary">
             <ul>
                 <li><a href="#topic1">Prepare The Mind And Body</a><i class="topic-arrow-icon fa-solid fa-angle-down"></i></li>
                 <li><a href="#topic2">Observe And Relax The Breath</a><i class="topic-arrow-icon fa-solid fa-angle-down"></i></li>
                 <li><a href="#topic3">Experience Mental And Physical Comfort</a><i class="topic-arrow-icon fa-solid fa-angle-down"></i></li>
-                <li><a href="#topic1">Enhance And Stabilize The Mood</a><i class="topic-arrow-icon fa-solid fa-angle-down"></i></li>
-                <li><a href="#topic2">Gain Insight And Freedom</a><i class="topic-arrow-icon fa-solid fa-angle-down"></i></li>
-                <li><a href="#topic3">Conclusion</a><i class="topic-arrow-icon fa-solid fa-angle-down"></i></li>
+                <li><a href="#topic4">Enhance And Stabilize The Mood</a><i class="topic-arrow-icon fa-solid fa-angle-down"></i></li>
+                <li><a href="#topic5">Gain Insight And Freedom</a><i class="topic-arrow-icon fa-solid fa-angle-down"></i></li>
+                <li><a href="#topic6">Conclusion</a><i class="topic-arrow-icon fa-solid fa-angle-down"></i></li>
             </ul>
         </div>
 
