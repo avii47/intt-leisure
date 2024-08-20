@@ -56,7 +56,7 @@ const HeroSection = () => {
 
       inactivityTimeout = setTimeout(() => {
         setIsCursorMoving(false);
-      }, 2000); // 2 seconds of inactivity to hide the overlayer and heading
+      }, 5000); // 2 seconds of inactivity to hide the overlayer and heading
     };
 
     window.addEventListener('mousemove', handleMouseMove);

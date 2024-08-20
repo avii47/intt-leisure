@@ -120,3 +120,38 @@
 
 
 
+
+/* Hide the default dropdown arrow */
+.nav-item-title .dropdown-toggle::after {
+    display: none !important;
+  }
+  
+  /* Hide the default dropdown arrow in offcanvas mode */
+  .navbar-offcanvas .dropdown-toggle::after {
+    display: none !important;
+  }
+  
+  /* Custom arrow styling */
+  .nav-item-title {
+    color: #FFFFFF; /* Default text color */
+    position: relative;
+    padding-right: 1.5em; /* Ensure space for the custom arrow */
+  }
+  
+  .navbar-scrolled .nav-item-title {
+    color: #000000; /* Color when scrolled */
+  }
+  
+  /* Add a custom arrow using the ::after pseudo-element */
+  .nav-item-title::after {
+    content: "";
+    position: absolute;
+    right: 0; /* Position it at the right end of the title */
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0.4em solid transparent;
+    border-top-color: inherit; /* Arrow color matches text */
+    display: inline-block;
+    vertical-align: middle;
+  }
+  

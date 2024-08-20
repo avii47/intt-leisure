@@ -2,7 +2,7 @@ import React from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const EventCard = ({content}) => (
-    <div className="col-12 event-card d-flex">
+    <div className="col-12 event-card d-flex" >
         <div className="col-md-4 font-secondary">
             <img className='eventsNews-img' src={content.img} alt="news image" loading='lazy' />
             <h5>{content.imgTitle}</h5>

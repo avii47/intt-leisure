@@ -3,6 +3,7 @@
     justify-content: center;
 }
 .eventsNews-section-content {
+    padding-bottom: 10%;
     width: 80vw;
     flex-wrap: wrap; 
     text-align: left;

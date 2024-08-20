@@ -2,6 +2,7 @@
     margin-top: 20px;
     width: 300px;
     font-size: smaller;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
 }
 .mobile-view .content-card{
     width: 300px;
@@ -24,7 +25,6 @@
 }
 .content-card:hover{
     transition: 0.2s ease-in-out; 
-    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
     top: -4px;
     border: 1px solid #cccccc;
 }

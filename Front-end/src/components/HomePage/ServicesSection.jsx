@@ -4,6 +4,11 @@ import left_arrow from '../../assets/icons/left-arrow.png';
 import right_arrow from '../../assets/icons/right-arrow.png';
 import ServiceCard from './ServiceCard';
 
+import img1 from '../../assets/images/Student_ Educator.jpeg';
+import img2 from '../../assets/images/Corporate.jpeg';
+import img3 from '../../assets/images/Leader.jpeg';
+import img4 from '../../assets/images/Seeker.jpeg';
+
 const ServicesSection = () => {
 
         const [isMobileView, setIsMobileView] = useState(false);
@@ -12,7 +17,7 @@ const ServicesSection = () => {
         const [showRightButton2, setShowRightButton] = useState(true);
         const containerRef2 = useRef(null);
 
-        const img4 = 'https://img.freepik.com/premium-photo/woman-sits-rock-front-lake-with-reflection-tree-water_955289-41220.jpg?w=826'
+        const img5 = 'https://img.freepik.com/premium-photo/woman-sits-rock-front-lake-with-reflection-tree-water_955289-41220.jpg?w=826'
 
         useEffect(() => {
           const handleResize = () => {
@@ -57,17 +62,17 @@ const ServicesSection = () => {
 
         const contentData = [
           {
-            img: img4,
+            img: img1,
             title: 'What is the original concept of Mindfulness?',
             sub: 'The research backed technique that elevate a leader into the next level',
           },
           {
-            img: img4,
+            img: img2,
             title: 'How can you practice it in Sri Lanka?',
             sub: 'Sri Lanka, the place where authentic mindfulness practice is preserve over 2500 year',
           },
           {
-            img: img4,
+            img: img3,
             title: 'What benefits you will have with mindfulness practice?',
             sub: 'Get a truly rejuvenating and life-changing experience through practice',
           },
@@ -77,27 +82,27 @@ const ServicesSection = () => {
             sub: 'Get a truly rejuvenating and life-changing experience through practice',
           },
           {
-            img: img4,
+            img: img5,
             title: 'What benefits you will have with mindfulness practice?',
             sub: 'Get a truly rejuvenating and life-changing experience through practice',
           },
           {
-            img: img4,
+            img: img5,
             title: 'What benefits you will have with mindfulness practice?',
             sub: 'Get a truly rejuvenating and life-changing experience through practice',
           },
           {
-            img: img4,
+            img: img5,
             title: 'What benefits you will have with mindfulness practice?',
             sub: 'Get a truly rejuvenating and life-changing experience through practice',
           },
           {
-            img: img4,
+            img: img5,
             title: 'What benefits you will have with mindfulness practice?',
             sub: 'Get a truly rejuvenating and life-changing experience through practice',
           },
           {
-            img: img4,
+            img: img5,
             title: 'What benefits you will have with mindfulness practice?',
             sub: 'Get a truly rejuvenating and life-changing experience through practice',
           },

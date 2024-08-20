@@ -1,9 +1,10 @@
 import HeroSection from '../components/HeroSection'
 import ServiceContent from '../components/ServicePage/ServiceContent'
 import FooterSection from '../components/FooterSection'
+import img2 from '../assets/images/Experiences - Header.png';
 
 const ServicePage = () => {
-    const img = 'https://img.freepik.com/free-photo/full-shot-woman-meditating-mat_23-2149996120.jpg?t=st=1721206452~exp=1721210052~hmac=d1de86b8c04f88f43b72eb72a05dbb3f72a530c4947c6cee21f04e0377e6239d&w=1380'
+    const img = img2
     const title = 'Choose Your Journey';
     const sub = 'Explore Our Services';
     
