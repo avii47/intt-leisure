@@ -63,23 +63,23 @@ const ServicesSection = () => {
         const contentData = [
           {
             img: img1,
-            title: 'What is the original concept of Mindfulness?',
-            sub: 'The research backed technique that elevate a leader into the next level',
+            title: 'Mindfulness for Leaders',
+            sub: 'Unlock Your Leadership Potential with Mindfulness in Sri Lanka',
           },
           {
             img: img2,
-            title: 'How can you practice it in Sri Lanka?',
-            sub: 'Sri Lanka, the place where authentic mindfulness practice is preserve over 2500 year',
+            title: 'Mindfulness for Students and Educators',
+            sub: 'Uncover the Luxury of Mindfulness in Sri Lanka for Students and Educators',
           },
           {
             img: img3,
-            title: 'What benefits you will have with mindfulness practice?',
-            sub: 'Get a truly rejuvenating and life-changing experience through practice',
+            title: 'Mindfulness for Corporates',
+            sub: 'Is your corporate team ready to embark on a transformative journey that combines productivity enhancement with holistic well-being?',
           },
           {
             img: img4,
-            title: 'What benefits you will have with mindfulness practice?',
-            sub: 'Get a truly rejuvenating and life-changing experience through practice',
+            title: 'Mindfulness for Seekers',
+            sub: 'Are you seeking inner peace, balance, and personal growth?',
           },
           {
             img: img5,
