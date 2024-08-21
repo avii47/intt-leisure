@@ -12,6 +12,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { useMobileView } from '../contexts/MobileViewContext';
 import './CSS/Navbar.css';
+import CustomDropdown from './CustomDropdown';
 
 function MyNavbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -35,6 +36,48 @@ function MyNavbar() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const exploreDropdownItems = [
+    {
+      path: "/blogs",
+      imageSrc: "https://img.freepik.com/free-photo/notepad-laptop-concept_23-2147982614.jpg",
+      altText: "Blogs",
+      label: "Blogs"
+    },
+    {
+      path: "/destinations",
+      imageSrc: "https://img.freepik.com/free-photo/woman-stretching-relaxing-nature_23-2147658214.jpg",
+      altText: "Destinations",
+      label: "Destinations"
+    },
+    {
+      path: "/events&news",
+      imageSrc: "https://img.freepik.com/free-photo/group-people-taking-interview-outdoors_23-2149032383.jpg",
+      altText: "Events & News",
+      label: "Events & News"
+    },
+  ];
+
+  const ExperienceDropdownItems = [
+    {
+      path: "/blogs",
+      imageSrc: "https://img.freepik.com/free-photo/notepad-laptop-concept_23-2147982614.jpg",
+      altText: "Blogs",
+      label: "Blogs"
+    },
+    {
+      path: "/destinations",
+      imageSrc: "https://img.freepik.com/free-photo/woman-stretching-relaxing-nature_23-2147658214.jpg",
+      altText: "Destinations",
+      label: "Destinations"
+    },
+    {
+      path: "/events&news",
+      imageSrc: "https://img.freepik.com/free-photo/group-people-taking-interview-outdoors_23-2149032383.jpg",
+      altText: "Events & News",
+      label: "Events & News"
+    },
+  ];
   
 
   return (
@@ -65,18 +108,13 @@ function MyNavbar() {
               <Offcanvas.Body>
                 <Nav className={`flex-grow-1 pe-3 nav-item-container font-secondary ${isMobileView ? 'mobile-view' : ''}`}>
                   <Nav.Link className={`nav-item ${location.pathname === '/mindfulness' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/mindfulness" style={{  }}>MINDFULNESS</Nav.Link>
+
+                  
                   <Nav.Link className={`nav-item ${location.pathname === '/services' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/services">EXPERIENCE</Nav.Link>
                   <Nav.Link className={`nav-item ${location.pathname === '/why-choose-us' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/why-choose-us">WHY CHOOSE US</Nav.Link>
-                  
-                  <NavDropdown
-                    title={<span className="nav-item-title">EXPLORE</span>}
-                    id="explore-dropdown"
-                    className={`nav-item ${location.pathname.startsWith('/blogs') || location.pathname.startsWith('/destinations') || location.pathname.startsWith('/events') || location.pathname.startsWith('/news') ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`}
-                  >
-                      <NavDropdown.Item as={Link} to="/blogs">Blogs</NavDropdown.Item>
-                      <NavDropdown.Item as={Link} to="/destinations">Destinations</NavDropdown.Item>
-                      <NavDropdown.Item as={Link} to="/events&news">Events & News</NavDropdown.Item>
-                  </NavDropdown>
+
+                  {/* Custom Dropdown */}
+                  <CustomDropdown scrolled={scrolled} items={exploreDropdownItems} className={`nav-item ${location.pathname === '/services' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/services"/>
 
                   <Nav.Link className={`nav-item ${location.pathname === '/contact-us' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/contact-us">CONTACT US</Nav.Link>
                 </Nav>

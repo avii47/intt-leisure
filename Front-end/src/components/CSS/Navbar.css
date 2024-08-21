@@ -5,6 +5,9 @@
     background-color: transparent !important;
     transition: background-color 0.2s ease-in-out;
 }
+/* .navbar-container:hover{
+    background: linear-gradient(to bottom, #000000, transparent);
+} */
 .navbar-scrolled {
     background-color: white !important;
     color: rgb(0, 0, 0);
@@ -21,6 +24,7 @@
     width: 80vw;
 }
 .nav-item-container{
+    margin-top: 5px;
     column-gap: 0px;
     justify-content: center;
 }

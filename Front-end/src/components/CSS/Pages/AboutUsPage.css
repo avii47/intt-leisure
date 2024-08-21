@@ -9,7 +9,7 @@
     text-align: left;
 }
 .top-section{
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 .top-section a{
     color: black;
@@ -20,16 +20,22 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 350px;
+    min-width: 280px;
     height: 80px;
     border-radius: 10px;
     background-color: #aeaeae;
+    transition: all 0.2s ease-in-out;
+}
+.topic-item:hover{
+    background-color: #666666;
+    color: white;
+    transition: all 0.2s ease-in-out;
 }
 .topic-item-text{
     font-size: 20px;
 }
 .why-choose-item{
-    margin-top: 100px;
+    margin-top: 150px;
 }
 .txt-col{
     text-align: justify;
