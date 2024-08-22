@@ -9,42 +9,42 @@ const ServiceContent = () => {
 
   const isMobileView = useMobileView();
   const navigate = useNavigate(); 
-  const img4 = 'https://img.freepik.com/free-photo/grunge-gray-concrete-textured-background_53876-145492.jpg?t=st=1722571110~exp=1722574710~hmac=dbe2ce48dbeca59499ad4867b3fd0ab0b1cdf15ea16e35d33162d12e12ef02e3&w=1380'
+  const img4 = 'https://img.freepik.com/free-photo/wellness-practices-self-care-world-health-day_23-2151256761.jpg?t=st=1724326284~exp=1724329884~hmac=6c1e292a149e8a284e9e3d3130ae309c20211b5722d9c19d98d29ead02c1835b&w=1380'
 
   const contentData = [
     {
       'img': img4,
-      'title': 'Corporate',
+      'title': 'Corporates',
       'sub': 'Mindfulness at Ritigala',
-      'text': 'Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.'
+      'text': 'Is your corporate team ready to embark on a transformative journey?'
     },
     {
       'img': img4,
-      'title': 'Corporate',
+      'title': 'Leaders',
       'sub': 'Mindfulness at Ritigala',
-      'text': 'Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.'
+      'text': 'Unlock Your Leadership Potential with Mindfulness in Sri Lanka'
     },
     {
       'img': img4,
-      'title': 'Corporate',
+      'title': 'Educators',
       'sub': 'Mindfulness at Ritigala',
-      'text': 'Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.'
+      'text': 'Uncover the Luxury of Mindfulness in Sri Lanka for Educators'
     },
     {
       'img': img4,
-      'title': 'Corporate',
+      'title': 'Students',
       'sub': 'Mindfulness at Ritigala',
-      'text': 'Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.'
+      'text': 'Uncover the Luxury of Mindfulness in Sri Lanka for Students'
     },
     {
       'img': img4,
-      'title': 'Corporate',
+      'title': 'Seekers',
       'sub': 'Mindfulness at Ritigala',
-      'text': 'Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.'
+      'text': 'Are you seeking inner peace, balance, and personal growth?'
     },
     {
       'img': img4,
-      'title': 'Corporate',
+      'title': 'Other',
       'sub': 'Mindfulness at Ritigala',
       'text': 'Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.'
     },
@@ -76,14 +76,14 @@ const ServiceContent = () => {
   }, []);
 
   const handleServiceCardClick = (id) => {
-    navigate(`/services/${id}`); // Navigate to the blog content route with the blog ID
+    navigate(`/services/${id}`); 
   };
 
   return (
     <section id="service-content-section"  className={`section justify-content-center service-content-section d-flex ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="service-section-content justify-content-center">
         <h3 className='font-primary'>Choose your Journey</h3>
-        <p className='font-secondary' style={{ marginTop:'10px' }}>Connect with the Ultimate Luxury of Mindfulness in Sri Lanka. A workshop was conducted at the university of Moratuwa on the 19th of June 2023.The workshop focused on enhancing the staff of the University of Moratuwa’s understanding and </p>
+        <p className='font-secondary' style={{ marginTop:'10px' }}>As you immerse yourself in this enchanting destination, we invite you to participate in profound self-reflection and practice alongside us. </p>
         <div id='service-content-cards-container' className="d-flex service-content-cards-container">
             {contentData.map((content, index) => (
               <ContentCard key={index} content={content} onClick={() => handleServiceCardClick(content.id)} />

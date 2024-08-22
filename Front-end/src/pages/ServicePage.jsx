@@ -6,7 +6,7 @@ import img2 from '../assets/images/Experiences - Header.png';
 const ServicePage = () => {
     const img = img2
     const title = 'Choose Your Journey';
-    const sub = 'Explore Our Services';
+    const sub = 'Experience the Experience';
     
     return (
         <>

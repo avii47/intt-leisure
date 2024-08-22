@@ -1,67 +1,68 @@
-/* src/components/CSS/CustomDropdown.css */
-.custom-dropdown {
-    position: relative;
-    margin-top: 5px;
-  }
-  
-  .dropdown-trigger {
-    cursor: pointer;
-    position: relative;
-  }
 
-  .dropdown-col{
-    width: 200px;
-    text-align: center;
-   }
+  .custom-dropdown {
+    position: absolute;
+    top: 65%;
+    left: 0;
+    width: 100vw;
+    background-color: #ffffff00;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+  }
   
   .dropdown-content {
-    display: none;
     justify-content: center;
-    position: absolute;
-    top: 100%;
-    left: -1000px;
-    padding: 20%;
-    background-color: rgba(255, 255, 255, 0.171);
-    box-shadow: 0px 8px 16px -8px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    min-width: 100vw; 
-    width: 100%;  
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    padding: 2rem 0 1rem 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
     background: linear-gradient(to bottom, 
-        transparent 0%,   
-        rgba(255, 255, 255, 0.082) 50%,  
-        rgba(255, 255, 255, 0.171) 100%  
+      transparent 0%,   
+      rgba(255, 255, 255, 0.096) 50%,  
+      rgba(255, 255, 255, 0.24) 100%  
     );
   }
   
-  .dropdown-trigger:hover .dropdown-content {
-    display: flex; 
-  }
-
-
-  .dropdown-item {
-    align-items: center;
+  .dropdown-col {
+    flex: 1;
+    margin: 0.5rem;
     padding: 10px;
+    max-width: 200px;
+    text-align: center;
+  }
+  
+  .dropdown-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 12px;
+    border-radius: 6px;
     text-decoration: none;
     color: white;
-    width: 100%;  
-    font-weight: 250;
+    height: 160px;
+    transition: transform 0.2s;
   }
   
-  .dropdown-item img {
+  .dropdown-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .dropdown-image {
     width: 160px;
-    margin-right: 10px;
-    object-fit: cover;
-  }
-  
-  .dropdown-item p {
-    margin-top: 5px;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
   }
   
   .dropdown-item:hover {
     background-color: #b3b3b33d;
   }
   
-  .custom-dropdown.scrolled .dropdown-content {
+  .custom-dropdown.scrolled .dropdown-content.scrolled {
     background-color: white;
   }
   
