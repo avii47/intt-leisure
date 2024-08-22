@@ -8,6 +8,7 @@ import img1 from '../../assets/images/Student_ Educator.jpeg';
 import img2 from '../../assets/images/Corporate.jpeg';
 import img3 from '../../assets/images/Leader.jpeg';
 import img4 from '../../assets/images/Seeker.jpeg';
+import img6 from '../../assets/images/services-img3.jpg';
 
 const ServicesSection = () => {
 
@@ -68,7 +69,7 @@ const ServicesSection = () => {
           },
           {
             img: img2,
-            title: 'Mindfulness for Students and Educators',
+            title: 'Mindfulness for Educators',
             sub: 'Uncover the Luxury of Mindfulness in Sri Lanka for Students and Educators',
           },
           {
@@ -82,8 +83,8 @@ const ServicesSection = () => {
             sub: 'Are you seeking inner peace, balance, and personal growth?',
           },
           {
-            img: img5,
-            title: 'What benefits you will have with mindfulness practice?',
+            img: img6,
+            title: 'Mindfulness for Students',
             sub: 'Get a truly rejuvenating and life-changing experience through practice',
           },
           {
