@@ -7,14 +7,14 @@ const AboutUsContent = lazy(() => import('../components/AboutusPage/AboutUsConte
 const FooterSection = lazy(() => import('../components/FooterSection'));
 
 const AboutUsPage = () => {
-    const img = 'https://img.freepik.com/free-photo/group-people-taking-interview-outdoors_23-2149032381.jpg?t=st=1722240323~exp=1722243923~hmac=f8549aaa2337e0db5ef2134a7d64d62945b7ed782bb56176c1f3910c557287c0&w=1380'
+    const img = 'https://www.shutterstock.com/shutterstock/photos/2427351787/display_1500/stock-photo-knuckles-mountain-range-sri-lanka-a-captivating-landscape-of-lush-valleys-and-rugged-peaks-an-2427351787.jpg'
     const title = 'Who We Are';
     const sub = 'Connect with the Ultimate Luxury of Mindfulness in Sri Lanka';
 
     return (
         <>
             <Suspense fallback={<div>Loading...</div>}>
-                <HeroSection img={AboutUsImg} title={title} sub={sub} />
+                <HeroSection img={img} title={title} sub={sub} />
             </Suspense>
             <Suspense fallback={<div>Loading...</div>}>
                 <AboutUsContent />

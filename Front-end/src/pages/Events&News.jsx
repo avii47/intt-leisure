@@ -8,7 +8,7 @@ const EventsNewsContent = lazy(() => import('../components/Events&NewsPage/Event
 const FooterSection = lazy(() => import('../components/FooterSection'));
 
 const ContactUsPage = () => {
-    const img = 'https://img.freepik.com/free-photo/man-practicing-yoga-mindfulness_23-2151745660.jpg?t=st=1723722070~exp=1723725670~hmac=27995bf5933ef729a74c2c28ab87b740f6feae24a6810e2c5cf31dc703b3c270&w=1480'
+    const img = 'https://www.shutterstock.com/shutterstock/photos/451370875/display_1500/stock-photo-kandy-sri-lanka-july-kohomba-kankariya-dancing-festival-on-july-in-kandy-sri-lanka-451370875.jpg'
     const title = 'Events & News';
     const sub = 'Connect with the Ultimate Luxury of Mindfulness in Sri Lanka';
     
