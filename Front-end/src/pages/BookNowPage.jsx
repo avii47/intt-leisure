@@ -6,7 +6,7 @@ const BookNowContent = lazy(() => import('../components/BookNowPage/BookNowConte
 const FooterSection = lazy(() => import('../components/FooterSection'));
 
 const BookNowPage = () => {
-    const img = bg;
+    const img = 'https://www.shutterstock.com/shutterstock/photos/2321124123/display_1500/stock-photo-tropical-giant-tree-fern-leave-under-partial-sunlight-in-sinharaja-rain-forest-in-sri-lanka-2321124123.jpg';
     const title = 'Book Now';
     const sub = 'Connect with the Ultimate Luxury of Mindfulness in Sri Lanka';
 

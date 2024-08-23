@@ -2,9 +2,10 @@ import HeroSection from '../components/HeroSection'
 import ServiceContent from '../components/ServicePage/ServiceContent'
 import FooterSection from '../components/FooterSection'
 import img2 from '../assets/images/Experiences - Header.png';
+import img3 from '../assets/images/aerial-shot-long-road-surrounded-by-trees-fields2.jpg'
 
 const ServicePage = () => {
-    const img = img2
+    const img = img3
     const title = 'Choose Your Journey';
     const sub = 'Experience the Experience';
     

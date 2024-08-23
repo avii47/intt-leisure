@@ -36,7 +36,7 @@ const WhyChooseUsSection = () => {
   const contentData = [
     {
       img: authentic_practice_icon,
-      title: 'Authentic practice (Results)',
+      title: 'Authentic Practice (Results)',
       sub: 'Our mindfulness techniques follow Buddha’s original teachings, offering a distinct approach from Western ideologies.',
     },
     {
@@ -46,7 +46,7 @@ const WhyChooseUsSection = () => {
     },
     {
       img: eyes_of_locals_icon,
-      title: 'Eyes of locals',
+      title: 'Eyes of Locals',
       sub: 'Discover Sri Lanka through the eyes of locals. As natives, we offer an authentic journey deeply rooted in our heritage and heartfelt connection to the land.',
     },
     {

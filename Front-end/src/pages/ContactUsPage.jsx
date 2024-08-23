@@ -11,14 +11,14 @@ const FeedbackSection = lazy(() => import('../components/ContactUsPage/FeedbackS
 const FooterSection = lazy(() => import('../components/FooterSection'));
 
 const ContactUsPage = () => {
-    const img = 'https://img.freepik.com/free-photo/group-people-taking-interview-outdoors_23-2149032381.jpg?t=st=1722240323~exp=1722243923~hmac=f8549aaa2337e0db5ef2134a7d64d62945b7ed782bb56176c1f3910c557287c0&w=1380'
+    const img = 'https://www.shutterstock.com/shutterstock/photos/470419964/display_1500/stock-photo-hawks-bill-sea-turtle-release-to-the-freedom-470419964.jpg'
     const title = 'Who We Are';
     const sub = 'Connect with the Ultimate Luxury of Mindfulness in Sri Lanka';
     
     return (
         <>
             <Suspense fallback={<div>Loading...</div>}>
-                <HeroSection img={ContactUsImg} title={"Contact Us"} sub={"Connect with the Ultimate Luxury of Mindfulness in Sri Lanka"} />
+                <HeroSection img={img} title={"Contact Us"} sub={"Connect with the Ultimate Luxury of Mindfulness in Sri Lanka"} />
             </Suspense>
             <Suspense fallback={<div>Loading...</div>}>
                 <ContactUsContent />

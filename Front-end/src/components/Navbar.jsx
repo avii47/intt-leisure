@@ -14,6 +14,12 @@ import { useMobileView } from '../contexts/MobileViewContext';
 import './CSS/Navbar.css';
 import CustomDropdown from './CustomDropdown';
 
+import img1 from '../assets/images/stock-photo-old-man-with-gray-hair-reading-a-book-sited-on-an-bench-2292379427 (1).jpg'
+import img2 from '../assets/images/stock-photo-group-of-diverse-young-people-practicing-yoga-doing-easy-seat-exercise-sukhasana-pose-working-1227103207.jpg'
+import img3 from '../assets/images/full-shot-man-working-outdoors.jpg'
+import img4 from '../assets/images/WhatsApp Image 2024-08-23 at 3.43.43 PM.jpeg'
+import img5 from '../assets/images/beautiful-woman-meditating-nature.jpg'
+
 function MyNavbar() {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation(); 
@@ -70,7 +76,7 @@ function MyNavbar() {
     },
     {
       path: "/events&news",
-      imageSrc: "https://img.freepik.com/free-photo/group-people-taking-interview-outdoors_23-2149032383.jpg",
+      imageSrc: "https://img.freepik.com/free-photo/stacked-zen-stones-sand-background-art-balance-concept_53876-110628.jpg?t=st=1724409939~exp=1724413539~hmac=d7e1b03fd96d2b66fac682d1dd5bb0b68e2cc9edd8375ee21304efce640df291&w=1380",
       altText: "Events & News",
       label: "Events & News"
     },
@@ -79,19 +85,31 @@ function MyNavbar() {
   const ExperienceDropdownItems = [
     {
       path: "/services/*",
-      imageSrc: "https://img.freepik.com/free-photo/wellness-practices-self-care-world-health-day_23-2151256690.jpg?t=st=1724313737~exp=1724317337~hmac=08125359353f67e1db79cb7de66cfd3fa746654ed347edb9738e13fdf7eb352d&w=1380",
-      altText: "Coparates",
-      label: "Coparates"
-    },
-    {
-      path: "/services/*",
-      imageSrc: "https://img.freepik.com/free-photo/portrait-person-practicing-yoga-outdoors-nature_23-2151046773.jpg?t=st=1724313825~exp=1724317425~hmac=19a006be2c4244462f988998d7b581d7802158deca5817f95ed844738d38523f&w=1380",
+      imageSrc: img1,
       altText: "Leaders",
       label: "Leaders"
     },
     {
       path: "/services/*",
-      imageSrc: "https://img.freepik.com/free-photo/full-shot-woman-doing-yoga_23-2151084040.jpg?t=st=1724313901~exp=1724317501~hmac=bb4e320bb3ea06c2a4f76b9ff321011d18035572e1e398a8394ef5e0d138053e&w=1380",
+      imageSrc: img2,
+      altText: "Educators",
+      label: "Educators"
+    },
+    {
+      path: "/services/*",
+      imageSrc: img3,
+      altText: "Coparates",
+      label: "Coparates"
+    },
+    {
+      path: "/services/*",
+      imageSrc: img4,
+      altText: "Students",
+      label: "Students"
+    },
+    {
+      path: "/services/*",
+      imageSrc: img5,
       altText: "Seekers",
       label: "Seekers"
     },

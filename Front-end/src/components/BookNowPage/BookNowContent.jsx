@@ -8,9 +8,15 @@ import "react-datepicker/dist/react-datepicker.css";
 import emailjs from 'emailjs-com';
 import Modal from './Modal'; 
 
+import img1 from '../../assets/images/stock-photo-old-man-with-gray-hair-reading-a-book-sited-on-an-bench-2292379427 (1).jpg'
+import img2 from '../../assets/images/stock-photo-group-of-diverse-young-people-practicing-yoga-doing-easy-seat-exercise-sukhasana-pose-working-1227103207.jpg'
+import img3 from '../../assets/images/full-shot-man-working-outdoors.jpg'
+import img4 from '../../assets/images/WhatsApp Image 2024-08-23 at 3.43.43 PM.jpeg'
+import img5 from '../../assets/images/beautiful-woman-meditating-nature.jpg'
+
 const BookNowContent = () => {
 
-  const img4 = 'https://img.freepik.com/free-photo/grunge-gray-concrete-textured-background_53876-145492.jpg?t=st=1722571110~exp=1722574710~hmac=dbe2ce48dbeca59499ad4867b3fd0ab0b1cdf15ea16e35d33162d12e12ef02e3&w=1380';
+  const img6 = 'https://img.freepik.com/free-photo/fit-man-practicing-yoga_23-2151745576.jpg?t=st=1724408447~exp=1724412047~hmac=920d3b90806acfb59af294d14b6ea635a051638d00ac6f663da71fd1014b9947&w=1380'
   const [checkinDate, setCheckinDate] = useState(new Date());
   const [checkoutDate, setCheckoutDate] = useState(new Date());
   const [selectedCard, setSelectedCard] = useState(null);
@@ -88,38 +94,38 @@ const BookNowContent = () => {
 
   const contentData = [
     {
-      'img': img4,
-      'title': 'Corporate',
+      'img': img1,
+      'title': 'Leaders',
       'sub': 'MINDFULNESS AT RITIGALA',
       'text': 'Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.'
     },
         {
-      'img': img4,
-      'title': 'Corporate',
+      'img': img2,
+      'title': 'Educators',
+      'sub': 'MINDFULNESS AT RITIGALA',
+      'text': 'Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.'
+    },
+    {
+      'img': img3,
+      'title': 'Corporates',
       'sub': 'MINDFULNESS AT RITIGALA',
       'text': 'Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.'
     },
     {
       'img': img4,
-      'title': 'Corporate',
+      'title': 'Seekers',
       'sub': 'MINDFULNESS AT RITIGALA',
       'text': 'Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.'
     },
     {
-      'img': img4,
-      'title': 'Corporate',
+      'img': img5,
+      'title': 'Studets',
       'sub': 'MINDFULNESS AT RITIGALA',
       'text': 'Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.'
     },
     {
-      'img': img4,
-      'title': 'Corporate',
-      'sub': 'MINDFULNESS AT RITIGALA',
-      'text': 'Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.'
-    },
-    {
-      'img': img4,
-      'title': 'Corporate',
+      'img': img6,
+      'title': 'Others',
       'sub': 'MINDFULNESS AT RITIGALA',
       'text': 'Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.'
     },

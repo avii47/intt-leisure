@@ -4,11 +4,12 @@ import left_arrow from '../../assets/icons/left-arrow.png';
 import right_arrow from '../../assets/icons/right-arrow.png';
 import ServiceCard from './ServiceCard';
 
-import img1 from '../../assets/images/Student_ Educator.jpeg';
-import img2 from '../../assets/images/Corporate.jpeg';
-import img3 from '../../assets/images/Leader.jpeg';
+import img1 from '../../assets/images/Experiences 1.png'
+import img2 from '../../assets/images/Student_ Educator.jpeg';
+import img3 from '../../assets/images/full-shot-man-working-outdoors.jpg'
 import img4 from '../../assets/images/Seeker.jpeg';
-import img6 from '../../assets/images/services-img3.jpg';
+import img5 from '../../assets/images/services-img3.jpg';
+
 
 const ServicesSection = () => {
 
@@ -18,7 +19,7 @@ const ServicesSection = () => {
         const [showRightButton2, setShowRightButton] = useState(true);
         const containerRef2 = useRef(null);
 
-        const img5 = 'https://img.freepik.com/premium-photo/woman-sits-rock-front-lake-with-reflection-tree-water_955289-41220.jpg?w=826'
+        const img6 = 'https://img.freepik.com/free-photo/beautiful-woman-meditating-nature_23-2148940321.jpg?w=2000&t=st=1724407077~exp=1724407677~hmac=c3719b8470350208385b0db346d0c2b59dfe7a381d6e43407230603a79962902';
 
         useEffect(() => {
           const handleResize = () => {
@@ -85,21 +86,6 @@ const ServicesSection = () => {
           {
             img: img6,
             title: 'Mindfulness for Students',
-            sub: 'Get a truly rejuvenating and life-changing experience through practice',
-          },
-          {
-            img: img5,
-            title: 'What benefits you will have with mindfulness practice?',
-            sub: 'Get a truly rejuvenating and life-changing experience through practice',
-          },
-          {
-            img: img5,
-            title: 'What benefits you will have with mindfulness practice?',
-            sub: 'Get a truly rejuvenating and life-changing experience through practice',
-          },
-          {
-            img: img5,
-            title: 'What benefits you will have with mindfulness practice?',
             sub: 'Get a truly rejuvenating and life-changing experience through practice',
           },
           {
