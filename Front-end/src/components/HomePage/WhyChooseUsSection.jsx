@@ -3,6 +3,7 @@ import '../CSS/Home/WhyChooseUsSection.css';
 import left_arrow from '../../assets/icons/left-arrow.png';
 import right_arrow from '../../assets/icons/right-arrow.png';
 import IconCard from '../HomePage/IconCard';
+import { useMobileView } from '../../contexts/MobileViewContext';
 
 import authentic_practice_icon from '../../assets/icons/Icons_WCU_Authentic Practice.png';
 import forbes_certified_coach_icon from '../../assets/icons/Icons_WCU_Forbes Cerified Coach.png'
@@ -13,25 +14,12 @@ import travel_wisdom_icon from '../../assets/icons/Icons_WCU_Travel Wisdom.png';
 
 const WhyChooseUsSection = () => {
 
-  const [isMobileView, setIsMobileView] = useState(false);
   const [showLeftButton, setShowLeftButton] = useState(false);
   const [showRightButton, setShowRightButton] = useState(true);
   const containerRef = useRef(null);
   const iconCardsRef = useRef([]);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobileView(window.innerWidth <= 1200);
-    };
-
-    handleResize();
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  const isMobileView = useMobileView();
 
   const contentData = [
     {
@@ -68,7 +56,13 @@ const WhyChooseUsSection = () => {
 
   const scrollContainer = (direction) => {
     if (containerRef.current) {
-      const scrollAmount = containerRef.current.offsetWidth * 0.75;
+      let scrollAmount = 0
+      if(isMobileView){
+        scrollAmount = containerRef.current.offsetWidth * 0.94;
+      }
+      else{
+        scrollAmount = containerRef.current.offsetWidth * 0.6;
+      }
       containerRef.current.scrollBy({
         left: direction === 'left' ? -scrollAmount : scrollAmount,
         behavior: 'smooth',
@@ -133,10 +127,12 @@ const WhyChooseUsSection = () => {
         <br></br>
         <p className='font-secondary'>Experience authentic mindfulness according to Buddha’s teachings, designed by Forbes-certified coach Dr. Gamini Hewawasam. Rooted in Sri Lankan heritage and backed by research, our programs guide you through ancient practices in carefully chosen locations, ensuring a seamless, expert-managed journey.</p>
         <div className="icon-container-wrapper">
-          <div className='nav-icons'>
-            {showLeftButton && <button className="scroll-button left" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}
-            {showRightButton && <button className="scroll-button right" onClick={() => scrollContainer('right')}><img className='nav-icon' src={right_arrow}></img></button>}
-          </div>
+          {!isMobileView && (
+            <div className='nav-icons'>
+              {showLeftButton && <button className="scroll-button left" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}
+              {showRightButton && <button className="scroll-button right" onClick={() => scrollContainer('right')}><img className='nav-icon' src={right_arrow}></img></button>}
+            </div>
+          )}
           <div className='icon-container d-flex ' ref={containerRef}>
             {contentData.map((content, index) => (
               <IconCard
@@ -148,8 +144,13 @@ const WhyChooseUsSection = () => {
               />
             ))}
           </div>
-          
         </div>
+        {isMobileView && (
+            <div className='nav-icons-mb'>
+              {showLeftButton && <button className="scroll-button left" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}
+              {showRightButton && <button className="scroll-button right" onClick={() => scrollContainer('right')}><img className='nav-icon' src={right_arrow}></img></button>}
+            </div>
+        )}
       </div>
     </section>
   )

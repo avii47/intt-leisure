@@ -5,7 +5,23 @@
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    opacity: 0;
+    transform: translateX(50%);
+    transition: opacity 1s, transform 1s;
 }
+
+.mobile-view .service-card {
+    min-width: 328px !important;
+    max-height: 460px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 1;
+    transform: translateX(0%);
+    transition: opacity 1s, transform 1s;
+}
+
 .service-card .overlayer {
     position: absolute !important;
     top: 0;
@@ -47,11 +63,6 @@
     opacity: 1;
     transform: translateY(0);
 } 
-.service-card {
-    opacity: 0;
-    transform: translateX(50%);
-    transition: opacity 1s, transform 1s;
-}
 .service-card.visible {
     opacity: 1;
     transform: translateX(0);

@@ -26,10 +26,10 @@
 .nav-item-container{
     margin-top: 5px;
     column-gap: 0px;
-    justify-content: center;
+    justify-content: space-between; 
 }
 .nav-item {
-    width:10rem;
+    min-width:12rem;
     font-size: 14px;
     text-align: center;
     font-weight: 250;
@@ -40,8 +40,13 @@
     padding-bottom: 5px;
     transition: color 0.3s ease;
 }
+.mobile-view .nav-container{
+    width: 100vw;
+}
 .mobile-view .nav-item{
     color: black !important;
+    text-align: left;
+    padding: 10px;
     font-weight: 400;
     transition: 0.3s ease-in-out;
 }
@@ -76,13 +81,19 @@
 .nav-item:hover::after {
     width: 70%; 
     left: 15%;  
-  }
+}
+.mobile-view .nav-item:hover::after {
+    width: 0%; 
+}
 .nav-item.active {
     font-weight: bold;
 }
 .nav-item.active::after {
     width: 70%; 
     left: 15%; 
+}
+.mobile-view .nav-item.active::after {
+    width: 0%; 
 }
 .navbar-scrolled .nav-item::after{
     background: black; 
@@ -100,7 +111,6 @@
     background-color: rgb(255, 255, 255);
 }
 .btn-book{
-    margin-left: 5rem;
     width: 150px;
 }
 .mobile-view .btn-book{

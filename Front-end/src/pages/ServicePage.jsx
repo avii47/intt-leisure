@@ -6,8 +6,8 @@ import img3 from '../assets/images/aerial-shot-long-road-surrounded-by-trees-fie
 
 const ServicePage = () => {
     const img = img3
-    const title = 'Choose Your Journey';
-    const sub = 'Experience the Experience';
+    const title = 'Experience the Experience';
+    const sub = 'Choose Your Journey';
     
     return (
         <>
