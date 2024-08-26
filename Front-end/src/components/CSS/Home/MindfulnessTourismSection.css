@@ -22,6 +22,9 @@
     transform: translateY(40px);
     transition: opacity 1s ease, transform 1s ease;
 }
+.mtc-main{
+    margin-left: 70px;
+}
 .mindfulness-img{
     width: 100%;
     height: 100%;
@@ -43,8 +46,11 @@
     opacity: 1;
     transform: translateY(0);
 }
-.mobile-view .mindfulness-tourism-content{
-    padding: 10% 10% 0% 10%;
+.mobile-view .mindfulness-tourism-content {
+    padding: 0 2rem 0 2rem;
+}
+.mobile-view .mtc-main{
+    margin-left: 0px;
 }
 .mobile-view .overlayert{
     background: rgba(0, 0, 0, 0.404);

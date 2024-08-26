@@ -1,9 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and HTML */
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  font-size: 100%; /* Ensures font size is at the default 100% */
+}
+
+
+
+
 .App {
   text-align: center;
   overflow: hidden;
 }
 .section {
   padding-top: 12rem;
+  overflow: hidden;
+}
+.mobile-view .section {
+  padding-top: 2rem;
   overflow: hidden;
 }
 .font-primary {

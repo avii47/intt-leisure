@@ -65,10 +65,10 @@ const EventsNewsSection = () => {
       'img': img_05,
       'sub': 'Wisdom in the times of Crisis'
     },
-    {
-      'img': img_03,
-      'sub': 'Integrating Appreciative Inquiry into Mindfulness-based Leadership'
-    },
+    // {
+    //   'img': img_03,
+    //   'sub': 'Integrating Appreciative Inquiry into Mindfulness-based Leadership'
+    // },
     {
       'img': img_01,
       'sub': 'Exploring the Impact of Mindfulness on Leadership'

@@ -3,8 +3,9 @@ import '../CSS/Home/ServicesSection.css';
 import left_arrow from '../../assets/icons/left-arrow.png';
 import right_arrow from '../../assets/icons/right-arrow.png';
 import ServiceCard from './ServiceCard';
+import { useMobileView } from '../../contexts/MobileViewContext';
 
-import img1 from '../../assets/images/Experiences 1.png'
+import img1 from '../../assets/images/confident-businessman-with-colleagues.jpg'
 import img2 from '../../assets/images/Student_ Educator.jpeg';
 import img3 from '../../assets/images/full-shot-man-working-outdoors.jpg'
 import img4 from '../../assets/images/Seeker.jpeg';
@@ -13,27 +14,13 @@ import img5 from '../../assets/images/services-img3.jpg';
 
 const ServicesSection = () => {
 
-        const [isMobileView, setIsMobileView] = useState(false);
         const serviceCardsRef = useRef([]);
         const [showLeftButton2, setShowLeftButton] = useState(false);
         const [showRightButton2, setShowRightButton] = useState(true);
         const containerRef2 = useRef(null);
+        const isMobileView = useMobileView();
 
         const img6 = 'https://img.freepik.com/free-photo/beautiful-woman-meditating-nature_23-2148940321.jpg?w=2000&t=st=1724407077~exp=1724407677~hmac=c3719b8470350208385b0db346d0c2b59dfe7a381d6e43407230603a79962902';
-
-        useEffect(() => {
-          const handleResize = () => {
-            setIsMobileView(window.innerWidth <= 1200); 
-          };
-
-          handleResize();
-
-          window.addEventListener('resize', handleResize);
-
-          return () => {
-            window.removeEventListener('resize', handleResize);
-          };
-        }, []);
 
         useEffect(() => {
           const observer = new IntersectionObserver(entries => {
@@ -98,7 +85,13 @@ const ServicesSection = () => {
 
         const scrollContainer = (direction) => {
           if (containerRef2.current) {
-              const scrollAmount = containerRef2.current.offsetWidth * 0.6;
+            let scrollAmount = 0
+            if(isMobileView){
+              scrollAmount = containerRef2.current.offsetWidth * 0.920;
+            }
+            else{
+              scrollAmount = containerRef2.current.offsetWidth * 0.6;
+            }
               containerRef2.current.scrollBy({
                   left: direction === 'left' ? -scrollAmount : scrollAmount,
                   behavior: 'smooth',
@@ -130,14 +123,19 @@ const ServicesSection = () => {
       return (
         <div id='service-section' className={`section d-flex justify-content-center ${isMobileView ? 'mobile-view' : ''}`}>
             <div className='services-content justify-content-center'>
-                <h6 className='font-secondary left-align' style={{fontSize:'15px', fontWeight:'350'}}>Experience the Experience</h6>
+                <h6 className='font-secondary left-align' style={{fontSize:'15px', fontWeight:'350'}}>Choose Your Journey</h6>
                 <hr style={{ width: '13rem' }} /><br></br>
-                <h3 className='font-primary left-align'>Choose Your Journey</h3>
+                <h3 className='font-primary left-align'>Experience the Experience</h3>
                 <p className='font-secondary left-align'>As you immerse yourself in this enchanting destination, we invite you to participate in profound self-reflection and practice alongside us.</p>
 
                 <div className="service-slider-wrapper">
-                  {showLeftButton2 && <button className="scroll-button2 left2" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}
-                  {showRightButton2 && <button className="scroll-button2 right2" onClick={() => scrollContainer('right')}><img className='nav-icon' src={right_arrow}></img></button>}
+                  {!isMobileView && (
+                    <div className='nav-icons'>
+                      {showLeftButton2 && <button className="scroll-button2 left2" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}
+                      {showRightButton2 && <button className="scroll-button2 right2" onClick={() => scrollContainer('right')}><img className='nav-icon' src={right_arrow}></img></button>}
+                    </div>
+                  )}
+                  
                   <div className='service-slider d-flex ' ref={containerRef2}>
                     {contentData.map((content, index) => (
                       <ServiceCard
@@ -151,6 +149,12 @@ const ServicesSection = () => {
                   </div>
                   
                 </div>
+                {isMobileView && (
+                    <div className='nav-icons-mb'>
+                      {showLeftButton2 && <button className="scroll-button2 left2" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}
+                      {showRightButton2 && <button className="scroll-button2 right2" onClick={() => scrollContainer('right')}><img className='nav-icon' src={right_arrow}></img></button>}
+                    </div>
+                )}
 
             </div>
         </div>)

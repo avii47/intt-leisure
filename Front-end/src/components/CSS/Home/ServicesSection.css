@@ -15,6 +15,7 @@
     scrollbar-width: none;
     scroll-behavior: smooth;
     width: 100vw;
+    padding-left: 20px;
 }
 
 .service-slider::-webkit-scrollbar {
@@ -22,23 +23,35 @@
 }
 
 .scroll-button2 {
-    position: absolute;
-    top: -20%;
+    top: -10%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0);
     color: white;
     border: none;
-    padding: 0.5rem 1rem;
     cursor: pointer;
     z-index: 10;
 }
 
-.scroll-button2.left2 {
+.nav-icons-mb{
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* .scroll-button2.left2 {
     margin-left: 94%;
 }
 
 .scroll-button2.right2 {
     margin-left: 97%;
+} */
+
+.nav-icons{
+    display: flex;
+    gap: 10px;
+    float: right;
+    margin-top: -70px;
 }
 .mobile-view .scroll-button2{
     top: 110%;
@@ -46,7 +59,7 @@
 }
 .mobile-view .service-slider {
     width: 100vw;
-    padding: 0 4rem 0 1rem;
+    padding: 0 4rem 0 0;
 }
 .mobile-view .right2 {
    margin-left: 5%;

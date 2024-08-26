@@ -8,7 +8,6 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { useMobileView } from '../contexts/MobileViewContext';
 import './CSS/Navbar.css';
@@ -26,6 +25,7 @@ function MyNavbar() {
   const navigate = useNavigate(); 
   const [dropdownVisible1, setDropdownVisible1] = useState(false);
   const [dropdownVisible2, setDropdownVisible2] = useState(false);
+  const [showOffcanvas, setShowOffcanvas] = useState(false);
 
   const isMobileView = useMobileView();
 
@@ -59,6 +59,10 @@ function MyNavbar() {
 
   const handleMouseLeave2 = () => {
     setDropdownVisible2(false);
+  };
+
+  const handleLinkClick = () => {
+    setShowOffcanvas(false); // Close the offcanvas menu
   };
 
   const exploreDropdownItems = [
@@ -125,49 +129,84 @@ function MyNavbar() {
           fixed="top"
           className={`bg-body-tertiary mb-3 navbar-container ${scrolled ? 'navbar-scrolled' : ''}  ${isMobileView ? 'mobile-view' : ''}`}
         >
-          <Container fluid className={`nav-container`}>
+          <Container fluid className={`nav-container`} >
             <Navbar.Brand id="callOne"  as={Link} to="/" >
               <img loading="lazy" className="logo" src={scrolled ? logo_dark : logo_light} alt="Logo"/>
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className="custom-toggler" />
+            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className="custom-toggler" onClick={() => setShowOffcanvas(!showOffcanvas)} />
             <Navbar.Offcanvas
               className="navbar-offcanvas"
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
               placement="end"
+              show={showOffcanvas}
+              onHide={() => setShowOffcanvas(false)}
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  <h3>INTT Leisure</h3>
+                  <h3 style={{margin:'10px'}}>INTT Leisure</h3>
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className={`flex-grow-1 pe-3 nav-item-container font-secondary ${isMobileView ? 'mobile-view' : ''}`}>
 
-                  <Nav.Link className={`nav-item ${location.pathname === '/mindfulness' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/mindfulness">
-                      MINDFULNESS
-                  </Nav.Link>
+                {!isMobileView ? (
+                  <>
+                      <Nav.Link className={`nav-item ${location.pathname === '/mindfulness' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/mindfulness">
+                          MINDFULNESS
+                      </Nav.Link>
 
-                  <div onMouseEnter={handleMouseEnter1} onMouseLeave={handleMouseLeave1}>
-                    <Nav.Link as={Link} to="/services" className={`nav-item ${location.pathname === '/services' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`}>
-                      EXPERIENCE
-                    </Nav.Link>
-                  </div>
-                  
-                  <Nav.Link className={`nav-item ${location.pathname === '/why-choose-us' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/why-choose-us">
-                      WHY CHOOSE US
-                  </Nav.Link>
+                      <div onMouseEnter={handleMouseEnter1} onMouseLeave={handleMouseLeave1}>
+                        <Nav.Link as={Link} to="/services" className={`nav-item ${location.pathname === '/services' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`}>
+                          EXPERIENCE
+                        </Nav.Link>
+                      </div>
+                      
+                      <Nav.Link className={`nav-item ${location.pathname === '/why-choose-us' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/why-choose-us">
+                          WHY CHOOSE US
+                      </Nav.Link>
 
-                  <div onMouseEnter={() => setDropdownVisible2(true)} onMouseLeave={() => setDropdownVisible2(false)}>
-                    <Nav.Link as={Link} className={`nav-item ${location.pathname === '/blogs' || location.pathname === '/destinations' || location.pathname === '/events&news' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`}>
-                      EXPLORE
-                    </Nav.Link>
-                  </div>
+                      <div onMouseEnter={() => setDropdownVisible2(true)} onMouseLeave={() => setDropdownVisible2(false)}>
+                        <Nav.Link as={Link} className={`nav-item ${location.pathname === '/blogs' || location.pathname === '/destinations' || location.pathname === '/events&news' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`}>
+                          EXPLORE
+                        </Nav.Link>
+                      </div>
 
-                  <Nav.Link className={`nav-item ${location.pathname === '/contact-us' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/contact-us">
-                      CONTACT US
-                  </Nav.Link>
-                  
+                      <Nav.Link className={`nav-item ${location.pathname === '/contact-us' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/contact-us">
+                          CONTACT US
+                      </Nav.Link>
+                  </>
+                ) : (
+                  <>
+                      <Nav.Link className={`nav-item ${location.pathname === '/mindfulness' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/mindfulness"  onClick={handleLinkClick}>
+                          MINDFULNESS
+                      </Nav.Link>
+
+                      <Nav.Link className={`nav-item ${location.pathname === '/services' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/services" onClick={handleLinkClick}>
+                        EXPERIENCE
+                      </Nav.Link>
+                      
+                      <Nav.Link className={`nav-item ${location.pathname === '/why-choose-us' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/why-choose-us" onClick={handleLinkClick}>
+                          WHY CHOOSE US
+                      </Nav.Link>
+
+                      <Nav.Link className={`nav-item ${location.pathname === '/blogs' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/blogs" onClick={handleLinkClick}>
+                          BLOGS
+                      </Nav.Link>
+
+                      <Nav.Link className={`nav-item ${location.pathname === '/destinations' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/destinations" onClick={handleLinkClick}>
+                          DESTINATIONS
+                      </Nav.Link>
+
+                      <Nav.Link className={`nav-item ${location.pathname === '/events&news' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/events&news" onClick={handleLinkClick}>
+                          EVENTS & NEWS
+                      </Nav.Link>
+
+                      <Nav.Link className={`nav-item ${location.pathname === '/contact-us' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/contact-us" onClick={handleLinkClick}>
+                          CONTACT US
+                      </Nav.Link>
+                  </>
+                )}
                 </Nav>
 
                 {dropdownVisible1 && (
