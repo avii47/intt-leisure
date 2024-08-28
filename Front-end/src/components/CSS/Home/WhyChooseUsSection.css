@@ -5,7 +5,6 @@
 }
 .icon-container-wrapper {
     position: relative;
-    width: 80vw;
     margin-top: 6rem;
 }
 .icon-container  {
@@ -37,6 +36,11 @@
     border: none;
     cursor: pointer;
     z-index: 10;
+}
+.mobile-view .why-chooseus-content{
+    width: 100vw;
+    padding: 0 2rem 0 2rem;
+    margin-top: -100px;
 }
 .mobile-view .icon-container-wrapper{
     width: 100vw;

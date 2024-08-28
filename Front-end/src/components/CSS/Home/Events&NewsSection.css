@@ -5,7 +5,6 @@
 }
 .eventsNews-wrapper {
     position: relative;
-    width: 80vw;
     margin-top: 3.75rem;
 }
 .eventsNews-cards {
@@ -16,6 +15,7 @@
     overflow-x: scroll;
     scrollbar-width: none;
     scroll-behavior: smooth;
+    padding-right: 65px;
 
     opacity: 0;
     transform: translateY(30px);
@@ -24,26 +24,27 @@
 .eventsNews-cards::-webkit-scrollbar {
     display: none;
 }
-.nav-icons2{
-    margin-left: -30px;
+.nav-icons{
+    display: flex;
+    gap: 10px;
+    float: right;
+    margin-top: -70px;
 }
 .scroll-button3 {
-    position: absolute;
-    top: -26%;
+    top: -10%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0);
     color: white;
     border: none;
-    padding: 0.5rem 1rem;
     cursor: pointer;
     z-index: 10;
 }
-.scroll-button3.left3 {
+/* .scroll-button3.left3 {
     margin-left: 96%;
 }
 .scroll-button3.right3 {
     margin-left: 99%;
-}
+} */
 .mobile-view .scroll-button3{
     top: -24%;
 }
@@ -52,14 +53,17 @@
 }
 .mobile-view .eventsNews-content {
     width: 100vw;
-    padding: 0 2rem 0 2rem;
+    padding: 0 2rem 5rem 2rem;
 }
-.mobile-view .right3 {
+.mobile-view .eventsNews-wrapper {
+    width: 100vw;
+}
+/* .mobile-view .right3 {
     margin-left: 90% !important;
 }
 .mobile-view .left3 {
     margin-left: 80% !important;
-}
+} */
 .content-card{
     margin-top: 20px;
     min-width: 300px;

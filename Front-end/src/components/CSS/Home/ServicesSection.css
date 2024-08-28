@@ -15,7 +15,6 @@
     scrollbar-width: none;
     scroll-behavior: smooth;
     width: 100vw;
-    padding-left: 20px;
 }
 
 .service-slider::-webkit-scrollbar {
@@ -59,7 +58,7 @@
 }
 .mobile-view .service-slider {
     width: 100vw;
-    padding: 0 4rem 0 0;
+    padding: 0 4rem 2rem 0;
 }
 .mobile-view .right2 {
    margin-left: 5%;
@@ -67,6 +66,7 @@
 .mobile-view .services-content {
     width: 100vw;
     padding: 0 2rem 0 2rem;
+    margin-top: -100px;
 }
 .nav-icon{
     height: 30px;

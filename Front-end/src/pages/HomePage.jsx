@@ -19,6 +19,8 @@ const ConnectAppSection = lazy(() => import('../components/HomePage/ConnectAppSe
 const EventsNewsSection = lazy(() => import('../components/HomePage/Events&NewsSection'));
 const FooterSection = lazy(() => import('../components/FooterSection'));
 
+const TestPage = lazy(() => import('../components/SliderComponent'));
+
 
 const HomePage = () => {
     return (
@@ -45,8 +47,11 @@ const HomePage = () => {
                 <ConnectAppSection />
             </Suspense>
             <Suspense fallback={<div>Loading...</div>}>
-            <EventsNewsSection />
+                <EventsNewsSection />
             </Suspense>
+            {/* <Suspense fallback={<div>Loading...</div>}>
+                <TestPage />
+            </Suspense> */}
             <Suspense fallback={<div>Loading...</div>}>
                 <FooterSection />
             </Suspense>

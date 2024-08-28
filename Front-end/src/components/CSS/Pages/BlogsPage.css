@@ -82,8 +82,13 @@
     text-decoration: none;
     color: black;
 }
-
-
+.mobile-view .blogs-section-content {
+    width: 100vw;
+    padding: 0 2rem 0 2rem;
+    flex-wrap: wrap; 
+    text-align: left;
+    margin-top: -100px;
+}
 
 
 
