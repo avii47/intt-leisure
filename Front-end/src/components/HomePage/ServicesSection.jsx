@@ -123,8 +123,8 @@ const ServicesSection = () => {
       return (
         <div id='service-section' className={`section d-flex justify-content-center ${isMobileView ? 'mobile-view' : ''}`}>
             <div className='services-content justify-content-center'>
-                <h6 className='font-secondary left-align' style={{fontSize:'15px', fontWeight:'350'}}>Choose Your Journey</h6>
-                <hr style={{ width: '13rem' }} /><br></br>
+                <h6 className={`font-secondary left-align`} style={{fontSize:'15px', fontWeight:'350'}}>Choose Your Journey</h6>
+                <hr className='' style={{ width: '13rem' }}></hr><br></br>
                 <h3 className='font-primary left-align'>Experience the Experience</h3>
                 <p className='font-secondary left-align'>As you immerse yourself in this enchanting destination, we invite you to participate in profound self-reflection and practice alongside us.</p>
 

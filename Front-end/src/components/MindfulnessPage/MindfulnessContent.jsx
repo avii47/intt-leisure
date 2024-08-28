@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useMobileView } from '../../contexts/MobileViewContext';
 import '../CSS/Pages/MindfulnessPage.css';
-import ContentBlock from '../MindfulnessCard'
+import ContentBlock from './MindfulnessCard'
 
 import img2 from '../../assets/images/WhatsApp Image 2024-08-23 at 4.25.49 PM.jpeg'
 import img1 from '../../assets/images/WhatsApp Image 2024-08-23 at 4.26.02 PM.jpeg'
@@ -87,7 +87,7 @@ const MindfulnessContent = () => {
     <section id="mindfulness-content-section" className={`section mindfulness-content-section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="mindfulness-section-content">
         <h3 className='font-primary'>What is Mindfulness Tourism?</h3>
-        <p className='font-secondary' style={{ textAlign:'justify', marginTop:'10px' }}>What exactly is Mindful Tourism? We often hear about mindfulness, but how often do we participate in Mindful Tourism? It’s a distinct approach rooted in Sri Lanka's authentic mindfulness teachings and bolstered by solid research. Partnering with INTT Leisure for a mindful tour offers a transformative experience tailored for leaders and professionals. Each moment of your journey is meticulously designed to deepen your mindfulness practice. Our experts guide you through techniques that aren’t just theoretical—they’re backed by action research conducted by Dr. Gamini Hewawasam, specifically tested and proven to be effective for leaders</p>
+        <p className='font-secondary'>What exactly is Mindful Tourism? We often hear about mindfulness, but how often do we participate in Mindful Tourism? It’s a distinct approach rooted in Sri Lanka's authentic mindfulness teachings and bolstered by solid research. Partnering with INTT Leisure for a mindful tour offers a transformative experience tailored for leaders and professionals. Each moment of your journey is meticulously designed to deepen your mindfulness practice. Our experts guide you through techniques that aren’t just theoretical—they’re backed by action research conducted by Dr. Gamini Hewawasam, specifically tested and proven to be effective for leaders</p>
         <div id='mindfulness-content-cards-container' className="mindfulness-content-cards-container">
 
           <ContentBlock

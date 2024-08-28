@@ -34,7 +34,7 @@ const Footer = () => {
         <hr></hr>
 
         <div className='col-md-12 d-flex footer-2nd-row'>
-          <div className="col-md-8">
+          <div className="col-md">
               <div className="footer-subscription">
                   <h3>Connect</h3>
                   <p style={{margin:'22px 0'}}>
@@ -52,36 +52,39 @@ const Footer = () => {
                   </p>
               </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-2">
               <div className="footer-contact">
+                <div>
                   <address className='d-flex'>
-                    <div className="col-1">
-                      <img loading="lazy" src={addressIcon} className='contact-icons' alt="address icon" />
-                    </div>
-                    <div className="col-11" style={{marginLeft:'20px', width:'300px'}}>
-                      <h5>INTT Leisure</h5>
-                      No.26/6<br />
-                      Major LV Gunarathna Mawatha,<br />
-                      Station Road, Dehiwala-Mount Lavinia,<br />
-                      Sri Lanka
-                    </div>
-                  </address>
-                  <address className='d-flex'>
-                    <div className="col-1">
-                      <img loading="lazy" src={callIcon} className='contact-icons' alt="call icon" />
-                    </div>
-                    <div className="col-12" style={{marginLeft:'20px'}}>
-                      <a href="tel:0094770437293" className='link-text'>+1 312-242-1662</a><br />
-                    </div>
-                  </address>
-                  <address className='d-flex'>
-                    <div className="col-1">
-                      <img loading="lazy" src={emailIcon} className='contact-icons' alt="email icon" />
-                    </div>
-                    <div className="col-12" style={{marginLeft:'20px'}}>
-                      <a href="mailto:isuru.tours@delmege.com" className='link-text'>info@intterminal.com</a>
-                    </div>
-                  </address>
+                      <div className="col-1">
+                        <img loading="lazy" src={addressIcon} className='contact-icons' alt="address icon" />
+                      </div>
+                      <div className="col-11" style={{marginLeft:'20px', width:'300px'}}>
+                        <h5>INTT Leisure</h5>
+                        No.26/6<br />
+                        Major LV Gunarathna Mawatha,<br />
+                        Station Road, <br />Dehiwala-Mount Lavinia,<br />
+                        Sri Lanka
+                      </div>
+                    </address>
+                    <address className='d-flex'>
+                      <div className="col-1">
+                        <img loading="lazy" src={callIcon} className='contact-icons' alt="call icon" />
+                      </div>
+                      <div className="col-12" style={{marginLeft:'20px'}}>
+                        <a href="tel:0094770437293" className='link-text'>+1 312-242-1662</a><br />
+                      </div>
+                    </address>
+                    <address className='d-flex'>
+                      <div className="col-1">
+                        <img loading="lazy" src={emailIcon} className='contact-icons' alt="email icon" />
+                      </div>
+                      <div className="col-12" style={{marginLeft:'20px'}}>
+                        <a href="mailto:isuru.tours@delmege.com" className='link-text'>info@intterminal.com</a>
+                      </div>
+                    </address>
+                </div>
+
               </div>
           </div>
         </div>

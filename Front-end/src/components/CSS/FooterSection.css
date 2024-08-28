@@ -18,6 +18,10 @@
     text-decoration: none;
     color: #333;
 }
+
+.footer-2nd-row{
+    column-gap: 100px;
+}
   
 .footer-subscription {
     margin: 1.25rem 0;
@@ -32,7 +36,7 @@
 }
   
 .subscription-form input {
-    width: 25rem;
+    width: 100%;
     padding: 0.625rem;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -49,8 +53,10 @@
 }
 .footer-contact{
     margin-top: 1.25rem;
-    margin-left: 9.375rem;
+    
     text-align: left;
+    width: fit-content;
+    background-color: aqua;
 }
   
 .footer-contact address {
@@ -96,6 +102,7 @@
 }
 
 .mobile-view .footer-content{
+  width: 100vw;
   padding: 2rem 2rem 2rem 2rem;
 }
 .mobile-view .footer-nav{
@@ -115,16 +122,19 @@
 }
 .mobile-view .footer-contact{
     margin: 0;
-    padding: 5% 15%;
+    padding: 5% 0%;
+    justify-content: center;
+    display: flex;
 }
 .mobile-view .footer-logos{
     margin: 0;
+    height: 90px;
 }
 .mobile-view .footer-logos img{
-    height: 2.1rem;
+    height: 9.5rem;
 }
 .mobile-view .footer-bottom{
-    margin-top: 40;
+    margin-top: 0px;
     margin-left: 0;
     font-size: small;
 }

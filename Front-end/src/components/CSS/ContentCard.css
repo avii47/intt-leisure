@@ -5,12 +5,12 @@
     box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
 }
 .mobile-view .content-card{
-    width: 300px;
+    min-width: 320px;
     margin-inline: auto;
 }
 .mobile-view .card-img{
-    width: 300px;
-    height: 200px;
+    width: 320px;
+    height: 220px;
 }
 .image-zoom-container {
     overflow: hidden;

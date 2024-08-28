@@ -4,6 +4,7 @@
     height: fit-content;
     text-align: left;
     box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    margin-top: -50px;
 }
 .blog-content-image-zoom-container {
     overflow: hidden;

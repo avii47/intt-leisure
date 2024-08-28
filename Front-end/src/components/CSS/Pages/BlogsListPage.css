@@ -1,12 +1,13 @@
 .blogs-list-section{
     display: flex;
     justify-content: center;
-    padding-bottom: 20%;
+    padding-bottom: 50%;
 }
 .blogs-list-content {
     width: 80vw;
     flex-wrap: wrap; 
     text-align: left;
+    margin-top: -100px;
 }
 .blog-cards-container{
     display: flex;

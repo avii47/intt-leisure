@@ -24,6 +24,9 @@
     padding: 7px;
     border-radius: 5px 0 0 5px;
 } 
+.card-text h5{
+    font-size: 20px;
+}
 .destination-card:hover .card-text{
     background-color: rgb(255, 255, 255); 
     transition: 1s linear;

@@ -1,5 +1,5 @@
 .testimonial-content{
-    /* padding: 5rem 12rem 0 12rem; */
+    width: 80vw;
 }
 .testimonial-iframe{
     width: 100%;
@@ -13,7 +13,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    min-width: 16rem;
     font-size: 28px;
     opacity: 0;
     transition: all 1s ease;
@@ -23,9 +22,7 @@
 }
 @media only screen and (max-width: 470px) {
     .testimonial-iframe{
-        width: auto;
         height: 12.5rem;
-        margin-left: 1%;
     }
 }
 
@@ -60,7 +57,13 @@
     }
 }
 
+.mobile-view .testimonial-content{
+    width: 100vw;
+    padding: 0 2rem 0 2rem;
+    margin-top: -100px;
+}
+
 .mobile-view .testimonial-video-container,
 .mobile-view .testimonial-text {
-    animation: none; /* Disable animation on mobile view if needed */
+    animation: none; 
 }
