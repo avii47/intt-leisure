@@ -36,7 +36,7 @@ const MindfulnessTourismSection = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobileView(window.innerWidth <= 1200); 
+      setIsMobileView(window.innerWidth <= 1000); 
     };
 
     handleResize();

@@ -20,7 +20,7 @@
 }
 
 .footer-2nd-row{
-    column-gap: 100px;
+    column-gap: 80px;
 }
   
 .footer-subscription {
@@ -31,7 +31,6 @@
 .subscription-form {
     display: flex;
     gap: 1.25rem;
-    justify-content: left;
     margin: 0.625rem 0;
 }
   
@@ -53,10 +52,7 @@
 }
 .footer-contact{
     margin-top: 1.25rem;
-    
     text-align: left;
-    width: fit-content;
-    background-color: aqua;
 }
   
 .footer-contact address {
@@ -123,7 +119,7 @@
 .mobile-view .footer-contact{
     margin: 0;
     padding: 5% 0%;
-    justify-content: center;
+    align-content: center;
     display: flex;
 }
 .mobile-view .footer-logos{
@@ -144,4 +140,40 @@
 .mobile-view .footer-copyright{
     margin: 0;
     padding-top: 40px;
+}
+
+@media (max-width: 930px) {
+    .subscription-form {
+        flex-wrap: wrap;
+    }
+    .subscription-form button{
+        width: 100%;
+    }
+    .footer-nav{
+        gap: 1rem;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .footer-2nd-row{
+        column-gap: 30px;
+    }
+    .footer-contact{
+        justify-content: center;
+    }
+    .ftc{
+        padding-left: 80px;
+    }
+}
+@media (max-width: 840px) {
+    .subscription-form {
+        flex-wrap: nowrap;
+    }
+    .subscription-form button{
+        width: 65%;
+    }
+    .footer-contact{
+        height: 320px;
+    }
 }

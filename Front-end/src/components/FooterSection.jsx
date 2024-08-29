@@ -12,7 +12,22 @@ import './CSS/FooterSection.css';
 
 const Footer = () => {
 
-  const isMobileView = useMobileView();
+  const [isMobileView, setIsMobileView] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth <= 840);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  // const isMobileView = useMobileView();
 
   return (
     <footer className={`footer justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`} >
@@ -34,7 +49,7 @@ const Footer = () => {
         <hr></hr>
 
         <div className='col-md-12 d-flex footer-2nd-row'>
-          <div className="col-md">
+          <div className="col-lg-8">
               <div className="footer-subscription">
                   <h3>Connect</h3>
                   <p style={{margin:'22px 0'}}>
@@ -52,10 +67,10 @@ const Footer = () => {
                   </p>
               </div>
           </div>
-          <div className="col-md-2">
+          <div className="col-lg-4">
               <div className="footer-contact">
-                <div>
-                  <address className='d-flex'>
+                <div className='ftc'>
+                    <address className='d-flex'>
                       <div className="col-1">
                         <img loading="lazy" src={addressIcon} className='contact-icons' alt="address icon" />
                       </div>
@@ -84,7 +99,6 @@ const Footer = () => {
                       </div>
                     </address>
                 </div>
-
               </div>
           </div>
         </div>
