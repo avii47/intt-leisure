@@ -64,3 +64,12 @@
 .mobile-view .news-card{
     margin-top: -220px;
 }
+@media (min-width: 665px) and (max-width: 1200px) {
+    .eventsNews-img{
+        width: 600px;
+        margin-bottom: 1.25rem;
+    }
+    .eventsNews-img-col h5{
+        width: 600px;
+    }
+}

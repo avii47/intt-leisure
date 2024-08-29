@@ -1,12 +1,10 @@
 .mindfulness-content-section{
-    text-align: left;
-    display: flex;
-    flex-direction: column;
+
 }
 .mindfulness-section-content {
     width: 80vw;
-    display: flex;
     flex-wrap: wrap; 
+    padding: 0 0 10% 0;
 }
 .mindfulness-section-content p{
     text-align: justify;

@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../CSS/ContentBlock.css'; 
-import { useMobileView } from '../../contexts/MobileViewContext';
 
 const ContentBlock = ({ image, title, text, imagePosition }) => {
 
-  const isMobileView = useMobileView();
+  const [isMobileView, setIsMobileView] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth <= 768); 
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
 

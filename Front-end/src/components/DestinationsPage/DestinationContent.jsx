@@ -8,8 +8,6 @@ import img_02 from '../../assets/images/stock-photo-instagram-effect-of-polonnar
 import img_03 from '../../assets/images/stock-photo-kandy-sri-lanka-july-sri-lankan-traditional-handcrafted-goods-for-sale-in-a-shop-at-2223350811.jpg';
 import img_04 from '../../assets/images/stock-photo-the-sri-lankan-leopard-is-a-subspecies-of-leopard-found-only-in-sri-lanka-a-small-island-nation-2301123729.jpg'
 
-
-
 const DestinationsContent = () => {
 
   const isMobileView = useMobileView();
