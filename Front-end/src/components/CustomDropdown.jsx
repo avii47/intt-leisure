@@ -1,7 +1,5 @@
-// src/components/CustomDropdown.js
 import React from 'react';
-import './CSS/CustomDropdown.css';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function CustomDropdown({ scrolled, isVisible, items = [] }) {
 

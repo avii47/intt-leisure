@@ -1,8 +1,6 @@
-import React, { useState, useEffect, lazy } from 'react';
-import '../CSS/Pages/Events&NewsPage.css';
-// import EventCard from '../Events&NewsPage/EventCard';
+import React, { useEffect, lazy } from 'react';
 import { useMobileView } from '../../contexts/MobileViewContext';
-// import NewsCard from '../Events&NewsPage/NewsCard';
+
 import img_01 from '../../assets/images/events-img1.png';
 import img_02 from '../../assets/images/events-img2.png';
 import img_03 from '../../assets/images/events-img3.png';

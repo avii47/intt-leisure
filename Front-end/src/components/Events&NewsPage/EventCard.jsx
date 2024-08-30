@@ -1,5 +1,4 @@
 import React from 'react';
-import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const EventCard = ({content}) => (
     <div className="col-12 event-card d-flex" >

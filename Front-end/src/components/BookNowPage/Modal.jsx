@@ -1,5 +1,4 @@
 import React from 'react';
-import '../CSS/Modal.css'; // Optional: Custom styles for the modal
 
 const Modal = ({ show, onClose, children }) => {
   if (!show) {

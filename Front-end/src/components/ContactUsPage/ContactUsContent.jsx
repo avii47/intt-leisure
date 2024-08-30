@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useMobileView } from '../../contexts/MobileViewContext';
-import '../CSS/Pages/ContactUsPage.css';
 
 const ContactUsContent = () => {
 

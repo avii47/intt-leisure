@@ -1,7 +1,4 @@
 import React, { Suspense, lazy } from 'react';
-// import HeroSection from '../components/HeroSection'
-// import DestinationsContent from '../components/DestinationsPage/DestinationContent'
-// import FooterSection from '../components/FooterSection';
 import bg from '../assets/images/destinations-bg.jpg'
 
 const HeroSection = lazy(() => import('../components/HeroSection'));
@@ -10,11 +7,11 @@ const FooterSection = lazy(() => import('../components/FooterSection'));
 const MobileButton = lazy(() => import('../components/MobileBookNowButton'));
 
 const ContactUsPage = () => {
-    
+
     const img = bg;
     const title = 'Destinations';
     const sub = 'Explore Our Services';
-    
+
     return (
         <>
             <Suspense fallback={<div>Loading...</div>}>
@@ -27,7 +24,7 @@ const ContactUsPage = () => {
                 <FooterSection />
             </Suspense>
             <Suspense fallback={<div>Loading...</div>}>
-                <MobileButton  label="Book Now" />
+                <MobileButton label="Book Now" />
             </Suspense>
         </>
     )

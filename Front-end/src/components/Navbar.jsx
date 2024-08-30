@@ -1,7 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import logo_color from '../assets/images/INTT LEISURE VERTICLE.png';
 import logo_dark from '../assets/icons/INTT Leisure Logo-01.png';
 import logo_light from '../assets/icons/INTT Leisure Logo-02.png';
 import Button from 'react-bootstrap/Button';
@@ -10,7 +9,6 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { useMobileView } from '../contexts/MobileViewContext';
-import './CSS/Navbar.css';
 import CustomDropdown from './CustomDropdown';
 
 import img1 from '../assets/images/stock-photo-old-man-with-gray-hair-reading-a-book-sited-on-an-bench-2292379427 (1).jpg'
@@ -21,8 +19,8 @@ import img5 from '../assets/images/beautiful-woman-meditating-nature.jpg'
 
 function MyNavbar() {
   const [scrolled, setScrolled] = useState(false);
-  const location = useLocation(); 
-  const navigate = useNavigate(); 
+  const location = useLocation();
+  const navigate = useNavigate();
   const [dropdownVisible1, setDropdownVisible1] = useState(false);
   const [dropdownVisible2, setDropdownVisible2] = useState(false);
   const [showOffcanvas, setShowOffcanvas] = useState(false);
@@ -32,7 +30,7 @@ function MyNavbar() {
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
-      if (offset > 0) { 
+      if (offset > 0) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -62,7 +60,7 @@ function MyNavbar() {
   };
 
   const handleLinkClick = () => {
-    setShowOffcanvas(false); // Close the offcanvas menu
+    setShowOffcanvas(false);
   };
 
   const exploreDropdownItems = [
@@ -118,7 +116,7 @@ function MyNavbar() {
       label: "Seekers"
     },
   ];
-  
+
 
   return (
     <>
@@ -130,8 +128,8 @@ function MyNavbar() {
           className={`bg-body-tertiary mb-3 navbar-container ${scrolled ? 'navbar-scrolled' : ''}  ${isMobileView ? 'mobile-view' : ''}`}
         >
           <Container fluid className={`nav-container`} >
-            <Navbar.Brand id="callOne"  as={Link} to="/" >
-              <img loading="lazy" className="logo" src={scrolled ? logo_dark : logo_light} alt="Logo"/>
+            <Navbar.Brand id="callOne" as={Link} to="/" >
+              <img loading="lazy" className="logo" src={scrolled ? logo_dark : logo_light} alt="Logo" />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className="custom-toggler" onClick={() => setShowOffcanvas(!showOffcanvas)} />
             <Navbar.Offcanvas
@@ -144,16 +142,16 @@ function MyNavbar() {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  <h3 style={{margin:'10px'}}>INTT Leisure</h3>
+                  <h3 style={{ margin: '10px' }}>INTT Leisure</h3>
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className={`flex-grow-1 pe-3 nav-item-container font-secondary ${isMobileView ? 'mobile-view' : ''}`}>
 
-                {!isMobileView ? (
-                  <>
+                  {!isMobileView ? (
+                    <>
                       <Nav.Link className={`nav-item ${location.pathname === '/mindfulness' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/mindfulness">
-                          MINDFULNESS
+                        MINDFULNESS
                       </Nav.Link>
 
                       <div onMouseEnter={handleMouseEnter1} onMouseLeave={handleMouseLeave1}>
@@ -161,9 +159,9 @@ function MyNavbar() {
                           EXPERIENCE
                         </Nav.Link>
                       </div>
-                      
+
                       <Nav.Link className={`nav-item ${location.pathname === '/why-choose-us' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/why-choose-us">
-                          WHY CHOOSE US
+                        WHY CHOOSE US
                       </Nav.Link>
 
                       <div onMouseEnter={() => setDropdownVisible2(true)} onMouseLeave={() => setDropdownVisible2(false)}>
@@ -173,65 +171,65 @@ function MyNavbar() {
                       </div>
 
                       <Nav.Link className={`nav-item ${location.pathname === '/contact-us' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/contact-us">
-                          CONTACT US
+                        CONTACT US
                       </Nav.Link>
-                  </>
-                ) : (
-                  <>
-                      <Nav.Link className={`nav-item ${location.pathname === '/mindfulness' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/mindfulness"  onClick={handleLinkClick}>
-                          MINDFULNESS
+                    </>
+                  ) : (
+                    <>
+                      <Nav.Link className={`nav-item ${location.pathname === '/mindfulness' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/mindfulness" onClick={handleLinkClick}>
+                        MINDFULNESS
                       </Nav.Link>
 
                       <Nav.Link className={`nav-item ${location.pathname === '/services' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/services" onClick={handleLinkClick}>
                         EXPERIENCE
                       </Nav.Link>
-                      
+
                       <Nav.Link className={`nav-item ${location.pathname === '/why-choose-us' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/why-choose-us" onClick={handleLinkClick}>
-                          WHY CHOOSE US
+                        WHY CHOOSE US
                       </Nav.Link>
 
                       <Nav.Link className={`nav-item ${location.pathname === '/blogs' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/blogs" onClick={handleLinkClick}>
-                          BLOGS
+                        BLOGS
                       </Nav.Link>
 
                       <Nav.Link className={`nav-item ${location.pathname === '/destinations' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/destinations" onClick={handleLinkClick}>
-                          DESTINATIONS
+                        DESTINATIONS
                       </Nav.Link>
 
                       <Nav.Link className={`nav-item ${location.pathname === '/events&news' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/events&news" onClick={handleLinkClick}>
-                          EVENTS & NEWS
+                        EVENTS & NEWS
                       </Nav.Link>
 
                       <Nav.Link className={`nav-item ${location.pathname === '/contact-us' ? 'active' : ''} ${scrolled ? 'scrolled' : 'nt-scrolled'}`} as={Link} to="/contact-us" onClick={handleLinkClick}>
-                          CONTACT US
+                        CONTACT US
                       </Nav.Link>
-                  </>
-                )}
+                    </>
+                  )}
                 </Nav>
 
                 {dropdownVisible1 && (
                   <div
-                    onMouseEnter={handleMouseEnter1} 
-                    onMouseLeave={handleMouseLeave1}  
+                    onMouseEnter={handleMouseEnter1}
+                    onMouseLeave={handleMouseLeave1}
                   >
-                    <CustomDropdown items={ExperienceDropdownItems} scrolled={scrolled} isVisible={dropdownVisible1}/>
+                    <CustomDropdown items={ExperienceDropdownItems} scrolled={scrolled} isVisible={dropdownVisible1} />
                   </div>
                 )}
 
                 {dropdownVisible2 && (
                   <div
-                    onMouseEnter={handleMouseEnter2}  
-                    onMouseLeave={handleMouseLeave2}  
+                    onMouseEnter={handleMouseEnter2}
+                    onMouseLeave={handleMouseLeave2}
                   >
-                    <CustomDropdown items={ exploreDropdownItems} scrolled={scrolled} isVisible={dropdownVisible2}/>
+                    <CustomDropdown items={exploreDropdownItems} scrolled={scrolled} isVisible={dropdownVisible2} />
                   </div>
                 )}
 
               </Offcanvas.Body>
-              
+
             </Navbar.Offcanvas>
             <Button variant={scrolled ? "outline-dark" : "outline-light"} className="btn-book" as={Link} to="/bookNow">
-                Book Now
+              Book Now
             </Button>
           </Container>
         </Navbar>

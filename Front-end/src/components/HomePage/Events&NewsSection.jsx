@@ -1,13 +1,11 @@
 import React, { useState, useEffect, useRef, lazy } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import '../CSS/Home/Events&NewsSection.css';
+import { useNavigate } from 'react-router-dom';
 import { useMobileView } from '../../contexts/MobileViewContext';
 
 import left_arrow from '../../assets/icons/left-arrow.png';
 import right_arrow from '../../assets/icons/right-arrow.png';
 import img_01 from '../../assets/images/events-img1.png';
 import img_02 from '../../assets/images/events-img2.png';
-import img_03 from '../../assets/images/events-img3.png';
 import img_05 from '../../assets/images/img24.png';
 
 const ContentCard = lazy(() => import('./ContentCard'));
@@ -21,7 +19,6 @@ const EventsNewsSection = () => {
   const cardRef3 = useRef(null);
   const [showLeftButton3, setShowLeftButton] = useState(false);
   const [showRightButton3, setShowRightButton] = useState(true);
-  const location = useLocation(); 
   const navigate = useNavigate(); 
 
   useEffect(() => {
@@ -53,10 +50,6 @@ const EventsNewsSection = () => {
       'img': img_05,
       'sub': 'Wisdom in the times of Crisis'
     },
-    // {
-    //   'img': img_03,
-    //   'sub': 'Integrating Appreciative Inquiry into Mindfulness-based Leadership'
-    // },
     {
       'img': img_01,
       'sub': 'Exploring the Impact of Mindfulness on Leadership'
@@ -126,10 +119,6 @@ const handleOnClick = (path) => {
       <div className="eventsNews-content justify-content-center">
       <h3 className='font-primary'>Latest Events & News</h3>
         <div className='eventsNews-wrapper'>
-          {/* <div className='d-flex'>
-            {showLeftButton3 && <button className="scroll-button3 left3" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}
-            {showRightButton3 && <button className="scroll-button3 right3" onClick={() => scrollContainer('right')}><img className='nav-icon' src={right_arrow}></img></button>}
-          </div> */}
           {!isMobileView && (
               <div className='nav-icons'>
                 {showLeftButton3 && <button className="scroll-button3" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}

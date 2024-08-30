@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy } from 'react';
 import { useMobileView } from '../../contexts/MobileViewContext';
-import '../CSS/Pages/MindfulnessPage.css';
-import ContentBlock from './MindfulnessCard'
 
 import img2 from '../../assets/images/WhatsApp Image 2024-08-23 at 4.25.49 PM.jpeg'
 import img1 from '../../assets/images/WhatsApp Image 2024-08-23 at 4.26.02 PM.jpeg'
 
+const ContentBlock = lazy(() => import('./MindfulnessCard'));
+
 const MindfulnessContent = () => {
 
-  
+
   const isMobileView = useMobileView();
 
   useEffect(() => {

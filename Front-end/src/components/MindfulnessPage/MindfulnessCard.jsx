@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import '../CSS/ContentBlock.css'; 
 
 const ContentBlock = ({ image, title, text, imagePosition }) => {
 
@@ -7,7 +6,7 @@ const ContentBlock = ({ image, title, text, imagePosition }) => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobileView(window.innerWidth <= 768); 
+      setIsMobileView(window.innerWidth <= 768);
     };
 
     handleResize();
@@ -28,8 +27,8 @@ const ContentBlock = ({ image, title, text, imagePosition }) => {
             <img src={image} alt={title} />
           </div>
           <div className={`content-block__text ${imagePosition === 'left' ? 'left' : 'right'}`}>
-            <h6 className='font-secondary' style={{fontWeight:'350', fontSize:'15px'}}>Explore</h6>
-            <hr style={{ width: '3.7rem', marginTop:'-1px' }} />
+            <h6 className='font-secondary' style={{ fontWeight: '350', fontSize: '15px' }}>Explore</h6>
+            <hr style={{ width: '3.7rem', marginTop: '-1px' }} />
             <h3 className='font-primary'>{title}</h3>
             <p className='font-secondary'>{text}</p>
             <button className='btn btn-dark'>Learn more ></button>
@@ -38,7 +37,7 @@ const ContentBlock = ({ image, title, text, imagePosition }) => {
       )}
       {isMobileView && (
         <>
-          <div className="content-block__text" style={{width:'100%'}}>
+          <div className="content-block__text" style={{ width: '100%' }}>
             <h6 className='font-secondary' style={{ fontWeight: '350', fontSize: '15px' }}>Explore</h6>
             <hr style={{ width: '3.7rem', marginTop: '-1px' }} />
             <h3 className='font-primary'>{title}</h3>

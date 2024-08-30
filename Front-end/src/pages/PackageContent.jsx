@@ -1,4 +1,3 @@
-
 import React, { Suspense, lazy } from 'react';
 import AboutUsImg from '../assets/images/Why Choose us_.jpg'
 
@@ -22,7 +21,7 @@ const PackageContentPage = () => {
             <Suspense fallback={<div>Loading...</div>}>
                 <FooterSection />
             </Suspense>
-            
+
         </>
     )
 }

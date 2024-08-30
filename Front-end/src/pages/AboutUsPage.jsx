@@ -1,6 +1,4 @@
-
 import React, { Suspense, lazy } from 'react';
-import AboutUsImg from '../assets/images/Why Choose us_.jpg'
 
 const HeroSection = lazy(() => import('../components/HeroSection'));
 const AboutUsContent = lazy(() => import('../components/AboutusPage/AboutUsContent'));
@@ -24,7 +22,7 @@ const AboutUsPage = () => {
                 <FooterSection />
             </Suspense>
             <Suspense fallback={<div>Loading...</div>}>
-                <MobileButton  label="Book Now" />
+                <MobileButton label="Book Now" />
             </Suspense>
         </>
     )

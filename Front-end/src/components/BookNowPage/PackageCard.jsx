@@ -1,6 +1,5 @@
 import React from 'react';
 import '../CSS/PackageCard.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const PackageCard = ({ content, onClick, isSelected }) => (
         <div className={`package-card ${isSelected ? 'fade-out' : ''}`} onClick={onClick}>

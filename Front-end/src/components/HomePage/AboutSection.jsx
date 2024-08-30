@@ -1,5 +1,4 @@
 import React, { useState, useEffect, lazy } from 'react';
-import '../CSS/Home/AboutSection.css';
 import Button from 'react-bootstrap/Button';
 import img_01 from '../../assets/images/Rectangle 25.png';
 import img_02 from '../../assets/images/Rectangle 28.png';
@@ -13,7 +12,7 @@ const AboutSection = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobileView(window.innerWidth <= 1200); 
+      setIsMobileView(window.innerWidth <= 1200);
     };
 
     handleResize();
@@ -74,12 +73,12 @@ const AboutSection = () => {
       <div className="about-content justify-content-center">
         <div id='about-heading' className='about-heading'>
           <h3 className='font-primary'>Rediscover yourself with Mindfulness Tours and Retreats</h3>
-          <p className='font-secondary' style={{fontSize: '16px'}}>Embraced by verdant jungle with panoramic views of the Indian Ocean, ÀNI Sri Lanka, an all-inclusive luxury private resort, <br></br> welcomes exclusively your family and friends alone to this private beachfront estate on the island’s fabled south coast.</p>
+          <p className='font-secondary' style={{ fontSize: '16px' }}>Embraced by verdant jungle with panoramic views of the Indian Ocean, ÀNI Sri Lanka, an all-inclusive luxury private resort, <br></br> welcomes exclusively your family and friends alone to this private beachfront estate on the island’s fabled south coast.</p>
         </div>
         <div id='about-cards' className="d-flex about-cards">
-            {contentData.map((content, index) => (
-              <ContentCard key={index} content={content} />
-            ))}
+          {contentData.map((content, index) => (
+            <ContentCard key={index} content={content} />
+          ))}
         </div>
         <Button variant="outline-dark">Learn more ></Button>
       </div>

@@ -1,5 +1,4 @@
 import React, { Suspense, lazy } from 'react';
-import bg from '../assets/images/Book-now-bg.jpg'
 
 const HeroSection = lazy(() => import('../components/HeroSection'));
 const BookNowContent = lazy(() => import('../components/BookNowPage/BookNowContent'));

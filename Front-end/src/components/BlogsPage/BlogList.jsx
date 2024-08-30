@@ -1,7 +1,6 @@
-import React, { useState, useEffect, Suspense, lazy } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import React, { Suspense, lazy } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useMobileView } from '../../contexts/MobileViewContext';
-import '../CSS/Pages/BlogsListPage.css';
 
 const BlogCard = lazy(() => import('../BlogsPage/BlogCard'));
 
@@ -46,7 +45,7 @@ const BlogsList = () => {
   ];
 
   const handleBlogCardClick = (id) => {
-    navigate(`/blogs/${id}`); // Navigate to the blog content route with the blog ID
+    navigate(`/blogs/${id}`); 
   };
   
   return (

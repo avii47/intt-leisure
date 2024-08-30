@@ -1,4 +1,4 @@
-import React, { useState, Suspense, lazy } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import bg from '../assets/images/blogs-bg.jpg'
 
@@ -19,7 +19,6 @@ const BlogsPage = () => {
             <Suspense fallback={<div>Loading...</div>}>
                 <HeroSection img={img} title={title} sub={sub} />
             </Suspense>
-            {/* Dynamic Routing for BlogsList and BlogsContent */}
             <Suspense fallback={<div>Loading...</div>}>
                 <Routes>
                     <Route path="/" element={<BlogsList />} />
@@ -30,7 +29,7 @@ const BlogsPage = () => {
                 <FooterSection />
             </Suspense>
             <Suspense fallback={<div>Loading...</div>}>
-                <MobileButton  label="Book Now" />
+                <MobileButton label="Book Now" />
             </Suspense>
         </>
     )
