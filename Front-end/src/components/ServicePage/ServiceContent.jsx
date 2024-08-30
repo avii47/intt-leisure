@@ -1,6 +1,7 @@
-import React, { useState, useEffect, lazy } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import React, { useEffect, lazy } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useMobileView } from '../../contexts/MobileViewContext';
+
 import '../CSS/Pages/ServicePage.css';
 
 import img1 from '../../assets/images/stock-photo-old-man-with-gray-hair-reading-a-book-sited-on-an-bench-2292379427 (1).jpg'
@@ -14,7 +15,7 @@ const ContentCard = lazy(() => import('./ServiceContentCard'));
 const ServiceContent = () => {
 
   const isMobileView = useMobileView();
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
   const img6 = 'https://img.freepik.com/free-photo/fit-man-practicing-yoga_23-2151745576.jpg?t=st=1724408447~exp=1724412047~hmac=920d3b90806acfb59af294d14b6ea635a051638d00ac6f663da71fd1014b9947&w=1380'
 
   const contentData = [
@@ -54,7 +55,7 @@ const ServiceContent = () => {
       'sub': 'Mindfulness at Ritigala',
       'text': 'Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.'
     },
-      
+
   ];
 
   useEffect(() => {
@@ -82,18 +83,18 @@ const ServiceContent = () => {
   }, []);
 
   const handleServiceCardClick = (id) => {
-    navigate(`/services/${id}`); 
+    navigate(`/services/${id}`);
   };
 
   return (
-    <section id="service-content-section"  className={`section justify-content-center service-content-section d-flex ${isMobileView ? 'mobile-view' : ''}`}>
+    <section id="service-content-section" className={`section justify-content-center service-content-section d-flex ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="service-section-content justify-content-center">
         <h3 className='font-primary'>Choose your Journey</h3>
-        <p className='font-secondary' style={{ marginTop:'10px' }}>As you immerse yourself in this enchanting destination, we invite you to participate in profound self-reflection and practice alongside us. </p>
+        <p className='font-secondary' style={{ marginTop: '10px' }}>As you immerse yourself in this enchanting destination, we invite you to participate in profound self-reflection and practice alongside us. </p>
         <div id='service-content-cards-container' className="d-flex service-content-cards-container">
-            {contentData.map((content, index) => (
-              <ContentCard key={index} content={content} onClick={() => handleServiceCardClick(content.id)} />
-            ))}
+          {contentData.map((content, index) => (
+            <ContentCard key={index} content={content} onClick={() => handleServiceCardClick(content.id)} />
+          ))}
         </div>
       </div>
     </section>

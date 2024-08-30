@@ -1,7 +1,6 @@
-import React, { useState, useEffect, lazy } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useMobileView } from '../../contexts/MobileViewContext';
-import '../CSS/Pages/BlogsPage.css';
 
 const BlogsContent = () => {
 
@@ -16,7 +15,7 @@ const BlogsContent = () => {
       <div className="blogs-section-content">
          <h3 className='font-primary' style={{fontSize:'28px'}}>Mindfulness In Leadership: Harnessing The Power Of Breath For Effective Decision-Making</h3>
         <p className='font-secondary'>Dr. Gamini Hewawasam, founder of ManoLead, is a scholar-practitioner specializing in the intersection of mindfulness and leadership theory.</p>
-        <img className='blogs-img' src={img1} alt="blogs-img" />
+        <img className='blogs-img' src={img1} alt="blogs-img" loading='lazy' />
         <p className="font-secondary">
             Within the demanding nature of business, effective leadership abilities are crucial for achieving organizational success. One trait that significantly enhances the ability to make sound, profitable decisions is mindfulness. Specifically, I believe the practice of Ānāpānasati, a word from the Pāli language that translates to “mindfulness of breathing,” is something all leaders should adopt.
         </p>
@@ -26,7 +25,7 @@ const BlogsContent = () => {
         <p className="font-secondary">
             orporate culture frequently creates high-pressure situations that necessitate clear thinking and executive skills. When this increased awareness is applied in corporate settings, leaders can generate stronger decision-making skills and guide their team onto the best path.
         </p>
-        <img className='blogs-img' src={img2} alt="blogs-img" />
+        <img className='blogs-img' src={img2} alt="blogs-img" loading='lazy' />
         <h3 className='font-primary' style={{fontSize:'28px'}}>A Practical Guide For Corporate Leaders</h3>
         <p className='font-secondary'>Incorporating mindful breathing into your daily routine is a great way to attain a state of calmness and clarity. Here is a process that you can use to pursue the practice of Ānāpānasati.</p>
 

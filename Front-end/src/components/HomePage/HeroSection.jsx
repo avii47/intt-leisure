@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import '../CSS/HeroSection.css';
 import Lottie from 'lottie-react';
 import img_01 from '../../assets/images/Manolead-01.png';
 import img_02 from '../../assets/images/FCC-Signature 1.png';
@@ -56,7 +55,7 @@ const HeroSection = () => {
 
       inactivityTimeout = setTimeout(() => {
         setIsCursorMoving(false);
-      }, 5000); // 2 seconds of inactivity to hide the overlayer and heading
+      }, 5000);
     };
 
     window.addEventListener('mousemove', handleMouseMove);
@@ -88,8 +87,8 @@ const HeroSection = () => {
         </div>
         <div className={`bottom-viewbar d-flex ${isCursorMoving ? 'slide-up' : 'slide-down'}`}>
           <h5 className="bottom-viewbar-text">Introduced By</h5>
-          <img src={img_01} alt="manolead-logo" className="bottom-viewbar-img" loading='lazy'/>
-          <img src={img_02} alt="forbes logo" className="bottom-viewbar-img img2" loading='lazy'/>
+          <img src={img_01} alt="manolead-logo" className="bottom-viewbar-img" loading='lazy' />
+          <img src={img_02} alt="forbes logo" className="bottom-viewbar-img img2" loading='lazy' />
           <div className="social-icon-section">
             <i className="fa-brands fa-facebook social-icon"></i>
             <i className="fa-brands fa-linkedin social-icon"></i>

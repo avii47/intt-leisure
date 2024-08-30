@@ -3,7 +3,6 @@ import PackageCard from '../BookNowPage/PackageCard';
 import { StickyContainer, Sticky } from 'react-sticky';
 import DatePicker from "react-datepicker";
 import { useMobileView } from '../../contexts/MobileViewContext';
-import '../CSS/Pages/BookNowPage.css';
 import "react-datepicker/dist/react-datepicker.css";
 import emailjs from 'emailjs-com';
 import Modal from './Modal'; 

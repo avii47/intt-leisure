@@ -1,5 +1,4 @@
 import React, { useState, useEffect, lazy } from 'react';
-import './CSS/Home/DiscoverSection.css';
 
 const ContentCard = lazy(() => import('./ContentCard'));
 
@@ -8,7 +7,7 @@ const DiscoverSection = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobileView(window.innerWidth <= 1200); 
+      setIsMobileView(window.innerWidth <= 1200);
     };
 
     handleResize();
@@ -45,11 +44,11 @@ const DiscoverSection = () => {
         <hr style={{ width: '4.2rem', margin: 'auto' }} /><br></br>
         <h3>What is Mindfulness?</h3>
         <p>The original concept of Mindfulness backed by research</p>
-        
+
         <div className="d-flex discover-cards">
-            {contentData.map((content, index) => (
-              <ContentCard key={index} content={content} />
-            ))}
+          {contentData.map((content, index) => (
+            <ContentCard key={index} content={content} />
+          ))}
         </div>
       </div>
     </section>

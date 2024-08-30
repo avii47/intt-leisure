@@ -1,13 +1,11 @@
-// src/components/MobileButton.js
-
 import React from 'react';
-import './CSS/MobileBookNowButton.css'; 
+import './CSS/MobileBookNowButton.css';
 
 const MobileButton = ({ onClick, label }) => {
   return (
-      <button className="mobile-button" onClick={onClick}>
+    <button className="mobile-button" onClick={onClick}>
       {label}
-      </button>
+    </button>
   );
 };
 

@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useMobileView } from '../contexts/MobileViewContext';
 import './CSS/HeroSection.css';
 import Lottie from 'lottie-react'
 import animationData from '../assets/icons/down-arrow2.json'
 
-const HeroSection = ({img,title,sub}) => {
+const HeroSection = ({ img, title, sub }) => {
 
   const isMobileView = useMobileView();
 
@@ -32,21 +32,21 @@ const HeroSection = ({img,title,sub}) => {
       }
     };
   }, []);
-  
+
   return (
     <div id="Hero-section" className={`hero-section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="overlayer"></div>
-        <LazyLoadImage src={img}
-          className="service-hero-img"
-          alt="hero image"
-        />
-        <div className="hero-content">
-          <div id='hero-heading' className="hero-heading-section">
-              <h1 className='hero-heading font-primary'>{title}</h1>
-              <p className='font-secondary'>{sub}</p>
-              <Lottie loading="lazy" className='arrow-icon' animationData={animationData}></Lottie>
-          </div>
-        </div>  
+      <LazyLoadImage src={img}
+        className="service-hero-img"
+        alt="hero image"
+      />
+      <div className="hero-content">
+        <div id='hero-heading' className="hero-heading-section">
+          <h1 className='hero-heading font-primary'>{title}</h1>
+          <p className='font-secondary'>{sub}</p>
+          <Lottie loading="lazy" className='arrow-icon' animationData={animationData}></Lottie>
+        </div>
+      </div>
     </div>
   );
 };
