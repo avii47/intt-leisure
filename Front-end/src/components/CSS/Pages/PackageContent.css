@@ -3,7 +3,7 @@
     justify-content: center;
 }
 .package-section-content {
-    padding-bottom: 10%;
+    padding-bottom: 30%;
     width: 80vw;
     flex-wrap: wrap; 
     text-align: left;
@@ -13,4 +13,7 @@
     width: 200px;
     font-size: 20px;
     margin-bottom: 60px;
+}
+.mobile-view .package-section-content{
+    margin-top: -100px;
 }

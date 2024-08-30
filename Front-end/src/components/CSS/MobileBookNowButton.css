@@ -1,28 +1,27 @@
-/* src/components/MobileButton.css */
-.mobile-button-container{
+
+.mobile-button {
+    padding: 10px 20px;
     width: 100vw;
-    display: flex;
-    background-color: aqua;
+    height: 60px;
     position: fixed;
     bottom: 0px;
     justify-content: center;
-}
-.mobile-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
     cursor: pointer;
     z-index: 1000;
-    display: none; /* Initially hidden */
+    outline: solid 1px white;
+    outline-offset:-5px;
+    background-color: #ac8453;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    display: none; 
   }
   
-  /* Media query for mobile devices */
   @media only screen and (max-width: 768px) {
     .mobile-button {
-      display: block; /* Show button only on mobile */
+      display: block; 
     }
   }
 

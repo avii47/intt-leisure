@@ -5,12 +5,9 @@ import './CSS/MobileBookNowButton.css';
 
 const MobileButton = ({ onClick, label }) => {
   return (
-    <div className='mobile-button-container'>
-        <button className="mobile-button" onClick={onClick}>
-        {label}
-        </button>
-    </div>
-
+      <button className="mobile-button" onClick={onClick}>
+      {label}
+      </button>
   );
 };
 

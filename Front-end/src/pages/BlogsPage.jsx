@@ -6,6 +6,7 @@ const HeroSection = lazy(() => import('../components/HeroSection'));
 const BlogsContent = lazy(() => import('../components/BlogsPage/BlogsContent'));
 const BlogsList = lazy(() => import('../components/BlogsPage/BlogList'));
 const FooterSection = lazy(() => import('../components/FooterSection'));
+const MobileButton = lazy(() => import('../components/MobileBookNowButton'));
 
 const BlogsPage = () => {
 
@@ -27,6 +28,9 @@ const BlogsPage = () => {
             </Suspense>
             <Suspense fallback={<div>Loading...</div>}>
                 <FooterSection />
+            </Suspense>
+            <Suspense fallback={<div>Loading...</div>}>
+                <MobileButton  label="Book Now" />
             </Suspense>
         </>
     )

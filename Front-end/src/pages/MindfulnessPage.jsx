@@ -1,7 +1,10 @@
-import HeroSection from '../components/HeroSection'
-import MindfulnessContent from '../components/MindfulnessPage/MindfulnessContent'
-import FooterSection from '../components/FooterSection'
+import React, { Suspense, lazy } from 'react';
 import bg from '../assets/images/mindfulness-hero.png';
+
+const HeroSection = lazy(() => import('../components/HomePage/HeroSection'));
+const MindfulnessContent = lazy(() => import('../components/MindfulnessPage/MindfulnessContent'));
+const FooterSection = lazy(() => import('../components/FooterSection'));
+const MobileButton = lazy(() => import('../components/MobileBookNowButton'));
 
 const MindfulnessPage = () => {
     const title = 'Mindfulness Tourism';
@@ -9,9 +12,18 @@ const MindfulnessPage = () => {
     
     return (
         <>
-            <HeroSection img={bg} title={title} sub={sub} />
-            <MindfulnessContent />
-            <FooterSection />
+            <Suspense fallback={<div>Loading...</div>}>
+                <HeroSection img={bg} title={title} sub={sub} />
+            </Suspense>
+            <Suspense fallback={<div>Loading...</div>}>
+                <MindfulnessContent />
+            </Suspense>
+            <Suspense fallback={<div>Loading...</div>}>
+                <FooterSection />
+            </Suspense>
+            <Suspense fallback={<div>Loading...</div>}>
+                <MobileButton  label="Book Now" />
+            </Suspense>
         </>
     )
 }

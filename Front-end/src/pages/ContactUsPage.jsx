@@ -9,6 +9,7 @@ const HeroSection = lazy(() => import('../components/HeroSection'));
 const ContactUsContent = lazy(() => import('../components/ContactUsPage/ContactUsContent'));
 const FeedbackSection = lazy(() => import('../components/ContactUsPage/FeedbackSection'));
 const FooterSection = lazy(() => import('../components/FooterSection'));
+const MobileButton = lazy(() => import('../components/MobileBookNowButton'));
 
 const ContactUsPage = () => {
     const img = 'https://www.shutterstock.com/shutterstock/photos/470419964/display_1500/stock-photo-hawks-bill-sea-turtle-release-to-the-freedom-470419964.jpg'
@@ -28,6 +29,9 @@ const ContactUsPage = () => {
             </Suspense>
             <Suspense fallback={<div>Loading...</div>}>
                 <FooterSection />
+            </Suspense>
+            <Suspense fallback={<div>Loading...</div>}>
+                <MobileButton  label="Book Now" />
             </Suspense>
         </>
     )

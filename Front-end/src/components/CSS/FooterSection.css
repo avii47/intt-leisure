@@ -99,7 +99,7 @@
 
 .mobile-view .footer-content{
   width: 100vw;
-  padding: 2rem 2rem 2rem 2rem;
+  padding: 2rem 2rem 5rem 2rem;
 }
 .mobile-view .footer-nav{
   flex-direction: column;
