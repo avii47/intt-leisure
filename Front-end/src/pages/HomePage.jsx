@@ -8,7 +8,6 @@ import React, { Suspense, lazy } from 'react';
 // import ConnectAppSection from '../components/HomePage/ConnectAppSection';
 // import EventsNewsSection from '../components/HomePage/Events&NewsSection';
 // import FooterSection from '../components/FooterSection';
-import MobileButton from '../components/MobileBookNowButton';
 
 const HeroSection = lazy(() => import('../components/HomePage/HeroSection'));
 const MindfulnessTourismSection = lazy(() => import('../components/HomePage/MindfulnessTourismSection'));
@@ -19,6 +18,7 @@ const TestimonialSection = lazy(() => import('../components/HomePage/Testimonial
 const ConnectAppSection = lazy(() => import('../components/HomePage/ConnectAppSection'));
 const EventsNewsSection = lazy(() => import('../components/HomePage/Events&NewsSection'));
 const FooterSection = lazy(() => import('../components/FooterSection'));
+const MobileButton = lazy(() => import('../components/MobileBookNowButton'));
 
 const TestPage = lazy(() => import('../components/SliderComponent'));
 

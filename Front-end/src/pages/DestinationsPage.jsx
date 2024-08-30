@@ -7,6 +7,7 @@ import bg from '../assets/images/destinations-bg.jpg'
 const HeroSection = lazy(() => import('../components/HeroSection'));
 const DestinationsContent = lazy(() => import('../components/DestinationsPage/DestinationContent'));
 const FooterSection = lazy(() => import('../components/FooterSection'));
+const MobileButton = lazy(() => import('../components/MobileBookNowButton'));
 
 const ContactUsPage = () => {
     
@@ -24,6 +25,9 @@ const ContactUsPage = () => {
             </Suspense>
             <Suspense fallback={<div>Loading...</div>}>
                 <FooterSection />
+            </Suspense>
+            <Suspense fallback={<div>Loading...</div>}>
+                <MobileButton  label="Book Now" />
             </Suspense>
         </>
     )
