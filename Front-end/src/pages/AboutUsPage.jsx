@@ -1,4 +1,5 @@
 import React, { Suspense, lazy } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const HeroSection = lazy(() => import('../components/HeroSection'));
 const AboutUsContent = lazy(() => import('../components/AboutusPage/AboutUsContent'));
@@ -12,6 +13,10 @@ const AboutUsPage = () => {
 
     return (
         <>
+            <Helmet>
+                <meta name="description" content="A Forbes Coach Council member and a leading practitioner of the original form of mindfulness. With over 12 years of experience in the travel industry in the USA, Dr. Hewawasam has recognized a gap between traditional mindfulness teachings preserved in Sri Lanka and their often diluted Western practices." />
+                <link rel="canonical" href="https://inttleisure.com/why-choose-us" />
+            </Helmet>
             <Suspense fallback={<div>Loading...</div>}>
                 <HeroSection img={img} title={title} sub={sub} />
             </Suspense>

@@ -1,4 +1,5 @@
 import React, { Suspense, lazy } from 'react';
+import { Helmet } from 'react-helmet-async';
 import AboutUsImg from '../assets/images/Why Choose us_.jpg'
 
 const HeroSection = lazy(() => import('../components/HeroSection'));
@@ -12,6 +13,10 @@ const PackageContentPage = () => {
 
     return (
         <>
+            <Helmet>
+                <meta name="description" content="find best package for you" />
+                <link rel="canonical" href="https://inttleisure.com/services" />
+            </Helmet>
             <Suspense fallback={<div>Loading...</div>}>
                 <HeroSection img={AboutUsImg} title={title} sub={sub} />
             </Suspense>

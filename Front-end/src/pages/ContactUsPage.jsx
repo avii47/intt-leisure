@@ -1,4 +1,5 @@
 import React, { Suspense, lazy } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const HeroSection = lazy(() => import('../components/HeroSection'));
 const ContactUsContent = lazy(() => import('../components/ContactUsPage/ContactUsContent'));
@@ -13,6 +14,10 @@ const ContactUsPage = () => {
     
     return (
         <>
+            <Helmet>
+                <meta name="description" content="contact intt leisure team for mindfulness tours" />
+                <link rel="canonical" href="https://inttleisure.com/contact-us" />
+            </Helmet>
             <Suspense fallback={<div>Loading...</div>}>
                 <HeroSection img={img} title={title} sub={sub} />
             </Suspense>
