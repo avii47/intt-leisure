@@ -1,4 +1,5 @@
 import React, { Suspense, lazy } from 'react';
+import { Helmet } from 'react-helmet-async';
 import bg from '../assets/images/mindfulness-hero.png';
 
 const HeroSection = lazy(() => import('../components/HeroSection'));
@@ -12,6 +13,10 @@ const MindfulnessPage = () => {
 
     return (
         <>
+            <Helmet>
+                <meta name="description" content="What exactly is Mindful Tourism? We often hear about mindfulness, but how often do we participate in Mindful Tourism? It’s a distinct approach rooted in Sri Lanka's authentic mindfulness teachings and bolstered by solid research." />
+                <link rel="canonical" href="https://inttleisure.com/mindfulness" />
+            </Helmet>
             <Suspense fallback={<div>Loading...</div>}>
                 <HeroSection img={bg} title={title} sub={sub} />
             </Suspense>

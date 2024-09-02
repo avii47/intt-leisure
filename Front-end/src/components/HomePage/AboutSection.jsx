@@ -1,4 +1,5 @@
 import React, { useState, useEffect, lazy } from 'react';
+import { Helmet } from 'react-helmet-async';
 import Button from 'react-bootstrap/Button';
 import img_01 from '../../assets/images/Rectangle 25.png';
 import img_02 from '../../assets/images/Rectangle 28.png';
@@ -69,20 +70,28 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about-section" className={`section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`}>
-      <div className="about-content justify-content-center">
-        <div id='about-heading' className='about-heading'>
-          <h3 className='font-primary'>Rediscover yourself with Mindfulness Tours and Retreats</h3>
-          <p className='font-secondary' style={{ fontSize: '16px' }}>Embraced by verdant jungle with panoramic views of the Indian Ocean, ÀNI Sri Lanka, an all-inclusive luxury private resort, <br></br> welcomes exclusively your family and friends alone to this private beachfront estate on the island’s fabled south coast.</p>
+    <>
+      <Helmet>
+        <title>About Us - Mindfulness Tours and Retreats</title>
+        <meta name="description" content="Rediscover yourself with Mindfulness Tours and Retreats. Explore mindfulness practices with panoramic views of the Indian Ocean, guided by experts." />
+        <link rel="canonical" href="https://new.inttleisure.com" />
+      </Helmet>
+      
+      <section id="about-section" className={`section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`}>
+        <div className="about-content justify-content-center">
+          <div id='about-heading' className='about-heading'>
+            <h3 className='font-primary'>Rediscover yourself with Mindfulness Tours and Retreats</h3>
+            <p className='font-secondary' style={{ fontSize: '16px' }}>Embraced by verdant jungle with panoramic views of the Indian Ocean, ÀNI Sri Lanka, an all-inclusive luxury private resort, <br></br> welcomes exclusively your family and friends alone to this private beachfront estate on the island’s fabled south coast.</p>
+          </div>
+          <div id='about-cards' className="d-flex about-cards">
+            {contentData.map((content, index) => (
+              <ContentCard key={index} content={content} />
+            ))}
+          </div>
+          <Button variant="outline-dark">Learn more ></Button>
         </div>
-        <div id='about-cards' className="d-flex about-cards">
-          {contentData.map((content, index) => (
-            <ContentCard key={index} content={content} />
-          ))}
-        </div>
-        <Button variant="outline-dark">Learn more ></Button>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

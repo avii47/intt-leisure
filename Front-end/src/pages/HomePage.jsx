@@ -1,4 +1,5 @@
 import React, { Suspense, lazy } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const HeroSection = lazy(() => import('../components/HomePage/HeroSection'));
 const MindfulnessTourismSection = lazy(() => import('../components/HomePage/MindfulnessTourismSection'));
@@ -10,12 +11,14 @@ const EventsNewsSection = lazy(() => import('../components/HomePage/Events&NewsS
 const FooterSection = lazy(() => import('../components/FooterSection'));
 const MobileButton = lazy(() => import('../components/MobileBookNowButton'));
 
-
-
-
 const HomePage = () => {
     return (
         <>
+            <Helmet>
+                <meta name="description" content="Rediscover yourself with Mindfulness Tours and Retreats. Explore mindfulness practices with panoramic views of the Indian Ocean, guided by experts." />
+                <link rel="canonical" href="https://inttleisure.com/" />
+            </Helmet>
+
             <Suspense fallback={<div>Loading...</div>}>
                 <HeroSection />
             </Suspense>

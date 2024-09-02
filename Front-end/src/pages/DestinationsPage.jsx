@@ -1,4 +1,5 @@
 import React, { Suspense, lazy } from 'react';
+import { Helmet } from 'react-helmet-async';
 import bg from '../assets/images/destinations-bg.jpg'
 
 const HeroSection = lazy(() => import('../components/HeroSection'));
@@ -14,6 +15,10 @@ const ContactUsPage = () => {
 
     return (
         <>
+            <Helmet>
+                <meta name="description" content="view mindfulness vacation destinations in Sri Lanka" />
+                <link rel="canonical" href="https://inttleisure.com/destinations" />
+            </Helmet>
             <Suspense fallback={<div>Loading...</div>}>
                 <HeroSection img={img} title={title} sub={sub} />
             </Suspense>
