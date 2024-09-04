@@ -25,8 +25,7 @@
 }
 .nav-item-container{
     margin-top: 5px;
-    column-gap: 0px;
-    justify-content: space-between; 
+    justify-content: center;
 }
 .nav-item {
     min-width:12rem;
@@ -112,6 +111,7 @@
 }
 .btn-book{
     width: 150px;
+    margin-left: 50px;
 }
 .mobile-view .btn-book{
     display: none;

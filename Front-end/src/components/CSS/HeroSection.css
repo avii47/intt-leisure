@@ -45,10 +45,6 @@ video {
     font-weight: 500;
     letter-spacing: 0.15rem;
 }
-.animate-heading{
-    opacity: 1;
-    transform: translateY(0);
-}
 .arrow-icon{
     height: 4.375rem;
     margin-top: 9.375rem;
@@ -63,9 +59,9 @@ video {
     color: rgba(0, 0, 0, 0.573);
     height: 3.6rem;
     width: 80%;
-    padding: 0 0 1.25rem 1.25rem;
+    opacity: 1;
     justify-content: center;
-    transition: transform 0.5s ease;
+    transition: transform 1s ease;
 }
 .bottom-viewbar-text {
     font-size: 16px;
@@ -118,10 +114,12 @@ video {
 }
 .bottom-viewbar.slide-down {
     transform: translateY(100%);
+    transition: all 1s ease !important;
 }
   
 .bottom-viewbar.slide-up {
     transform: translateY(0%);
+    transition: transform 1s ease !important;
 }
 
 .mobile-view .hero-heading{

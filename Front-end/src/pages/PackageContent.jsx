@@ -1,15 +1,142 @@
 import React, { Suspense, lazy } from 'react';
+import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import AboutUsImg from '../assets/images/Why Choose us_.jpg'
+
+import img1 from '../assets/images/stock-photo-old-man-with-gray-hair-reading-a-book-sited-on-an-bench-2292379427 (1).jpg'
+import img2 from '../assets/images/stock-photo-group-of-diverse-young-people-practicing-yoga-doing-easy-seat-exercise-sukhasana-pose-working-1227103207.jpg'
+import img3 from '../assets/images/full-shot-man-working-outdoors.jpg'
+import img4 from '../assets/images/WhatsApp Image 2024-08-23 at 3.43.43 PM.jpeg'
+import img5 from '../assets/images/beautiful-woman-meditating-nature.jpg'
 
 const HeroSection = lazy(() => import('../components/HeroSection'));
 const PackageContent = lazy(() => import('../components/PackageContentPage/PackageContent'));
 const FooterSection = lazy(() => import('../components/FooterSection'));
 
 const PackageContentPage = () => {
-    const img = 'https://img.freepik.com/free-photo/group-people-taking-interview-outdoors_23-2149032381.jpg?t=st=1722240323~exp=1722243923~hmac=f8549aaa2337e0db5ef2134a7d64d62945b7ed782bb56176c1f3910c557287c0&w=1380'
-    const title = 'Mindfulness for Leaders';
-    const sub = 'Explore Our Services';
+
+    const { id } = useParams();
+
+    const contentData = [
+      {
+        'id':  1,
+        'img': img1,
+        'title': 'Mindfulness for Leaders',
+        'subtitle': 'Unlock Your Leadership Potential with Mindfulness in Sri Lanka',
+        'description': 'In the serene and culturally rich backdrop of Sri Lanka, where mindfulness has thrived for centuries, INTT Leisure invites leaders like you to embark on a transformative journey towards becoming more mindful and effective in your leadership role.',
+        'offers': [
+          {
+            'offer': 'Stress Reduction in Serenity',
+            'description': 'Leaders often bear the weight of significant stress. Our mindfulness programs, set against the tranquil landscapes of Sri Lanka, provide practical techniques to manage stress, allowing you to lead with clarity and resilience.'
+          },
+          {
+            'offer': 'Enhanced Focus Amidst Natural Beauty',
+            'description': 'Immerse yourself in the lush natural beauty of Sri Lanka as mindfulness practices sharpen your focus and attention, enabling you to make better decisions and prioritize effectively.'
+          },
+          {
+            'offer': 'Ancient Wisdom for Modern Leaders',
+            'description': 'Benefit from the wealth of mindfulness knowledge that Sri Lanka has cultivated since ancient times. Our programs seamlessly blend ancient wisdom with contemporary leadership principles'
+          },
+        ]
+      },
+      {
+        'id':  2,
+        'img': img2,
+        'title': 'Mindfulness for Educators',
+        'subtitle': 'Uncover the Luxury of Mindfulness in Sri Lanka for Educators',
+        'description': 'Are you a student seeking academic excellence and personal growth? Are you an educator looking to enhance your teaching and create a more mindful classroom environment? Look no further. Join us at INTT Leisure for a transformative journey that blends the luxury of Sri Lanka with mindfulness experiences tailored for both students and educators.',
+        'offers': [
+          {
+            'offer': 'Student Empowerment',
+            'description': 'Equip students with mindfulness tools to reduce stress, improve focus, and excel academically, all within the lush and serene landscapes of Sri Lanka.'
+          },
+          {
+            'offer': 'Educator Enhancement',
+            'description': 'Elevate your teaching skills and classroom management through mindfulness techniques that foster a positive and enriching learning environment.'
+          },
+          {
+            'offer': 'Cultural Immersion',
+            'description': 'Immerse yourself in the rich cultural heritage of Sri Lanka, where mindfulness has thrived for centuries, adding depth to your mindfulness journey.'
+          },
+        ]
+      },
+      {
+        'id':  3,
+        'img': img3,
+        'title': 'Mindfulness for Corporates',
+        'description': 'Is your corporate team ready to embark on a transformative journey that combines productivity enhancement with holistic well-being? Join us at INTT Leisure as we take your team on a mindful tour of Sri Lanka. Immerse yourselves in the island’s beauty while honing mindfulness skills that boost both productivity and overall well-being.',
+        'offers': [
+          {
+            'offer': 'Leadership Retreats',
+            'description': 'Empower your leaders with mindfulness practices that promote clarity, resilience, and authentic leadership in the idyllic settings of Sri Lanka.'
+          },
+          {
+            'offer': 'Employee Wellness Escapes',
+            'description': 'Enhance employee well-being, reduce stress, and create a healthier workplace through our mindfulness programs, tailored for corporate teams.'
+          },
+          {
+            'offer': 'Team Building Expeditions',
+            'description': 'Strengthen team dynamics and collaboration through mindfulness-based team-building activities amidst Sri Lanka’s inspiring landscapes.'
+          },
+          {
+            'offer': 'Stress Mastery Seminars',
+            'description': 'Equip your team with stress-reduction techniques, resulting in a happier and more productive corporate culture.'
+          },
+        ]
+      },
+      {
+        'id':  4,
+        'img': img4,
+        'title': 'Mindfulness for Seekers',
+        'description': 'Are you seeking inner peace, balance, and personal growth? Look no further. At INTT Leisure, we offer a range of transformative mindfulness workshops designed exclusively for seekers like you. Our workshops are more than just classes; they are your gateway to a luxury mindfulness tour, with the enchanting landscapes of Sri Lanka as your backdrop.',
+        'offers': [
+          {
+            'offer': 'Mindfulness Basics',
+            'description': 'Dive into the fundamentals of mindfulness and learn techniques to enhance your mental clarity and emotional well-being'
+          },
+          {
+            'offer': 'Mindful Living',
+            'description': 'Explore mindfulness as a way of life, discovering how it can improve your relationships, work, and overall happiness.'
+          },
+          {
+            'offer': 'Stress Reduction',
+            'description': 'Learn to manage stress effectively, equipping yourself with the tools to find tranquility in everyday life.'
+          },
+          {
+            'offer': 'Mindful Meditation (BIBO Meditation)',
+            'description': 'Develop a regular meditation practice to cultivate mindfulness, reduce anxiety, and boost self-awareness. Our guided sessions immerse you in the serenity of Sri Lanka’s natural beauty.'
+          }
+        ]
+      },
+      {
+        'id':  5,
+        'img': img5,
+        'title': 'Mindfulness for Students',
+        'subtitle': 'Uncover the Luxury of Mindfulness in Sri Lanka for Students',
+        'description': 'Are you a student seeking academic excellence and personal growth? Are you an educator looking to enhance your teaching and create a more mindful classroom environment? Look no further. Join us at INTT Leisure for a transformative journey that blends the luxury of Sri Lanka with mindfulness experiences tailored for both students and educators.',
+        'offers': [
+          {
+            'offer': 'Student Empowerment',
+            'description': 'Equip students with mindfulness tools to reduce stress, improve focus, and excel academically, all within the lush and serene landscapes of Sri Lanka.'
+          },
+          {
+            'offer': 'Educator Enhancement',
+            'description': 'Elevate your teaching skills and classroom management through mindfulness techniques that foster a positive and enriching learning environment.'
+          },
+          {
+            'offer': 'Cultural Immersion',
+            'description': 'Immerse yourself in the rich cultural heritage of Sri Lanka, where mindfulness has thrived for centuries, adding depth to your mindfulness journey.'
+          },
+        ]
+      },
+    ];
+  
+    const contentId = parseInt(id, 10);
+    const content = contentData.find(item => item.id === contentId);
+  
+    if (!content) {
+      return <div>Content not found</div>;
+    }
 
     return (
         <>
@@ -18,10 +145,10 @@ const PackageContentPage = () => {
                 <link rel="canonical" href="https://inttleisure.com/services" />
             </Helmet>
             <Suspense fallback={<div>Loading...</div>}>
-                <HeroSection img={AboutUsImg} title={title} sub={sub} />
+                <HeroSection img={content.img} title={content.title} sub={content.subtitle} />
             </Suspense>
             <Suspense fallback={<div>Loading...</div>}>
-                <PackageContent />
+                <PackageContent content={content} />
             </Suspense>
             <Suspense fallback={<div>Loading...</div>}>
                 <FooterSection />

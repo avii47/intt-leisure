@@ -1,8 +1,8 @@
 import React from 'react';
 
-const ServiceCard = React.forwardRef(({ content, className, style }, ref) => {
+const ServiceCard = React.forwardRef(({ content, className, style, onClick }, ref) => {
   return (
-    <div ref={ref} className={`service-card ${className}`} style={style}>
+    <div ref={ref} className={`service-card ${className}`} style={style} onClick={onClick}>
       <div className="overlayer"></div>
       <img className='crd-img' src={content.img} alt="serviceCard-img" loading='lazy' />
       <div className="card-content">

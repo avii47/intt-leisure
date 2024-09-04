@@ -139,7 +139,7 @@ const BookNowContent = () => {
     <section id="bookNow-content-section" className={`section bookNow-content-section d-flex ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="bookNow-section-content d-flex">
         <div className='col-md-12 d-flex main-col'>
-          <div className="col-6 scrollable-content">
+          <div className="col-7 scrollable-content">
             <h3 className='font-primary'>Book your journey with us!</h3>
             <br /><br />
             <form className="feedback-form">
@@ -308,8 +308,8 @@ const BookNowContent = () => {
         </div>
 
         <Modal show={showModal} onClose={() => setShowModal(false)}>
-          <h2>Booking Confirmed!</h2>
-          <p>Your booking details have been sent to your email.</p>
+          <h2>Booking Submited Succesfull</h2><br></br>
+          <p>Our team have recieved your booking and we will contact you soon.</p>
         </Modal>
       </div>
     </section>

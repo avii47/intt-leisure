@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import left_arrow from '../../assets/icons/left-arrow.png';
 import right_arrow from '../../assets/icons/right-arrow.png';
 import ServiceCard from './ServiceCard';
@@ -14,6 +15,7 @@ import img5 from '../../assets/images/services-img3.jpg';
 const ServicesSection = () => {
 
   const serviceCardsRef = useRef([]);
+  const navigate = useNavigate();
   const [showLeftButton2, setShowLeftButton] = useState(false);
   const [showRightButton2, setShowRightButton] = useState(true);
   const containerRef2 = useRef(null);
@@ -50,31 +52,37 @@ const ServicesSection = () => {
 
   const contentData = [
     {
+      id: 1,
       img: img1,
       title: 'Mindfulness for Leaders',
       sub: 'Unlock Your Leadership Potential with Mindfulness in Sri Lanka',
     },
     {
+      id: 2,
       img: img2,
       title: 'Mindfulness for Educators',
       sub: 'Uncover the Luxury of Mindfulness in Sri Lanka for Students and Educators',
     },
     {
+      id: 3,
       img: img3,
       title: 'Mindfulness for Corporates',
       sub: 'Is your corporate team ready to embark on a transformative journey that combines productivity enhancement with holistic well-being?',
     },
     {
+      id: 4,
       img: img4,
       title: 'Mindfulness for Seekers',
       sub: 'Are you seeking inner peace, balance, and personal growth?',
     },
     {
+      id: 5,
       img: img6,
       title: 'Mindfulness for Students',
       sub: 'Get a truly rejuvenating and life-changing experience through practice',
     },
     {
+      id: 6,
       img: img5,
       title: 'What benefits you will have with mindfulness practice?',
       sub: 'Get a truly rejuvenating and life-changing experience through practice',
@@ -119,6 +127,10 @@ const ServicesSection = () => {
     };
   }, []);
 
+  const handleServiceCardClick = (id) => {
+    navigate(`/services/${id}`);
+  };
+
   return (
     <div id='service-section' className={`section d-flex justify-content-center ${isMobileView ? 'mobile-view' : ''}`}>
       <div className='services-content justify-content-center'>
@@ -143,6 +155,7 @@ const ServicesSection = () => {
                 content={content}
                 ref={el => serviceCardsRef.current[index] = el}
                 style={{ '--animation-order': index }}
+                onClick={() => handleServiceCardClick(content.id)}
               />
             ))}
           </div>

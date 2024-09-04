@@ -86,34 +86,39 @@ function MyNavbar() {
 
   const ExperienceDropdownItems = [
     {
-      path: "/services/*",
+      id: 1,
+      path: "/services/1",
       imageSrc: img1,
       altText: "Leaders",
       label: "Leaders"
     },
     {
-      path: "/services/*",
+      id: 2,
+      path: "/services/2",
       imageSrc: img2,
       altText: "Educators",
       label: "Educators"
     },
     {
-      path: "/services/*",
+      id: 3,
+      path: "/services/3",
       imageSrc: img3,
       altText: "Coparates",
       label: "Coparates"
     },
     {
-      path: "/services/*",
+      id: 4,
+      path: "/services/4",
       imageSrc: img4,
-      altText: "Students",
-      label: "Students"
-    },
-    {
-      path: "/services/*",
-      imageSrc: img5,
       altText: "Seekers",
       label: "Seekers"
+    },
+    {
+      id: 5,
+      path: "/services/5",
+      imageSrc: img5,
+      altText: "Students",
+      label: "Students"
     },
   ];
 

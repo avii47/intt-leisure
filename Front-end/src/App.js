@@ -120,7 +120,7 @@ const App = () => {
               }
             />
             <Route
-              path="/services/*"
+              path="/services/:id"
               element={
                 <motion.div initial="initial" animate="enter" exit="exit" variants={pageVariants} className="page-transition">
                   <PackageContent />

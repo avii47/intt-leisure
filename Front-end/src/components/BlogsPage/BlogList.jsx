@@ -41,7 +41,6 @@ const BlogsList = () => {
       'title': 'Embracing Mindfulness In Leadership In The Age Of AI And Corporate Complexity',
       'sub': 'Well trained experts to guide you through the journey.'
     }
-    
   ];
 
   const handleBlogCardClick = (id) => {
