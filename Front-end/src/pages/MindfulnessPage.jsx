@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { Helmet } from 'react-helmet-async';
-import bg from '../assets/images/mindfulness-hero.png';
+import bg from '../assets/images/mindfulnessPage-hero-img.jpg';
 
 const HeroSection = lazy(() => import('../components/HeroSection'));
 const MindfulnessContent = lazy(() => import('../components/MindfulnessPage/MindfulnessContent'));

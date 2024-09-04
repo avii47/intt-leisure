@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import img from '../../assets/images/Mindfulness Tourism.jpg';
+import mindfulness_section_bg from '../../assets/images/homePage-mindfulness-section.jpg';
 
 const MindfulnessTourismSection = () => {
 
@@ -54,7 +54,7 @@ const MindfulnessTourismSection = () => {
   return (
     <section id="mindfulness-tourism-section" className={`mindfulness-tourism-section ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="overlayert"></div>
-      <img src={img} className="mindfulness-img" alt="mindfulness-img" loading='lazy' />
+      <img src={mindfulness_section_bg} className="mindfulness-img" alt="mindfulness section background image" loading='lazy' />
       <div className="mindfulness-tourism-content">
         <div className='mtc-main'>
           <h6 className='font-secondary' style={{ fontWeight: '250', fontSize: '15px' }}>Explore</h6>

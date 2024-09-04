@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { Helmet } from 'react-helmet-async';
-import img3 from '../assets/images/aerial-shot-long-road-surrounded-by-trees-fields2.jpg'
+import bg from '../assets/images/servicesPage-hero-img.jpg';
 
 const HeroSection = lazy(() => import('../components/HeroSection'));
 const ServiceContent = lazy(() => import('../components/ServicePage/ServiceContent'));
@@ -8,7 +8,6 @@ const FooterSection = lazy(() => import('../components/FooterSection'));
 const MobileButton = lazy(() => import('../components/MobileBookNowButton'));
 
 const ServicePage = () => {
-    const img = img3
     const title = 'Experience the Experience';
     const sub = 'Choose Your Journey';
 
@@ -19,7 +18,7 @@ const ServicePage = () => {
                 <link rel="canonical" href="https://inttleisure.com/services" />
             </Helmet>
             <Suspense fallback={<div>Loading...</div>}>
-                <HeroSection img={img} title={title} sub={sub} />
+                <HeroSection img={bg} title={title} sub={sub} />
             </Suspense>
             <Suspense fallback={<div>Loading...</div>}>
                 <ServiceContent />

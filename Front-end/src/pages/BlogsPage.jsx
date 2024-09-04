@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import bg from '../assets/images/blogs-bg.jpg'
+import bg from '../assets/images/blogPage-hero-img.jpg'
 
 const HeroSection = lazy(() => import('../components/HeroSection'));
 const BlogsContent = lazy(() => import('../components/BlogsPage/BlogsContent'));
@@ -11,7 +11,6 @@ const MobileButton = lazy(() => import('../components/MobileBookNowButton'));
 
 const BlogsPage = () => {
 
-    const img = bg;
     const title = 'Blogs';
     const sub = 'Explore Our Practice';
 
@@ -22,7 +21,7 @@ const BlogsPage = () => {
                 <link rel="canonical" href="https://inttleisure.com/blogs" />
             </Helmet>
             <Suspense fallback={<div>Loading...</div>}>
-                <HeroSection img={img} title={title} sub={sub} />
+                <HeroSection img={bg} title={title} sub={sub} />
             </Suspense>
             <Suspense fallback={<div>Loading...</div>}>
                 <Routes>

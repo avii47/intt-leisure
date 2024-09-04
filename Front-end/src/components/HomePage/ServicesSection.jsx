@@ -5,11 +5,11 @@ import right_arrow from '../../assets/icons/right-arrow.png';
 import ServiceCard from './ServiceCard';
 import { useMobileView } from '../../contexts/MobileViewContext';
 
-import img1 from '../../assets/images/confident-businessman-with-colleagues.jpg'
-import img2 from '../../assets/images/Student_ Educator.jpeg';
-import img3 from '../../assets/images/full-shot-man-working-outdoors.jpg'
-import img4 from '../../assets/images/Seeker.jpeg';
-import img5 from '../../assets/images/services-img3.jpg';
+import img1 from '../../assets/images/homePage-serviceCard-leaders-img.jpg'
+import img2 from '../../assets/images/homePage-serviceCards-educators.jpg';
+import img3 from '../../assets/images/homePage-serviceCards-coparates.jpg'
+import img4 from '../../assets/images/homePage-serviceCard-seekers.jpg';
+import img5 from '../../assets/images/homePage-servicesCard-students-img.jpg';
 
 
 const ServicesSection = () => {
@@ -20,8 +20,6 @@ const ServicesSection = () => {
   const [showRightButton2, setShowRightButton] = useState(true);
   const containerRef2 = useRef(null);
   const isMobileView = useMobileView();
-
-  const img6 = 'https://img.freepik.com/free-photo/beautiful-woman-meditating-nature_23-2148940321.jpg?w=2000&t=st=1724407077~exp=1724407677~hmac=c3719b8470350208385b0db346d0c2b59dfe7a381d6e43407230603a79962902';
 
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
@@ -77,7 +75,7 @@ const ServicesSection = () => {
     },
     {
       id: 5,
-      img: img6,
+      img: img5,
       title: 'Mindfulness for Students',
       sub: 'Get a truly rejuvenating and life-changing experience through practice',
     },

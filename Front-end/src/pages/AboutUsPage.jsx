@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { Helmet } from 'react-helmet-async';
+import bg from '../assets/images/whoWeArePage-hero-img.jpg';
 
 const HeroSection = lazy(() => import('../components/HeroSection'));
 const AboutUsContent = lazy(() => import('../components/AboutusPage/AboutUsContent'));
@@ -7,7 +8,6 @@ const FooterSection = lazy(() => import('../components/FooterSection'));
 const MobileButton = lazy(() => import('../components/MobileBookNowButton'));
 
 const AboutUsPage = () => {
-    const img = 'https://www.shutterstock.com/shutterstock/photos/2427351787/display_1500/stock-photo-knuckles-mountain-range-sri-lanka-a-captivating-landscape-of-lush-valleys-and-rugged-peaks-an-2427351787.jpg'
     const title = 'Who We Are';
     const sub = 'Connect with the Ultimate Luxury of Mindfulness in Sri Lanka';
 
@@ -18,7 +18,7 @@ const AboutUsPage = () => {
                 <link rel="canonical" href="https://inttleisure.com/why-choose-us" />
             </Helmet>
             <Suspense fallback={<div>Loading...</div>}>
-                <HeroSection img={img} title={title} sub={sub} />
+                <HeroSection img={bg} title={title} sub={sub} />
             </Suspense>
             <Suspense fallback={<div>Loading...</div>}>
                 <AboutUsContent />

@@ -1,8 +1,8 @@
 import React, { useState, useEffect, lazy } from 'react';
 import { useMobileView } from '../../contexts/MobileViewContext';
 
-import img2 from '../../assets/images/WhatsApp Image 2024-08-23 at 4.25.49 PM.jpeg'
-import img1 from '../../assets/images/WhatsApp Image 2024-08-23 at 4.26.02 PM.jpeg'
+import unique_excursions_img from '../../assets/images/mindfulnessPage-unique-excursions.jpg'
+import authentic_practices_img from '../../assets/images/mindfulnessPage-authentic-practices.jpg'
 
 const ContentBlock = lazy(() => import('./MindfulnessCard'));
 
@@ -91,7 +91,7 @@ const MindfulnessContent = () => {
         <div id='mindfulness-content-cards-container' className="mindfulness-content-cards-container">
 
           <ContentBlock
-            image={img1}
+            image={authentic_practices_img}
             title="Authentic Practices"
             text="Experience the unadulterated essence of mindfulness, untainted by modern adaptations. Our approach is a testament to the timeless wisdom of the Buddha's teachings, carefully preserved and passed down through generations in Sri Lanka."
             buttonText="Learn more >"
@@ -99,7 +99,7 @@ const MindfulnessContent = () => {
           />
 
           <ContentBlock
-            image={img2}
+            image={unique_excursions_img}
             title="Unique Excursions"
             text="These mindfulness practices guided by experts at INTT Leisure have been conducted on business leaders from Fortune 100 companies and are shown to be effective through proven results."
             buttonText="Learn more >"

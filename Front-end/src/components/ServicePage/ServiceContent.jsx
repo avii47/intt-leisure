@@ -1,14 +1,13 @@
 import React, { useEffect, lazy } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useMobileView } from '../../contexts/MobileViewContext';
-
 import '../CSS/Pages/ServicePage.css';
 
-import img1 from '../../assets/images/stock-photo-old-man-with-gray-hair-reading-a-book-sited-on-an-bench-2292379427 (1).jpg'
-import img2 from '../../assets/images/stock-photo-group-of-diverse-young-people-practicing-yoga-doing-easy-seat-exercise-sukhasana-pose-working-1227103207.jpg'
-import img3 from '../../assets/images/full-shot-man-working-outdoors.jpg'
-import img4 from '../../assets/images/WhatsApp Image 2024-08-23 at 3.43.43 PM.jpeg'
-import img5 from '../../assets/images/beautiful-woman-meditating-nature.jpg'
+import img1 from '../../assets/images/leadersPage-hero-img.jpg'
+import img2 from '../../assets/images/educatorsPage-hero-img.jpg'
+import img3 from '../../assets/images/coparatesPage-hero-img.jpg'
+import img4 from '../../assets/images/seekersPage-hero-img.jpg'
+import img5 from '../../assets/images/studentsPage-hero-img.jpg'
 
 const ContentCard = lazy(() => import('./ServiceContentCard'));
 
