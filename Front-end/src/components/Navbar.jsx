@@ -11,11 +11,15 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import { useMobileView } from '../contexts/MobileViewContext';
 import CustomDropdown from './CustomDropdown';
 
-import img1 from '../assets/images/stock-photo-old-man-with-gray-hair-reading-a-book-sited-on-an-bench-2292379427 (1).jpg'
-import img2 from '../assets/images/stock-photo-group-of-diverse-young-people-practicing-yoga-doing-easy-seat-exercise-sukhasana-pose-working-1227103207.jpg'
-import img3 from '../assets/images/full-shot-man-working-outdoors.jpg'
-import img4 from '../assets/images/WhatsApp Image 2024-08-23 at 3.43.43 PM.jpeg'
-import img5 from '../assets/images/beautiful-woman-meditating-nature.jpg'
+import img1 from '../assets/images/leadersPage-hero-img.jpg'
+import img2 from '../assets/images/educatorsPage-hero-img.jpg'
+import img3 from '../assets/images/coparatesPage-hero-img.jpg'
+import img4 from '../assets/images/seekersPage-hero-img.jpg'
+import img5 from '../assets/images/studentsPage-hero-img.jpg'
+
+import img6 from '../assets/images/blogPage-hero-img.jpg'
+import img7 from '../assets/images/destinationsPage-hero-img.jpg'
+import img8 from '../assets/images/events&newsPage-hero-img.jpg'
 
 function MyNavbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -66,19 +70,19 @@ function MyNavbar() {
   const exploreDropdownItems = [
     {
       path: "/blogs",
-      imageSrc: "https://img.freepik.com/free-photo/notepad-laptop-concept_23-2147982614.jpg",
+      imageSrc: img6,
       altText: "Blogs",
       label: "Blogs"
     },
     {
       path: "/destinations",
-      imageSrc: "https://img.freepik.com/free-photo/woman-stretching-relaxing-nature_23-2147658214.jpg",
+      imageSrc: img7,
       altText: "Destinations",
       label: "Destinations"
     },
     {
       path: "/events&news",
-      imageSrc: "https://img.freepik.com/free-photo/stacked-zen-stones-sand-background-art-balance-concept_53876-110628.jpg?t=st=1724409939~exp=1724413539~hmac=d7e1b03fd96d2b66fac682d1dd5bb0b68e2cc9edd8375ee21304efce640df291&w=1380",
+      imageSrc: img8,
       altText: "Events & News",
       label: "Events & News"
     },
