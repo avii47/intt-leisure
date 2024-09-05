@@ -1,7 +1,8 @@
 import React from 'react';
+import { useMobileView } from '../../contexts/MobileViewContext';
 
-const ContentCard = ({ content }) => (
-    <div className="content-card">
+const ContentCard = ({ content, onClick }) => (
+    <div className={`content-card col`} onClick={onClick}>
         <div class="image-zoom-container">
             <img className="card-img top" src={`${content.img}`}></img>
         </div>

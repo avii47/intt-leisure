@@ -11,6 +11,8 @@ const EventsNewsSection = lazy(() => import('../components/HomePage/Events&NewsS
 const FooterSection = lazy(() => import('../components/FooterSection'));
 const MobileButton = lazy(() => import('../components/MobileBookNowButton'));
 
+const SliderComponent = lazy(() => import('../components/HomePage/sliderComponent'));
+
 const HomePage = () => {
     return (
         <>
@@ -40,6 +42,9 @@ const HomePage = () => {
             <Suspense fallback={<div>Loading...</div>}>
                 <EventsNewsSection />
             </Suspense>
+            {/* <Suspense fallback={<div>Loading...</div>}>
+                <SliderComponent />
+            </Suspense> */}
             <Suspense fallback={<div>Loading...</div>}>
                 <FooterSection />
             </Suspense>

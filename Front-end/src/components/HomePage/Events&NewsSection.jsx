@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef, lazy } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useMobileView } from '../../contexts/MobileViewContext';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import left_arrow from '../../assets/icons/left-arrow.png';
 import right_arrow from '../../assets/icons/right-arrow.png';
@@ -12,7 +14,6 @@ const ContentCard = lazy(() => import('./ContentCard'));
 
 const EventsNewsSection = () => {
 
-  const isMobileView = useMobileView();
   const img4 = 'https://img.freepik.com/free-photo/grunge-gray-concrete-textured-background_53876-145492.jpg?t=st=1722571110~exp=1722574710~hmac=dbe2ce48dbeca59499ad4867b3fd0ab0b1cdf15ea16e35d33162d12e12ef02e3&w=1380'
 
   const containerRef3 = useRef(null);
@@ -20,6 +21,22 @@ const EventsNewsSection = () => {
   const [showLeftButton3, setShowLeftButton] = useState(false);
   const [showRightButton3, setShowRightButton] = useState(true);
   const navigate = useNavigate(); 
+
+  const [isMobileView, setIsMobileView] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth <= 768);
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const section = document.getElementById('eventsNews-section');
@@ -114,29 +131,64 @@ const handleOnClick = (path) => {
   navigate(path);
 };
 
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div className={className} onClick={onClick} >
+      <img className='nav-icon' src={right_arrow}></img>
+    </div>
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div className={className} onClick={onClick}>
+      <img className='nav-icon' src={left_arrow} style={style}></img>
+    </div>
+  );
+}
+
+const settings = {
+  dots: true,
+  infinite: false,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  nextArrow: <SampleNextArrow />,
+  prevArrow: <SamplePrevArrow />
+};
+
   return (
     <section id="eventsNews-section" className={`section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="eventsNews-content justify-content-center">
       <h3 className='font-primary'>Latest Events & News</h3>
         <div className='eventsNews-wrapper'>
           {!isMobileView && (
+            <>
               <div className='nav-icons'>
                 {showLeftButton3 && <button className="scroll-button3" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}
                 {showRightButton3 && <button className="scroll-button3" onClick={() => scrollContainer('right')}><img className='nav-icon' src={right_arrow}></img></button>}
               </div>
+              <div id='eventsNews-cards' className="d-flex eventsNews-cards" ref={containerRef3} onClick={() => handleOnClick('/events&news')}>
+                {contentData.map((content, index) => (
+                  <ContentCard key={index} content={content} ref={cardRef3}/>
+                ))}
+              </div>
+            </>
           )}
-
-          <div id='eventsNews-cards' className="d-flex eventsNews-cards" ref={containerRef3} onClick={() => handleOnClick('/events&news')}>
-            {contentData.map((content, index) => (
-              <ContentCard key={index} content={content} ref={cardRef3}/>
-            ))}
-          </div>
         </div>
+        
         {isMobileView && (
-            <div className='nav-icons-mb'>
-              {showLeftButton3 && <button className="scroll-button3" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}
-              {showRightButton3 && <button className="scroll-button3" onClick={() => scrollContainer('right')}><img className='nav-icon' src={right_arrow}></img></button>}
-            </div>
+            <>
+              <div className="slider-container" style={{paddingBottom:'100px'}} >
+                <Slider {...settings} >
+                    {contentData.map((content, index) => (
+                        <ContentCard key={index} content={content} onClick={() => handleOnClick('/events&news')}/>
+                    ))}
+                </Slider> 
+              </div>
+            </>
         )}
 
       </div>
