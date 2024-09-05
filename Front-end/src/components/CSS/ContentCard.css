@@ -5,7 +5,9 @@
     box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
 }
 .mobile-view .content-card{
-    min-width: 320px;
+    min-width: 50px;
+    height: 320px;
+    margin: 20px;
     margin-inline: auto;
 }
 .mobile-view .card-img{

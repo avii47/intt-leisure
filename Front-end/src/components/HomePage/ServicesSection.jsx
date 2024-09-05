@@ -5,6 +5,10 @@ import right_arrow from '../../assets/icons/right-arrow.png';
 import ServiceCard from './ServiceCard';
 import { useMobileView } from '../../contexts/MobileViewContext';
 
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import img1 from '../../assets/images/homePage-serviceCard-leaders-img.jpg'
 import img2 from '../../assets/images/homePage-serviceCards-educators.jpg';
 import img3 from '../../assets/images/homePage-serviceCards-coparates.jpg'
@@ -129,41 +133,65 @@ const ServicesSection = () => {
     navigate(`/services/${id}`);
   };
 
+  const settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
+
   return (
     <div id='service-section' className={`section d-flex justify-content-center ${isMobileView ? 'mobile-view' : ''}`}>
       <div className='services-content justify-content-center'>
         <h6 className={`font-secondary left-align`} style={{ fontSize: '15px', fontWeight: '350' }}>Choose Your Journey</h6>
-        <hr className='' style={{ width: '13rem' }}></hr><br></br>
+        <hr className='' style={{ width: '11rem' }}></hr><br></br>
         <h3 className='font-primary left-align'>Experience the Experience</h3>
         <p className='font-secondary left-align'>As you immerse yourself in this enchanting destination, we invite you to participate in profound self-reflection and practice alongside us.</p>
 
         <div className="service-slider-wrapper">
           {!isMobileView && (
-            <div className='nav-icons'>
-              {showLeftButton2 && <button className="scroll-button2 left2" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}
-              {showRightButton2 && <button className="scroll-button2 right2" onClick={() => scrollContainer('right')}><img className='nav-icon' src={right_arrow}></img></button>}
-            </div>
+            <>
+              <div className='nav-icons'>
+                {showLeftButton2 && <button className="scroll-button2 left2" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}
+                {showRightButton2 && <button className="scroll-button2 right2" onClick={() => scrollContainer('right')}><img className='nav-icon' src={right_arrow}></img></button>}
+              </div>
+              <div className='service-slider d-flex ' ref={containerRef2}>
+                {contentData.map((content, index) => (
+                  <ServiceCard
+                    className={`service-card card card-item${index}`}
+                    key={index}
+                    content={content}
+                    ref={el => serviceCardsRef.current[index] = el}
+                    style={{ '--animation-order': index }}
+                    onClick={() => handleServiceCardClick(content.id)}
+                  />
+                ))}
+              </div>
+            </>
           )}
-
-          <div className='service-slider d-flex ' ref={containerRef2}>
-            {contentData.map((content, index) => (
-              <ServiceCard
-                className={`service-card card card-item${index}`}
-                key={index}
-                content={content}
-                ref={el => serviceCardsRef.current[index] = el}
-                style={{ '--animation-order': index }}
-                onClick={() => handleServiceCardClick(content.id)}
-              />
-            ))}
-          </div>
-
         </div>
         {isMobileView && (
-          <div className='nav-icons-mb'>
-            {showLeftButton2 && <button className="scroll-button2 left2" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}
-            {showRightButton2 && <button className="scroll-button2 right2" onClick={() => scrollContainer('right')}><img className='nav-icon' src={right_arrow}></img></button>}
-          </div>
+          // <div className='nav-icons-mb'>
+          //   {showLeftButton2 && <button className="scroll-button2 left2" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}
+          //   {showRightButton2 && <button className="scroll-button2 right2" onClick={() => scrollContainer('right')}><img className='nav-icon' src={right_arrow}></img></button>}
+          // </div>
+          <>
+            <div className="slider-container" style={{paddingBottom:'100px'}} >
+              <Slider {...settings} >
+                  {contentData.map((content, index) => (
+                      <ServiceCard
+                        className={`service-card card card-item${index}`}
+                        key={index}
+                        content={content}
+                        ref={el => serviceCardsRef.current[index] = el}
+                        style={{ '--animation-order': index }}
+                        onClick={() => handleServiceCardClick(content.id)}
+                      />
+                  ))}
+              </Slider> 
+            </div>
+          </>
         )}
 
       </div>
