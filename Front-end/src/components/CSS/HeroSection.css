@@ -58,6 +58,7 @@ video {
     background-color: white;
     color: rgba(0, 0, 0, 0.573);
     height: 3.6rem;
+    border-radius: 10px 10px 0 0;
     width: 80%;
     opacity: 1;
     justify-content: center;

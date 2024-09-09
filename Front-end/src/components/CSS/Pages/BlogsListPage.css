@@ -7,7 +7,6 @@
     width: 80vw;
     flex-wrap: wrap; 
     text-align: left;
-    margin-top: -100px;
 }
 .blog-cards-container{
     display: flex;

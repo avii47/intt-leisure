@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, lazy } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useMobileView } from '../../contexts/MobileViewContext';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -21,22 +22,9 @@ const EventsNewsSection = () => {
   const [showLeftButton3, setShowLeftButton] = useState(false);
   const [showRightButton3, setShowRightButton] = useState(true);
   const navigate = useNavigate(); 
+  let sliderRef = useRef(null);
 
-  const [isMobileView, setIsMobileView] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobileView(window.innerWidth <= 768);
-    };
-
-    handleResize();
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  const isMobileView = useMobileView();
 
   useEffect(() => {
     const section = document.getElementById('eventsNews-section');
@@ -74,20 +62,7 @@ const EventsNewsSection = () => {
     {
       'img': img_02,
       'sub': 'Well trained experts to guide you through the journey.'
-    },
-    {
-      'img': img4,
-      'sub': 'Well trained experts to guide you through the journey.'
-    },
-    {
-      'img': img4,
-      'sub': 'Well trained experts to guide you through the journey.'
-    },
-    {
-      'img': img4,
-      'sub': 'Well trained experts to guide you through the journey.'
     }
-    
   ];
 
   const scrollContainer = (direction) => {
@@ -149,22 +124,64 @@ function SamplePrevArrow(props) {
   );
 }
 
+const next = () => {
+  sliderRef.slickNext();
+};
+const previous = () => {
+  sliderRef.slickPrev();
+};
+
 const settings = {
   dots: true,
   infinite: false,
   speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  nextArrow: <SampleNextArrow />,
-  prevArrow: <SamplePrevArrow />
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  responsive: [
+    {
+      breakpoint: 1124,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 1600,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 669,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true
+      }
+    }
+  ]
 };
 
   return (
     <section id="eventsNews-section" className={`section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="eventsNews-content justify-content-center">
-      <h3 className='font-primary'>Latest Events & News</h3>
+      
+      <div className="col-12 d-flex">
+          <div className="col">
+            <h3 className='font-primary'>Latest Events & News</h3>
+          </div>
+          <div className="col-1 nav-icon-col">
+            <div className='service-card-nav-icons' style={{ marginTop:'0' }}>
+              <img className='nav-icon' src={left_arrow} onClick={previous}></img>
+              <img className='nav-icon' src={right_arrow} onClick={next}></img>
+            </div>
+          </div>
+      </div>
         <div className='eventsNews-wrapper'>
-          {!isMobileView && (
+          {/* {!isMobileView && (
             <>
               <div className='nav-icons'>
                 {showLeftButton3 && <button className="scroll-button3" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}
@@ -176,10 +193,18 @@ const settings = {
                 ))}
               </div>
             </>
-          )}
+          )} */}
+
+              <div id='eventsNews-cards' className="slider-container" style={{paddingBottom:'100px', textAlign:'center'}} >
+                <Slider ref={slider => {sliderRef = slider;}} {...settings}>
+                    {contentData.map((content, index) => (
+                        <ContentCard key={index} content={content} onClick={() => handleOnClick('/events&news')}/>
+                    ))}
+                </Slider> 
+              </div>
         </div>
         
-        {isMobileView && (
+        {/* {isMobileView && (
             <>
               <div className="slider-container" style={{paddingBottom:'100px'}} >
                 <Slider {...settings} >
@@ -189,7 +214,7 @@ const settings = {
                 </Slider> 
               </div>
             </>
-        )}
+        )} */}
 
       </div>
     </section>

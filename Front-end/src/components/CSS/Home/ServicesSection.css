@@ -1,24 +1,16 @@
 .services-content{
-    
+    width: 80vw;
 }
 .service-slider-wrapper {
     position: relative;
-    width: 80vw;
-    margin-top: 3.75rem;
+    margin-left: -20px;
+    margin-top: 2rem;
 }
 
-.service-slider {
-    display: flex;
-    justify-content: left;
-    gap: 1.875rem;
-    overflow-x: scroll;
-    scrollbar-width: none;
-    scroll-behavior: smooth;
-    width: 100vw;
-}
-
-.service-slider::-webkit-scrollbar {
-    display: none;
+.mobile-view .service-slider-wrapper {
+    position: relative;
+    margin-left: -20px;
+    margin-top: 2rem;
 }
 
 .scroll-button2 {
@@ -38,30 +30,20 @@
     justify-content: center;
 }
 
-/* .scroll-button2.left2 {
-    margin-left: 94%;
+.service-card-nav-icons{
+    display: flex;
+    flex-direction: row;
+    align-items:baseline;
+    gap: 10px;
+    float: right;
+    margin-top: 120px;
 }
-
-.scroll-button2.right2 {
-    margin-left: 97%;
-} */
 
 .nav-icons{
     display: flex;
     gap: 10px;
     float: right;
     margin-top: -70px;
-}
-.mobile-view .scroll-button2{
-    top: 110%;
-    margin-left: -5%;
-}
-.mobile-view .service-slider {
-    width: 100vw;
-    padding: 0 4rem 2rem 0;
-}
-.mobile-view .right2 {
-   margin-left: 5%;
 }
 .mobile-view .services-content {
     width: 100vw;
@@ -70,5 +52,11 @@
 }
 .nav-icon{
     height: 30px;
+    cursor: pointer;
 }
 
+@media (max-width: 664px) {
+    .nav-icon-col{
+        display: none;
+    } 
+}

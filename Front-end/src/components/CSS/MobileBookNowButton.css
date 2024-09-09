@@ -7,19 +7,21 @@
     bottom: 0px;
     justify-content: center;
     border: none;
-    font-size: 20px;
-    font-weight: 600;
+    font-family: "Playfair Display", serif;
+    letter-spacing: 2px;
+    font-size: 25px;
+    font-weight: 300;
     color: white;
     cursor: pointer;
     z-index: 1000;
     outline: solid 1px white;
-    outline-offset:-5px;
+    outline-offset:-3px;
     background-color: #ac8453;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
     display: none; 
   }
   
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1200px) {
     .mobile-button {
       display: block; 
     }

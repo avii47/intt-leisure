@@ -15,7 +15,6 @@ import img3 from '../../assets/images/homePage-serviceCards-coparates.jpg'
 import img4 from '../../assets/images/homePage-serviceCard-seekers.jpg';
 import img5 from '../../assets/images/homePage-servicesCard-students-img.jpg';
 
-
 const ServicesSection = () => {
 
   const serviceCardsRef = useRef([]);
@@ -23,7 +22,24 @@ const ServicesSection = () => {
   const [showLeftButton2, setShowLeftButton] = useState(false);
   const [showRightButton2, setShowRightButton] = useState(true);
   const containerRef2 = useRef(null);
-  const isMobileView = useMobileView();
+  let sliderRef = useRef(null);
+  const isMobileView2 = useMobileView();
+
+  const [isMobileView, setIsMobileView] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth <= 1600);
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
@@ -83,12 +99,6 @@ const ServicesSection = () => {
       title: 'Mindfulness for Students',
       sub: 'Get a truly rejuvenating and life-changing experience through practice',
     },
-    {
-      id: 6,
-      img: img5,
-      title: 'What benefits you will have with mindfulness practice?',
-      sub: 'Get a truly rejuvenating and life-changing experience through practice',
-    },
 
   ];
 
@@ -133,66 +143,82 @@ const ServicesSection = () => {
     navigate(`/services/${id}`);
   };
 
+  const next = () => {
+    sliderRef.slickNext();
+  };
+  const previous = () => {
+    sliderRef.slickPrev();
+  };
+
   const settings = {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 1300,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 669,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true
+        }
+      }
+    ]
   };
 
   return (
     <div id='service-section' className={`section d-flex justify-content-center ${isMobileView ? 'mobile-view' : ''}`}>
       <div className='services-content justify-content-center'>
-        <h6 className={`font-secondary left-align`} style={{ fontSize: '15px', fontWeight: '350' }}>Choose Your Journey</h6>
-        <hr className='' style={{ width: '11rem' }}></hr><br></br>
-        <h3 className='font-primary left-align'>Experience the Experience</h3>
-        <p className='font-secondary left-align'>As you immerse yourself in this enchanting destination, we invite you to participate in profound self-reflection and practice alongside us.</p>
+
+        <div className="col-12 d-flex">
+          <div className="col">
+            <h6 className={`font-secondary left-align`} style={{ fontSize: '15px', fontWeight: '350' }}>Choose Your Journey</h6>
+            <hr className='' style={{ width: '11rem' }}></hr><br></br>
+            <h3 className='font-primary left-align'>Experience the Experience</h3>
+            <p className='font-secondary left-align'>As you immerse yourself in this enchanting destination, we invite you to participate in profound self-reflection and practice alongside us.</p>
+          </div>
+          <div className="col-1 nav-icon-col">
+            <div className='service-card-nav-icons'>
+              <img className='nav-icon' src={left_arrow} onClick={previous}></img>
+              <img className='nav-icon' src={right_arrow} onClick={next}></img>
+            </div>
+          </div>
+        </div>
 
         <div className="service-slider-wrapper">
-          {!isMobileView && (
-            <>
-              <div className='nav-icons'>
-                {showLeftButton2 && <button className="scroll-button2 left2" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}
-                {showRightButton2 && <button className="scroll-button2 right2" onClick={() => scrollContainer('right')}><img className='nav-icon' src={right_arrow}></img></button>}
+              <div className="slider-container" style={{paddingBottom:'20px'}} >
+                <Slider ref={slider => {sliderRef = slider;}} {...settings}>
+                    {contentData.map((content, index) => (
+                        <ServiceCard
+                          className={`service-card card card-item${index}`}
+                          key={index}
+                          content={content}
+                          ref={el => serviceCardsRef.current[index] = el}
+                          style={{ '--animation-order': index }}
+                          onClick={() => handleServiceCardClick(content.id)}
+                        />
+                    ))}
+                </Slider> 
               </div>
-              <div className='service-slider d-flex ' ref={containerRef2}>
-                {contentData.map((content, index) => (
-                  <ServiceCard
-                    className={`service-card card card-item${index}`}
-                    key={index}
-                    content={content}
-                    ref={el => serviceCardsRef.current[index] = el}
-                    style={{ '--animation-order': index }}
-                    onClick={() => handleServiceCardClick(content.id)}
-                  />
-                ))}
-              </div>
-            </>
-          )}
         </div>
-        {isMobileView && (
-          // <div className='nav-icons-mb'>
-          //   {showLeftButton2 && <button className="scroll-button2 left2" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}
-          //   {showRightButton2 && <button className="scroll-button2 right2" onClick={() => scrollContainer('right')}><img className='nav-icon' src={right_arrow}></img></button>}
-          // </div>
-          <>
-            <div className="slider-container" style={{paddingBottom:'100px'}} >
-              <Slider {...settings} >
-                  {contentData.map((content, index) => (
-                      <ServiceCard
-                        className={`service-card card card-item${index}`}
-                        key={index}
-                        content={content}
-                        ref={el => serviceCardsRef.current[index] = el}
-                        style={{ '--animation-order': index }}
-                        onClick={() => handleServiceCardClick(content.id)}
-                      />
-                  ))}
-              </Slider> 
-            </div>
-          </>
-        )}
 
       </div>
     </div>)

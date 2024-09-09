@@ -3,6 +3,8 @@
     max-width: 14.4rem;
     height: 9.6rem;
     text-align: left;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
 }
 .package-image-zoom-container {
     overflow: hidden;
@@ -14,10 +16,6 @@
     height: 100%;
     transition: transform 0.3s ease-out;
 }
-.package-card {
-    border-radius: 10px;
-    transition: all 0.3s ease-in-out;
-} 
 .package-card.fade-out {
     opacity: 0.5;
     scale: 0.9;

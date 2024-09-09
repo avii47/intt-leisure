@@ -1,5 +1,6 @@
 .feedback-section{
-    padding: 100px;
+    padding-top: 100px;
+    padding-bottom: 200px;
     justify-content: center;
 }
 .feedback-content{
@@ -18,4 +19,7 @@
 .mobile-view .feedback-content{
     width: 100vw;
     padding: 5%;
+}
+.mobile-view .feedback-content h3{
+    font-size: 30px;
 }

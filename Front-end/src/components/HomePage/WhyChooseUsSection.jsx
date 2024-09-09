@@ -4,6 +4,12 @@ import right_arrow from '../../assets/icons/right-arrow.png';
 import IconCard from '../HomePage/IconCard';
 import { useMobileView } from '../../contexts/MobileViewContext';
 
+
+
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import authentic_practice_icon from '../../assets/icons/Icons_WCU_Authentic Practice.png';
 import forbes_certified_coach_icon from '../../assets/icons/Icons_WCU_Forbes Cerified Coach.png'
 import eyes_of_locals_icon from '../../assets/icons/Icons_WCU_Eyes of Locals.png'
@@ -17,6 +23,7 @@ const WhyChooseUsSection = () => {
   const [showRightButton, setShowRightButton] = useState(true);
   const containerRef = useRef(null);
   const iconCardsRef = useRef([]);
+  let sliderRef = useRef(null);
 
   const isMobileView = useMobileView();
 
@@ -116,40 +123,84 @@ const WhyChooseUsSection = () => {
       });
     };
   }, [iconCardsRef]);
+
+  const next = () => {
+    sliderRef.slickNext();
+  };
+  const previous = () => {
+    sliderRef.slickPrev();
+  };
+
+  const settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 669,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true
+        }
+      }
+    ]
+  };
   
 
   return (
     <section id="why-chooseus-Section" className={`section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="why-chooseus-content justify-content-center">
-        <h3 className='font-primary'>What Makes Us Unique?</h3>
-        <hr style={{ width: '400px', marginTop:'-1px' }}></hr>
-        <br></br>
-        <p className='font-secondary'>Experience authentic mindfulness according to Buddha’s teachings, designed by Forbes-certified coach Dr. Gamini Hewawasam. Rooted in Sri Lankan heritage and backed by research, our programs guide you through ancient practices in carefully chosen locations, ensuring a seamless, expert-managed journey.</p>
-        <div className="icon-container-wrapper">
-          {!isMobileView && (
-            <div className='nav-icons'>
-              {showLeftButton && <button className="scroll-button left" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}
-              {showRightButton && <button className="scroll-button right" onClick={() => scrollContainer('right')}><img className='nav-icon' src={right_arrow}></img></button>}
+
+        <div className="col-12 d-flex">
+          <div className="col">
+            <h3 className='font-primary'>What Makes Us Unique?</h3>
+            <hr style={{ width: '400px', marginTop:'-1px' }}></hr>
+            <br></br>
+            <p className='font-secondary'>Experience authentic mindfulness according to Buddha’s teachings, designed by Forbes-certified coach Dr. Gamini Hewawasam. Rooted in Sri Lankan heritage and backed by research, our programs guide you through ancient practices in carefully chosen locations, ensuring a seamless, expert-managed journey.</p>
+          </div>
+          <div className="col-1 nav-icon-col">
+            <div className='service-card-nav-icons'>
+              <img className='nav-icon' src={left_arrow} onClick={previous}></img>
+              <img className='nav-icon' src={right_arrow} onClick={next}></img>
             </div>
-          )}
-          <div className='icon-container d-flex ' ref={containerRef}>
-            {contentData.map((content, index) => (
-              <IconCard
-                className={`icon-card`}
-                key={index}
-                content={content}
-                ref={el => iconCardsRef.current[index] = el}
-                style={{ '--animation-order': index }}
-              />
-            ))}
           </div>
         </div>
-        {isMobileView && (
-            <div className='nav-icons-mb'>
-              {showLeftButton && <button className="scroll-button left" onClick={() => scrollContainer('left')}><img className='nav-icon' src={left_arrow}></img></button>}
-              {showRightButton && <button className="scroll-button right" onClick={() => scrollContainer('right')}><img className='nav-icon' src={right_arrow}></img></button>}
-            </div>
-        )}
+
+        <div className="icon-container-wrapper">
+              <div className="slider-container" style={{paddingBottom:'20px', textAlign:'center'}} >
+                <Slider ref={slider => {sliderRef = slider;}} {...settings}>
+                    {contentData.map((content, index) => (
+                        <IconCard
+                          className={`icon-card`}
+                          key={index}
+                          content={content}
+                          ref={el => iconCardsRef.current[index] = el}
+                          style={{ '--animation-order': index }}
+                      />
+                    ))}
+                </Slider> 
+              </div>
+        </div>
+
       </div>
     </section>
   )
