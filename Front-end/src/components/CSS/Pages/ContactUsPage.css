@@ -1,11 +1,13 @@
 .contactus-content-section{
+    height: 500px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
     background-color: #fff7d9;
 }
 .contactus-section-content {
-    padding: 0 12rem 12rem 12rem;
+    width: 60vw;
     display: flex;
     flex-wrap: wrap; 
     text-align: center;
@@ -14,6 +16,10 @@
     padding: 0 15.5% 0 15.5%;
 }
 
+.mobile-view .top-text{
+    padding: 0 15.5% 0 15.5%;
+}
+
 .mobile-view .contactus-section-content {
-    padding: 0 2rem 12rem 2rem;
+    width: 85vw;
 }

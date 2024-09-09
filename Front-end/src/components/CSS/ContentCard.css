@@ -1,20 +1,20 @@
 .content-card{
+    height: 380px;
     margin-top: 20px;
-    width: 300px;
+    padding: 10px;
+    border-radius: 8px;
     font-size: smaller;
     box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
 }
 .mobile-view .content-card{
-    min-width: 50px;
     height: 320px;
-    margin: 20px;
-    margin-inline: auto;
 }
 .mobile-view .card-img{
-    width: 320px;
-    height: 220px;
+    width: 100%;
+    height: 100%;
 }
 .image-zoom-container {
+    border-radius: 8px;
     overflow: hidden;
     position: relative;
 }
@@ -34,8 +34,10 @@
     transform: scale(1.1); 
 }
 .content-card-body{
-    padding-left: 10px;
-    padding-right: 10px;
+    /* padding-left: 10px;
+    padding-right: 10px; */
+    text-align: left;
+    padding: 0 10px;
 }
 .card-sub{
     height: fit-content;

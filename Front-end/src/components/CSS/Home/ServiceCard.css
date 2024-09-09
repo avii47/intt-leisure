@@ -1,7 +1,5 @@
 .service-card {
-    min-width: 350px;
-    max-height: 460px;
-    border-radius: 8px;
+    border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -11,8 +9,6 @@
 }
 
 .mobile-view .service-card {
-    width: 75vw;
-    height: 500px;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -52,6 +48,11 @@
     text-align: left;
     padding: 2rem;
     color: white;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 } 
 .mobile-view .card-content {
     position: absolute;
@@ -95,6 +96,6 @@
     transform: translateX(0);
 }
 
-
-  
-
+ .outer-div{
+    padding: 20px;
+}

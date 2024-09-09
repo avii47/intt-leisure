@@ -1,21 +1,25 @@
 .icon-card{
+    display: flex;
     height: fit-content;
-    min-width: 330px;
-    justify-content: center;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 1s ease, transform 1s ease;
 }
+.iconCard-img-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .iconCard-img{
     align-self: center;
     height: 80px;
-    width: 80px;
+    
     margin-top: 5px;
     margin-bottom: 30px;
     border-radius: 15px;
 }
 .icon-discription{
-    height: 90px;
+    height: 120px;
     /* text-align: justify;
     text-align-last: center; */
 }
@@ -35,5 +39,4 @@
 
 .mobile-view .icon-card{
     opacity: 1;
-    min-width: 310px;
 }

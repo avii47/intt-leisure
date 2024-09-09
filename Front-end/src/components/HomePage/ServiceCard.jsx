@@ -2,14 +2,17 @@ import React from 'react';
 
 const ServiceCard = React.forwardRef(({ content, className, style, onClick }, ref) => {
   return (
-    <div ref={ref} className={`service-card ${className}`} style={style} onClick={onClick}>
-      <div className="overlayer"></div>
-      <img className='crd-img' src={content.img} alt={content.title +"img"} loading='lazy' />
-      <div className="card-content">
-        <h4 className='font-primary' style={{ fontSize: '28px', letterSpacing: '1px' }}>{content.title}</h4>
-        <p style={{ letterSpacing: '0px', fontWeight: '250' }} className='font-secondary'>{content.sub}</p>
+    <div className='outer-div'>
+      <div ref={ref} className={`service-card ${className}`} style={style} onClick={onClick}>
+        <div className="overlayer"></div>
+        <img className='crd-img' src={content.img} alt={content.title +"img"} loading='lazy' />
+        <div className="card-content">
+          <h4 className='font-primary' style={{ fontSize: '28px', letterSpacing: '1px' }}>{content.title}</h4>
+          <p style={{ letterSpacing: '0px', fontWeight: '250' }} className='font-secondary'>{content.sub}</p>
+        </div>
       </div>
     </div>
+
   );
 });
 

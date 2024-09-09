@@ -237,6 +237,9 @@ function MyNavbar() {
               </Offcanvas.Body>
 
             </Navbar.Offcanvas>
+            {/* <Button variant={scrolled ? "outline-dark" : "outline-light"} className="btn-book" as={Link} to="/bookNow">
+              Book Now
+            </Button> */}
             <Button variant={scrolled ? "outline-dark" : "outline-light"} className="btn-book" as={Link} to="/bookNow">
               Book Now
             </Button>

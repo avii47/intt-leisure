@@ -1,23 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { useMobileView } from '../../contexts/MobileViewContext';
 
 const FeedbackSection = () => {
 
-  const [isMobileView, setIsMobileView] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobileView(window.innerWidth <= 1000); 
-    };
-
-    handleResize();
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
+  const isMobileView = useMobileView();
 
   useEffect(() => {
     const section = document.getElementById('rw1');
@@ -45,7 +31,7 @@ const FeedbackSection = () => {
 
 
   return (
-    <section id="feedback-section" className={`section feedback-section d-flex ${isMobileView ? 'mobile-view' : ''}`}>
+    <section id="feedback-section" className={`feedback-section d-flex ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="feedback-content">
         <h3 className='font-primary' style={{marginBottom:'50px'}}>Get In Touch With Us</h3>
         <form className="feedback-form">
@@ -61,7 +47,7 @@ const FeedbackSection = () => {
             <div className="form-group feedback-ft">
               <textarea className="form-control in-f" id="message" rows="6" placeholder="Message" required></textarea>
             </div><br></br>
-            <button type="submit" className="btn btn-dark" style={{width:'200px'}}>Submit</button>
+            <button type="submit" className="btn btn-dark" style={{width:'100%', height:'60px', borderRadius:'10px'}}>Submit</button>
         </form>
       </div>
     </section>
