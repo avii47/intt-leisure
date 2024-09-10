@@ -114,7 +114,7 @@
 }
 .mobile-view .subscription-form button{
     height: 40px;
-    font-size: small;
+    font-size: smaller;
 }
 .mobile-view .footer-contact{
     margin: 0;

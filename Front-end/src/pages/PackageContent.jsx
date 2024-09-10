@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import "../components/CSS/Pages/PackageContent.css";
 
 import img1 from '../assets/images/leadersPage-hero-img.jpg'
 import img2 from '../assets/images/educatorsPage-hero-img.jpg'

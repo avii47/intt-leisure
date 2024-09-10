@@ -4,6 +4,7 @@ import left_arrow from '../../assets/icons/left-arrow.png';
 import right_arrow from '../../assets/icons/right-arrow.png';
 import ServiceCard from './ServiceCard';
 import { useMobileView } from '../../contexts/MobileViewContext';
+import "../../components/CSS/Home/ServicesSection.css";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";

@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { Helmet } from 'react-helmet-async';
+import "../components/CSS/Pages/BookNowPage.css";
 import bg from '../assets/images/bookNowPage-hero-img.jpg'
 
 const HeroSection = lazy(() => import('../components/HeroSection'));

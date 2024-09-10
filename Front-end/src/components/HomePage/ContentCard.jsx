@@ -1,5 +1,5 @@
 import React from 'react';
-import { useMobileView } from '../../contexts/MobileViewContext';
+import "../../components/CSS/ContentCard.css";
 
 const ContentCard = ({ content, onClick }) => (
     <div className="outer-div">

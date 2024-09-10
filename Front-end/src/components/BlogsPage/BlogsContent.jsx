@@ -1,14 +1,13 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useMobileView } from '../../contexts/MobileViewContext';
+import img1 from '../../assets/images/blogContent-img1.jpeg'
 
 const BlogsContent = () => {
 
   const { blogId } = useParams();
 
   const isMobileView = useMobileView();
-  const img1 = 'https://img.freepik.com/free-photo/businessman-with-landscapes-background-double-exposure_155003-32409.jpg?t=st=1723790774~exp=1723794374~hmac=33df0c5585157587ed51972751ef6293aba75113fcb755b37ecd3e1cde928fab&w=1380';
-  const img2 = 'https://img.freepik.com/free-photo/medium-shot-people-sitting_23-2148686537.jpg?t=st=1723802838~exp=1723806438~hmac=237f4639453991056783ce322f64e408e2b2b83405cf1d21e77224d1ce05ca77&w=1380'
 
   return (
     <section id="blogs-content-section" className={`section blogs-content-section d-flex ${isMobileView ? 'mobile-view' : ''}`}>
@@ -25,7 +24,7 @@ const BlogsContent = () => {
         <p className="font-secondary">
             orporate culture frequently creates high-pressure situations that necessitate clear thinking and executive skills. When this increased awareness is applied in corporate settings, leaders can generate stronger decision-making skills and guide their team onto the best path.
         </p>
-        <img className='blogs-img' src={img2} alt="blogs-img" loading='lazy' />
+        <br /><br />
         <h3 className='font-primary' style={{fontSize:'28px'}}>A Practical Guide For Corporate Leaders</h3>
         <p className='font-secondary'>Incorporating mindful breathing into your daily routine is a great way to attain a state of calmness and clarity. Here is a process that you can use to pursue the practice of Ānāpānasati.</p>
 

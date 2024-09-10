@@ -14,7 +14,7 @@
     max-width: 100%; 
     margin-top: 4rem;
 
-    opacity: 0;
+    opacity: 1;
     transform: translateY(50px);
     transition: opacity 1s ease, transform 1s ease;
 }
@@ -39,3 +39,15 @@
 .left-align{
     text-align: left;
 }
+
+/* ServicePage.css */
+.service-content-cards-row {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  
+  .service-content-cards-row.animate-row {
+    opacity: 1;
+    transform: translateY(0);
+  }

@@ -1,4 +1,5 @@
 import React from 'react';
+import "../../components/CSS/Home/ImageCard.css";
 
 const ImageCard = ({ imageSrc, topic, paragraph }) => {
     return (

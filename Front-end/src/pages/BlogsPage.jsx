@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import "../components/CSS/Pages/BlogsPage.css";
 import bg from '../assets/images/blogPage-hero-img.jpg'
 
 const HeroSection = lazy(() => import('../components/HeroSection'));

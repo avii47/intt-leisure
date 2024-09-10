@@ -10,6 +10,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { useMobileView } from '../contexts/MobileViewContext';
 import CustomDropdown from './CustomDropdown';
+import '../components/CSS/Navbar.css';
 
 import img1 from '../assets/images/leadersPage-hero-img.jpg'
 import img2 from '../assets/images/educatorsPage-hero-img.jpg'
@@ -237,9 +238,6 @@ function MyNavbar() {
               </Offcanvas.Body>
 
             </Navbar.Offcanvas>
-            {/* <Button variant={scrolled ? "outline-dark" : "outline-light"} className="btn-book" as={Link} to="/bookNow">
-              Book Now
-            </Button> */}
             <Button variant={scrolled ? "outline-dark" : "outline-light"} className="btn-book" as={Link} to="/bookNow">
               Book Now
             </Button>

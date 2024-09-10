@@ -1,4 +1,5 @@
 import React, { useState, useEffect, lazy } from 'react';
+import "../../components/CSS/Home/DiscoverSection.css";
 
 const ContentCard = lazy(() => import('./ContentCard'));
 

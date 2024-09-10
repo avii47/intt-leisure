@@ -1,6 +1,7 @@
 import React, { useEffect, Suspense, lazy } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useMobileView } from '../../contexts/MobileViewContext';
+import "../../components/CSS/Pages/BlogsListPage.css";
 
 import img2 from '../../assets/images/blog2-img.jpg'
 import img3 from '../../assets/images/blog3-img.jpg'

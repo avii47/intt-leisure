@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useMobileView } from '../../contexts/MobileViewContext';
+import "../../components/CSS/FeedbackSection.css";
 
 const FeedbackSection = () => {
 

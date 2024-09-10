@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import "../../components/CSS/Home/MindfulnessTourismSection.css";
 import mindfulness_section_bg from '../../assets/images/homePage-mindfulness-section.jpg';
 
 const MindfulnessTourismSection = () => {

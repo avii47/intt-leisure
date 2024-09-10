@@ -1,4 +1,5 @@
 import React from 'react';
+import "../../components/CSS/Home/ServiceCard.css";
 
 const ServiceCard = React.forwardRef(({ content, className, style, onClick }, ref) => {
   return (
