@@ -10,7 +10,10 @@
 }
 .top-section{
     justify-content: space-between;
+    flex-wrap: wrap;
+    opacity: 1;
 }
+
 .top-section a{
     color: black;
     text-decoration: none;
@@ -22,20 +25,29 @@
     justify-content: center;
     min-width: 280px;
     height: 80px;
-    border-radius: 10px;
-    background-color: #aeaeae;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     transition: all 0.2s ease-in-out;
 }
 .topic-item:hover{
-    background-color: #666666;
+    background-color: #000000;
     color: white;
+    scale: 1.1;
     transition: all 0.2s ease-in-out;
 }
 .topic-item-text{
-    font-size: 20px;
+    font-size: 25px !important;
 }
 .why-choose-item{
     margin-top: 150px;
+}
+.why-choose-item h3{
+    margin-bottom: 60px;
+}
+.our-story-content{
+    opacity: 0;
+    transform: translateY(100px);
 }
 .txt-col{
     text-align: justify;
@@ -43,22 +55,150 @@
     flex-direction: row;
     align-items: center;
 }
-.stoty-img{
-    height: 700px;
+.story-img{
+    height: 600px;
+    border-radius: 20px;
 }
 .our-missionVision{
-    width: 100vw;
-    margin-left: -190px;
     display: flex;
     justify-content: center;
     text-align: center;
-    background-color: #aeaeae;
-    padding: 10%;
 }
-.ceo-message{
-    margin-left: -190px;
-    padding: 10%;
+.our-missionVision-content{
+    opacity: 0;
+    transform: scale(0.6);
+}
+.our-achievements-content{
+    opacity: 0;
+    transform: translateY(100px);
+}
+.ceo-message {
+    margin-left: -50px;
+    padding: 50px;
+    border-radius: 20px;
+    background-image: url("https://img.freepik.com/free-vector/abstract-desktop-background-white-geometric-design-vector_53876-140225.jpg?t=st=1725875923~exp=1725879523~hmac=f51c498ada01c828a50a4ff96ae613b70bf9678810d64c17853a099e26ea2da2&w=1380");
+}
+
+.ceo-message-content{
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+.vm-contaioner{
+    height: 520px;
+    width: 70%;
+    padding: 50px;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.achivement-container{
+    height: 520px;
+    width: 100%;
+}
+.achivement-img{
+    height: 180px;
+    margin-bottom: 50px;
+}
+
+.mobile-view .aboutus-section-content {
     width: 100vw;
-    color: white;
-    background-color: #aeaeae;
+    padding: 0 2rem 5rem 2rem;
+    margin-top: -100px;
 }
+.mobile-view .top-col{
+    padding: 0 !important;
+}
+.mobile-view .topic-item{
+    min-width: 82vw;
+    margin-bottom: 30px;
+    height: 60px;
+}
+.mobile-view .topic-item-text{
+    font-size: 20px !important;
+}
+.mobile-view .why-choose-item{
+    margin-top: 80px;
+}
+.mobile-view .why-choose-item h3{
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+.mobile-view .txt-col{
+    text-align: left;
+}
+.mobile-view .story-img{
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+}
+.mobile-view .vm-card-col{
+    justify-content: center !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+.mobile-view .vm-contaioner{
+    height: auto;
+    width: 100%;
+    margin-top: 50px;
+}
+.mobile-view .txt-col-p{
+    margin-top: -70px;
+}
+.mobile-view .txt-col-p2{
+    margin-top: -20px;
+}
+.mobile-view .ceo-message {
+    margin-left: 0px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.animate-block{
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 1s ease-in-out;
+}
+.animate-vmCard{
+    opacity: 1;
+    transform: scale(1);
+    transition: all 1s ease-in-out;
+}
+
+
+@keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .top-section {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .top-col {
+    opacity: 0;
+    animation: slideInLeft 1s ease-out forwards;
+  }
+  
+  .top-col:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  
+  .top-col:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  
+  .top-col:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  .top-col:nth-child(4) {
+    animation-delay: 0.8s;
+  }

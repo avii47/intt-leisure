@@ -3,19 +3,18 @@ import left_arrow from '../../assets/icons/left-arrow.png';
 import right_arrow from '../../assets/icons/right-arrow.png';
 import IconCard from '../HomePage/IconCard';
 import { useMobileView } from '../../contexts/MobileViewContext';
-
-
+import "../../components/CSS/Home/WhyChooseUsSection.css";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import authentic_practice_icon from '../../assets/icons/Icons_WCU_Authentic Practice.png';
-import forbes_certified_coach_icon from '../../assets/icons/Icons_WCU_Forbes Cerified Coach.png'
-import eyes_of_locals_icon from '../../assets/icons/Icons_WCU_Eyes of Locals.png'
-import backed_by_research_icon from '../../assets/icons/Icons_WCU_Backed By Research-06.png'
-import ancient_root_icon from '../../assets/icons/Icons_WCU_Ancient Roots.png';
-import travel_wisdom_icon from '../../assets/icons/Icons_WCU_Travel Wisdom.png';
+import authentic_practice_icon from '../../assets/icons/authentic-practice-icon.svg';
+import forbes_certified_coach_icon from '../../assets/icons/forbes-certified-coach-icon.svg'
+import eyes_of_locals_icon from '../../assets/icons/eyes-of-locals-icon.svg'
+import backed_by_research_icon from '../../assets/icons/backed-by-research-icon.svg'
+import ancient_root_icon from '../../assets/icons/ancient-roots-icon.svg';
+import travel_wisdom_icon from '../../assets/icons/travel-wisdom-icon.svg';
 
 const WhyChooseUsSection = () => {
 
@@ -59,23 +58,6 @@ const WhyChooseUsSection = () => {
       sub: 'With our team of travel experts, your mindfulness vacation will be managed with the highest level of expertise and care',
     },
   ];
-
-  const scrollContainer = (direction) => {
-    if (containerRef.current) {
-      let scrollAmount = 0
-      if(isMobileView){
-        scrollAmount = containerRef.current.offsetWidth * 0.94;
-      }
-      else{
-        scrollAmount = containerRef.current.offsetWidth * 0.6;
-      }
-      containerRef.current.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
-        behavior: 'smooth',
-      });
-      updateButtons();
-    }
-  };
 
   const updateButtons = () => {
     if (containerRef.current) {
@@ -164,16 +146,15 @@ const WhyChooseUsSection = () => {
       }
     ]
   };
-  
+
 
   return (
     <section id="why-chooseus-Section" className={`section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="why-chooseus-content justify-content-center">
-
         <div className="col-12 d-flex">
-          <div className="col">
+          <div className="col why-cu-text-col">
             <h3 className='font-primary'>What Makes Us Unique?</h3>
-            <hr style={{ width: '400px', marginTop:'-1px' }}></hr>
+            <hr style={{ width: '400px', marginTop: '-1px' }}></hr>
             <br></br>
             <p className='font-secondary'>Experience authentic mindfulness according to Buddha’s teachings, designed by Forbes-certified coach Dr. Gamini Hewawasam. Rooted in Sri Lankan heritage and backed by research, our programs guide you through ancient practices in carefully chosen locations, ensuring a seamless, expert-managed journey.</p>
           </div>
@@ -186,19 +167,19 @@ const WhyChooseUsSection = () => {
         </div>
 
         <div className="icon-container-wrapper">
-              <div className="slider-container" style={{paddingBottom:'20px', textAlign:'center'}} >
-                <Slider ref={slider => {sliderRef = slider;}} {...settings}>
-                    {contentData.map((content, index) => (
-                        <IconCard
-                          className={`icon-card`}
-                          key={index}
-                          content={content}
-                          ref={el => iconCardsRef.current[index] = el}
-                          style={{ '--animation-order': index }}
-                      />
-                    ))}
-                </Slider> 
-              </div>
+          <div className="slider-container" style={{ paddingBottom: '20px', textAlign: 'center' }} >
+            <Slider ref={slider => { sliderRef = slider; }} {...settings}>
+              {contentData.map((content, index) => (
+                <IconCard
+                  className={`icon-card`}
+                  key={index}
+                  content={content}
+                  ref={el => iconCardsRef.current[index] = el}
+                  style={{ '--animation-order': index }}
+                />
+              ))}
+            </Slider>
+          </div>
         </div>
 
       </div>

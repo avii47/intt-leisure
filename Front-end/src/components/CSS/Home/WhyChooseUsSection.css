@@ -77,5 +77,8 @@
     transform: translateY(0);
 }
 .nav-icon{
-    height: 40px;
+    height: 30px;
+}
+.mobile-view .why-cu-text-col{
+    width: 80vw;
 }

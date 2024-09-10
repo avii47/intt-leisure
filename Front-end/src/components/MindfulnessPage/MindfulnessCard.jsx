@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+// import "../../components/CSS/ContentBlock.css";
 
 const ContentBlock = ({ image, title, text, imagePosition }) => {
   const [isMobileView, setIsMobileView] = useState(false);
