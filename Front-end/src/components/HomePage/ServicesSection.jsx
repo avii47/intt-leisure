@@ -20,8 +20,9 @@ const ServicesSection = () => {
 
   const serviceCardsRef = useRef([]);
   const navigate = useNavigate();
-  const [showLeftButton2, setShowLeftButton] = useState(false);
-  const [showRightButton2, setShowRightButton] = useState(true);
+  const [showLeftButton2, setShowLeftButton2] = useState(false);
+  const [showRightButton2, setShowRightButton2] = useState(true);
+  const [currentSlide2, setCurrentSlide2] = useState(0);
   const containerRef2 = useRef(null);
   let sliderRef = useRef(null);
   const isMobileView2 = useMobileView();
@@ -103,42 +104,10 @@ const ServicesSection = () => {
 
   ];
 
-  const scrollContainer = (direction) => {
-    if (containerRef2.current) {
-      let scrollAmount = 0
-      if (isMobileView) {
-        scrollAmount = containerRef2.current.offsetWidth * 0.920;
-      }
-      else {
-        scrollAmount = containerRef2.current.offsetWidth * 0.6;
-      }
-      containerRef2.current.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
-        behavior: 'smooth',
-      });
-      updateButtons();
-    }
+  const updateButtonVisibility2 = (currentSlide2) => {
+    setShowLeftButton2(currentSlide2 > 0);
+    setShowRightButton2(currentSlide2 < contentData.length - 4);
   };
-
-  const updateButtons = () => {
-    if (containerRef2.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = containerRef2.current;
-      setShowLeftButton(scrollLeft > 0);
-      setShowRightButton(scrollLeft + clientWidth < scrollWidth);
-    }
-  };
-
-  useEffect(() => {
-    updateButtons();
-    if (containerRef2.current) {
-      containerRef2.current.addEventListener('scroll', updateButtons);
-    }
-    return () => {
-      if (containerRef2.current) {
-        containerRef2.current.removeEventListener('scroll', updateButtons);
-      }
-    };
-  }, []);
 
   const handleServiceCardClick = (id) => {
     navigate(`/services/${id}`);
@@ -157,6 +126,8 @@ const ServicesSection = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
+    beforeChange: (current, next) => setCurrentSlide2(next),
+    afterChange: (current) => updateButtonVisibility2(current),
     responsive: [
       {
         breakpoint: 1024,
@@ -198,8 +169,8 @@ const ServicesSection = () => {
           </div>
           <div className="col-1 nav-icon-col">
             <div className='service-card-nav-icons'>
-              <img className='nav-icon' src={left_arrow} onClick={previous}></img>
-              <img className='nav-icon' src={right_arrow} onClick={next}></img>
+              <img className={`nav-icon ${!showLeftButton2 ? 'disabled' : ''}`} src={left_arrow} onClick={previous}></img>
+              <img className={`nav-icon ${!showRightButton2 ? 'disabled' : ''}`} src={right_arrow} onClick={next}></img>
             </div>
           </div>
         </div>

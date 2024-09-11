@@ -14,8 +14,7 @@ import img4 from "../../assets/images/seekersPage-hero-img.jpg";
 import img5 from "../../assets/images/studentsPage-hero-img.jpg";
 
 const BookNowContent = () => {
-  const img6 =
-    "https://img.freepik.com/free-photo/fit-man-practicing-yoga_23-2151745576.jpg?t=st=1724408447~exp=1724412047~hmac=920d3b90806acfb59af294d14b6ea635a051638d00ac6f663da71fd1014b9947&w=1380";
+  const img6 = "https://img.freepik.com/free-photo/fit-man-practicing-yoga_23-2151745576.jpg?t=st=1724408447~exp=1724412047~hmac=920d3b90806acfb59af294d14b6ea635a051638d00ac6f663da71fd1014b9947&w=1380";
   const [checkinDate, setCheckinDate] = useState(new Date());
   const [checkoutDate, setCheckoutDate] = useState(new Date());
   const [selectedCard, setSelectedCard] = useState(null);

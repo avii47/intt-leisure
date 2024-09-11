@@ -5,7 +5,6 @@ import img_01 from '../../assets/images/events-img1.jpg';
 import img_02 from '../../assets/images/events-img2.jpg';
 import img_03 from '../../assets/images/ev5ents-img2.jpg';
 import img_04 from '../../assets/images/events-img3.png';
-
 import img_05 from '../../assets/images/news-img.png';
 
 const EventCard = lazy(() => import('../Events&NewsPage/EventCard'));

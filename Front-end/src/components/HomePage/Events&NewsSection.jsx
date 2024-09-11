@@ -19,8 +19,9 @@ const EventsNewsSection = () => {
 
   const containerRef3 = useRef(null);
   const cardRef3 = useRef(null);
-  const [showLeftButton3, setShowLeftButton] = useState(false);
-  const [showRightButton3, setShowRightButton] = useState(true);
+  const [showLeftButton3, setShowLeftButton3] = useState(false);
+  const [showRightButton3, setShowRightButton3] = useState(true);
+  const [currentSlide3, setCurrentSlide3] = useState(0);
   const navigate = useNavigate();
   let sliderRef = useRef(null);
 
@@ -69,29 +70,15 @@ const EventsNewsSection = () => {
     }
   ];
 
-  const updateButtons = () => {
-    if (containerRef3.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = containerRef3.current;
-      setShowLeftButton(scrollLeft > 0);
-      setShowRightButton(scrollLeft + clientWidth < scrollWidth);
-    }
-  };
-
-  useEffect(() => {
-    updateButtons();
-    if (containerRef3.current) {
-      containerRef3.current.addEventListener('scroll', updateButtons);
-    }
-    return () => {
-      if (containerRef3.current) {
-        containerRef3.current.removeEventListener('scroll', updateButtons);
-      }
-    };
-  }, []);
 
   const handleOnClick = (path) => {
     navigate(path);
   };
+
+  const updateButtonVisibility3 = (currentSlide3) => {
+    setShowLeftButton3(currentSlide3 > 0);
+    setShowRightButton3(currentSlide3 < contentData.length - 3);
+  }; 
 
   const next = () => {
     sliderRef.slickNext();
@@ -106,6 +93,8 @@ const EventsNewsSection = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
+    beforeChange: (current, next) => setCurrentSlide3(next),
+    afterChange: (current) => updateButtonVisibility3(current),
     responsive: [
       {
         breakpoint: 1124,
@@ -144,8 +133,8 @@ const EventsNewsSection = () => {
           </div>
           <div className="col-1 nav-icon-col">
             <div className='service-card-nav-icons' style={{ marginTop: '0' }}>
-              <img className='nav-icon' src={left_arrow} onClick={previous}></img>
-              <img className='nav-icon' src={right_arrow} onClick={next}></img>
+              <img className={`nav-icon ${!showLeftButton3 ? 'disabled' : ''}`} src={left_arrow} onClick={previous}></img>
+              <img className={`nav-icon ${!showRightButton3 ? 'disabled' : ''}`} src={right_arrow} onClick={next}></img>
             </div>
           </div>
         </div>
