@@ -2,7 +2,7 @@
 .destination-card {
     border-radius: 12px;
     overflow: hidden;
-    width: 450px;
+    max-width: 450px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 16px;
@@ -76,4 +76,5 @@
     transform: translateX(-40%); 
     opacity: 1; 
   }
+  
   

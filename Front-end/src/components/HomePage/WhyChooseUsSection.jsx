@@ -20,6 +20,7 @@ const WhyChooseUsSection = () => {
 
   const [showLeftButton, setShowLeftButton] = useState(false);
   const [showRightButton, setShowRightButton] = useState(true);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const containerRef = useRef(null);
   const iconCardsRef = useRef([]);
   let sliderRef = useRef(null);
@@ -106,6 +107,11 @@ const WhyChooseUsSection = () => {
     };
   }, [iconCardsRef]);
 
+  const updateButtonVisibility = (currentSlide) => {
+    setShowLeftButton(currentSlide > 0);
+    setShowRightButton(currentSlide < contentData.length - 4);
+  };
+
   const next = () => {
     sliderRef.slickNext();
   };
@@ -119,6 +125,8 @@ const WhyChooseUsSection = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
+    beforeChange: (current, next) => setCurrentSlide(next),
+    afterChange: (current) => updateButtonVisibility(current),
     responsive: [
       {
         breakpoint: 1024,
@@ -160,8 +168,8 @@ const WhyChooseUsSection = () => {
           </div>
           <div className="col-1 nav-icon-col">
             <div className='service-card-nav-icons'>
-              <img className='nav-icon' src={left_arrow} onClick={previous}></img>
-              <img className='nav-icon' src={right_arrow} onClick={next}></img>
+              <img className={`nav-icon ${!showLeftButton ? 'disabled' : ''}`} src={left_arrow} onClick={previous}></img>
+              <img className={`nav-icon ${!showRightButton ? 'disabled' : ''}`} src={right_arrow} onClick={next}></img>
             </div>
           </div>
         </div>

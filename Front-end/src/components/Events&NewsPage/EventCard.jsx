@@ -1,32 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const EventCard = ({content}) => {
+const EventCard = ({ content }) => {
 
-    // useEffect(() => {
-    //     const section = document.getElementById('event-card');
-    //     const blockSection = document.getElementById('event-card');
-    
-    //     const observer = new IntersectionObserver(
-    //       ([entry]) => {
-    //         if (entry.isIntersecting) {
-    //           blockSection.classList.add('animate-event-card');
-    //         }
-    //       },
-    //       { threshold: 0.5 }
-    //     );
-    
-    //     if (section) {
-    //       observer.observe(section);
-    //     }
-    
-    //     return () => {
-    //       if (section) {
-    //         observer.unobserve(section);
-    //       }
-    //     };
-    //   }, []);
+    const navigate = useNavigate();
+    const handleOnClick = (path) => {
+        navigate(path);
+    };
 
-      return(
+    return (
         <div id='event-card' className="col-12 event-card d-flex" >
             <div className="col-md-4 eventsNews-img-col font-secondary">
                 <img className='eventsNews-img' src={content.img} alt="news image" loading='lazy' />
@@ -35,13 +17,15 @@ const EventCard = ({content}) => {
             </div>
             <div className="col-md eventsNews-txt">
                 <div>
-                    <p style={{ marginBottom:'30px' }}>{content.text}</p>
-                    <button className='btn btn-dark news-card-btn'>Sign up ></button>
+                    <p style={{ marginBottom: '30px' }}>{content.text}</p>
+                    <button className='btn btn-dark news-card-btn' onClick={() => handleOnClick('/contact-us')}>Sign up ></button>
                 </div>
             </div>
         </div>
-  );
+
+
+    );
 };
 
-  
+
 export default EventCard;
