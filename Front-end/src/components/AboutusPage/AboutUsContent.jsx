@@ -12,6 +12,7 @@ import mission_icon from '../../assets/icons/mission_icon.png'
 const AboutUsContent = () => {
 
   const isMobileView = useMobileView();
+  const offset = 200;
 
   useEffect(() => {
     const section = document.querySelector('.top-section');
@@ -135,34 +136,47 @@ const AboutUsContent = () => {
     };
   }, []);
 
+  // Custom scroll behavior with manual offset adjustment
+  const handleScroll = (event, targetId) => {
+    event.preventDefault();
+    const target = document.getElementById(targetId);
+    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+
+    // Smooth scroll to the target position minus the offset
+    window.scrollTo({
+      top: targetPosition - offset,  // Adjust by offset
+      behavior: 'smooth',
+    });
+  };
+
 
   return (
     <section id="aboutus-content-section" className={`section aboutus-content-section d-flex ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="aboutus-section-content">
         <div id='top-section' className="top-section d-flex">
           <div className="col-lg-3 top-col" style={{ padding: '0 40px 0 0' }}>
-            <a href="#our-story">
+            <a href="#our-story" onClick={(e) => handleScroll(e, 'our-story')}>
               <div className="topic-item">
                 <h3 className='font-primary topic-item-text'>Our Story</h3>
               </div>
             </a>
           </div>
           <div className="col-lg-3 top-col" style={{ padding: '0 40px 0 0' }}>
-            <a href="#our-missionVision">
+            <a href="#our-missionVision" onClick={(e) => handleScroll(e, 'our-missionVision')}>
               <div className="topic-item">
                 <h3 className='font-primary topic-item-text'>Our Vision</h3>
               </div>
             </a>
           </div>
           <div className="col-lg-3 top-col" style={{ padding: '0 30px 0 0' }}>
-            <a href="#our-achievements">
+            <a href="#our-achievements" onClick={(e) => handleScroll(e, 'our-achievements')}>
               <div className="topic-item">
                 <h3 className='font-primary topic-item-text'>Achievements</h3>
               </div>
             </a>
           </div>
           <div className="col-lg-3 top-col" style={{ padding: '0 0 0 30px' }}>
-            <a href="#ceo-message">
+            <a href="#ceo-message" onClick={(e) => handleScroll(e, 'ceo-message')}>
               <div className="topic-item">
                 <h3 className='font-primary topic-item-text'>A Word From CEO</h3>
               </div>

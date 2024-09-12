@@ -49,10 +49,10 @@ const FeedbackSection = () => {
 
     emailjs
       .send(
-        "service_933kflg",
-        "template_o95d5bx",
+        "service_6of844u",
+        "template_rik8m2j",
         bookingDetails,
-        "_rf9OG9FxhVPr0Rsu"
+        "gdzYpqkDHcPcrpQOw"
       )
       .then((response) => {
         console.log("Email sent successfully!", response.status, response.text);
@@ -70,13 +70,13 @@ const FeedbackSection = () => {
         <h3 className='font-primary' style={{marginBottom:'50px'}}>Get In Touch With Us</h3>
         <form className="feedback-form">
             <div className="form-group feedback-ft">
-              <input type="text" className="form-control in-f" id="name" placeholder="Name" required />
+              <input type="text" className="form-control in-f" id="name" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required />
             </div>
             <div className="form-group feedback-ft">
-              <input type="email" className="form-control in-f" id="email" placeholder="Email" required />
+              <input type="email" className="form-control in-f" id="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
             </div>
             <div className="form-group feedback-ft">
-              <input type="text" className="form-control in-f" id="mobile" placeholder="Mobile" required />
+              <input type="text" className="form-control in-f" id="mobile" placeholder="Mobile" value={mobile} onChange={(e) => setMobile(e.target.value)} required />
             </div>
             <div className="form-group feedback-ft">
               <textarea className="form-control in-f" id="message" rows="6" name="message" placeholder="Message" required></textarea>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Lottie from 'lottie-react';
+import '../CSS/HeroSection.css';
 import img_01 from '../../assets/images/Manolead-01.png';
 import img_02 from '../../assets/images/FCC-Signature 1.png';
 import animationData from '../../assets/icons/down-arrow2.json';
@@ -87,14 +88,14 @@ const HeroSection = () => {
         </div>
         <div className={`bottom-viewbar d-flex ${isCursorMoving ? 'slide-up' : 'slide-down'}`}>
           <h5 className="bottom-viewbar-text">Introduced By</h5>
-          <img src={img_01} alt="manolead-logo" className="bottom-viewbar-img" loading='lazy' />
-          <img src={img_02} alt="forbes logo" className="bottom-viewbar-img img2" loading='lazy' />
-          <div className="social-icon-section">
-            <i className="fa-brands fa-facebook social-icon"></i>
-            <i className="fa-brands fa-linkedin social-icon"></i>
-            <i className="fa-brands fa-youtube social-icon"></i>
-            <i className="fa-brands fa-instagram social-icon"></i>
-          </div>
+          <a href="https://manolead.com" target="_blank" rel="noopener noreferrer"><img src={img_01} alt="manolead-logo" className="bottom-viewbar-img" loading='lazy' /></a>
+          <a href="https://councils.forbes.com/profile/Gamini-Hewawasam-Scholar-Practitioner-CEO-ManoLead-NFP/bcb1aacb-ab06-4957-803a-62da6f9d179b" target="_blank" rel="noopener noreferrer"><img src={img_02} alt="forbes logo" className="bottom-viewbar-img img2" loading='lazy' /></a>
+          {/* <div className="social-icon-section">
+            <a href="https://www.facebook.com/manolead" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-facebook social-icon"></i></a>
+            <a href="https://www.linkedin.com/in/gaminihewawasam/" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-linkedin social-icon"></i></a>
+            <a href="https://www.youtube.com/@travelglobe405" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-youtube social-icon"></i></a>
+            <a href="https://www.instagram.com/manolead_/" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-instagram social-icon"></i></a>
+          </div> */}
         </div>
       </div>
     </div>

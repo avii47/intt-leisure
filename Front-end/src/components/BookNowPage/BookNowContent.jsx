@@ -79,10 +79,10 @@ const BookNowContent = () => {
 
     emailjs
       .send(
-        "service_933kflg",
-        "template_o95d5bx",
+        "service_6of844u",
+        "template_rik8m2j",
         bookingDetails,
-        "_rf9OG9FxhVPr0Rsu"
+        "gdzYpqkDHcPcrpQOw"
       )
       .then((response) => {
         console.log("Email sent successfully!", response.status, response.text);
