@@ -23,42 +23,47 @@ const ServiceContent = () => {
       'img': img1,
       'title': 'Leaders',
       'sub': 'Mindfulness at Ritigala',
-      'text': 'Unlock Your Leadership Potential with Mindfulness in Sri Lanka'
+      'text': 'Unlock Your Leadership Potential with Mindfulness in Sri Lanka',
+      'label': 'View Package'
     },
     {
       'id': 2,
       'img': img2,
       'title': 'Educators',
       'sub': 'Mindfulness at Ritigala',
-      'text': 'Uncover the Luxury of Mindfulness in Sri Lanka for Educators'
+      'text': 'Uncover the Luxury of Mindfulness in Sri Lanka for Educators',
+      'label': 'View Package'
     },
     {
       'id': 3,
       'img': img3,
       'title': 'Corporates',
       'sub': 'Mindfulness at Ritigala',
-      'text': 'Is your corporate team ready to embark on a transformative journey?'
+      'text': 'Is your corporate team ready to embark on a transformative journey?',
+      'label': 'View Package'
     },
     {
       'id': 4,
       'img': img4,
       'title': 'Seekers',
       'sub': 'Mindfulness at Ritigala',
-      'text': 'Are you seeking inner peace, balance, and personal growth?'
+      'text': 'Are you seeking inner peace, balance, and personal growth?',
+      'label': 'View Package'
     },
     {
       'id': 5,
       'img': img5,
       'title': 'Students',
       'sub': 'Mindfulness at Ritigala',
-      'text': 'Uncover the Luxury of Mindfulness in Sri Lanka for Students'
+      'text': 'Uncover the Luxury of Mindfulness in Sri Lanka for Students',
+      'label': 'View Package'
     },
     {
       'id': 6,
       'img': img6,
-      'title': 'Others',
-      'sub': 'Mindfulness at Ritigala',
-      'text': 'Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.'
+      'title': 'Customize You Journey',
+      'text': 'You can customize your journey with us. We will provide most suitable package for you.',
+      'label': 'Customize your Package'
     },
 
   ];
@@ -88,7 +93,12 @@ const ServiceContent = () => {
   }, []);
 
   const handleServiceCardClick = (id) => {
-    navigate(`/services/${id}`);
+    if(id === 6){
+      navigate('/contact-us');
+    }
+    else{
+      navigate(`/services/${id}`);
+    }
   };
 
   return (

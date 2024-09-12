@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import emailjs from "emailjs-com";
+import Modal from "../components/BookNowPage/Modal";
 import addressIcon from '../assets/icons/icons8-location-pin-50.png';
 import callIcon from '../assets/icons/icons8-call-50.png';
 import emailIcon from '../assets/icons/icons8-email-50.png';
@@ -10,6 +12,8 @@ import './CSS/FooterSection.css';
 const Footer = () => {
 
   const [isMobileView, setIsMobileView] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [email, setEmail] = useState("");
 
   useEffect(() => {
     const handleResize = () => {
@@ -23,6 +27,29 @@ const Footer = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  const handleSubscribeClick = (e) => {
+    e.preventDefault();
+
+    const bookingDetails = {
+      email,
+    };
+
+    emailjs
+      .send(
+        "service_6of844u",
+        "template_rik8m2j",
+        bookingDetails,
+        "gdzYpqkDHcPcrpQOw"
+      )
+      .then((response) => {
+        console.log("Email sent successfully!", response.status, response.text);
+        setShowModal(true);
+      })
+      .catch((error) => {
+        console.error("Failed to send email:", error);
+      });
+  };
 
   return (
     <footer className={`footer justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`} >
@@ -53,8 +80,8 @@ const Footer = () => {
                 and stay connected to your inner peace!
               </p>
               <form className="subscription-form">
-                <input type="email" placeholder="Your Email" />
-                <button type="submit">Subscribe Now &gt;</button>
+                <input type="email" placeholder="Your Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <button type="submit" onClick={handleSubscribeClick}>Subscribe Now &gt;</button>
               </form>
               <p>
                 By subscribing you agree to our Privacy Policy and consent to receive
@@ -82,7 +109,7 @@ const Footer = () => {
                     <img loading="lazy" src={callIcon} className='contact-icons' alt="call icon" />
                   </div>
                   <div className="col-12" style={{ marginLeft: '20px' }}>
-                    <a href="tel:0094770437293" className='link-text'>+1 312-242-1662</a><br />
+                    <a href="tel:+1 312-242-1662" className='link-text'>+1 312-242-1662</a><br />
                   </div>
                 </address>
                 <address className='d-flex'>
@@ -90,7 +117,7 @@ const Footer = () => {
                     <img loading="lazy" src={emailIcon} className='contact-icons' alt="email icon" />
                   </div>
                   <div className="col-12" style={{ marginLeft: '20px' }}>
-                    <a href="mailto:isuru.tours@delmege.com" className='link-text'>info@intterminal.com</a>
+                    <a href="mailto:info@intterminal.com" className='link-text'>info@intterminal.com</a>
                   </div>
                 </address>
               </div>
@@ -115,16 +142,16 @@ const Footer = () => {
             <a href="https://www.facebook.com/inttleisure" target="_blank" rel="noopener noreferrer">
               <i className="fa-brands fa-square-facebook ft-social-icon"></i>
             </a>
-            <a href="https://www.pinterest.com/your-profile" target="_blank" rel="noopener noreferrer">
+            {/* <a href="https://www.pinterest.com/your-profile" target="_blank" rel="noopener noreferrer">
               <i className="fa-brands fa-pinterest-square ft-social-icon"></i>
-            </a>
-            <a href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer">
+            </a> */}
+            <a href="https://www.instagram.com/inttleisure/" target="_blank" rel="noopener noreferrer">
               <i className="fa-brands fa-square-instagram ft-social-icon"></i>
             </a>
-            <a href="https://www.linkedin.com/company/intt-leisure" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/company/intt-leisure?" target="_blank" rel="noopener noreferrer">
               <i className="fa-brands fa-linkedin ft-social-icon"></i>
             </a>
-            <a href="https://twitter.com/your-profile" target="_blank" rel="noopener noreferrer">
+            <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fint_terminal" target="_blank" rel="noopener noreferrer">
               <i className="fa-brands fa-square-x-twitter ft-social-icon"></i>
             </a>
             <a href="https://www.youtube.com/@travelglobe405" target="_blank" rel="noopener noreferrer">
@@ -135,6 +162,14 @@ const Footer = () => {
         <div className="footer-copyright">
           <p>&copy; 2024 inttleisure.com. All rights reserved.</p>
         </div>
+
+        <Modal show={showModal} onClose={() => setShowModal(false)}>
+          <h2>Your Have Successfully Subscribe Our Newsletters.</h2>
+          <br></br>
+          <p>
+            You will have confirmation email from us.
+          </p>
+        </Modal>
       </div>
     </footer>
   );

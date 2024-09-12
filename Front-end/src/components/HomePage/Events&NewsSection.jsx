@@ -54,19 +54,23 @@ const EventsNewsSection = () => {
   const contentData = [
     {
       'img': img_03,
-      'sub': 'Wisdom in the times of Crisis'
+      'title': 'Wisdom in the times of Crisis',
+      'sub': 'Dr. GB Hewawasam presented at the 24th ILA leadership conference in Washington DC on the topic of Introspective Leadership...'
     },
     {
       'img': img_01,
-      'sub': 'Exploring the Impact of Mindfulness on Leadership'
+      'title': 'Integrating Appreciative Inquiry into Mindfulness-based Leadership',
+      'sub': 'A workshop was conducted at the university of Moratuwa on the 19th of June 2023.The workshop focused on enhancing the staff...'
     },
     {
       'img': img_02,
-      'sub': 'Well trained experts to guide you through the journey.'
+      'title': 'Exploring the Impact of Mindfulness on Leadership',
+      'sub': 'A workshop titled “How Mindfulness Affects Leadership” was conducted at Mihintale. The workshop included the participation...'
     },
     {
       'img': img_04,
-      'sub': 'Wisdom in the times of Crisis'
+      'title': 'Wisdom in the times of Crisis',
+      'sub': 'Dr. GB Hewawasam presented at the 24th ILA leadership conference in Washington DC on the topic of Introspective Leadership...'
     }
   ];
 

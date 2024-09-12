@@ -91,13 +91,13 @@ const EventsNewsContent = () => {
       img: img_03,
       imgTitle: 'Mindfulness Based Leadership',
       imgSub: 'Well trained experts to guide you through the journey.',
-      text: 'Dr. GB Hewawasam presented at the 24th ILA leadership conference in Washington DC on the topic of Introspective Leadership and how mindfulness with clear comprehension from early teachings of buddha cultivate wisdom. His presentation centered around the timely and relevant theme of “Wisdom in the Times of Crisis”. During his talk, Dr. Hewawasam explored the concept of Introspective Leadership, emphasizing the crucial role that mindfulness, coupled with clear comprehension, plays in cultivating wisdom. Drawing inspiration from the early teachings of Buddha, he highlighted how the practice of mindfulness can be a powerful tool for leaders facing challenging and uncertain situations.'
+      text: 'Dr. GB Hewawasam presented at the 26th ILA leadership conference in Washington DC on the topic of Introspective Leadership and how mindfulness with clear comprehension from early teachings of buddha cultivate wisdom. His presentation centered around the timely and relevant theme of “Wisdom in the Times of Crisis”. During his talk, Dr. Hewawasam explored the concept of Introspective Leadership, emphasizing the crucial role that mindfulness, coupled with clear comprehension, plays in cultivating wisdom. Drawing inspiration from the early teachings of Buddha, he highlighted how the practice of mindfulness can be a powerful tool for leaders facing challenging and uncertain situations.'
     },
     {
       img: img_02,
       imgTitle: 'Mindfulness Based Leadership',
       imgSub: 'Well trained experts to guide you through the journey.',
-      text: 'Dr. GB Hewawasam presented at the 24th ILA leadership conference in Washington DC on the topic of Introspective Leadership and how mindfulness with clear comprehension from early teachings of buddha cultivate wisdom. His presentation centered around the timely and relevant theme of “Wisdom in the Times of Crisis”. During his talk, Dr. Hewawasam explored the concept of Introspective Leadership, emphasizing the crucial role that mindfulness, coupled with clear comprehension, plays in cultivating wisdom. Drawing inspiration from the early teachings of Buddha, he highlighted how the practice of mindfulness can be a powerful tool for leaders facing challenging and uncertain situations.'
+      text: 'A workshop titled “How Mindfulness Affects Leadership” was conducted at Mihintale. The workshop included the participation of three Buddhist monks, namely Ven. Seelananada, Thapowanaye Saddhajiwa, and Ven. Sudassana, along with three global leaders: Dr. Jim Ludema from the Den of Business School at Calvin University (USA), Dr. Beverlee Ludema (a clinical psychologist), and Dr. GB Hewasam, the founder and CEO of Finefinish Engineering and INT Terminal travel group. The workshop was held at Kaludiyapokuna on June 10th and primarily focused on exploring the impact of mindfulness on leadership. It provided a valuable opportunity to delve deeper into the influence of mindfulness on leadership. '
     },
     {
       img: img_01,
@@ -109,7 +109,7 @@ const EventsNewsContent = () => {
       img: img_04,
       imgTitle: 'Wisdom in Times of Crisis',
       imgSub: 'Well trained experts to guide you through the journey.',
-      text: 'A workshop titled “How Mindfulness Affects Leadership” was conducted at Mihintale. The workshop included the participation of three Buddhist monks, namely Ven. Seelananada, Thapowanaye Saddhajiwa, and Ven. Sudassana, along with three global leaders: Dr. Jim Ludema from the Den of Business School at Calvin University (USA), Dr. Beverlee Ludema (a clinical psychologist), and Dr. GB Hewasam, the founder and CEO of Finefinish Engineering and INT Terminal travel group. The workshop was held at Kaludiyapokuna on June 10th and primarily focused on exploring the impact of mindfulness on leadership. It provided a valuable opportunity to delve deeper into the influence of mindfulness on leadership.  '
+      text: 'Dr. GB Hewawasam presented at the 24th ILA leadership conference in Washington DC on the topic of Introspective Leadership and how mindfulness with clear comprehension from early teachings of buddha cultivate wisdom. His presentation centered around the timely and relevant theme of “Wisdom in the Times of Crisis”. During his talk, Dr. Hewawasam explored the concept of Introspective Leadership, emphasizing the crucial role that mindfulness, coupled with clear comprehension, plays in cultivating wisdom. Drawing inspiration from the early teachings of Buddha, he highlighted how the practice of mindfulness can be a powerful tool for leaders facing challenging and uncertain situations. '
     },
   ];
 

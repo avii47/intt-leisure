@@ -10,6 +10,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { useMobileView } from '../contexts/MobileViewContext';
 import CustomDropdown from './CustomDropdown';
+import ScrollToTop from '../components/ScrollToTop';
 import '../components/CSS/Navbar.css';
 
 import img1 from '../assets/images/leadersPage-hero-img.jpg'

@@ -25,23 +25,23 @@ const ServicesSection = () => {
   const [currentSlide2, setCurrentSlide2] = useState(0);
   const containerRef2 = useRef(null);
   let sliderRef = useRef(null);
-  const isMobileView2 = useMobileView();
+  const isMobileView = useMobileView();
 
-  const [isMobileView, setIsMobileView] = useState(false);
+  // const [isMobileView, setIsMobileView] = useState(false);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobileView(window.innerWidth <= 1600);
-    };
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setIsMobileView(window.innerWidth <= 1200);
+  //   };
 
-    handleResize();
+  //   handleResize();
 
-    window.addEventListener('resize', handleResize);
+  //   window.addEventListener('resize', handleResize);
 
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('resize', handleResize);
+  //   };
+  // }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
@@ -87,7 +87,7 @@ const ServicesSection = () => {
       id: 3,
       img: img3,
       title: 'Mindfulness for Corporates',
-      sub: 'Is your corporate team ready to embark on a transformative journey that combines productivity enhancement with holistic well-being?',
+      sub: 'Is your corporate team ready to embark on a transformative journey?',
     },
     {
       id: 4,
