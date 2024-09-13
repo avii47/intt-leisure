@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { Helmet } from 'react-helmet-async';
+import ScrollToTopButton from '../components/ScrollToTopButton';
 
 const HeroSection = lazy(() => import('../components/HomePage/HeroSection'));
 const MindfulnessTourismSection = lazy(() => import('../components/HomePage/MindfulnessTourismSection'));
@@ -46,6 +47,7 @@ const HomePage = () => {
             <Suspense fallback={<div>Loading...</div>}>
                 <MobileButton label="Book Now" />
             </Suspense>
+            <ScrollToTopButton />
 
         </>
     )

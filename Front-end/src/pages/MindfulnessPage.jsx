@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { Helmet } from 'react-helmet-async';
+import ScrollToTopButton from '../components/ScrollToTopButton';
 import "../components/CSS/Pages/MindfulnessPage.css";
 import bg from '../assets/images/mindfulnessPage-hero-img.jpg';
 
@@ -30,6 +31,7 @@ const MindfulnessPage = () => {
             <Suspense fallback={<div>Loading...</div>}>
                 <MobileButton label="Book Now" />
             </Suspense>
+            <ScrollToTopButton />
         </>
     )
 }

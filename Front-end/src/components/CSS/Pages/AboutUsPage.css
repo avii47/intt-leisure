@@ -73,10 +73,11 @@
     transform: translateY(100px);
 }
 .ceo-message {
-    margin-left: -50px;
     padding: 50px;
     border-radius: 20px;
-    background-image: url("https://img.freepik.com/free-vector/abstract-desktop-background-white-geometric-design-vector_53876-140225.jpg?t=st=1725875923~exp=1725879523~hmac=f51c498ada01c828a50a4ff96ae613b70bf9678810d64c17853a099e26ea2da2&w=1380");
+    background-image: url('../../../assets/images/msg-from-ceo-img.jpg');
+    /* background-image: url('../../../assets/images/WhatsApp Image 2024-09-12 at 1.32.17 PM.jpeg'); */
+    /* background-image: url("https://img.freepik.com/free-vector/abstract-desktop-background-white-geometric-design-vector_53876-140225.jpg?t=st=1725875923~exp=1725879523~hmac=f51c498ada01c828a50a4ff96ae613b70bf9678810d64c17853a099e26ea2da2&w=1380"); */
 }
 
 .ceo-message-content{

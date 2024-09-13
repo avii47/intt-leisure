@@ -1,9 +1,9 @@
 import React from 'react';
 import '../CSS/Pages/TourCard.css'; // External CSS
 
-const TourCard = ({ imageSrc, title, description, link }) => {
+const TourCard = ({ imageSrc, title, description, link, onClick }) => {
     return (
-      <div className="card destination-card">
+      <div className="card destination-card" onClick={onClick}>
         <div className="destination-card-image-container">
           <img src={imageSrc} alt={title} className="destination-card-image" />
         </div>

@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { Helmet } from 'react-helmet-async';
+import ScrollToTopButton from '../components/ScrollToTopButton';
 import "../components/CSS/Pages/DestinationsPage.css";
 import bg from '../assets/images/destinationsPage-hero-img.jpg'
 
@@ -8,7 +9,7 @@ const DestinationsContent = lazy(() => import('../components/DestinationsPage/De
 const FooterSection = lazy(() => import('../components/FooterSection'));
 const MobileButton = lazy(() => import('../components/MobileBookNowButton'));
 
-const ContactUsPage = () => {
+const DestinationPage = () => {
 
     const img = bg;
     const title = 'Destinations';
@@ -32,8 +33,9 @@ const ContactUsPage = () => {
             <Suspense fallback={<div>Loading...</div>}>
                 <MobileButton label="Book Now" />
             </Suspense>
+            <ScrollToTopButton />
         </>
     )
 }
 
-export default ContactUsPage;
+export default DestinationPage;

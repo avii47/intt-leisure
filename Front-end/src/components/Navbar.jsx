@@ -128,6 +128,13 @@ function MyNavbar() {
     },
   ];
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
 
   return (
     <>
@@ -139,7 +146,7 @@ function MyNavbar() {
           className={`bg-body-tertiary mb-3 navbar-container ${scrolled ? 'navbar-scrolled' : ''}  ${isMobileView ? 'mobile-view' : ''}`}
         >
           <Container fluid className={`nav-container`} >
-            <Navbar.Brand id="callOne" as={Link} to="/" >
+            <Navbar.Brand id="callOne" as={Link} to="/" onClick={scrollToTop}>
               <img loading="lazy" className="logo" src={scrolled ? logo_dark : logo_light} alt="Logo" />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className="custom-toggler" onClick={() => setShowOffcanvas(!showOffcanvas)} />
