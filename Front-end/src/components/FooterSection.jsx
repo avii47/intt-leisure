@@ -131,8 +131,8 @@ const Footer = () => {
           <img loading="lazy" src={ft_icon2} alt="iata Logo" />
         </div>
         <div className="footer-bottom">
-          <a href="/privacy">Privacy Policy</a>
-          <a href="/terms">Terms of Service</a>
+          <a href="/privacyPolicy">Privacy Policy</a>
+          <a href="/termsConditions">Terms of Service</a>
           <a href="/cookies">Cookies Settings</a>
         </div>
         <div className="footer-social">

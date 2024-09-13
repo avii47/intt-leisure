@@ -15,7 +15,7 @@ const ServiceContent = () => {
 
   const isMobileView = useMobileView();
   const navigate = useNavigate();
-  const img6 = 'https://img.freepik.com/free-photo/fit-man-practicing-yoga_23-2151745576.jpg?t=st=1724408447~exp=1724412047~hmac=920d3b90806acfb59af294d14b6ea635a051638d00ac6f663da71fd1014b9947&w=1380'
+  const img6 = 'https://img.freepik.com/free-photo/back-view-woman-doing-yoga-outdoors_23-2148769551.jpg?t=st=1726225399~exp=1726228999~hmac=ecaf4b00aa9acc543b0324daca432cd61131bc193e49bb3f774a2dca29807fcf&w=1380'
 
   const contentData = [
     {

@@ -1,29 +1,32 @@
 import React from 'react';
 import '../CSS/Pages/InnerTourCard.css';
 
-const TourComponent = ({ imageUrl, title, details, startingPrice, onInquiryClick, onCallClick }) => {
+const TourComponent = ({ content, onInquiryClick, onCallClick  }) => {
   return (
-    <div className="tour-component">
-      <div className="tour-left">
+    <div className="tour-component col-12">
+      <div className="tour-left col-md-3">
         <img 
-          src={imageUrl} 
-          alt={title} 
+          src={content.img} 
+          alt={content.title} 
           className="tour-image"
         />
       </div>
 
-      <div className="tour-right">
-        <h2>{title}</h2>
+      <div className="tour-middle col-md-6">
+        <h1>{content.title}</h1>
         <ul className="tour-details">
-          {details.map((detail, index) => (
+          {content.details.map((detail, index) => (
             <li key={index}>{detail}</li>
           ))}
         </ul>
+      </div>
+
+      <div className="col-md-3 tour-right">
         <div className="tour-starting-price">
-          Starting price <span>{startingPrice}</span>
-        </div>
+          Starting price <br /> <span>{content.startingPrice}</span>
+        </div><hr />
         <div className="tour-buttons">
-          <button className="inquiry-button" onClick={onInquiryClick}>Submit Inquiry</button>
+          <button className="inquiry-button" onClick={onInquiryClick}>Submit Inquiry</button><br />
           <button className="call-button" onClick={onCallClick}>Call now</button>
         </div>
       </div>
