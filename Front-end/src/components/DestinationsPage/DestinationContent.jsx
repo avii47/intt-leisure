@@ -1,4 +1,5 @@
 import React, { useState, useEffect, lazy } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useMobileView } from '../../contexts/MobileViewContext';
 
 import img_01 from '../../assets/images/destination-Dubai.jpeg';
@@ -10,6 +11,7 @@ const TourCard = lazy(() => import('../DestinationsPage/DestinationCard'));
 const DestinationsContent = () => {
 
   const isMobileView = useMobileView();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const section = document.getElementById('destination-content-section');
@@ -34,43 +36,22 @@ const DestinationsContent = () => {
       }
     };
   }, []);
-   
 
-  // const destinationstData = [
-  //   {
-  //       img: img_01,
-  //       title: 'Corporate',
-  //       text: 'Well trained experts to guide you through the journey.'
-  //   },
-  //   {
-  //       img: img_02,
-  //       title: 'Corporate',
-  //       text: 'Well trained experts to guide you through the journey.'
-  //   },
-  //   {
-  //       img: img_03,
-  //       title: 'Corporate',
-  //       text: 'Well trained experts to guide you through the journey.'
-  //   },
-  //   {
-  //       img: img_04,
-  //       title: 'Corporate',
-  //       text: 'Well trained experts to guide you through the journey.'
-  //   },
-  // ];
+  const handleDestinationCardClick = (id) => {
+    navigate(`/destinations/${id}`);
+  };
 
   return (
     <section id="destination-content-section" className={`section destination-content-section ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="destination-section-content">
         <div id='destionation-cards-container' className="destionation-cards-container d-flex">
-            {/* {destinationstData.map((content, index) => (
-              <DestinationCard key={index} content={content} />
-            ))} */}
+
             <TourCard 
               imageSrc={img_01}
               title="Dubai"
               description="Dubai Tour Packages Honeymoon in Dubai Visa, Hotels, Meals included Marina Cruise Dinner Desert Safari City Tour Starting price LKR 179,999 Submit Inquiry Call now Best of Dubai All exclusive 7 Nights…"
               link="https://example.com/thailand-tour"
+              onClick={() => handleDestinationCardClick(1)}
             />
 
             <TourCard 
@@ -78,6 +59,7 @@ const DestinationsContent = () => {
               title="Thailand"
               description="Thailand Tour Packages Bangkok Pattaya 3 Star Category Hotel Accommodation on BB basis in Bangkok Return Airport Transfers in Private Car Chaophraya River Cruise With International Buffet…"
               link="https://example.com/thailand-tour"
+              onClick={() => handleDestinationCardClick(2)}
             />
 
             <TourCard 
@@ -85,6 +67,7 @@ const DestinationsContent = () => {
               title="Sri Lanka"
               description="Sri Lanka, historically known as Ceylon, and officially the Democratic Socialist Republic of Sri Lanka, is an island country in South Asia. It lies in the Indian Ocean, southwest of the Bay of Bengal, separated from the Indian peninsula by the Gulf of Mannar and the Palk Strait..."
               link="https://example.com/thailand-tour"
+              onClick={() => handleDestinationCardClick(3)}
             />
         </div>
       </div>

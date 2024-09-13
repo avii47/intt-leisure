@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { Helmet } from 'react-helmet-async';
+import ScrollToTopButton from '../components/ScrollToTopButton';
 import "../components/CSS/Pages/BookNowPage.css";
 import bg from '../assets/images/bookNowPage-hero-img.jpg'
 
@@ -26,6 +27,7 @@ const BookNowPage = () => {
             <Suspense fallback={<div>Loading...</div>}>
                 <FooterSection />
             </Suspense>
+            <ScrollToTopButton />
         </>
     )
 }

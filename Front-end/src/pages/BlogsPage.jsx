@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import ScrollToTopButton from '../components/ScrollToTopButton';
 import "../components/CSS/Pages/BlogsPage.css";
 import bg from '../assets/images/blogPage-hero-img.jpg'
 
@@ -36,6 +37,7 @@ const BlogsPage = () => {
             <Suspense fallback={<div>Loading...</div>}>
                 <MobileButton label="Book Now" />
             </Suspense>
+            <ScrollToTopButton />
         </>
     )
 }
