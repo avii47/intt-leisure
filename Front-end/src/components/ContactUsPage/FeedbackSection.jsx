@@ -50,7 +50,7 @@ const FeedbackSection = () => {
     emailjs
       .send(
         "service_6of844u",
-        "template_rik8m2j",
+        "template_fmi3ff8",
         bookingDetails,
         "gdzYpqkDHcPcrpQOw"
       )
@@ -85,10 +85,10 @@ const FeedbackSection = () => {
         </form>
 
         <Modal show={showModal} onClose={() => setShowModal(false)}>
-          <h2>Your Message Submited</h2>
+          <h2>Your Message has been Submited</h2>
           <br></br>
           <p>
-            Our team will contact you soon.
+            Thank you for contacting us!
           </p>
         </Modal>
       </div>

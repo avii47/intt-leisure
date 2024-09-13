@@ -206,7 +206,7 @@ const AboutUsContent = () => {
               <div className='vm-contaioner'>
                 <h3 className="font-primary">Our Vision</h3>
                 <img src={vision_icon} alt="vision_icon" style={{height:'200px', marginBottom:'40px'}}/>
-                <p className="font-secondary" style={{fontSize:'20px'}}>Give the experience of Intellectual Happiness through Mindful Living</p>
+                <p className="font-secondary" style={{fontSize:'20px'}}>Unlocking leadership potential with mindfulness vacations</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex vm-card-col" style={{justifyContent:'left', paddingLeft:'30px'}}>
@@ -251,10 +251,10 @@ const AboutUsContent = () => {
           <div id='ceo-message-content' className="ceo-message-content col-12 d-flex" style={{flexWrap:'wrap'}}>
             <div className="col-lg-7 txt-col">
               <div>
-                <h3 className="font-primary">A Word From CEO</h3>
-                <p className="font-secondary">Dr. Gamini Hewawasam stands out as a distinguished leader and scholar, with a formidable presence in both the entrepreneurial and academic sectors.</p><br />
-                <p className="font-secondary">As the CEO of FineFinish Engineering (Pvt) Ltd in Sri Lanka and the INT Terminal Travel Group in the United States, he has established himself as a key player in the aviation industry. His expertise in providing top-tier services has garnered the attention of United Airlines' Global Service flyers, celebrities, and Fortune 500 executives, underscoring his influential role in shaping the airline industry on a global scale.</p><br />
-                <p className="font-secondary">With his extensive experience spanning over two decades across diverse regions like the Middle East, South Asia, and North America, Dr. Hewawasam has transcended his Sri Lankan roots to leave a significant mark in the international airline markets.</p>
+                <h3 className="font-primary">Meet Our Visionary</h3>
+                <p className="font-secondary">“Mindfulness is approached from many perspectives, yet its true essence often remains elusive. It is time to bring clarity to its origins and explore its transformative potential in our lives." - Dr. Gamini Hewawasam. </p><br />
+                <p className="font-secondary">Dr. Gamini Hewawasam, a distinguished executive and mindfulness expert with over 20 years in the airline industry and leadership development, is the founder and CEO of INTT Leisure. With a Ph.D. and a deep commitment to personal and professional growth, Dr. Hewawasam integrates techniques like Anapanasati (mindfulness of breathing) into leadership training, enhancing decision-making, stress management, and overall well-being.</p><br />
+                <p className="font-secondary">At INTT Leisure, Dr. Hewawasam aims to offer the holistic benefits of mindfulness, rooted in the original teachings of Lord Buddha, through immersive mindfulness vacations in Sri Lanka, a land where these practices have long been cherished.</p>
               </div>
             </div>
             <div className="col-lg-5" style={{ textAlign: 'right' }}>

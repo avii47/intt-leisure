@@ -49,6 +49,7 @@
     color: #fff;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 12px !important;
 }
 .footer-contact{
     margin-top: 1.25rem;

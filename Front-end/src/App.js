@@ -18,6 +18,8 @@ const BookNowPage = lazy(() => import('../src/pages/BookNowPage'));
 const BlogsPage = lazy(() => import('../src/pages/BlogsPage'));
 const PackageContent = lazy(() => import('../src/pages/PackageContent'));
 const DestinationInnerPage = lazy(() => import('../src/pages/DestinationInnerPage'));
+const TermsConditionsPage = lazy(() => import('../src/pages/Terms&ConditionsPage'));
+const PrivacyPolicyPage = lazy(() => import('../src/pages/PrivacyPolicyPage'));
 
 const pageVariants = {
   initial: {
@@ -141,6 +143,22 @@ const App = () => {
               element={
                 <motion.div initial="initial" animate="enter" exit="exit" variants={pageVariants} className="page-transition">
                   <DestinationInnerPage />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/termsConditions"
+              element={
+                <motion.div initial="initial" animate="enter" exit="exit" variants={pageVariants} className="page-transition">
+                  <TermsConditionsPage />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/privacyPolicy"
+              element={
+                <motion.div initial="initial" animate="enter" exit="exit" variants={pageVariants} className="page-transition">
+                  <PrivacyPolicyPage />
                 </motion.div>
               }
             />

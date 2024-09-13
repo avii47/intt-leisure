@@ -1,70 +1,61 @@
 .tour-component {
+    width: 100%;
     display: flex;
     background-color: #f4f1ef;
     padding: 20px;
+    flex-wrap: wrap;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
   .tour-left {
     position: relative;
-    margin-right: 20px;
   }
   
   .tour-image {
-    width: 200px;
+    width: 100%;
     height: auto;
     border-radius: 10px;
   }
   
-  .tour-price {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    background-color: #f7f7f7;
-    padding: 5px 10px;
-    font-weight: bold;
-    font-size: 16px;
-    color: #000;
-    border-radius: 5px;
-  }
-  
-  .tour-right {
+  .tour-middle {
+    padding: 0 30px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .tour-right h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
   }
   
   .tour-details {
     list-style-type: none;
-    padding: 0;
-    margin: 0 0 20px 0;
+    padding-left: 20px;
+    margin-top: 50px;
   }
   
   .tour-details li {
     margin-bottom: 5px;
-    font-size: 16px;
+    font-size: 20px;
+    list-style-type:disc;
+  }
+  
+  .tour-right{
+    background-color: #dbd8d7;
+    border-radius: 10px;
+    padding: 20px;
   }
   
   .tour-starting-price {
-    font-size: 18px;
+    font-size: 30px;
     margin-bottom: 20px;
   }
   
   .tour-starting-price span {
-    font-weight: bold;
-    font-size: 22px;
+    font-size: 50px;
     color: #000;
   }
   
   .tour-buttons {
+    flex-direction: column;
     display: flex;
-    gap: 10px;
+    margin-top: 60px;
   }
   
   .inquiry-button, .call-button {
@@ -83,4 +74,24 @@
     background-color: #d32f2f;
     color: #fff;
   }
-  
+  .mobile-view .tour-component {
+    width: 100%;
+    display: flex;
+    background-color: #f4f1ef;
+    padding: 5px;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .mobile-view .tour-details {
+    list-style-type: none;
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+
+  .mobile-view .tour-middle {
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+  }
