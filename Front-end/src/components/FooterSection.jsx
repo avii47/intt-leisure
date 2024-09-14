@@ -164,10 +164,11 @@ const Footer = () => {
         </div>
 
         <Modal show={showModal} onClose={() => setShowModal(false)}>
-          <h2>Your Have Successfully Subscribe Our Newsletters.</h2>
+          <h2>Your subscription to our list has been confirmed.</h2>
           <br></br>
           <p>
-            You will have confirmation email from us.
+          Thank you for subscribing! <br />
+          Look out for news and updates
           </p>
         </Modal>
       </div>
