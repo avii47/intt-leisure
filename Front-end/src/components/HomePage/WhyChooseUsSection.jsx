@@ -31,7 +31,7 @@ const WhyChooseUsSection = () => {
     {
       img: authentic_practice_icon,
       title: 'Authentic Practice (Results)',
-      sub: 'Our mindfulness techniques follow Buddha’s original teachings, offering a distinct approach from Western ideologies.',
+      sub: 'Our mindfulness techniques follow authentic Buddhist teachings, offering a distinct approach from Western ideologies',
     },
     {
       img: forbes_certified_coach_icon,
@@ -51,12 +51,12 @@ const WhyChooseUsSection = () => {
     {
       img: ancient_root_icon,
       title: 'Ancient Roots (Locations)',
-      sub: 'We have carefully chosen the locations for you, where these profound mindful practices have thrived.',
+      sub: 'Each location has been carefully chosen to represent where these profound practices have been established and where they continue to thrive.',
     },
     {
       img: travel_wisdom_icon,
       title: 'Travel Wisdom',
-      sub: 'With our team of travel experts, your mindfulness vacation will be managed with the highest level of expertise and care',
+      sub: 'With our team of travel experts, your mindfulness vacation will be managed with the highest level of expertise and care.',
     },
   ];
 
