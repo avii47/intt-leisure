@@ -22,7 +22,7 @@ const ServiceContent = () => {
       'id': 1,
       'img': img1,
       'title': 'Leaders',
-      'sub': 'Mindfulness at Ritigala',
+      'sub': 'Mindfulness for leaders',
       'text': 'Unlock Your Leadership Potential with Mindfulness in Sri Lanka',
       'label': 'View Package'
     },
@@ -30,7 +30,7 @@ const ServiceContent = () => {
       'id': 2,
       'img': img2,
       'title': 'Educators',
-      'sub': 'Mindfulness at Ritigala',
+      'sub': 'Mindfulness for educators',
       'text': 'Uncover the Luxury of Mindfulness in Sri Lanka for Educators',
       'label': 'View Package'
     },
@@ -38,7 +38,7 @@ const ServiceContent = () => {
       'id': 3,
       'img': img3,
       'title': 'Corporates',
-      'sub': 'Mindfulness at Ritigala',
+      'sub': 'Mindfulness for corporates',
       'text': 'Is your corporate team ready to embark on a transformative journey?',
       'label': 'View Package'
     },
@@ -46,7 +46,7 @@ const ServiceContent = () => {
       'id': 4,
       'img': img4,
       'title': 'Seekers',
-      'sub': 'Mindfulness at Ritigala',
+      'sub': 'Mindfulness for seekers',
       'text': 'Are you seeking inner peace, balance, and personal growth?',
       'label': 'View Package'
     },
@@ -54,14 +54,15 @@ const ServiceContent = () => {
       'id': 5,
       'img': img5,
       'title': 'Students',
-      'sub': 'Mindfulness at Ritigala',
+      'sub': 'Mindfulness for students',
       'text': 'Uncover the Luxury of Mindfulness in Sri Lanka for Students',
       'label': 'View Package'
     },
     {
       'id': 6,
       'img': img6,
-      'title': 'Customize You Journey',
+      'title': 'Customize Your Journey',
+      'sub': 'Customize your mindfulness journey',
       'text': 'You can customize your journey with us. We will provide most suitable package for you.',
       'label': 'Customize your Package'
     },

@@ -97,39 +97,33 @@ const BookNowContent = () => {
     {
       img: img1,
       title: "Leaders",
-      sub: "MINDFULNESS AT RITIGALA",
+      sub: "Mindfulness for leaders",
       text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
     },
     {
       img: img2,
       title: "Educators",
-      sub: "MINDFULNESS AT RITIGALA",
+      sub: "Mindfulness for educators",
       text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
     },
     {
       img: img3,
       title: "Corporates",
-      sub: "MINDFULNESS AT RITIGALA",
+      sub: "Mindfulness for corporates",
       text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
     },
     {
       img: img4,
       title: "Seekers",
-      sub: "MINDFULNESS AT RITIGALA",
+      sub: "Mindfulness for seekers",
       text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
     },
     {
       img: img5,
       title: "Studets",
-      sub: "MINDFULNESS AT RITIGALA",
+      sub: "Mindfulness for students",
       text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
-    },
-    {
-      img: img6,
-      title: "Others",
-      sub: "MINDFULNESS AT RITIGALA",
-      text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
-    },
+    }
   ];
 
   const handleCardClick = (index, title) => {
