@@ -8,6 +8,7 @@
 /* .navbar-container:hover{
     background: linear-gradient(to bottom, #000000, transparent);
 } */
+
 .navbar-scrolled {
     background-color: white !important;
     color: rgb(0, 0, 0);
@@ -19,6 +20,9 @@
 }
 .logo {
     height: 5rem;
+}
+.mobile-view .logo {
+    height: 4rem;
 }
 .nav-container{
     width: 80vw;
@@ -168,3 +172,9 @@
     vertical-align: middle;
   }
   
+  @media (max-width: 1200px) {
+    .navbar-container{
+        padding-top: 0rem !important;
+        padding-bottom: 0rem !important;
+    }
+}

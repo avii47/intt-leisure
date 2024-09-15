@@ -25,12 +25,12 @@
     margin-bottom: 10px;
     font-size: 18px;
 }
-.package-card:hover{
+/* .package-card:hover{
     transition: 0.2s ease-in-out; 
     box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
     top: -4px;
     border: 1px solid #cccccc;
-}
+} */
 .sc-title{
     font-size: 20px;
     letter-spacing: 1px;
@@ -42,13 +42,13 @@
     letter-spacing: 0px;
     display: none;
 }
-.package-card:hover .sc-title{
+/* .package-card:hover .sc-title{
     padding-top: 0px;
     transition: all 0.5s ease-in-out;
 }
 .package-card:hover .sc-sub{
     display: block;
-}
+} */
 .package-card-body{
     text-align: left;
     padding: 20px;
@@ -78,4 +78,5 @@
 .mobile-view .package-card{
     flex:none;
     width: 150px;
+    height: fit-content;
 }
