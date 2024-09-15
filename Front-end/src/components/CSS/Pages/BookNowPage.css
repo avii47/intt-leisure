@@ -1,211 +1,208 @@
-.bookNow-content-section{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 12rem;
+.bookNow-content-section {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 12rem;
 }
 .bookNow-section-content {
-    width: 80vw;
-    display: flex;
-    flex-wrap: wrap; 
-    text-align: left;
-    overflow: hidden;
+  width: 80vw;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  overflow: hidden;
 }
-.feedback-form{
-    padding: 40px 0;
+.feedback-form {
+  padding: 40px 0;
 }
-.main-col{
-    gap: 100px;
+.main-col {
+  gap: 100px;
 }
-.date-container{
-    display: flex;
-    gap: 10px;
-    margin: 20px 0 60px 0;
-    padding: 10px;
-    height: 80px;
-    border-radius: 10px;
-    background-color: rgba(194, 196, 195, 0.671);
+.date-container {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0 60px 0;
+  padding: 10px;
+  height: 80px;
+  border-radius: 10px;
+  background-color: rgba(194, 196, 195, 0.671);
 }
-.stay-input{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+.stay-input {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
-.date-input{
-    width: 80%;
-    height: 40px;
-    font-size: 18px;
-    background-color: rgba(194, 196, 195, 0.671);
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 10px;
+.date-input {
+  width: 80%;
+  height: 40px;
+  font-size: 18px;
+  background-color: rgba(194, 196, 195, 0.671);
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
 }
-.check-in{
-    border-right: solid 1px black;
+.check-in {
+  border-right: solid 1px black;
 }
-.count-input{
-    width: 80%;
-    height: 40px;
-    font-size: 18px;
-    background-color: rgba(194, 196, 195, 0.671);
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 10px;
+.count-input {
+  width: 80%;
+  height: 40px;
+  font-size: 18px;
+  background-color: rgba(194, 196, 195, 0.671);
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
 }
-.package-card-container{
-    display: flex;
-    overflow-y: auto;
-    flex-wrap: wrap; 
-    column-gap: 2rem;
-    row-gap: 2rem;
-    scrollbar-width: none;
-    justify-content: left;
-    align-items: start;
-    margin: 20px 0 80px 0;
+.package-card-container {
+  display: flex;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  scrollbar-width: none;
+  justify-content: left;
+  align-items: start;
+  margin: 20px 0 80px 0;
 }
 .scrollable-content {
-    overflow-y: auto;
-    height: 100%;
-} 
+  overflow-y: auto;
+  height: 100%;
+}
 .scrollable-content::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 .booking-summary-col {
-    position: relative;
-    padding: 50px;
-    border-radius: 10px;
-    height: fit-content;
-    background-color: rgba(194, 196, 195, 0.671);
+  position: relative;
+  padding: 50px;
+  border-radius: 10px;
+  height: fit-content;
+  background-color: rgba(194, 196, 195, 0.671);
 }
 .text-field-bottom-line {
-    border-radius: 0%;
-    border: none;
-    border-bottom: 1px solid #000; 
-    outline: none;
-    width: 100%; 
-    padding: 5px 0; 
+  border-radius: 0%;
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: none;
+  width: 100%;
+  padding: 5px 0;
 }
-  
+
 .text-field-bottom-line::placeholder {
-    color: #aaa; 
+  color: #aaa;
 }
-.bottom-btn-container{
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 100px;
-    padding: 25px;
+.bottom-btn-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  padding: 25px;
 }
-.btn-book-f{
-    width: 100%;
+.btn-book-f {
+  width: 100%;
 }
 .form-group {
-    position: relative !important;
-    margin-bottom: 30px !important;
+  position: relative !important;
+  margin-bottom: 30px !important;
 }
 .form-control {
-    border: none !important;
-    border-bottom: 1px solid #000 !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    background-color: rgba(255, 255, 255, 0) !important;
+  border: none !important;
+  border-bottom: 1px solid #000 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background-color: rgba(255, 255, 255, 0) !important;
 }
 .label-text {
-    position: absolute;
-    top: 0.1rem; 
-    left: 10px;
-    color: #000; 
-    font-size: 16px;
-    font-weight: 400;
-    pointer-events: none; 
-    transition: top 0.3s, font-size 0.3s;
+  position: absolute;
+  top: 0.1rem;
+  left: 10px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  pointer-events: none;
+  transition: top 0.3s, font-size 0.3s;
 }
 .form-control:focus {
-    outline: none !important;
+  outline: none !important;
 }
 .form-control:focus + .label-text,
 .form-control:not(:placeholder-shown) + .label-text {
-    top: -1.25rem; 
-    font-size: 0.8rem !important; 
+  top: -1.25rem;
+  font-size: 0.8rem !important;
 }
-.book-icons{
-    font-size: 35px;
+.book-icons {
+  font-size: 35px;
 }
-.book-now-heading{
-    font-size: 20px;
+.book-now-heading {
+  font-size: 20px;
 }
 .bookNow-section-content h3 {
-    font-size: 28px;
-    letter-spacing: 1px;
+  font-size: 28px;
+  letter-spacing: 1px;
 }
-.book-text{
-    height: 15px;
-    font-size: 20px;
-}
-
-
-.mobile-view .bookNow-section-content{
-    width: 100vw;
-    margin-top: -100px;
-    padding: 2rem 2rem 20rem 2rem;
-}
-.mobile-view .main-col{
-    flex-direction: column;
-    gap: 0;
-}
-.feedback-form{
-    padding: 20px 0;
-}
-.mobile-view .scrollable-content{
-    width: 100%;
-}
-.mobile-view .date-container{
-    gap: 0px;
-    margin: 20px 0 40px 0;
-    padding-left: 0;
-    height: 100px;
-}
-.mobile-view .book-icons{
-    font-size: 25px;
-}
-.mobile-view .date-input{
-    width: 70%;
-    height: 30px;
-    margin-left: 30px;
-    font-size: 16px;
-}
-.mobile-view .book-text{
-    margin-left: 10px;
-    font-size: 18px;
-}
-.mobile-view .count-input{
-    width: 70%;
-    height: 30px;
-    margin-left: 30px;
-    font-size: 16px;
-}
-.mobile-view .in1{
-    margin-left: -30%;
-    width: 30%;
-}
-.mobile-view .package-card-container{
-    flex-wrap: nowrap; 
-    column-gap: 1rem;
-    row-gap: 0rem;
-    scrollbar-width: none;
-    height: 100px;
-    width: 85vw;
-    justify-content: left;
-    align-items: normal;
-    overflow-x: scroll;
-    margin: 20px 0 40px 0;
-}
-.mobile-view .booking-summary-col{
-    
-    padding: 50px 20px 50px 20px;
-    margin-top: -300px;
-    text-align: center;
+.book-text {
+  height: 15px;
+  font-size: 20px;
 }
 
- 
+.mobile-view .bookNow-section-content {
+  width: 100vw;
+  margin-top: -100px;
+  padding: 2rem 2rem 20rem 2rem;
+}
+.mobile-view .main-col {
+  flex-direction: column;
+  gap: 0;
+}
+.feedback-form {
+  padding: 20px 0;
+}
+.mobile-view .scrollable-content {
+  width: 100%;
+}
+.mobile-view .date-container {
+  gap: 0px;
+  margin: 20px 0 40px 0;
+  padding-left: 0;
+  height: 100px;
+}
+.mobile-view .book-icons {
+  font-size: 25px;
+}
+.mobile-view .date-input {
+  width: 70%;
+  height: 30px;
+  margin-left: 30px;
+  font-size: 16px;
+}
+.mobile-view .book-text {
+  margin-left: 10px;
+  font-size: 18px;
+}
+.mobile-view .count-input {
+  width: 70%;
+  height: 30px;
+  margin-left: 30px;
+  font-size: 16px;
+}
+.mobile-view .in1 {
+  margin-left: -30%;
+  width: 30%;
+}
+.mobile-view .package-card-container {
+  flex-wrap: nowrap;
+  column-gap: 1rem;
+  row-gap: 0rem;
+  scrollbar-width: none;
+  height: fit-content;
+  width: 85vw;
+  justify-content: left;
+  align-items: normal;
+  overflow-x: scroll;
+  margin: 20px 0 40px 0;
+}
+.mobile-view .booking-summary-col {
+  padding: 50px 20px 50px 20px;
+  margin-top: -300px;
+  text-align: center;
+}
