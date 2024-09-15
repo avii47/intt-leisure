@@ -6,6 +6,7 @@ import { useMobileView } from "../../contexts/MobileViewContext";
 import "react-datepicker/dist/react-datepicker.css";
 import emailjs from "emailjs-com";
 import Modal from "./Modal";
+import contentData from "../../data/ServicePageData";
 
 import img1 from "../../assets/images/leadersPage-hero-img.jpg";
 import img2 from "../../assets/images/educatorsPage-hero-img.jpg";
@@ -93,38 +94,38 @@ const BookNowContent = () => {
       });
   };
 
-  const contentData = [
-    {
-      img: img1,
-      title: "Leaders",
-      sub: "Mindfulness for Leaders",
-      text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
-    },
-    {
-      img: img2,
-      title: "Educators",
-      sub: "Mindfulness for Educators",
-      text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
-    },
-    {
-      img: img3,
-      title: "Corporates",
-      sub: "Mindfulness for Corporates",
-      text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
-    },
-    {
-      img: img4,
-      title: "Seekers",
-      sub: "Mindfulness for Seekers",
-      text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
-    },
-    {
-      img: img5,
-      title: "Students",
-      sub: "Mindfulness for Students",
-      text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
-    }
-  ];
+  // const contentData = [
+  //   {
+  //     img: img1,
+  //     title: "Leaders",
+  //     sub: "Mindfulness for Leaders",
+  //     text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
+  //   },
+  //   {
+  //     img: img2,
+  //     title: "Educators",
+  //     sub: "Mindfulness for Educators",
+  //     text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
+  //   },
+  //   {
+  //     img: img3,
+  //     title: "Corporates",
+  //     sub: "Mindfulness for Corporates",
+  //     text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
+  //   },
+  //   {
+  //     img: img4,
+  //     title: "Seekers",
+  //     sub: "Mindfulness for Seekers",
+  //     text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
+  //   },
+  //   {
+  //     img: img5,
+  //     title: "Students",
+  //     sub: "Mindfulness for Students",
+  //     text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
+  //   }
+  // ];
 
   const handleCardClick = (index, title) => {
     setSelectedCard(index);
@@ -243,7 +244,7 @@ const BookNowContent = () => {
             </div>
             <h3 className="font-primary">Select the Experience</h3>
             <div className="package-card-container">
-              {contentData.map((content, index) => (
+              {contentData.slice(0, 5).map((content, index) => (
                 <PackageCard
                   key={index}
                   content={content}

@@ -3,15 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import { useMobileView } from '../../contexts/MobileViewContext';
 import "../../components/CSS/Home/Events&NewsSection.css";
 import Slider from "react-slick";
+import contentData from "../../data/Events&NewsSectionData";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import left_arrow from '../../assets/icons/left-arrow.png';
 import right_arrow from '../../assets/icons/right-arrow.png';
-import img_01 from '../../assets/images/events-img1.jpg';
-import img_02 from '../../assets/images/events-img2.jpg';
-import img_03 from '../../assets/images/ev5ents-img2.jpg';
-import img_04 from '../../assets/images/events-img3.png';
 
 const ContentCard = lazy(() => import('./ContentCard'));
 
@@ -51,28 +48,7 @@ const EventsNewsSection = () => {
     };
   }, []);
 
-  const contentData = [
-    {
-      'img': img_03,
-      'title': 'Wisdom in the times of Crisis',
-      'sub': 'Dr. GB Hewawasam presented at the 24th ILA leadership conference in Washington DC on the topic of Introspective Leadership...'
-    },
-    {
-      'img': img_01,
-      'title': 'Integrating Appreciative Inquiry into Mindfulness-based Leadership',
-      'sub': 'A workshop was conducted at the university of Moratuwa on the 19th of June 2023.The workshop focused on enhancing the staff...'
-    },
-    {
-      'img': img_02,
-      'title': 'Exploring the Impact of Mindfulness on Leadership',
-      'sub': 'A workshop titled “How Mindfulness Affects Leadership” was conducted at Mihintale. The workshop included the participation...'
-    },
-    {
-      'img': img_04,
-      'title': 'Wisdom in the times of Crisis',
-      'sub': 'Dr. GB Hewawasam presented at the 24th ILA leadership conference in Washington DC on the topic of Introspective Leadership...'
-    }
-  ];
+
 
 
   const handleOnClick = (path) => {
