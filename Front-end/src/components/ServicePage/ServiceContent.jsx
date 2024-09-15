@@ -22,7 +22,7 @@ const ServiceContent = () => {
       'id': 1,
       'img': img1,
       'title': 'Leaders',
-      'sub': 'Mindfulness for leaders',
+      'sub': 'Mindfulness for Leaders',
       'text': 'Unlock Your Leadership Potential with Mindfulness in Sri Lanka',
       'label': 'View Package'
     },
@@ -30,7 +30,7 @@ const ServiceContent = () => {
       'id': 2,
       'img': img2,
       'title': 'Educators',
-      'sub': 'Mindfulness for educators',
+      'sub': 'Mindfulness for Educators',
       'text': 'Uncover the Luxury of Mindfulness in Sri Lanka for Educators',
       'label': 'View Package'
     },
@@ -38,7 +38,7 @@ const ServiceContent = () => {
       'id': 3,
       'img': img3,
       'title': 'Corporates',
-      'sub': 'Mindfulness for corporates',
+      'sub': 'Mindfulness for Corporates',
       'text': 'Is your corporate team ready to embark on a transformative journey?',
       'label': 'View Package'
     },
@@ -46,7 +46,7 @@ const ServiceContent = () => {
       'id': 4,
       'img': img4,
       'title': 'Seekers',
-      'sub': 'Mindfulness for seekers',
+      'sub': 'Mindfulness for Seekers',
       'text': 'Are you seeking inner peace, balance, and personal growth?',
       'label': 'View Package'
     },
@@ -54,7 +54,7 @@ const ServiceContent = () => {
       'id': 5,
       'img': img5,
       'title': 'Students',
-      'sub': 'Mindfulness for students',
+      'sub': 'Mindfulness for Students',
       'text': 'Uncover the Luxury of Mindfulness in Sri Lanka for Students',
       'label': 'View Package'
     },
