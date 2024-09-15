@@ -1,15 +1,9 @@
 import React, { useEffect, lazy } from 'react';
 import { useMobileView } from '../../contexts/MobileViewContext';
+import eventstData from "../../data/EventstData";
+import newsData from "../../data/NewsData";
 
-import img_01 from '../../assets/images/events-img1.jpg';
-import img_02 from '../../assets/images/events-img2.jpg';
-import img_03 from '../../assets/images/ev5ents-img2.jpg';
-import img_04 from '../../assets/images/events-img3.png';
-import img_05 from '../../assets/images/news-img.png';
 
-import img2 from '../../assets/images/blog2-img.jpg'
-import img3 from '../../assets/images/blog3-img.jpg'
-import img4 from '../../assets/images/blog4-img.jpg'
 
 const EventCard = lazy(() => import('../Events&NewsPage/EventCard'));
 const NewsCard = lazy(() => import('../Events&NewsPage/NewsCard'));
@@ -17,7 +11,7 @@ const NewsCard = lazy(() => import('../Events&NewsPage/NewsCard'));
 const EventsNewsContent = () => {
 
   const isMobileView = useMobileView();
-  const img1 = 'https://imageio.forbes.com/specials-images/imageserve/66bf9f6003910b50a1799afe/AI--Artificial-Intelligence--concept--Communication-network-/960x0.jpg?format=jpg&width=1440'
+  
 
   useEffect(() => {
     const section = document.getElementById('rw1');
@@ -91,50 +85,9 @@ const EventsNewsContent = () => {
     };
   }, []);
 
-  const eventstData = [
-    {
-      img: img_03,
-      imgTitle: 'Mindfulness Based Leadership',
-      imgSub: 'Well trained experts to guide you through the journey.',
-      text: 'Dr. GB Hewawasam presented at the 26th ILA leadership conference in Washington DC on the topic of Introspective Leadership and how mindfulness with clear comprehension from early teachings of buddha cultivate wisdom. His presentation centered around the timely and relevant theme of “Wisdom in the Times of Crisis”. During his talk, Dr. Hewawasam explored the concept of Introspective Leadership, emphasizing the crucial role that mindfulness, coupled with clear comprehension, plays in cultivating wisdom. Drawing inspiration from the early teachings of Buddha, he highlighted how the practice of mindfulness can be a powerful tool for leaders facing challenging and uncertain situations.'
-    },
-    {
-      img: img_02,
-      imgTitle: 'Mindfulness Based Leadership',
-      imgSub: 'Well trained experts to guide you through the journey.',
-      text: 'A workshop titled “How Mindfulness Affects Leadership” was conducted at Mihintale. The workshop included the participation of three Buddhist monks, namely Ven. Seelananada, Thapowanaye Saddhajiwa, and Ven. Sudassana, along with three global leaders: Dr. Jim Ludema from the Den of Business School at Calvin University (USA), Dr. Beverlee Ludema (a clinical psychologist), and Dr. GB Hewasam, the founder and CEO of Finefinish Engineering and INT Terminal travel group. The workshop was held at Kaludiyapokuna on June 10th and primarily focused on exploring the impact of mindfulness on leadership. It provided a valuable opportunity to delve deeper into the influence of mindfulness on leadership. '
-    },
-    {
-      img: img_01,
-      imgTitle: 'Exploring the Impact of Mindfulness in Leadership',
-      imgSub: 'Well trained experts to guide you through the journey.',
-      text: 'A workshop was conducted at the university of Moratuwa on the 19th of June 2023.The workshop focused on enhancing the staff of the University of Moratuwa’s understanding and application of Appreciative Inquiry in the context of mindfulness-based leadership. Throughout the workshop, participants had the opportunity to listen to informative speeches delivered by Dr. GB Hewawa, sam and Jim Ludema. Following the speeches, participants actively engaged in interactive Q&A sessions where they sought clarification, shared their perspectives, and explored how these concepts could be directly applied within the university’s specific context. While the workshop format primarily centered around speeches and Q&A sessions led by these distinguished experts, it undeniably provided a valuable platform for knowledge sharing and robust discussion. The active participation of the attendees through thoughtful questions and in-depth discussions ensured that they gained a deeper understanding of the topics and could contemplate their practical application within the unique environment of the University of Moratuwa.'
-    },
-    {
-      img: img_04,
-      imgTitle: 'Wisdom in Times of Crisis',
-      imgSub: 'Well trained experts to guide you through the journey.',
-      text: 'Dr. GB Hewawasam presented at the 24th ILA leadership conference in Washington DC on the topic of Introspective Leadership and how mindfulness with clear comprehension from early teachings of buddha cultivate wisdom. His presentation centered around the timely and relevant theme of “Wisdom in the Times of Crisis”. During his talk, Dr. Hewawasam explored the concept of Introspective Leadership, emphasizing the crucial role that mindfulness, coupled with clear comprehension, plays in cultivating wisdom. Drawing inspiration from the early teachings of Buddha, he highlighted how the practice of mindfulness can be a powerful tool for leaders facing challenging and uncertain situations. '
-    },
-  ];
 
-  const newsData = [
-    {
-      img: img1,
-      title: 'Embracing Mindfulness In Leadership In The Age Of AI And Corporate Complexity',
-      link: 'https://www.forbes.com/councils/forbescoachescouncil/2024/08/19/embracing-mindfulness-in-leadership-in-the-age-of-ai-and-corporate-complexity/'
-    },
-    {
-      img: img2,
-      title: 'Mindfulness in Leadership: Harnessing the Power of Breath for Effective Decision-Making',
-      link: 'https://www.forbes.com/councils/forbescoachescouncil/2024/07/23/mindfulness-in-leadership-harnessing-the-power-of-breath-for-effective-decision-making/'
-    },
-    {
-      img: img3,
-      title: '16 Insightful Ways To Measure The Impact Of Your Keynote Presentations by Forbes Expert Panel®',
-      link: 'https://www.forbes.com/councils/forbescoachescouncil/2024/07/10/16-insightful-ways-to-measure-the-impact-of-your-keynote-presentations/'
-    },
-  ];
+
+
 
   return (
     <section id="eventsNews-content-section" className={`section eventsNews-content-section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`}>
