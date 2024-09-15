@@ -97,31 +97,31 @@ const BookNowContent = () => {
     {
       img: img1,
       title: "Leaders",
-      sub: "Mindfulness for leaders",
+      sub: "Mindfulness for Leaders",
       text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
     },
     {
       img: img2,
       title: "Educators",
-      sub: "Mindfulness for educators",
+      sub: "Mindfulness for Educators",
       text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
     },
     {
       img: img3,
       title: "Corporates",
-      sub: "Mindfulness for corporates",
+      sub: "Mindfulness for Corporates",
       text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
     },
     {
       img: img4,
       title: "Seekers",
-      sub: "Mindfulness for seekers",
+      sub: "Mindfulness for Seekers",
       text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
     },
     {
       img: img5,
-      title: "Studets",
-      sub: "Mindfulness for students",
+      title: "Students",
+      sub: "Mindfulness for Students",
       text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
     }
   ];
