@@ -59,7 +59,7 @@
     ]
   },
   "devDependencies": {
-    "compression-webpack-plugin": "^11.1.0",
-    "react-app-rewired": "^2.2.1"
+        "compression-webpack-plugin": "^11.1.0",
+        "react-app-rewired": "^2.2.1"
   }
 }
