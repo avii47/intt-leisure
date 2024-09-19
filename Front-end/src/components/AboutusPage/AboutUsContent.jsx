@@ -136,15 +136,13 @@ const AboutUsContent = () => {
     };
   }, []);
 
-  // Custom scroll behavior with manual offset adjustment
   const handleScroll = (event, targetId) => {
     event.preventDefault();
     const target = document.getElementById(targetId);
     const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
 
-    // Smooth scroll to the target position minus the offset
     window.scrollTo({
-      top: targetPosition - offset,  // Adjust by offset
+      top: targetPosition - offset,  
       behavior: 'smooth',
     });
   };

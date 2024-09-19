@@ -1,18 +1,30 @@
 import React, { Suspense, lazy } from 'react';
+import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import blogsListData from '../data/BlogListData';
+import blogsContentData from '../data/BlogContentData';
 import ScrollToTopButton from '../components/ScrollToTopButton';
 import "../components/CSS/Pages/BlogsPage.css";
 import bg from '../assets/images/blogPage-hero-img.jpg'
 
 const HeroSection = lazy(() => import('../components/HeroSection'));
-const BlogsList = lazy(() => import('../components/BlogsPage/BlogList'));
+const BlogsContent = lazy(() => import('../components/BlogsPage/BlogsContent'));
 const FooterSection = lazy(() => import('../components/FooterSection'));
 const MobileButton = lazy(() => import('../components/MobileBookNowButton'));
 
-const BlogsPage = () => {
+const BlogsContentPage = () => {
 
-    const title = 'Blogs';
-    const sub = 'Explore Our Practice';
+    const { id } = useParams();
+
+    const heroContentId = parseInt(id, 10);
+    const heroContent = blogsListData.find(item => item.id === heroContentId);
+
+    const contentId = parseInt(id, 10);
+    const content = blogsContentData.find(item => item.id === contentId);
+  
+    if (!content) {
+      return <div>Content not found</div>;
+    }
 
     return (
         <>
@@ -21,10 +33,17 @@ const BlogsPage = () => {
                 <link rel="canonical" href="https://inttleisure.com/blogs" />
             </Helmet>
             <Suspense fallback={<div>Loading...</div>}>
-                <HeroSection img={bg} title={title} sub={sub} />
+                <HeroSection img={heroContent.img} title={heroContent.title} sub={heroContent.sub} />
             </Suspense>
             <Suspense fallback={<div>Loading...</div>}>
-                <BlogsList />
+                <BlogsContent   
+                    title={content.title}
+                    description={content.description}
+                    img={content.img}
+                    paragraphs={content.paragraphs} 
+                    sections={content.sections}
+                    recommendedLinks={content.recommendedLinks} 
+                />
             </Suspense>
             <Suspense fallback={<div>Loading...</div>}>
                 <FooterSection />
@@ -37,4 +56,4 @@ const BlogsPage = () => {
     )
 }
 
-export default BlogsPage;
+export default BlogsContentPage;

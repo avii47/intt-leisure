@@ -8,46 +8,65 @@ const img1 = "https://imageio.forbes.com/specials-images/imageserve/66bf9f600391
 
 const contentData = [
   {
+    id: 1,
     img: img1,
     title:
       "Embracing Mindfulness In Leadership In The Age Of AI And Corporate Complexity",
     sub: "Dr. Gamini Hewawasam, the CEO of ManoLead, FineFinish Engineering, and INT Terminal Travel Group, has been featured in Forbes for his latest article, “Embracing Mindfulness In Leadership In The Age...",
     date: "September 4, 2024",
+    blogUrl : 'https://www.forbes.com/councils/forbescoachescouncil/2024/08/19/embracing-mindfulness-in-leadership-in-the-age-of-ai-and-corporate-complexity/',
+    blogThumbnail: 'https://imageio.forbes.com/specials-images/imageserve/66bf9f6003910b50a1799afe/AI--Artificial-Intelligence--concept--Communication-network-/960x0.jpg?format=jpg&width=1440'
+
   },
   {
+    id: 2,
     img: img2,
     title:
       "Mindfulness in Leadership: Harnessing the Power of Breath for Effective Decision-Making",
     sub: "Dr. Gamini Hewawasam, the CEO of ManoLead, FineFinish Engineering, and INT Terminal Travel Group, has been featured in Forbes for his latest article, “Mindfulness in Leadership: Harnessing the...",
     date: "July 27, 2024",
+        blogUrl : '',
+    blogThumbnail: 'https://imageio.forbes.com/specials-images/imageserve/66bf9f6003910b50a1799afe/AI--Artificial-Intelligence--concept--Communication-network-/960x0.jpg?format=jpg&width=1440'
   },
   {
+    id: 3,
     img: img3,
     title:
       "16 Insightful Ways To Measure The Impact Of Your Keynote Presentations by Forbes Expert Panel®",
     sub: "Dr. Gamini Hewawasam, the CEO of ManoLead/FineFinish Engineering/INT Terminal Travel Group, has been featured on the Forbes Expert Panel for his professional insights into “16 Insightful Ways To...",
     date: "July 18, 2024",
+        blogUrl : '',
+    blogThumbnail: 'https://imageio.forbes.com/specials-images/imageserve/66bf9f6003910b50a1799afe/AI--Artificial-Intelligence--concept--Communication-network-/960x0.jpg?format=jpg&width=1440'
   },
   {
+    id: 4,
     img: img4,
     title:
       "16 Bad Workplace Habits And How To Break Them by Forbes Expert Panel®",
     sub: "Dr. Gamini Hewawasam, the CEO of ManoLead/FineFinish Engineering/INT Terminal Travel Group, has been featured on the Forbes Expert Panel for his professional insights into “16 Bad Workplace Habits...",
     date: "July 10, 2024",
+        blogUrl : '',
+    blogThumbnail: 'https://imageio.forbes.com/specials-images/imageserve/66bf9f6003910b50a1799afe/AI--Artificial-Intelligence--concept--Communication-network-/960x0.jpg?format=jpg&width=1440'
   },
   {
+    id: 5,
     img: img5,
     title:
       "14 Reasons Entrepreneurs Give Up Too Soon (And How To Avoid Doing So) by Forbes Expert Panel®",
     sub: "Dr. Gamini Hewawasam, the CEO of ManoLead/FineFinish Engineering/INT Terminal Travel Group, has been featured in the Forbes Expert Panel for his professional insight on “14 Reasons Entrepreneurs...",
     date: "June 28, 2024",
+        blogUrl : '',
+    blogThumbnail: 'https://imageio.forbes.com/specials-images/imageserve/66bf9f6003910b50a1799afe/AI--Artificial-Intelligence--concept--Communication-network-/960x0.jpg?format=jpg&width=1440'
   },
   {
+    id: 6,
     img: img6,
     title:
       "Mindfulness In Leadership: A Personal Journey Through The Eightfold Process",
     sub: "Dr. Gamini Hewawasam, the CEO of ManoLead, FineFinish Engineering, and INT Terminal Travel Group, has been featured on Forbes for his article “Mindfulness in Leadership: A Personal Journey...",
     date: "June 15, 2024",
+        blogUrl : '',
+    blogThumbnail: 'https://imageio.forbes.com/specials-images/imageserve/66bf9f6003910b50a1799afe/AI--Artificial-Intelligence--concept--Communication-network-/960x0.jpg?format=jpg&width=1440'
   },
 ];
 

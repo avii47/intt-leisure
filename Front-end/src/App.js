@@ -16,6 +16,7 @@ const AboutUsPage = lazy(() => import('../src/pages/AboutUsPage'));
 const ContactUsPage = lazy(() => import('../src/pages/ContactUsPage'));
 const BookNowPage = lazy(() => import('../src/pages/BookNowPage'));
 const BlogsPage = lazy(() => import('../src/pages/BlogsPage'));
+const BlogsContentPage = lazy(() => import('../src/pages/BlogsContentPage'));
 const PackageContent = lazy(() => import('../src/pages/PackageContent'));
 const DestinationInnerPage = lazy(() => import('../src/pages/DestinationInnerPage'));
 const TermsConditionsPage = lazy(() => import('../src/pages/Terms&ConditionsPage'));
@@ -115,10 +116,18 @@ const App = () => {
               }
             />
             <Route
-              path="/blogs/*"
+              path="/blogs"
               element={
                 <motion.div initial="initial" animate="enter" exit="exit" variants={pageVariants} className="page-transition">
                   <BlogsPage />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/blogs/:id"
+              element={
+                <motion.div initial="initial" animate="enter" exit="exit" variants={pageVariants} className="page-transition">
+                  <BlogsContentPage />
                 </motion.div>
               }
             />
