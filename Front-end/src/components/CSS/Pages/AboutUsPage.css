@@ -86,7 +86,7 @@
 }
 
 .vm-contaioner{
-    height: 520px;
+    min-height: 520px;
     width: 70%;
     padding: 50px;
     border-radius: 30px;

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useMobileView } from '../contexts/MobileViewContext';
 import './CSS/HeroSection.css';
@@ -8,6 +8,13 @@ import animationData from '../assets/icons/down-arrow2.json'
 const HeroSection = ({ img, title, sub }) => {
 
   const isMobileView = useMobileView();
+  const [isblogTitle, setIsblogTitle] = useState(false);
+
+  useEffect(() => {
+    // Calculate word count when the title changes
+    const wordCount = title.trim().length === 0 ? 0 : title.trim().split(/\s+/).length;
+    setIsblogTitle(wordCount >= 5); // Update the state based on word count
+  }, [title]); // Run this effect whenever the title changes
 
   useEffect(() => {
     const section = document.getElementById('Hero-section');
@@ -40,13 +47,25 @@ const HeroSection = ({ img, title, sub }) => {
         className="service-hero-img"
         alt="hero image"
       />
-      <div className="hero-content">
-        <div id='hero-heading' className="hero-heading-section">
-          <h1 className='hero-heading font-primary'>{title}</h1>
-          <p className='font-secondary'>{sub}</p>
-          <Lottie loading="lazy" className='arrow-icon' animationData={animationData}></Lottie>
+      {isblogTitle ? (
+        <div className="hero-content">
+          <div id='hero-heading' className="hero-heading-section">
+            <h1 className='hero-heading font-primary' style={{ fontSize:'40px', width:'50%', marginInline:'auto' }}>{title}</h1>
+            {/* <p className='font-secondary'>{sub}</p> */}
+            <Lottie loading="lazy" className='arrow-icon' animationData={animationData}></Lottie>
+          </div>
         </div>
-      </div>
+      ) : (
+        <div className="hero-content">
+          <div id='hero-heading' className="hero-heading-section">
+            <h1 className='hero-heading font-primary'>{title}</h1>
+            <p className='font-secondary'>{sub}</p>
+            <Lottie loading="lazy" className='arrow-icon' animationData={animationData}></Lottie>
+          </div>
+        </div>
+      )}
+
+      
     </div>
   );
 };

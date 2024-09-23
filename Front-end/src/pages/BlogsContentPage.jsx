@@ -5,7 +5,6 @@ import blogsListData from '../data/BlogListData';
 import blogsContentData from '../data/BlogContentData';
 import ScrollToTopButton from '../components/ScrollToTopButton';
 import "../components/CSS/Pages/BlogsPage.css";
-import bg from '../assets/images/blogPage-hero-img.jpg'
 
 const HeroSection = lazy(() => import('../components/HeroSection'));
 const BlogsContent = lazy(() => import('../components/BlogsPage/BlogsContent'));

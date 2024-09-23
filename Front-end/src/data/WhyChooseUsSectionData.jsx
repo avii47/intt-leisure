@@ -9,7 +9,7 @@ const contentData = [
   {
     img: authentic_practice_icon,
     title: "Authentic Practice (Results)",
-    sub: "Our mindfulness techniques follow authentic Buddhist teachings, offering a distinct approach from Western ideologies",
+    sub: "Our mindfulness techniques follow authentic Buddhist teachings, offering a distinct approach from Western ideologies.",
   },
   {
     img: forbes_certified_coach_icon,

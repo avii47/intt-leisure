@@ -7,6 +7,7 @@
     width: 40vw;
     flex-wrap: wrap; 
     text-align: left;
+    margin-top: -100px;
 }
 .blogs-img{
     width: 100%;

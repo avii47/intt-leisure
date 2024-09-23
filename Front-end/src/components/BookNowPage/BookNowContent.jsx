@@ -94,39 +94,6 @@ const BookNowContent = () => {
       });
   };
 
-  // const contentData = [
-  //   {
-  //     img: img1,
-  //     title: "Leaders",
-  //     sub: "Mindfulness for Leaders",
-  //     text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
-  //   },
-  //   {
-  //     img: img2,
-  //     title: "Educators",
-  //     sub: "Mindfulness for Educators",
-  //     text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
-  //   },
-  //   {
-  //     img: img3,
-  //     title: "Corporates",
-  //     sub: "Mindfulness for Corporates",
-  //     text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
-  //   },
-  //   {
-  //     img: img4,
-  //     title: "Seekers",
-  //     sub: "Mindfulness for Seekers",
-  //     text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
-  //   },
-  //   {
-  //     img: img5,
-  //     title: "Students",
-  //     sub: "Mindfulness for Students",
-  //     text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
-  //   }
-  // ];
-
   const handleCardClick = (index, title) => {
     setSelectedCard(index);
     setPackage(title);
