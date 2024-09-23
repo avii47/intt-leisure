@@ -1,97 +1,124 @@
 .tour-component {
-    width: 100%;
-    display: flex;
-    background-color: #f4f1ef;
-    padding: 20px;
-    flex-wrap: wrap;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .tour-left {
-    position: relative;
-  }
-  
-  .tour-image {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-  
-  .tour-middle {
-    padding: 0 30px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .tour-details {
-    list-style-type: none;
-    padding-left: 20px;
-    margin-top: 50px;
-  }
-  
-  .tour-details li {
-    margin-bottom: 5px;
-    font-size: 20px;
-    list-style-type:disc;
-  }
-  
-  .tour-right{
-    background-color: #dbd8d7;
-    border-radius: 10px;
-    padding: 20px;
-  }
-  
-  .tour-starting-price {
-    font-size: 30px;
-    margin-bottom: 20px;
-  }
-  
-  .tour-starting-price span {
-    font-size: 50px;
-    color: #000;
-  }
-  
-  .tour-buttons {
-    flex-direction: column;
-    display: flex;
-    margin-top: 60px;
-  }
-  
-  .inquiry-button, .call-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .inquiry-button {
-    background-color: #2b6fb8;
-    color: #fff;
-  }
-  
-  .call-button {
-    background-color: #d32f2f;
-    color: #fff;
-  }
-  .mobile-view .tour-component {
-    width: 100%;
-    display: flex;
-    background-color: #f4f1ef;
-    padding: 5px;
-    flex-wrap: wrap;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+  width: 100%;
+  height: auto;
+  display: flex;
+  background-color: #f4f1ef;
+  padding: 20px;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-  .mobile-view .tour-details {
-    list-style-type: none;
-    padding-left: 20px;
-    margin-top: 10px;
-  }
+.tour-left {
+  position: relative;
+}
 
-  .mobile-view .tour-middle {
-    padding: 20px 10px;
-    display: flex;
-    flex-direction: column;
-  }
+.tour-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.tour-middle {
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tour-details {
+  list-style-type: none;
+  padding-left: 20px;
+  margin-top: 50px;
+}
+
+.tour-details li {
+  margin-bottom: 5px;
+  font-size: 20px;
+  list-style-type: disc;
+}
+
+.tour-right {
+  background-color: #dbd8d7;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.mobile-view .tour-right {
+  height: auto;
+  width: 100%;
+}
+
+.tour-starting-price {
+  font-size: 30px;
+  margin-bottom: auto;
+  width: 100%;
+}
+
+.mobile-view .tour-starting-price {
+  margin-bottom: 20px;
+}
+
+.tour-starting-price span {
+  font-size: 50px;
+  color: #000;
+}
+
+.tour-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inquiry-button,
+.call-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.call-button:hover {
+  transform: scale(1.05);
+  transition: 0.2s ease-in-out;
+}
+
+.inquiry-button {
+  background-color: #2b6fb8;
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+
+.inquiry-button:hover {
+  transform: scale(1.05);
+  transition: 0.2s ease-in-out;
+}
+
+.call-button {
+  background-color: #66805e;
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+
+.mobile-view .tour-component {
+  width: 100%;
+  display: flex;
+  background-color: #f4f1ef;
+  padding: 5px;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-view .tour-details {
+  list-style-type: none;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.mobile-view .tour-middle {
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+}
