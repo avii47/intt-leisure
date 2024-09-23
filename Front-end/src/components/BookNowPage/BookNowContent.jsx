@@ -6,7 +6,6 @@ import { useMobileView } from "../../contexts/MobileViewContext";
 import "react-datepicker/dist/react-datepicker.css";
 import emailjs from "emailjs-com";
 import Modal from "./Modal";
-import contentData from "../../data/ServicePageData";
 
 import img1 from "../../assets/images/leadersPage-hero-img.jpg";
 import img2 from "../../assets/images/educatorsPage-hero-img.jpg";
@@ -23,9 +22,12 @@ const BookNowContent = () => {
   const [email, setEmail] = useState("");
   const [mobile, setMobile] = useState("");
   const [duration, setDuration] = useState("");
+  const [adults, setAdults] = useState("");
+  const [children, setChildren] = useState("");
   const [pack, setPackage] = useState("");
   const isMobileView = useMobileView();
   const [showModal, setShowModal] = useState(false);
+  const db = getFirestore();
 
   useEffect(() => {
     const section = document.getElementById("bookNow-content-section");
@@ -56,6 +58,18 @@ const BookNowContent = () => {
     };
   }, []);
 
+  const saveDataToFirestore = async () => {
+    const docRef = await addDoc(collection(db, "Inquiry_Collection"), {
+      Name: name,
+      Email: email,
+      Mobile: mobile,
+      Duration: duration,
+      Guests: adults + " Addults and " + children + " Children",
+      Package: pack,
+      Message: document.querySelector('textarea[name="message"]').value,
+    });
+  };
+
   // Calculate and set the duration when the user selects the checkout date
   const handleCheckoutChange = (date2) => {
     setCheckoutDate(date2);
@@ -67,7 +81,9 @@ const BookNowContent = () => {
   };
 
   const handleProceedClick = (e) => {
+    
     e.preventDefault();
+    saveDataToFirestore();
 
     const bookingDetails = {
       name,
@@ -94,6 +110,39 @@ const BookNowContent = () => {
       });
   };
 
+  const contentData = [
+    {
+      img: img1,
+      title: "Leaders",
+      sub: "Mindfulness for Leaders",
+      text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
+    },
+    {
+      img: img2,
+      title: "Educators",
+      sub: "Mindfulness for Educators",
+      text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
+    },
+    {
+      img: img3,
+      title: "Corporates",
+      sub: "Mindfulness for Corporates",
+      text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
+    },
+    {
+      img: img4,
+      title: "Seekers",
+      sub: "Mindfulness for Seekers",
+      text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
+    },
+    {
+      img: img5,
+      title: "Students",
+      sub: "Mindfulness for Students",
+      text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
+    }
+  ];
+
   const handleCardClick = (index, title) => {
     setSelectedCard(index);
     setPackage(title);
@@ -110,7 +159,8 @@ const BookNowContent = () => {
         <div className="col-md-12 d-flex main-col">
           <div className="col-7 scrollable-content">
             <h3 className="font-primary">Book your journey with us!</h3>
-            <br /><br />
+            <br />
+            <br />
             <form className="feedback-form">
               <div className="form-group">
                 <input
@@ -146,67 +196,79 @@ const BookNowContent = () => {
             <h3 className="font-primary">Your stay</h3>
             <div className="date-container d-flex col-12">
               <div className="col-6 d-flex check-in stay-input">
-                  <div className="col-lg-2" style={{  display:'flex', justifyContent:'center' }}>
-                    <i className="fa-solid fa-calendar-days book-icons"></i>
-                  </div>
-                  <div className="col-lg-4">
-                    <p className="book-text">
-                      Check in
-                    </p>
-                  </div>
-                  <div className="col-lg-5">
-                    <DatePicker
-                      className="date-input"
-                      selected={checkinDate}
-                      onChange={(date1) => setCheckinDate(date1)}
-                    />
-                  </div>
+                <div
+                  className="col-lg-2"
+                  style={{ display: "flex", justifyContent: "center" }}
+                >
+                  <i className="fa-solid fa-calendar-days book-icons"></i>
+                </div>
+                <div className="col-lg-4">
+                  <p className="book-text">Check in</p>
+                </div>
+                <div className="col-lg-5">
+                  <DatePicker
+                    className="date-input"
+                    selected={checkinDate}
+                    onChange={(date1) => setCheckinDate(date1)}
+                  />
+                </div>
               </div>
               <div className="col-6 d-flex check-out stay-input">
-                  <div className="col-lg-2" style={{  display:'flex', justifyContent:'center' }}>
-                    <i className="fa-solid fa-calendar-days book-icons"></i>
-                  </div>
-                  <div className="col-lg-4">
-                    <p className="book-text">
-                      Check out
-                    </p>
-                  </div>
-                  <div className="col-lg-5">
-                    <DatePicker
-                      className="date-input"
-                      selected={checkoutDate}
-                      onChange={handleCheckoutChange}
-                    />
-                  </div>
+                <div
+                  className="col-lg-2"
+                  style={{ display: "flex", justifyContent: "center" }}
+                >
+                  <i className="fa-solid fa-calendar-days book-icons"></i>
+                </div>
+                <div className="col-lg-4">
+                  <p className="book-text">Check out</p>
+                </div>
+                <div className="col-lg-5">
+                  <DatePicker
+                    className="date-input"
+                    selected={checkoutDate}
+                    onChange={handleCheckoutChange}
+                  />
+                </div>
               </div>
             </div>
             <h3 className="font-primary">Guests</h3>
             <div className="date-container d-flex">
               <div className="col-6 d-flex check-in stay-input">
-                  <div className="col-lg-2" style={{  display:'flex', justifyContent:'center' }}>
-                    <i className="fa-solid fa-person book-icons"></i>
-                  </div>
-                  <div className="col-lg-4">
-                    <p className="book-text">
-                      No of adults
-                    </p>
-                  </div>
-                  <div className="col-lg-5">
-                    <input className="count-input" type="number" />
-                  </div>
+                <div
+                  className="col-lg-2"
+                  style={{ display: "flex", justifyContent: "center" }}
+                >
+                  <i className="fa-solid fa-person book-icons"></i>
+                </div>
+                <div className="col-lg-4">
+                  <p className="book-text">No of adults</p>
+                </div>
+                <div className="col-lg-5">
+                  <input
+                    className="count-input"
+                    onChange={(e) => setAdults(e.target.value)}
+                    type="number"
+                  />
+                </div>
               </div>
               <div className="col-6 d-flex check-out stay-input">
-                  <div className="col-lg-2" style={{  display:'flex', justifyContent:'center' }}>
-                    <i className="fa-solid fa-child-reaching book-icons"></i>
-                  </div>
-                  <div className="col-lg-4">
-                    <p className="book-text">
-                      No of children
-                    </p>
-                  </div>
-                  <div className="col-lg-5">
-                    <input className="count-input" type="number" />
-                  </div>
+                <div
+                  className="col-lg-2"
+                  style={{ display: "flex", justifyContent: "center" }}
+                >
+                  <i className="fa-solid fa-child-reaching book-icons"></i>
+                </div>
+                <div className="col-lg-4">
+                  <p className="book-text">No of children</p>
+                </div>
+                <div className="col-lg-5">
+                  <input
+                    className="count-input"
+                    onChange={(e) => setChildren(e.target.value)}
+                    type="number"
+                  />
+                </div>
               </div>
             </div>
             <h3 className="font-primary">Select the Experience</h3>
@@ -223,7 +285,7 @@ const BookNowContent = () => {
 
             <textarea
               name="message"
-              style={{ width: "100%", borderRadius: "10px", padding:'20px'}}
+              style={{ width: "100%", borderRadius: "10px", padding: "20px" }}
               rows={8}
               placeholder="Message..."
             ></textarea>
@@ -401,7 +463,11 @@ const BookNowContent = () => {
         <Modal show={showModal} onClose={() => setShowModal(false)}>
           <h2>Booking Submitted Successfully</h2>
           <br></br>
-          <p>Your booking has been successfully submitted. Thank you for choosing INTT Leisure. We look forward to welcoming you on your transformative mindfulness journey.</p>
+          <p>
+            Your booking has been successfully submitted. Thank you for choosing
+            INTT Leisure. We look forward to welcoming you on your
+            transformative mindfulness journey.
+          </p>
         </Modal>
       </div>
     </section>
