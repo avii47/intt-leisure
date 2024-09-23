@@ -21,6 +21,8 @@ const DestinationInnerPage = lazy(() => import('../src/pages/DestinationInnerPag
 const TermsConditionsPage = lazy(() => import('../src/pages/Terms&ConditionsPage'));
 const PrivacyPolicyPage = lazy(() => import('../src/pages/PrivacyPolicyPage'));
 
+const AdminLoginPage = lazy(() => import('../src/components/Admin/AdminLogin'));
+
 const pageVariants = {
   initial: {
     x: "100%",
@@ -167,6 +169,14 @@ const App = () => {
               element={
                 <motion.div initial="initial" animate="enter" exit="exit" variants={pageVariants} className="page-transition">
                   <HomePage />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/admin"
+              element={
+                <motion.div initial="initial" animate="enter" exit="exit" variants={pageVariants} className="page-transition">
+                  <AdminLoginPage />
                 </motion.div>
               }
             />

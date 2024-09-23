@@ -2,11 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { useMobileView } from '../../contexts/MobileViewContext';
 import emailjs from "emailjs-com";
 import Modal from "../BookNowPage/Modal";
+import "../../firebase";
+import { getFirestore, addDoc, collection } from "firebase/firestore";
 import "../../components/CSS/FeedbackSection.css";
 
 const FeedbackSection = () => {
 
   const isMobileView = useMobileView();
+  const db = getFirestore();
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -37,8 +40,19 @@ const FeedbackSection = () => {
     };
   }, []);
 
+  const saveDataToFirestore = async () => {
+    const docRef = await addDoc(collection(db, "Contact_Collection"), {
+      Name: name,
+      Email: email,
+      Mobile: mobile,
+      Message: document.querySelector('textarea[name="message"]').value,
+    });
+  };
+
   const handleSendClick = (e) => {
+    
     e.preventDefault();
+    saveDataToFirestore();
 
     const bookingDetails = {
       name,

@@ -1,19 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import emailjs from "emailjs-com";
 import Modal from "../components/BookNowPage/Modal";
+import "../firebase";
+import { getFirestore, addDoc, collection } from "firebase/firestore";
+import './CSS/FooterSection.css';
+
 import addressIcon from '../assets/icons/icons8-location-pin-50.png';
 import callIcon from '../assets/icons/icons8-call-50.png';
 import emailIcon from '../assets/icons/icons8-email-50.png';
 import logo from '../assets/images/INTT LEISURE VERTICLE.png';
 import ft_icon1 from '../assets/images/footer-icon1.png';
 import ft_icon2 from '../assets/images/footer-icon2.png';
-import './CSS/FooterSection.css';
 
 const Footer = () => {
 
   const [isMobileView, setIsMobileView] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [email, setEmail] = useState("");
+  const db = getFirestore();
 
   useEffect(() => {
     const handleResize = () => {
@@ -28,8 +32,15 @@ const Footer = () => {
     };
   }, []);
 
+  const saveDataToFirestore = async () => {
+    const docRef = await addDoc(collection(db, "NewsLetter_Collection"), {
+      Email: email
+    });
+  };
+
   const handleSubscribeClick = (e) => {
     e.preventDefault();
+    saveDataToFirestore()
 
     const bookingDetails = {
       email,
