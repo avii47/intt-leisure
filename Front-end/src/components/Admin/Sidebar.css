@@ -1,0 +1,27 @@
+.admin-sidebar{
+    height: 100vh;
+    background-color: #73cdfd;
+    display: flex;
+    flex-direction: column;
+}
+.profile-overview-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    flex-direction: column;
+}
+.profile-pic{
+    height: 100px;
+    width: 100px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+.ad-menu-item{
+    border-radius: 20px;
+}
+
+
+
+  
+  

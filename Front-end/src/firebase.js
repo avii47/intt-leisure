@@ -1,6 +1,9 @@
+// src/firebase.js
+import { initializeApp } from 'firebase/app';
+import { getFirestore } from 'firebase/firestore'; // Import Firestore
+import { getAnalytics } from 'firebase/analytics';
 
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+// Your existing Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCXyL6cMGjE8AquDcAMK-wxAxMrbTf_c4w",
   authDomain: "intt-leisure.firebaseapp.com",
@@ -14,3 +17,8 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
+// Initialize Firestore
+const db = getFirestore(app); // Add this line to initialize Firestore
+
+export { db, analytics };

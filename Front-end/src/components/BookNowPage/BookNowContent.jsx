@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import PackageCard from "../BookNowPage/PackageCard";
 import { StickyContainer, Sticky } from "react-sticky";
 import DatePicker from "react-datepicker";
+import { getFirestore, addDoc, collection } from "firebase/firestore";
 import { useMobileView } from "../../contexts/MobileViewContext";
 import "react-datepicker/dist/react-datepicker.css";
 import emailjs from "emailjs-com";
@@ -15,15 +16,15 @@ import img5 from "../../assets/images/studentsPage-hero-img.jpg";
 
 const BookNowContent = () => {
   const img6 = "https://img.freepik.com/free-photo/back-view-woman-doing-yoga-outdoors_23-2148769551.jpg?t=st=1726225399~exp=1726228999~hmac=ecaf4b00aa9acc543b0324daca432cd61131bc193e49bb3f774a2dca29807fcf&w=1380";
-  const [checkinDate, setCheckinDate] = useState(new Date());
-  const [checkoutDate, setCheckoutDate] = useState(new Date());
+  const [checkinDate, setCheckinDate] = useState(new Date().toISOString().split('T')[0]);
+  const [checkoutDate, setCheckoutDate] = useState(new Date().toISOString().split('T')[0]);
   const [selectedCard, setSelectedCard] = useState(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [mobile, setMobile] = useState("");
   const [duration, setDuration] = useState("");
-  const [adults, setAdults] = useState("");
-  const [children, setChildren] = useState("");
+  const [adults, setAdults] = useState(0);
+  const [children, setChildren] = useState(0);
   const [pack, setPackage] = useState("");
   const isMobileView = useMobileView();
   const [showModal, setShowModal] = useState(false);
@@ -63,10 +64,13 @@ const BookNowContent = () => {
       Name: name,
       Email: email,
       Mobile: mobile,
+      Checkin_Date: checkinDate,
+      Checkout_Date: checkoutDate,
       Duration: duration,
       Guests: adults + " Addults and " + children + " Children",
       Package: pack,
       Message: document.querySelector('textarea[name="message"]').value,
+      Status: 'Pending'
     });
   };
 

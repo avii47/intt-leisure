@@ -23,6 +23,7 @@ const TermsConditionsPage = lazy(() => import('../src/pages/Terms&ConditionsPage
 const PrivacyPolicyPage = lazy(() => import('../src/pages/PrivacyPolicyPage'));
 
 const AdminLoginPage = lazy(() => import('../src/components/Admin/AdminLogin'));
+const AdminDashboard = lazy(() => import('../src/pages/AdminDashboard'));
 
 const pageVariants = {
   initial: {
@@ -54,10 +55,16 @@ const App = () => {
   const location = useLocation();
   const [startTransition, isPending] = useTransition();
 
+  // Define the paths where the Navbar should be hidden
+  const hideNavbarPaths = ["/admin", "/dashboard"];
+
+  const shouldHideNavbar = hideNavbarPaths.includes(location.pathname);
+
   return (
     <div className="main-container">
       <ScrollToTop />
-      <Navbar />
+      {/* Conditionally render the Navbar based on the current route */}
+      {!shouldHideNavbar && <Navbar />}
       <AnimatePresence>
         <Suspense fallback={<div>Loading...</div>}>
           <Routes location={location} key={location.pathname}>
@@ -141,14 +148,6 @@ const App = () => {
                 </motion.div>
               }
             />
-            {/* <Route
-              path="/blogs/:blogId"  // New route for individual blog content
-              element={
-                <motion.div initial="initial" animate="enter" exit="exit" variants={pageVariants} className="page-transition">
-                  <BlogsContent />
-                </motion.div>
-              }
-            /> */}
             <Route
               path="/destinations/:id"
               element={
@@ -186,6 +185,14 @@ const App = () => {
               element={
                 <motion.div initial="initial" animate="enter" exit="exit" variants={pageVariants} className="page-transition">
                   <AdminLoginPage />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/dashboard"
+              element={
+                <motion.div initial="initial" animate="enter" exit="exit" variants={pageVariants} className="page-transition">
+                  <AdminDashboard />
                 </motion.div>
               }
             />

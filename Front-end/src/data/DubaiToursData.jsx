@@ -1,6 +1,6 @@
-import img_01 from "../assets/images/dubai-img1.jpeg";
-import img_02 from "../assets/images/dubai-img2.jpeg";
-import img_03 from "../assets/images/dubai-img3.jpeg";
+import img_01 from "../assets/images/dubai-img1.png";
+import img_02 from "../assets/images/dubai-img2.png";
+import img_03 from "../assets/images/dubai-img3.png";
 
 const dubaiContentData = [
   {
