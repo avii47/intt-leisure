@@ -16,7 +16,7 @@
 .eventsNews-txt{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: start;
     padding-left: 5%;
     height: 19.5rem;
 }

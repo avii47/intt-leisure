@@ -28,7 +28,7 @@ const Login = (props) => {
       });
 
       if (temporaryArr.length > 0) {
-        alert("done");
+        navigate("/dashboard")
       } else {
         alert("Invalid email or password");
       }

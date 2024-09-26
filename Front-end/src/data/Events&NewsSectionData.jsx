@@ -6,7 +6,7 @@ import img_04 from '../assets/images/events-img3.png';
 const contentData = [
     {
       'img': img_03,
-      'title': 'Wisdom in the times of Crisis',
+      'title': '26th ILA Global Conference About "Architects of Change"',
       'sub': 'Dr. GB Hewawasam presented at the 24th ILA leadership conference in Washington DC on the topic of Introspective Leadership...'
     },
     {
@@ -21,7 +21,7 @@ const contentData = [
     },
     {
       'img': img_04,
-      'title': 'Wisdom in the times of Crisis',
+      'title': '24th ILA Global Conference About "Wisdom in the Times of Crisis"',
       'sub': 'Dr. GB Hewawasam presented at the 24th ILA leadership conference in Washington DC on the topic of Introspective Leadership...'
     }
   ];

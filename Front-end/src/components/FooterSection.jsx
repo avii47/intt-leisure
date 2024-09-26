@@ -34,7 +34,8 @@ const Footer = () => {
 
   const saveDataToFirestore = async () => {
     const docRef = await addDoc(collection(db, "NewsLetter_Collection"), {
-      Email: email
+      Email: email,
+      Status: 'Pending'
     });
   };
 

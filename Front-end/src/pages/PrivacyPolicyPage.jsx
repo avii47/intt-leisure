@@ -15,7 +15,7 @@ const PrivacyPolicyPage = () => {
         <div className="service-section-content justify-content-center" style={{backgroundColor:'white'}}>
             <Helmet>
                 <meta name="description" content="What exactly is Mindful Tourism? We often hear about mindfulness, but how often do we participate in Mindful Tourism? It’s a distinct approach rooted in Sri Lanka's authentic mindfulness teachings and bolstered by solid research." />
-                <link rel="canonical" href="https://inttleisure.com/mindfulness" />
+                <link rel="canonical" href="https://inttleisure.com/privacyPolicy" />
             </Helmet>
             <h1 className='font-primary top-container'>Privacy Policy</h1>
             <p>This Privacy Policy outlines the practices of INTT Leisure regarding the collection, use, and disclosure of your information when you interact with our website <a href="https://www.inttleisure.com">(https://www.inttleisure.com)</a> (referred to as the “Service”). By using the Service, you consent to the practices described in this Privacy Policy. If you do not agree with these terms, please refrain from using the Service.</p>

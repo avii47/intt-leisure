@@ -12,7 +12,7 @@ const contentData = [
     img: img1,
     title:
       "Embracing Mindfulness In Leadership In The Age Of AI And Corporate Complexity",
-    sub: "Dr. Gamini Hewawasam, the CEO of ManoLead, FineFinish Engineering, and INT Terminal Travel Group, has been featured in Forbes for his latest article, “Embracing Mindfulness In Leadership In The Age...",
+    sub: "A mindful leader can bridge the gap by using AI as a tool while maintaining a balanced and ethical perspective grounded in emotional...",
     cat: "Forbes Article",
     date: "September 4, 2024",
     blogUrl : 'https://www.forbes.com/councils/forbescoachescouncil/2024/08/19/embracing-mindfulness-in-leadership-in-the-age-of-ai-and-corporate-complexity/',
@@ -24,7 +24,7 @@ const contentData = [
     img: img2,
     title:
       "Mindfulness in Leadership: Harnessing the Power of Breath for Effective Decision-Making",
-    sub: "Dr. Gamini Hewawasam, the CEO of ManoLead, FineFinish Engineering, and INT Terminal Travel Group, has been featured in Forbes for his latest article, “Mindfulness in Leadership: Harnessing the...",
+    sub: "Mindful breathing, a key practice in Buddhism, can be an effective strategy in helping leaders become more clear-minded and ready to make...",
     cat: "Forbes Article",
     date: "July 27, 2024",
         blogUrl : 'https://inttleisure.com/blogs/2',
@@ -35,7 +35,7 @@ const contentData = [
     img: img3,
     title:
       "16 Insightful Ways To Measure The Impact Of Your Keynote Presentations by Forbes Expert Panel®",
-    sub: "Dr. Gamini Hewawasam, the CEO of ManoLead/FineFinish Engineering/INT Terminal Travel Group, has been featured on the Forbes Expert Panel for his professional insights into “16 Insightful Ways To...",
+    sub: "Having the right KPIs to measure the success of your keynote presentations provides valuable feedback on the effectiveness of your message...",
     cat: "Forbes Article",
     date: "July 18, 2024",
         blogUrl : 'https://inttleisure.com/blogs/3',
@@ -46,7 +46,7 @@ const contentData = [
     img: img4,
     title:
       "16 Bad Workplace Habits And How To Break Them by Forbes Expert Panel®",
-    sub: "Dr. Gamini Hewawasam, the CEO of ManoLead/FineFinish Engineering/INT Terminal Travel Group, has been featured on the Forbes Expert Panel for his professional insights into “16 Bad Workplace Habits...",
+    sub: "Dr. Gamini Hewawasam, CEO of ManoLead/FineFinish Engineering has been featured on the Forbes Expert Panel for his insights into '16 Bad Workplace Habits....",
     cat: "Forbes Article",
     date: "July 10, 2024",
         blogUrl : 'https://inttleisure.com/blogs/4',
@@ -57,7 +57,7 @@ const contentData = [
     img: img5,
     title:
       "14 Reasons Entrepreneurs Give Up Too Soon (And How To Avoid Doing So) by Forbes Expert Panel®",
-    sub: "Dr. Gamini Hewawasam, the CEO of ManoLead/FineFinish Engineering/INT Terminal Travel Group, has been featured in the Forbes Expert Panel for his professional insight on “14 Reasons Entrepreneurs...",
+    sub: "Entrepreneurship is a journey that can be fraught with challenges and uncertainties at every turn. Sometimes, the hardest decision for...",
     cat: "Forbes Article",
     date: "June 28, 2024",
         blogUrl : 'https://inttleisure.com/blogs/5',
@@ -68,7 +68,7 @@ const contentData = [
     img: img6,
     title:
       "Mindfulness In Leadership: A Personal Journey Through The Eightfold Process",
-    sub: "Dr. Gamini Hewawasam, the CEO of ManoLead, FineFinish Engineering, and INT Terminal Travel Group, has been featured on Forbes for his article “Mindfulness in Leadership: A Personal Journey...",
+    sub: "Drawing on the principles of the Eightfold Process, I have developed a framework tailored for business leaders seeking to transcend...",
     cat: "Forbes Article",
     date: "June 15, 2024",
         blogUrl : 'https://inttleisure.com/blogs/6',

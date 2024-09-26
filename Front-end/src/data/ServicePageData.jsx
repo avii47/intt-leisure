@@ -13,7 +13,7 @@ const contentData = [
     title: "Leaders",
     sub: "Mindfulness for Leaders",
     text: "Unlock Your Leadership Potential with Mindfulness in Sri Lanka",
-    label: "View Package",
+    label: "Explore Package",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const contentData = [
     title: "Educators",
     sub: "Mindfulness for Educators",
     text: "Uncover the Luxury of Mindfulness in Sri Lanka for Educators",
-    label: "View Package",
+    label: "Explore Package",
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const contentData = [
     title: "Corporates",
     sub: "Mindfulness for Corporates",
     text: "Is your corporate team ready to embark on a transformative journey?",
-    label: "View Package",
+    label: "Explore Package",
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ const contentData = [
     title: "Seekers",
     sub: "Mindfulness for Seekers",
     text: "Are you seeking inner peace, balance, and personal growth?",
-    label: "View Package",
+    label: "Explore Package",
   },
   {
     id: 5,
@@ -45,7 +45,7 @@ const contentData = [
     title: "Students",
     sub: "Mindfulness for Students",
     text: "Uncover the Luxury of Mindfulness in Sri Lanka for Students",
-    label: "View Package",
+    label: "Explore Package",
   },
   {
     id: 6,
