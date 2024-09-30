@@ -249,7 +249,7 @@ const AboutUsContent = () => {
               <div>
                 <h3 className="font-primary">Meet Our Visionary</h3>
                 <p className="font-secondary">“Mindfulness is approached from many perspectives, yet its true essence often remains elusive. It is time to bring clarity to its origins and explore its transformative potential in our lives." - Dr. Gamini Hewawasam. </p><br />
-                <p className="font-secondary">Dr. Gamini Hewawasam, a distinguished executive and mindfulness expert with over 20 years in the airline industry and leadership development, is the founder and CEO of INTT Leisure. With a Ph.D. and a deep commitment to personal and professional growth, Dr. Hewawasam integrates techniques like Anapanasati (mindfulness of breathing) into leadership training, enhancing decision-making, stress management, and overall well-being.</p><br />
+                <p className="font-secondary">Dr. Gamini Hewawasam, a distinguished executive and mindfulness expert with over 20 years in the airline industry and leadership development, is the founder and CEO of INTT Leisure. With a Ph.D. and a deep commitment to personal and professional growth, Dr. Hewawasam integrates techniques like Anapanasati (mindfulness of breathing) into leadership training, enhanced decision-making, stress management, and overall well-being.</p><br />
                 <p className="font-secondary">At INTT Leisure, Dr. Hewawasam aims to offer the holistic benefits of mindfulness, rooted in the original teachings of Lord Buddha, through immersive mindfulness vacations in Sri Lanka, a land where these practices have long been cherished.</p>
               </div>
             </div>
