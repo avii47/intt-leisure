@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import PackageCard from "../BookNowPage/PackageCard";
-import { StickyContainer, Sticky } from "react-sticky";
 import DatePicker from "react-datepicker";
 import { db } from "../../firebase"; // Import the initialized Firestore instance
 import { addDoc, collection } from "firebase/firestore";
@@ -8,6 +7,7 @@ import { useMobileView } from "../../contexts/MobileViewContext";
 import "react-datepicker/dist/react-datepicker.css";
 import emailjs from "emailjs-com";
 import Modal from "./Modal";
+import Modal2 from "./Modal2";
 
 import img1 from "../../assets/images/leadersPage-hero-img.jpg";
 import img2 from "../../assets/images/educatorsPage-hero-img.jpg";
@@ -15,7 +15,7 @@ import img3 from "../../assets/images/coparatesPage-hero-img.jpg";
 import img4 from "../../assets/images/seekersPage-hero-img.jpg";
 import img5 from "../../assets/images/studentsPage-hero-img.jpg";
 
-const BookNowContent = () => {
+const BookNowContent2 = () => {
   const img6 = "https://img.freepik.com/free-photo/back-view-woman-doing-yoga-outdoors_23-2148769551.jpg?t=st=1726225399~exp=1726228999~hmac=ecaf4b00aa9acc543b0324daca432cd61131bc193e49bb3f774a2dca29807fcf&w=1380";
   const [checkinDate, setCheckinDate] = useState(new Date().toISOString().split('T')[0]);
   const [checkoutDate, setCheckoutDate] = useState(new Date().toISOString().split('T')[0]);
@@ -29,6 +29,7 @@ const BookNowContent = () => {
   const [pack, setPackage] = useState("");
   const isMobileView = useMobileView();
   const [showModal, setShowModal] = useState(false);
+  const [showBookingSummary, setShowBookingSummary] = useState(false);
 
   useEffect(() => {
     const section = document.getElementById("bookNow-content-section");
@@ -60,23 +61,18 @@ const BookNowContent = () => {
   }, []);
 
   const saveDataToFirestore = async () => {
-    try {
-      const docRef = await addDoc(collection(db, "Inquiry_Collection"), {
-        Name: name,
-        Email: email,
-        Mobile: mobile,
-        Checkin_Date: checkinDate,
-        Checkout_Date: checkoutDate,
-        Duration: duration,
-        Guests: adults + " Adults and " + children + " Children",
-        Package: pack,
-        Message: document.querySelector('textarea[name="message"]').value,
-        Status: "Pending",
-      });
-      console.log("Document written with ID: ", docRef.id);
-    } catch (e) {
-      console.error("Error adding document: ", e);
-    }
+    const docRef = await addDoc(collection(db, "Inquiry_Collection"), {
+      Name: name,
+      Email: email,
+      Mobile: mobile,
+      Checkin_Date: checkinDate,
+      Checkout_Date: checkoutDate,
+      Duration: duration,
+      Guests: adults + " Addults and " + children + " Children",
+      Package: pack,
+      Message: document.querySelector('textarea[name="message"]').value,
+      Status: 'Pending'
+    });
   };
 
   // Calculate and set the duration when the user selects the checkout date
@@ -90,8 +86,11 @@ const BookNowContent = () => {
   };
 
   const handleProceedClick = (e) => {
-    
     e.preventDefault();
+    setShowBookingSummary(true); // Show booking summary modal when clicking "Proceed"
+  };
+
+  const handleBookingConfirm = () => {
     saveDataToFirestore();
 
     const bookingDetails = {
@@ -113,6 +112,7 @@ const BookNowContent = () => {
       .then((response) => {
         console.log("Email sent successfully!", response.status, response.text);
         setShowModal(true);
+        setShowBookingSummary(false); 
       })
       .catch((error) => {
         console.error("Failed to send email:", error);
@@ -167,7 +167,7 @@ const BookNowContent = () => {
       <div className="bookNow-section-content d-flex">
         <div className="col-md-12 d-flex main-col">
           <div className="col-7 scrollable-content">
-            <h3 className="font-primary">Book your journey with us!</h3>
+            <h2 className="font-primary">Book your journey with us!</h2>
             <br />
             <br />
             <form className="feedback-form">
@@ -298,176 +298,76 @@ const BookNowContent = () => {
               rows={8}
               placeholder="Message..."
             ></textarea>
-          </div>
 
-          {isMobileView ? (
-            <div className="col-md-12 booking-summary-col">
-              <div className="booking-summary-content">
-                <h3 className="font-primary">Booking Summary</h3>
-                <br />
-                <br />
-                <div className="form-group">
-                  <input
-                    className="form-control form-control-sm"
-                    type="text"
-                    value={name}
-                    placeholder=""
-                    readOnly
-                  />
-                  <label className="label-text">Name</label>
-                </div>
-                <div className="form-group">
-                  <input
-                    className="form-control form-control-sm"
-                    type="text"
-                    value={email}
-                    placeholder=""
-                    readOnly
-                  />
-                  <label className="label-text">Email</label>
-                </div>
-                <div className="form-group">
-                  <input
-                    className="form-control form-control-sm"
-                    type="text"
-                    value={mobile}
-                    placeholder=""
-                    readOnly
-                  />
-                  <label className="label-text">Mobile</label>
-                </div>
-                <div className="form-group">
-                  <input
-                    className="form-control form-control-sm"
-                    type="text"
-                    value={duration}
-                    placeholder=""
-                    readOnly
-                  />
-                  <label className="label-text">Duration of your stay</label>
-                </div>
-                <div className="form-group">
-                  <input
-                    className="form-control form-control-sm"
-                    type="text"
-                    value={pack}
-                    placeholder=""
-                    readOnly
-                  />
-                  <label className="label-text">Package Details</label>
-                </div>
-                <div className="form-group">
-                  <input
-                    className="form-control form-control-sm"
-                    type="text"
-                    placeholder=""
-                    readOnly
-                  />
-                  <label className="label-text">Total</label>
-                </div>
-                <div className="col-12 d-flex bottom-btn-container">
-                  <button
+            <div className="col-4 d-flex bottom-btn-container">
+                <button
                     className="btn btn-dark btn-book-f"
                     onClick={handleProceedClick}
-                  >
-                    Proceed
-                  </button>
-                </div>
-              </div>
-            </div>
-          ) : (
-            <StickyContainer>
-              <Sticky topOffset={-200} bottomOffset={180}>
-                {({ style, isSticky }) => (
-                  <div
-                    className="col-6 booking-summary-col"
-                    style={{
-                      ...style,
-                      marginTop: isSticky ? "170px" : "0px",
-                      width: isSticky ? "500px" : "500px",
-                    }}
-                  >
-                    <div className="booking-summary-content content-wrapper">
-                      <h3 className="font-primary">Booking Summary</h3>
-                      <br />
-                      <br />
-                      <div className="form-group">
-                        <input
-                          className="form-control form-control-sm"
-                          type="text"
-                          value={name}
-                          placeholder=""
-                          readOnly
-                        />
-                        <label className="label-text">Name</label>
-                      </div>
-                      <div className="form-group">
-                        <input
-                          className="form-control form-control-sm"
-                          type="text"
-                          value={email}
-                          placeholder=""
-                          readOnly
-                        />
-                        <label className="label-text">Email</label>
-                      </div>
-                      <div className="form-group">
-                        <input
-                          className="form-control form-control-sm"
-                          type="text"
-                          value={mobile}
-                          placeholder=""
-                          readOnly
-                        />
-                        <label className="label-text">Mobile</label>
-                      </div>
-                      <div className="form-group">
-                        <input
-                          className="form-control form-control-sm"
-                          type="text"
-                          value={duration}
-                          placeholder=""
-                          readOnly
-                        />
-                        <label className="label-text">
-                          Duration of your stay
-                        </label>
-                      </div>
-                      <div className="form-group">
-                        <input
-                          className="form-control form-control-sm"
-                          type="text"
-                          value={pack}
-                          placeholder=""
-                          readOnly
-                        />
-                        <label className="label-text">Package Details</label>
-                      </div>
-                      <div className="form-group">
-                        <input
-                          className="form-control form-control-sm"
-                          type="text"
-                          placeholder=""
-                          readOnly
-                        />
-                        <label className="label-text">Total</label>
-                      </div>
-
-                      <div className="col-12 d-flex bottom-btn-container">
-                        <button
-                          className="btn btn-dark btn-book-f"
-                          onClick={handleProceedClick}
-                        >
-                          Proceed
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </Sticky>
-            </StickyContainer>
-          )}
+                    >
+                    Click to Go
+                </button>
+          </div>
+          </div>
         </div>
+
+        <Modal2 show={showBookingSummary} onClose={() => setShowBookingSummary(false)} onSubmit={handleBookingConfirm}>
+          <h2>Booking Summary</h2>
+          <br />
+          <div className="booking-summary-content">
+            <div className="form-group">
+              <input
+                className="form-control form-control-sm"
+                type="text"
+                value={name}
+                placeholder=""
+                readOnly
+              />
+              <label className="label-text">Name</label>
+            </div>
+            <div className="form-group">
+              <input
+                className="form-control form-control-sm"
+                type="text"
+                value={email}
+                placeholder=""
+                readOnly
+              />
+              <label className="label-text">Email</label>
+            </div>
+            <div className="form-group">
+              <input
+                className="form-control form-control-sm"
+                type="text"
+                value={mobile}
+                placeholder=""
+                readOnly
+              />
+              <label className="label-text">Mobile</label>
+            </div>
+            <div className="form-group">
+              <input
+                className="form-control form-control-sm"
+                type="text"
+                value={duration}
+                placeholder=""
+                readOnly
+              />
+              <label className="label-text">
+                Duration of your stay
+              </label>
+            </div>
+            <div className="form-group">
+              <input
+                className="form-control form-control-sm"
+                type="text"
+                value={pack}
+                placeholder=""
+                readOnly
+              />
+              <label className="label-text">Package Details</label>
+            </div>
+          </div>
+        </Modal2>
 
         <Modal show={showModal} onClose={() => setShowModal(false)}>
           <h2>Booking Submitted Successfully</h2>
@@ -483,4 +383,4 @@ const BookNowContent = () => {
   );
 };
 
-export default BookNowContent;
+export default BookNowContent2;

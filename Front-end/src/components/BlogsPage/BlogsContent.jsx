@@ -7,6 +7,7 @@ const BlogsContent = ({
   title,
   description,
   img,
+  imgSrc,
   paragraphs,
   sections,
   recommendedLinks,
@@ -39,6 +40,7 @@ const BlogsContent = ({
         </h3>
         <p className="font-secondary">{description}</p>
         <img className="blogs-img" src={img} alt="blogs-img" loading="lazy" />
+        <p className="font-secondary" style={{ marginTop:'-30px', color:'gray', paddingBottom:'20px' }}>{imgSrc}</p>
         {paragraphs.map((para, i) => (
           <p className="font-secondary" key={i}>
             {para}

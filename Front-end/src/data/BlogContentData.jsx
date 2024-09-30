@@ -8,6 +8,7 @@ const blogData = [
     description:
       "Dr. Gamini Hewawasam, founder of ManoLead, is a scholar-practitioner specializing in the intersection of mindfulness and leadership theory.",
     img: img1,
+    imgSrc:'getty image',
     paragraphs: [
         "Within the demanding nature of business, effective leadership abilities are crucial for achieving organizational success. One trait that significantly enhances the ability to make sound, profitable decisions is mindfulness. Specifically, I believe the practice of Ānāpānasati, a word from the Pāli language that translates to “mindfulness of breathing,” is something all leaders should adopt.",
         "Ānāpānasati, rooted in ancient Buddhist teachings, is a practice in which deep meditation and mindfulness can be achieved. Mindful breathing requires focusing on the natural flow of your breath and noticing how it produces a tranquil state. As your mind and body become more relaxed and less susceptible to distractions, they gain the ability to become more aware of external and internal processes. It allows you to become more alert.",
@@ -109,6 +110,7 @@ const blogData = [
     description:
       "Dr. Gamini Hewawasam, founder of ManoLead, is a scholar-practitioner specializing in the intersection of mindfulness and leadership theory.",
     img: img1,
+    imgSrc:'getty image',
     paragraphs: [
         "Within the demanding nature of business, effective leadership abilities are crucial for achieving organizational success. One trait that significantly enhances the ability to make sound, profitable decisions is mindfulness. Specifically, I believe the practice of Ānāpānasati, a word from the Pāli language that translates to “mindfulness of breathing,” is something all leaders should adopt.",
         "Ānāpānasati, rooted in ancient Buddhist teachings, is a practice in which deep meditation and mindfulness can be achieved. Mindful breathing requires focusing on the natural flow of your breath and noticing how it produces a tranquil state. As your mind and body become more relaxed and less susceptible to distractions, they gain the ability to become more aware of external and internal processes. It allows you to become more alert.",
@@ -210,6 +212,7 @@ const blogData = [
     description:
       "Dr. Gamini Hewawasam, founder of ManoLead, is a scholar-practitioner specializing in the intersection of mindfulness and leadership theory.",
     img: img1,
+    imgSrc:'getty image',
     paragraphs: [
         "Within the demanding nature of business, effective leadership abilities are crucial for achieving organizational success. One trait that significantly enhances the ability to make sound, profitable decisions is mindfulness. Specifically, I believe the practice of Ānāpānasati, a word from the Pāli language that translates to “mindfulness of breathing,” is something all leaders should adopt.",
         "Ānāpānasati, rooted in ancient Buddhist teachings, is a practice in which deep meditation and mindfulness can be achieved. Mindful breathing requires focusing on the natural flow of your breath and noticing how it produces a tranquil state. As your mind and body become more relaxed and less susceptible to distractions, they gain the ability to become more aware of external and internal processes. It allows you to become more alert.",
@@ -311,6 +314,7 @@ const blogData = [
     description:
       "Dr. Gamini Hewawasam, founder of ManoLead, is a scholar-practitioner specializing in the intersection of mindfulness and leadership theory.",
     img: img1,
+    imgSrc:'getty image',
     paragraphs: [
         "Within the demanding nature of business, effective leadership abilities are crucial for achieving organizational success. One trait that significantly enhances the ability to make sound, profitable decisions is mindfulness. Specifically, I believe the practice of Ānāpānasati, a word from the Pāli language that translates to “mindfulness of breathing,” is something all leaders should adopt.",
         "Ānāpānasati, rooted in ancient Buddhist teachings, is a practice in which deep meditation and mindfulness can be achieved. Mindful breathing requires focusing on the natural flow of your breath and noticing how it produces a tranquil state. As your mind and body become more relaxed and less susceptible to distractions, they gain the ability to become more aware of external and internal processes. It allows you to become more alert.",
@@ -412,6 +416,7 @@ const blogData = [
     description:
       "Dr. Gamini Hewawasam, founder of ManoLead, is a scholar-practitioner specializing in the intersection of mindfulness and leadership theory.",
     img: img1,
+    imgSrc:'getty image',
     paragraphs: [
         "Within the demanding nature of business, effective leadership abilities are crucial for achieving organizational success. One trait that significantly enhances the ability to make sound, profitable decisions is mindfulness. Specifically, I believe the practice of Ānāpānasati, a word from the Pāli language that translates to “mindfulness of breathing,” is something all leaders should adopt.",
         "Ānāpānasati, rooted in ancient Buddhist teachings, is a practice in which deep meditation and mindfulness can be achieved. Mindful breathing requires focusing on the natural flow of your breath and noticing how it produces a tranquil state. As your mind and body become more relaxed and less susceptible to distractions, they gain the ability to become more aware of external and internal processes. It allows you to become more alert.",
@@ -513,6 +518,7 @@ const blogData = [
     description:
       "Dr. Gamini Hewawasam, founder of ManoLead, is a scholar-practitioner specializing in the intersection of mindfulness and leadership theory.",
     img: img1,
+    imgSrc:'getty image',
     paragraphs: [
         "Within the demanding nature of business, effective leadership abilities are crucial for achieving organizational success. One trait that significantly enhances the ability to make sound, profitable decisions is mindfulness. Specifically, I believe the practice of Ānāpānasati, a word from the Pāli language that translates to “mindfulness of breathing,” is something all leaders should adopt.",
         "Ānāpānasati, rooted in ancient Buddhist teachings, is a practice in which deep meditation and mindfulness can be achieved. Mindful breathing requires focusing on the natural flow of your breath and noticing how it produces a tranquil state. As your mind and body become more relaxed and less susceptible to distractions, they gain the ability to become more aware of external and internal processes. It allows you to become more alert.",

@@ -5,7 +5,7 @@ import "../components/CSS/Pages/BookNowPage.css";
 import bg from '../assets/images/bookNowPage-hero-img.jpg'
 
 const HeroSection = lazy(() => import('../components/HeroSection'));
-const BookNowContent = lazy(() => import('../components/BookNowPage/BookNowContent'));
+const BookNowContent = lazy(() => import('../components/BookNowPage/BookNowContent2'));
 const FooterSection = lazy(() => import('../components/FooterSection'));
 
 const BookNowPage = () => {

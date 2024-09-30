@@ -39,6 +39,7 @@ const BlogsContentPage = () => {
                     title={content.title}
                     description={content.description}
                     img={content.img}
+                    imgSrc={content.imgSrc}
                     paragraphs={content.paragraphs} 
                     sections={content.sections}
                     recommendedLinks={content.recommendedLinks} 

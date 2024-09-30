@@ -4,7 +4,6 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import "../../components/CSS/BlogCard.css";
 
 const BlogCard = ({content, onClick}) => (
-
     <div className="blog-content-card">
         <div class="blog-content-image-zoom-container">
             <div className="sc-overlayer"></div>
@@ -13,7 +12,10 @@ const BlogCard = ({content, onClick}) => (
         <div className="blog-content-card-body">
             <div className='blog-card-top-section'>
                 <h1 className="font-secondary blog-content-card-title" style={{ fontSize:'20px' }}>{content.title}</h1>
-                <p className="font-secondary blog-content-card-date" style={{ fontSize:'15px' }}>{content.date}</p>
+                <div className='d-flex' style={{ justifyContent: 'space-between', alignItems: 'center' }}>
+                    <p className="font-secondary blog-content-card-date" style={{ fontSize:'15px' }}>{content.date}</p>
+                    <p className="font-secondary blog-content-card-date" style={{ fontSize:'12px', textAlign: 'right' }}>{content.cat}</p>
+                </div>
             </div>
             <hr style={{ marginTop:'-0.5rem'}} />
             <p className="font-secondary blog-content-card-sub" style={{ fontSize:'15px', letterSpacing:'0' }}>{content.sub}</p>
@@ -21,6 +23,6 @@ const BlogCard = ({content, onClick}) => (
             <ShareButtons url={content.blogUrl} title={content.title} thumbnail={content.blogThumbnail} />
         </div>
     </div>
-  );
-  
-  export default BlogCard;
+);
+
+export default BlogCard;

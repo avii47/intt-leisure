@@ -36,7 +36,7 @@ const contentData = [
     title:
       "16 Insightful Ways To Measure The Impact Of Your Keynote Presentations by Forbes Expert Panel®",
     sub: "Having the right KPIs to measure the success of your keynote presentations provides valuable feedback on the effectiveness of your message...",
-    cat: "Forbes Article",
+    cat: "Expert Panel",
     date: "July 18, 2024",
         blogUrl : 'https://inttleisure.com/blogs/3',
     blogThumbnail: 'https://imageio.forbes.com/specials-images/imageserve/668e9119ef3577c0b6a680a3/Modern-conference-hall-with-attendees-listening-to-a-keynote-speaker-on-stage-/960x0.jpg?format=jpg&width=1440'
@@ -47,7 +47,7 @@ const contentData = [
     title:
       "16 Bad Workplace Habits And How To Break Them by Forbes Expert Panel®",
     sub: "Dr. Gamini Hewawasam, CEO of ManoLead/FineFinish Engineering has been featured on the Forbes Expert Panel for his insights into '16 Bad Workplace Habits....",
-    cat: "Forbes Article",
+    cat: "Expert Panel",
     date: "July 10, 2024",
         blogUrl : 'https://inttleisure.com/blogs/4',
     blogThumbnail: 'https://imageio.forbes.com/specials-images/imageserve/6684456610d774e0b0080da5/Business-colleagues-whispering-and-gossiping-during-a-meeting-in-the-office-/960x0.jpg?format=jpg&width=1440'
@@ -58,7 +58,7 @@ const contentData = [
     title:
       "14 Reasons Entrepreneurs Give Up Too Soon (And How To Avoid Doing So) by Forbes Expert Panel®",
     sub: "Entrepreneurship is a journey that can be fraught with challenges and uncertainties at every turn. Sometimes, the hardest decision for...",
-    cat: "Forbes Article",
+    cat: "Expert Panel",
     date: "June 28, 2024",
         blogUrl : 'https://inttleisure.com/blogs/5',
     blogThumbnail: 'https://imageio.forbes.com/specials-images/imageserve/665df535359aff94a4cf3198/Woman-entrepreneur-trying-to-decide-on-next-steps-for-her-business-/960x0.jpg?format=jpg&width=1440'

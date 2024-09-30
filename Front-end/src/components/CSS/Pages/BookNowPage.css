@@ -14,7 +14,9 @@
   padding: 40px 0;
 }
 .main-col {
-  gap: 100px;
+  /* gap: 100px; */
+  display: flex;
+  justify-content: center;
 }
 .date-container {
   display: flex;
@@ -91,12 +93,13 @@
   color: #aaa;
 }
 .bottom-btn-container {
-  margin-top: 50px;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 30%;
   height: 100px;
   padding: 25px;
+  padding-left: 0;
 }
 .btn-book-f {
   width: 100%;
