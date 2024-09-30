@@ -15,25 +15,25 @@ const contentData = [
     id: 2,
     img: img2,
     title: "Mindfulness for Educators",
-    sub: "Uncover the Luxury of Mindfulness in Sri Lanka for Students and Educators",
+    sub: "Deepen Your Teaching and Engagement Skills Through the Luxury of Mindfulness",
   },
   {
     id: 3,
     img: img3,
     title: "Mindfulness for Corporates",
-    sub: "Is your corporate team ready to embark on a transformative journey?",
+    sub: "Enhance Team Collaboration by Embarking on a Transformative Journey Together",
   },
   {
     id: 4,
     img: img4,
     title: "Mindfulness for Seekers",
-    sub: "Are you seeking inner peace, balance, and personal growth?",
+    sub: "Focus on Personal Growth and Inner Peace Through Our Personalized Practices",
   },
   {
     id: 5,
     img: img5,
     title: "Mindfulness for Students",
-    sub: "Get a truly rejuvenating and life-changing experience through practice",
+    sub: "Expand Your Mind and Knowledge by Exploring Profound Mindfulness Teachings",
   },
 ];
 

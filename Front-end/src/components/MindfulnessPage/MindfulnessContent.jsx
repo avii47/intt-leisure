@@ -89,16 +89,7 @@ const MindfulnessContent = () => {
       <div className="mindfulness-section-content">
         <h3 className="font-primary">What is Mindfulness Tourism?</h3>
         <p className="font-secondary">
-          What exactly is Mindful Tourism? We often hear about mindfulness, but
-          how often do we participate in Mindful Tourism? It’s a distinct
-          approach rooted in Sri Lanka's authentic mindfulness teachings and
-          bolstered by solid research. Partnering with INTT Leisure for a
-          mindful tour offers a transformative experience tailored for leaders
-          and professionals. Each moment of your journey is meticulously
-          designed to deepen your mindfulness practice. Our experts guide you
-          through techniques that aren’t just theoretical—they’re backed by
-          action research conducted by Dr. Gamini Hewawasam, specifically tested
-          and proven to be effective for leaders.
+        Although mindfulness is best known as an introspective journey, this experience can be well paired with the immersion of external surroundings. Mindfulness Tourism is a distinct approach that allows individuals to uncover the truth about inner peace amidst the tranquil landscapes of Sri Lanka that are also home to the profound teachings of authentic mindfulness. When you partner with INTT Leisure for Mindfulness Tourism, each moment of your journey is meticulously designed to deepen your understanding of mindfulness and allow you to reach personal transcendence. Our experts guide you through techniques that aren’t just theoretical - they are supported by extensive action research conducted by Dr. GB Hewawasam, which has been tested and proven to be effective for both leaders and seekers.
         </p>
         <div
           id="mindfulness-content-cards-container"

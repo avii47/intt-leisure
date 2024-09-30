@@ -12,10 +12,10 @@ const Modal = ({ show, onClose, onSubmit, children }) => {
         {children}
         <div className="d-flex" style={{ gap:'20px' }}>
           <button className="modal-act-btn" onClick={onClose}>
-            Go Back
+            Back
           </button>
           <button className="modal-act-btn" onClick={onSubmit}>
-            Confirm Booking
+            Confirm
           </button>
         </div>
       </div>

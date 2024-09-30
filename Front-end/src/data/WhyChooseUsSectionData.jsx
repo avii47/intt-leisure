@@ -24,7 +24,7 @@ const contentData = [
   {
     img: backed_by_research_icon,
     title: "Backed by Research",
-    sub: "Our approach to mindfulness is rooted in extensive research, and we are dedicated to sharing its profound benefits with you.",
+    sub: "Our approach to mindfulness is rooted in extensive research conducted by Dr. Hewawasam through his doctoral dissertation and includes benefits derived from other mindfulness-based studies",
   },
   {
     img: ancient_root_icon,

@@ -21,12 +21,12 @@ const contentData = [
       {
         offer: "Enhanced Focus Amidst Natural Beauty",
         description:
-          "Immerse yourself in the lush natural beauty of Sri Lanka as mindfulness practices sharpen your focus and attention, enabling you to make better decisions and prioritize effectively.",
+          "Immerse yourself in the lush natural beauty of Sri Lanka while engaging with mindfulness practices that sharpen your focus and attention, enabling you to make better decisions and prioritize effectively.",
       },
       {
         offer: "Ancient Wisdom for Modern Leaders",
         description:
-          "Benefit from the wealth of mindfulness knowledge that Sri Lanka has cultivated since ancient times. Our programs seamlessly blend ancient wisdom with contemporary leadership principles",
+          "Benefit from the wealth of mindfulness knowledge that Sri Lanka has cultivated since ancient times. Our programs seamlessly blend ancient wisdom with contemporary leadership principles.",
       },
     ],
   },
@@ -94,7 +94,7 @@ const contentData = [
       {
         offer: "Mindfulness Basics",
         description:
-          "Dive into the fundamentals of mindfulness and learn techniques to enhance your mental clarity and emotional well-being",
+          "Dive into the fundamentals of mindfulness and learn techniques to enhance your mental clarity and emotional well-being.",
       },
       {
         offer: "Mindful Living",

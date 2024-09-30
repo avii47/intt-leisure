@@ -187,9 +187,9 @@ const AboutUsContent = () => {
             <div className="col-lg-8 txt-col">
               <div>
                 <h3 className="font-primary">At the heart of our mindfulness vacations is Dr. Gamini Hewawasam</h3>
-                <p className="font-secondary">A Forbes Coach Council member and a leading practitioner of the original form of mindfulness. With over 12 years of experience in the travel industry in the USA, Dr. Hewawasam has recognized a gap between traditional mindfulness teachings preserved in Sri Lanka and their often diluted Western practices.</p><br />
-                <p className="font-secondary">Dedicated to bridging this gap, Dr. Hewawasam invites leaders like you to experience mindfulness in its most authentic form. Our meticulously crafted itineraries are designed specifically for leaders, immersing you in the profound essence of mindfulness as practiced for centuries in Sri Lanka.</p><br />
-                <p className="font-secondary">Every aspect of your journey is tailored to resonate with your unique leadership needs, providing a deep and meaningful experience that goes beyond conventional practices. Discover the true depth and serenity of mindfulness, guided by Dr. Hewawasam’s expertise, and enrich your leadership journey with us.</p>
+                <p className="font-secondary">Dr. GB Hewawasam, a Forbes Coach Council member and a leading practitioner of the original form of mindfulness, carries over 12 years of experience in the travel industry in the USA, thus making him an ideal expert regarding the benefits of Mindfulness Tourism. Through his extensive research and experience, Dr. Hewawasam has recognized a gap between traditional mindfulness teachings preserved in Sri Lanka and the often diluted Western practices. </p><br />
+                <p className="font-secondary">Dedicated to bridging this gap, Dr. Hewawasam invites seekers like you to experience mindfulness in its most authentic form. Our meticulously crafted itineraries are designed to satisfy your personal goals, allowing you to truly immerse yourself in the essence of mindfulness as practiced for centuries in Sri Lanka.</p><br />
+                <p className="font-secondary">Every aspect of your journey is tailored to resonate with your unique style and perspective, providing a deep and meaningful experience that goes beyond conventional practices. Discover the true depth and serenity of mindfulness, guided by Dr. Hewawasam’s expertise, and enrich your leadership journey with us.</p>
               </div>
             </div>
             <div className="col-lg-4" style={{ textAlign: 'right' }}>
@@ -204,14 +204,14 @@ const AboutUsContent = () => {
               <div className='vm-contaioner'>
                 <h3 className="font-primary">Our Vision</h3>
                 <img src={vision_icon} alt="vision_icon" style={{height:'200px', marginBottom:'40px'}}/>
-                <p className="font-secondary" style={{fontSize:'20px'}}>Unlocking leadership potential with mindfulness vacations</p>
+                <p className="font-secondary" style={{fontSize:'20px'}}>To unlock leadership potential with mindfulness vacations.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex vm-card-col" style={{justifyContent:'left', paddingLeft:'30px'}}>
               <div className='vm-contaioner'>
                 <h3 className="font-primary">Our Mission</h3>
                 <img src={mission_icon} alt="mission_icon" style={{height:'200px', marginBottom:'40px'}}/>
-                <p className="font-secondary" style={{fontSize:'20px'}}>Unlock the Hidden Gem of Authentic Buddhist Teachings, Providing the Key to Intellectual and Emotional Balance.</p>
+                <p className="font-secondary" style={{fontSize:'20px'}}>To uncover the hidden gem of authentic Buddhist teachings that provide the key to intellectual and emotional balance.</p>
               </div>
             </div>
           </div>
@@ -226,8 +226,7 @@ const AboutUsContent = () => {
                 </div>
                 <div className="col-lg-7 txt-col">
                   <div className='txt-col-p'>
-                    <p className="font-secondary">Every aspect of your journey is tailored to resonate with your unique leadership needs, providing a deep and meaningful experience that goes beyond conventional practices.</p>
-                    <p className="font-secondary">Discover the true depth and serenity of mindfulness, guided by Dr. Hewawasam’s expertise, and enrich your leadership journey with us.</p>
+                    <p className="font-secondary">Every aspect of your journey is tailored to resonate with your unique leadership needs, providing a deep and meaningful experience that goes beyond conventional practices. Discover the true depth and serenity of mindfulness, guided by Dr. Hewawasam’s expertise, and enrich your leadership journey with us.</p>
                   </div>
                 </div>
               </div><br></br><br></br><br></br>
@@ -237,8 +236,7 @@ const AboutUsContent = () => {
                 </div>
                 <div className="col-lg-7 txt-col">
                   <div className='txt-col-p2'>
-                    <p className="font-secondary">Every aspect of your journey is tailored to resonate with your unique leadership needs, providing a deep and meaningful experience that goes beyond conventional practices.</p>
-                    <p className="font-secondary">Discover the true depth and serenity of mindfulness, guided by Dr. Hewawasam’s expertise, and enrich your leadership journey with us.</p>
+                    <p className="font-secondary">Every aspect of your journey is tailored to resonate with your unique leadership needs, providing a deep and meaningful experience that goes beyond conventional practices. Discover the true depth and serenity of mindfulness, guided by Dr. Hewawasam’s expertise, and enrich your leadership journey with us.</p>
                   </div>
                 </div>
               </div>

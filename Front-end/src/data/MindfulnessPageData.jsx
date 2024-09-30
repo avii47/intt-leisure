@@ -5,14 +5,14 @@ const contentData = [
   {
     img: authentic_practices_img,
     title: "Authentic Practices",
-    sub: "These mindfulness practices guided by experts at INTT Leisure have been conducted on business leaders from Fortune 100 companies and are shown to be effective through proven results.",
+    sub: "Each practice is grounded within early and authentic teachings of the Buddha that remain distinct from translated Western ideologies, thus offering a contemplative view on mindfulness.",
     buttonText: "Explore >",
     imagePosition: "left",
   },
   {
     img: unique_excursions_img,
     title: "Research Based",
-    sub: "These mindfulness practices guided by experts at INTT Leisure have been conducted on business leaders from Fortune 100 companies and are shown to be effective through proven results.",
+    sub: "These mindfulness practices, guided by experts at INTT Leisure, have been conducted on business leaders from Fortune 100 companies and are shown to be effective through proven results.",
     buttonText: "Explore >",
     imagePosition: "right",
   },
