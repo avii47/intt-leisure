@@ -12,6 +12,7 @@ const MobileButton = lazy(() => import('../components/MobileBookNowButton'));
 const ServicePage = () => {
     const title = 'Experience the Experience';
     const sub = 'Choose Your Journey';
+    const aboutImg = 'description about the image'
 
     return (
         <>
@@ -20,7 +21,7 @@ const ServicePage = () => {
                 <link rel="canonical" href="https://inttleisure.com/services" />
             </Helmet>
             <Suspense fallback={<div>Loading...</div>}>
-                <HeroSection img={bg} title={title} sub={sub} />
+                <HeroSection img={bg} title={title} sub={sub} aboutImg={aboutImg} />
             </Suspense>
             <Suspense fallback={<div>Loading...</div>}>
                 <ServiceContent />

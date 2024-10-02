@@ -12,6 +12,7 @@ const MobileButton = lazy(() => import('../components/MobileBookNowButton'));
 const AboutUsPage = () => {
     const title = 'Who We Are';
     const sub = 'Connect with the Ultimate Luxury of Mindfulness in Sri Lanka';
+    const aboutImg = 'description about the image'
 
     return (
         <>
@@ -20,7 +21,7 @@ const AboutUsPage = () => {
                 <link rel="canonical" href="https://inttleisure.com/why-choose-us" />
             </Helmet>
             <Suspense fallback={<div>Loading...</div>}>
-                <HeroSection img={bg} title={title} sub={sub} />
+                <HeroSection img={bg} title={title} sub={sub} aboutImg={aboutImg} />
             </Suspense>
             <Suspense fallback={<div>Loading...</div>}>
                 <AboutUsContent />

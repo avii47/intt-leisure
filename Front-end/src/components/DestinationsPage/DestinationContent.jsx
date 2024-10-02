@@ -34,7 +34,7 @@ const DestinationsContent = () => {
   }, []);
 
   const handleDestinationCardClick = (id) => {
-    navigate(`/destinations/${id}`);
+    // navigate(`/destinations/${id}`);
   };
 
   return (

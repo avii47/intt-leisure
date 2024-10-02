@@ -3,13 +3,14 @@
     justify-content: center;
 }
 .eventsNews-section-content {
+    margin-top: -100px;
     padding-bottom: 10%;
     width: 80vw;
     flex-wrap: wrap; 
     text-align: left;
 }
 .eventsNews-img{
-    height: 250px;
+    height: 280px;
     margin-bottom: 1.25rem;
     border-radius: 10px;
 }

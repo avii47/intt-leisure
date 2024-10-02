@@ -20,8 +20,10 @@ const EventCard = ({ content }) => {
                     <h3>{content.imgTitle}</h3>
                     <p style={{ marginBottom: '30px' }}>{content.text}</p>
                     <button className='btn btn-dark news-card-btn' onClick={() => handleOnClick('/contact-us')}>Sign up ></button>
+                    <hr />
                 </div>
             </div>
+            
         </div>
 
 

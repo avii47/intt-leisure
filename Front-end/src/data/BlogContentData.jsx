@@ -4,19 +4,18 @@ const blogData = [
   {
     id: 1,
     title:
-      "Mindfulness In Leadership: Harnessing The Power Of Breath For Effective Decision-Making",
+      "Embracing Mindfulness In Leadership In The Age Of AI And Corporate Complexity",
     description:
       "Dr. Gamini Hewawasam, founder of ManoLead, is a scholar-practitioner specializing in the intersection of mindfulness and leadership theory.",
     img: img1,
     imgSrc:'getty image',
     paragraphs: [
-        "Within the demanding nature of business, effective leadership abilities are crucial for achieving organizational success. One trait that significantly enhances the ability to make sound, profitable decisions is mindfulness. Specifically, I believe the practice of Ānāpānasati, a word from the Pāli language that translates to “mindfulness of breathing,” is something all leaders should adopt.",
-        "Ānāpānasati, rooted in ancient Buddhist teachings, is a practice in which deep meditation and mindfulness can be achieved. Mindful breathing requires focusing on the natural flow of your breath and noticing how it produces a tranquil state. As your mind and body become more relaxed and less susceptible to distractions, they gain the ability to become more aware of external and internal processes. It allows you to become more alert.",
-        "orporate culture frequently creates high-pressure situations that necessitate clear thinking and executive skills. When this increased awareness is applied in corporate settings, leaders can generate stronger decision-making skills and guide their team onto the best path."
+        "In the fast-paced, high-stakes environment of the corporate world, leaders are often required to make decisions that can significantly impact their organizations. With the advent of artificial intelligence (AI) and other advanced technologies, the capacity for analytical thinking and problem-solving has reached unprecedented heights. Yet, despite these advancements, the human element—marked by emotions, biases and psychological intricacies—remains a pivotal factor in leadership effectiveness.",
+        "The Bureau of Cyberspace and Digital Policy recently introduced the Risk Management Profile for Artificial Intelligence and Human Rights on July 25, 2024, highlighting the ethical and human rights considerations in AI deployment. This underscores the growing importance of integrating emotional intelligence and ethical decision-making into leadership practices to manage the complex risks associated with AI."
     ],
     sections: [
       {
-        sectionTitle: "A Practical Guide For Corporate Leaders",
+        sectionTitle: "The Dichotomy Of The Thinking And Emotional Minds",
         sectionDescription:
           "Incorporating mindful breathing into your daily routine is a great way to attain a state of calmness and clarity. Here is a process that you can use to pursue the practice of Ānāpānasati.",
         topics: [

@@ -13,6 +13,7 @@ const BlogsPage = () => {
 
     const title = 'Blogs';
     const sub = 'Explore Our Practice';
+    const aboutImg = 'description about the image'
 
     return (
         <>
@@ -21,7 +22,7 @@ const BlogsPage = () => {
                 <link rel="canonical" href="https://inttleisure.com/blogs" />
             </Helmet>
             <Suspense fallback={<div>Loading...</div>}>
-                <HeroSection img={bg} title={title} sub={sub} />
+                <HeroSection img={bg} title={title} sub={sub} aboutImg={aboutImg} />
             </Suspense>
             <Suspense fallback={<div>Loading...</div>}>
                 <BlogsList />

@@ -11,6 +11,7 @@ const FooterSection = lazy(() => import('../components/FooterSection'));
 const BookNowPage = () => {
     const title = 'Book Now';
     const sub = 'Connect with the Ultimate Luxury of Mindfulness in Sri Lanka';
+    const aboutImg = 'description about the image'
 
     return (
         <>
@@ -19,7 +20,7 @@ const BookNowPage = () => {
                 <link rel="canonical" href="https://inttleisure.com/bookNow" />
             </Helmet>
             <Suspense fallback={<div>Loading...</div>}>
-                <HeroSection img={bg} title={title} sub={sub} />
+                <HeroSection img={bg} title={title} sub={sub} aboutImg={aboutImg} />
             </Suspense>
             <Suspense fallback={<div>Loading...</div>}>
                 <BookNowContent />

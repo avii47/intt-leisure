@@ -1,10 +1,10 @@
+import img1 from "../assets/images/blog1-img.jpg";
 import img2 from "../assets/images/blog2-img.jpg";
 import img3 from "../assets/images/blog3-img.jpg";
 import img4 from "../assets/images/blog4-img.jpg";
 import img5 from "../assets/images/blog5-img.jpg";
 import img6 from "../assets/images/blog6-img.jpg";
 
-const img1 = "https://imageio.forbes.com/specials-images/imageserve/66bf9f6003910b50a1799afe/AI--Artificial-Intelligence--concept--Communication-network-/960x0.jpg?format=jpg&width=1440";
 
 const contentData = [
   {
@@ -17,7 +17,6 @@ const contentData = [
     date: "September 4, 2024",
     blogUrl : 'https://www.forbes.com/councils/forbescoachescouncil/2024/08/19/embracing-mindfulness-in-leadership-in-the-age-of-ai-and-corporate-complexity/',
     blogThumbnail: 'https://imageio.forbes.com/specials-images/imageserve/66bf9f6003910b50a1799afe/AI--Artificial-Intelligence--concept--Communication-network-/960x0.jpg?format=jpg&width=1440'
-
   },
   {
     id: 2,
