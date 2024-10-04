@@ -42,24 +42,25 @@ const HeroSection = ({ img, title, sub, aboutImg }) => {
       }
     };
   }, []);
-
-  // Typing effect logic
+  
   useEffect(() => {
-    if (textIndex < typingText.length) {
-      const timeoutId = setTimeout(() => {
-        setDisplayedText((prev) => prev + typingText.charAt(textIndex)); // Add one character at a time
-        setTextIndex(textIndex + 1); // Move to the next character
-      }, typingSpeed);
-      
-      return () => clearTimeout(timeoutId); // Cleanup to prevent memory leaks
-    } else {
-      // When the full text is typed out, reset the typing after a short delay
-      const resetTimeout = setTimeout(() => {
-        setDisplayedText(''); // Clear the text
-        setTextIndex(0); // Reset the index to start typing from the beginning
-      }, 3000); // Delay before restarting typing (3 seconds)
-
-      return () => clearTimeout(resetTimeout);
+    if(aboutImg){
+      if (textIndex < typingText.length) {
+        const timeoutId = setTimeout(() => {
+          setDisplayedText((prev) => prev + typingText.charAt(textIndex)); 
+          setTextIndex(textIndex + 1); 
+        }, typingSpeed);
+        
+        return () => clearTimeout(timeoutId); 
+      } else {
+        
+        const resetTimeout = setTimeout(() => {
+          setDisplayedText(''); 
+          setTextIndex(0);
+        }, 3000); 
+  
+        return () => clearTimeout(resetTimeout);
+      }
     }
   }, [textIndex, typingText, typingSpeed]);
 
