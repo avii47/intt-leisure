@@ -12,7 +12,7 @@ const MobileButton = lazy(() => import('../components/MobileBookNowButton'));
 const AboutUsPage = () => {
     const title = 'Who We Are';
     const sub = 'Connect with the Ultimate Luxury of Mindfulness in Sri Lanka';
-    const aboutImg = 'description about the image'
+    const aboutImg = 'The Knuckles Mountain Range in Sri Lanka is a natural wonder, where misty peaks rise above rolling hills and deep green valleys. Its rugged cliffs stand like ancient guardians of the wild. Dense forests cover the slopes, with sunlight streaming through tall trees and lighting up the mossy rocks. Rivers flow gently through the valleys, reflecting the greens and blues of the lush landscape. The air is filled with the sounds of birds, rustling leaves, and the soft breeze, welcoming visitors to a peaceful haven of untouched beauty and calm.'
 
     return (
         <>

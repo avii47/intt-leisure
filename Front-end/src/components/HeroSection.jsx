@@ -82,7 +82,7 @@ const HeroSection = ({ img, title, sub, aboutImg }) => {
             <p className='font-secondary'>{sub}</p>
             <Lottie loading="lazy" className='arrow-icon' animationData={animationData}></Lottie>
           </div>
-          <p className="line-1 anim-typewriter">{displayedText}</p>
+          <p className="line-1 anim-typewriter" style={{width:'600px'}}>{displayedText}</p>
         </div>
       )}
     </div>
