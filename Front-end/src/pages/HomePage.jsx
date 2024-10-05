@@ -1,6 +1,8 @@
 import React, { Suspense, lazy } from 'react';
 import { Helmet } from 'react-helmet-async';
 import ScrollToTopButton from '../components/ScrollToTopButton';
+import useInView from '../hooks/useInView';
+import LoadingSpinner from '../components/LoadingSpinner'; 
 
 const HeroSection = lazy(() => import('../components/HomePage/HeroSection'));
 const MindfulnessTourismSection = lazy(() => import('../components/HomePage/MindfulnessTourismSection'));
@@ -12,6 +14,22 @@ const EventsNewsSection = lazy(() => import('../components/HomePage/Events&NewsS
 const FooterSection = lazy(() => import('../components/FooterSection'));
 const MobileButton = lazy(() => import('../components/MobileBookNowButton'));
 
+const SectionLoader = ({ Component }) => {
+    const [setRef, isInView] = useInView({ threshold: 0.25 });
+
+    return (
+        <div ref={setRef}>
+            {isInView ? (
+                <Suspense fallback={<LoadingSpinner />}>
+                    <Component />
+                </Suspense>
+            ) : (
+                <LoadingSpinner /> // Show spinner while waiting for intersection
+            )}
+        </div>
+    );
+};
+
 const HomePage = () => {
     return (
         <>
@@ -20,37 +38,24 @@ const HomePage = () => {
                 <link rel="canonical" href="https://inttleisure.com/" />
             </Helmet>
 
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<LoadingSpinner />}>
                 <HeroSection />
             </Suspense>
-            <Suspense fallback={<div>Loading...</div>}>
-                <MindfulnessTourismSection />
-            </Suspense>
-            <Suspense fallback={<div>Loading...</div>}>
-                <WhyChooseUsSection />
-            </Suspense>
-            <Suspense fallback={<div>Loading...</div>}>
-                <ServicesSection />
-            </Suspense>
-            <Suspense fallback={<div>Loading...</div>}>
-                <TestimonialSection />
-            </Suspense>
-            <Suspense fallback={<div>Loading...</div>}>
-                <ConnectAppSection />
-            </Suspense>
-            <Suspense fallback={<div>Loading...</div>}>
-                <EventsNewsSection />
-            </Suspense>
-            <Suspense fallback={<div>Loading...</div>}>
-                <FooterSection />
-            </Suspense>
-            <Suspense fallback={<div>Loading...</div>}>
+
+            <SectionLoader Component={MindfulnessTourismSection} />
+            <SectionLoader Component={WhyChooseUsSection} />
+            <SectionLoader Component={ServicesSection} />
+            <SectionLoader Component={TestimonialSection} />
+            <SectionLoader Component={ConnectAppSection} />
+            <SectionLoader Component={EventsNewsSection} />
+            <SectionLoader Component={FooterSection} />
+            
+            <Suspense fallback={<LoadingSpinner />}>
                 <MobileButton label="Book Now" />
             </Suspense>
             <ScrollToTopButton />
-
         </>
-    )
+    );
 };
 
 export default HomePage;
