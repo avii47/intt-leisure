@@ -1,5 +1,5 @@
 .content-card{
-    height: 430px;
+    height: auto;
     margin-top: 20px;
     padding: 10px;
     border-radius: 8px;
@@ -43,4 +43,9 @@
     height: fit-content;
     letter-spacing: 0px;
     font-size: 13px;
+}
+
+.event-date-place{
+    color: rgb(129, 129, 129);
+    font-size: 15px;
 }

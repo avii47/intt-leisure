@@ -12,7 +12,7 @@ const MobileButton = lazy(() => import('../components/MobileBookNowButton'));
 const ServicePage = () => {
     const title = 'Experience the Experience';
     const sub = 'Choose Your Journey';
-    const aboutImg = 'description about the image'
+    const aboutImg = ''
 
     return (
         <>

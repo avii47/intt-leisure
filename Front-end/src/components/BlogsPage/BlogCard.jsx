@@ -11,10 +11,10 @@ const BlogCard = ({content, onClick}) => (
         </div>
         <div className="blog-content-card-body">
             <div className='blog-card-top-section'>
-                <h1 className="font-secondary blog-content-card-title" style={{ fontSize:'20px' }}>{content.title}</h1>
-                <div className='d-flex' style={{ justifyContent: 'space-between', alignItems: 'center' }}>
-                    <p className="font-secondary blog-content-card-date" style={{ fontSize:'15px' }}>{content.date}</p>
-                    <p className="font-secondary blog-content-card-date" style={{ fontSize:'12px', textAlign: 'right' }}>{content.cat}</p>
+                <h1 className="font-secondary blog-content-card-title" style={{ fontSize:'19px' }}>{content.title}</h1>
+                <div className='d-flex'>
+                    <p className="font-secondary blog-content-card-date" style={{ fontSize:'15px' }}><i class="fa-solid fa-calendar-days" style={{ marginRight:'5px'}}></i>{content.date}</p>
+                    <p className="font-secondary blog-content-card-date" style={{ fontSize:'15px', marginLeft:'20px' }}><i class="fa-regular fa-newspaper" style={{ marginRight:'5px'}}></i>{content.cat}</p>
                 </div>
             </div>
             <hr style={{ marginTop:'-0.5rem'}} />

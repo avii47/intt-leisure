@@ -13,7 +13,7 @@ const BlogsPage = () => {
 
     const title = 'Blogs';
     const sub = 'Explore Our Practice';
-    const aboutImg = 'description about the image'
+    const aboutImg = ''
 
     return (
         <>
