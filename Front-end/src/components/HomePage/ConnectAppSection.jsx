@@ -37,7 +37,7 @@ const ConnectAppSection = () => {
             <p className='font-secondary' style={{ fontWeight: '250', marginTop: '20px' }}>Join us to deepen your mindfulness practice and turn tranquility into a lasting lifestyle. Register now and stay connected to your inner peace!</p>
             <br></br>
             <p>
-              <button type="button" className="btn btn-light" onClick={() => handleOnClick('/contact-us')}>Contact Us ></button>
+              <button type="button" className="btn btn-light" onClick={() => handleOnClick('/contact-us')}>Contact Us</button>
             </p>
           </div>
 

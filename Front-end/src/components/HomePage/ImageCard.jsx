@@ -9,7 +9,7 @@ const ImageCard = ({ imageSrc, topic, paragraph }) => {
                 <div className="overlay">
                     <h3>{topic}</h3>
                     <p>{paragraph}</p><br></br>
-                    <p><button type="button" class="btn btn-link btn-learnmore" style={{ color: 'white', fontSize: '12px' }}>Learn More ></button></p>
+                    <p><button type="button" class="btn btn-link btn-learnmore" style={{ color: 'white', fontSize: '12px' }}>Learn More</button></p>
                 </div>
             </div>
         </div>

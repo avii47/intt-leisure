@@ -13,7 +13,7 @@ const ServiceContentCard = ({ content, onClick }) => (
         </div>
         <div className="service-content-card-body">
             <p className="service-content-card-sub font-secondary">{content.text}</p>
-            <button className='btn btn-outline-secondary btn-sm' style={{ border: 'none' }}>{content.label} ></button>
+            <button className='btn btn-outline-secondary btn-sm explore-service-btn'>{content.label}</button>
         </div>
     </div>
 );

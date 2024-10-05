@@ -58,7 +58,7 @@ const ContentBlock = ({ image, title, text, imagePosition }) => {
             <hr style={{ width: '3.7rem', marginTop: '-1px' }} />
             <h3 className="font-primary">{title}</h3>
             <p className="font-secondary">{text}</p>
-            <button className="btn btn-dark" onClick={() => handleOnClick('/services')}>Explore more ></button>
+            <button className="btn btn-dark" onClick={() => handleOnClick('/services')}>Explore more</button>
           </div>
         </>
       )}
@@ -74,7 +74,7 @@ const ContentBlock = ({ image, title, text, imagePosition }) => {
           </div>
           <div className="content-block__text">
             <p className="font-secondary">{text}</p>
-            <button className="btn btn-dark" onClick={() => handleOnClick('/services')}>Explore more ></button>
+            <button className="btn btn-dark" onClick={() => handleOnClick('/services')}>Explore more</button>
           </div>
         </>
       )}

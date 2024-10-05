@@ -93,7 +93,7 @@ const Footer = () => {
               </p>
               <form className="subscription-form">
                 <input type="email" placeholder="Your Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                <button type="submit" onClick={handleSubscribeClick}>Subscribe Now &gt;</button>
+                <button type="submit" onClick={handleSubscribeClick}>Subscribe Now</button>
               </form>
               <p>
                 By subscribing you agree to our Privacy Policy and consent to receive

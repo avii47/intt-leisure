@@ -11,15 +11,13 @@ const ContentCard = ({ content, onClick }) => (
         <h5 className="card-title font-secondary" style={{ fontSize: "20px" }}>
           {content.title}
         </h5>
-        <div
-          className="d-flex"
-        > 
-          <p className="Font-secondary event-date-place">
-            <i class="fa-solid fa-calendar-days" style={{ marginRight:'5px'}}></i>2024/04/05
-          </p>
-          <p className="Font-secondary event-date-place" style={{ marginLeft:'20px' }}>
-            <i class="fa-solid fa-location-dot" style={{ marginRight:'5px'}}></i>Anuradhapura
-          </p>
+        <div className="d-flex" style={{ overflowX:'hidden' }}> 
+            <p className="Font-secondary event-date-place">
+                <i class="fa-solid fa-calendar-days" style={{ marginRight:'5px'}}></i>{content.date}
+            </p>
+            <p className="Font-secondary event-date-place" style={{ marginLeft:'20px' }}>
+                <i class="fa-solid fa-location-dot" style={{ marginRight:'5px'}}></i>{content.venue}
+            </p>
         </div>
         <p className="card-sub font-secondary">{content.sub}</p>
       </div>

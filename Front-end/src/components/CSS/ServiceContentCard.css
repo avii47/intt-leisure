@@ -92,3 +92,9 @@
     text-align: left;
     color: white;
 }
+
+.explore-service-btn{
+    background-color: #72BF78;
+    color: white;
+    border-radius: 10px;
+}
