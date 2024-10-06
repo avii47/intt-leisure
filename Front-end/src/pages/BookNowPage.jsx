@@ -11,7 +11,7 @@ const FooterSection = lazy(() => import('../components/FooterSection'));
 const BookNowPage = () => {
     const title = 'Book Now';
     const sub = 'Connect with the Ultimate Luxury of Mindfulness in Sri Lanka';
-    const aboutImg = 'description about the image'
+    const aboutImg = ''
 
     return (
         <>

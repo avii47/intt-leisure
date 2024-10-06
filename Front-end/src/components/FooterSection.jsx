@@ -80,9 +80,9 @@ const Footer = () => {
             <a href="/contact-us">CONTACT US</a>
           </div>
         </div>
-        <hr></hr>
+        <hr style={{width:'90%', margin:'20px auto'}}></hr>
 
-        <div className='col-md-12 d-flex footer-2nd-row'>
+        <div className='col-md-12 d-flex footer-2nd-row' style={{justifyContent:'center'}}>
           <div className="col-lg-8">
             <div className="footer-subscription">
               <h3>Connect</h3>
@@ -101,7 +101,7 @@ const Footer = () => {
               </p>
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col-lg-2">
             <div className="footer-contact">
               <div className='ftc'>
                 <address className='d-flex'>

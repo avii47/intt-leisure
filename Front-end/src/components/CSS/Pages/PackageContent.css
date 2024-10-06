@@ -3,6 +3,7 @@
     justify-content: center;
 }
 .package-section-content {
+    margin-top: -100px;
     padding-bottom: 10%;
     width: 80vw;
     flex-wrap: wrap; 
