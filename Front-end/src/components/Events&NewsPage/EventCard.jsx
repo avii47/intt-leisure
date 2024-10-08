@@ -38,7 +38,11 @@ const EventCard = ({ content }) => {
       <div className="col-md eventsNews-txt">
         <div>
           <h3>{content.imgTitle}</h3>
-          <div className="d-flex" style={{ overflowX: "hidden", margin:'10px 0' }}>
+          <div className="d-flex meta-tags">
+            <p className="Font-secondary event-date-place2">
+              <i class="fa-regular fa-calendar-check" style={{ marginRight: "5px" }}></i>
+              {content.date}
+            </p>
             <p className="Font-secondary event-date-place2">
               <i
                 className="fa-solid fa-calendar-days"
