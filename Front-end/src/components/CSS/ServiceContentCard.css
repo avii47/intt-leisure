@@ -13,13 +13,13 @@
 @media (max-width: 2000px) {
     .service-content-card {
         flex: 1 1 25rem; 
-        max-width:25rem;
+        max-width:45rem;
     }
 }
 @media (max-width: 1600px) {
     .service-content-card {
         flex: 1 1 20rem; 
-        max-width:20rem;
+        max-width:30rem;
     }
 }
 
@@ -67,6 +67,7 @@
 }
 .mobile-view .service-content-card{
     width: 300px;
+    height: auto;
     margin-inline: auto;
 }
 .mobile-view .service-card-img{
@@ -94,7 +95,7 @@
 }
 
 .explore-service-btn{
-    background-color: #72BF78;
+    background-color: #000000;
     color: white;
     border-radius: 10px;
 }

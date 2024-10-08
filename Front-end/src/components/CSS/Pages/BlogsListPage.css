@@ -31,6 +31,7 @@
     text-align: left;
 }
 .service-content-image-zoom-container {
+    border-radius: 8px;
     overflow: hidden;
     position: relative;
 }
@@ -46,3 +47,16 @@
         max-width:20rem;
     }
 }
+
+.cat-div {
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+    z-index: 10;
+}
+.share-buttons {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 10;
+  }

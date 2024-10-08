@@ -1,18 +1,18 @@
-.share-button-container {
+.share-button-container2 {
     position: relative;
     display: inline-block;
   }
   
-  .main-share-button {
+  .main-share-button2 {
+    background-color: transparent !important;;
     cursor: pointer;
-    font-size: 14px;
-    margin-left: 15px;
+    border: none;
   }
   
-  .share-popup {
+  .share-popup2 {
     position: absolute;
-    top: 40px;
-    left: -30px; 
+    top: 45px;
+    left: -108px; 
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -26,43 +26,43 @@
     z-index: 1;
   }
   
-  .share-popup.open {
+  .share-popup2.open {
     opacity: 1;
     visibility: visible;
     transform: translateY(0); 
   }
   
-  .share-popup ul {
+  .share-popup2 ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
   }
   
-  .share-popup ul li {
+  .share-popup2 ul li {
     margin: 8px 0;
   }
   
-  .share-popup ul li a {
+  .share-popup2 ul li a {
     text-decoration: none;
     color: #555;
     display: flex;
     align-items: center;
   }
   
-  .share-popup ul li a i {
+  .share-popup2 ul li a i {
     margin-right: 8px;
   }
   
-  .share-popup ul li a:hover {
+  .share-popup2 ul li a:hover {
     color: #000;
   }
   
-  .share-popup ul li {
+  .share-popup2 ul li {
     display: flex;
     align-items: center;
   }
   
-  .share-popup ul li button {
+  .share-popup2 ul li button {
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -70,11 +70,11 @@
     align-items: center;
   }
   
-  .share-popup ul li button:hover {
+  .share-popup2 ul li button:hover {
     color: #000;
   }
 
-  .share-popup button:hover {
+  .share-popup2 button:hover {
     transform: scale(1.1);
     transition: 0.2s ease-in-out;
   } 

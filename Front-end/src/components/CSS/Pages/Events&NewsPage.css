@@ -14,17 +14,21 @@
     margin-bottom: 1.25rem;
     border-radius: 10px;
 }
+.mobile-view .eventsNews-img{
+    height: auto;
+    width: 100%;
+}
 .eventsNews-txt{
     display: flex;
     flex-direction: row;
     align-items: start;
-    padding-left: 5%;
-    height: 19.5rem;
+    padding-left: 2%;
 }
 .news-card-btn{
     width: 10rem;
 }
 .event-card {
+    background-color: aqua;
     margin-bottom: 5rem;
     display: flex;
 }
@@ -76,4 +80,31 @@
     .eventsNews-img-col h5{
         width: 600px;
     }
+}
+.eventsNews-img-col{
+    display: flex;
+    position: relative;
+}
+.event-date-place2{
+    color: rgb(129, 129, 129);
+    margin-right: 50px;
+}
+.img-overlay-date{
+    position: absolute;
+    bottom: 10px;
+    right: 50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    letter-spacing: 0;
+    line-height: 35px;
+    backdrop-filter: blur(10px);
 }

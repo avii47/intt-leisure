@@ -52,7 +52,7 @@ const contentData = [
     img: img6,
     title: "Customize Your Journey",
     sub: "Customize your mindfulness journey",
-    text: "You have the freedom to customize your journey with us to match your personal style and goals. We aim to provide the most suitable package for you.",
+    text: "You have the freedom to customize your journey with us",
     label: "Customize your Package",
   },
 ];

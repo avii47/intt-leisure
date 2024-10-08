@@ -167,7 +167,7 @@ const BookNowContent = () => {
       <div className="bookNow-section-content d-flex">
         <div className="col-md-12 d-flex main-col">
           <div className="col-7 scrollable-content">
-            <h3 className="font-primary">Book your journey with us!</h3>
+            <h3 className="font-primary">Book Your Journey with Us!</h3>
             <br />
             <br />
             <form className="feedback-form">
