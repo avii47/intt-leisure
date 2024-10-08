@@ -10,7 +10,7 @@
     text-align: left;
 }
 .eventsNews-img{
-    height: 220px;
+    height: 200px;
     margin-bottom: 1.25rem;
     border-radius: 10px;
 }
@@ -46,6 +46,7 @@
 }
 .news-cards-container{
     gap: 100px;
+    padding-top: 50px;
 }
 
 .mobile-view .eventsNews-section-content{
@@ -90,8 +91,8 @@
 }
 .img-overlay-date{
     position: absolute;
-    bottom: -10px;
-    right: -10px;
+    bottom: -3px;
+    right: 5px;
     width: 100px;
     height: 100px;
     border-radius: 10px;

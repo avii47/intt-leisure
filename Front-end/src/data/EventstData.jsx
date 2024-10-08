@@ -11,7 +11,7 @@ const eventstData = [
     time: "09.00 AM - 11.00 am",
     venue: "Hilton Chicago, Chicago, IL, USA",
     imgSub: "Well trained experts to guide you through the journey.",
-    text: "A workshop titled “How Mindfulness Affects Leadership” was conducted in Mihintale, Sri Lanka at Kaludiyapokuna on June 10, 2023. The aim of this workshop was to explore how introspective practices can transform the skills of leaders. This workshop was primarily led by three Buddhist monks, namely Venerable Seelananda, Thapowanaye Saddhajiwa, and Venerable Sudassana.",
+    text: "A workshop titled “How Mindfulness Affects Leadership” was conducted in Mihintale, Sri Lanka at Kaludiyapokuna on June 10, 2023. The aim of this workshop was to explore how introspective practices can transform the skills of leaders. This workshop was primarily led by three Buddhist monks, namely Venerable Seelananda.",
   },
   {
     img: img_02,
