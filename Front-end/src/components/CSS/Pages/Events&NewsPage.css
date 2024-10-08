@@ -10,7 +10,7 @@
     text-align: left;
 }
 .eventsNews-img{
-    height: 260px;
+    height: 220px;
     margin-bottom: 1.25rem;
     border-radius: 10px;
 }
@@ -18,17 +18,15 @@
     height: auto;
     width: 100%;
 }
-.eventsNews-txt{
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    padding-left: 2%;
+.eventsNews-txt {
+    flex: 1; 
+    padding-left: 4%;
+    overflow: hidden; 
 }
 .news-card-btn{
     width: 10rem;
 }
 .event-card {
-    background-color: aqua;
     margin-bottom: 5rem;
     display: flex;
 }
@@ -84,6 +82,7 @@
 .eventsNews-img-col{
     display: flex;
     position: relative;
+    height: fit-content;
 }
 .event-date-place2{
     color: rgb(129, 129, 129);
@@ -91,8 +90,8 @@
 }
 .img-overlay-date{
     position: absolute;
-    bottom: 10px;
-    right: 50px;
+    bottom: -10px;
+    right: -10px;
     width: 100px;
     height: 100px;
     border-radius: 10px;
@@ -107,4 +106,15 @@
     letter-spacing: 0;
     line-height: 35px;
     backdrop-filter: blur(10px);
+}
+
+/* When in mobile view, adjust the layout */
+.mobile-view .eventsNews-img-col {
+    height: auto; /* Make image height responsive in mobile */
+    width: 100%; 
+}
+
+.mobile-view .img-overlay-date {
+    right: 10px; /* Adjust positioning in mobile if needed */
+    bottom: 5px;
 }

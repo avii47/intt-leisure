@@ -48,7 +48,7 @@ const contentData = [
     img: img4,
     title:
       "16 Bad Workplace Habits And How To Break Them by Forbes Expert Panel®",
-    sub: "Dr. Gamini Hewawasam, CEO of ManoLead/FineFinish Engineering has been featured on the Forbes Expert Panel for his insights into....",
+    sub: "Dr. Gamini Hewawasam, CEO of ManoLead/FineFinish Engineering has been featured on the Forbes Expert Panel for his insights...",
     cat: "Expert Panel",
         author:'G.B. Hewawasam',
     date: "July 10, 2024",

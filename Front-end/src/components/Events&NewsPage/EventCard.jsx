@@ -20,11 +20,11 @@ const EventCard = ({ content }) => {
       className={`col-12 event-card d-flex ${isExpanded ? 'expanded' : ''}`} 
       style={{
         transition: "height 0.3s ease", 
-        minHeight: isExpanded ? 'auto' : '200px', 
+        height: isExpanded ? 'auto' : '300px', 
         overflow: "hidden",
       }}
     >
-      <div className="col-md-4 eventsNews-img-col font-secondary">
+      <div className="col-md-3 eventsNews-img-col font-secondary">
         <img
           className="eventsNews-img"
           src={content.img}
@@ -32,13 +32,13 @@ const EventCard = ({ content }) => {
           loading="lazy"
         />
         <div className="img-overlay-date font-secondary">
-            04 Oct
+            Oct 04
         </div>
       </div>
       <div className="col-md eventsNews-txt">
         <div>
           <h3>{content.imgTitle}</h3>
-          <div className="d-flex" style={{ overflowX: "hidden", marginBottom:'10px' }}>
+          <div className="d-flex" style={{ overflowX: "hidden", margin:'10px 0' }}>
             <p className="Font-secondary event-date-place2">
               <i
                 className="fa-solid fa-calendar-days"
@@ -64,7 +64,11 @@ const EventCard = ({ content }) => {
               {content.venue}
             </p>
           </div>
-          <EventContent fullText={content.text} onExpand={handleExpand} />
+          {/* <EventContent fullText={content.text} onExpand={handleExpand} /> */}
+          <p className="font-secondary">{content.text}</p>
+          <button className='btn btn-dark news-card-btn'>
+            Read more
+          </button>
         </div>
       </div>
     </div>
