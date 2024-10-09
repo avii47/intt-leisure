@@ -27,3 +27,8 @@
 .mobile-view .feedback-content h3{
     font-size: 30px;
 }
+.feedback-section2{
+    padding-top: 100px;
+    padding-bottom: 0px;
+    justify-content: center;
+}

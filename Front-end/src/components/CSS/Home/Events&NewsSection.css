@@ -40,12 +40,6 @@
     cursor: pointer;
     z-index: 10;
 }
-/* .scroll-button3.left3 {
-    margin-left: 96%;
-}
-.scroll-button3.right3 {
-    margin-left: 99%;
-} */
 .mobile-view .scroll-button3{
     top: -24%;
 }
@@ -59,14 +53,8 @@
 }
 .mobile-view .eventsNews-content {
     width: 100vw;
-    padding: 0 2rem 12rem 2rem;
+    padding: 0 2rem 2rem 2rem;
 }
-/* .mobile-view .right3 {
-    margin-left: 90% !important;
-}
-.mobile-view .left3 {
-    margin-left: 80% !important;
-} */
 .content-card{
     margin-top: 20px;
     min-width: 300px;
@@ -74,4 +62,7 @@
 .animate-cards{
     opacity: 1;
     transform: translateY(0);
+}
+.events-meta-icons{
+    margin-right: 5px;
 } 

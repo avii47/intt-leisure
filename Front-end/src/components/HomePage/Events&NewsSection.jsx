@@ -48,9 +48,6 @@ const EventsNewsSection = () => {
     };
   }, []);
 
-
-
-
   const handleOnClick = (path) => {
     navigate(path);
   };

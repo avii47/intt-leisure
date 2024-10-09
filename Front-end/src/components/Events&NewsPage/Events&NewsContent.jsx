@@ -2,7 +2,6 @@ import React, { useEffect, Suspense, lazy } from "react";
 import { useMobileView } from "../../contexts/MobileViewContext";
 import { useNavigate } from "react-router-dom";
 import eventstData from "../../data/EventstData";
-import newsData from "../../data/NewsData";
 import contentData from "../../data/BlogListData";
 import "../../components/CSS/Pages/BlogsListPage.css";
 
@@ -90,6 +89,10 @@ const EventsNewsContent = () => {
     navigate(`/blogs/${id}`);
   };
 
+  const handleEventCardClick = (id) => {
+    navigate(`/events&news/${id}`);
+  };
+
   return (
     <section
       id="eventsNews-content-section"
@@ -103,7 +106,11 @@ const EventsNewsContent = () => {
         </h3>
         <div className="events-cards-container">
           {eventstData.map((content, index) => (
-            <EventCard key={index} content={content} />
+            <EventCard 
+              key={index} 
+              content={content} 
+              onClick={() => handleEventCardClick(content.id)}
+            />
           ))}
         </div>
         <br></br>

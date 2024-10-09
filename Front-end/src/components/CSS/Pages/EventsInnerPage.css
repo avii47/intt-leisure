@@ -1,0 +1,110 @@
+.event-content-section{
+    display: flex;
+    justify-content: center;
+}
+.event-section-content {
+    margin-top: -100px;
+    padding-bottom: 10%;
+    width: 80vw;
+    flex-wrap: wrap; 
+    text-align: left;
+}
+.get-itinerary-btn{
+    height: 60px;
+    width: 250px;
+    font-size: 20px;
+    margin-bottom: 60px;
+}
+.mobile-view .event-section-content{
+    margin-top: -100px;
+}
+.event-date-place3{
+    color: rgb(129, 129, 129);
+    font-size: 20px;
+}
+.event-date-place3:hover{
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.mobile-view .event-date-place3{
+    font-size: 16px;
+}
+.events-meta-icons{
+    margin-right: 5px;
+}
+.mobile-view .event-date-place2{
+    margin-left: 0px !important;
+}
+.event-des-list{
+    margin-top: 30px;
+    margin-left: -30px;
+    list-style-type: none;
+    padding: 0;
+}
+.event-img{
+    border-radius: 10px;
+    height: 500px;
+    margin: 50px 0px;
+}
+.mobile-view .event-img{
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    margin: 50px 0px;
+}
+.nav-icon{
+    height: 30px;
+    cursor: pointer;
+}
+.service-card-nav-icons{
+    display: flex;
+    flex-direction: row;
+    align-items:baseline;
+    gap: 10px;
+    float: right;
+    margin-top: 120px;
+}
+.eventsNews-wrapper2 {
+    position: relative;
+    margin-top: 1rem;
+    margin-left: -20px;
+}
+.mobile-view .eventsNews-wrapper2 {
+    margin-top: 0rem;
+}
+.event-inner-heading{
+    font-size: 35px;
+}
+.mobile-view .event-inner-heading{
+    font-size: 30px;
+}
+.mobile-view .feedback-content2 h3{
+    font-size: 30px;
+    margin-top: -50px;
+    margin-bottom: 30px;
+}
+.feedback-form2 button{
+    width: 10%;
+    height: 50px;
+    border-radius: 10px;
+}
+.mobile-view .feedback-form2 button{
+    width: 40%;
+    height: 40px;
+    border-radius: 10px;
+}
+.eventsNews-content2{
+    padding-top: 120px;
+    width: 80vw;
+    text-align: left;
+}
+.mobile-view .eventsNews-content2 {
+    width: 100vw;
+    padding: 0 2rem 2rem 0rem;
+    margin-top: 80px;
+    margin-left: -10px;
+}
+.mobile-view .eventsNews-content2 h3{
+    font-size: 30px;
+}

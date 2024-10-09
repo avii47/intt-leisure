@@ -28,7 +28,7 @@ const ContactUsPage = () => {
                 <ContactUsContent />
             </Suspense> */}
             <Suspense fallback={<div>Loading...</div>}>
-            <FeedbackSection />
+                <FeedbackSection />
             </Suspense>
             <Suspense fallback={<div>Loading...</div>}>
                 <FooterSection />

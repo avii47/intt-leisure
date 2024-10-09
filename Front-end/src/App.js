@@ -19,6 +19,7 @@ const BlogsPage = lazy(() => import('../src/pages/BlogsPage'));
 const BlogsContentPage = lazy(() => import('../src/pages/BlogsContentPage'));
 const PackageContent = lazy(() => import('../src/pages/PackageContent'));
 const DestinationInnerPage = lazy(() => import('../src/pages/DestinationInnerPage'));
+const EventsInnerPage = lazy(() => import('../src/pages/EventsInnerPage'));
 const TermsConditionsPage = lazy(() => import('../src/pages/Terms&ConditionsPage'));
 const PrivacyPolicyPage = lazy(() => import('../src/pages/PrivacyPolicyPage'));
 
@@ -113,6 +114,14 @@ const App = () => {
               element={
                 <motion.div initial="initial" animate="enter" exit="exit" variants={pageVariants} className="page-transition">
                   <EventsNewsPage />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/events&news/:id"
+              element={
+                <motion.div initial="initial" animate="enter" exit="exit" variants={pageVariants} className="page-transition">
+                  <EventsInnerPage />
                 </motion.div>
               }
             />

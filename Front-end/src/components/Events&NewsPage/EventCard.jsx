@@ -1,30 +1,10 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import EventContent from "../ReadMoreCom";
 
-const EventCard = ({ content }) => {
-  const navigate = useNavigate();
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  const handleOnClick = (path) => {
-    navigate(path);
-  };
-
-  const handleExpand = (expanded) => {
-    setIsExpanded(expanded);
-  };
+const EventCard = ({ content, onClick }) => {
 
   return (
-    <div
-      id="event-card"
-      className={`col-12 event-card d-flex ${isExpanded ? 'expanded' : ''}`} 
-      style={{
-        transition: "height 0.3s ease", 
-        height: isExpanded ? 'auto' : '300px', 
-        overflow: "hidden",
-      }}
-    >
-      <div className="col-md-3 eventsNews-img-col font-secondary">
+    <div id="event-card" className={`col-12 event-card d-flex`} >
+      <div className="col-md-4 eventsNews-img-col font-secondary">
         <img
           className="eventsNews-img"
           src={content.img}
@@ -32,41 +12,40 @@ const EventCard = ({ content }) => {
           loading="lazy"
         />
         <div className="img-overlay-date font-secondary">
-            Oct 04
+            {content.shortDate}
         </div>
       </div>
-      <div className="col-md eventsNews-txt">
+      <div className="col-md-8 eventsNews-txt">
         <div>
-          <h3>{content.imgTitle}</h3>
-          <div className="d-flex meta-tags">
-            <p className="Font-secondary event-date-place2">
-              <i class="fa-regular fa-calendar-check" style={{ marginRight: "5px" }}></i>
-              {content.tag}
-            </p>
-            <p className="Font-secondary event-date-place2">
-              <i
-                className="fa-solid fa-calendar-days"
-                style={{ marginRight: "5px" }}
-              ></i>
-              {content.date}
-            </p>
-            <p className="Font-secondary event-date-place2">
-              <i
-                className="fa-regular fa-clock"
-                style={{ marginRight: "5px"}}
-              ></i>
-              {content.time}
-            </p>
-            <p className="Font-secondary event-date-place2">
-              <i
-                className="fa-solid fa-location-dot"
-                style={{ marginRight: "5px" }}
-              ></i>
-              {content.venue}
-            </p>
-          </div>
-          <p className="font-secondary">{content.text}</p>
-          <button className='btn btn-dark news-card-btn'>
+          <h2 className="font-secondary" style={{fontSize:'30px'}}>{content.eventTitle}</h2>
+          <div className="d-flex meta-tags2">
+            <div className="col-sm-3">
+              <p className="Font-secondary event-date-place2">
+                <i class="fa-regular fa-calendar-check events-meta-icons"></i>
+                {content.tag}
+              </p>
+            </div>
+            <div className="col-sm-3">
+              <p className="Font-secondary event-date-place2">
+                <i className="fa-solid fa-calendar-days events-meta-icons"></i>
+                {content.date}
+              </p>
+            </div>
+            <div className="col-sm-3">
+              <p className="Font-secondary event-date-place2">
+                <i className="fa-regular fa-clock events-meta-icons"></i>
+                {content.time}
+              </p>
+            </div>
+            <div className="col-sm-3">
+              <p className="Font-secondary event-date-place2">
+                <i className="fa-solid fa-location-dot events-meta-icons"></i>
+                {content.venue}
+              </p>
+            </div>
+          </div><hr style={{marginTop:'-10px'}} />
+          <p className="font-secondary event-content-txt">{content.text}</p>
+          <button className='btn btn-dark news-card-btn' onClick={onClick}>
             Read more
           </button>
         </div>
