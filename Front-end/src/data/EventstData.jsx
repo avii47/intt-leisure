@@ -5,6 +5,8 @@ import img_04 from "../assets/images/events-img3.png";
 
 const eventstData = [
   {
+    id: 1,
+    tag: "Upcomming Event",
     img: img_03,
     imgTitle: "26th ILA Global Conference",
     date: "7-10 November 2024",
@@ -14,6 +16,8 @@ const eventstData = [
     text: "A workshop titled “How Mindfulness Affects Leadership” was conducted in Mihintale, Sri Lanka at Kaludiyapokuna on June 10, 2023. The aim of this workshop was to explore how introspective practices can transform the skills of leaders. This workshop was primarily led by three Buddhist monks, namely Venerable Seelananda.",
   },
   {
+    id: 2,
+    tag: "Past Event",
     img: img_02,
     imgTitle: "Mindfulness Based Leadership",
     date: "7-10 November 2024",
@@ -23,6 +27,8 @@ const eventstData = [
     text: "On June 10, 2023, a workshop on How Mindfulness Affects Leadership was held at Kaludiyapokuna, Mihintale, Sri Lanka, led by Venerable Seelananda and two other Buddhist monks. Notable participants included Dr. Jim Ludema, Dr. Beverlee Ludema, and Dr. GB Hewawasam, discussing how mindfulness transforms leadership skills.",
   },
   {
+    id: 3,
+    tag: "Past Event",
     img: img_01,
     imgTitle: "Exploring the Impact of Mindfulness in Leadership",
     date: "7-10 November 2024",
@@ -32,6 +38,8 @@ const eventstData = [
     text: "On June 19, 2023, Dr. GB Hewawasam and Dr. Jim Ludema conducted a workshop at the University of Moratuwa on mindfulness-based leadership practices. Participants engaged in an interactive Q&A, gaining insights into how these concepts can be personalized for their university context and emerging leadership paths.",
   },
   {
+    id: 4,
+    tag: "Past Event",
     img: img_04,
     imgTitle: "Wisdom in Times of Crisis",
     date: "7-10 November 2024",

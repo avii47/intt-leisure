@@ -27,9 +27,8 @@
     width: 10rem;
 }
 .event-card {
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
     display: flex;
-    height: fit-content;
 }
 .news-card{
     padding: 10px;
@@ -48,6 +47,7 @@
 .news-cards-container{
     gap: 100px;
     padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .mobile-view .eventsNews-section-content{
@@ -57,6 +57,7 @@
 }
 .mobile-view .event-card{
     flex-direction: column;
+    height: fit-content !important;
 }
 .mobile-view .eventsNews-txt{
     display: flex;
@@ -89,6 +90,9 @@
     color: rgb(129, 129, 129);
     margin-right: 50px;
 }
+.mobile-view .event-date-place2{
+    margin-left: 0px !important;
+}
 .img-overlay-date{
     position: absolute;
     bottom: -3px;
@@ -109,20 +113,24 @@
     backdrop-filter: blur(10px);
 }
 
-/* When in mobile view, adjust the layout */
+.mobile-view .img-overlay-date{
+    bottom: 10px;
+    right: 0px !important;
+}
+
 .mobile-view .eventsNews-img-col {
-    height: auto; /* Make image height responsive in mobile */
+    height: auto; 
     width: 100%; 
 }
 
 .mobile-view .img-overlay-date {
-    right: 10px; /* Adjust positioning in mobile if needed */
+    right: 10px; 
     bottom: 5px;
 }
 
 .meta-tags{
     overflow-x: hidden;
-    margin: 10px 0
+    margin: 10px 0;
 }
 .mobile-view .meta-tags{
     flex-direction: column;

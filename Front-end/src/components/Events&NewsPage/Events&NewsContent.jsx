@@ -111,9 +111,6 @@ const EventsNewsContent = () => {
           <b>Latest News</b>
         </h3>
         <div className="news-cards-container d-flex">
-          {/* {newsData.map((content, index) => (
-            <NewsCard key={index} content={content} />
-          ))} */}
           {contentData.slice(0, 3).map((content, index) => (
             <Suspense key={index} fallback={<div>Loading...</div>}>
               <BlogCard

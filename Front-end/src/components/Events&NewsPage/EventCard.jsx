@@ -41,7 +41,7 @@ const EventCard = ({ content }) => {
           <div className="d-flex meta-tags">
             <p className="Font-secondary event-date-place2">
               <i class="fa-regular fa-calendar-check" style={{ marginRight: "5px" }}></i>
-              {content.date}
+              {content.tag}
             </p>
             <p className="Font-secondary event-date-place2">
               <i
@@ -53,14 +53,11 @@ const EventCard = ({ content }) => {
             <p className="Font-secondary event-date-place2">
               <i
                 className="fa-regular fa-clock"
-                style={{ marginRight: "5px", marginLeft: "20px" }}
+                style={{ marginRight: "5px"}}
               ></i>
               {content.time}
             </p>
-            <p
-              className="Font-secondary event-date-place2"
-              style={{ marginLeft: "20px" }}
-            >
+            <p className="Font-secondary event-date-place2">
               <i
                 className="fa-solid fa-location-dot"
                 style={{ marginRight: "5px" }}
@@ -68,7 +65,6 @@ const EventCard = ({ content }) => {
               {content.venue}
             </p>
           </div>
-          {/* <EventContent fullText={content.text} onExpand={handleExpand} /> */}
           <p className="font-secondary">{content.text}</p>
           <button className='btn btn-dark news-card-btn'>
             Read more

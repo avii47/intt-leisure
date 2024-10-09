@@ -53,6 +53,9 @@
     letter-spacing: 0px;
     color: rgb(129, 129, 129);
 }
+.mobile-view .blog-content-card-date{
+    margin-left: 0px !important;
+}
 .blog-content-card-body{
     text-align: left;
     padding: 20px;
@@ -86,4 +89,12 @@
     padding: 0 0 20px 20px;
     text-align: left;
     color: white;
+}
+
+.meta-tags{
+    overflow-x: hidden;
+    margin: 10px 0;
+}
+.mobile-view .meta-tags{
+    flex-direction: column;
 }
