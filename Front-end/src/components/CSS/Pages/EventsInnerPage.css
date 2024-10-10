@@ -20,7 +20,8 @@
 }
 .event-date-place3{
     color: rgb(129, 129, 129);
-    font-size: 20px;
+    font-size: 25px;
+    padding-bottom: 10px;
 }
 .event-date-place3:hover{
     color: rgb(0, 0, 0);
@@ -29,9 +30,10 @@
 }
 .mobile-view .event-date-place3{
     font-size: 16px;
+    padding-bottom: 0px;
 }
-.events-meta-icons{
-    margin-right: 5px;
+.events-meta-icons2{
+    margin-right: 20px;
 }
 .mobile-view .event-date-place2{
     margin-left: 0px !important;
@@ -44,8 +46,7 @@
 }
 .event-img{
     border-radius: 10px;
-    height: 500px;
-    margin: 50px 0px;
+    width: 100%;
 }
 .mobile-view .event-img{
     border-radius: 10px;
@@ -74,7 +75,7 @@
     margin-top: 0rem;
 }
 .event-inner-heading{
-    font-size: 35px;
+    font-size: 40px;
 }
 .mobile-view .event-inner-heading{
     font-size: 30px;

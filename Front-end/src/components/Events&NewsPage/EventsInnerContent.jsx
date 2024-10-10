@@ -1,11 +1,6 @@
-import React, { useState, useEffect, useRef, lazy } from "react";
+import React, { useState, useEffect, useRef, lazy, Suspense } from "react";
 import { useNavigate } from "react-router-dom";
 import { useMobileView } from "../../contexts/MobileViewContext";
-import emailjs from "emailjs-com";
-import Modal from "../BookNowPage/Modal";
-import "../../firebase";
-import { getFirestore, addDoc, collection } from "firebase/firestore";
-import "../../components/CSS/FeedbackSection.css";
 
 import "../../components/CSS/Home/Events&NewsSection.css";
 import Slider from "react-slick";
@@ -17,166 +12,15 @@ import left_arrow from "../../assets/icons/left-arrow.png";
 import right_arrow from "../../assets/icons/right-arrow.png";
 
 const ContentCard = lazy(() => import("../HomePage/ContentCard"));
+const ContactUsForm = lazy(() => import("../ContactUsForm"));
 
-function FeedbackForm() {
-  const isMobileView = useMobileView();
-  const db = getFirestore();
+const OtherEventsSection = ({exclue}) => {
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [mobile, setMobile] = useState("");
-  const [showModal, setShowModal] = useState(false);
-
-  useEffect(() => {
-    const section = document.getElementById("rw1");
-    const textSection = document.getElementById("text1");
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          textSection.classList.add("animate-text");
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (section) {
-      observer.observe(section);
-    }
-
-    return () => {
-      if (section) {
-        observer.unobserve(section);
-      }
-    };
-  }, []);
-
-  const saveDataToFirestore = async () => {
-    const docRef = await addDoc(collection(db, "Contact_Collection"), {
-      Name: name,
-      Email: email,
-      Mobile: mobile,
-      Message: document.querySelector('textarea[name="message"]').value,
-    });
-  };
-
-  const handleSendClick = (e) => {
-    e.preventDefault();
-    saveDataToFirestore();
-
-    const bookingDetails = {
-      name,
-      email,
-      mobile,
-      message: document.querySelector('textarea[name="message"]').value,
-    };
-
-    emailjs
-      .send(
-        "service_6of844u",
-        "template_fmi3ff8",
-        bookingDetails,
-        "gdzYpqkDHcPcrpQOw"
-      )
-      .then((response) => {
-        console.log("Email sent successfully!", response.status, response.text);
-        setShowModal(true);
-      })
-      .catch((error) => {
-        console.error("Failed to send email:", error);
-      });
-  };
-
-  return (
-    <section
-      id="feedback-section2"
-      className={`feedback-section2 d-flex ${
-        isMobileView ? "mobile-view" : ""
-      }`}
-    >
-      <div className="feedback-content2">
-        <h3 className="font-primary">Get In Touch With Us</h3>
-        <p className="font-secondary">
-          Thank you for choosing us for your transformative journey. Every
-          leader is unique, so we begin by understanding you deeply to craft a
-          mindfulness vacation that's perfectly tailored to your needs. Share
-          your details below, and our team of experts will be just a click away.
-        </p>
-        <br />
-        <form className="feedback-form2">
-          <div className="form-group feedback-ft">
-            <input
-              type="text"
-              className="form-control in-f"
-              id="name"
-              placeholder="Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-            />
-          </div>
-          <div className="form-group feedback-ft">
-            <input
-              type="email"
-              className="form-control in-f"
-              id="email"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </div>
-          <div className="form-group feedback-ft">
-            <input
-              type="text"
-              className="form-control in-f"
-              id="mobile"
-              placeholder="Mobile"
-              value={mobile}
-              onChange={(e) => setMobile(e.target.value)}
-              required
-            />
-          </div>
-          <div className="form-group feedback-ft">
-            <textarea
-              className="form-control in-f"
-              id="message"
-              rows="6"
-              name="message"
-              placeholder="Message"
-              required
-            ></textarea>
-          </div>
-          <br></br>
-          <button
-            type="submit"
-            className="btn btn-dark"
-            onClick={handleSendClick}
-          >
-            Submit
-          </button>
-        </form>
-
-        <Modal show={showModal} onClose={() => setShowModal(false)}>
-          <h2>Your Message has been Submited</h2>
-          <br></br>
-          <p>Thank you for contacting us!</p>
-        </Modal>
-      </div>
-    </section>
-  );
-}
-
-const EventsNewsSection = ({exclue}) => {
-  const containerRef3 = useRef(null);
-  const cardRef3 = useRef(null);
   const [showLeftButton3, setShowLeftButton3] = useState(false);
   const [showRightButton3, setShowRightButton3] = useState(true);
   const [currentSlide3, setCurrentSlide3] = useState(0);
   const navigate = useNavigate();
   let sliderRef = useRef(null);
-
-  const isMobileView = useMobileView();
 
   useEffect(() => {
     const section = document.getElementById("eventsNews-section");
@@ -293,7 +137,7 @@ const EventsNewsSection = ({exclue}) => {
                 <ContentCard
                   key={index}
                   content={content}
-                  onClick={() => handleOnClick("/events&news")}
+                  onClick={() => handleOnClick(`/events&news/${content.id}`)}
                 />
               ))
             }
@@ -306,7 +150,6 @@ const EventsNewsSection = ({exclue}) => {
 
 function EventsInnerContent({ content }) {
   const isMobileView = useMobileView();
-  const navigate = useNavigate();
 
   return (
     <section
@@ -316,37 +159,34 @@ function EventsInnerContent({ content }) {
       }`}
     >
       <div className="event-section-content">
-        <h2 className="font-secondary event-inner-heading">
+        <h2 className="font-primary event-inner-heading">
           {content.eventTitle}
         </h2>
-        <img src={content.img} className="event-img" alt="" />
-        <div className="d-flex meta-tags2">
-          <div className="col-sm-3">
-            <p className="Font-secondary event-date-place3">
-              <i class="fa-regular fa-calendar-check events-meta-icons"></i>
-              {content.tag}
-            </p>
+        <div className="col-12 d-flex" style={{marginTop:'50px', gap:'50px'}}>
+          <div className="col-md-6">
+            <img src={content.img} className="event-img" alt={content.eventTitle} />
           </div>
-          <div className="col-sm-3">
-            <p className="Font-secondary event-date-place3">
-              <i className="fa-solid fa-calendar-days events-meta-icons"></i>
-              {content.date}
-            </p>
-          </div>
-          <div className="col-sm-3">
-            <p className="Font-secondary event-date-place3">
-              <i className="fa-regular fa-clock events-meta-icons"></i>
-              {content.time}
-            </p>
-          </div>
-          <div className="col-sm-3">
-            <p className="Font-secondary event-date-place3">
-              <i className="fa-solid fa-location-dot events-meta-icons"></i>
-              {content.venue}
-            </p>
+          <div className="col-md-6">
+            <div className="meta-tags3">
+                <p className="Font-secondary event-date-place3">
+                  <i class="fa-regular fa-calendar-check events-meta-icons2"></i>
+                  {content.tag}
+                </p>
+                <p className="Font-secondary event-date-place3">
+                  <i className="fa-solid fa-calendar-days events-meta-icons2"></i>
+                  {content.date}
+                </p>
+                <p className="Font-secondary event-date-place3">
+                  <i className="fa-regular fa-clock events-meta-icons2"></i>
+                  {content.time}
+                </p>
+                <p className="Font-secondary event-date-place3">
+                  <i className="fa-solid fa-location-dot events-meta-icons2"></i>
+                  {content.venue}
+                </p>
+            </div>
           </div>
         </div>
-        <hr />
 
         {content.description && (
           <ul className="event-details-list">
@@ -358,8 +198,12 @@ function EventsInnerContent({ content }) {
           </ul>
         )}
 
-        <FeedbackForm />
-        <EventsNewsSection exclue={content.id} />
+        <Suspense fallback={<div>Loading...</div>}>
+          <ContactUsForm/>
+        </Suspense>
+
+        <OtherEventsSection exclue={content.id} />
+
       </div>
     </section>
   );

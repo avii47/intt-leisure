@@ -7,18 +7,18 @@ const ContentCard = ({ content, onClick }) => (
     <div className={`content-card col`}>
       <div className="image-zoom-container">
         <div className="image-overlay-container">
-          <img className="card-img top" src={`${content.img}`} alt={content.title} />
+          <img className="card-img top" src={`${content.img}`} alt={content.eventTitle} />
           <div className="overlay">
             <button className="btn btn-outline-light read-btn" onClick={onClick}>Read</button>
           </div>
         </div>
         <div className="share-buttons">
-          <ShareButtons url={content.blogUrl} title={content.title} thumbnail={content.blogThumbnail} />
+          <ShareButtons url={content.blogUrl} title={content.eventTitle} thumbnail={content.blogThumbnail} />
         </div>
       </div>
       <div className="content-card-body">
         <h5 className="card-title font-secondary" style={{ fontSize: "20px" }}>
-          {content.title}
+          {content.eventTitle}
         </h5>
         <div className="d-flex"> 
           <p className="Font-secondary event-date-place">

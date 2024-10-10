@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useMobileView } from '../../contexts/MobileViewContext';
 import "../../components/CSS/Home/Events&NewsSection.css";
 import Slider from "react-slick";
-import contentData from "../../data/Events&NewsSectionData";
+import contentData from "../../data/EventstData";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -119,7 +119,7 @@ const EventsNewsSection = () => {
           <div id='eventsNews-cards' className="slider-container" style={{ paddingBottom: '100px', textAlign: 'center' }} >
             <Slider ref={slider => { sliderRef = slider; }} {...settings}>
               {contentData.map((content, index) => (
-                <ContentCard key={index} content={content} onClick={() => handleOnClick('/events&news')} />
+                <ContentCard key={index} content={content} onClick={() => handleOnClick(`/events&news/${content.id}`)} />
               ))}
             </Slider>
           </div>

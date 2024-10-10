@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo_dark from "../assets/icons/INTT Leisure Logo-01.png";
 import logo_light from "../assets/icons/INTT Leisure Logo-02.png";
 import Button from "react-bootstrap/Button";
@@ -16,7 +16,6 @@ import "../components/CSS/Navbar.css";
 function MyNavbar() {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
-  const navigate = useNavigate();
   const [dropdownVisible1, setDropdownVisible1] = useState(false);
   const [dropdownVisible2, setDropdownVisible2] = useState(false);
   const [showOffcanvas, setShowOffcanvas] = useState(false);

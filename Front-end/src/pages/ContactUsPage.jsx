@@ -5,7 +5,6 @@ import "../components/CSS/Pages/ContactUsPage.css";
 import bg from '../assets/images/contactUsPage-hero-img.jpg'
 
 const HeroSection = lazy(() => import('../components/HeroSection'));
-const ContactUsContent = lazy(() => import('../components/ContactUsPage/ContactUsContent'));
 const FeedbackSection = lazy(() => import('../components/ContactUsPage/FeedbackSection'));
 const FooterSection = lazy(() => import('../components/FooterSection'));
 const MobileButton = lazy(() => import('../components/MobileBookNowButton'));

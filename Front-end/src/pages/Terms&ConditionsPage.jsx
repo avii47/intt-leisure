@@ -1,9 +1,7 @@
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useMobileView } from '../contexts/MobileViewContext';
-import ScrollToTopButton from '../components/ScrollToTopButton';
 import "../components/CSS/Pages/TermsConditions.css";
-
 
 const TermsConditionsPage = () => {
 

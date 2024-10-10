@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useMobileView } from '../../contexts/MobileViewContext';
 
@@ -99,19 +99,6 @@ const PackageContent = ({content}) => {
         ))}
       </ul>
         <br /><button className='btn btn-secondary get-itinerary-btn' onClick={() => handleOnClick('/contact-us')}>Customize Your Itinerary</button>
-        {/* <form action="#" style={{ fontSize: '20px' }}>
-          <label className='font-secondary' for="itineraries" style={{ marginRight: '40px', fontSize: '20px' }}>Itinerary</label>
-          <select name="itineraries" id="itineraries" style={{ width: '300px' }}>
-            <option value="javascript">Itinerary 01</option>
-            <option value="php">Itinerary 02</option>
-            <option value="java">Itinerary 03</option>
-            <option value="golang">Itinerary 04</option>
-            <option value="python">Itinerary 05</option>
-            <option value="c#">Itinerary 06</option>
-            <option value="C++">Itinerary 07</option>
-            <option value="erlang">Itinerary 08</option>
-          </select>
-        </form> */}
       </div>
     </section>
   );

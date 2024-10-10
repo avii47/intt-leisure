@@ -1,4 +1,4 @@
-import React, { useState, useEffect, lazy } from "react";
+import React, { useEffect, lazy } from "react";
 import { useMobileView } from "../../contexts/MobileViewContext";
 import contentData from "../../data/MindfulnessPageData";
 
