@@ -40,7 +40,6 @@ const ConnectAppSection = () => {
               <button type="button" className="btn btn-light" onClick={() => handleOnClick('/contact-us')}>Contact Us</button>
             </p>
           </div>
-
         </div>
       </div>
     </section>

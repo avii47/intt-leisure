@@ -21,12 +21,18 @@ const ContentCard = ({ content, onClick }) => (
           {content.eventTitle}
         </h5>
         <div className="d-flex"> 
-          <p className="Font-secondary event-date-place">
-            <i className="fa-solid fa-calendar-days events-meta-icons"></i>{content.date}
-          </p>
-          <p className="Font-secondary event-date-place" style={{ marginLeft: '20px' }}>
-            <i className="fa-solid fa-location-dot events-meta-icons"></i>{content.venue}
-          </p>
+          <div className="col-12 d-flex" style={{gap: '20px'}}>
+            <div className="col-md-auto">
+              <p className="Font-secondary event-date-place">
+                <i className="fa-solid fa-calendar-days events-meta-icons"></i>{content.date}
+              </p>
+            </div>
+            <div className="col-md">
+              <p className="Font-secondary event-date-place">
+                <i className="fa-solid fa-location-dot events-meta-icons"></i>{content.venue}
+              </p>
+            </div>
+          </div>
         </div>
         <hr style={{marginTop:'-0.2rem'}}/>
         <p className="card-sub font-secondary">{content.sub}</p>

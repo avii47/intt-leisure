@@ -20,8 +20,7 @@
 }
 .event-date-place3{
     color: rgb(129, 129, 129);
-    font-size: 25px;
-    padding-bottom: 10px;
+    font-size: 15px;
 }
 .event-date-place3:hover{
     color: rgb(0, 0, 0);
@@ -33,7 +32,7 @@
     padding-bottom: 0px;
 }
 .events-meta-icons2{
-    margin-right: 20px;
+    margin-right: 5px;
 }
 .mobile-view .event-date-place2{
     margin-left: 0px !important;
@@ -52,7 +51,7 @@
     border-radius: 10px;
     width: 100%;
     height: auto;
-    margin: 50px 0px;
+    margin: 10px 0px 30px 0px;
 }
 .nav-icon{
     height: 30px;
@@ -76,6 +75,7 @@
 }
 .event-inner-heading{
     font-size: 40px;
+    margin-bottom: 30px;
 }
 .mobile-view .event-inner-heading{
     font-size: 30px;
@@ -108,4 +108,12 @@
 }
 .mobile-view .eventsNews-content2 h3{
     font-size: 30px;
+}
+.meta-tags2{
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+.mobile-view .meta-tags2{
+    padding-top: 0px;
+    flex-direction: column;
 }

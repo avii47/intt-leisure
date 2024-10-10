@@ -42,7 +42,7 @@
 } */
 
 .mobile-view .connect-app-section{
-    margin-top: -150px;
+    margin-top: 0px !important;
 }
 .mobile-view .connect-app-content{
     padding: 0 2rem 0 2rem;

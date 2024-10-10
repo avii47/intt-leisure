@@ -71,7 +71,7 @@ const HeroSection = ({ img, title, sub, aboutImg }) => {
       {isblogTitle ? (
         <div className="hero-content">
           <div id='hero-heading' className="hero-heading-section">
-            <h1 className='hero-heading font-primary' style={{ fontSize: '40px', width: '50%', marginInline: 'auto' }}>{title}</h1>
+            <h1 className='hero-heading font-primary' style={{ width: isMobileView ? '100%' : '50%', marginInline: 'auto', fontSize: isMobileView ? '35px' : '40px' }}>{title}</h1>
             <Lottie loading="lazy" className='arrow-icon' animationData={animationData}></Lottie>
           </div>
         </div>

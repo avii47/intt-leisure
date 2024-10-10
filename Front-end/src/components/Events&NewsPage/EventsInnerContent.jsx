@@ -4,7 +4,7 @@ import { useMobileView } from "../../contexts/MobileViewContext";
 
 import "../../components/CSS/Home/Events&NewsSection.css";
 import Slider from "react-slick";
-import contentData from "../../data/Events&NewsSectionData";
+import contentData from "../../data/EventstData";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -14,8 +14,7 @@ import right_arrow from "../../assets/icons/right-arrow.png";
 const ContentCard = lazy(() => import("../HomePage/ContentCard"));
 const ContactUsForm = lazy(() => import("../ContactUsForm"));
 
-const OtherEventsSection = ({exclue}) => {
-
+const OtherEventsSection = ({ exclue }) => {
   const [showLeftButton3, setShowLeftButton3] = useState(false);
   const [showRightButton3, setShowRightButton3] = useState(true);
   const [currentSlide3, setCurrentSlide3] = useState(0);
@@ -99,52 +98,51 @@ const OtherEventsSection = ({exclue}) => {
   };
 
   return (
-      <div className="eventsNews-content2 justify-content-center">
-        <div className="col-12 d-flex">
-          <div className="col">
-            <h3 className="font-primary">Other Events</h3>
-          </div>
-          <div className="col-1 nav-icon-col">
-            <div className="service-card-nav-icons" style={{ marginTop: "0" }}>
-              <img
-                className={`nav-icon ${!showLeftButton3 ? "disabled" : ""}`}
-                src={left_arrow}
-                onClick={previous}
-              ></img>
-              <img
-                className={`nav-icon ${!showRightButton3 ? "disabled" : ""}`}
-                src={right_arrow}
-                onClick={next}
-              ></img>
-            </div>
+    <div className="eventsNews-content2 justify-content-center">
+      <div className="col-12 d-flex">
+        <div className="col">
+          <h3 className="font-primary">Other Events</h3>
+        </div>
+        <div className="col-1 nav-icon-col">
+          <div className="service-card-nav-icons" style={{ marginTop: "0" }}>
+            <img
+              className={`nav-icon ${!showLeftButton3 ? "disabled" : ""}`}
+              src={left_arrow}
+              onClick={previous}
+            ></img>
+            <img
+              className={`nav-icon ${!showRightButton3 ? "disabled" : ""}`}
+              src={right_arrow}
+              onClick={next}
+            ></img>
           </div>
         </div>
-        <div className="eventsNews-wrapper2">
-          <div
-            id="eventsNews-cards"
-            className="slider-container"
-            style={{ paddingBottom: "0", textAlign: "center" }}
+      </div>
+      <div className="eventsNews-wrapper2">
+        <div
+          id="eventsNews-cards"
+          className="slider-container"
+          style={{ paddingBottom: "0", textAlign: "center" }}
+        >
+          <Slider
+            ref={(slider) => {
+              sliderRef = slider;
+            }}
+            {...settings}
           >
-            <Slider
-              ref={(slider) => {
-                sliderRef = slider;
-              }}
-              {...settings}
-            >
             {contentData
-              .filter(content => content.id !== exclue)  
+              .filter((content) => content.id !== exclue)
               .map((content, index) => (
                 <ContentCard
                   key={index}
                   content={content}
                   onClick={() => handleOnClick(`/events&news/${content.id}`)}
                 />
-              ))
-            }
-            </Slider>
-          </div>
+              ))}
+          </Slider>
         </div>
       </div>
+    </div>
   );
 };
 
@@ -159,51 +157,64 @@ function EventsInnerContent({ content }) {
       }`}
     >
       <div className="event-section-content">
-        <h2 className="font-primary event-inner-heading">
-          {content.eventTitle}
-        </h2>
-        <div className="col-12 d-flex" style={{marginTop:'50px', gap:'50px'}}>
-          <div className="col-md-6">
-            <img src={content.img} className="event-img" alt={content.eventTitle} />
-          </div>
-          <div className="col-md-6">
-            <div className="meta-tags3">
+        <div
+          className="col-12 d-flex"
+          style={{ marginTop: isMobileView ? '-20px':'50px', flexDirection: isMobileView ? 'column' : 'row'}}
+        >
+          <div className="col-md-6" style={{paddingRight: isMobileView ? '0px': '50px'}}>
+            <h2 className="font-primary event-inner-heading">
+              {content.eventTitle}
+            </h2>
+            <div className="meta-tags2 d-flex">
+              <div className="col-sm-3">
                 <p className="Font-secondary event-date-place3">
-                  <i class="fa-regular fa-calendar-check events-meta-icons2"></i>
+                  <i class="fa-regular fa-calendar-check events-meta-icons"></i>
                   {content.tag}
                 </p>
+              </div>
+              <div className="col-sm-3">
                 <p className="Font-secondary event-date-place3">
-                  <i className="fa-solid fa-calendar-days events-meta-icons2"></i>
+                  <i className="fa-solid fa-calendar-days events-meta-icons"></i>
                   {content.date}
                 </p>
+              </div>
+              <div className="col-sm-3">
                 <p className="Font-secondary event-date-place3">
-                  <i className="fa-regular fa-clock events-meta-icons2"></i>
+                  <i className="fa-regular fa-clock events-meta-icons"></i>
                   {content.time}
                 </p>
+              </div>
+              <div className="col-sm-3">
                 <p className="Font-secondary event-date-place3">
-                  <i className="fa-solid fa-location-dot events-meta-icons2"></i>
+                  <i className="fa-solid fa-location-dot events-meta-icons"></i>
                   {content.venue}
                 </p>
+              </div>
             </div>
+            {content.description && (
+              <ul className="event-details-list">
+                {content.description.map((desc, index) => (
+                  <li key={index} className="font-secondary event-des-list">
+                    {desc}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+          <div className="col-md-6" style={{paddingLeft: isMobileView ? '0px': '50px'}}>
+            <img
+              src={content.img}
+              className="event-img"
+              alt={content.eventTitle}
+            />
           </div>
         </div>
 
-        {content.description && (
-          <ul className="event-details-list">
-            {content.description.map((desc, index) => (
-              <li key={index} className="font-secondary event-des-list">
-                {desc}
-              </li>
-            ))}
-          </ul>
-        )}
-
         <Suspense fallback={<div>Loading...</div>}>
-          <ContactUsForm/>
+          <ContactUsForm />
         </Suspense>
 
         <OtherEventsSection exclue={content.id} />
-
       </div>
     </section>
   );
