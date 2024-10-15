@@ -10,8 +10,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
-
 const WhyChooseUsSection = () => {
 
   const [showLeftButton, setShowLeftButton] = useState(false);
@@ -22,8 +20,6 @@ const WhyChooseUsSection = () => {
   let sliderRef = useRef(null);
 
   const isMobileView = useMobileView();
-
-
 
   const updateButtons = () => {
     if (containerRef.current) {

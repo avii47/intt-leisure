@@ -4,7 +4,7 @@
     padding-bottom: 10%;
 }
 .aboutus-section-content {
-    width: 80vw;
+    width: 100vw;
     flex-wrap: wrap; 
     text-align: left;
 }
@@ -40,6 +40,8 @@
     font-size: 25px !important;
 }
 .why-choose-item{
+    justify-content: center;
+    display: flex;
     margin-top: 150px;
 }
 .why-choose-item h3{
@@ -48,6 +50,7 @@
 .our-story-content{
     opacity: 0;
     transform: translateY(100px);
+    width: 80vw;
 }
 .txt-col{
     text-align: justify;
@@ -65,12 +68,13 @@
     text-align: center;
 }
 .our-missionVision-content{
+    width: 80vw;
     opacity: 0;
-    transform: scale(0.6);
+    transform: scale(0.8);
 }
 .our-achievements-content{
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(50px);
 }
 .ceo-message {
     padding: 50px;
@@ -81,18 +85,22 @@
 }
 
 .ceo-message-content{
+    width: 80vw;
     opacity: 0;
     transform: translateX(-100px);
 }
 
-.vm-contaioner{
+.vm-container{
     min-height: 520px;
-    width: 70%;
+    width: 470px;
     padding: 50px;
-    border-radius: 30px;
+    border-radius: 15px;
     background-color: rgb(255, 255, 255);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: #d5b693 0px 3px 8px;
 }
+/* .vm-card-col{
+    margin-inline: auto;
+} */
 .achivement-container{
     height: 520px;
     width: 100%;
@@ -158,12 +166,12 @@
 .animate-block{
     opacity: 1;
     transform: translateY(0);
-    transition: all 0.8s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 .animate-vmCard{
     opacity: 1;
     transform: scale(1);
-    transition: all 0.8s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 

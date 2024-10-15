@@ -24,7 +24,7 @@ const SectionLoader = ({ Component }) => {
                     <Component />
                 </Suspense>
             ) : (
-                <LoadingSpinner /> // Show spinner while waiting for intersection
+                <LoadingSpinner /> 
             )}
         </div>
     );

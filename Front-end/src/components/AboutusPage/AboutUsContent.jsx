@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, useRef } from 'react';
 import { useMobileView } from '../../contexts/MobileViewContext';
 import "../../components/CSS/Home/AboutSection.css";
 
@@ -8,6 +8,166 @@ import achievement_img2 from '../../assets/images/achievements-img2.png'
 import gb from '../../assets/images/gb.png'
 import vision_icon from '../../assets/icons/vision_icon.png'
 import mission_icon from '../../assets/icons/mission_icon.png'
+
+import testImg from '../../assets/images/Group 69.png';
+
+import left_arrow from '../../assets/icons/left-arrow.png';
+import right_arrow from '../../assets/icons/right-arrow.png';
+import IconCard from '../HomePage/IconCard';
+import contentData from '../../data/WhyChooseUsSectionData';
+import "../../components/CSS/Home/WhyChooseUsSection.css";
+
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+// const WhyChooseUsSection = lazy(() => import('../../components/HomePage/WhyChooseUsSection'));
+
+const WhyChooseUsSection = () => {
+
+  const [showLeftButton, setShowLeftButton] = useState(false);
+  const [showRightButton, setShowRightButton] = useState(true);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const containerRef = useRef(null);
+  const iconCardsRef = useRef([]);
+  let sliderRef = useRef(null);
+
+  const isMobileView = useMobileView();
+
+  const updateButtons = () => {
+    if (containerRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = containerRef.current;
+      setShowLeftButton(scrollLeft > 0);
+      setShowRightButton(scrollLeft + clientWidth < scrollWidth);
+    }
+  };
+
+  useEffect(() => {
+    updateButtons();
+    if (containerRef.current) {
+      containerRef.current.addEventListener('scroll', updateButtons);
+    }
+    return () => {
+      if (containerRef.current) {
+        containerRef.current.removeEventListener('scroll', updateButtons);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, index * 200);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    iconCardsRef.current.forEach(card => {
+      if (card) {
+        observer.observe(card);
+      }
+    });
+
+    return () => {
+      iconCardsRef.current.forEach(card => {
+        if (card) {
+          observer.unobserve(card);
+        }
+      });
+    };
+  }, [iconCardsRef]);
+
+  const updateButtonVisibility = (currentSlide) => {
+    setShowLeftButton(currentSlide > 0);
+    setShowRightButton(currentSlide < contentData.length - 4);
+  };
+
+  const next = () => {
+    sliderRef.slickNext();
+  };
+  const previous = () => {
+    sliderRef.slickPrev();
+  };
+
+  const settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    beforeChange: (current, next) => setCurrentSlide(next),
+    afterChange: (current) => updateButtonVisibility(current),
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 669,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true
+        }
+      }
+    ]
+  };
+
+
+  return (
+    <section id="why-chooseus-Section" className={`section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`} style={{ marginTop:'-100px'}}>
+      <div className="why-chooseus-content justify-content-center" style={{marginTop:'-120px'}}>
+        <div className="col-12 d-flex">
+          <div className="col why-cu-text-col">
+            <h3 className='font-primary'>What Makes Us Unique?</h3>
+            <hr style={{ width: '400px', marginTop: '-1px' }}></hr>
+            <br></br>
+            <p className='font-secondary'>Experience authentic mindfulness according to Buddha’s teachings, designed by Forbes-certified coach Dr. Gamini Hewawasam. Rooted in Sri Lankan heritage and backed by research, our programs guide you through ancient practices in carefully chosen locations, ensuring a seamless, expert-managed journey.</p>
+          </div>
+          <div className="col-1 nav-icon-col">
+            <div className='service-card-nav-icons'>
+              <img className={`nav-icon ${!showLeftButton ? 'disabled' : ''}`} src={left_arrow} onClick={previous}></img>
+              <img className={`nav-icon ${!showRightButton ? 'disabled' : ''}`} src={right_arrow} onClick={next}></img>
+            </div>
+          </div>
+        </div>
+
+        <div className="icon-container-wrapper">
+          <div className="slider-container" style={{ paddingBottom: '20px', textAlign: 'center' }} >
+            <Slider ref={slider => { sliderRef = slider; }} {...settings}>
+              {contentData.map((content, index) => (
+                <IconCard
+                  className={`icon-card`}
+                  key={index}
+                  content={content}
+                  ref={el => iconCardsRef.current[index] = el}
+                  style={{ '--animation-order': index }}
+                />
+              ))}
+            </Slider>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  )
+};
 
 const AboutUsContent = () => {
 
@@ -151,7 +311,8 @@ const AboutUsContent = () => {
   return (
     <section id="aboutus-content-section" className={`section aboutus-content-section d-flex ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="aboutus-section-content">
-        <div id='top-section' className="top-section d-flex">
+        <WhyChooseUsSection />
+        {/* <div id='top-section' className="top-section d-flex">
           <div className="col-lg-3 top-col" style={{ padding: '0 40px 0 0' }}>
             <a href="#our-story" onClick={(e) => handleScroll(e, 'our-story')}>
               <div className="topic-item">
@@ -180,7 +341,7 @@ const AboutUsContent = () => {
               </div>
             </a>
           </div>
-        </div>
+        </div> */}
 
         <section id='our-story' className='our-story why-choose-item'>
           <div id='our-story-content' className="our-story-content col-12 d-flex" style={{flexWrap:'wrap'}}>
@@ -199,28 +360,35 @@ const AboutUsContent = () => {
         </section>
 
         <section id='our-missionVision' className='our-missionVision why-choose-item'>
-          <div id='our-missionVision-content' className='our-missionVision-content col-md-12 d-flex' style={{flexWrap:'wrap'}}>
-            <div className="col-lg-6 d-flex vm-card-col" style={{justifyContent:'right', paddingRight:'30px'}}>
-              <div className='vm-contaioner'>
-                <h3 className="font-primary">Our Vision</h3>
-                <img src={vision_icon} alt="vision_icon" style={{height:'200px', marginBottom:'40px'}}/>
-                <p className="font-secondary" style={{fontSize:'20px'}}>To unlock leadership potential with mindfulness vacations.</p>
+          <div id='our-missionVision-content' className='our-missionVision-content d-flex col-md-12'>
+              <div className="col-lg-4 d-flex vm-card-col" style={{}}>
+                <div className='vm-container'>
+                  <h3 className="font-primary">Our Vision</h3>
+                  <img src={vision_icon} alt="vision_icon" style={{height:'200px', marginBottom:'40px'}}/>
+                  <p className="font-secondary" style={{fontSize:'20px'}}>To unlock leadership potential with mindfulness vacations.</p>
+                </div>
               </div>
-            </div>
-            <div className="col-lg-6 d-flex vm-card-col" style={{justifyContent:'left', paddingLeft:'30px'}}>
-              <div className='vm-contaioner'>
-                <h3 className="font-primary">Our Mission</h3>
-                <img src={mission_icon} alt="mission_icon" style={{height:'200px', marginBottom:'40px'}}/>
-                <p className="font-secondary" style={{fontSize:'20px'}}>To uncover the hidden gem of authentic Buddhist teachings that provide the key to intellectual and emotional balance.</p>
+              <div className="col-lg-4 d-flex vm-card-col" style={{justifyContent:'center'}}>
+                <div className='vm-container'>
+                  <h3 className="font-primary">Our Mission</h3>
+                  <img src={mission_icon} alt="mission_icon" style={{height:'200px', marginBottom:'40px'}}/>
+                  <p className="font-secondary" style={{fontSize:'20px'}}>To uncover the hidden gem of authentic Buddhist teachings that provide the key to intellectual and emotional balance.</p>
+                </div>
               </div>
-            </div>
+              <div className="col-lg-4 d-flex vm-card-col" style={{justifyContent:'right' }}>
+                <div className='vm-container'>
+                  <h3 className="font-primary">Our Goals</h3>
+                  <img src={mission_icon} alt="mission_icon" style={{height:'200px', marginBottom:'40px'}}/>
+                  <p className="font-secondary" style={{fontSize:'20px'}}>To uncover the hidden gem of authentic Buddhist teachings that provide the key to intellectual and emotional balance.</p>
+                </div>
+              </div>
           </div>
         </section>
 
-        <section id='our-achievements' className='our-achievements why-choose-item'>
-            <h3 className="font-primary">Our Achievements</h3>
+        <section id='our-achievements' className='our-achievements why-choose-item' style={{}}>
+            {/* <h3 className="font-primary">Our Achievements</h3> */}
             <div id='our-achievements-content' className='our-achievements-content'>
-              <div className="row d-flex" style={{flexWrap:'wrap'}}>
+              {/* <div className="row d-flex" style={{flexWrap:'wrap'}}>
                 <div className="col-lg-4">
                   <img className='achivement-img' src={achievement_img1} alt="" />
                 </div>
@@ -239,7 +407,8 @@ const AboutUsContent = () => {
                     <p className="font-secondary">Every aspect of your journey is tailored to resonate with your unique leadership needs, providing a deep and meaningful experience that goes beyond conventional practices. Discover the true depth and serenity of mindfulness, guided by Dr. Hewawasam’s expertise, and enrich your leadership journey with us.</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
+              <img src={testImg} alt="" style={{width:'100vw'}} />
             </div>
         </section>
 
