@@ -1,0 +1,45 @@
+.icon-card2{
+    display: flex;
+    height: fit-content;
+    flex: 1 1 10rem; 
+    min-width:20rem;
+    background-color: antiquewhite;
+    opacity: 1;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+.iconCard-img-container2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.iconCard-img2{
+    align-self: center;
+    height: 80px;
+    
+    margin-top: 5px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+}
+.icon-discription2{
+    height: 120px;
+    /* text-align: justify;
+    text-align-last: center; */
+}
+.icon-card:hover .iconCard-img{
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+.icon-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.icon-card-bottom-line{
+    height: 2px;
+    background-color: #d18222; 
+    border: none; 
+}
+
+.mobile-view .icon-card{
+    opacity: 1;
+}

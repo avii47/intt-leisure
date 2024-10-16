@@ -13,7 +13,7 @@ import testImg from '../../assets/images/Group 69.png';
 
 import left_arrow from '../../assets/icons/left-arrow.png';
 import right_arrow from '../../assets/icons/right-arrow.png';
-import IconCard from '../HomePage/IconCard';
+import IconCard from './IconCard';
 import contentData from '../../data/WhyChooseUsSectionData';
 import "../../components/CSS/Home/WhyChooseUsSection.css";
 
@@ -150,7 +150,7 @@ const WhyChooseUsSection = () => {
 
         <div className="icon-container-wrapper">
           <div className="slider-container" style={{ paddingBottom: '20px', textAlign: 'center' }} >
-            <Slider ref={slider => { sliderRef = slider; }} {...settings}>
+            {/* <Slider ref={slider => { sliderRef = slider; }} {...settings}>
               {contentData.map((content, index) => (
                 <IconCard
                   className={`icon-card`}
@@ -160,7 +160,16 @@ const WhyChooseUsSection = () => {
                   style={{ '--animation-order': index }}
                 />
               ))}
-            </Slider>
+            </Slider> */}
+              {contentData.map((content, index) => (
+                <IconCard
+                  className={`icon-card`}
+                  key={index}
+                  content={content}
+                  ref={el => iconCardsRef.current[index] = el}
+                  style={{ '--animation-order': index }}
+                />
+              ))}
           </div>
         </div>
 
@@ -173,6 +182,7 @@ const AboutUsContent = () => {
 
   const isMobileView = useMobileView();
   const offset = 200;
+  const iconCardsRef = useRef([]);
 
   useEffect(() => {
     const section = document.querySelector('.top-section');
@@ -307,11 +317,38 @@ const AboutUsContent = () => {
     });
   };
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, index * 200);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    iconCardsRef.current.forEach(card => {
+      if (card) {
+        observer.observe(card);
+      }
+    });
+
+    return () => {
+      iconCardsRef.current.forEach(card => {
+        if (card) {
+          observer.unobserve(card);
+        }
+      });
+    };
+  }, [iconCardsRef]);
+
 
   return (
     <section id="aboutus-content-section" className={`section aboutus-content-section d-flex ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="aboutus-section-content">
-        <WhyChooseUsSection />
+        {/* <WhyChooseUsSection /> */}
         {/* <div id='top-section' className="top-section d-flex">
           <div className="col-lg-3 top-col" style={{ padding: '0 40px 0 0' }}>
             <a href="#our-story" onClick={(e) => handleScroll(e, 'our-story')}>
@@ -342,6 +379,26 @@ const AboutUsContent = () => {
             </a>
           </div>
         </div> */}
+
+
+
+        <section id='top-cards' className='top-cards why-choose-item'>
+          <div id='top-cards-content' className="top-cards-content col-12 d-flex" style={{flexWrap:'wrap'}}>
+            <div className="col-12 d-flex">
+                {contentData.map((content, index) => (
+                  <IconCard
+                    className={`icon-card2`}
+                    key={index}
+                    content={content}
+                    ref={el => iconCardsRef.current[index] = el}
+                    style={{ '--animation-order': index }}
+                  />
+                ))}
+            </div>
+          </div>
+        </section>
+
+
 
         <section id='our-story' className='our-story why-choose-item'>
           <div id='our-story-content' className="our-story-content col-12 d-flex" style={{flexWrap:'wrap'}}>
