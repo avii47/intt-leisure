@@ -5,10 +5,9 @@
 }
 .aboutus-section-content {
     width: 100vw;
-    flex-wrap: wrap; 
     text-align: left;
 }
-.top-section{
+/* .top-section{
     justify-content: space-between;
     flex-wrap: wrap;
     opacity: 1;
@@ -38,7 +37,7 @@
 }
 .topic-item-text{
     font-size: 25px !important;
-}
+} */
 .why-choose-item{
     justify-content: center;
     display: flex;
@@ -51,6 +50,7 @@
     display: flex;
     justify-content: center;
     text-align: center;
+    margin-top: -100px;
 }
 .top-cards-content{
     width: 100vw;
@@ -62,6 +62,11 @@
     transform: translateY(100px);
     width: 80vw;
 }
+.mobile-view .our-story-content{
+    opacity: 1;
+    margin-top: -100px;
+    transform: translateY(0px);
+}
 .txt-col{
     text-align: justify;
     display: flex;
@@ -72,32 +77,54 @@
     height: 600px;
     border-radius: 20px;
 }
-.our-missionVision{
+/* .our-missionVision{
     display: flex;
     justify-content: center;
     text-align: center;
 }
+.mobile-view .our-missionVision{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+} */
 .our-missionVision-content{
+    text-align: center;
     width: 80vw;
     opacity: 0;
     transform: scale(0.8);
+}
+.mobile-view .our-missionVision-content{
+    margin-top: 50px;
+    opacity: 1;
+    transform: scale(1);
+    flex-wrap: wrap;
 }
 .our-achievements-content{
     opacity: 0;
     transform: translateY(50px);
 }
 .ceo-message {
-    padding: 50px;
-    border-radius: 20px;
     background-image: url('../../../assets/images/msg-from-ceo-img.jpg');
+    background-size: cover;
+    padding: 50px 0;
     /* background-image: url('../../../assets/images/WhatsApp Image 2024-09-12 at 1.32.17 PM.jpeg'); */
     /* background-image: url("https://img.freepik.com/free-vector/abstract-desktop-background-white-geometric-design-vector_53876-140225.jpg?t=st=1725875923~exp=1725879523~hmac=f51c498ada01c828a50a4ff96ae613b70bf9678810d64c17853a099e26ea2da2&w=1380"); */
+}
+
+.mobile-view .ceo-message{
+    width: 100vw;
+    margin-left: -30px;
 }
 
 .ceo-message-content{
     width: 80vw;
     opacity: 0;
     transform: translateX(-100px);
+}
+.mobile-view .ceo-message-content{
+    opacity: 1;
+    transform: translateX(0px);
 }
 
 .vm-container{
@@ -107,6 +134,10 @@
     border-radius: 15px;
     background-color: rgb(255, 255, 255);
     box-shadow: #d5b693 0px 3px 8px;
+}
+.mobile-view .vm-container{
+    min-height: fit-content;
+    width: auto;
 }
 /* .vm-card-col{
     margin-inline: auto;
@@ -155,6 +186,7 @@
     justify-content: center !important;
     padding-right: 0 !important;
     padding-left: 0 !important;
+    margin-bottom: 50px;
 }
 .mobile-view .vm-contaioner{
     height: auto;
@@ -168,9 +200,17 @@
     margin-top: -20px;
 }
 .mobile-view .ceo-message {
-    margin-left: 0px;
-    padding: 20px;
-    border-radius: 20px;
+
+}
+
+.mobile-view .top-cards{
+    margin-top: -100px;
+    width: 100vw;
+    justify-content: left;
+}
+.mobile-view .top-cards-content{
+    width: 105vw;
+    margin-left: -40px;
 }
 
 .animate-block{

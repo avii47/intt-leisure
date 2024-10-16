@@ -383,28 +383,30 @@ const AboutUsContent = () => {
 
 
         <section id='top-cards' className='top-cards why-choose-item'>
-          <div id='top-cards-content' className="top-cards-content col-12 d-flex" style={{flexWrap:'wrap'}}>
-            <div className="col-12 d-flex">
-                {contentData.map((content, index) => (
-                  <IconCard
-                    className={`icon-card2`}
-                    key={index}
-                    content={content}
-                    ref={el => iconCardsRef.current[index] = el}
-                    style={{ '--animation-order': index }}
-                  />
-                ))}
-            </div>
+          <div id='top-cards-content' className="top-cards-content row d-flex">
+            <h2 className='font-primary' style={{textAlign:'left', marginBottom:'10px'}}>Why Choos Us</h2><hr/>
+
+            {contentData.map((content, index) => (
+              <div className="col-md-4 col-sm-6 col-12" key={index} style={{marginTop: isMobileView? '0':'50px'}}>
+                <IconCard
+                  className={`icon-card2`}
+                  content={content}
+                  ref={el => iconCardsRef.current[index] = el}
+                  style={{ '--animation-order': index }}
+                />
+              </div>
+            ))}
+            
+
           </div>
         </section>
 
-
-
-        <section id='our-story' className='our-story why-choose-item'>
+        <section id='our-story' className='our-story why-choose-item' style={{marginTop:'80px'}}>
           <div id='our-story-content' className="our-story-content col-12 d-flex" style={{flexWrap:'wrap'}}>
             <div className="col-lg-8 txt-col">
               <div>
-                <h3 className="font-primary">At the heart of our mindfulness vacations is Dr. Gamini Hewawasam</h3>
+                <h2 className='font-primary' style={{textAlign:'left', marginBottom:'10px'}}>Our Story</h2><hr />
+                <h3 className="font-secondary" style={{fontSize:'25px', marginTop:'40px'}}>At the heart of our mindfulness vacations is Dr. Gamini Hewawasam</h3>
                 <p className="font-secondary">Dr. GB Hewawasam, a Forbes Coach Council member and a leading practitioner of the original form of mindfulness, carries over 12 years of experience in the travel industry in the USA, thus making him an ideal expert regarding the benefits of Mindfulness Tourism. Through his extensive research and experience, Dr. Hewawasam has recognized a gap between traditional mindfulness teachings preserved in Sri Lanka and the often diluted Western practices. </p><br />
                 <p className="font-secondary">Dedicated to bridging this gap, Dr. Hewawasam invites seekers like you to experience mindfulness in its most authentic form. Our meticulously crafted itineraries are designed to satisfy your personal goals, allowing you to truly immerse yourself in the essence of mindfulness as practiced for centuries in Sri Lanka.</p><br />
                 <p className="font-secondary">Every aspect of your journey is tailored to resonate with your unique style and perspective, providing a deep and meaningful experience that goes beyond conventional practices. Discover the true depth and serenity of mindfulness, guided by Dr. Hewawasam’s expertise, and enrich your leadership journey with us.</p>
@@ -418,21 +420,21 @@ const AboutUsContent = () => {
 
         <section id='our-missionVision' className='our-missionVision why-choose-item'>
           <div id='our-missionVision-content' className='our-missionVision-content d-flex col-md-12'>
-              <div className="col-lg-4 d-flex vm-card-col" style={{}}>
+              <div className="col-md-4 d-flex vm-card-col">
                 <div className='vm-container'>
                   <h3 className="font-primary">Our Vision</h3>
                   <img src={vision_icon} alt="vision_icon" style={{height:'200px', marginBottom:'40px'}}/>
                   <p className="font-secondary" style={{fontSize:'20px'}}>To unlock leadership potential with mindfulness vacations.</p>
                 </div>
               </div>
-              <div className="col-lg-4 d-flex vm-card-col" style={{justifyContent:'center'}}>
+              <div className="col-md-4 d-flex vm-card-col" style={{justifyContent:'center'}}>
                 <div className='vm-container'>
                   <h3 className="font-primary">Our Mission</h3>
                   <img src={mission_icon} alt="mission_icon" style={{height:'200px', marginBottom:'40px'}}/>
                   <p className="font-secondary" style={{fontSize:'20px'}}>To uncover the hidden gem of authentic Buddhist teachings that provide the key to intellectual and emotional balance.</p>
                 </div>
               </div>
-              <div className="col-lg-4 d-flex vm-card-col" style={{justifyContent:'right' }}>
+              <div className="col-md-4 d-flex vm-card-col" style={{justifyContent:'right' }}>
                 <div className='vm-container'>
                   <h3 className="font-primary">Our Goals</h3>
                   <img src={mission_icon} alt="mission_icon" style={{height:'200px', marginBottom:'40px'}}/>

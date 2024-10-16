@@ -82,7 +82,12 @@ const HeroSection = ({ img, title, sub, aboutImg }) => {
             <p className='font-secondary'>{sub}</p>
             <Lottie loading="lazy" className='arrow-icon' animationData={animationData}></Lottie>
           </div>
-          <p className="line-1 anim-typewriter" style={{width:'600px'}}>{displayedText}</p>
+          {!isMobileView ? (
+            <p className="line-1 anim-typewriter" style={{width:'600px'}}>{displayedText}</p>
+          ): (
+            <p></p>
+          )}
+          
         </div>
       )}
     </div>
