@@ -1,10 +1,15 @@
 import React from 'react';
 import ShareButtons from '../HomePage/EventsShareBtn';
+import { useMobileView } from "../../contexts/MobileViewContext";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import "../../components/CSS/BlogCard.css";
 
-const BlogCard = ({content, onClick}) => (
-    <div className="blog-content-card">
+const BlogCard = ({content, onClick}) => {
+
+    const isMobileView = useMobileView();
+
+    return (
+        <div className="blog-content-card">
         <div class="blog-content-image-zoom-container">
             <div className="sc-overlayer"></div>
             <img loading='lazy' className="blog-content-card-img top" src={`${content.img}`} alt='blog image'></img>
@@ -20,7 +25,7 @@ const BlogCard = ({content, onClick}) => (
                 <h1 className="font-secondary blog-content-card-title" style={{ fontSize:'19px', letterSpacing:'0' }}>{content.title}</h1>
                 <div className='d-flex meta-tags'>
                     <p className="font-secondary blog-content-card-date" ><i class="fas fa-pen-nib" style={{ marginRight:'5px'}}></i>By {content.author}</p>
-                    <p className="font-secondary blog-content-card-date" style={{ marginLeft:'20px' }}><i class="fa-solid fa-calendar-days" style={{ marginRight:'5px'}}></i>{content.date}</p>
+                    <p className="font-secondary blog-content-card-date" style={{ marginLeft:'20px', marginTop: isMobileView? '-10px':'0' }}><i class="fa-solid fa-calendar-days" style={{ marginRight:'5px'}}></i>{content.date}</p>
                 </div>
             </div>
             <hr style={{ marginTop:'-0.5rem'}} />
@@ -29,6 +34,7 @@ const BlogCard = ({content, onClick}) => (
             {/* <ShareButtons url={content.blogUrl} title={content.title} thumbnail={content.blogThumbnail} /> */}
         </div>
     </div>
-);
+    );
+};
 
 export default BlogCard;

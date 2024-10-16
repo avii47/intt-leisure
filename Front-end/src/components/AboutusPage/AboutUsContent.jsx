@@ -413,10 +413,31 @@ const AboutUsContent = () => {
               </div>
             </div>
             <div className="col-lg-4" style={{ textAlign: 'right' }}>
-              <img src={img} alt="our-story-image" className='story-img' />
+              <img src={gb} alt="our-story-image" className='story-img' />
             </div>
           </div>
         </section>
+
+        <section id='our-achievements' className='our-achievements why-choose-item'>
+          <div id='our-achievements-content' className='our-achievements-content'>
+            <h3 className="font-primary">Our Achievements</h3>
+            <div className="row d-flex">
+              <div className="col-lg-6">
+                <div className="achivement-item">
+                  <img className='achivement-img' src={achievement_img1} alt="" />
+                  <p className="font-secondary">Every aspect of your journey is tailored to resonate with your unique leadership needs, providing a deep and meaningful experience that goes beyond conventional practices. Discover the true depth and serenity of mindfulness, guided by Dr. Hewawasam’s expertise, and enrich your leadership journey with us.</p>
+                </div>
+              </div>
+              <div className="col-lg-6 d-flex">
+                <div className="achivement-item achivement-item-right">
+                  <img className='achivement-img' src={achievement_img2} alt="" />
+                  <p className="font-secondary">Every aspect of your journey is tailored to resonate with your unique leadership needs, providing a deep and meaningful experience that goes beyond conventional practices. Discover the true depth and serenity of mindfulness, guided by Dr. Hewawasam’s expertise, and enrich your leadership journey with us.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
 
         <section id='our-missionVision' className='our-missionVision why-choose-item'>
           <div id='our-missionVision-content' className='our-missionVision-content d-flex col-md-12'>
@@ -444,34 +465,8 @@ const AboutUsContent = () => {
           </div>
         </section>
 
-        <section id='our-achievements' className='our-achievements why-choose-item' style={{}}>
-            {/* <h3 className="font-primary">Our Achievements</h3> */}
-            <div id='our-achievements-content' className='our-achievements-content'>
-              {/* <div className="row d-flex" style={{flexWrap:'wrap'}}>
-                <div className="col-lg-4">
-                  <img className='achivement-img' src={achievement_img1} alt="" />
-                </div>
-                <div className="col-lg-7 txt-col">
-                  <div className='txt-col-p'>
-                    <p className="font-secondary">Every aspect of your journey is tailored to resonate with your unique leadership needs, providing a deep and meaningful experience that goes beyond conventional practices. Discover the true depth and serenity of mindfulness, guided by Dr. Hewawasam’s expertise, and enrich your leadership journey with us.</p>
-                  </div>
-                </div>
-              </div><br></br><br></br><br></br>
-              <div className="row d-flex" style={{flexWrap:'wrap'}}>
-                <div className="col-lg-4">
-                  <img className='achivement-img' src={achievement_img2} alt="" />
-                </div>
-                <div className="col-lg-7 txt-col">
-                  <div className='txt-col-p2'>
-                    <p className="font-secondary">Every aspect of your journey is tailored to resonate with your unique leadership needs, providing a deep and meaningful experience that goes beyond conventional practices. Discover the true depth and serenity of mindfulness, guided by Dr. Hewawasam’s expertise, and enrich your leadership journey with us.</p>
-                  </div>
-                </div>
-              </div> */}
-              <img src={testImg} alt="" style={{width:'100vw'}} />
-            </div>
-        </section>
 
-        <section id='ceo-message' className='ceo-message why-choose-item'>
+        {/* <section id='ceo-message' className='ceo-message why-choose-item'>
           <div id='ceo-message-content' className="ceo-message-content col-12 d-flex" style={{flexWrap:'wrap'}}>
             <div className="col-lg-7 txt-col">
               <div>
@@ -485,7 +480,7 @@ const AboutUsContent = () => {
               <img src={gb} alt="our-story-image" className='story-img' />
             </div>
           </div>
-        </section>
+        </section> */}
 
       </div>
     </section>

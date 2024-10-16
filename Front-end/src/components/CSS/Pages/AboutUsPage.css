@@ -101,8 +101,22 @@
     flex-wrap: wrap;
 }
 .our-achievements-content{
+    width: 80vw;
     opacity: 0;
     transform: translateY(50px);
+}
+.achivement-item{
+    width: 85%;
+}
+.achivement-item-right {
+    margin-left: auto; 
+}
+.mobile-view .achivement-item{
+    width: 100%;
+}
+.mobile-view .achivement-item-right {
+    
+    margin-top: 50px;
 }
 .ceo-message {
     background-image: url('../../../assets/images/msg-from-ceo-img.jpg');

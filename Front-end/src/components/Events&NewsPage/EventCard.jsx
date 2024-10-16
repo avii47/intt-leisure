@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { useMobileView } from "../../contexts/MobileViewContext";
 
 const EventCard = ({ content, onClick }) => {
+
+  const isMobileView = useMobileView();
 
   return (
     <div id="event-card" className={`col-12 event-card d-flex`} >
@@ -17,7 +20,7 @@ const EventCard = ({ content, onClick }) => {
       </div>
       <div className="col-md-8 eventsNews-txt">
         <div>
-          <h2 className="font-secondary" style={{fontSize:'30px'}}>{content.eventTitle}</h2>
+          <h2 className="font-secondary" style={{fontSize: isMobileView ? '23px': '28px'}}>{content.eventTitle}</h2>
           <div className="d-flex meta-tags2">
             <div className="col-sm-3">
               <p className="Font-secondary event-date-place2">

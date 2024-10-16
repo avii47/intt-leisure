@@ -46,7 +46,7 @@ const BlogsList = () => {
       }`}
     >
       <div className="blogs-list-content">
-        <h3 className="Font-secondary">Our Latest Blog Posts</h3>
+        <h2 className="Font-secondary">Our Latest Blog Posts</h2>
         <p className="Font-secondary">Stay tuned and updated by the latest from our blog.</p>
         <div id="blog-cards-container" className="d-flex blog-cards-container">
           {contentData.map((content, index) => (

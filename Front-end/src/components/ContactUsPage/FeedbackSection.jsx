@@ -82,7 +82,7 @@ const FeedbackSection = () => {
     <section id="feedback-section" className={`feedback-section d-flex ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="feedback-content">
         <h3 className='font-primary' style={{marginBottom:'50px'}}>Get In Touch With Us</h3>
-        <p style={{width:'800px'}}>Thank you for choosing us for your transformative journey. Every leader is unique, so we begin by understanding you deeply to craft a mindfulness vacation that's perfectly tailored to your needs. Share your details below, and our team of experts will be just a click away.</p><br />
+        <p className='font-secondary top-text'>Thank you for choosing us for your transformative journey. Every leader is unique, so we begin by understanding you deeply to craft a mindfulness vacation that's perfectly tailored to your needs. Share your details below, and our team of experts will be just a click away.</p><br />
         <form className="feedback-form">
             <div className="form-group feedback-ft">
               <input type="text" className="form-control in-f" id="name" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required />

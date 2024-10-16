@@ -102,7 +102,7 @@
 }
 
 .mobile-view .img-overlay-date{
-    bottom: -20px !important;
+    bottom: -40px !important;
     right: -20px !important;
     scale: 0.8;
 }
@@ -126,4 +126,20 @@
 }
 .mobile-view .event-content-txt{
     height: fit-content;
+}
+.cat-div {
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+    z-index: 10;
+}
+.share-buttons {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 10;
+}
+.mobile-view .cat-div {
+    bottom: 2px;
+    left: 22px;
 }

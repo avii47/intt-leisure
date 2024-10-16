@@ -17,9 +17,11 @@
 }
 
 .mobile-view .top-text{
-    padding: 0 15.5% 0 15.5%;
+    padding: 0;
 }
 
 .mobile-view .contactus-section-content {
     width: 85vw;
+    margin-bottom: 0px;
+    background-color: antiquewhite;
 }
