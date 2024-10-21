@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useMobileView } from '../contexts/MobileViewContext';
-import { useDropdown } from '../contexts/DropdownContext';  // Import the useDropdown hook
+import { useDropdown } from '../contexts/DropdownContext'; 
 import './CSS/ContentHeroSection.css';
 import Lottie from 'lottie-react';
 import animationData from '../assets/icons/down-arrow2.json';
 
-const ContentHeroSection = ({ img, title, sub }) => {
+const ContentHeroSection = ({ img, title, topic }) => {
   const isMobileView = useMobileView();
   const [isblogTitle, setIsblogTitle] = useState(false);
 
-  const { dropdownVisible1, dropdownVisible2 } = useDropdown();  // Get dropdown states
+  const { dropdownVisible1, dropdownVisible2 } = useDropdown();  
 
   useEffect(() => {
     const wordCount = title.trim().length === 0 ? 0 : title.trim().split(/\s+/).length;
@@ -54,15 +54,13 @@ const ContentHeroSection = ({ img, title, sub }) => {
         {!dropdownVisible1 && !dropdownVisible2 && (
           <div id='content-hero-heading-section' className="content-hero-heading-section">
             <h1 className='content-hero-heading font-primary' style={{ width: isMobileView ? '100%' : '50%', marginInline: 'auto', fontSize: isMobileView ? '35px' : '40px' }}>
-              {title}
+              {topic}
             </h1>
+            <h6 className='font-secondary' style={{fontWeight:'300'}}>{title}</h6>
             <Lottie loading="lazy" className='content-hero-arrow-icon' animationData={animationData}></Lottie>
           </div>
         )}
-        {/* Render sub-title or blog sub content when dropdownVisible1 or dropdownVisible2 is false */}
-        {!isblogTitle && (
-          <p className='font-secondary'>{sub}</p>
-        )}
+
       </div>
     </div>
   );

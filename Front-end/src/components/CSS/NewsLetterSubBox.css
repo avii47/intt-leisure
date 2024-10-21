@@ -1,0 +1,24 @@
+.newsletter-sub-container{
+    background-color: #d3d3d3;
+    padding: 30px;
+    border-radius: 8px;
+}
+.newsletter-sub-email{
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 10px;
+}
+.newsletter-sub-btn{
+    width: 100%;
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+}
+.newsletter-sub-btn:hover{
+    background-color: rgb(58, 58, 58);
+    color: white;
+    scale: 1.01;
+    transition: transform 0.3s ease-in-out;;
+}

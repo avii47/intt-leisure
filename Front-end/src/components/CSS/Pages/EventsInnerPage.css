@@ -1,10 +1,10 @@
-@import "../Home/Events&NewsSection.css";
 
 .event-content-section{
     display: flex;
     justify-content: center;
 }
 .event-section-content {
+    margin-top: 80px;
     width: 80vw;
     flex-wrap: wrap; 
     text-align: left;

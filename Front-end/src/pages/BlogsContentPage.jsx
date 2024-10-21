@@ -4,10 +4,11 @@ import { Helmet } from 'react-helmet-async';
 import blogsListData from '../data/BlogListData';
 import blogsContentData from '../data/BlogContentData';
 import ScrollToTopButton from '../components/ScrollToTopButton';
+// import "../components/CSS/Pages/BlogsPage.css";
 import "../components/CSS/Pages/BlogsPage.css";
 
-const HeroSection = lazy(() => import('../components/HeroSection'));
-const BlogsContent = lazy(() => import('../components/BlogsPage/BlogsContent'));
+const HeroSection = lazy(() => import("../components/ContentHeroSection"));
+const BlogsContent = lazy(() => import('../components/BlogsPage/BlogsContentTemplate'));
 const FooterSection = lazy(() => import('../components/FooterSection'));
 const MobileButton = lazy(() => import('../components/MobileBookNowButton'));
 
@@ -25,6 +26,8 @@ const BlogsContentPage = () => {
       return <div>Content not found</div>;
     }
 
+    const topic = "Read Our Latest Blogs"
+
     return (
         <>
             <Helmet>
@@ -32,7 +35,7 @@ const BlogsContentPage = () => {
                 <link rel="canonical" href="https://inttleisure.com/blogs" />
             </Helmet>
             <Suspense fallback={<div>Loading...</div>}>
-                <HeroSection img={heroContent.img} title={heroContent.title} sub={heroContent.sub} />
+                <HeroSection img={heroContent.img} title={heroContent.title} topic={topic} />
             </Suspense>
             <Suspense fallback={<div>Loading...</div>}>
                 <BlogsContent   
