@@ -3,8 +3,6 @@
     justify-content: center;
 }
 .eventsNews-section-content {
-    margin-top: -100px;
-    padding-bottom: 10%;
     width: 80vw;
     flex-wrap: wrap; 
     text-align: left;
@@ -28,6 +26,10 @@
     margin-bottom: 8rem;
     display: flex;
     gap: 50px;
+    opacity: 0;
+  
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
 }
 .news-cards-container{
     gap: 100px;
@@ -38,7 +40,6 @@
 .mobile-view .eventsNews-section-content{
     width: 100vw;
     padding: 0rem 2rem 0 2rem;
-    margin-top: -100px;
 }
 .mobile-view .event-card{
     margin-bottom: 6rem;
@@ -142,4 +143,14 @@
 .mobile-view .cat-div {
     bottom: 2px;
     left: 22px;
+}
+
+.event-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mobile-view .event-card{
+    opacity: 1;
+    transform: translateY(0);
 }

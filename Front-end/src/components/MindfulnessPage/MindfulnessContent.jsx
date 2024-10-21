@@ -82,18 +82,18 @@ const MindfulnessContent = () => {
   return (
     <section
       id="mindfulness-content-section"
-      className={`section mindfulness-content-section justify-content-center d-flex ${
+      className={`mindfulness-content-section justify-content-center d-flex ${
         isMobileView ? "mobile-view" : ""
       }`}
     >
-      <div className="mindfulness-section-content">
+      <div className="mindfulness-section-content page-section">
         <h3 className="font-primary">What is Mindfulness Tourism?</h3>
         <p className="font-secondary">
         Although mindfulness is best known as an introspective journey, this experience can be well paired with the immersion of external surroundings. Mindfulness Tourism is a distinct approach that allows individuals to uncover the truth about inner peace amidst the tranquil landscapes of Sri Lanka that are also home to the profound teachings of authentic mindfulness. When you partner with INTT Leisure for Mindfulness Tourism, each moment of your journey is meticulously designed to deepen your understanding of mindfulness and allow you to reach personal transcendence. Our experts guide you through techniques that aren’t just theoretical - they are supported by extensive action research conducted by Dr. GB Hewawasam, which has been tested and proven to be effective for both leaders and seekers.
         </p>
         <div
           id="mindfulness-content-cards-container"
-          className="mindfulness-content-cards-container"
+          className="mindfulness-content-cards-container" 
         >
           {contentData.map((content, index) => (
             <ContentBlock

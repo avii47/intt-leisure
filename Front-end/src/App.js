@@ -4,7 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './App.css';
 import Navbar from './components/Navbar';
+import { DropdownProvider } from "./contexts/DropdownContext";
 import ScrollToTop from './components/ScrollToTop';
+// import { useMobileView } from "../../contexts/MobileViewContext";
 import { AnimatePresence, motion } from 'framer-motion';
 
 const HomePage = lazy(() => import('../src/pages/HomePage'));
@@ -65,6 +67,7 @@ const App = () => {
     <div className="main-container">
       <ScrollToTop />
       {/* Conditionally render the Navbar based on the current route */}
+      <DropdownProvider>
       {!shouldHideNavbar && <Navbar />}
       <AnimatePresence>
         <Suspense fallback={<div>Loading...</div>}>
@@ -208,6 +211,7 @@ const App = () => {
           </Routes>
         </Suspense>
       </AnimatePresence>
+      </DropdownProvider>
     </div>
   );
 };

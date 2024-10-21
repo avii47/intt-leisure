@@ -3,10 +3,8 @@
     justify-content: center;
 }
 .destination-section-content {
-    margin-top: -100px;
     width: 80vw;
     flex-wrap: wrap; 
-    padding: 0 0 10% 0;
 }
 .destionation-cards-container {
     display: flex;
@@ -27,8 +25,7 @@
 
 .mobile-view .destination-section-content{
     width: 100vw;
-    padding: 0 2rem 10rem 2rem;
-    margin-top: -100px;
+    padding: 0 2rem 0rem 2rem;
 }
 .mobile-view .destionation-cards-container{
     row-gap: 2rem;

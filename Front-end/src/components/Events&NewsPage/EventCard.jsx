@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { useMobileView } from "../../contexts/MobileViewContext";
 
-const EventCard = ({ content, onClick }) => {
+const EventCard = React.forwardRef(({ content, style, onClick }, ref) => {
 
   const isMobileView = useMobileView();
 
   return (
-    <div id="event-card" className={`col-12 event-card d-flex`} >
+    <div id="event-card" className={`col-12 event-card d-flex`} ref={ref} style={style}>
       <div className="col-md-4 eventsNews-img-col font-secondary">
         <img
           className="eventsNews-img"
@@ -55,6 +55,6 @@ const EventCard = ({ content, onClick }) => {
       </div>
     </div>
   );
-};
+});
 
 export default EventCard;

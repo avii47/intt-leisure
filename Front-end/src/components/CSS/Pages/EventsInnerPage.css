@@ -1,22 +1,17 @@
+@import "../Home/Events&NewsSection.css";
+
 .event-content-section{
     display: flex;
     justify-content: center;
 }
 .event-section-content {
-    margin-top: -100px;
-    padding-bottom: 10%;
     width: 80vw;
     flex-wrap: wrap; 
     text-align: left;
 }
-.get-itinerary-btn{
-    height: 60px;
-    width: 250px;
-    font-size: 20px;
-    margin-bottom: 60px;
-}
+
 .mobile-view .event-section-content{
-    margin-top: -100px;
+    
 }
 .event-date-place3{
     color: rgb(129, 129, 129);
@@ -116,4 +111,12 @@
 .mobile-view .meta-tags2{
     padding-top: 0px;
     flex-direction: column;
+}
+
+.other-events-container{
+    margin: -60px 0 -300px 0;
+}
+.mobile-view .other-events-container{
+    margin: 0 0 -80px -40px;
+    width: 100vw;
 }

@@ -40,11 +40,11 @@ const DestinationsContent = () => {
   return (
     <section
       id="destination-content-section"
-      className={`section destination-content-section ${
+      className={`destination-content-section ${
         isMobileView ? "mobile-view" : ""
       }`}
     >
-      <div className="destination-section-content">
+      <div className="destination-section-content page-section">
         <div
           id="destionation-cards-container"
           className="destionation-cards-container d-flex"

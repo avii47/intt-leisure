@@ -8,23 +8,6 @@
     margin-top: 1rem;
     margin-left: -20px;
 }
-.eventsNews-cards {
-    display: flex;
-    justify-content: left;
-    padding-bottom: 1%;
-    
-    overflow-x: scroll;
-    scrollbar-width: none;
-    scroll-behavior: smooth;
-    padding-right: 65px;
-
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-.eventsNews-cards::-webkit-scrollbar {
-    display: none;
-}
 .nav-icons{
     display: flex;
     gap: 10px;

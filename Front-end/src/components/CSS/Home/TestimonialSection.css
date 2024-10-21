@@ -1,5 +1,9 @@
 .testimonial-content{
     width: 80vw;
+    margin-bottom: 12rem;
+}
+.mobile-view .testimonial-content{
+    margin-bottom: 4rem;
 }
 .testimonial-iframe{
     width: 100%;
@@ -23,6 +27,7 @@
 @media only screen and (max-width: 470px) {
     .testimonial-iframe{
         height: 12.5rem;
+        margin-top: -2rem;
     }
 }
 

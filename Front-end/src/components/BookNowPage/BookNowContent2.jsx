@@ -56,7 +56,7 @@ const BookNowContent2 = () => {
     // Check-in and check-out date validation
     if (!checkinDate) newErrors.checkinDate = "Check-in date is required";
     if (!checkoutDate) newErrors.checkoutDate = "Check-out date is required";
-    if (checkoutDate <= checkinDate) newErrors.checkoutDate = "Check-out date must be after check-in date";
+    if (checkoutDate <= checkinDate) newErrors.checkoutDate = "Must be after check-in date";
 
     // Adults validation
     if (!adults || adults <= 0) newErrors.adults = "At least one adult is required";
@@ -181,11 +181,11 @@ const BookNowContent2 = () => {
   return (
     <section
       id="bookNow-content-section"
-      className={`section bookNow-content-section d-flex ${
+      className={`feedback-section bookNow-content-section d-flex ${
         isMobileView ? "mobile-view" : ""
       }`}
     >
-      <div className="bookNow-section-content d-flex">
+      <div className="bookNow-section-content d-flex page-section">
         <div className="col-md-12 d-flex main-col">
           <div className="col-7 scrollable-content">
             <h2 className="font-primary">Book Your Journey Today!</h2>

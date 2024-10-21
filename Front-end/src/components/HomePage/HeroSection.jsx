@@ -80,7 +80,7 @@ const HeroSection = () => {
           preload="auto"
         />
       )}
-      <div className="hero-content">
+      <div className="hero-content home-hero">
         <div id="hero-heading" className={`hero-heading-section ${isCursorMoving ? '' : 'hidden'}`}>
           <h1 className="hero-heading font-primary">Mindfulness Vacations for Business Leaders</h1>
           <p className="font-secondary">Leaders change the world and we change how they experience it.</p>
@@ -90,12 +90,6 @@ const HeroSection = () => {
           <h5 className="bottom-viewbar-text">Introduced By</h5>
           <a href="https://manolead.com" target="_blank" rel="noopener noreferrer"><img src={img_01} alt="manolead-logo" className="bottom-viewbar-img" loading='lazy' /></a>
           <a href="https://councils.forbes.com/profile/Gamini-Hewawasam-Scholar-Practitioner-CEO-ManoLead-NFP/bcb1aacb-ab06-4957-803a-62da6f9d179b" target="_blank" rel="noopener noreferrer"><img src={img_02} alt="forbes logo" className="bottom-viewbar-img img2" loading='lazy' /></a>
-          {/* <div className="social-icon-section">
-            <a href="https://www.facebook.com/manolead" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-facebook social-icon"></i></a>
-            <a href="https://www.linkedin.com/in/gaminihewawasam/" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-linkedin social-icon"></i></a>
-            <a href="https://www.youtube.com/@travelglobe405" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-youtube social-icon"></i></a>
-            <a href="https://www.instagram.com/manolead_/" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-instagram social-icon"></i></a>
-          </div> */}
         </div>
       </div>
     </div>

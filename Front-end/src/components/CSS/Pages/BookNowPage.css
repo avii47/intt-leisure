@@ -1,10 +1,8 @@
 .bookNow-content-section {
   display: flex;
   justify-content: center;
-  padding-bottom: 12rem;
 }
 .bookNow-section-content {
-  margin-top: -100px;
   width: 80vw;
   display: flex;
   flex-wrap: wrap;
@@ -100,13 +98,16 @@
   margin-top: 20px;
   display: flex;
   justify-content: center;
-  width: 30%;
+  width: 300px;
   height: 100px;
   padding: 25px;
   padding-left: 0;
 }
 .btn-book-f {
   width: 100%;
+}
+.mobile-view .bottom-btn-container {
+  width: 107%;
 }
 .form-group {
   position: relative !important;
@@ -154,8 +155,7 @@
 
 .mobile-view .bookNow-section-content {
   width: 100vw;
-  margin-top: -100px;
-  padding: 2rem 2rem 20rem 2rem;
+  padding: 0rem 2rem 0rem 2rem;
 }
 .mobile-view .main-col {
   flex-direction: column;
@@ -216,4 +216,7 @@
 
 .error-text{
   color: red;
+}
+.mobile-view .error-text{
+  font-size: 12px;
 }

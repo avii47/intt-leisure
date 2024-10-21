@@ -2,7 +2,7 @@
     position: relative;
     overflow: hidden;
     height: 31.25rem;
-    margin-top: 12rem;
+    margin-top: 2rem;
 }
 .connect-app-section::before {
     content: "";
@@ -42,7 +42,7 @@
 } */
 
 .mobile-view .connect-app-section{
-    margin-top: 0px !important;
+    margin-top: -100px !important;
 }
 .mobile-view .connect-app-content{
     padding: 0 2rem 0 2rem;

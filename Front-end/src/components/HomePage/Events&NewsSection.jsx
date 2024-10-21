@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef, lazy } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useMobileView } from '../../contexts/MobileViewContext';
+import ContentCard from './ContentCard'
+import cardLoader from '../../hooks/cardLoader';
 import "../../components/CSS/Home/Events&NewsSection.css";
 import Slider from "react-slick";
 import contentData from "../../data/EventstData";
@@ -10,12 +12,9 @@ import "slick-carousel/slick/slick-theme.css";
 import left_arrow from '../../assets/icons/left-arrow.png';
 import right_arrow from '../../assets/icons/right-arrow.png';
 
-const ContentCard = lazy(() => import('./ContentCard'));
+const EventsNewsSection = ({ exclue }) => {
 
-const EventsNewsSection = () => {
-
-  const containerRef3 = useRef(null);
-  const cardRef3 = useRef(null);
+  const newsCardsRef = useRef([]);
   const [showLeftButton3, setShowLeftButton3] = useState(false);
   const [showRightButton3, setShowRightButton3] = useState(true);
   const [currentSlide3, setCurrentSlide3] = useState(0);
@@ -24,29 +23,9 @@ const EventsNewsSection = () => {
 
   const isMobileView = useMobileView();
 
-  useEffect(() => {
-    const section = document.getElementById('eventsNews-section');
-    const cardSection = document.getElementById('eventsNews-cards');
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          cardSection.classList.add('animate-cards');
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (section) {
-      observer.observe(section);
-    }
-
-    return () => {
-      if (section) {
-        observer.unobserve(section);
-      }
-    };
-  }, []);
+  if(!isMobileView) { 
+    cardLoader(newsCardsRef, 'visible', 200, { threshold: 0.5 });
+  }
 
   const handleOnClick = (path) => {
     navigate(path);
@@ -116,10 +95,20 @@ const EventsNewsSection = () => {
           </div>
         </div>
         <div className='eventsNews-wrapper'>
-          <div id='eventsNews-cards' className="slider-container" style={{ paddingBottom: '100px', textAlign: 'center' }} >
+          <div className="slider-container" style={{ paddingBottom: '100px', textAlign: 'center' }} >
             <Slider ref={slider => { sliderRef = slider; }} {...settings}>
-              {contentData.map((content, index) => (
-                <ContentCard key={index} content={content} onClick={() => handleOnClick(`/events&news/${content.id}`)} />
+              
+            {contentData
+              .filter((content) => content.id !== exclue)
+              .map((content, index) => (
+                <ContentCard
+                  key={index}
+                  className={`content-card`}
+                  content={content}
+                  ref={el => newsCardsRef.current[index] = el}
+                  style={{ '--animation-order': index }}
+                  onClick={() => handleOnClick(`/events&news/${content.id}`)}
+                />
               ))}
             </Slider>
           </div>

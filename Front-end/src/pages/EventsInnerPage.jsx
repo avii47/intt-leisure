@@ -5,7 +5,7 @@ import ScrollToTopButton from "../components/ScrollToTopButton";
 import contentData from "../data/EventstData";
 import "../components/CSS/Pages/EventsInnerPage.css";
 
-const HeroSection = lazy(() => import("../components/HeroSection"));
+const HeroSection = lazy(() => import("../components/ContentHeroSection"));
 const EventsInnerContent = lazy(() => import("../components/Events&NewsPage/EventsInnerContent"));
 const FooterSection = lazy(() => import("../components/FooterSection"));
 
@@ -24,7 +24,7 @@ const EventsInnerPage = () => {
     <>
       <Helmet>
         <meta name="description" content="find best package for you" />
-        <link rel="canonical" href="https://inttleisure.com/services" />
+        <link rel="canonical" href="https://inttleisure.com/events" />
       </Helmet>
       <Suspense fallback={<div>Loading...</div>}>
         <HeroSection
@@ -35,9 +35,6 @@ const EventsInnerPage = () => {
       <Suspense fallback={<div>Loading...</div>}>
         <EventsInnerContent content={content} />
       </Suspense>
-      {/* <Suspense fallback={<div>Loading...</div>}>
-        <EventsNewsSection />
-      </Suspense> */}
       <Suspense fallback={<div>Loading...</div>}>
         <FooterSection />
       </Suspense>

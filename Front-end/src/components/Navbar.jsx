@@ -1,5 +1,7 @@
+// src/components/MyNavbar.js
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useDropdown } from "../contexts/DropdownContext"; // Import the context
 import logo_dark from "../assets/icons/INTT Leisure Logo-01.png";
 import logo_light from "../assets/icons/INTT Leisure Logo-02.png";
 import Button from "react-bootstrap/Button";
@@ -16,8 +18,7 @@ import "../components/CSS/Navbar.css";
 function MyNavbar() {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
-  const [dropdownVisible1, setDropdownVisible1] = useState(false);
-  const [dropdownVisible2, setDropdownVisible2] = useState(false);
+  const { dropdownVisible1, setDropdownVisible1, dropdownVisible2, setDropdownVisible2 } = useDropdown(); // Access state from context
   const [showOffcanvas, setShowOffcanvas] = useState(false);
 
   const isMobileView = useMobileView();
@@ -147,8 +148,8 @@ function MyNavbar() {
                       </Nav.Link>
 
                       <div
-                        onMouseEnter={() => setDropdownVisible2(true)}
-                        onMouseLeave={() => setDropdownVisible2(false)}
+                        onMouseEnter={handleMouseEnter2}
+                        onMouseLeave={handleMouseLeave2}
                       >
                         <Nav.Link
                           as={Link}

@@ -1,10 +1,8 @@
 .service-content-section {
 }
 .service-section-content {
-  margin-top: -100px;
   width: 80vw;
-  flex-wrap: wrap;
-  padding: 0 0 10% 0;
+  margin-bottom: 12rem;
 }
 .service-content-cards-container {
   display: flex;
@@ -13,7 +11,7 @@
   row-gap: 6rem;
   column-gap: 4rem;
   max-width: 100%;
-  margin-top: 4rem;
+  margin-top: 2rem;
 
   opacity: 1;
   transform: translateY(50px);
@@ -25,11 +23,12 @@
 }
 .mobile-view .service-section-content {
   width: 100vw;
-  padding: 2rem 2rem 10rem 2rem;
-  margin-top: -100px;
+  padding: 0rem 2rem 0rem 2rem;
+  margin-bottom: 10rem;
 }
 .mobile-view .service-content-cards-container {
   opacity: 1;
+  margin-top: 2rem;
 }
 .mobile-view .service-content-card {
   height: 22rem;
@@ -41,13 +40,3 @@
   text-align: left;
 }
 
-.service-content-cards-row {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-}
-
-.service-content-cards-row.animate-row {
-  opacity: 1;
-  transform: translateY(0);
-}

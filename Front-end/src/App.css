@@ -59,9 +59,12 @@ body {
   overflow: hidden;
 }
 
-.mobile-view .section {
-  padding-top: 2rem;
-  overflow: hidden;
+.page-section{
+  margin: 7.5rem 0 10rem 0;
+}
+
+.mobile-view .page-section{
+  margin: 5rem 0 6rem 0;
 }
 
 .font-primary {

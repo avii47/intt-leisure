@@ -80,7 +80,7 @@ const FeedbackSection = () => {
 
   return (
     <section id="feedback-section" className={`feedback-section d-flex ${isMobileView ? 'mobile-view' : ''}`}>
-      <div className="feedback-content">
+      <div className="feedback-content page-section">
         <h3 className='font-primary' style={{marginBottom:'50px'}}>Get In Touch With Us</h3>
         <p className='font-secondary top-text'>Thank you for choosing us for your transformative journey. Every leader is unique, so we begin by understanding you deeply to craft a mindfulness vacation that's perfectly tailored to your needs. Share your details below, and our team of experts will be just a click away.</p><br />
         <form className="feedback-form">

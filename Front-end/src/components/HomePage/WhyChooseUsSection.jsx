@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import left_arrow from '../../assets/icons/left-arrow.png';
 import right_arrow from '../../assets/icons/right-arrow.png';
 import IconCard from '../HomePage/IconCard';
+import cardLoader from '../../hooks/cardLoader';
 import { useMobileView } from '../../contexts/MobileViewContext';
 import contentData from '../../data/WhyChooseUsSectionData';
 import "../../components/CSS/Home/WhyChooseUsSection.css";
@@ -20,6 +21,10 @@ const WhyChooseUsSection = () => {
   let sliderRef = useRef(null);
 
   const isMobileView = useMobileView();
+
+  if(!isMobileView) {
+    cardLoader(iconCardsRef, 'visible', 200, { threshold: 0.5 });
+  }
 
   const updateButtons = () => {
     if (containerRef.current) {
@@ -40,33 +45,6 @@ const WhyChooseUsSection = () => {
       }
     };
   }, []);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            entry.target.classList.add('visible');
-          }, index * 200);
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.5 });
-
-    iconCardsRef.current.forEach(card => {
-      if (card) {
-        observer.observe(card);
-      }
-    });
-
-    return () => {
-      iconCardsRef.current.forEach(card => {
-        if (card) {
-          observer.unobserve(card);
-        }
-      });
-    };
-  }, [iconCardsRef]);
 
   const updateButtonVisibility = (currentSlide) => {
     setShowLeftButton(currentSlide > 0);

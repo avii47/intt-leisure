@@ -1,6 +1,4 @@
 import React from "react";
-import ShareButtons from '../BlogsPage/ShareButtons';
-import contentData from "../../data/BlogListData";
 import { useMobileView } from "../../contexts/MobileViewContext";
 
 const BlogsContent = ({
@@ -30,11 +28,11 @@ const BlogsContent = ({
   return (
     <section
       id="blogs-content-section"
-      className={`section blogs-content-section d-flex ${
+      className={`blogs-content-section d-flex ${
         isMobileView ? "mobile-view" : ""
       }`}
     >
-      <div className="blogs-section-content">
+      <div className="blogs-section-content page-section">
         <h3 className="font-primary" style={{ fontSize: "28px" }}>
           {title}
         </h3>

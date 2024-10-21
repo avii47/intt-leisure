@@ -84,8 +84,8 @@ const PackageContent = ({content}) => {
   };
 
   return (
-    <section id="package-content-section" className={`section package-content-section d-flex ${isMobileView ? 'mobile-view' : ''}`}>
-      <div className="package-section-content">
+    <section id="package-content-section" className={`package-content-section d-flex ${isMobileView ? 'mobile-view' : ''}`}>
+      <div className="package-section-content page-section">
         <h5 className='font-secondary' style={{ fontSize: '20px' }}>Overview</h5><hr style={{ width: '100px', marginTop: '-1px' }} />
         <p className="font-secondary">{content.subtitle}</p>
         <p className="font-secondary">{content.description}</p>

@@ -1,89 +1,23 @@
-import React, { useEffect, Suspense, lazy } from "react";
+import React, { useEffect, Suspense, useRef } from "react";
 import { useMobileView } from "../../contexts/MobileViewContext";
 import { useNavigate } from "react-router-dom";
+import EventCard from './EventCard';
+import BlogCard from '../BlogsPage/BlogCard';
+import cardLoader from '../../hooks/cardLoader';
 import eventstData from "../../data/EventstData";
 import contentData from "../../data/BlogListData";
 import "../../components/CSS/Pages/BlogsListPage.css";
 
-const EventCard = lazy(() => import("../Events&NewsPage/EventCard"));
-const NewsCard = lazy(() => import("../Events&NewsPage/NewsCard"));
-const BlogCard = lazy(() => import("../BlogsPage/BlogCard"));
-
 const EventsNewsContent = () => {
   const isMobileView = useMobileView();
   const navigate = useNavigate();
+  const eventCardsRef = useRef([]);
+  const blogCardsRef2 = useRef([]);
 
-  useEffect(() => {
-    const section = document.getElementById("rw1");
-    const textSection = document.getElementById("text1");
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          textSection.classList.add("animate-text");
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (section) {
-      observer.observe(section);
-    }
-
-    return () => {
-      if (section) {
-        observer.unobserve(section);
-      }
-    };
-  }, []);
-
-  useEffect(() => {
-    const section = document.getElementById("rw2");
-    const textSection = document.getElementById("text2");
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          textSection.classList.add("animate-text");
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (section) {
-      observer.observe(section);
-    }
-
-    return () => {
-      if (section) {
-        observer.unobserve(section);
-      }
-    };
-  }, []);
-
-  useEffect(() => {
-    const section = document.getElementById("rw3");
-    const textSection = document.getElementById("text3");
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          textSection.classList.add("animate-text");
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (section) {
-      observer.observe(section);
-    }
-
-    return () => {
-      if (section) {
-        observer.unobserve(section);
-      }
-    };
-  }, []);
+  if(!isMobileView) {
+    cardLoader(eventCardsRef, 'visible', 200, { threshold: 0.5 });
+    cardLoader(blogCardsRef2, 'visible', 200, { threshold: 0.5 });
+  }
 
   const handleBlogCardClick = (id) => {
     navigate(`/blogs/${id}`);
@@ -96,11 +30,11 @@ const EventsNewsContent = () => {
   return (
     <section
       id="eventsNews-content-section"
-      className={`section eventsNews-content-section justify-content-center d-flex ${
+      className={`eventsNews-content-section justify-content-center d-flex ${
         isMobileView ? "mobile-view" : ""
       }`}
     >
-      <div className="eventsNews-section-content justify-content-center">
+      <div className="eventsNews-section-content justify-content-center page-section">
         <h3 className="font-primary" style={{ marginBottom: "50px" }}>
           <b>Latest Events</b>
         </h3>
@@ -109,6 +43,8 @@ const EventsNewsContent = () => {
             <EventCard 
               key={index} 
               content={content} 
+              ref={el => eventCardsRef.current[index] = el}
+              style={{ '--animation-order': index }}
               onClick={() => handleEventCardClick(content.id)}
             />
           ))}
@@ -121,7 +57,10 @@ const EventsNewsContent = () => {
           {contentData.slice(0, 3).map((content, index) => (
             <Suspense key={index} fallback={<div>Loading...</div>}>
               <BlogCard
+                key={index}
                 content={content}
+                ref={el => blogCardsRef2.current[index] = el}
+                style={{ '--animation-order': index }}
                 onClick={() => handleBlogCardClick(content.id)}
               />
             </Suspense>

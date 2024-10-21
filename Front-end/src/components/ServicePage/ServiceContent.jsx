@@ -1,40 +1,19 @@
-import React, { useEffect, lazy } from "react";
+import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useMobileView } from "../../contexts/MobileViewContext";
+import ContentCard from "./ServiceContentCard"
+import cardLoader from '../../hooks/cardLoader';
 import contentData from "../../data/ServicePageData";
 import "../CSS/Pages/ServicePage.css";
-
-const ContentCard = lazy(() => import("./ServiceContentCard"));
 
 const ServiceContent = () => {
   const isMobileView = useMobileView();
   const navigate = useNavigate();
+  const pkgCardsRef = useRef([]);
 
-  useEffect(() => {
-    const section = document.getElementById("service-content-section");
-    const cardSection = document.getElementById(
-      "service-content-cards-container"
-    );
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          cardSection.classList.add("animate-cards");
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (section) {
-      observer.observe(section);
-    }
-
-    return () => {
-      if (section) {
-        observer.unobserve(section);
-      }
-    };
-  }, []);
+  if(!isMobileView) {
+    cardLoader(pkgCardsRef, 'visible', 200, { threshold: 0.5 });
+  }
 
   const handleServiceCardClick = (id) => {
     if (id === 6) {
@@ -47,15 +26,15 @@ const ServiceContent = () => {
   return (
     <section
       id="service-content-section"
-      className={`section justify-content-center service-content-section d-flex ${
+      className={`justify-content-center service-content-section d-flex ${
         isMobileView ? "mobile-view" : ""
       }`}
     >
-      <div className="service-section-content justify-content-center">
+      <div className="service-section-content justify-content-center page-section">
         <h3 className="font-primary">Choose your Journey</h3>
         <p className="font-secondary" style={{ marginTop: "10px" }}>
           As you immerse yourself in this enchanting destination, we invite you
-          to participate in profound self-reflection and practice alongside us.{" "}
+          to participate in profound self-reflection and practice alongside us.
         </p>
         <div
           id="service-content-cards-container"
@@ -65,6 +44,8 @@ const ServiceContent = () => {
             <ContentCard
               key={index}
               content={content}
+              ref={el => pkgCardsRef.current[index] = el}
+              style={{ '--animation-order': index }}
               onClick={() => handleServiceCardClick(content.id)}
             />
           ))}
