@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react";
 import blogsData from '../../data/BlogsData';
 import { useMobileView } from "../../contexts/MobileViewContext";
+import { useNewsletterSubscription } from '../../hooks/useNewsletterSubscription';
+import Modal from "../../components/BookNowPage/Modal";
 import { useNavigate } from "react-router-dom";
 import cardLoader from '../../hooks/cardLoader';
 import ShareButtons from '../HomePage/EventsShareBtn';
@@ -16,6 +18,7 @@ const BlogsContentTemplate = ({content}) => {
   const navigate = useNavigate();
   const blogCardHrsRef = useRef([]);
   const excludeId = content.id;
+  const { email, setEmail, showModal, handleSubscribe, setShowModal } = useNewsletterSubscription();
 
   const [isLiked, setIsLiked] = useState(false);
   const [likeCount, setLikeCount] = useState(content.likeCount);
@@ -41,11 +44,11 @@ const BlogsContentTemplate = ({content}) => {
         }`}
     >
       <div className="blogs-section-content-t2 page-section col-md-12">
-        <div className="col-md-8" style={{ paddingRight: "30px" }}>
+        <div className="col-md-8" style={{ paddingRight: isMobileView? "0":"30px" }}>
           <h3 className="font-primary" style={{ fontSize: "28px" }}>
             {content.title}
           </h3>
-          <p className="font-secondary">{content.description}</p>
+          <p className="font-secondary" style={{marginTop:'20px'}}>{content.description}</p>
             <img
               className="blogs-img-t2"
               src={content.img}
@@ -64,14 +67,14 @@ const BlogsContentTemplate = ({content}) => {
           <p className="font-secondary">Click <a href={content.blogUrl} target="_blank" rel="noopener noreferrer">here</a> to view the full Forbes Expert Panel article.</p><hr />
 
           <div className="bottom-section-t2">
-          <p className="font-secondary" style={{ marginTop: '20px' }}>
-            <i
-              className={`fa-${isLiked ? 'solid' : 'regular'} fa-heart blog-t2-like`}
-              onClick={handleLikeClick}
-              style={{ cursor: 'pointer' }} 
-            ></i>
-            {likeCount} People like this
-          </p>
+            <p className="font-secondary" style={{ marginTop: '20px' }}>
+              <i
+                className={`fa-${isLiked ? 'solid' : 'regular'} fa-heart blog-t2-like`}
+                onClick={handleLikeClick}
+                style={{ cursor: 'pointer' }} 
+              ></i>
+              {likeCount} People like this
+            </p>
             <ShareButtons url={content.blogUrl} title={content.title} thumbnail={content.blogThumbnail} />
           </div>
 
@@ -98,23 +101,40 @@ const BlogsContentTemplate = ({content}) => {
             </div>
           </div>
         </div>
-        <div className="col-md-4" style={{ paddingLeft: "30px" }}>
-          <NewsLetterSubBox />
+        <div className="col-md-4" style={{ paddingLeft: isMobileView? "0":"30px" }}>
+
+          <NewsLetterSubBox 
+            email={email} 
+            setEmail={setEmail} 
+            handleSubscribe={handleSubscribe} 
+          />
+
           <h3 className="font-primary" style={{ margin: '50px 0 0 0', fontSize: '30px' }}>Recent Blogs</h3><hr />
-          {blogsData
-            .filter((content) => content.id !== excludeId)
-            .slice(0, 5)
-            .map((content, index) => (
-              <BlogCardHr
-                key={index}
-                content={content}
-                ref={el => blogCardHrsRef.current[index] = el}
-                style={{ '--animation-order': index }}
-                onClick={() => handleBlogCardHrClick(`${content.id}`)}
-              />
-            ))}
+          <div className="r-blog-container">
+            {blogsData
+              .filter((content) => content.id !== excludeId)
+              .slice(0, 5)
+              .map((content, index) => (
+                <BlogCardHr
+                  key={index}
+                  content={content}
+                  ref={el => blogCardHrsRef.current[index] = el}
+                  style={{ '--animation-order': index }}
+                  onClick={() => handleBlogCardHrClick(`${content.id}`)}
+                />
+              ))}
+          </div>
+
 
         </div>
+        <Modal show={showModal} onClose={() => setShowModal(false)}>
+          <h2>Your subscription to our list has been confirmed.</h2>
+          <br></br>
+          <p>
+          Thank you for subscribing! <br />
+          Look out for news and updates
+          </p>
+        </Modal>
       </div>
     </section>
   );

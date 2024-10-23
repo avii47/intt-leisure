@@ -5,7 +5,7 @@ import EventCard from './EventCard';
 import BlogCard from '../BlogsPage/BlogCard';
 import cardLoader from '../../hooks/cardLoader';
 import eventstData from "../../data/EventstData";
-import contentData from "../../data/BlogListData";
+import contentData from "../../data/BlogsData";
 import "../../components/CSS/Pages/BlogsListPage.css";
 
 const EventsNewsContent = () => {

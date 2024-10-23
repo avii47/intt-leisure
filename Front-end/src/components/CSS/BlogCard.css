@@ -111,3 +111,31 @@
     opacity: 1;
     transform: translateY(0);
 }
+
+.cat-div {
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+    z-index: 10;
+}
+.share-buttons {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 10;
+}
+.like-button {
+    position: absolute;
+    color: white;
+    font-size: 15px;
+    bottom: 15px;
+    right: 15px;
+    z-index: 10;
+}
+.blogCard-t2-like{
+    margin: 0px 5px 0 0;
+}
+.mobile-view .cat-div {
+    bottom: 2px;
+    left: 22px;
+}

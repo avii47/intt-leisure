@@ -1,7 +1,15 @@
 .newsletter-sub-container{
+    display: flex;
+    justify-content: center;
+}
+.newsletter-sub-content{
     background-color: #d3d3d3;
     padding: 30px;
     border-radius: 8px;
+}
+.mobile-view .newsletter-sub-container{
+    width: 100%;
+    margin: 50px 0 20px 0;
 }
 .newsletter-sub-email{
     width: 100%;

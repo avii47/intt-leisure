@@ -8,15 +8,15 @@
     text-align: left;
     display: flex;
 }
-.blogs-section-content-t2 p{
-    letter-spacing: 0px;
-    line-height: 170%;
+.mobile-view .blogs-section-content-t2 {
+    width: 100vw;
+    padding: 0 2rem;
 }
 .blogs-img-t2{
     width: 100%;
-    margin: 40px 0;
+    margin: 2rem 0;
+    border-radius: 5px;
 }
-
 .content{
     padding-bottom: 50px;
 }
@@ -58,14 +58,18 @@
     font-size: 20px;
     margin: 0px 5px 0 0;
 }
-
-
 .mobile-view .blogs-section-content {
     width: 100vw;
     padding: 0 2rem 0 2rem;
     flex-wrap: wrap; 
     text-align: left;
     margin-top: -100px;
+}
+.r-blog-container{
+    margin-top: 30px;
+}
+.mobile-view .r-blog-container{
+    margin-top: -10px;
 }
 
 

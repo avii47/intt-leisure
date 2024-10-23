@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import emailjs from "emailjs-com";
 import Modal from "../components/BookNowPage/Modal";
-import "../firebase";
-import { getFirestore, addDoc, collection } from "firebase/firestore";
+import { useNewsletterSubscription } from '../hooks/useNewsletterSubscription';
 import './CSS/FooterSection.css';
 
 import addressIcon from '../assets/icons/icons8-location-pin-50.png';
@@ -15,9 +13,7 @@ import ft_icon2 from '../assets/images/footer-icon2.png';
 const Footer = () => {
 
   const [isMobileView, setIsMobileView] = useState(false);
-  const [showModal, setShowModal] = useState(false);
-  const [email, setEmail] = useState("");
-  const db = getFirestore();
+  const { email, setEmail, showModal, handleSubscribe, setShowModal } = useNewsletterSubscription();
 
   useEffect(() => {
     const handleResize = () => {
@@ -31,37 +27,6 @@ const Footer = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-
-  const saveDataToFirestore = async () => {
-    const docRef = await addDoc(collection(db, "NewsLetter_Collection"), {
-      Email: email,
-      Status: 'Pending'
-    });
-  };
-
-  const handleSubscribeClick = (e) => {
-    e.preventDefault();
-    saveDataToFirestore()
-
-    const bookingDetails = {
-      email,
-    };
-
-    emailjs
-      .send(
-        "service_6of844u",
-        "template_rik8m2j",
-        bookingDetails,
-        "gdzYpqkDHcPcrpQOw"
-      )
-      .then((response) => {
-        console.log("Email sent successfully!", response.status, response.text);
-        setShowModal(true);
-      })
-      .catch((error) => {
-        console.error("Failed to send email:", error);
-      });
-  };
 
   return (
     <footer className={`footer justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`} >
@@ -93,7 +58,7 @@ const Footer = () => {
               </p>
               <form className="subscription-form">
                 <input type="email" placeholder="Your Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                <button type="submit" onClick={handleSubscribeClick}>Subscribe Now</button>
+                <button type="submit" onClick={handleSubscribe}>Subscribe Now</button>
               </form>
               <p>
                 By subscribing you agree to our Privacy Policy and consent to receive

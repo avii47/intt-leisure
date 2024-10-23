@@ -7,8 +7,16 @@
     transform: translateY(20px);
     transition: opacity 1s ease, transform 1s ease;
 }
+.mobile-view .blogCardHr-container{
+    opacity: 1;
+    cursor: pointer;
+}
 .blogCardHr-img{
     height: 120px;
+    border-radius: 5px;
+}
+.mobile-view .blogCardHr-img{
+    height: 90px;
     border-radius: 5px;
 }
 .blogCardHr-date{
@@ -18,6 +26,15 @@
 .blogCardHr-title{
     font-weight: 400;
     letter-spacing: 0;
+}
+.mobile-view .blogCardHr-date{
+    font-size: 9px;
+}
+.mobile-view .blogCardHr-title{
+    font-weight: 400;
+    letter-spacing: 0;
+    font-size: 12px;
+    margin-top: -5px;
 }
 .blogCardHr-icons{
     margin-right: 5px;

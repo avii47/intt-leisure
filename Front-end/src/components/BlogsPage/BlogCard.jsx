@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from "react";
 import ShareButtons from '../HomePage/EventsShareBtn';
 import { useMobileView } from "../../contexts/MobileViewContext";
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -7,6 +7,13 @@ import "../../components/CSS/BlogCard.css";
 const BlogCard = React.forwardRef(({content, style, onClick}, ref) => {
 
     const isMobileView = useMobileView();
+    const [isLiked, setIsLiked] = useState(false);
+    const [likeCount, setLikeCount] = useState(content.likeCount);
+
+    const handleLikeClick = () => {
+        setIsLiked(!isLiked);
+        setLikeCount(prevCount => (isLiked ? prevCount - 1 : prevCount + 1));
+      };
 
     return (
         <div className="blog-content-card" ref={ref} style={style}>
@@ -18,6 +25,13 @@ const BlogCard = React.forwardRef(({content, style, onClick}, ref) => {
                 </div>
                 <div className="cat-div">
                     <p className="font-secondary blog-content-card-date" style={{ fontSize:'15px', marginLeft:'20px', color:'white' }}><i class="fa-regular fa-newspaper" style={{ marginRight:'5px'}}></i>{content.cat}</p>
+                </div>
+                <div className="like-button">
+                    <i
+                        className={`fa-${isLiked ? 'solid' : 'regular'} fa-heart blogCard-t2-like`}
+                        onClick={handleLikeClick}
+                    ></i>
+                    <span>{likeCount}</span>
                 </div>
             </div>
             <div className="blog-content-card-body">
@@ -31,7 +45,6 @@ const BlogCard = React.forwardRef(({content, style, onClick}, ref) => {
                 <hr style={{ marginTop:'-0.5rem'}} />
                 <p className="font-secondary blog-content-card-sub" style={{ fontSize:'15px', letterSpacing:'0' }}>{content.sub}</p>
                 <button className='btn btn-dark btn-sm' onClick={onClick}>Read Article</button>
-                {/* <ShareButtons url={content.blogUrl} title={content.title} thumbnail={content.blogThumbnail} /> */}
             </div>
         </div>
     );
