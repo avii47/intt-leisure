@@ -41,9 +41,9 @@ const HomePage = () => {
             <Suspense fallback={<LoadingSpinner />}>
                 <HeroSection />
             </Suspense>
-
-            <SectionLoader Component={MindfulnessTourismSection} />
             <SectionLoader Component={WhyChooseUsSection} />
+            <SectionLoader Component={MindfulnessTourismSection} />
+            
             <SectionLoader Component={ServicesSection} />
             <SectionLoader Component={TestimonialSection} />
             <SectionLoader Component={ConnectAppSection} />

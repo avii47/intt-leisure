@@ -1,3 +1,28 @@
 .blogCardHr-container{
     display: flex;
+    margin-top: 20px;
+    opacity: 0;
+    cursor: pointer;
+  
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+.blogCardHr-img{
+    height: 120px;
+    border-radius: 5px;
+}
+.blogCardHr-date{
+    color: rgb(129, 129, 129);
+    font-size: 14px;
+}
+.blogCardHr-title{
+    font-weight: 400;
+    letter-spacing: 0;
+}
+.blogCardHr-icons{
+    margin-right: 5px;
+}
+.blogCardHr-container.visible {
+    opacity: 1;
+    transform: translateY(0);
 }

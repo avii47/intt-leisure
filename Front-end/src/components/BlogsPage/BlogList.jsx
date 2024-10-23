@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useMobileView } from "../../contexts/MobileViewContext";
 import BlogCard from "./BlogCard";
 import cardLoader from '../../hooks/cardLoader';
-import contentData from "../../data/BlogListData";
+import contentData from "../../data/BlogsData";
 import "../../components/CSS/Pages/BlogsListPage.css";
 
 const BlogsList = () => {

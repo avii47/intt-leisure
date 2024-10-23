@@ -1,8 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import blogsListData from '../data/BlogListData';
-import blogsContentData from '../data/BlogContentData';
+import blogsContentData from '../data/BlogsData';
 import ScrollToTopButton from '../components/ScrollToTopButton';
 // import "../components/CSS/Pages/BlogsPage.css";
 import "../components/CSS/Pages/BlogsPage.css";
@@ -15,9 +14,6 @@ const MobileButton = lazy(() => import('../components/MobileBookNowButton'));
 const BlogsContentPage = () => {
 
     const { id } = useParams();
-
-    const heroContentId = parseInt(id, 10);
-    const heroContent = blogsListData.find(item => item.id === heroContentId);
 
     const contentId = parseInt(id, 10);
     const content = blogsContentData.find(item => item.id === contentId);
@@ -35,18 +31,10 @@ const BlogsContentPage = () => {
                 <link rel="canonical" href="https://inttleisure.com/blogs" />
             </Helmet>
             <Suspense fallback={<div>Loading...</div>}>
-                <HeroSection img={heroContent.img} title={heroContent.title} topic={topic} />
+                <HeroSection img={content.img} title={content.title} topic={topic} />
             </Suspense>
             <Suspense fallback={<div>Loading...</div>}>
-                <BlogsContent   
-                    title={content.title}
-                    description={content.description}
-                    img={content.img}
-                    imgSrc={content.imgSrc}
-                    paragraphs={content.paragraphs} 
-                    sections={content.sections}
-                    recommendedLinks={content.recommendedLinks} 
-                />
+                <BlogsContent content={content} />
             </Suspense>
             <Suspense fallback={<div>Loading...</div>}>
                 <FooterSection />
