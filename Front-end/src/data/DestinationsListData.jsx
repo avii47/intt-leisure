@@ -8,17 +8,38 @@ const ContentData = [
     img: img_01,
     title: "Dubai",
     description:
-      "Dubai Tour Packages Honeymoon in Dubai Visa, Hotels, Meals included Marina Cruise Dinner Desert Safari City Tour Starting price LKR 179,999 Submit Inquiry Call now Best of Dubai All exclusive 7 Nights…",
+      "Sri Lanka, historically known as Ceylon, and officially the Democratic..",
   },
   {
     id: 2,
     img: img_02,
     title: "Thailand",
     description:
-      "Thailand Tour Packages Bangkok Pattaya 3 Star Category Hotel Accommodation on BB basis in Bangkok Return Airport Transfers in Private Car Chaophraya River Cruise With International Buffet…",
+      "Sri Lanka, historically known as Ceylon, and officially the Democratic..",
   },
   {
     id: 3,
+    img: img_03,
+    title: "Sri Lanka",
+    description:
+      "Sri Lanka, historically known as Ceylon, and officially the Democratic..",
+  },
+  {
+    id: 4,
+    img: img_01,
+    title: "Dubai",
+    description:
+      "Sri Lanka, historically known as Ceylon, and officially the Democratic..",
+  },
+  {
+    id: 5,
+    img: img_02,
+    title: "Thailand",
+    description:
+      "Sri Lanka, historically known as Ceylon, and officially the Democratic..",
+  },
+  {
+    id: 6,
     img: img_03,
     title: "Sri Lanka",
     description:
