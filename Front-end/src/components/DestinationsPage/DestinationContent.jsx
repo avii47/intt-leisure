@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useMobileView } from "../../contexts/MobileViewContext";
 import contentData from "../../data/DestinationsListData";
 import MainTourCard from "../DestinationsPage/MainTourCard"
+import CategoryCard from "./CategoryCard";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -117,16 +118,13 @@ const DestinationsContent = () => {
       }`}
     >
       <div className="destination-section-content page-section">
-          <div className="main-dcards-container">
+          <div className="main-dcards-section-container">
             <h2 className="font-primary">Where to next?</h2>
             <p className="font-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <div className="main-dcard">
-              <div className="main-dcard-overlay"></div>
-              <img className="main-dcard-img" src={img1} alt="" />
-              <div className="main-dcard-text-container">
-                <h2 className="font-primary main-dcard-text">Sri Lankan Tours</h2>
-              </div>
-              
+            
+            <div className="main-cards-container">
+              < CategoryCard  imageSrc={img1} title={"Sri Lankan Tours"} />
+              < CategoryCard  imageSrc={img2} title={"Other Tours"} />
             </div>
           </div>
           <div className="dVideo-container">
