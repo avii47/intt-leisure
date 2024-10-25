@@ -6,7 +6,7 @@ import thailandContentData from "../../data/ThailandTourData";
 import sriLankaContentData from "../../data/ThailandTourData";
 import "../CSS/Pages/DestinationInnerPage.css";
 
-const TourComponent = lazy(() => import("./TourCard"));
+// const TourComponent = lazy(() => import("./TourCard"));
 
 const DestinationInnerContent = ({ content }) => {
   const isMobileView = useMobileView();
@@ -71,14 +71,14 @@ const DestinationInnerContent = ({ content }) => {
           id="destionation-inner-cards-container"
           className="destionation-inner-cards-container d-flex"
         >
-          {contentData.map((content, index) => (
+          {/* {contentData.map((content, index) => (
             <TourComponent
               key={index}
               content={content}
               onInquiryClick={handleInquiryClick}
               onCallClick={handleCallClick}
             />
-          ))}
+          ))} */}
         </div>
       </div>
     </section>

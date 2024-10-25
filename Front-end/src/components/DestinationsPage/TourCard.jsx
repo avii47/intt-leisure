@@ -1,38 +1,19 @@
 import React from 'react';
-import '../CSS/Pages/InnerTourCard.css';
+import "../../components/CSS/Pages/MainTourCard.css";
 
-const TourComponent = ({ content, onInquiryClick, onCallClick  }) => {
+const TourCard = React.forwardRef(({ content, className, style, onClick }, ref) => {
   return (
-    <div className="tour-component col-12">
-      <div className="tour-left col-lg-3">
-        <img 
-          src={content.img} 
-          alt={content.title} 
-          className="tour-image"
-        />
-      </div>
-
-      <div className="tour-middle col-lg">
-        <h1>{content.title}</h1>
-        <ul className="tour-details">
-          {content.details.map((detail, index) => (
-            <li key={index}>{detail}</li>
-          ))}
-        </ul>
-      </div>
-
-      <div className="col-lg-3 tour-right">
-          <div className="tour-starting-price">
-            Starting price <br /> <span>{content.startingPrice}</span>
-            <hr />
-          </div>
-          <div className="tour-buttons">
-            <button className="inquiry-button" onClick={onInquiryClick}>Submit Inquiry</button>
-            <button className="call-button" onClick={onCallClick}>Call now</button>
-          </div>
+    <div className='tour-outer-div'>
+      <div ref={ref} className={`tour-card ${className}`} style={style} onClick={onClick}>
+        <div className="tour-overlayer"></div>
+        <img className='tour-img' src={content.img} alt={content.title + " img"} loading='lazy' />
+        <div className="tour-card-content">
+          <h4 className='font-primary' style={{ fontSize: '28px', letterSpacing: '1px' }}>{content.title}</h4>
+          <p style={{ letterSpacing: '0px', fontWeight: '250' }} className='font-secondary'>{content.description}</p>
+        </div>
       </div>
     </div>
   );
-};
+});
 
-export default TourComponent;
+export default TourCard;

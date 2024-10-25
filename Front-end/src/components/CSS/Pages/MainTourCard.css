@@ -11,6 +11,9 @@
 }
 
 .mobile-view .tour-card {
+    background-color: aquamarine;
+    height: 450px;
+    width: auto;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -73,11 +76,15 @@
     margin: 10px 0;
 }
 
+
 .tour-card .tour-card-content p {
     font-size: 16px;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.mobile-view .tour-card .tour-card-content p {
+    opacity: 1;
 }
 
 .tour-card:hover .tour-card-content {
