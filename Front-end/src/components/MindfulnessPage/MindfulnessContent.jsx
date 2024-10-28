@@ -105,6 +105,7 @@ const MindfulnessContent = () => {
             />
           ))}
         </div>
+        
       </div>
     </section>
   );

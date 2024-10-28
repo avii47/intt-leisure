@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import "../../components/CSS/Home/MindfulnessTourismSection.css";
 import mindfulness_section_bg from '../../assets/images/homePage-mindfulness-section.jpg';
 
+
+
 const MindfulnessTourismSection = () => {
 
   const [isMobileView, setIsMobileView] = useState(false);
@@ -64,6 +66,7 @@ const MindfulnessTourismSection = () => {
           <p className='font-secondary' style={{ fontWeight: '250', marginTop: '20px' }}>Experience mindfulness in Sri Lanka with techniques supported by research and teachings rooted in original practices. Our approach is distinct from common Western ideologies, offering a unique way to deepen your mindfulness practice and find true relaxation.</p>
           <br></br>
           <button type="button" className="btn btn-light" onClick={() => handleOnClick('/mindfulness')} style={{ width: '150px' }}>Learn more</button>
+          
         </div>
       </div>
     </section>

@@ -92,6 +92,10 @@
 .contact-icons{
   height: 1.3rem;
 }
+.mobile-view .contact-icons{
+    height: 1.1rem;
+    margin-top: -5px;
+  }
 .link-text{
   text-decoration: none;
   color: black;

@@ -79,7 +79,7 @@ const BlogsContentTemplate = ({content}) => {
           </div>
 
           {/* Render Recommended Links */}
-          <div className="recommended">
+          {/* <div className="recommended">
             <h3>Recommended for you:</h3>
             <div className="col-12 d-flex">
               {content.recommendedLinks.map((col, i) => (
@@ -99,7 +99,7 @@ const BlogsContentTemplate = ({content}) => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="col-md-4" style={{ paddingLeft: isMobileView? "0":"30px" }}>
 
