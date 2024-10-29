@@ -1,8 +1,8 @@
-.sl-tours-section{
+.itinerary-content-section{
     display: flex;
     justify-content: center;
 }
-.sl-tours-content {
+.itinerary-section-content {
     width: 80vw;
     flex-wrap: wrap; 
     text-align: left;

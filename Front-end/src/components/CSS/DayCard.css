@@ -1,0 +1,75 @@
+/* Container for the day card */
+.day-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header section (collapsed view) */
+  .day-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ccc;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  /* Styling for day and title in the header */
+  .day-card-day {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .day-card-title {
+    flex-grow: 1;
+    margin-left: 10px;
+    font-size: 1.1em;
+    color: #333;
+  }
+  
+  /* Expand button */
+  .expand-button {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  
+  /* Details section (expanded view) */
+  .day-card-details {
+    padding: 15px;
+    background-color: #fff;
+    animation: expandAnimation 0.3s ease-in-out;
+  }
+  
+  /* Image in the expanded view */
+  .day-card-image {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  /* Footer details */
+  .day-card-footer {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #666;
+  }
+  
+  /* Optional animation */
+  @keyframes expandAnimation {
+    from {
+      max-height: 0;
+      opacity: 0;
+    }
+    to {
+      max-height: 1000px;
+      opacity: 1;
+    }
+  }
+  

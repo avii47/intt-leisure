@@ -1,5 +1,5 @@
 import React from 'react';
-import '../CSS/Pages/TourCard.css'; // External CSS
+import '../CSS/Pages/TourCard.css'; 
 
 const TourCard = ({ imageSrc, title, description, link, onClick }) => {
     return (

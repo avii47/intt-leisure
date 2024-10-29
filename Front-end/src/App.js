@@ -22,6 +22,7 @@ const PackageContent = lazy(() => import('../src/pages/PackageContent'));
 // const DestinationInnerPage = lazy(() => import('../src/pages/DestinationInnerPage'));
 const SriLankanToursPage = lazy(() => import('../src/pages/SriLankanToursPage'));
 const OtherToursPage = lazy(() => import('../src/pages/OtherToursPage'));
+const ItineraryPage = lazy(() => import('../src/pages/ItineraryPage'));
 const EventsInnerPage = lazy(() => import('../src/pages/EventsInnerPage'));
 const TermsConditionsPage = lazy(() => import('../src/pages/Terms&ConditionsPage'));
 const PrivacyPolicyPage = lazy(() => import('../src/pages/PrivacyPolicyPage'));
@@ -166,6 +167,14 @@ const App = () => {
               element={
                 <motion.div initial="initial" animate="enter" exit="exit" variants={pageVariants} className="page-transition">
                   <SriLankanToursPage />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/destinations/sriLankan/:id"
+              element={
+                <motion.div initial="initial" animate="enter" exit="exit" variants={pageVariants} className="page-transition">
+                  <ItineraryPage />
                 </motion.div>
               }
             />

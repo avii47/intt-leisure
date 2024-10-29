@@ -90,3 +90,6 @@ body {
   background-color: transparent;
   z-index: 1;
 }
+.outer-div{
+  padding: 20px;
+}
