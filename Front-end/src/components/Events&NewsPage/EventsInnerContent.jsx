@@ -64,8 +64,8 @@ function EventsInnerContent({ content }) {
           <div className="col-md-6" style={{paddingLeft: isMobileView ? '0px': '50px'}}>
             <img
               src={content.img}
+              alt={`${content.eventTitle}-image`}
               className="event-img"
-              alt={content.eventTitle}
             />
           </div>
         </div>

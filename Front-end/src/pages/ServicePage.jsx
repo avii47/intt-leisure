@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { Helmet } from 'react-helmet-async';
 import ScrollToTopButton from '../components/ScrollToTopButton';
+import LoadingSpinner from '../components/LoadingSpinner';
 import "../components/CSS/Pages/ServicePage.css";
 import bg from '../assets/images/servicesPage-hero-img.jpg';
 
@@ -20,16 +21,16 @@ const ServicePage = () => {
                 <meta name="description" content="As you immerse yourself in this enchanting destination, we invite you to participate in profound self-reflection and practice alongside us." />
                 <link rel="canonical" href="https://inttleisure.com/services" />
             </Helmet>
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<LoadingSpinner />}>
                 <HeroSection img={bg} title={title} sub={sub} aboutImg={aboutImg} />
             </Suspense>
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<LoadingSpinner />}>
                 <ServiceContent />
             </Suspense>
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<LoadingSpinner />}>
                 <FooterSection />
             </Suspense>
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<LoadingSpinner />}>
                 <MobileButton label="Book Now" />
             </Suspense>
             <ScrollToTopButton />

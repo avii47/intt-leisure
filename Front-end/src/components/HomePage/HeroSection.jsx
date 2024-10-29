@@ -74,6 +74,7 @@ const HeroSection = () => {
       {videoLoaded && (
           <Suspense fallback={<LoadingSpinner />}>
             <video
+              width="500" height="300"
               src={require('../../assets/Intt Leisure - Hero Page new.mp4')}
               type="video/mp4"
               autoPlay

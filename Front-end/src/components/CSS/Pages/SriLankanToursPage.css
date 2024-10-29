@@ -1,0 +1,19 @@
+.sl-tours-section{
+    display: flex;
+    justify-content: center;
+}
+.sl-tours-content {
+    width: 80vw;
+    flex-wrap: wrap; 
+    text-align: left;
+}
+.itinerary-wrapper {
+    position: relative;
+    margin-top: 1rem;
+    margin-left: -20px;
+}
+.mobile-view .itinerary-wrapper {
+    width: 100vw;
+    margin-top: 0rem;
+    margin-left: -30px;
+}

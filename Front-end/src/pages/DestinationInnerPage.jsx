@@ -95,7 +95,7 @@ const DestinationInnerPage = () => {
     return (
         <>
             <Helmet>
-                <meta name="description" content="find destinations for you" />
+                <meta name="description" content="find destinations in Sri Lanka for your mindfulness vacation" />
                 <link rel="canonical" href="https://inttleisure.com/destinations" />
             </Helmet>
             <Suspense fallback={<div>Loading...</div>}>

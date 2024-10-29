@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-// import "../../components/CSS/ContentBlock.css";
 import { useNavigate } from 'react-router-dom';
 
 const ContentBlock = ({ image, title, text, imagePosition }) => {
@@ -51,7 +50,7 @@ const ContentBlock = ({ image, title, text, imagePosition }) => {
       {!isMobileView && (
         <>
           <div className={`content-block__image ${imagePosition === 'left' ? 'left' : 'right'}`}>
-            <img src={image} alt={title} style={{ borderRadius: '10px' }} />
+            <img src={image} alt={`${title}-image`} style={{ borderRadius: '10px' }} loading='lazy'/>
           </div>
           <div className={`content-block__text ${imagePosition === 'left' ? 'left' : 'right'}`}>
             <h6 className="font-secondary" style={{ fontWeight: '350', fontSize: '15px' }}>Explore</h6>
@@ -70,7 +69,7 @@ const ContentBlock = ({ image, title, text, imagePosition }) => {
             <h3 className="font-primary">{title}</h3>
           </div>
           <div className="content-block__image">
-            <img src={image} alt={title} style={{ borderRadius: '10px' }} />
+            <img src={image} alt={`${title}-image`} style={{ borderRadius: '10px' }} loading='lazy' />
           </div>
           <div className="content-block__text">
             <p className="font-secondary">{text}</p>

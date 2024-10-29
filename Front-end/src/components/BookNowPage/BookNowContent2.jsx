@@ -1,24 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import PackageCard from "../BookNowPage/PackageCard";
 import DatePicker from "react-datepicker";
-import { db } from "../../firebase"; // Import the initialized Firestore instance
+import { db } from "../../firebase"; 
 import { addDoc, collection } from "firebase/firestore";
 import { useMobileView } from "../../contexts/MobileViewContext";
-import "react-datepicker/dist/react-datepicker.css";
+import contentData from "../../data/ServicePageData";
 import emailjs from "emailjs-com";
 import Modal from "./Modal";
 import Modal2 from "./Modal2";
-
-import img1 from "../../assets/images/leadersPage-hero-img.jpg";
-import img2 from "../../assets/images/educatorsPage-hero-img.jpg";
-import img3 from "../../assets/images/coparatesPage-hero-img.jpg";
-import img4 from "../../assets/images/seekersPage-hero-img.jpg";
-import img5 from "../../assets/images/studentsPage-hero-img.jpg";
+import "react-datepicker/dist/react-datepicker.css";
 
 const BookNowContent2 = () => {
-  const img6 = "https://img.freepik.com/free-photo/back-view-woman-doing-yoga-outdoors_23-2148769551.jpg?t=st=1726225399~exp=1726228999~hmac=ecaf4b00aa9acc543b0324daca432cd61131bc193e49bb3f774a2dca29807fcf&w=1380";
   
-  // State for input fields
   const [checkinDate, setCheckinDate] = useState(new Date());
   const [checkoutDate, setCheckoutDate] = useState(new Date());
   const [selectedCard, setSelectedCard] = useState(null);
@@ -34,37 +27,29 @@ const BookNowContent2 = () => {
   const [showModal, setShowModal] = useState(false);
   const [showBookingSummary, setShowBookingSummary] = useState(false);
 
-  // State for validation errors
   const [errors, setErrors] = useState({});
 
   const validateForm = () => {
     const newErrors = {};
     
-    // Name validation
     if (!name) newErrors.name = "Name is required";
     
-    // Email validation
     if (!email) {
       newErrors.email = "Email is required";
     } else if (!/\S+@\S+\.\S+/.test(email)) {
       newErrors.email = "Email is invalid";
     }
 
-    // Mobile validation
     if (!mobile) newErrors.mobile = "Mobile number is required";
     
-    // Check-in and check-out date validation
     if (!checkinDate) newErrors.checkinDate = "Check-in date is required";
     if (!checkoutDate) newErrors.checkoutDate = "Check-out date is required";
     if (checkoutDate <= checkinDate) newErrors.checkoutDate = "Must be after check-in date";
 
-    // Adults validation
     if (!adults || adults <= 0) newErrors.adults = "At least one adult is required";
 
-    // Pax validation (maximum 20 guests)
     if (adults + children > 20) newErrors.guests = "Total number of guests cannot exceed 20";
 
-    // Package selection validation
     if (!pack) newErrors.pack = "Please select a package";
 
     return newErrors;
@@ -89,7 +74,6 @@ const BookNowContent2 = () => {
     }
   };
 
-  // Calculate and set the duration when the user selects the checkout date
   const handleCheckoutChange = (date2) => {
     setCheckoutDate(date2);
     if (checkinDate && date2) {
@@ -105,10 +89,10 @@ const BookNowContent2 = () => {
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
-      return; // Do not proceed if there are validation errors
+      return; 
     }
 
-    setShowBookingSummary(true); // Show booking summary modal when validation passes
+    setShowBookingSummary(true); 
   };
 
   const handleBookingConfirm = () => {
@@ -139,39 +123,6 @@ const BookNowContent2 = () => {
         console.error("Failed to send email:", error);
       });
   };
-
-  const contentData = [
-    {
-      img: img1,
-      title: "Leaders",
-      sub: "Mindfulness for Leaders",
-      text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
-    },
-    {
-      img: img2,
-      title: "Educators",
-      sub: "Mindfulness for Educators",
-      text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
-    },
-    {
-      img: img3,
-      title: "Corporates",
-      sub: "Mindfulness for Corporates",
-      text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
-    },
-    {
-      img: img4,
-      title: "Seekers",
-      sub: "Mindfulness for Seekers",
-      text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
-    },
-    {
-      img: img5,
-      title: "Students",
-      sub: "Mindfulness for Students",
-      text: "Connect with the Ultimate Luxury of Mindfulness in Sri Lanka.",
-    }
-  ];
 
   const handleCardClick = (index, title) => {
     setSelectedCard(index);

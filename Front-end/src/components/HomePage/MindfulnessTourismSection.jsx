@@ -57,7 +57,7 @@ const MindfulnessTourismSection = () => {
   return (
     <section id="mindfulness-tourism-section" className={`mindfulness-tourism-section ${isMobileView ? 'mobile-view' : ''}`} style={{marginTop: isMobileView? '8rem':'12rem'}}>
       <div className="overlayert"></div>
-      <img src={mindfulness_section_bg} className="mindfulness-img" alt="mindfulness section background image" loading='lazy' />
+      <img src={mindfulness_section_bg} className="mindfulness-img" alt="mindfulness section background image" loading='lazy'/>
       <div className="mindfulness-tourism-content">
         <div className='mtc-main'>
           <h6 className='font-secondary' style={{ fontWeight: '250', fontSize: '15px' }}>Explore</h6>
@@ -66,7 +66,6 @@ const MindfulnessTourismSection = () => {
           <p className='font-secondary' style={{ fontWeight: '250', marginTop: '20px' }}>Experience mindfulness in Sri Lanka with techniques supported by research and teachings rooted in original practices. Our approach is distinct from common Western ideologies, offering a unique way to deepen your mindfulness practice and find true relaxation.</p>
           <br></br>
           <button type="button" className="btn btn-light" onClick={() => handleOnClick('/mindfulness')} style={{ width: '150px' }}>Learn more</button>
-          
         </div>
       </div>
     </section>

@@ -6,7 +6,7 @@ const IconCard = React.forwardRef(({ content, className, style }, ref) => {
         <div className='outer-div'>
             <div ref={ref} className={`${className}`} style={style}>
                 <div className='iconCard-img-container2'>
-                    <img className='iconCard-img2' src={content.img} alt="icon-img" loading='lazy' />
+                    <img className='iconCard-img2' src={content.img} alt={`${content.title}-image`} loading='lazy' />
                 </div>
                 <div className="icon-discription2">
                     <h4 className='font-secondary' style={{ fontSize: '22px', letterSpacing: '0px' }}>{content.title}</h4>

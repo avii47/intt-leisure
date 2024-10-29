@@ -52,7 +52,7 @@ const BlogsContentTemplate = ({content}) => {
             <img
               className="blogs-img-t2"
               src={content.img}
-              alt="blogs-img"
+              alt={`${content.title}-image`}
               loading="lazy"
             />
           <p

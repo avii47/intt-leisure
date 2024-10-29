@@ -1,0 +1,93 @@
+/* ItineraryCard.css */
+
+.itinerary-card {
+    width: 480px;
+    border-radius: 8px;
+    overflow: hidden;
+    
+    font-family: Arial, sans-serif;
+    position: relative;
+  }
+  
+  .image-overlay {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  .overlay-text, .overlay-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .overlay-bg {
+    background-color: rgba(0, 0, 0, 0.616); /* Black overlay */
+    z-index: 1;
+  }
+  
+  .overlay-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    color: white;
+    z-index: 2;
+  }
+  
+  .title {
+    font-size: 30px;
+    letter-spacing: 1px;
+  }
+  
+  .duration {
+    font-size: 1rem;
+  }
+  .itinerary-card-hr{
+    margin: -1px 0 5px 0;
+  }
+  
+  .description {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+  
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  .itinerary-card:hover .overlay-text,
+  .itinerary-card:hover .overlay-bg {
+    opacity: 1;
+  }
+  
+  .itinerary-card:hover .card-image {
+    transform: scale(1.05); 
+  }
+
+  .icard-arrow {
+    color: white;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.itinerary-card:hover .icard-arrow {
+    opacity: 1;
+    transform: translateX(0); 
+}
+  

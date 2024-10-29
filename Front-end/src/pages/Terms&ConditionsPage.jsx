@@ -11,10 +11,6 @@ const TermsConditionsPage = () => {
   
       <section id="termsConditions-content-section" className={`section justify-content-center termsConditions-content-section d-flex ${isMobileView ? 'mobile-view' : ''}`}>
         <div className="service-section-content justify-content-center" style={{backgroundColor:'white'}}>
-            <Helmet>
-                <meta name="description" content="What exactly is Mindful Tourism? We often hear about mindfulness, but how often do we participate in Mindful Tourism? It’s a distinct approach rooted in Sri Lanka's authentic mindfulness teachings and bolstered by solid research." />
-                <link rel="canonical" href="https://inttleisure.com/termsConditions" />
-            </Helmet>
             <h1 className='font-primary top-container'>Terms & Conditions</h1>
             <ul className='terms-list'>
                 <li>

@@ -6,7 +6,6 @@ import './App.css';
 import Navbar from './components/Navbar';
 import { DropdownProvider } from "./contexts/DropdownContext";
 import ScrollToTop from './components/ScrollToTop';
-// import { useMobileView } from "../../contexts/MobileViewContext";
 import { AnimatePresence, motion } from 'framer-motion';
 
 const HomePage = lazy(() => import('../src/pages/HomePage'));
@@ -20,7 +19,9 @@ const BookNowPage = lazy(() => import('../src/pages/BookNowPage'));
 const BlogsPage = lazy(() => import('../src/pages/BlogsPage'));
 const BlogsContentPage = lazy(() => import('../src/pages/BlogsContentPage'));
 const PackageContent = lazy(() => import('../src/pages/PackageContent'));
-const DestinationInnerPage = lazy(() => import('../src/pages/DestinationInnerPage'));
+// const DestinationInnerPage = lazy(() => import('../src/pages/DestinationInnerPage'));
+const SriLankanToursPage = lazy(() => import('../src/pages/SriLankanToursPage'));
+const OtherToursPage = lazy(() => import('../src/pages/OtherToursPage'));
 const EventsInnerPage = lazy(() => import('../src/pages/EventsInnerPage'));
 const TermsConditionsPage = lazy(() => import('../src/pages/Terms&ConditionsPage'));
 const PrivacyPolicyPage = lazy(() => import('../src/pages/PrivacyPolicyPage'));
@@ -161,10 +162,18 @@ const App = () => {
               }
             />
             <Route
-              path="/destinations/:id"
+              path="/destinations/sriLankan"
               element={
                 <motion.div initial="initial" animate="enter" exit="exit" variants={pageVariants} className="page-transition">
-                  <DestinationInnerPage />
+                  <SriLankanToursPage />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/destinations/other"
+              element={
+                <motion.div initial="initial" animate="enter" exit="exit" variants={pageVariants} className="page-transition">
+                  <SriLankanToursPage />
                 </motion.div>
               }
             />

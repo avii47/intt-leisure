@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from "react";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import ScrollToTopButton from "../components/ScrollToTopButton";
+import LoadingSpinner from '../components/LoadingSpinner';
 import contentData from "../data/EventstData";
 import "../components/CSS/Pages/EventsInnerPage.css";
 
@@ -24,20 +25,20 @@ const EventsInnerPage = () => {
   return (
     <>
       <Helmet>
-        <meta name="description" content="find best package for you" />
-        <link rel="canonical" href="https://inttleisure.com/events" />
+        <meta name="description" content="explore our mindfulness events and news" />
+        <link rel="canonical" href="https://inttleisure.com/events&news" />
       </Helmet>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<LoadingSpinner />}>
         <HeroSection
           img={img}
           topic={topic}
           title={content.eventTitle}
         />
       </Suspense>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<LoadingSpinner />}>
         <EventsInnerContent content={content} />
       </Suspense>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<LoadingSpinner />}>
         <FooterSection />
       </Suspense>
       <ScrollToTopButton />

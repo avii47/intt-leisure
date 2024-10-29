@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { Helmet } from 'react-helmet-async';
 import ScrollToTopButton from '../components/ScrollToTopButton';
+import LoadingSpinner from '../components/LoadingSpinner';
 import "../components/CSS/Pages/Events&NewsPage.css";
 import bg from '../assets/images/events&newsPage-hero-img.jpg'
 
@@ -17,19 +18,19 @@ const ContactUsPage = () => {
     return (
         <>
             <Helmet>
-                <meta name="description" content="mindfulness events and news" />
+                <meta name="description" content="explore our mindfulness events and news" />
                 <link rel="canonical" href="https://inttleisure.com/events&news" />
             </Helmet>
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<LoadingSpinner />}>
                 <HeroSection img={bg} title={title} sub={sub} aboutImg={aboutImg} />
             </Suspense>
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<LoadingSpinner />}>
                 <EventsNewsContent />
             </Suspense>
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<LoadingSpinner />}>
                 <FooterSection />
             </Suspense>
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<LoadingSpinner />}>
                 <MobileButton label="Book Now" />
             </Suspense>
             <ScrollToTopButton />

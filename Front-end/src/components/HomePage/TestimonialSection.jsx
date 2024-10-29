@@ -95,7 +95,6 @@ const TestimonialSection = () => {
               <p className='font-secondary' style={{ marginTop: '1rem' }}>I recently embarked on a mindfulness journey in the breathtaking landscapes of Sri Lanka, and it was unlike anything I’ve ever experienced before. The serene beauty of this island, combined with the mindfulness practices, left me feeling like an entirely new person. The tranquility I found amidst the natural wonders of Sri Lanka transformed me in ways I couldn’t have imagined. It was a truly rejuvenating and life-changing experience that I highly recommend to anyone seeking inner peace and personal growth.</p>
               <p className='font-secondary'>Jim Ludema | <strong>Global Leader</strong> </p>
             </div>
-
           </div>
         </div>
       </div>

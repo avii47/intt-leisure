@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import left_arrow from "../../assets/icons/left-arrow.png";
 import right_arrow from "../../assets/icons/right-arrow.png";
-import ServiceCard from "./ServiceCard";
+import ServiceCard from "./ServiceCard"; 
 import { useMobileView } from "../../contexts/MobileViewContext";
 import contentData from "../../data/ServicesSectionData";
 import "../../components/CSS/Home/ServicesSection.css";
@@ -148,21 +148,21 @@ const ServicesSection = () => {
         <div className="service-slider-wrapper">
           <div className="slider-container" style={{ paddingBottom: "20px" }}>
             <Slider
-              ref={(slider) => {
-                sliderRef = slider;
-              }}
-              {...settings}
-            >
-              {contentData.map((content, index) => (
-                <ServiceCard
-                  className={`service-card card card-item${index}`}
-                  key={index}
-                  content={content}
-                  ref={(el) => (serviceCardsRef.current[index] = el)}
-                  style={{ "--animation-order": index }}
-                  onClick={() => handleServiceCardClick(content.id)}
-                />
-              ))}
+                ref={(slider) => {
+                  sliderRef = slider;
+                }}
+                {...settings}
+              >
+                {contentData.map((content, index) => (
+                  <ServiceCard
+                    className={`service-card card card-item${index}`}
+                    key={index}
+                    content={content}
+                    ref={(el) => (serviceCardsRef.current[index] = el)}
+                    style={{ "--animation-order": index }}
+                    onClick={() => handleServiceCardClick(content.id)}
+                  />
+                ))}
             </Slider>
           </div>
         </div>

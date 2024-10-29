@@ -11,7 +11,7 @@ const EventCard = React.forwardRef(({ content, style, onClick }, ref) => {
         <img
           className="eventsNews-img"
           src={content.img}
-          alt="news image"
+          alt={`${content.eventTitle}-image`}
           loading="lazy"
         />
         <div className="img-overlay-date font-secondary">

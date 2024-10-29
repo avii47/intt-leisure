@@ -45,7 +45,7 @@ const ContentHeroSection = ({ img, title, topic }) => {
     <div id="content-hero-section" className={`content-hero-section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="content-hero-overlayer"></div>
       <LazyLoadImage
-        src={"https://img.freepik.com/free-psd/gradient-waves-border-design_23-2150756135.jpg?t=st=1729431352~exp=1729434952~hmac=3aae6e307d5ad05c4a02b3a316e1a50c6b7095138996bd1d8b8f82af13f5c885&w=1380"}
+        src={"https://img.freepik.com/free-photo/bright-beautiful-flowers-red-poppies-field-ai-generated-image_587448-1304.jpg?t=st=1730184549~exp=1730188149~hmac=7a8a7e225e9ce0aa2cf17c7a326cb4ea8f7a0e007140901eb3173ef6c660d630&w=1380"}
         className="content-hero-img"
         alt="hero image"
       />

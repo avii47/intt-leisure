@@ -159,10 +159,6 @@ const DestinationsContent = () => {
     setShowRightButton4(currentSlide2 < contentData.length - 4);
   };
 
-  const handleServiceCardClick = (id) => {
-    navigate(`/services/${id}`);
-  };
-
   const next = () => {
     sliderRef.slickNext();
   };
@@ -170,8 +166,17 @@ const DestinationsContent = () => {
     sliderRef.slickPrev();
   };
 
-  const handleDestinationCardClick = (id) => {
+  const handleTourCardClick = (id) => {
     navigate(`/contact-us`);
+  };
+
+  const handleMainCardClick = (id) => {
+    if(id == 1){
+      navigate(`/destinations/sriLankan`);
+    }
+    else if(id == 2){
+      navigate(`/destinations/other`);
+    }
   };
 
   const settings = {
@@ -229,10 +234,10 @@ const DestinationsContent = () => {
 
           <div id="main-cards-container" className="main-cards-container">
             <div id="card-left" className="card-left col-md-6">
-              <MainTourCard imageSrc={img1} title="Sri Lankan Tours" />
+              <MainTourCard imageSrc={img1} title="Sri Lankan Tours" onClick={() => handleMainCardClick(1)} />
             </div>
             <div id="card-right" className="card-right col-md-6">
-              <MainTourCard imageSrc={img2} title="Other Tours" />
+              <MainTourCard imageSrc={img2} title="Other Tours" onClick={() => handleMainCardClick(2)} />
             </div>
           </div>
         </div>
@@ -313,7 +318,7 @@ const DestinationsContent = () => {
                     content={content}
                     ref={(el) => (tourCardsRef.current[index] = el)}
                     style={{ "--animation-order": index }}
-                    // onClick={() => handleServiceCardClick(content.id)}
+                    onClick={() => handleTourCardClick(content.id)}
                   />
                 ))}
               </Slider>
@@ -324,15 +329,15 @@ const DestinationsContent = () => {
             <h2 className="font-primary">Our Certifications</h2>
             <div className="certifices-container d-flex">
               <div className="col-md-4" style={{textAlign:'center'}}>
-                <img className="dlogo" src={dLogo1} alt="" />
+                <img className="dlogo" src={dLogo1} alt="Sri Lankan Tourism Development Authority logo" />
                 <h3 className="font-secondary dlogo-txt">Sri Lankan Tourism Development Authority</h3>
               </div>
               <div className="col-md-4" style={{textAlign:'center'}}>
-                <img className="dlogo" src={dLogo2} alt="" />
+                <img className="dlogo" src={dLogo2} alt="IATA Accredited Agent logo" />
                 <h3 className="font-secondary dlogo-txt">IATA Accredited Agent</h3>
               </div>
               <div className="col-md-4" style={{textAlign:'center'}}>
-                <img className="dlogo" src={dLogo3} alt="" />
+                <img className="dlogo" src={dLogo3} alt="Sri Lankan Aviation Authority Sri Lanka logo" />
                 <h3 className="font-secondary dlogo-txt">Sri Lankan Aviation Authority Sri Lanka</h3>
               </div>
             </div>

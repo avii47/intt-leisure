@@ -5,12 +5,13 @@ import "../../components/CSS/Home/AboutSection.css";
 
 import achievement_img1 from '../../assets/images/achievements-img1.png'
 import achievement_img2 from '../../assets/images/achievements-img2.png'
-import gb from '../../assets/images/gb.png'
+import gb from '../../assets/images/boss manolead.jpg'
+import achivement_bg from '../../assets/images/vmg-background.jpg'
 import vision_icon from '../../assets/icons/vision_icon.png'
 import mission_icon from '../../assets/icons/mission_icon.png'
 
 import IconCard from './IconCard';
-import contentData from '../../data/WhyChooseUsSectionData';
+import contentData from '../../data/WhyChooseUsPageData';
 import "../../components/CSS/Home/WhyChooseUsSection.css";
 
 const AboutUsContent = () => {
@@ -126,28 +127,31 @@ const AboutUsContent = () => {
               </div>
             </div>
             <div className="col-lg-4" style={{ textAlign: 'right' }}>
-              <img src={gb} alt="our-story-image" className='story-img' />
+              <img src={gb} alt="doctor GB image" className='story-img' />
             </div>
           </div>
         </section>
 
         <section id='our-achievements' className='our-achievements why-choose-item'>
+          <div className="our-achievements-overlayer"></div>
+          <img src={achivement_bg} className='our-achievements-bg' alt="mindfulness section background image" loading='lazy'/>
           <div id='our-achievements-content' className='our-achievements-content'>
-            <h3 className="font-primary">Our Achievements</h3>
+            <div>
+            <h3 className="font-primary">Our Achievements</h3><hr style={{margin: isMobileView?'-30px 0 50px 0':'-50px 0 50px 0'}} />
             <div className="row d-flex">
               <div className="col-lg-6">
                 <div className="achivement-item">
-                  <img className='achivement-img' src={achievement_img1} alt="" />
+                  <img className='achivement-img' src={achievement_img1} alt="forbes logo" />
                   <p className="font-secondary">Every aspect of your journey is tailored to resonate with your unique leadership needs, providing a deep and meaningful experience that goes beyond conventional practices. Discover the true depth and serenity of mindfulness, guided by Dr. Hewawasam’s expertise, and enrich your leadership journey with us.</p>
                 </div>
               </div>
               <div className="col-lg-6 d-flex">
                 <div className="achivement-item achivement-item-right">
-                  <img className='achivement-img' src={achievement_img2} alt="" />
+                  <img className='achivement-img' src={achievement_img2} alt="harvard business review logo" style={{height: '180px'}}/>
                   <p className="font-secondary">Every aspect of your journey is tailored to resonate with your unique leadership needs, providing a deep and meaningful experience that goes beyond conventional practices. Discover the true depth and serenity of mindfulness, guided by Dr. Hewawasam’s expertise, and enrich your leadership journey with us.</p>
                 </div>
               </div>
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -157,21 +161,21 @@ const AboutUsContent = () => {
               <div className="col-md-4 d-flex vm-card-col">
                 <div className='vm-container'>
                   <h3 className="font-primary">Our Vision</h3>
-                  <img src={vision_icon} alt="vision_icon" style={{height:'200px', marginBottom:'40px'}}/>
+                  <img src={vision_icon} alt="vision icon" style={{height:'200px', marginBottom:'40px'}} loading='lazy'/>
                   <p className="font-secondary" style={{fontSize:'20px'}}>To unlock leadership potential with mindfulness vacations.</p>
                 </div>
               </div>
               <div className="col-md-4 d-flex vm-card-col" style={{justifyContent:'center'}}>
                 <div className='vm-container'>
                   <h3 className="font-primary">Our Mission</h3>
-                  <img src={mission_icon} alt="mission_icon" style={{height:'200px', marginBottom:'40px'}}/>
+                  <img src={mission_icon} alt="mission icon" style={{height:'200px', marginBottom:'40px'}} loading='lazy'/>
                   <p className="font-secondary" style={{fontSize:'20px'}}>To uncover the hidden gem of authentic Buddhist teachings that provide the key to intellectual and emotional balance.</p>
                 </div>
               </div>
               <div className="col-md-4 d-flex vm-card-col" style={{justifyContent:'right' }}>
                 <div className='vm-container'>
                   <h3 className="font-primary">Our Goals</h3>
-                  <img src={mission_icon} alt="mission_icon" style={{height:'200px', marginBottom:'40px'}}/>
+                  <img src={mission_icon} alt="mission icon" style={{height:'200px', marginBottom:'40px'}} loading='lazy'/>
                   <p className="font-secondary" style={{fontSize:'20px'}}>To uncover the hidden gem of authentic Buddhist teachings that provide the key to intellectual and emotional balance.</p>
                 </div>
               </div>
