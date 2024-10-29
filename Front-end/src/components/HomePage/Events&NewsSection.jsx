@@ -1,6 +1,7 @@
-import React, { useState, useEffect, useRef, lazy } from 'react';
+import React, { useState, useRef, Suspense } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useMobileView } from '../../contexts/MobileViewContext';
+import LoadingSpinner from '../../components/LoadingSpinner'; 
 import ContentCard from './ContentCard'
 import cardLoader from '../../hooks/cardLoader';
 import "../../components/CSS/Home/Events&NewsSection.css";
@@ -96,21 +97,24 @@ const EventsNewsSection = ({ exclue }) => {
         </div>
         <div className='eventsNews-wrapper'>
           <div className="slider-container" style={{ paddingBottom: '100px', textAlign: 'center' }} >
-            <Slider ref={slider => { sliderRef = slider; }} {...settings}>
+          <Suspense fallback={<LoadingSpinner />}>
+          <Slider ref={slider => { sliderRef = slider; }} {...settings}>
               
-            {contentData
-              .filter((content) => content.id !== exclue)
-              .map((content, index) => (
-                <ContentCard
-                  key={index}
-                  className={`content-card`}
-                  content={content}
-                  ref={el => newsCardsRef.current[index] = el}
-                  style={{ '--animation-order': index }}
-                  onClick={() => handleOnClick(`/events&news/${content.id}`)}
-                />
-              ))}
-            </Slider>
+              {contentData
+                .filter((content) => content.id !== exclue)
+                .map((content, index) => (
+                  <ContentCard
+                    key={index}
+                    className={`content-card`}
+                    content={content}
+                    ref={el => newsCardsRef.current[index] = el}
+                    style={{ '--animation-order': index }}
+                    onClick={() => handleOnClick(`/events&news/${content.id}`)}
+                  />
+                ))}
+              </Slider>
+          </Suspense>
+
           </div>
         </div>
       </div>

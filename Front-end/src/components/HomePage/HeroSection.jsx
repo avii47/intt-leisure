@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import Lottie from 'lottie-react';
+import LoadingSpinner from '../../components/LoadingSpinner'; 
 import '../CSS/HeroSection.css';
 import img_01 from '../../assets/images/Manolead-01.png';
 import img_02 from '../../assets/images/FCC-Signature 1.png';
@@ -71,14 +72,16 @@ const HeroSection = () => {
     <div id="Hero-section" className={`hero-section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`}>
       <div className={`overlayer ${isCursorMoving ? '' : 'hidden'}`}></div>
       {videoLoaded && (
-        <video
-          src={require('../../assets/Intt Leisure - Hero Page new.mp4')}
-          type="video/mp4"
-          autoPlay
-          loop
-          muted
-          preload="auto"
-        />
+          <Suspense fallback={<LoadingSpinner />}>
+            <video
+              src={require('../../assets/Intt Leisure - Hero Page new.mp4')}
+              type="video/mp4"
+              autoPlay
+              loop
+              muted
+              preload="auto"
+            />
+          </Suspense>
       )}
       <div className="hero-content home-hero">
         <div id="hero-heading" className={`hero-heading-section ${isCursorMoving ? '' : 'hidden'}`}>

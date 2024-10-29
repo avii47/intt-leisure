@@ -9,7 +9,7 @@ const ContentCard = React.forwardRef(({ content, className, style, onClick }, re
       <div ref={ref} className={`${className}`} style={style}>
         <div className="image-zoom-container">
           <div className="image-overlay-container">
-            <img className="card-img top" src={`${content.img}`} alt={content.eventTitle} />
+            <img className="card-img top" src={`${content.img}`} alt={`${content.eventTitle}-image`} />
             <div className="overlay">
               <button className="btn btn-outline-light read-btn" onClick={onClick}>Read</button>
             </div>
