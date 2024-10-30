@@ -93,3 +93,8 @@ body {
 .outer-div{
   padding: 20px;
 }
+.disabled {
+  opacity: 0.5;
+  pointer-events: none; 
+  filter: grayscale(100%);
+}

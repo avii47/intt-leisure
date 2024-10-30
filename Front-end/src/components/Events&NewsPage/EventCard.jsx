@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useMobileView } from "../../contexts/MobileViewContext";
 
 const EventCard = React.forwardRef(({ content, style, onClick }, ref) => {

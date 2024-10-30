@@ -188,6 +188,8 @@
 }
 .nav-icon {
   height: 30px;
+  cursor: pointer;
+  color: white;
 }
 
 

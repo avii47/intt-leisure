@@ -1,0 +1,33 @@
+.Dfeedback-section{
+    justify-content: center;
+    margin-top: 100px;
+}
+.Dfeedback-content{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+}
+
+.Dfeedback-ft{
+    width: 46.875rem;
+    margin-bottom: 1rem;
+}
+.Din-f{
+    border: 1px solid rgba(128, 128, 128, 0.562);
+}
+.mobile-view .Dfeedback-ft{
+    width: 85vw;
+}
+.mobile-view .Dfeedback-content{
+    width: 100vw;
+    padding: 5%;
+}
+.mobile-view .Dfeedback-content h3{
+    font-size: 30px;
+}
+.Dfeedback-section2{
+    padding-top: 100px;
+    padding-bottom: 0px;
+    justify-content: center;
+}

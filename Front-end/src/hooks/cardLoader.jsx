@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const useIntersectionObserver = (elementsRef, classToAdd = 'visible', delay = 200, options = { threshold: 0.5 }) => {
+const useIntersectionObserver = (elementsRef, classToAdd = 'visible', delay = 200, options = { threshold: 0.5 }) => { 
   
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {

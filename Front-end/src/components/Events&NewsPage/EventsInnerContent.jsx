@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useState, useEffect } from "react";
 import { useMobileView } from "../../contexts/MobileViewContext";
 import "../../components/CSS/Home/Events&NewsSection.css";
 
@@ -8,6 +8,11 @@ const EventsNewsSection = lazy(() => import('../../components/HomePage/Events&Ne
 
 function EventsInnerContent({ content }) {
   const isMobileView = useMobileView();
+  const [showVideo, setShowVideo] = useState(false);
+
+  useEffect(() => {
+    setShowVideo(content.id === 2);
+  }, [content.id]);
 
   return (
     <section
@@ -62,11 +67,25 @@ function EventsInnerContent({ content }) {
             )}
           </div>
           <div className="col-md-6" style={{paddingLeft: isMobileView ? '0px': '50px'}}>
-            <img
-              src={content.img}
-              alt={`${content.eventTitle}-image`}
-              className="event-img"
-            />
+            {showVideo ? (
+              <iframe
+                loading='lazy'
+                className='event-iframe'
+                src='https://www.youtube.com/embed/Q-iNjiyz1Xk'
+                frameborder='0'
+                allow='autoplay; encrypted-media'
+                allowFullScreen
+                title='video'
+                
+              />
+            ) : (
+              <img
+                src={content.img}
+                alt={`${content.eventTitle}-image`}
+                className="event-img"
+              />
+            )}
+
           </div>
         </div>
 

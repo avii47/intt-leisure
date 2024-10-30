@@ -9,7 +9,7 @@ import img2 from '../assets/images/destination-Thailand.jpeg';
 import img3 from '../assets/images/destination-sriLanka.jpeg';
 
 const HeroSection = lazy(() => import('../components/HeroSection'));
-const DestinationContent = lazy(() => import('../components/DestinationsPage/DestinationInnerContent'));
+// const DestinationContent = lazy(() => import('../components/DestinationsPage/DestinationInnerContent'));
 const FooterSection = lazy(() => import('../components/FooterSection'));
 
 function OtherToursPage() {

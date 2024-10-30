@@ -2,6 +2,8 @@ import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useMobileView } from "../../contexts/MobileViewContext";
 import DayCard from '../DestinationsPage/DayCard';
+import ContactFrom from './DContactForm'
+import DGallery from '../DestinationsPage/DGallery'
 import "../CSS/Pages/ItineraryContent.css";
 
 
@@ -26,6 +28,10 @@ const ItineraryContent = () => {
               <DayCard />
               <DayCard />
               <DayCard />
+
+              <ContactFrom />
+
+              <DGallery/>
       
             </div>
           </section>

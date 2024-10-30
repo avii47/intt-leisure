@@ -2,6 +2,7 @@ import img_01 from "../assets/images/events-img1.jpg";
 import img_02 from "../assets/images/events-img2.jpg";
 import img_03 from "../assets/images/events-img2.png";
 import img_04 from "../assets/images/events-img3.png";
+import img_05 from "../assets/images/siyatha-english.jpeg"
 
 const eventstData = [
   {
@@ -26,6 +27,25 @@ const eventstData = [
   {
     id: 2,
     tag: "Past Event",
+    img: img_05,
+    eventTitle: 'System Change Starts with Yourself',
+    shortDate: "Oct 25",
+    sub: "Dr. GB Hewawasam presented at the 24th ILA leadership conference in Washington DC on the topic of Introspective Leadership...",
+    date: "25 Octomber 2024",
+    time: "08.00 PM",
+    venue: "Sri Lanka",
+    text: "Discover inspiring insights on self-transformation and impactful change. Join Dr. Gamini Hewawasam’s recent discussion on Sri Lanka’s national television network (TV1), where he delves into the journey of inner change as the foundation for broader societal shifts. Watch the full episode to learn how personal growth can drive meaningful transformation in our communities and beyond.",
+    description: [
+      "Discover the profound impact of self-transformation in driving meaningful change. Dr. Gamini Hewawasam recently appeared on Sri Lanka’s national television network, TV1, to discuss how personal growth serves as the bedrock for broader societal shifts. Through this conversation, he delves into the journey of inner change, emphasizing that by cultivating self-awareness and resilience, individuals can make lasting, positive contributions that extend beyond their immediate lives. His insights offer a powerful reminder that when we work on ourselves, we initiate a ripple effect that can lead to stronger, more compassionate communities.",
+      "In the episode, Dr. Hewawasam underscores the importance of inner growth as a catalyst for impactful change, encouraging viewers to reflect on their personal journeys and recognize their potential to inspire others. His message highlights that meaningful transformation within society doesn’t just happen at the top—it begins with everyday actions and shifts in perspective. By nurturing qualities like empathy, patience, and mindfulness, we can create environments that support and uplift those around us. This episode serves as an invitation to all who seek a more connected, understanding world to embrace self-change as the first step toward a brighter future for all."
+    ],
+    eventUrl: "https://inttleisure.com/events/2",
+    eventThumbnail:
+      "https://imageio.forbes.com/specials-images/imageserve/668e9119ef3577c0b6a680a3/Modern-conference-hall-with-attendees-listening-to-a-keynote-speaker-on-stage-/960x0.jpg?format=jpg&width=1440",
+  },
+  {
+    id: 3,
+    tag: "Past Event",
     img: img_01,
     eventTitle: "Integrating Appreciative Inquiry into Mindfulness-based Leadership",
     shortDate: "Oct 04",
@@ -40,7 +60,7 @@ const eventstData = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     tag: "Past Event",
     img: img_02,
     eventTitle: "Exploring the Impact of Mindfulness on Leadership",
@@ -56,7 +76,7 @@ const eventstData = [
     ]
   },
   {
-    id: 4,
+    id: 5,
     tag: "Past Event",
     img: img_04,
     eventTitle: '24th ILA Global Conference About "Wisdom in the Times of Crisis"',

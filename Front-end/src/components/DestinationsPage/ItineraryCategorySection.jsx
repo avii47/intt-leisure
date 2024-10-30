@@ -6,7 +6,7 @@ import ItineraryCard from './ItineraryCard';
 import "../CSS/ItineraryCategorySection.css";
 
 import Slider from "react-slick";
-import contentData from "../../data/EventstData";
+import contentData from "../../data/ItineraryContentData";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import left_arrow from "../../assets/icons/left-arrow.png";
@@ -17,57 +17,42 @@ function ItineraryCategorySection({ content, topic }) {
     const navigate = useNavigate();
     const isMobileView = useMobileView();
 
-    const STCardsRef = useRef([]);
-    const ATCardsRef = useRef([]);
-    const CTCardsRef = useRef([]);
+    const itineraryCardsRef = useRef([]);
 
     const [STshowLeftButton, setSTshowLeftButton] = useState(false);
     const [STshowRightButton, setSTshowRightButton] = useState(true);
-    const [STcurrentSlide, setSTcurrentSlide] = useState(0);
+    const [itineraryCurrentSlide, setItineraryCurrentSlide] = useState(0);
 
-    const [ATshowLeftButton, setATshowLeftButton] = useState(false);
-    const [ATshowRightButton, setATshowRightButton] = useState(true);
-    const [ATcurrentSlide, setATcurrentSlide] = useState(0);
-
-    const [CTshowLeftButton, setCTshowLeftButton] = useState(false);
-    const [CTshowRightButton, setCTshowRightButton] = useState(true);
-    const [CTcurrentSlide, setCTcurrentSlide] = useState(0);
-
-    let STsliderRef = useRef(null);
-    let ATsliderRef = useRef(null);
-    let CTsliderRef = useRef(null);
-
+    let itinerarySliderRef = useRef(null);
 
     if (!isMobileView) {
-        cardLoader(STsliderRef, 'visible', 200, { threshold: 0.5 });
-        cardLoader(ATsliderRef, 'visible', 200, { threshold: 0.5 });
-        cardLoader(CTsliderRef, 'visible', 200, { threshold: 0.5 });
+        cardLoader(itineraryCardsRef, 'visible', 200, { threshold: 0.5 });
     }
 
-    const handleOnClick = (path) => {
-        navigate(path);
+    const updateSliderButtonVisibility = (currentSlide) => {
+        setSTshowLeftButton(currentSlide > 0);
+        setSTshowRightButton(currentSlide < contentData.length - settings.slidesToShow);
     };
 
-    const updateSTButtonVisibility = (STcurrentSlide) => {
-        setSTshowLeftButton(STcurrentSlide > 0);
-        setSTshowRightButton(STcurrentSlide < contentData.length - 3);
+    const handleItineraryCardClick = (id) => {
+        navigate(`${id}`);
     };
 
     const next = () => {
-        STsliderRef.slickNext();
+        itinerarySliderRef.slickNext();
     };
     const previous = () => {
-        STsliderRef.slickPrev();
+        itinerarySliderRef.slickPrev();
     };
 
     const settings = {
         dots: true,
-        infinite: true,
+        infinite: false,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
-        beforeChange: (current, next) => setSTcurrentSlide(next),
-        afterChange: (current) => updateSTButtonVisibility(current),
+        beforeChange: (current, next) => setItineraryCurrentSlide(next),
+        afterChange: (current) => updateSliderButtonVisibility(current),
         responsive: [
             {
                 breakpoint: 1124,
@@ -106,32 +91,35 @@ function ItineraryCategorySection({ content, topic }) {
                             className={`nav-icon ${!STshowLeftButton ? "disabled" : ""}`}
                             src={left_arrow}
                             onClick={previous}
-                        ></img>
+                            alt="Previous"
+                        />
                         <img
                             className={`nav-icon ${!STshowRightButton ? "disabled" : ""}`}
                             src={right_arrow}
                             onClick={next}
-                        ></img>
+                            alt="Next"
+                        />
                     </div>
                 </div>
             </div>
             <div className='itinerary-wrapper'>
                 <div className="slider-container" style={{ paddingBottom: '100px' }} >
-                    <Slider ref={slider => { STsliderRef = slider; }} {...settings}>
+                    <Slider ref={slider => { itinerarySliderRef = slider; }} {...settings}>
                         {contentData
                             .map((content, index) => (
                                 <ItineraryCard
-                                    title="Itinerary Title"
-                                    duration="04 Nights / 05 Days"
-                                    description="You will be met on arrival at the Bandaranaike International Airport by our INTT leisure..."
-                                    image="path-to-image.jpg"
+                                    key={index}
+                                    content={content}
+                                    ref={(el) => (itineraryCardsRef.current[index] = el)}
+                                    style={{ "--animation-order": index }}
+                                    onClick={() => handleItineraryCardClick(content.id)}
                                 />
                             ))}
                     </Slider>
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default ItineraryCategorySection
+export default ItineraryCategorySection;

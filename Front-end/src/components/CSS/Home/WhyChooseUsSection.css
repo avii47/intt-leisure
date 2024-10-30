@@ -75,6 +75,8 @@
 }
 .nav-icon{
     height: 30px;
+    cursor: pointer;
+    color: white;
 }
 .mobile-view .why-cu-text-col{
     width: 80vw;
