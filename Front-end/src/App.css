@@ -98,3 +98,7 @@ body {
   pointer-events: none; 
   filter: grayscale(100%);
 }
+
+.leaflet-container{
+  height: 80vh;
+}

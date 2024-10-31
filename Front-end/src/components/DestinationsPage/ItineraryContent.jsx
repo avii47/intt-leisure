@@ -4,6 +4,7 @@ import { useMobileView } from "../../contexts/MobileViewContext";
 import DayCard from '../DestinationsPage/DayCard';
 import ContactFrom from './DContactForm'
 import DGallery from '../DestinationsPage/DGallery'
+import TourMap from '../DestinationsPage/MapComponent'
 import "../CSS/Pages/ItineraryContent.css";
 
 
@@ -29,9 +30,13 @@ const ItineraryContent = () => {
               <DayCard />
               <DayCard />
 
+              <TourMap />
+
               <ContactFrom />
 
               <DGallery/>
+
+              
       
             </div>
           </section>

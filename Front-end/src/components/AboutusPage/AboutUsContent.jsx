@@ -7,8 +7,9 @@ import achievement_img1 from '../../assets/images/achievements-img1.png'
 import achievement_img2 from '../../assets/images/achievements-img2.png'
 import gb from '../../assets/images/boss manolead.jpg'
 import achivement_bg from '../../assets/images/vmg-background.jpg'
-import vision_icon from '../../assets/icons/vision_icon.png'
-import mission_icon from '../../assets/icons/mission_icon.png'
+import vision_icon from '../../assets/icons/vmg-icon1.svg'
+import mission_icon from '../../assets/icons/vmg-icon2.svg'
+import goal_icon from '../../assets/icons/vmg-icon3.svg'
 
 import IconCard from './IconCard';
 import contentData from '../../data/WhyChooseUsPageData';
@@ -175,7 +176,7 @@ const AboutUsContent = () => {
               <div className="col-md-4 d-flex vm-card-col" style={{justifyContent:'right' }}>
                 <div className='vm-container'>
                   <h3 className="font-primary">Our Goals</h3>
-                  <img src={mission_icon} alt="mission icon" style={{height:'200px', marginBottom:'40px'}} loading='lazy'/>
+                  <img src={goal_icon} alt="mission icon" style={{height:'200px', marginBottom:'40px'}} loading='lazy'/>
                   <p className="font-secondary" style={{fontSize:'20px'}}>To uncover the hidden gem of authentic Buddhist teachings that provide the key to intellectual and emotional balance.</p>
                 </div>
               </div>

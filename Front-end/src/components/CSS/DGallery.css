@@ -10,63 +10,87 @@
   .main-image {
     position: relative;
     display: inline-block;
-    z-index: -1;
   }
   
   .main-image img {
-    width: 1200px;
+    width: 60vw;
     height: 600px;
-    border-radius: 10px;
   }
   
   .arrow {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
+    background: rgba(255, 255, 255, 0.507);
     border: none;
-    padding: 10px;
+    border-radius: 50%;
     cursor: pointer;
-    font-size: 24px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.479);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
   }
   
   .left {
     left: 10px;
+    transform: translateX(-50%);
   }
   
   .right {
     right: 10px;
+    transform: translateX(50%);
   }
   
   .thumbnail-row {
     display: flex;
     justify-content: center;
-    margin-top: -140px;
+    margin-top: -180px;
     z-index: 1;
-    background-color: rgb(143, 143, 143);
   }
 
   .thumbnail-img-container{
+    padding-top: 50px;
     width: 1200px;
-    height: 150px;
+    height: 180px;
     overflow: hidden;
+    z-index: 1;
+    opacity: 0;
+    background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.575), transparent);
+    transition: all 0.3s ease-in-out;
   }
   
   .thumbnail {
-    width: 180px;
-    height: 120px;
-    margin: 0 5px;
+    width: 150px;
+    margin: 0 15px;
     cursor: pointer;
     opacity: 1;
     transition: opacity 0.3s;
-    border-radius: 5px;
     z-index: 1;
+    padding: 5px;
+    transform: translateY(50%);
+    transition: all 0.3s ease-in-out; 
   }
   
-  .thumbnail:hover,
+  
   .thumbnail.active {
+    box-sizing: border-box;
     opacity: 1;
-    border: 2px solid #fff;
+    border: 1px solid #ffffff;
+    transition: all 0.3s ease-in-out; 
   }
-  
+  .thumbnail:hover{
+    transform: scale(1.2) !important;
+    transition: all 0.3s ease; 
+  }
+
+  .gallery:hover .thumbnail-img-container{
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+  }
+  .gallery:hover .thumbnail{
+    transform: translateY(0%);
+    transition: all 0.3s ease-in-out;
+  }
+  .gallery:hover .arrow {
+    opacity: 1;
+    transform: translateX(0%);
+    transition: all 0.3s ease-in-out;
+  }
