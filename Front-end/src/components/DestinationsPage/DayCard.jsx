@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import '../CSS/DayCard.css';
 
-const DayCard = () => {
+function DayCard({content}){
   const [isExpanded, setIsExpanded] = useState(false);
   const [maxHeight, setMaxHeight] = useState('0px'); // Track max-height for animation
   const contentRef = useRef(null); // Reference to get content height
@@ -19,8 +19,8 @@ const DayCard = () => {
   return (
     <div className="day-card">
       <div className="day-card-header" onClick={toggleExpand}>
-        <span className="day-card-day">DAY 02</span>
-        <span className="day-card-title">Kandy To Nuwara Eliya</span>
+      <span className="day-card-day">{`Day ${content.id}`}</span>
+      <span className="day-card-title">{content.title}</span>
         <button className="expand-button">
           {isExpanded ? <i class="fa-solid fa-minus"></i> : <i class="fa-solid fa-plus"></i>}  {/* Show icons based on expanded state */}
         </button>
@@ -40,21 +40,20 @@ const DayCard = () => {
         </div>
 
         <div className="day-card-content">
-          <p>
-            You will be met on arrival at the Bandaranaike International Airport by our INTT leisure representative who will assist you with your luggage and guide you to your vehicle where your personal chauffeur awaits.
-          </p>
-          <p>Transfer from Bandaranaike International Airport to Kandy.</p>
-          <p>Visit the Pinnawala Elephant Orphanage. <i>(Optional - Entrance Fee Supplement)</i></p>
-          <p>
-            Kandy is the charming hill capital of Sri Lanka and the island's second-largest city...
-          </p>
-          <ul>
-            <li>Accommodation</li>
-            <li>Dinner and breakfast at the hotel</li>
-          </ul>
+        {content.content.map((para, i) => (
+              <li className="font-secondary" style={{marginTop:'20px', listStyleType:'none'}} key={i}>
+                  {para}
+              </li>
+          ))}
+          <h6 className="font-secondary" style={{fontSize:'22px', marginTop:'20px'}}>Inclusion</h6>
+          {content.inclusion.map((para, i) => (
+              <li className="font-secondary" style={{marginTop:'0px'}} key={i}>
+                  {para}
+              </li>
+          ))}
           <div className="day-card-footer">
-            <span>115 km</span>
-            <span>02 hours 50 minutes</span>
+          <span>{content.distance}</span>
+          <span>{content.duration}</span>
           </div>
         </div>
       </div>

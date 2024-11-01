@@ -24,9 +24,9 @@ function SriLankanToursContent() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
 
-        <ItineraryCategorySection contentData={""} topic={"Sample Itineraries"} />
-        <ItineraryCategorySection contentData={""} topic={"Activity Tours"} />
-        <ItineraryCategorySection contentData={""} topic={"Concerge Tours"} />
+        <ItineraryCategorySection contentCat={"sampleItinery"} topic={"Sample Itineraries"} />
+        <ItineraryCategorySection contentCat={"activityTours"} topic={"Activity Tours"} />
+        <ItineraryCategorySection contentCat={"conciergeService"} topic={"Concierge Services"} />
 
       </div>
     </section>

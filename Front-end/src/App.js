@@ -171,7 +171,7 @@ const App = () => {
               }
             />
             <Route
-              path="/destinations/sriLankan/:id"
+              path="/destinations/sriLankan/:category/:id"
               element={
                 <motion.div initial="initial" animate="enter" exit="exit" variants={pageVariants} className="page-transition">
                   <ItineraryPage />

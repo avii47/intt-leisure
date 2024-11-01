@@ -5,14 +5,26 @@ import cardLoader from '../../hooks/cardLoader';
 import ItineraryCard from './ItineraryCard';
 import "../CSS/ItineraryCategorySection.css";
 
+import sampleItineryContentData from "../../data/SampleItineraryContentData"
+import activityToursContentData from "../../data/ActivityToursContentData"
+import ConciergeServiceContentData from "../../data/ConciergeServiceContentData";
+
 import Slider from "react-slick";
-import contentData from "../../data/ItineraryContentData";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import left_arrow from "../../assets/icons/left-arrow.png";
 import right_arrow from "../../assets/icons/right-arrow.png";
 
-function ItineraryCategorySection({ content, topic }) {
+function ItineraryCategorySection({ contentCat, topic }) {
+
+    let contentData = []; 
+    if (contentCat === "sampleItinery") {
+        contentData = sampleItineryContentData;
+    } else if (contentCat === "activityTours") {
+        contentData = activityToursContentData;
+    } else if (contentCat === "conciergeService") {
+        contentData = ConciergeServiceContentData;
+    }
 
     const navigate = useNavigate();
     const isMobileView = useMobileView();
@@ -35,7 +47,7 @@ function ItineraryCategorySection({ content, topic }) {
     };
 
     const handleItineraryCardClick = (id) => {
-        navigate(`${id}`);
+        navigate(`/destinations/sriLankan/${contentCat}/${id}`);
     };
 
     const next = () => {
