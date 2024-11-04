@@ -46,7 +46,6 @@
 
 /* Details section */
 .day-card-details {
-  overflow: hidden;
   transition: max-height 0.4s ease;
 }
 

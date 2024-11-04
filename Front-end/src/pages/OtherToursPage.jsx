@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 import LoadingSpinner from '../components/LoadingSpinner';
 import "../components/CSS/Pages/PackageContent.css";
-import heroImg from "../assets/images/destination-sl.jpg"
+import heroImg from "../assets/images/otherTours-img.jpg"
 
 const HeroSection = lazy(() => import("../components/HeroSection"));
 const DestinationContent = lazy(() => import("../components/DestinationsPage/OtherToursContent"));

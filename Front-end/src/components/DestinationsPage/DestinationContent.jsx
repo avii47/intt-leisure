@@ -9,12 +9,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import img1 from "../../assets/images/sriLankanTours-img.jpg";
+import img1 from "../../assets/images/destination-sl.jpg"
 import img2 from "../../assets/images/otherTours-img.jpg";
 import logo_light from "../../assets/icons/INTT Leisure Logo-02.png";
 import left_arrow from "../../assets/icons/left-arrow.png";
 import right_arrow from "../../assets/icons/right-arrow.png";
-import playIcon from "../../assets/icons/icons8-play-50.png"
 import dLogo1 from "../../assets/images/d-logo1.png";
 import dLogo2 from "../../assets/images/d-logo2.png";
 import dLogo3 from "../../assets/images/d-logo3.png";
@@ -245,7 +244,7 @@ const DestinationsContent = () => {
         <div className="dVideo-section-container d-flex" ref={contentRef}>
           <div className="overlayer"></div>
           <video
-            src={require("../../assets/Intt Leisure - Hero Page new.mp4")}
+            src={require("../../assets/INTL Web Video.mp4")}
             type="video/mp4"
             autoPlay
             loop

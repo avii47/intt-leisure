@@ -7,8 +7,12 @@
     flex-wrap: wrap; 
     text-align: left;
 }
+.day-card-container{
+    margin-top: 50px;
+}
 .specs-container{
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    row-gap: 30px;
+    column-gap: 30px;
 }

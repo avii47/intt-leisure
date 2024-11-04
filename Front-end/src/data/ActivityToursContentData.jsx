@@ -1,10 +1,15 @@
 
-import img1 from "../assets/images/birds watching.jpg";
+import birdsWatching from "../assets/images/birds watching.jpg";
+import hiking from "../assets/images/hiking.jpg"
+import golf from "../assets/images/golf.jpg"
+import kiteSurfing from "../assets/images/kite surfing.jpg"
+import waterRafting from "../assets/images/water rafting.jpg"
+import cycling from "../assets/images/cycling.jpg"
 
 const ContentData = [
   {
     id: 1,
-    img: img1,
+    img: birdsWatching,
     title: "Bird Watching in Sri Lanka",
     subTitle: "Wherever you are, Be there totally…",
     cardTxt: "You will be met on arrival at the Bandaranaike International Airport by our INTT leisure...",
@@ -12,7 +17,7 @@ const ContentData = [
   },
   {
     id: 2,
-    img: img1,
+    img: hiking,
     title: "Hiking in Sri Lanka",
     subTitle: "Wherever you are, Be there totally…",
     cardTxt: "You will be met on arrival at the Bandaranaike International Airport by our INTT leisure...",
@@ -20,7 +25,7 @@ const ContentData = [
   },
   {
     id: 3,
-    img: img1,
+    img: golf,
     title: "Golf Tours Sri Lanka",
     subTitle: "Wherever you are, Be there totally…",
     cardTxt: "You will be met on arrival at the Bandaranaike International Airport by our INTT leisure...",
@@ -28,7 +33,7 @@ const ContentData = [
   },
   {
     id: 4,
-    img: img1,
+    img: kiteSurfing,
     title: "Kite Surfing Sri Lanka",
     subTitle: "Wherever you are, Be there totally…",
     cardTxt: "You will be met on arrival at the Bandaranaike International Airport by our INTT leisure...",
@@ -36,7 +41,7 @@ const ContentData = [
   },
   {
     id: 5,
-    img: img1,
+    img: waterRafting,
     title: "Water Rafting Sri Lanka",
     subTitle: "Wherever you are, Be there totally…",
     cardTxt: "You will be met on arrival at the Bandaranaike International Airport by our INTT leisure...",
@@ -44,7 +49,7 @@ const ContentData = [
   },
   {
     id: 6,
-    img: img1,
+    img: cycling,
     title: "Cycling In Sri Lanka",
     subTitle: "Wherever you are, Be there totally…",
     cardTxt: "You will be met on arrival at the Bandaranaike International Airport by our INTT leisure...",

@@ -86,6 +86,90 @@ const contentData = [
             "Visit the Museum of Modern Art",
             "Experience the vibrant nightlife in the city"
         ]
+    },
+    {
+        id: 7,
+        tag: "dubai",
+        img: img_01,
+        title: "Dubai's Artistic Heritage",
+        subTitle: "A 5-Day Journey Through Sri Lanka",
+        cardTxt: "You will be met on arrival at the Bandaranaike International Airport by our INTT leisure...",
+        overview: "llorem ipsum dolor sit amet, consectetur adip nonum soc et justo llorem ipsum dolor sit amet, consectetur adip nonum soc et justo",
+        details: [
+            "Discover the rich history and artistic heritage of Dubai",
+            "Visit the Museum of Modern Art",
+            "Experience the vibrant nightlife in the city"
+        ]
+    },
+    {
+        id: 8,
+        tag: "dubai",
+        img: img_02,
+        title: "Dubai's Artistic Heritage",
+        subTitle: "A 5-Day Journey Through Sri Lanka",
+        cardTxt: "You will be met on arrival at the Bandaranaike International Airport by our INTT leisure...",
+        overview: "llorem ipsum dolor sit amet, consectetur adip nonum soc et justo llorem ipsum dolor sit amet, consectetur adip nonum soc et justo",
+        details: [
+            "Discover the rich history and artistic heritage of Dubai",
+            "Visit the Museum of Modern Art",
+            "Experience the vibrant nightlife in the city"
+        ]
+    },
+    {
+        id: 9,
+        tag: "dubai",
+        img: img_03,
+        title: "Dubai's Artistic Heritage",
+        subTitle: "A 5-Day Journey Through Sri Lanka",
+        cardTxt: "You will be met on arrival at the Bandaranaike International Airport by our INTT leisure...",
+        overview: "llorem ipsum dolor sit amet, consectetur adip nonum soc et justo llorem ipsum dolor sit amet, consectetur adip nonum soc et justo",
+        details: [
+            "Discover the rich history and artistic heritage of Dubai",
+            "Visit the Museum of Modern Art",
+            "Experience the vibrant nightlife in the city"
+        ]
+    },
+    {
+        id: 10,
+        tag: "dubai",
+        img: img_01,
+        title: "Dubai's Artistic Heritage",
+        subTitle: "A 5-Day Journey Through Sri Lanka",
+        cardTxt: "You will be met on arrival at the Bandaranaike International Airport by our INTT leisure...",
+        overview: "llorem ipsum dolor sit amet, consectetur adip nonum soc et justo llorem ipsum dolor sit amet, consectetur adip nonum soc et justo",
+        details: [
+            "Discover the rich history and artistic heritage of Dubai",
+            "Visit the Museum of Modern Art",
+            "Experience the vibrant nightlife in the city"
+        ]
+    },
+    {
+        id: 11,
+        tag: "dubai",
+        img: img_02,
+        title: "Dubai's Artistic Heritage",
+        subTitle: "A 5-Day Journey Through Sri Lanka",
+        cardTxt: "You will be met on arrival at the Bandaranaike International Airport by our INTT leisure...",
+        overview: "llorem ipsum dolor sit amet, consectetur adip nonum soc et justo llorem ipsum dolor sit amet, consectetur adip nonum soc et justo",
+        details: [
+            "Discover the rich history and artistic heritage of Dubai",
+            "Visit the Museum of Modern Art",
+            "Experience the vibrant nightlife in the city"
+        ]
+    },
+    {
+        id: 12,
+        tag: "dubai",
+        img: img_03,
+        title: "Dubai's Artistic Heritage",
+        subTitle: "A 5-Day Journey Through Sri Lanka",
+        cardTxt: "You will be met on arrival at the Bandaranaike International Airport by our INTT leisure...",
+        overview: "llorem ipsum dolor sit amet, consectetur adip nonum soc et justo llorem ipsum dolor sit amet, consectetur adip nonum soc et justo",
+        details: [
+            "Discover the rich history and artistic heritage of Dubai",
+            "Visit the Museum of Modern Art",
+            "Experience the vibrant nightlife in the city"
+        ]
     }
 ]
 

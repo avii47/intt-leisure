@@ -9,6 +9,8 @@ import CulturalOdysseyDay5 from "../assets/images/Cultural Odyssey -day5.jpg";
 
 import BeyondTheHills from "../assets/images/Beyond the Hills.jpg";
 import JourneyThroughParadise from "../assets/images/Journey Through Paradise.jpg";
+import SriLankaAwaits from "../assets/images/Sri Lanka Awaits.jpg";
+import WondersOfSriLanka from "../assets/images/Wonders of Sri Lanka.jpg"
 
 const contentData = [
   {
@@ -35,10 +37,7 @@ const contentData = [
             ],
             distance: "115 km",
             duration: "02 hours 50 minutes",
-            mapPositions: [
-                "7.8731",
-                "80.7718"
-            ]
+            route: ['BIA', 'Kandy']
         },
         {
             id: 2,
@@ -56,10 +55,7 @@ const contentData = [
             ],
             distance: "115 km",
             duration: "02 hours 50 minutes",
-            mapPositions: [
-                "7.8731",
-                "80.7718"
-            ]
+            route: ['Kandy', 'Nuwara Eliya']
         },
         {
             id: 3,
@@ -75,12 +71,9 @@ const contentData = [
                 "Accommodation",
                 "Dinner and breakfast at the hotel"
             ],
-            distance: "115 km",
-            duration: "02 hours 50 minutes",
-            mapPositions: [
-                "7.8731",
-                "80.7718"
-            ]
+            distance: "depends",
+            duration: "depends",
+            route: ['Nuwara Eliya']
         },
         {
             id: 4,
@@ -98,10 +91,7 @@ const contentData = [
             ],
             distance: "115 km",
             duration: "02 hours 50 minutes",
-            mapPositions: [
-                "7.8731",
-                "80.7718"
-            ]
+            route: ['Nuwara Eliya', 'colombo']
         },
         {
             id: 5,
@@ -116,10 +106,7 @@ const contentData = [
             ],
             distance: "115 km",
             duration: "02 hours 50 minutes",
-            mapPositions: [
-                "7.8731",
-                "80.7718"
-            ]
+            route: ['colombo', 'BIA']
         },
     ] 
   },
@@ -148,8 +135,8 @@ const contentData = [
             distance: "115 km",
             duration: "02 hours 50 minutes",
             mapPositions: [
-                "7.8731",
-                "80.7718"
+                "7.8742",
+                "80.6511"
             ]
         },
         {
@@ -446,7 +433,7 @@ const contentData = [
   },
   {
     id: 4,
-    img: img1,
+    img: SriLankaAwaits,
     title: "Sri Lanka Awaits",
     subTitle: "An 8-Day Tour of Nature",
     cardTxt: "You will be met on arrival at the Bandaranaike International Airport by our INTT leisure...",
@@ -586,7 +573,7 @@ const contentData = [
   },
   {
     id: 5,
-    img: img1,
+    img: WondersOfSriLanka,
     title: "Wonders of Sri Lanka",
     subTitle: "9 Days of Scenic Journeys",
     cardTxt: "You will be met on arrival at the Bandaranaike International Airport by our INTT leisure...",

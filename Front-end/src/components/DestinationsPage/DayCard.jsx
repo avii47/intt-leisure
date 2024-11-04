@@ -1,26 +1,33 @@
-import React, { useState, useRef, useEffect } from 'react';
+// src/components/DayCard.js
+
+import React, { useRef, useEffect, useState } from 'react';
 import '../CSS/DayCard.css';
 
-function DayCard({content}){
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [maxHeight, setMaxHeight] = useState('0px'); 
+function DayCard({ content, isExpanded, onExpand }) {
+  const cardRef = useRef(null); 
   const contentRef = useRef(null); 
+  const [maxHeight, setMaxHeight] = useState('0px');
 
-  const toggleExpand = () => {
-    setIsExpanded(!isExpanded);
-  };
-
+  // Adjust maxHeight dynamically based on isExpanded
   useEffect(() => {
-    setMaxHeight(isExpanded ? `${contentRef.current.scrollHeight}px` : '0px');
+    if (isExpanded) {
+      const contentHeight = contentRef.current.scrollHeight;
+      setMaxHeight(`${contentHeight}px`);
+      
+      // Scroll to the top of the card
+      // cardRef.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    } else {
+      setMaxHeight('0px');
+    }
   }, [isExpanded]);
 
   return (
-    <div className="day-card">
-      <div className="day-card-header" onClick={toggleExpand}>
-      <span className="day-card-day">{`Day ${content.id}`}</span>
-      <span className="day-card-title">{content.title}</span>
+    <div className="day-card" ref={cardRef}> 
+      <div className="day-card-header" onClick={onExpand}>
+        <span className="day-card-day">{`Day ${content.id}`}</span>
+        <span className="day-card-title">{content.title}</span>
         <button className="expand-button">
-          {isExpanded ? <i class="fa-solid fa-minus"></i> : <i class="fa-solid fa-plus"></i>}  
+          {isExpanded ? <i className="fa-solid fa-minus"></i> : <i className="fa-solid fa-plus"></i>}  
         </button>
       </div>
 
@@ -38,25 +45,25 @@ function DayCard({content}){
         </div>
 
         <div className="day-card-content">
-        {content.content.map((para, i) => (
-              <li className="font-secondary" style={{marginTop:'20px', listStyleType:'none'}} key={i}>
-                  {para}
-              </li>
+          {content.content.map((para, i) => (
+            <li className="font-secondary" style={{ marginTop: '20px', listStyleType: 'none' }} key={i}>
+              {para}
+            </li>
           ))}
-          <h6 className="font-secondary" style={{fontSize:'22px', marginTop:'20px'}}>Inclusion</h6>
+          <h6 className="font-secondary" style={{ fontSize: '22px', marginTop: '20px' }}>Inclusion</h6>
           {content.inclusion.map((para, i) => (
-              <li className="font-secondary" style={{marginTop:'0px'}} key={i}>
-                  {para}
-              </li>
-          ))}
+            <li className="font-secondary" style={{ marginTop: '0px' }} key={i}>
+              {para}
+            </li>
+          ))}
           <div className="day-card-footer">
-          <span>{content.distance}</span>
-          <span>{content.duration}</span>
+            <span>{content.distance}</span>
+            <span>{content.duration}</span>
           </div>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default DayCard;

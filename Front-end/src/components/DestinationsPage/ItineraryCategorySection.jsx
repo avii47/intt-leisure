@@ -25,7 +25,7 @@ function ItineraryCategorySection({ contentCat, topic, exclude }) {
         contentData = activityToursContentData;
     } else if (contentCat === "conciergeService") {
         contentData = ConciergeServiceContentData;
-    } else if (contentCat === "dubai" || contentCat === "indonesia" || contentCat === "thainland") {
+    } else if (contentCat === "dubai" || contentCat === "indonesia" || contentCat === "thailand") {
         contentData = OtherToursContentData;
     } 
 
@@ -53,7 +53,7 @@ function ItineraryCategorySection({ contentCat, topic, exclude }) {
         if(contentCat == 'sampleItinery' || contentCat == 'activityTours' || contentCat=='conciergeService') {
             navigate(`/destinations/sriLankan/${contentCat}/${id}`);
         }
-        else if(contentCat == 'dubai' || contentCat == 'indonesia' || contentCat == 'thainland') {
+        else if(contentCat == 'dubai' || contentCat == 'indonesia' || contentCat == 'thailand') {
             navigate(`/destinations/other/${contentCat}/${id}`);
         }
         

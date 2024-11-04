@@ -54,7 +54,7 @@
     width: 100%;
     padding: 0 1.5rem;
     color: white;
-    transform: translateY(45%);
+    transform: translateY(80%);
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
