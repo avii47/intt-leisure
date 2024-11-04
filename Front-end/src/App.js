@@ -182,7 +182,15 @@ const App = () => {
               path="/destinations/other"
               element={
                 <motion.div initial="initial" animate="enter" exit="exit" variants={pageVariants} className="page-transition">
-                  <SriLankanToursPage />
+                  <OtherToursPage />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/destinations/other/:category/:id"
+              element={
+                <motion.div initial="initial" animate="enter" exit="exit" variants={pageVariants} className="page-transition">
+                  <ItineraryPage />
                 </motion.div>
               }
             />

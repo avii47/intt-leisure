@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useMobileView } from "../../contexts/MobileViewContext";
-import contentData from "../../data/DestinationsListData";
+import contentData from "../../data/OtherToursData";
 import TourCard from "./TourCard";
 import MainTourCard from "./MainTourCard";
 
@@ -166,15 +166,15 @@ const DestinationsContent = () => {
     sliderRef.slickPrev();
   };
 
-  const handleTourCardClick = (id) => {
-    navigate(`/contact-us`);
+  const handleTourCardClick = (id,tag) => {
+    navigate(`/destinations/other/${tag}/${id}`);
   };
 
-  const handleMainCardClick = (id) => {
-    if(id == 1){
+  const handleMainCardClick = (cat) => { 
+    if(cat === "sl"){
       navigate(`/destinations/sriLankan`);
     }
-    else if(id == 2){
+    else if(cat === "other"){
       navigate(`/destinations/other`);
     }
   };
@@ -184,7 +184,7 @@ const DestinationsContent = () => {
     infinite: false,
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToScroll: 1,
     beforeChange: (current, next) => setCurrentSlide4(next),
     afterChange: (current) => updateButtonVisibility4(current),
     responsive: [
@@ -192,7 +192,7 @@ const DestinationsContent = () => {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           dots: true,
         },
       },
@@ -200,7 +200,7 @@ const DestinationsContent = () => {
         breakpoint: 1300,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           dots: true,
         },
       },
@@ -234,10 +234,10 @@ const DestinationsContent = () => {
 
           <div id="main-cards-container" className="main-cards-container">
             <div id="card-left" className="card-left col-md-6">
-              <MainTourCard imageSrc={img1} title="Sri Lankan Tours" onClick={() => handleMainCardClick(1)} />
+              <MainTourCard imageSrc={img1} title="Sri Lankan Tours" onClick={() => handleMainCardClick("sl")} />
             </div>
             <div id="card-right" className="card-right col-md-6">
-              <MainTourCard imageSrc={img2} title="Other Tours" onClick={() => handleMainCardClick(2)} />
+              <MainTourCard imageSrc={img2} title="Other Tours" onClick={() => handleMainCardClick("other")} />
             </div>
           </div>
         </div>
@@ -254,8 +254,7 @@ const DestinationsContent = () => {
           />
           <div className="dVideo-content d-flex">
             <div className="col-md-6 d-flex" style={{justifyContent:'center'}}>
-              {!isMobileView && <img src={playIcon} alt="" />}
-              
+              {/* {!isMobileView && <img src={playIcon} alt="" />} */}
             </div>
             <div className="col-md-6 dText-col" >
               <h2 className="font-primary">Sri Lanka</h2>
@@ -318,7 +317,7 @@ const DestinationsContent = () => {
                     content={content}
                     ref={(el) => (tourCardsRef.current[index] = el)}
                     style={{ "--animation-order": index }}
-                    onClick={() => handleTourCardClick(content.id)}
+                    onClick={() => handleTourCardClick(content.id, content.tag)}
                   />
                 ))}
               </Slider>

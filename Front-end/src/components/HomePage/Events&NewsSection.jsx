@@ -12,7 +12,7 @@ import "slick-carousel/slick/slick-theme.css";
 import left_arrow from '../../assets/icons/left-arrow.png';
 import right_arrow from '../../assets/icons/right-arrow.png';
 
-const EventsNewsSection = ({ exclue }) => {
+const EventsNewsSection = ({ exclude }) => {
 
   const newsCardsRef = useRef([]);
   const [showLeftButton3, setShowLeftButton3] = useState(false);
@@ -98,7 +98,7 @@ const EventsNewsSection = ({ exclue }) => {
           <div className="slider-container" style={{ paddingBottom: '100px', textAlign: 'center' }} >
               <Slider ref={slider => { sliderRef = slider; }} {...settings}>
                 {contentData
-                  .filter((content) => content.id !== exclue)
+                  .filter((content) => content.id !== exclude)
                   .map((content, index) => (
                     <ContentCard
                       key={index}

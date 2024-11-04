@@ -8,6 +8,7 @@ import "../CSS/ItineraryCategorySection.css";
 import sampleItineryContentData from "../../data/SampleItineraryContentData"
 import activityToursContentData from "../../data/ActivityToursContentData"
 import ConciergeServiceContentData from "../../data/ConciergeServiceContentData";
+import OtherToursContentData from "../../data/OtherToursData";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -15,16 +16,18 @@ import "slick-carousel/slick/slick-theme.css";
 import left_arrow from "../../assets/icons/left-arrow.png";
 import right_arrow from "../../assets/icons/right-arrow.png";
 
-function ItineraryCategorySection({ contentCat, topic }) {
+function ItineraryCategorySection({ contentCat, topic, exclude }) {
 
-    let contentData = []; 
+    let contentData = [];
     if (contentCat === "sampleItinery") {
         contentData = sampleItineryContentData;
     } else if (contentCat === "activityTours") {
         contentData = activityToursContentData;
     } else if (contentCat === "conciergeService") {
         contentData = ConciergeServiceContentData;
-    }
+    } else if (contentCat === "dubai" || contentCat === "indonesia" || contentCat === "thainland") {
+        contentData = OtherToursContentData;
+    } 
 
     const navigate = useNavigate();
     const isMobileView = useMobileView();
@@ -47,7 +50,13 @@ function ItineraryCategorySection({ contentCat, topic }) {
     };
 
     const handleItineraryCardClick = (id) => {
-        navigate(`/destinations/sriLankan/${contentCat}/${id}`);
+        if(contentCat == 'sampleItinery' || contentCat == 'activityTours' || contentCat=='conciergeService') {
+            navigate(`/destinations/sriLankan/${contentCat}/${id}`);
+        }
+        else if(contentCat == 'dubai' || contentCat == 'indonesia' || contentCat == 'thainland') {
+            navigate(`/destinations/other/${contentCat}/${id}`);
+        }
+        
     };
 
     const next = () => {
@@ -118,6 +127,7 @@ function ItineraryCategorySection({ contentCat, topic }) {
                 <div className="slider-container" style={{ paddingBottom: '100px' }} >
                     <Slider ref={slider => { itinerarySliderRef = slider; }} {...settings}>
                         {contentData
+                            .filter((content) => content.id !== exclude )
                             .map((content, index) => (
                                 <ItineraryCard
                                     key={index}

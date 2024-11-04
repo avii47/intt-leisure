@@ -10,8 +10,6 @@ function SriLankanToursContent() {
   const navigate = useNavigate();
   const isMobileView = useMobileView();
 
-
-
   return (
     <section
       id="sl-tours-section"

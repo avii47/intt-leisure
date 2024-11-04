@@ -3,7 +3,7 @@ import { useMobileView } from "../../contexts/MobileViewContext";
 import arrowIcon from '../../assets/icons/icons8-right-arrow.gif'
 import '../CSS/Pages/CategoryCard.css';
 
-const CategoryCard = ({ imageSrc, title, description, link, onClick }) => {
+const CategoryCard = ({ imageSrc, title, onClick }) => {
 
     const isMobileView = useMobileView();
 

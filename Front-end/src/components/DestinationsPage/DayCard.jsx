@@ -3,15 +3,13 @@ import '../CSS/DayCard.css';
 
 function DayCard({content}){
   const [isExpanded, setIsExpanded] = useState(false);
-  const [maxHeight, setMaxHeight] = useState('0px'); // Track max-height for animation
-  const contentRef = useRef(null); // Reference to get content height
+  const [maxHeight, setMaxHeight] = useState('0px'); 
+  const contentRef = useRef(null); 
 
-  // Toggle expand/collapse state
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
   };
 
-  // Update maxHeight based on expanded state
   useEffect(() => {
     setMaxHeight(isExpanded ? `${contentRef.current.scrollHeight}px` : '0px');
   }, [isExpanded]);
@@ -22,7 +20,7 @@ function DayCard({content}){
       <span className="day-card-day">{`Day ${content.id}`}</span>
       <span className="day-card-title">{content.title}</span>
         <button className="expand-button">
-          {isExpanded ? <i class="fa-solid fa-minus"></i> : <i class="fa-solid fa-plus"></i>}  {/* Show icons based on expanded state */}
+          {isExpanded ? <i class="fa-solid fa-minus"></i> : <i class="fa-solid fa-plus"></i>}  
         </button>
       </div>
 
@@ -33,7 +31,7 @@ function DayCard({content}){
       >
         <div className="day-card-img-container">
           <img
-            src="https://img.freepik.com/free-photo/girl-red-dress-dancing-waterfall_72229-1290.jpg?t=st=1730278945~exp=1730282545~hmac=e16386c150b092495e8d4b84973917dc4a7827be3c81dd8dae38d0d8033088c0&w=1380"
+            src={content.img}
             alt="Elephants at Pinnawala"
             className="day-card-image"
           />

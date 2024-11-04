@@ -8,9 +8,11 @@ import "../components/CSS/Pages/EventsInnerPage.css";
 import sampleItineryContentData from "../data/SampleItineraryContentData";
 import activityToursContentData from "../data/ActivityToursContentData";
 import ConciergeServiceContentData from "../data/ConciergeServiceContentData";
+import OtherToursContentData from "../data/OtherToursData";
 
 const HeroSection = lazy(() => import("../components/ContentHeroSection"));
 const ItineraryContent = lazy(() => import("../components/DestinationsPage/SampleItineraryContent"));
+const OtherItineraryContent = lazy(() => import("../components/DestinationsPage/OtherItineraryContent"));
 const ActivityToursContent = lazy(() => import("../components/DestinationsPage/ActivityToursContent"));
 const ConciergeServicesContent = lazy(() => import("../components/DestinationsPage/ConciergeServicesContent"));
 const FooterSection = lazy(() => import("../components/FooterSection"));
@@ -36,15 +38,10 @@ const ItineraryPage = () => {
       content = ConciergeServiceContentData.find((item) => item.id === contentId);
       itineraryContent = <ConciergeServicesContent content={content} />;
       break;
-    default:
-      content = sampleItineryContentData.find((item) => item.id === contentId);
-      itineraryContent = <ItineraryContent content={content} />;
+    case 'dubai':
+      content = OtherToursContentData.find((item) => item.id === contentId);
+      itineraryContent = <OtherItineraryContent content={content} />;
   }
-
-  // if (!content) {
-  //   return <div>Content not found</div>;
-  // }
-
 
   return (
     <>

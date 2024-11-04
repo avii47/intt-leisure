@@ -1,10 +1,19 @@
 import img1 from "../assets/images/sample itinerary.jpg";
-import authentic_practices_img from "../assets/images/mindfulnessPage-authentic-practices.jpg";
+
+import CulturalOdyssey from "../assets/images/Cultural Odyssey.jpg";
+import CulturalOdysseyDay1 from "../assets/images/Cultural Odyssey -day1.jpg";
+import CulturalOdysseyDay2 from "../assets/images/Cultural Odyssey -day2.jpg";
+import CulturalOdysseyDay3 from "../assets/images/Cultural Odyssey -day3.jpg";
+import CulturalOdysseyDay4 from "../assets/images/Cultural Odyssey -day4.jpg";
+import CulturalOdysseyDay5 from "../assets/images/Cultural Odyssey -day5.jpg";
+
+import BeyondTheHills from "../assets/images/Beyond the Hills.jpg";
+import JourneyThroughParadise from "../assets/images/Journey Through Paradise.jpg";
 
 const contentData = [
   {
     id: 1,
-    img: img1,
+    img: CulturalOdyssey,
     title: "Cultural Odyssey",
     subTitle: "A 5-Day Journey Through Sri Lanka",
     cardTxt: "You will be met on arrival at the Bandaranaike International Airport by our INTT leisure...",
@@ -12,7 +21,7 @@ const contentData = [
     days: [
         {
             id: 1,
-            img: "",
+            img: CulturalOdysseyDay1,
             title: "Bandaranaike International Airport to Kandy",
             content: [
                 "Upon arrival at Bandaranaike International Airport, an INTT Leisure representative will meet you, assist with luggage, and introduce you to your chauffeur for a transfer to Kandy.",
@@ -33,7 +42,7 @@ const contentData = [
         },
         {
             id: 2,
-            img: "",
+            img: CulturalOdysseyDay2,
             title: "Kandy To Nuwara Eliya",
             content: [
                 "After breakfast at the hotel, depart from Kandy to Nuwara Eliya.",
@@ -54,7 +63,7 @@ const contentData = [
         },
         {
             id: 3,
-            img: "",
+            img: CulturalOdysseyDay3,
             title: "Nuwara Eliya",
             content: [
                 "After breakfast, begin a city tour of Nuwara Eliya.",
@@ -75,7 +84,7 @@ const contentData = [
         },
         {
             id: 4,
-            img: "",
+            img: CulturalOdysseyDay4,
             title: "Nuwara Eliya to Colombo",
             content: [
                 "After breakfast, depart from Nuwara Eliya to Colombo, stopping en route at Kitulgala for optional white-water rafting, a prime spot for adventure sports amid serene surroundings.",
@@ -96,7 +105,7 @@ const contentData = [
         },
         {
             id: 5,
-            img: "",
+            img: CulturalOdysseyDay5,
             title: "Colombo to Bandaranaike International Airport",
             content: [
                 "After breakfast at the hotel, depart from Colombo for Bandaranaike International Airport in time for your flight out of Sri Lanka."
@@ -116,7 +125,7 @@ const contentData = [
   },
   {
     id: 2,
-    img: img1,
+    img: BeyondTheHills,
     title: "Beyond the Hills",
     subTitle: "6 Days of Sri Lankan Wonders",
     cardTxt: "You will be met on arrival at the Bandaranaike International Airport by our INTT leisure...",
@@ -124,7 +133,7 @@ const contentData = [
     days: [
         {
             id: 1,
-            img: "",
+            img: {img1},
             title: "Bandaranaike International Airport – Pinnawala - Dambulla",
             content: [
                 "Upon arrival at Bandaranaike International Airport, an INTT Leisure representative will meet you, assist with luggage, and introduce you to your chauffeur for the journey to Dambulla via Pinnawala.",
@@ -145,7 +154,7 @@ const contentData = [
         },
         {
             id: 2,
-            img: "",
+            img: {img1},
             title: "Dambulla to Kandy",
             content: [
                 "After breakfast, climb the Sigiriya Rock Fortress (optional), a UNESCO World Heritage site and 5th-century marvel built by King Kashyapa. Known as the Lion Rock, this 200-meter-high fortress features extensive gardens, moats, and the famed frescoes of the ‘Heavenly Maidens,’ accessible by a spiral stairway.",
@@ -166,7 +175,7 @@ const contentData = [
         },
         {
             id: 3,
-            img: "",
+            img: {img1},
             title: "Kandy to Nuwara Eliya",
             content: [
                 "After breakfast, visit the Royal Botanical Gardens in Peradeniya (optional), originally a royal pleasure garden, now spanning 147 acres with a remarkable variety of plants, trees, and flowers.",
@@ -186,7 +195,7 @@ const contentData = [
         },
         {
             id: 4,
-            img: "",
+            img: {img1},
             title: "Kandy To Nuwara Eliya",
             content: [
                 "After breakfast, embark on a city tour of Nuwara Eliya, the heart of Sri Lanka’s hill country, known for its lush green tea plantations, misty glens, and charming British character.",
@@ -206,7 +215,7 @@ const contentData = [
         },
         {
             id: 5,
-            img: "",
+            img: {img1},
             title: "Kandy To Nuwara Eliya",
             content: [
                 "After breakfast, depart from Nuwara Eliya for Bentota.",
@@ -226,7 +235,7 @@ const contentData = [
         },
         {
             id: 6,
-            img: "",
+            img: {img1},
             title: "Bentota",
             content: [
                 "After breakfast at the hotel, head to Balapitiya for an optional river cruise along the Madu River.",
@@ -246,7 +255,7 @@ const contentData = [
         },
         {
             id: 7,
-            img: "",
+            img: {img1},
             title: "Bentota",
             content: [
                 "After breakfast, depart from Bentota for Colombo.",
@@ -266,7 +275,7 @@ const contentData = [
         },
         {
             id: 8,
-            img: "",
+            img: {img1},
             title: "Bentota",
             content: [
                 "After breakfast at the hotel, depart for Bandaranaike International Airport, ensuring you arrive in time for your flight out of Sri Lanka."
@@ -286,7 +295,7 @@ const contentData = [
   },
   {
     id: 3,
-    img: img1,
+    img: JourneyThroughParadise,
     title: "Journey Through Paradise",
     subTitle: "7 Days in Captivating Sri Lanka",
     cardTxt: "You will be met on arrival at the Bandaranaike International Airport by our INTT leisure...",
@@ -294,7 +303,7 @@ const contentData = [
     days: [
         {
             id: 1,
-            img: "",
+            img: {img1},
             title: "Bandaranaike International Airport to Kandy",
             content: [
                 "Upon arrival at Bandaranaike International Airport, you will be greeted by our INTT leisure representative, who will assist with your luggage and guide you to your vehicle, where your personal chauffeur awaits.",
@@ -316,7 +325,7 @@ const contentData = [
         },
         {
             id: 2,
-            img: "",
+            img: {img1},
             title: "Kandy To Nuwara Eliya",
             content: [
                 "After enjoying breakfast at the hotel, you'll visit the Royal Botanical Gardens in Peradeniya (optional), which spans 147 acres and features a stunning variety of trees, plants, and flowers. Originally established as a pleasure garden by a Sinhala king, it was later expanded by the British.",
@@ -336,7 +345,7 @@ const contentData = [
         },
         {
             id: 3,
-            img: "",
+            img: {img1},
             title: "Nuwara Eliya",
             content: [
                 "After enjoying breakfast at the hotel, you'll embark on a city tour of Nuwara Eliya, the heart of Sri Lanka's hill country. Known for its lush Ceylon tea plantations, Nuwara Eliya features rolling mountains, gushing streams, and beautiful waterfalls, all set against a refreshing climate and misty glens.",
@@ -356,7 +365,7 @@ const contentData = [
         },
         {
             id: 4,
-            img: "",
+            img: {img1},
             title: "Nuwara Eliya to Bentota",
             content: [
                 "After breakfast at the hotel, you'll depart for Bentota, a beautiful coastal destination. Upon arrival, check in at your hotel and take some time to relax and unwind. Enjoy your day soaking up the sun and the beach atmosphere.",
@@ -375,7 +384,7 @@ const contentData = [
         },
         {
             id: 5,
-            img: "",
+            img: {img1},
             title: "Bentota",
             content: [
                 "On Day 05, you'll start your morning with breakfast at the hotel. Then, you'll head to Balapitiya for an optional river cruise on the Madu River. This serene cruise offers a chance to experience the stunning combination of ecology and culture in the area. You'll navigate through the clear waters, heading towards Kotu Duwa, a small island home to a temple dating back to ancient Sinhalese kings.",
@@ -394,7 +403,7 @@ const contentData = [
         },
         {
             id: 6,
-            img: "",
+            img: {img1},
             title: "Bentota to Colombo",
             content: [
                 "On Day 06, after enjoying breakfast at the hotel, you will depart for Colombo. The journey will take approximately 1 hour and 50 minutes.",
@@ -415,7 +424,7 @@ const contentData = [
         },
         {
             id: 7,
-            img: "",
+            img: {img1},
             title: "Colombo to Bandaranaike International Airport",
             content: [
                 "On Day 07, you will start with breakfast at the hotel. After enjoying your meal, you will depart for Bandaranaike International Airport, which is approximately 40 kilometers away and takes about 35 minutes to reach.",
@@ -445,7 +454,7 @@ const contentData = [
     days: [
         {
             id: 1,
-            img: "",
+            img: {img1},
             title: "Bandaranaike International Airport to Kandy",
             content: [
                 "Upon your arrival at Bandaranaike International Airport, you will be warmly greeted by our INTT Leisure representative. They will assist you with your luggage and guide you to your vehicle, where your personal chauffeur awaits to start your journey.",
@@ -468,7 +477,7 @@ const contentData = [
         },
         {
             id: 2,
-            img: "",
+            img: {img1},
             title: "Kandy To Nuwara Eliya",
             content: [
                 "After enjoying breakfast at the hotel, you will set out for a visit to the Royal Botanical Gardens in Peradeniya (optional - entrance fee supplement). This beautiful botanical garden was initially established as a pleasure garden by a Sinhala king and was later expanded by the British. Spanning 147 acres, it showcases an amazing variety of trees, plants, and flowers, making it a perfect spot for nature lovers.",
@@ -489,7 +498,7 @@ const contentData = [
         },
         {
             id: 3,
-            img: "",
+            img: {img1},
             title: "Nuwara Eliya to Bentota",
             content: [
                 "After enjoying breakfast at the hotel, you will begin your journey from Nuwara Eliya to Bentota. The scenic drive will take you through the breathtaking landscapes of Sri Lanka, showcasing the country's natural beauty along the way.",
@@ -510,7 +519,7 @@ const contentData = [
         },
         {
             id: 4,
-            img: "",
+            img: {img1},
             title: "Bentota",
             content: [
                 "Start your day with breakfast at the hotel, preparing you for an exciting adventure ahead. After breakfast, you will proceed to Balapitiya for a river cruise (optional – entrance fee supplement may apply).",
@@ -532,7 +541,7 @@ const contentData = [
         },
         {
             id: 5,
-            img: "",
+            img: {img1},
             title: "Bentota to Colombo",
             content: [
                 "Begin your day with a delicious breakfast at the hotel before preparing for your journey to Colombo. After breakfast, you will leave for Colombo, which is approximately 105 km away and takes around 1 hour and 50 minutes to reach.",
@@ -554,7 +563,7 @@ const contentData = [
         },
         {
             id: 6,
-            img: "",
+            img: {img1},
             title: "Colombo to Bandaranaike International Airport",
             content: [
                 "Start your day with a satisfying breakfast at the hotel, savoring the last moments of your stay in Colombo. After breakfast, it’s time to prepare for your journey to the airport.",
@@ -585,7 +594,7 @@ const contentData = [
     days: [
         {
             id: 1,
-            img: "",
+            img: {img1},
             title: "Bandaranaike International Airport – Pinnawala - Dambulla",
             content: [
                 "Upon arrival at Bandaranaike International Airport, you will be warmly greeted by our INTT Leisure representative, who will assist you with your luggage and guide you to your waiting vehicle. Here, your personal chauffeur will be ready to begin your journey through Sri Lanka.",
@@ -606,7 +615,7 @@ const contentData = [
         },
         {
             id: 2,
-            img: "",
+            img: {img1},
             title: "Dambulla - Minneriya",
             content: [
                 "Begin your day with a hearty breakfast at the hotel, preparing for a day filled with exploration and adventure.",
@@ -627,7 +636,7 @@ const contentData = [
         },
         {
             id: 3,
-            img: "",
+            img: {img1},
             title: "03: Dambulla to Kandy",
             content: [
                 "Start your day with a delicious breakfast at the hotel, preparing for an adventurous journey to some of Sri Lanka's most iconic sites.",
@@ -650,7 +659,7 @@ const contentData = [
         },
         {
             id: 4,
-            img: "",
+            img: {img1},
             title: "Kandy to Nuwara Eliya",
             content: [
                 "Begin your day with breakfast at the hotel, fueling up for a scenic journey into the heart of Sri Lanka’s tea country.",
@@ -672,7 +681,7 @@ const contentData = [
         },
         {
             id: 5,
-            img: "",
+            img: {img1},
             title: "Nuwara Eliya",
             content: [
                 "Begin your day with breakfast at the hotel, preparing for a full exploration of Nuwara Eliya, often referred to as the 'Heart of Sri Lankan Hill Country.'",
@@ -695,7 +704,7 @@ const contentData = [
         },
         {
             id: 6,
-            img: "",
+            img: {img1},
             title: "Nuwara Eliya to Bentota",
             content: [
                 "Start your day with a satisfying breakfast at the hotel, savoring the last moments of your stay in Colombo. After breakfast, it’s time to prepare for your journey to the airport.",
