@@ -175,9 +175,14 @@ const AboutUsContent = () => {
               </div>
               <div className="col-md-4 d-flex vm-card-col" style={{justifyContent:'right' }}>
                 <div className='vm-container'>
-                  <h3 className="font-primary">Our Goals</h3>
+                  <h3 className="font-primary">Our Values</h3>
                   <img src={goal_icon} alt="mission icon" style={{height:'200px', marginBottom:'40px'}} loading='lazy'/>
-                  <p className="font-secondary" style={{fontSize:'20px'}}>To uncover the hidden gem of authentic Buddhist teachings that provide the key to intellectual and emotional balance.</p>
+                  <ul style={{textAlign:'left', paddingLeft:'60px'}}>
+                    <li className="font-secondary" style={{fontSize:'20px'}}>Introspection</li>
+                    <li className="font-secondary" style={{fontSize:'20px'}}>Compassionate Leadership</li>
+                    <li className="font-secondary" style={{fontSize:'20px'}}>Holistic Well-being</li>
+                  </ul>
+                  {/* <p className="font-secondary" style={{fontSize:'20px'}}>To uncover the hidden gem of authentic Buddhist teachings that provide the key to intellectual and emotional balance.</p> */}
                 </div>
               </div>
           </div>
