@@ -96,7 +96,7 @@ function MapComponent({ start, end }) {
       <MapContainer center={position} zoom={8} scrollWheelZoom={false}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://tiles.stadiamaps.com/tiles/alidade_satellite/{z}/{x}/{y}{r}.jpg"
+          url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
         {/* <MarkerClusterGroup chunkedLoading iconCreateFunction={createCustomClusterIcon}> */}
