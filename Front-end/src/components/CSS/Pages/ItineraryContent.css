@@ -16,3 +16,7 @@
     row-gap: 30px;
     column-gap: 30px;
 }
+.mobile-view .itinerary-section-content{
+    width: 100vw;
+    padding: 0 2rem 0 2rem;
+}

@@ -1,12 +1,16 @@
 .Dfeedback-section{
     justify-content: center;
-    margin-top: 100px;
 }
 .Dfeedback-content{
     text-align: left;
     display: flex;
     flex-direction: column;
     width: 80vw;
+    margin-top: 100px;
+}
+
+.mobile-view .Dfeedback-content{
+    margin-top: 50px;
 }
 
 .Dfeedback-ft{

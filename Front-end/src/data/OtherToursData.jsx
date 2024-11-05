@@ -47,7 +47,7 @@ const contentData = [
     },
     {
         id: 4,
-        tag: "dubai",
+        tag: "thailand",
         img: img_01,
         title: "Dubai's Artistic Heritage",
         subTitle: "A 5-Day Journey Through Sri Lanka",
@@ -61,7 +61,7 @@ const contentData = [
     },
     {
         id: 5,
-        tag: "dubai",
+        tag: "thailand",
         img: img_02,
         title: "Dubai's Artistic Heritage",
         subTitle: "A 5-Day Journey Through Sri Lanka",
@@ -75,7 +75,7 @@ const contentData = [
     },
     {
         id: 6,
-        tag: "dubai",
+        tag: "thailand",
         img: img_03,
         title: "Dubai's Artistic Heritage",
         subTitle: "A 5-Day Journey Through Sri Lanka",
@@ -89,7 +89,7 @@ const contentData = [
     },
     {
         id: 7,
-        tag: "dubai",
+        tag: "indonesia",
         img: img_01,
         title: "Dubai's Artistic Heritage",
         subTitle: "A 5-Day Journey Through Sri Lanka",
@@ -103,7 +103,7 @@ const contentData = [
     },
     {
         id: 8,
-        tag: "dubai",
+        tag: "indonesia",
         img: img_02,
         title: "Dubai's Artistic Heritage",
         subTitle: "A 5-Day Journey Through Sri Lanka",
@@ -117,7 +117,7 @@ const contentData = [
     },
     {
         id: 9,
-        tag: "dubai",
+        tag: "indonesia",
         img: img_03,
         title: "Dubai's Artistic Heritage",
         subTitle: "A 5-Day Journey Through Sri Lanka",
@@ -145,7 +145,7 @@ const contentData = [
     },
     {
         id: 11,
-        tag: "dubai",
+        tag: "thailand",
         img: img_02,
         title: "Dubai's Artistic Heritage",
         subTitle: "A 5-Day Journey Through Sri Lanka",
@@ -159,7 +159,7 @@ const contentData = [
     },
     {
         id: 12,
-        tag: "dubai",
+        tag: "indonesia",
         img: img_03,
         title: "Dubai's Artistic Heritage",
         subTitle: "A 5-Day Journey Through Sri Lanka",

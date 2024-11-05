@@ -99,6 +99,3 @@ body {
   filter: grayscale(100%);
 }
 
-.leaflet-container{
-  height: 80vh;
-}

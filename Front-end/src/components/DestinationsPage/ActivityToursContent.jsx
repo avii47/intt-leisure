@@ -1,10 +1,8 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useMobileView } from "../../contexts/MobileViewContext";
-import DayCard from './DayCard';
 import ContactFrom from './DContactForm'
 import DGallery from './DGallery'
-import TourMap from './MapComponent'
 import "../CSS/Pages/ItineraryContent.css";
 
 function ActivityToursContent({content}) { 

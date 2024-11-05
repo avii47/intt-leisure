@@ -25,9 +25,14 @@ function ItineraryCategorySection({ contentCat, topic, exclude }) {
         contentData = activityToursContentData;
     } else if (contentCat === "conciergeService") {
         contentData = ConciergeServiceContentData;
-    } else if (contentCat === "dubai" || contentCat === "indonesia" || contentCat === "thailand") {
-        contentData = OtherToursContentData;
-    } 
+    } else if (["dubai", "indonesia", "thailand"].includes(contentCat)) {
+        OtherToursContentData.forEach((content) => {
+            if (content.tag === contentCat) {
+                contentData.push(content);
+            }
+        });
+    }
+    
 
     const navigate = useNavigate();
     const isMobileView = useMobileView();

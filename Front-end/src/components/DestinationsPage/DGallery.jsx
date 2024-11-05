@@ -1,5 +1,6 @@
 // Gallery.js
 import React, { useState } from 'react';
+import { useMobileView } from "../../contexts/MobileViewContext";
 import leftArrow from '../../assets/icons/left-arrow.png'
 import rightArrow from '../../assets/icons/right-arrow.png'
 import '../CSS/DGallery.css';
@@ -16,6 +17,7 @@ const images = [
 
 const Gallery = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const isMobileView = useMobileView();
 
   const handleThumbnailClick = (index) => {
     setCurrentImageIndex(index);
@@ -34,7 +36,7 @@ const Gallery = () => {
   };
 
   return (
-    <div className="gallery">
+    <div className={`gallery ${isMobileView ? "mobile-view" : ""}`}>
       <div className="main-image">
         <img src={images[currentImageIndex]} alt="Main display" />
         <button className="arrow left" onClick={handlePrev}>

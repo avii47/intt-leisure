@@ -1,4 +1,3 @@
-// src/components/MapComponent.js
 
 import React, { useEffect } from "react";
 import "leaflet/dist/leaflet.css";
@@ -6,6 +5,7 @@ import "leaflet-routing-machine/dist/leaflet-routing-machine.css";
 import "../CSS/DMap.css";
 import { MapContainer, TileLayer, Popup, Marker, useMap } from "react-leaflet"; 
 import { Icon, divIcon, point, LatLngBounds } from "leaflet";
+import { useMobileView } from "../../contexts/MobileViewContext";
 import MarkerClusterGroup from "react-leaflet-cluster";
 import markderIcon from "../../assets/icons/location.png";
 import L from "leaflet";
@@ -14,7 +14,8 @@ import "leaflet-routing-machine";
 import LocationData from "../../data/GeoLocations";
 
 function MapComponent({ start, end }) {
-  const position = [7.8731, 80.7718]; // Default center position
+  const position = [7.8731, 80.6718]; // Default center position
+  const isMobileView = useMobileView();
 
   // Helper function to find coordinates in LocationData
   const findCoordinates = (location) => {
@@ -34,13 +35,13 @@ function MapComponent({ start, end }) {
     iconSize: [30, 30],
   });
 
-  const createCustomClusterIcon = (cluster) => {
-    return new divIcon({
-      html: `<div class="cluster-icon">${cluster.getChildCount()}</div>`,
-      className: "custom-marker-cluster",
-      iconSize: point(33, 33, true),
-    });
-  };
+  // const createCustomClusterIcon = (cluster) => {
+  //   return new divIcon({
+  //     html: `<div class="cluster-icon">${cluster.getChildCount()}</div>`,
+  //     className: "custom-marker-cluster",
+  //     iconSize: point(33, 33, true),
+  //   });
+  // };
 
   // Routing Machine component for route rendering
   const RoutingMachine = ({ start, end }) => {
@@ -78,7 +79,12 @@ function MapComponent({ start, end }) {
         map.setView(startGeo || endGeo, 12);
       } else {
         // Reset to default position and zoom
-        map.setView(position, 8);
+        if(isMobileView) {
+          map.setView(position, 7);
+        }else {
+          map.setView(position, 8);
+        }
+        
       }
     }, [map, startGeo, endGeo]);
 
@@ -86,7 +92,7 @@ function MapComponent({ start, end }) {
   };
 
   return (
-    <div className="tour-map container" style={{ margin: "100px 0" }}>
+    <div className={`tour-map-container ${isMobileView ? "mobile-view" : ""}`}>
       <MapContainer center={position} zoom={8} scrollWheelZoom={false}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
