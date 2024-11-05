@@ -106,15 +106,15 @@ const contentData = [
             ],
             distance: "115 km",
             duration: "02 hours 50 minutes",
-            route: ['colombo', 'BIA']
+            route: ['Colombo', 'BIA']
         },
     ] 
   },
   {
     id: 2,
-    img: BeyondTheHills,
-    title: "Beyond the Hills",
-    subTitle: "6 Days of Sri Lankan Wonders",
+    img: SriLankaAwaits,
+    title: "Sri Lanka Awaits",
+    subTitle: "An 8-Day Tour of Nature, Culture, and History",
     cardTxt: "You will be met on arrival at the Bandaranaike International Airport by our INTT leisure...",
     overview: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     days: [
@@ -132,12 +132,9 @@ const contentData = [
                 "Accommodation",
                 "Dinner and breakfast at the hotel"
             ],
-            distance: "115 km",
-            duration: "02 hours 50 minutes",
-            mapPositions: [
-                "7.8742",
-                "80.6511"
-            ]
+            distance: "180 km",
+            duration: "03 hours approx.",
+            route: ['BIA', 'Dambulla']
         },
         {
             id: 2,
@@ -153,12 +150,9 @@ const contentData = [
                 "Accommodation",
                 "Dinner and breakfast at the hotel"
             ],
-            distance: "115 km",
-            duration: "02 hours 50 minutes",
-            mapPositions: [
-                "7.8731",
-                "80.7718"
-            ]
+            distance: "80 km",
+            duration: "02 hours 10 minutes approx.",
+            route: ['Dabulla ', 'Kandy']
         },
         {
             id: 3,
@@ -173,12 +167,9 @@ const contentData = [
                 "Accommodation",
                 "Dinner and breakfast at the hotel"
             ],
-            distance: "115 km",
-            duration: "02 hours 50 minutes",
-            mapPositions: [
-                "7.8731",
-                "80.7718"
-            ]
+            distance: "80 km",
+            duration: "02 hours 40 minutes approx",
+            route: ['Kandy', 'Nuwara Eliya']
         },
         {
             id: 4,
@@ -193,17 +184,14 @@ const contentData = [
                 "Accommodation",
                 "Dinner and breakfast at the hotel"
             ],
-            distance: "115 km",
-            duration: "02 hours 50 minutes",
-            mapPositions: [
-                "7.8731",
-                "80.7718"
-            ]
+            distance: "depends",
+            duration: "depends",
+            route: ['Nuwara Eliya']
         },
         {
             id: 5,
             img: {img1},
-            title: "Kandy To Nuwara Eliya",
+            title: "Nuwara Eliya To Bentota",
             content: [
                 "After breakfast, depart from Nuwara Eliya for Bentota.",
                 "Upon arrival, check in at your beach hotel, where you can relax and enjoy a leisurely day by the beach.",
@@ -213,12 +201,9 @@ const contentData = [
                 "Accommodation",
                 "Dinner and breakfast at the hotel"
             ],
-            distance: "115 km",
-            duration: "02 hours 50 minutes",
-            mapPositions: [
-                "7.8731",
-                "80.7718"
-            ]
+            distance: "200 km",
+            duration: "05 hours 20 minutes approx.",
+            route: ['Nuwara Eliya', 'Bentota']
         },
         {
             id: 6,
@@ -233,17 +218,14 @@ const contentData = [
                 "Accommodation",
                 "Dinner and breakfast at the hotel"
             ],
-            distance: "115 km",
-            duration: "02 hours 50 minutes",
-            mapPositions: [
-                "7.8731",
-                "80.7718"
-            ]
+            distance: "depends",
+            duration: "depends",
+            route: ['Bentota']
         },
         {
             id: 7,
             img: {img1},
-            title: "Bentota",
+            title: "Bentota to Colombo",
             content: [
                 "After breakfast, depart from Bentota for Colombo.",
                 "Upon arrival, enjoy shopping and a city tour of Colombo, the trade and commercial capital known as a traditional gateway to the Orient. This vibrant city offers a unique blend of eastern and western influences, rich history, and charm. Colombo boasts an impressive array of high-quality restaurants and some of the best shopping opportunities in Asia.",
@@ -253,17 +235,14 @@ const contentData = [
                 "Accommodation",
                 "Dinner and breakfast at the hotel"
             ],
-            distance: "115 km",
-            duration: "02 hours 50 minutes",
-            mapPositions: [
-                "7.8731",
-                "80.7718"
-            ]
+            distance: "105 km",
+            duration: "01 hours 50 minutes approx.",
+            route: ['Bentota', 'Colombo']
         },
         {
             id: 8,
             img: {img1},
-            title: "Bentota",
+            title: "Colombo to Bandaranaike International Airport",
             content: [
                 "After breakfast at the hotel, depart for Bandaranaike International Airport, ensuring you arrive in time for your flight out of Sri Lanka."
             ],
@@ -271,12 +250,9 @@ const contentData = [
                 "Accommodation",
                 "Dinner and breakfast at the hotel"
             ],
-            distance: "115 km",
-            duration: "02 hours 50 minutes",
-            mapPositions: [
-                "7.8731",
-                "80.7718"
-            ]
+            distance: "40 km",
+            duration: "35 minutes approx.",
+            route: ['Colombo', 'BIA']
         },
     ] 
   },
@@ -305,10 +281,7 @@ const contentData = [
             ],
             distance: "115 km",
             duration: "02 hours 50 minutes",
-            mapPositions: [
-                "7.8731",
-                "80.7718"
-            ]
+            route: ['BIA', 'Colombo']
         },
         {
             id: 2,
@@ -323,12 +296,9 @@ const contentData = [
                 "Accommodation",
                 "Dinner and breakfast at the hotel"
             ],
-            distance: "115 km",
-            duration: "02 hours 50 minutes",
-            mapPositions: [
-                "7.8731",
-                "80.7718"
-            ]
+            distance: "80 km",
+            duration: "02 hours 40 minutes approx.",
+            route: ['Kandy', 'Nuwara Eliya']
         },
         {
             id: 3,
@@ -343,17 +313,14 @@ const contentData = [
                 "Accommodation",
                 "Dinner and breakfast at the hotel"
             ],
-            distance: "115 km",
-            duration: "02 hours 50 minutes",
-            mapPositions: [
-                "7.8731",
-                "80.7718"
-            ]
+            distance: "depends",
+            duration: "depends",
+            route: ['Nuwara Eliya']
         },
         {
             id: 4,
             img: {img1},
-            title: "Nuwara Eliya to Bentota",
+            title: "Nuwara Eliya To Bentota",
             content: [
                 "After breakfast at the hotel, you'll depart for Bentota, a beautiful coastal destination. Upon arrival, check in at your hotel and take some time to relax and unwind. Enjoy your day soaking up the sun and the beach atmosphere.",
                 "In the evening, savor a delightful dinner and then enjoy an overnight stay at the hotel, surrounded by the tranquil sounds of the ocean.",
@@ -362,12 +329,9 @@ const contentData = [
                 "Accommodation",
                 "Dinner and breakfast at the hotel"
             ],
-            distance: "115 km",
-            duration: "02 hours 50 minutes",
-            mapPositions: [
-                "7.8731",
-                "80.7718"
-            ]
+            distance: "200 km",
+            duration: "05 hours 20 minutes approx.",
+            route: ['Nuwara Eliya', 'Bentota']
         },
         {
             id: 5,
@@ -381,12 +345,9 @@ const contentData = [
                 "Accommodation",
                 "Dinner and breakfast at the hotel"
             ],
-            distance: "115 km",
-            duration: "02 hours 50 minutes",
-            mapPositions: [
-                "7.8731",
-                "80.7718"
-            ]
+            distance: "depends",
+            duration: "depends",
+            route: ['Bentota']
         },
         {
             id: 6,
@@ -402,12 +363,9 @@ const contentData = [
                 "Accommodation",
                 "Dinner and breakfast at the hotel"
             ],
-            distance: "115 km",
-            duration: "02 hours 50 minutes",
-            mapPositions: [
-                "7.8731",
-                "80.7718"
-            ]
+            distance: "105 km",
+            duration: "01 hours 50 minutes approx.",
+            route: ['Bentota', 'Colombo']
         },
         {
             id: 7,
@@ -422,20 +380,17 @@ const contentData = [
                 "Accommodation",
                 "Dinner and breakfast at the hotel"
             ],
-            distance: "115 km",
-            duration: "02 hours 50 minutes",
-            mapPositions: [
-                "7.8731",
-                "80.7718"
-            ]
+            distance: "40 km",
+            duration: "35 minutes approx.",
+            route: ['Colombo', 'BIA']
         },
     ] 
   },
   {
     id: 4,
-    img: SriLankaAwaits,
-    title: "Sri Lanka Awaits",
-    subTitle: "An 8-Day Tour of Nature",
+    img: BeyondTheHills,
+    title: "Beyond the Hills",
+    subTitle: "6 Days of Sri Lankan Wonders",
     cardTxt: "You will be met on arrival at the Bandaranaike International Airport by our INTT leisure...",
     overview: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     days: [
@@ -456,11 +411,8 @@ const contentData = [
                 "Dinner and breakfast at the hotel"
             ],
             distance: "115 km",
-            duration: "02 hours 50 minutes",
-            mapPositions: [
-                "7.8731",
-                "80.7718"
-            ]
+            duration: "02 hours 50 minutes approx.",
+            route: ['Colombo', 'BIA']
         },
         {
             id: 2,
@@ -476,12 +428,9 @@ const contentData = [
                 "Accommodation",
                 "Dinner and breakfast at the hotel"
             ],
-            distance: "115 km",
-            duration: "02 hours 50 minutes",
-            mapPositions: [
-                "7.8731",
-                "80.7718"
-            ]
+            distance: "80 km",
+            duration: "02 hours 50 minutes approx.",
+            route: ['Kandy', 'Nuwara Eliya']
         },
         {
             id: 3,
@@ -497,12 +446,9 @@ const contentData = [
                 "Accommodation",
                 "Dinner and breakfast at the hotel"
             ],
-            distance: "115 km",
-            duration: "02 hours 50 minutes",
-            mapPositions: [
-                "7.8731",
-                "80.7718"
-            ]
+            distance: "200 km",
+            duration: "05 hours 20 minutes approx.",
+            route: ['Nuwara Eliya', 'Bentota']
         },
         {
             id: 4,
@@ -519,12 +465,9 @@ const contentData = [
                 "Accommodation",
                 "Dinner and breakfast at the hotel"
             ],
-            distance: "115 km",
-            duration: "02 hours 50 minutes",
-            mapPositions: [
-                "7.8731",
-                "80.7718"
-            ]
+            distance: "depends",
+            duration: "depends",
+            route: ['Bentota']
         },
         {
             id: 5,
@@ -541,12 +484,9 @@ const contentData = [
                 "Accommodation",
                 "Dinner and breakfast at the hotel"
             ],
-            distance: "115 km",
-            duration: "02 hours 50 minutes",
-            mapPositions: [
-                "7.8731",
-                "80.7718"
-            ]
+            distance: "105 km",
+            duration: "01 hours 15 minutes approx.",
+            route: ['Bentota', 'Colombo']
         },
         {
             id: 6,
@@ -564,10 +504,7 @@ const contentData = [
             ],
             distance: "115 km",
             duration: "02 hours 50 minutes",
-            mapPositions: [
-                "7.8731",
-                "80.7718"
-            ]
+            route: ['Bentota', 'Colombo']
         },
     ] 
   },
