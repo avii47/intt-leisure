@@ -1,7 +1,7 @@
 import img1 from "../assets/images/sample itinerary.jpg";
 
 import CulturalOdyssey from "../assets/images/Cultural Odyssey.jpg";
-import CulturalOdysseyDay1 from "../assets/images/Cultural Odyssey -day1.jpg";
+import CulturalOdysseyDay1 from "../assets/images/Kandy.jpg";
 import CulturalOdysseyDay2 from "../assets/images/Cultural Odyssey -day2.jpg";
 import CulturalOdysseyDay3 from "../assets/images/Cultural Odyssey -day3.jpg";
 import CulturalOdysseyDay4 from "../assets/images/Cultural Odyssey -day4.jpg";
@@ -503,8 +503,8 @@ const contentData = [
                 "Dinner and breakfast at the hotel"
             ],
             distance: "115 km",
-            duration: "02 hours 50 minutes",
-            route: ['Bentota', 'Colombo']
+            duration: "02 hours 50 minutes approx.",
+            route: ['Colombo', 'BIA']
         },
     ] 
   },
@@ -530,12 +530,9 @@ const contentData = [
                 "Accommodation",
                 "Dinner and breakfast at the hotel"
             ],
-            distance: "115 km",
-            duration: "02 hours 50 minutes",
-            mapPositions: [
-                "7.8731",
-                "80.7718"
-            ]
+            distance: "180 km",
+            duration: "03 hours 50 minutes approx.",
+            route: ['BIA', 'Dambulla']
         },
         {
             id: 2,
@@ -551,17 +548,14 @@ const contentData = [
                 "Accommodation",
                 "Dinner and breakfast at the hotel"
             ],
-            distance: "115 km",
-            duration: "02 hours 50 minutes",
-            mapPositions: [
-                "7.8731",
-                "80.7718"
-            ]
+            distance: "depends",
+            duration: "depends",
+            route: ['Dambulla']
         },
         {
             id: 3,
             img: {img1},
-            title: "03: Dambulla to Kandy",
+            title: "Dambulla to Kandy",
             content: [
                 "Start your day with a delicious breakfast at the hotel, preparing for an adventurous journey to some of Sri Lanka's most iconic sites.",
                 "For those inclined to explore ancient architecture and history, an optional climb of the Sigiriya Rock Fortress awaits. This 5th-century marvel, designated as a UNESCO World Heritage site, was constructed by King Kashyapa (477-495 AD). Known as the Lion Rock, Sigiriya stands at 200 meters and offers breathtaking views of the surrounding jungle. At the base, a moat, ramparts, and extensive water gardens frame the rock’s base, while midway up the rock, visitors can view the famous frescoes of the 'Heavenly Maidens.' These frescoes, painted in earth pigments, depict beautiful maidens and add an air of mystique to the fortress.",
@@ -574,12 +568,9 @@ const contentData = [
                 "Accommodation",
                 "Dinner and breakfast at the hotel"
             ],
-            distance: "115 km",
-            duration: "02 hours 50 minutes",
-            mapPositions: [
-                "7.8731",
-                "80.7718"
-            ]
+            distance: "80 km",
+            duration: "02 hours 10 minutes approx.",
+            route: ['Dambulla', 'Kandy']
         },
         {
             id: 4,
@@ -596,12 +587,9 @@ const contentData = [
                 "Accommodation",
                 "Dinner and breakfast at the hotel"
             ],
-            distance: "115 km",
-            duration: "02 hours 50 minutes",
-            mapPositions: [
-                "7.8731",
-                "80.7718"
-            ]
+            distance: "80 km",
+            duration: "02 hours 40 minutes approx.",
+            route: ['Kandy', 'Nuwara Eliya']
         },
         {
             id: 5,
@@ -619,12 +607,9 @@ const contentData = [
                 "Accommodation",
                 "Dinner and breakfast at the hotel"
             ],
-            distance: "115 km",
-            duration: "02 hours 50 minutes",
-            mapPositions: [
-                "7.8731",
-                "80.7718"
-            ]
+            distance: "depends",
+            duration: "depends",
+            route: ['Nuwara Eliya']
         },
         {
             id: 6,
@@ -640,12 +625,63 @@ const contentData = [
                 "Accommodation",
                 "Dinner and breakfast at the hotel"
             ],
-            distance: "115 km",
-            duration: "02 hours 50 minutes",
-            mapPositions: [
-                "7.8731",
-                "80.7718"
-            ]
+            distance: "200 km",
+            duration: "05 hours 20 minutes approx.",
+            route: ['Nuwara Eliya', 'Bentota']
+        },
+        {
+            id: 7,
+            img: {img1},
+            title: "Bentota",
+            content: [
+                "Start your day with a delightful breakfast at the hotel before setting out on an optional river cruise in Balapitiya, a charming coastal town. This journey along the serene Madu River is a true immersion into Sri Lanka's rich ecological tapestry, where culture and nature seamlessly converge. As you glide across the water, witness the unique beauty of Kotu Duwa, a small island that houses an ancient temple, symbolizing a link to the region's storied past.",
+                "The cruise will lead you through narrow mangrove tunnels, a habitat for an abundance of biodiversity. Here, you may encounter various species of reptiles, mollusks, and over 70 kinds of freshwater fish, all while soaking in the quietude of this remarkable environment. The shores of Balapitiya are also renowned for their sprawling cinnamon plantations and a popular “fish pedicure” center, where visitors can experience a natural form of relaxation and rejuvenation.",
+                "For birdwatchers, this journey is a feast for the senses, as the river banks attract a wide variety of bird species, making for a memorable offshore adventure.",
+                "After the river cruise, return to your hotel in Kalutara. Spend the rest of the day at your leisure, unwinding in the comfort of the hotel and enjoying the serene surroundings.",
+                "Dinner & Overnight stay at the hotel."
+            ],
+            inclusion: [
+                "Accommodation",
+                "Dinner and breakfast at the hotel"
+            ],
+            distance: "depends",
+            duration: "depends",
+            route: ['Bentota']
+        },
+        {
+            id: 8,
+            img: {img1},
+            title: "Bentota to Colombo",
+            content: [
+                "Begin your day with a hearty breakfast at the hotel before setting off for Colombo, the vibrant capital city of Sri Lanka. The approximately two-hour scenic drive will lead you to the heart of this bustling metropolis, renowned as a traditional gateway between East and West. Colombo is a fascinating city with a unique blend of modern flair and historical charm, where ancient temples and colonial buildings stand side by side with sleek skyscrapers.",
+                "Upon arrival, embark on a city tour that captures the essence of Colombo's eclectic spirit. Dive into the city's vibrant shopping scene, where an array of high-quality local and international products await, from colorful textiles to intricate handicrafts. Colombo also boasts an impressive array of culinary options, featuring restaurants offering cuisines from around the world, reflecting the city’s diverse cultural influences.",
+                "After exploring, check in to your hotel in Colombo, where you can unwind and enjoy the rest of the day at your leisure, immersing yourself in the city's unique rhythm.",
+                "Dinner & Overnight stay at the hotel."
+            ],
+            inclusion: [
+                "Accommodation",
+                "Dinner and breakfast at the hotel"
+            ],
+            distance: "105 km",
+            duration: "01 hours 50 minutes approx.",
+            route: ['Bentota', 'Colombo']
+        },
+        {
+            id: 9,
+            img: {img1},
+            title: "Colombo to Bandaranaike International Airport",
+            content: [
+                "On your final day in Sri Lanka, enjoy breakfast at your hotel in Colombo before preparing for your journey home. After breakfast, gather your belongings and check out from the hotel, reflecting on the incredible experiences and memories you’ve gathered throughout your travels.",
+                "Your chauffeur will transport you to Bandaranaike International Airport, a drive of approximately 35 minutes, ensuring you arrive with ample time for your flight. As you leave Colombo behind, bid farewell to this beautiful island, taking with you the sights, sounds, and spirit of Sri Lanka.",
+                "Safe travels, and may your memories of Sri Lanka’s warmth, hospitality, and natural beauty remain with you until you return again."
+            ],
+            inclusion: [
+                "Accommodation",
+                "Dinner and breakfast at the hotel"
+            ],
+            distance: "40 km",
+            duration: "35 minutes approx.",
+            route: ['Colombo', 'BIA']
         },
     ]
   }

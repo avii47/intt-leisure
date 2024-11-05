@@ -35,3 +35,7 @@
     padding-bottom: 0px;
     justify-content: center;
 }
+.cl-btn:hover{
+    background-color: rgb(173, 173, 173);
+    color: black;
+}

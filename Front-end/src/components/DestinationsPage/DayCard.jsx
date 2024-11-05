@@ -1,12 +1,12 @@
-// src/components/DayCard.js
-
 import React, { useRef, useEffect, useState } from 'react';
+import { useMobileView } from "../../contexts/MobileViewContext";
 import '../CSS/DayCard.css';
 
 function DayCard({ content, isExpanded, onExpand }) {
   const cardRef = useRef(null); 
   const contentRef = useRef(null); 
   const [maxHeight, setMaxHeight] = useState('0px');
+  const isMobileView = useMobileView();
 
   // Adjust maxHeight dynamically based on isExpanded
   useEffect(() => {
@@ -22,13 +22,19 @@ function DayCard({ content, isExpanded, onExpand }) {
   }, [isExpanded]);
 
   return (
-    <div className="day-card" ref={cardRef}> 
+    <div className={`day-card ${ isMobileView ? "mobile-view" : "" }`} ref={cardRef}> 
       <div className="day-card-header" onClick={onExpand}>
-        <span className="day-card-day">{`Day ${content.id}`}</span>
-        <span className="day-card-title">{content.title}</span>
-        <button className="expand-button">
-          {isExpanded ? <i className="fa-solid fa-minus"></i> : <i className="fa-solid fa-plus"></i>}  
-        </button>
+        <div className="day-col" >
+          <span className="day-card-day">{`Day ${content.id}`}</span>
+        </div>
+        <div className="title-col d-flex">
+          <span className="day-card-title">{content.title}</span>
+        </div>
+        <div className="btn-col">
+          <button className="expand-button">
+            {isExpanded ? <i className="fa-solid fa-minus"></i> : <i className="fa-solid fa-plus"></i>}  
+          </button>
+        </div>
       </div>
 
       <div

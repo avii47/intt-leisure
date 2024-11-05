@@ -11,16 +11,28 @@
 .day-card-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  
   background-color: #ccc;
   padding: 10px;
   cursor: pointer;
+}
+
+.day-col{
+  display: flex;
+  width: 3rem;
 }
 
 /* Styling for day and title in the header */
 .day-card-day {
   font-weight: bold;
   color: #333;
+}
+.mobile-view .day-card-day{
+  width: 5rem;
+}
+
+.mobile-view .title-col{
+  flex-wrap: wrap;
 }
 
 .day-card-title {
@@ -30,6 +42,10 @@
   font-size: 1.1em;
   color: #333;
   border-left: 1px black solid;
+}
+
+.btn-col{
+  margin-left: auto;
 }
 
 /* Expand button */
@@ -60,14 +76,12 @@
 }
 /* Image in the expanded view */
 .day-card-image {
-  height: 500px;
-  border-radius: 5px;
+  width: 100%;
   margin-bottom: 10px;
 }
 
 /* Content section inside the expanded details */
 .day-card-content {
-  /* Padding applied here to prevent issues when collapsed */
   padding-top: 10px;
 }
 

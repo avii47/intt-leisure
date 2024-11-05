@@ -5,7 +5,7 @@
     position: relative;
   }
   .mobile-view .gallery{
-    margin-top: -50px;
+    margin-top: 50px;
   }
   
   .main-image {
@@ -15,7 +15,7 @@
   
   .main-image img {
     width: 60vw;
-    height: 600px;
+    height: 700px;
   }
 
   .mobile-view  .main-image img {
