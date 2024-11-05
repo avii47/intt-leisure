@@ -40,12 +40,12 @@
     margin-top: -20px;
   }
   
-  .left {
+  .a-left {
     left: 10px;
     transform: translateX(-50%);
   }
   
-  .right {
+  .a-right {
     right: 10px;
     transform: translateX(50%);
   }

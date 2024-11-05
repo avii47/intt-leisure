@@ -39,10 +39,10 @@ const Gallery = () => {
     <div className={`gallery ${isMobileView ? "mobile-view" : ""}`}>
       <div className="main-image">
         <img src={images[currentImageIndex]} alt="Main display" />
-        <button className="arrow left" onClick={handlePrev}>
+        <button className="arrow a-left" onClick={handlePrev}>
           <img src={leftArrow} alt="" style={{height:'40px', width:'auto'}} />
         </button>
-        <button className="arrow right" onClick={handleNext}>
+        <button className="arrow a-right" onClick={handleNext}>
           <img src={rightArrow} alt="" style={{height:'40px', width:'auto'}} />
         </button>
       </div>

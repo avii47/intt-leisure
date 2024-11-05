@@ -16,7 +16,7 @@ const ContentData = [
     title: "Private Travel",
     subTitle: "Airport Concierge Service",
     cardTxt:
-      "You will be met on arrival at the Bandaranaike International Airport by our INTT leisure...",
+      "Experience the art of personalized private travel, from booking to arrival and every moment...",
     overview:
       "Experience the art of personalized private travel, from booking to arrival and every moment in between.",
     specs: [
@@ -58,7 +58,7 @@ const ContentData = [
     title: "Coporate Travelo",
     subTitle: "Airport Concierge Service",
     cardTxt:
-      "You will be met on arrival at the Bandaranaike International Airport by our INTT leisure...",
+      "Expert travel management for worry-free corporate travel with optimized budgets...",
     overview:
       "Expert travel management for worry-free corporate travel with optimized budgets.",
     specs: [
@@ -100,7 +100,7 @@ const ContentData = [
     title: "Demestic Travel",
     subTitle: "Airport Concierge Service",
     cardTxt:
-      "You will be met on arrival at the Bandaranaike International Airport by our INTT leisure...",
+      "Unparalleled domestic travel in Sri Lanka with private charters, helicopters, and luxury cars...",
     overview:
       "Unparalleled domestic travel in Sri Lanka with private charters, helicopters, and luxury cars.",
     specs: [

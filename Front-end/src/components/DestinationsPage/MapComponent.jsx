@@ -53,7 +53,7 @@ function MapComponent({ start, end }) {
       const routingControl = L.Routing.control({
         waypoints: [L.latLng(start[0], start[1]), L.latLng(end[0], end[1])],
         lineOptions: {
-          styles: [{ color: "#b9e271", opacity: 1, weight: 4 }],
+          styles: [{ color: "#1a73e8", opacity: 1, weight: 4 }],
         },
         createMarker: () => null, // Do not create additional markers
         addWaypoints: false,

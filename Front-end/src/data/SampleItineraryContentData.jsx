@@ -18,12 +18,12 @@ const contentData = [
     img: CulturalOdyssey,
     title: "Cultural Odyssey",
     subTitle: "A 5-Day Journey Through Sri Lanka",
-    cardTxt: "You will be met on arrival at the Bandaranaike International Airport by our INTT leisure...",
-    overview: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    cardTxt: "Get ready for an unforgettable five Days adventure in the beautiful island of Sri Lanka...",
+    overview: "Get ready for an unforgettable 04 Nights / 05 Days adventure in the beautiful island of Sri Lanka! Your journey begins with a warm welcome at Bandaranaike International Airport, where our friendly representative will assist you. You'll travel to the enchanting city of Kandy, known for its rich culture and stunning landscapes. Along the way, you have the option to visit the Pinnawela Elephant Orphanage, a heartwarming sanctuary for elephants in need. Explore the vibrant city of Kandy, visit a gem lapidary, and immerse yourself in the captivating Kandy Cultural Dance Show. This trip promises to be filled with joy, culture, and unforgettable memories!",
     days: [
         {
             id: 1,
-            img: CulturalOdysseyDay1,
+            img: {img1},
             title: "Bandaranaike International Airport to Kandy",
             content: [
                 "Upon arrival at Bandaranaike International Airport, an INTT Leisure representative will meet you, assist with luggage, and introduce you to your chauffeur for a transfer to Kandy.",
@@ -32,8 +32,10 @@ const contentData = [
                 "Return to the hotel in Kandy for an overnight stay."
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Meet and assist at Bandaranaike International Airport.",
+                "Transfer to Kandy.",
+                "Visit to Pinnawela Elephant Orphanage (optional, entrance fee supplement).",
+                "Accommodation in Kandy hotel."
             ],
             distance: "115 km",
             duration: "02 hours 50 minutes",
@@ -41,7 +43,7 @@ const contentData = [
         },
         {
             id: 2,
-            img: CulturalOdysseyDay2,
+            img: {img1},
             title: "Kandy To Nuwara Eliya",
             content: [
                 "After breakfast at the hotel, depart from Kandy to Nuwara Eliya.",
@@ -50,8 +52,11 @@ const contentData = [
                 "Dinner and an overnight stay at the hotel."
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Breakfast at the hotel in Kandy.",
+                "Transfer to Nuwara Eliya.",
+                "Visit to a tea plantation and factory",
+                "Accommodation in Nuwara Eliya hotel.",
+                "Dinner included."
             ],
             distance: "115 km",
             duration: "02 hours 50 minutes",
@@ -59,7 +64,7 @@ const contentData = [
         },
         {
             id: 3,
-            img: CulturalOdysseyDay3,
+            img: {img1},
             title: "Nuwara Eliya",
             content: [
                 "After breakfast, begin a city tour of Nuwara Eliya.",
@@ -68,8 +73,11 @@ const contentData = [
                 "Return to your hotel in Nuwara Eliya to relax and savor the cool climate, followed by dinner and an overnight stay."
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Breakfast at the hotel.",
+                "City tour of Nuwara Eliya, including historical landmarks and colonial heritage.",
+                "Stroll around Lake Gregory (entrance fee included).",
+                "Accommodation in Nuwara Eliya hotel.",
+                "Dinner included."
             ],
             distance: "depends",
             duration: "depends",
@@ -77,7 +85,7 @@ const contentData = [
         },
         {
             id: 4,
-            img: CulturalOdysseyDay4,
+            img: {img1},
             title: "Nuwara Eliya to Colombo",
             content: [
                 "After breakfast, depart from Nuwara Eliya to Colombo, stopping en route at Kitulgala for optional white-water rafting, a prime spot for adventure sports amid serene surroundings.",
@@ -86,8 +94,11 @@ const contentData = [
                 "Return to your hotel in Colombo for an overnight stay."
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Breakfast at the hotel.",
+                "Transfer to Colombo.",
+                "Optional stop at Kitulgala for white-water rafting (optional supplement fee).",
+                "City tour and shopping in Colombo.",
+                "Accommodation in Colombo hotel."
             ],
             distance: "115 km",
             duration: "02 hours 50 minutes",
@@ -95,14 +106,14 @@ const contentData = [
         },
         {
             id: 5,
-            img: CulturalOdysseyDay5,
+            img: {img1},
             title: "Colombo to Bandaranaike International Airport",
             content: [
                 "After breakfast at the hotel, depart from Colombo for Bandaranaike International Airport in time for your flight out of Sri Lanka."
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Breakfast at the hotel.",
+                "Transfer to Bandaranaike International Airport for departure."
             ],
             distance: "115 km",
             duration: "02 hours 50 minutes",
@@ -115,8 +126,8 @@ const contentData = [
     img: SriLankaAwaits,
     title: "Sri Lanka Awaits",
     subTitle: "An 8-Day Tour of Nature, Culture, and History",
-    cardTxt: "You will be met on arrival at the Bandaranaike International Airport by our INTT leisure...",
-    overview: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    cardTxt: "Get ready for an unforgettable journey through the enchanting landscapes and rich cultural heritage of Sri Lanka...",
+    overview: "Get ready for an unforgettable journey through the enchanting landscapes and rich cultural heritage of Sri Lanka! Over the course of 7 nights and 8 days, you'll explore breathtaking sites, including the Pinnawala Elephant Orphanage and the historic Dambulla Cave Temple. Your adventure begins at Bandaranaike International Airport, where our friendly representative will greet you and assist you throughout your travels. From the majestic Sigiriya Rock Fortress to the serene beauty of Kandy, each day promises new experiences and memories. Enjoy delicious meals and comfortable accommodations as you immerse yourself in the vibrant culture and stunning scenery of this beautiful island nation.",
     days: [
         {
             id: 1,
@@ -129,8 +140,11 @@ const contentData = [
                 "Continue to your hotel in Dambulla for dinner and an overnight stay."
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Meet and assist at Bandaranaike International Airport.",
+                "Transportation to Dambulla via Pinnawala.",
+                "Visit to Pinnawala Elephant Orphanage (optional entrance fee).",
+                "Visit to Dambulla Cave Temple.",
+                "Overnight stay at a hotel in Dambulla."
             ],
             distance: "180 km",
             duration: "03 hours approx.",
@@ -147,8 +161,11 @@ const contentData = [
                 "Return to your hotel in Kandy for dinner and an overnight stay."
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Breakfast at the hotel.",
+                "Climb to Sigiriya Rock Fortress (entrance fee may apply).",
+                "Visit to the Spice Garden in Matale.",
+                "City tour of Kandy.",
+                "Overnight stay at a hotel in Kandy."
             ],
             distance: "80 km",
             duration: "02 hours 10 minutes approx.",
@@ -164,8 +181,10 @@ const contentData = [
                 "Continue to your hotel in Nuwara Eliya for dinner and an overnight stay.",
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Breakfast at the hotel.",
+                "Visit to the Royal Botanical Gardens in Peradeniya (optional entrance fee).",
+                "Visit to a tea plantation and factory.",
+                "Overnight stay at a hotel in Nuwara Eliya."
             ],
             distance: "80 km",
             duration: "02 hours 40 minutes approx",
@@ -181,8 +200,9 @@ const contentData = [
                 "Return to your hotel in Nuwara Eliya to relax and enjoy the cool climate, followed by dinner and an overnight stay.",
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Breakfast at the hotel.",
+                "City tour of Nuwara Eliya.",
+                "Overnight stay at a hotel in Nuwara Eliya."
             ],
             distance: "depends",
             duration: "depends",
@@ -198,8 +218,10 @@ const contentData = [
                 "Conclude your day with dinner and an overnight stay at the hotel.",
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Breakfast at the hotel.",
+                "Transportation to Bentota.",
+                "Relaxation time at the beach hotel.",
+                "Overnight stay at a hotel in Bentota."
             ],
             distance: "200 km",
             duration: "05 hours 20 minutes approx.",
@@ -215,8 +237,10 @@ const contentData = [
                 "Return to your hotel in Kalutara to relax and enjoy the day. Conclude with dinner and an overnight stay at the hotel.",
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Breakfast at the hotel.",
+                "Optional river cruise in Balapitiya (supplement fee may apply).",
+                "Relaxation time at the hotel.",
+                "Overnight stay at a hotel in Bentota."
             ],
             distance: "depends",
             duration: "depends",
@@ -232,8 +256,10 @@ const contentData = [
                 "Proceed to your hotel in Colombo, where you can relax and enjoy the rest of your day. End the day with dinner and an overnight stay at the hotel.",
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Breakfast at the hotel.",
+                "Transportation to Colombo.",
+                "City tour and shopping in Colombo.",
+                "Overnight stay at a hotel in Colombo."
             ],
             distance: "105 km",
             duration: "01 hours 50 minutes approx.",
@@ -247,8 +273,8 @@ const contentData = [
                 "After breakfast at the hotel, depart for Bandaranaike International Airport, ensuring you arrive in time for your flight out of Sri Lanka."
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Breakfast at the hotel.",
+                "Transportation to Bandaranaike International Airport for departure."
             ],
             distance: "40 km",
             duration: "35 minutes approx.",
@@ -261,8 +287,8 @@ const contentData = [
     img: JourneyThroughParadise,
     title: "Journey Through Paradise",
     subTitle: "7 Days in Captivating Sri Lanka",
-    cardTxt: "You will be met on arrival at the Bandaranaike International Airport by our INTT leisure...",
-    overview: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    cardTxt: "This package offers an immersive experience across the island's cultural and scenic highlights...",
+    overview: "This package offers an immersive experience across the island's cultural and scenic highlights. Beginning at Bandaranaike International Airport, you’ll travel to Kandy to visit the Pinnawala Elephant Orphanage and enjoy a cultural show. The journey continues to Nuwara Eliya, the heart of Sri Lanka’s tea country, where you can explore historic landmarks and relax in the cool hill country climate. From Nuwara Eliya, you’ll head to the coastal town of Bentota to unwind by the beach and experience a river cruise through Balapitiya’s biodiverse mangroves. The tour ends in Colombo, where you’ll enjoy a city tour, shopping, and a glimpse of Sri Lanka’s vibrant urban culture before departing. This itinerary blends nature, history, and relaxation, providing a well-rounded Sri Lankan adventure​",
     days: [
         {
             id: 1,
@@ -276,8 +302,9 @@ const contentData = [
                 "Return to your hotel in Kandy for dinner and an overnight stay."
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Transfer from Bandaranaike International Airport to Kandy.",
+                "Visit the Pinnawala Elephant Orphanage (Optional).",
+                "Overnight stay at the hotel in Kandy"
             ],
             distance: "115 km",
             duration: "02 hours 50 minutes",
@@ -293,8 +320,9 @@ const contentData = [
                 "Once you arrive in Nuwara Eliya, proceed to your hotel for dinner and an overnight stay.",
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Visit the Royal Botanical Gardens in Peradeniya (Optional).",
+                "En route visit a Tea Plantation and Factory.",
+                "Overnight stay at the hotel in Nuwara Eliya."
             ],
             distance: "80 km",
             duration: "02 hours 40 minutes approx.",
@@ -310,8 +338,8 @@ const contentData = [
                 "After your tour, return to the hotel to relax and enjoy the cool climate of Nuwara Eliya. Later, enjoy dinner and an overnight stay at the hotel."
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Commence a city tour of Nuwara Eliya.",
+                "Overnight stay at the hotel in Nuwara Eliya.",
             ],
             distance: "depends",
             duration: "depends",
@@ -326,8 +354,9 @@ const contentData = [
                 "In the evening, savor a delightful dinner and then enjoy an overnight stay at the hotel, surrounded by the tranquil sounds of the ocean.",
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Proceed to the hotel in Bentota.",
+                "Relax & enjoy your day at the beach hotel.",
+                "Overnight stay at the hotel in Bentota."
             ],
             distance: "200 km",
             duration: "05 hours 20 minutes approx.",
@@ -342,8 +371,8 @@ const contentData = [
                 "As you glide through the shaded mangroves, you'll encounter a vibrant ecosystem teeming with diverse wildlife, including reptiles, mollusks, and over 70 species of freshwater fish. The region is also known for its abundant cinnamon plantations and unique experiences, such as a 'fish pedicure' center, perfect for relaxation. Bird watchers will find plenty to enjoy here as well.",
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Proceed to Balapitiya for a river cruise (Optional).",
+                "Overnight stay at the hotel in Bentota."
             ],
             distance: "depends",
             duration: "depends",
@@ -360,8 +389,9 @@ const contentData = [
                 "After your exploration, you will check into your hotel in Colombo. Take some time to relax and unwind before dinner. You'll enjoy a meal at the hotel and spend the night there, recharging for the next day’s adventures."
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Commence shopping and a city tour of Colombo.",
+                "Proceed to the hotel in Colombo.",
+                "Overnight stay at the hotel in Colombo"
             ],
             distance: "105 km",
             duration: "01 hours 50 minutes approx.",
@@ -377,7 +407,7 @@ const contentData = [
                 "Safe travels! If you have any last-minute questions or need assistance, feel free to ask."
             ],
             inclusion: [
-                "Accommodation",
+                "Leave for airport in time for flight out of Sri Lanka.",
                 "Dinner and breakfast at the hotel"
             ],
             distance: "40 km",
@@ -391,8 +421,8 @@ const contentData = [
     img: BeyondTheHills,
     title: "Beyond the Hills",
     subTitle: "6 Days of Sri Lankan Wonders",
-    cardTxt: "You will be met on arrival at the Bandaranaike International Airport by our INTT leisure...",
-    overview: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    cardTxt: "We are thrilled to present you with an exciting itinerary for your 5 Nights and 6 Days in the beautiful island...",
+    overview: "We are thrilled to present you with an exciting itinerary for your 5 Nights and 6 Days in the beautiful island of Sri Lanka! Your journey begins with a warm welcome at Bandaranaike International Airport, where our friendly representative will assist you. You'll travel to the enchanting city of Kandy, known for its rich cultural heritage and stunning landscapes. Along the way, you have the option to visit the Pinnawala Elephant Orphanage, a heartwarming sanctuary for elephants in need. Once in Kandy, immerse yourself in the local culture with a city tour, a visit to a Gem Lapidary, and an unforgettable evening at the Kandy Cultural Dance Show. Get ready for an unforgettable experience filled with joy, culture, and natural beauty!",
     days: [
         {
             id: 1,
@@ -407,8 +437,10 @@ const contentData = [
                 "After the cultural show, you will return to your hotel for dinner and an overnight stay, ending your first day in Sri Lanka filled with unforgettable experiences."
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Meet and assist at Bandaranaike International Airport.",
+                "Transfer from the airport to Kandy.",
+                "Optional visit to the Pinnawala Elephant Orphanage (entrance fee supplement).",
+                "Check-in at the hotel in Kandy."
             ],
             distance: "115 km",
             duration: "02 hours 50 minutes approx.",
@@ -425,8 +457,11 @@ const contentData = [
                 "Finally, you will proceed to your hotel in Nuwara Eliya, where you can relax and enjoy the serene surroundings."
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Breakfast at the hotel in Kandy.",
+                "Visit the Royal Botanical Gardens in Peradeniya (optional - entrance fee supplement).",
+                "En route to Nuwara Eliya, visit a Tea Plantation and Factory.",
+                "City tour of Nuwara Eliya.",
+                "Check-in at the hotel in Nuwara Eliya."
             ],
             distance: "80 km",
             duration: "02 hours 50 minutes approx.",
@@ -443,8 +478,10 @@ const contentData = [
                 "In the evening, you will have dinner at the hotel, followed by an overnight stay, ensuring you are refreshed for the adventures that lie ahead."
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Breakfast at the hotel in Nuwara Eliya.",
+                "Transfer to Bentota.",
+                "Check-in at the hotel in Bentota.",
+                "Relax and enjoy the beach hotel."
             ],
             distance: "200 km",
             duration: "05 hours 20 minutes approx.",
@@ -462,8 +499,11 @@ const contentData = [
                 "In the evening, enjoy dinner at the hotel, followed by an overnight stay, ensuring you are well-rested for the next day's adventures."
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Breakfast at the hotel in Bentota.",
+                "Optional river cruise in Balapitiya (entrance fee supplement).",
+                "Explore the Madu River and its ecological treasures.",
+                "Return to the hotel in Bentota.",
+                "Relax and enjoy your day at the hotel."
             ],
             distance: "depends",
             duration: "depends",
@@ -481,8 +521,11 @@ const contentData = [
                 "In the evening, you will enjoy dinner at the hotel, followed by an overnight stay, ensuring you are refreshed and ready for the adventures that await you tomorrow."
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Breakfast at the hotel in Bentota.",
+                "Transfer to Colombo.",
+                "City tour and shopping in Colombo.",
+                "Check-in at the hotel in Colombo.",
+                "Relax and enjoy your day."
             ],
             distance: "105 km",
             duration: "01 hours 15 minutes approx.",
@@ -499,8 +542,8 @@ const contentData = [
                 "Wishing you a safe flight and a pleasant journey home!"
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Breakfast at the hotel in Colombo.",
+                "Transfer to Bandaranaike International Airport for your flight out of Sri Lanka."
             ],
             distance: "115 km",
             duration: "02 hours 50 minutes approx.",
@@ -513,8 +556,8 @@ const contentData = [
     img: WondersOfSriLanka,
     title: "Wonders of Sri Lanka",
     subTitle: "9 Days of Scenic Journeys",
-    cardTxt: "You will be met on arrival at the Bandaranaike International Airport by our INTT leisure...",
-    overview: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    cardTxt: "Get ready for an unforgettable journey through the enchanting landscapes and rich culture...",
+    overview: "Get ready for an unforgettable journey through the enchanting landscapes and rich culture of Sri Lanka! Over the course of 08 nights and 09 days, you'll explore breathtaking sites, including the Pinnawala Elephant Orphanage and the historic Dambulla Cave Temple, a UNESCO World Heritage Site. Experience the warmth of Sri Lankan hospitality as you enjoy delicious meals and comfortable accommodations. Each day promises new adventures, from village tours to wildlife encounters. We can't wait for you to embark on this incredible experience!",
     days: [
         {
             id: 1,
@@ -527,8 +570,11 @@ const contentData = [
                 "After your visit, proceed to your hotel in Dambulla. Enjoy a delicious dinner and settle in for a restful overnight stay, preparing for more adventures to come."
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Meet and assist at Bandaranaike International Airport.",
+                "Transportation to Dambulla via Pinnawala.",
+                "Visit to the Pinnawala Elephant Orphanage (optional, entrance fee supplement may apply).",
+                "Visit to the Dambulla Cave Temple.",
+                "Dinner and overnight stay at the hotel in Dambulla."
             ],
             distance: "180 km",
             duration: "03 hours 50 minutes approx.",
@@ -545,8 +591,11 @@ const contentData = [
                 "After an unforgettable day of cultural immersion and wildlife sightings, return to your hotel in Dambulla. Enjoy a delicious dinner and settle in for an overnight stay, reflecting on the day’s memorable experiences."
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Breakfast at the hotel.",
+                "Optional village tour of Hiriwaduna.",
+                "Visit to Minneriya National Park (wildlife experience).",
+                "Return to the hotel in Dambulla.",
+                "Dinner and overnight stay at the hotel."
             ],
             distance: "depends",
             duration: "depends",
@@ -565,8 +614,10 @@ const contentData = [
                 "Return to your hotel in Kandy for dinner and an overnight stay, wrapping up a day steeped in culture, history, and natural beauty."
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Breakfast at the hotel.",
+                "Optional climb to Sigiriya Rock Fortress (entrance fee supplement may apply).",
+                "Visit to the Spice Garden in Matale en route to Kandy.",
+                "Dinner and overnight stay at the hotel in Kandy."
             ],
             distance: "80 km",
             duration: "02 hours 10 minutes approx.",
@@ -584,8 +635,10 @@ const contentData = [
                 "In the evening, savor a hearty dinner and enjoy a restful overnight stay at your hotel in Nuwara Eliya, ready to explore more of this picturesque hill town the next day."
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Breakfast at the hotel.",
+                "Visit to the Royal Botanical Gardens in Peradeniya (optional, entrance fee supplement may apply).",
+                "Transportation to Nuwara Eliya.",
+                "Dinner and overnight stay at the hotel in Nuwara Eliya."
             ],
             distance: "80 km",
             duration: "02 hours 40 minutes approx.",
@@ -604,8 +657,9 @@ const contentData = [
                 "Dinner and overnight stay at the hotel in Nuwara Eliya."
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Breakfast at the hotel.",
+                "City tour of Nuwara Eliya.",
+                "Dinner and overnight stay at the hotel in Nuwara Eliya."
             ],
             distance: "depends",
             duration: "depends",
@@ -622,8 +676,10 @@ const contentData = [
                 "Wishing you a safe flight and a pleasant journey home!"
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Breakfast at the hotel.",
+                "Transportation to Bentota.",
+                "Relaxation time at the beach hotel.",
+                "Dinner and overnight stay at the hotel in Bentota."
             ],
             distance: "200 km",
             duration: "05 hours 20 minutes approx.",
@@ -641,8 +697,11 @@ const contentData = [
                 "Dinner & Overnight stay at the hotel."
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Breakfast at the hotel.",
+                "Optional river cruise in Balapitiya (supplement fee may apply).",
+                "Return to the hotel in Kalutara.",
+                "Relaxation time at the hotel.",
+                "Dinner and overnight stay at the hotel."
             ],
             distance: "depends",
             duration: "depends",
@@ -659,8 +718,10 @@ const contentData = [
                 "Dinner & Overnight stay at the hotel."
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Breakfast at the hotel.",
+                "Transportation to Colombo.",
+                "City tour of Colombo (sightseeing).",
+                "Dinner and overnight stay at the hotel in Colombo."
             ],
             distance: "105 km",
             duration: "01 hours 50 minutes approx.",
@@ -676,8 +737,8 @@ const contentData = [
                 "Safe travels, and may your memories of Sri Lanka’s warmth, hospitality, and natural beauty remain with you until you return again."
             ],
             inclusion: [
-                "Accommodation",
-                "Dinner and breakfast at the hotel"
+                "Breakfast at the hotel.",
+                "Transfer to Bandaranaike International Airport for departure."
             ],
             distance: "40 km",
             duration: "35 minutes approx.",
