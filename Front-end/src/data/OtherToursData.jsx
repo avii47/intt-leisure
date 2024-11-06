@@ -77,7 +77,7 @@ const contentData = [
         ],
       },
     ],
-    galleryImages: [],
+    galleryImages: [dubai1,dubai2,dubai3,dubai4,dubai5,dubai6],
   },
   {
     id: 2,
@@ -138,7 +138,7 @@ const contentData = [
         ],
       },
     ],
-    galleryImages: [],
+    galleryImages: [bali1, bali2, bali3, bali4, bali5, bali6],
   },
   {
     id: 3,
@@ -195,7 +195,7 @@ const contentData = [
         ],
       },
     ],
-    galleryImages: [],
+    galleryImages: [bali7, bali8, bali9, bali10, bali11, bali6],
   },
   {
     id: 4,
@@ -268,7 +268,7 @@ const contentData = [
         ],
       },
     ],
-    galleryImages: [],
+    galleryImages: [bali4, bali8, bali1, bali10, bali2, bali7],
   },
   {
     id: 5,
@@ -323,7 +323,7 @@ const contentData = [
         ],
       },
     ],
-    galleryImages: [],
+    galleryImages: [bali1, bali8, bali9, bali5, bali3, bali11],
   },
   {
     id: 6,
@@ -383,7 +383,7 @@ const contentData = [
         ],
       },
     ],
-    galleryImages: [],
+    galleryImages: [bali5, bali8, bali9, bali2, bali11, bali6],
   },
   {
     id: 7,
@@ -445,7 +445,7 @@ const contentData = [
         ],
       },
     ],
-    galleryImages: [],
+    galleryImages: [bali1, bali8, bali4, bali10, bali7, bali6],
   },
   {
     id: 8,
@@ -502,7 +502,7 @@ const contentData = [
         ],
       },
     ],
-    galleryImages: [],
+    galleryImages: [dubai1,dubai2,dubai3,dubai4,dubai5,dubai6],
   },
   {
     id: 9,
@@ -559,7 +559,7 @@ const contentData = [
         ],
       },
     ],
-    galleryImages: [],
+    galleryImages: [dubai1,dubai2,dubai3,dubai4,dubai5,dubai6],
   },
 ];
 

@@ -38,7 +38,7 @@ const ItineraryPage = () => {
       content = ConciergeServiceContentData.find((item) => item.id === contentId);
       itineraryContent = <ConciergeServicesContent content={content} />;
       break;
-    case 'dubai':
+    default:
       content = OtherToursContentData.find((item) => item.id === contentId);
       itineraryContent = <OtherItineraryContent content={content} />;
   }
