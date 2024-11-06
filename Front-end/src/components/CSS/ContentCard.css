@@ -25,6 +25,7 @@
   position: relative;
 }
 .card-img {
+  height: 270px;
   transition: transform 0.3s ease-out;
 }
 .card-title {

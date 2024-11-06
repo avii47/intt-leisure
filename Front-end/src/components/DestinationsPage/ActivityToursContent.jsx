@@ -21,7 +21,7 @@ function ActivityToursContent({content}) {
                 {content.overview}
               </p>
 
-              <DGallery/>
+              <DGallery images={content.galleryImages}/>
 
               <ContactFrom />
               

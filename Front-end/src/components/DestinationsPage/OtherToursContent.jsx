@@ -23,7 +23,7 @@ function OtherToursContent() {
 
         <ItineraryCategorySection contentCat={"dubai"} topic={"Dubai Tours"} />
         <ItineraryCategorySection contentCat={"indonesia"} topic={"Indonesia Tours"} />
-        <ItineraryCategorySection contentCat={"thailand"} topic={"Thailand Tours"} />
+        {/* <ItineraryCategorySection contentCat={"thailand"} topic={"Thailand Tours"} /> */}
 
       </div>
     </section>

@@ -1,7 +1,7 @@
 .main-dcard {
     position: relative;
-    width: 700px;
-    height: 450px;
+    /* width: auto; */
+    /* height: 450px; */
     display: flex;
     border-radius: 10px;
     transition: all 0.5s ease-in-out;

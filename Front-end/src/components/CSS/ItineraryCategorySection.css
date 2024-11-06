@@ -25,3 +25,12 @@
     height: 30px;
     cursor: pointer;
 }
+.itinerary-wrapper {
+  justify-content: flex-start; /* Aligns items to the left */
+  overflow: hidden; /* Hides overflow from padding in the slider */
+}
+.slider-container .slick-track {
+  display: flex;
+  align-items: flex-start; /* Aligns items to the top if needed */
+  justify-content: flex-start; /* Aligns items to the left */
+}

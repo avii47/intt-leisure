@@ -54,9 +54,9 @@ function ItineraryContent({ content }) {
         </div>
 
         <TourMap start={selectedRoute.start} end={selectedRoute.end} />
-
         <ContactFrom defPackageName={content.title} />
         <DGallery images={content.galleryImages} />
+        
       </div>
     </section>
   );
