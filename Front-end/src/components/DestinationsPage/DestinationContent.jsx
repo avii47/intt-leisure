@@ -33,10 +33,8 @@ const DestinationsContent = () => {
   const [typedText1, setTypedText1] = useState("");
   const [typedText2, setTypedText2] = useState("");
   const [showLogo, setShowLogo] = useState(false);
-  const fullText1 =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
-  const fullText2 =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+  const fullText1 = "Sri Lanka, often called the 'Pearl of the Indian Ocean', is a destination of remarkable diversity and beauty. Nestled in South Asia, this tropical island offers a rare blend of stunning natural landscapes, fascinating history, and vibrant cultural heritage that appeals to travelers worldwide.";
+  const fullText2 = "From golden beaches and lush rainforests to mist-covered mountains and expansive tea plantations, Sri Lanka is a paradise for nature lovers and adventure seekers alike.";
   const contentRef = useRef(null);
   const [isSectionVisible, setIsSectionVisible] = useState(false);
 
@@ -225,10 +223,7 @@ const DestinationsContent = () => {
         <div className="main-dcards-section-container">
           <h2 className="font-primary">Where to next?</h2>
           <p className="font-secondary">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+
           </p>
 
           <div id="main-cards-container" className="main-cards-container">
@@ -276,10 +271,6 @@ const DestinationsContent = () => {
         <div className="latest-tours-container">
           <h2 className="font-primary">Our Latest Tours</h2>
           <p className="font-secondary" style={{ width: "95%" }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
           </p>
           <div
             className="row"
