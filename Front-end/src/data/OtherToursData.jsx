@@ -274,7 +274,7 @@ const contentData = [
     id: 5,
     tag: "indonesia",
     img: img_03,
-    title: "A Tailored Indonesian Adventure",
+    title: "A Indonesian Adventure",
     subTitle: "Explore the World While Creating Unforgettable Memories",
     cardTxt:
       "This Indonesia Tour offers a meticulously crafted journey that takes travelers through breathtaking...",
@@ -389,7 +389,7 @@ const contentData = [
     id: 7,
     tag: "indonesia",
     img: bali10,
-    title: "Exploring the Wonders of Indonesia",
+    title: "The Wonders of Indonesia",
     subTitle: "Explore the Culture and Landscapes in Indonesia",
     cardTxt:
       "Indonesia, the world's largest archipelagic nation, boasts a vibrant culture and...",

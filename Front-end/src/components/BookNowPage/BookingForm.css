@@ -1,0 +1,124 @@
+.bookingForm-container{
+    display: flex;
+    justify-content: center;
+  }
+  .bookingForm-content{
+    padding: 100px 0;
+    width: 60vw;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    overflow: hidden;
+  }
+  .booking-form{
+    width: 100%;
+    padding: 50px 0;
+  }
+  .form-control {
+    border: none !important;
+    border-bottom: 1px solid #000 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background-color: rgba(255, 255, 255, 0) !important;
+    margin-bottom: 20px;
+  }
+  .form-group {
+    position: relative;
+  }
+  
+  .date-label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #636363;
+    background-color: rgb(255, 255, 255);
+    font-size: 16px;
+    pointer-events: none; 
+    transition: all 0.2s ease; 
+  }
+  
+  .form-control:focus + .date-label,
+  .form-control:not(:placeholder-shown) + .date-label,
+  .filled.date-label {
+    display: none; 
+    font-size: 12px;
+    color: #555;
+  }
+
+  .package-card-container {
+    width: 100%;
+    padding: 20px 0 50px 0;
+    margin-left: 10px;
+  }
+  
+  .tab-container {
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f0f0f0; 
+  }
+  
+  .tab-headers {
+    display: flex;
+    background-color: #f0f0f0;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .tab-button {
+    flex: 1;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #666;
+    background: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border-radius: 10px 10px 0px 0; 
+  }
+  
+  .tab-button.active {
+    background-color: #ddd;
+    color: #333;
+    font-size: 20px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .tab-button:not(.active):hover {
+    background-color: #ccc;
+  }
+  
+  .tab-content {
+    width: 98%;
+    padding: 10px 35px 40px 35px;
+    background-color: #ddd; 
+    border-radius: 0px 0px 10px 10px; 
+    font-size: 14px;
+    color: #333;
+  }
+  
+  
+  .slider-item {
+    width: fit-content;
+    padding: 20px;
+    max-width: 280px; 
+    box-sizing: border-box;
+  }
+  .cl-btn:hover{
+    background-color: rgb(173, 173, 173);
+    color: black;
+}
+.error-text{
+  color: red;
+}
+.mobile-view .error-text{
+  font-size: 12px;
+}
+
+  
+  
+
+
+  

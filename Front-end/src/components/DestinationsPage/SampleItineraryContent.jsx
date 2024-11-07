@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useMobileView } from "../../contexts/MobileViewContext";
 import DayCard from "./DayCard";
-import ContactFrom from "./DContactForm";
+import ContactFrom from "../BookNowPage/BookingForm";
 import DGallery from "./DGallery";
 import TourMap from "./MapComponent";
 import "../CSS/Pages/ItineraryContent.css";

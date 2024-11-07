@@ -1,6 +1,6 @@
 .package-card{
     flex: 1 1 18.75rem; 
-    max-width: 14.4rem;
+    min-width: 14.4rem;
     height: 9.6rem;
     text-align: left;
     border-radius: 10px;
@@ -16,23 +16,21 @@
     height: 100%;
     transition: transform 0.3s ease-out;
 }
-.package-card.fade-out {
-    opacity: 0.5;
-    scale: 0.9;
+.package-card.selected {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    box-sizing: border-box;
+    padding: 5px;
+    border: 1px solid #000000;
+    transition: all 0.1s ease-in-out !important; 
 }
 .package-card-title{
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 18px;
 }
-/* .package-card:hover{
-    transition: 0.2s ease-in-out; 
-    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
-    top: -4px;
-    border: 1px solid #cccccc;
-} */
 .sc-title{
-    font-size: 20px;
+    font-size: 15px;
     letter-spacing: 1px;
     padding-top: 35px;
     transition: all 0.5s ease-in-out;
@@ -42,13 +40,6 @@
     letter-spacing: 0px;
     display: none;
 }
-/* .package-card:hover .sc-title{
-    padding-top: 0px;
-    transition: all 0.5s ease-in-out;
-}
-.package-card:hover .sc-sub{
-    display: block;
-} */
 .package-card-body{
     text-align: left;
     padding: 20px;

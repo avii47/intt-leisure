@@ -16,17 +16,30 @@ const CountrySelector = ({ onSelectCountry }) => {
     )
   }));
 
-  // Handle change and notify parent
   const handleChange = (option) => {
-    onSelectCountry(option.value);  // Pass the selected country code back to FeedbackForm
+    onSelectCountry(option.value);  
+  };
+
+  // Custom styles for react-select to remove the border
+  const customStyles = {
+    control: (provided) => ({
+      ...provided,
+      border: 'none',
+      boxShadow: 'none', 
+      margin: '-0.4rem 0 -0.4rem -0.7rem',
+    })
   };
 
   return (
-    <Select
-      options={options}
-      onChange={handleChange}
-      placeholder="Select your nationality"
-    />
+    
+      <Select
+        className='form-control'
+        options={options}
+        onChange={handleChange}
+        placeholder="Select your country"
+        styles={customStyles} 
+      />
+    
   );
 };
 
