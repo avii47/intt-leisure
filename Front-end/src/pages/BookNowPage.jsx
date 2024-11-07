@@ -2,11 +2,11 @@ import React, { Suspense, lazy } from 'react';
 import { Helmet } from 'react-helmet-async';
 import ScrollToTopButton from '../components/ScrollToTopButton';
 import LoadingSpinner from '../components/LoadingSpinner';
-import "../components/CSS/Pages/BookNowPage.css";
+// import "../components/CSS/Pages/BookNowPage.css";
 import bg from '../assets/images/bookNowPage-hero-img.jpg'
 
 const HeroSection = lazy(() => import('../components/HeroSection'));
-const BookNowContent = lazy(() => import('../components/BookNowPage/BookNowContent2'));
+const BookNowContent = lazy(() => import('../components/BookNowPage/BookingForm'));
 const FooterSection = lazy(() => import('../components/FooterSection'));
 
 const BookNowPage = () => {
