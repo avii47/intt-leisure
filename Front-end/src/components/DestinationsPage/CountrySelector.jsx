@@ -26,7 +26,7 @@ const CountrySelector = ({ onSelectCountry }) => {
       ...provided,
       border: 'none',
       boxShadow: 'none', 
-      margin: '-0.4rem 0 -0.4rem -0.7rem',
+      margin: '-0.5rem 0 -0.3rem -0.6rem',
     })
   };
 

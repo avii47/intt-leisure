@@ -20,10 +20,11 @@
     border-radius: 0 !important;
     box-shadow: none !important;
     background-color: rgba(255, 255, 255, 0) !important;
-    margin-bottom: 20px;
+    
   }
   .form-group {
     position: relative;
+    margin-bottom: 20px;
   }
   
   .date-label {
@@ -36,6 +37,13 @@
     font-size: 16px;
     pointer-events: none; 
     transition: all 0.2s ease; 
+  }
+
+  .err .date-label{
+    top: 30%;
+  }
+  .package-error{
+    margin-top: -2.5rem;
   }
   
   .form-control:focus + .date-label,
@@ -76,6 +84,7 @@
     cursor: pointer;
     transition: background-color 0.2s ease;
     border-radius: 10px 10px 0px 0; 
+    transition: all 0.3s ease-in-out;
   }
   
   .tab-button.active {

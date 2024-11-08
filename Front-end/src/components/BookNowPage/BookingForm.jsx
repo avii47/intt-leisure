@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useMobileView } from "../../contexts/MobileViewContext";
 import emailjs from "emailjs-com";
 import Modal from "../BookNowPage/Modal";
+import Modal2 from "./Modal2";
 import "../../firebase";
 import { getFirestore, addDoc, collection } from "firebase/firestore";
 import "./BookingForm.css";
@@ -22,8 +23,10 @@ function BookingForm({ defPackageName }) {
   const [numDays, setNumDays] = useState("");
   const [pack, setPackage] = useState("");
   const [message, setMessage] = useState("");
+  const [activeTab, setActiveTab] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [errors, setErrors] = useState({});
+  const [showBookingSummary, setShowBookingSummary] = useState(false);
 
   const validateForm = () => {
     const newErrors = {};
@@ -37,6 +40,7 @@ function BookingForm({ defPackageName }) {
       newErrors.numDays = "Enter a valid number of days";
     }
     if (!message) newErrors.message = "Message is required";
+    if (!pack) newErrors.pack = "Package is required";
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -58,7 +62,7 @@ function BookingForm({ defPackageName }) {
     }
   };
 
-  const handleSendClick = async (e) => {
+  const handleBookingConfirm = async (e) => {
     e.preventDefault();
     if (!validateForm()) return;
 
@@ -90,6 +94,22 @@ function BookingForm({ defPackageName }) {
       .catch((error) => {
         console.error("Failed to send email:", error);
       });
+  };
+
+  const handleTabChange = (tabId) => {
+    setActiveTab(tabId);
+  };
+
+  const handleProceedClick = (e) => {
+    e.preventDefault();
+
+    const validationErrors = validateForm();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return; 
+    }
+
+    setShowBookingSummary(true); 
   };
 
   return (
@@ -129,7 +149,7 @@ function BookingForm({ defPackageName }) {
                 />
                 {errors.mobile && <small className="error-text">{errors.mobile}</small>}
               </div>
-              <div className="form-group" style={{ position: "relative" }}>
+              <div className={`form-group ${errors.arrivalDate ? "err" : ""}`} style={{ position: "relative" }}>
                 <label
                   htmlFor="arrivalDate"
                   className={`date-label ${arrivalDate ? "filled" : ""}`}
@@ -147,38 +167,7 @@ function BookingForm({ defPackageName }) {
                 {errors.arrivalDate && <small className="error-text">{errors.arrivalDate}</small>}
               </div>
 
-              <div className="form-group">
-                <input
-                  type="number"
-                  className="form-control"
-                  placeholder="Number of People"
-                  value={numPeople}
-                  onChange={(e) => setNumPeople(e.target.value)}
-                  required
-                />
-                {errors.numPeople && <small className="error-text">{errors.numPeople}</small>}
-              </div>
-
-
-            </div>
-
-            <div className="col-md-6">
-              <div className="form-group">
-                <input
-                  type="email"
-                  className="form-control"
-                  placeholder="Email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-                {errors.email && <small className="error-text">{errors.email}</small>}
-              </div>
-
-              <CountrySelector onSelectCountry={setNationality} />
-              {errors.nationality && <small className="error-text">{errors.nationality}</small>}
-
-              {!defPackageName && (
+              {!defPackageName && activeTab === 0 && (
                 <div className="form-group">
                   <input
                     type="number"
@@ -206,7 +195,37 @@ function BookingForm({ defPackageName }) {
               )}
 
 
+            </div>
 
+            <div className="col-md-6">
+              <div className="form-group">
+                <input
+                  type="email"
+                  className="form-control"
+                  placeholder="Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+                {errors.email && <small className="error-text">{errors.email}</small>}
+              </div>
+
+              <div className="form-group">
+                <CountrySelector onSelectCountry={setNationality} />
+                {errors.nationality && <small className="error-text">{errors.nationality}</small>}
+              </div>
+              
+              <div className="form-group">
+                <input
+                  type="number"
+                  className="form-control"
+                  placeholder="Number of People"
+                  value={numPeople}
+                  onChange={(e) => setNumPeople(e.target.value)}
+                  required
+                />
+                {errors.numPeople && <small className="error-text">{errors.numPeople}</small>}
+              </div>
 
             </div>
           </div>
@@ -214,7 +233,11 @@ function BookingForm({ defPackageName }) {
           
           {!defPackageName && (
             <div className="row" style={{margin:'50px 0 20px 0'}}>
-              <PackageSelector onSelectPackage={setPackage} />
+              <PackageSelector
+                onSelectPackage={setPackage}
+                onTabChange={handleTabChange} 
+              />
+              {errors.pack && <small className="error-text package-error">{errors.pack}</small>}
             </div>
           )}
           
@@ -241,7 +264,7 @@ function BookingForm({ defPackageName }) {
             <button
               type="submit"
               className="btn btn-dark"
-              onClick={handleSendClick}
+              onClick={handleProceedClick}
             >
               Submit Inquiry
             </button>
@@ -256,6 +279,65 @@ function BookingForm({ defPackageName }) {
             </a>
           </div>
         </form>
+
+        <Modal2 show={showBookingSummary} onClose={() => setShowBookingSummary(false)} onSubmit={handleBookingConfirm}>
+          <h2>Booking Summary</h2>
+          <br />
+          <div className="booking-summary-content">
+            <div className="form-group">
+              <input
+                className="form-control form-control-sm"
+                type="text"
+                value={name}
+                placeholder=""
+                readOnly
+              />
+              <label className="label-text">Name</label>
+            </div>
+            <div className="form-group">
+              <input
+                className="form-control form-control-sm"
+                type="text"
+                value={email}
+                placeholder=""
+                readOnly
+              />
+              <label className="label-text">Email</label>
+            </div>
+            <div className="form-group">
+              <input
+                className="form-control form-control-sm"
+                type="text"
+                value={mobile}
+                placeholder=""
+                readOnly
+              />
+              <label className="label-text">Mobile</label>
+            </div>
+            <div className="form-group">
+              <input
+                className="form-control form-control-sm"
+                type="text"
+                value={no}
+                placeholder=""
+                readOnly
+              />
+              <label className="label-text">
+                Arrival Date
+              </label>
+            </div>
+            <div className="form-group">
+              <input
+                className="form-control form-control-sm"
+                type="text"
+                value={pack}
+                placeholder=""
+                readOnly
+              />
+              <label className="label-text">Package Details</label>
+            </div>
+          </div>
+        </Modal2>
 
         {showModal && (
           <Modal show={showModal} onClose={() => setShowModal(false)}>

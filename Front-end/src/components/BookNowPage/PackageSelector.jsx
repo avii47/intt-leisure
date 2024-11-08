@@ -12,8 +12,8 @@ import activityToursContentData from "../../data/ActivityToursContentData";
 import conciergeServiceContentData from "../../data/ConciergeServiceContentData";
 import otherToursContentData from "../../data/OtherToursData";
 
-function PackageSelector({ onSelectPackage }) {
-  // `selectedCard` will store both the tab id and card index
+function PackageSelector({ onSelectPackage, onTabChange }) {
+  
   const [selectedCard, setSelectedCard] = useState({ tabId: null, cardIndex: null });
   const [activeTab, setActiveTab] = useState(0);
 
@@ -68,6 +68,11 @@ function PackageSelector({ onSelectPackage }) {
     onSelectPackage(title);
   };
 
+  const handleTabClick = (tabId) => {
+    setActiveTab(tabId);
+    onTabChange(tabId); // Notify BookingForm of the tab change
+  };
+
   return (
     <>
       <h3 className="font-primary" style={{ fontSize: "30px" }}>
@@ -80,7 +85,7 @@ function PackageSelector({ onSelectPackage }) {
           {tabs.map((tab) => (
             <button
               key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
+              onClick={() => handleTabClick(tab.id)}
               className={`tab-button ${activeTab === tab.id ? "active" : ""}`}
             >
               {tab.label}
