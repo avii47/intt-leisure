@@ -102,14 +102,9 @@ function BookingForm({ defPackageName }) {
 
   const handleProceedClick = (e) => {
     e.preventDefault();
-
-    const validationErrors = validateForm();
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);
-      return; 
+    if (validateForm()) {
+      setShowBookingSummary(true); 
     }
-
-    setShowBookingSummary(true); 
   };
 
   return (
@@ -284,12 +279,12 @@ function BookingForm({ defPackageName }) {
           <h2>Booking Summary</h2>
           <br />
           <div className="booking-summary-content">
+            <div className="col-md-6" style={{paddingRight:'30px'}}>
             <div className="form-group">
               <input
                 className="form-control form-control-sm"
                 type="text"
                 value={name}
-                placeholder=""
                 readOnly
               />
               <label className="label-text">Name</label>
@@ -299,7 +294,6 @@ function BookingForm({ defPackageName }) {
                 className="form-control form-control-sm"
                 type="text"
                 value={email}
-                placeholder=""
                 readOnly
               />
               <label className="label-text">Email</label>
@@ -309,7 +303,6 @@ function BookingForm({ defPackageName }) {
                 className="form-control form-control-sm"
                 type="text"
                 value={mobile}
-                placeholder=""
                 readOnly
               />
               <label className="label-text">Mobile</label>
@@ -318,8 +311,36 @@ function BookingForm({ defPackageName }) {
               <input
                 className="form-control form-control-sm"
                 type="text"
-                value={no}
-                placeholder=""
+                value={nationality}
+                readOnly
+              />
+              <label className="label-text">Country</label>
+            </div>
+            </div>
+            <div className="col-md-6" style={{paddingleft:'30px'}}>
+            <div className="form-group">
+              <input
+                className="form-control form-control-sm"
+                type="text"
+                value={numPeople}
+                readOnly
+              />
+              <label className="label-text">Number of People</label>
+            </div>
+            <div className="form-group">
+              <input
+                className="form-control form-control-sm"
+                type="text"
+                value={numDays}
+                readOnly
+              />
+              <label className="label-text">Number of Days</label>
+            </div>
+            <div className="form-group">
+              <input
+                className="form-control form-control-sm"
+                type="text"
+                value={arrivalDate}
                 readOnly
               />
               <label className="label-text">
@@ -331,11 +352,13 @@ function BookingForm({ defPackageName }) {
                 className="form-control form-control-sm"
                 type="text"
                 value={pack}
-                placeholder=""
                 readOnly
               />
               <label className="label-text">Package Details</label>
             </div>
+            </div>
+
+
           </div>
         </Modal2>
 
