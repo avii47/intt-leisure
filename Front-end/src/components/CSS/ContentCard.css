@@ -26,6 +26,7 @@
 }
 .card-img {
   height: 270px;
+  object-fit: cover;
   transition: transform 0.3s ease-out;
 }
 .card-title {

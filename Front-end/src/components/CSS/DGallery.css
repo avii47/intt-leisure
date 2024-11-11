@@ -16,6 +16,7 @@
   .main-image img {
     width: 60vw;
     height: 700px;
+    object-fit: cover;
   }
 
   .mobile-view  .main-image img {
@@ -78,6 +79,7 @@
   .thumbnail {
     width: 150px;
     margin: 0 15px;
+    object-fit: cover;
     cursor: pointer;
     opacity: 1;
     transition: opacity 0.3s;

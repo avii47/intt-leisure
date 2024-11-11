@@ -7,7 +7,7 @@ const ServiceContentCard = React.forwardRef(({ content, onClick, style }, ref) =
             <div class="service-content-image-zoom-container">
                 <div className="sc-overlayer"></div>
                 <img loading='lazy' className="service-content-card-img top" src={`${content.img}`} alt={`${content.title}-image`}></img>
-                <div className='img-text'>
+                <div className='img-text2'>
                     <h4 className='sc-title'>{content.title}</h4>
                     <p className='font-secondary sc-sub'>{content.sub}</p>
                 </div>

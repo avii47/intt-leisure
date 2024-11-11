@@ -48,7 +48,7 @@ const EventsNewsSection = ({ exclude }) => {
     infinite: false,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     beforeChange: (current, next) => setCurrentSlide3(next),
     afterChange: (current) => updateButtonVisibility3(current),
     responsive: [
@@ -56,7 +56,7 @@ const EventsNewsSection = ({ exclude }) => {
         breakpoint: 1124,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           dots: true
         }
       },
@@ -64,7 +64,7 @@ const EventsNewsSection = ({ exclude }) => {
         breakpoint: 1600,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           dots: true
         }
       },

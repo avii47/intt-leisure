@@ -85,7 +85,7 @@
     height: 100%;
     background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.292), transparent) !important;
 }
-.img-text{
+.img-text2{
     margin-top: -70px;
     position: absolute;
     width: 100%;
@@ -95,6 +95,7 @@
     padding: 0 0 20px 20px;
     text-align: left;
     color: white;
+    font-size: 35px;
 }
 
 .explore-service-btn{

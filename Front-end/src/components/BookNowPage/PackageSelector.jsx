@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import "./BookingForm.css";
 import PackageCard from "../BookNowPage/PackageCard";
+import LoadingSpinner from "../../components/LoadingSpinner";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -13,9 +14,9 @@ import conciergeServiceContentData from "../../data/ConciergeServiceContentData"
 import otherToursContentData from "../../data/OtherToursData";
 
 function PackageSelector({ onSelectPackage, onTabChange }) {
-  
   const [selectedCard, setSelectedCard] = useState({ tabId: null, cardIndex: null });
   const [activeTab, setActiveTab] = useState(0);
+  const [loading, setLoading] = useState(true);
 
   const sriLankanContentData = [
     ...sampleItineraryContentData,
@@ -63,6 +64,12 @@ function PackageSelector({ onSelectPackage, onTabChange }) {
     ],
   };
 
+  useEffect(() => {
+    setLoading(true);
+    const timer = setTimeout(() => setLoading(false), 500); // Adjust delay if needed
+    return () => clearTimeout(timer);
+  }, [activeTab]);
+
   const handleCardClick = (tabId, index, title) => {
     setSelectedCard({ tabId, cardIndex: index });
     onSelectPackage(title);
@@ -95,19 +102,23 @@ function PackageSelector({ onSelectPackage, onTabChange }) {
 
         {/* Tab Content */}
         <div className="tab-content">
-          <Slider {...settings}>
-            {tabs[activeTab].content.map((content, index) => (
-              <div key={index} className="slider-item">
-                <PackageCard
-                  content={content}
-                  onClick={() => handleCardClick(activeTab, index, content.title)}
-                  isSelected={
-                    selectedCard.tabId === activeTab && selectedCard.cardIndex === index
-                  }
-                />
-              </div>
-            ))}
-          </Slider>
+          {loading ? (
+            <div className="loading-indicator"><LoadingSpinner /></div>
+          ) : (
+            <Slider {...settings}>
+              {tabs[activeTab].content.map((content, index) => (
+                <div key={index} className="slider-item">
+                    <PackageCard
+                      content={content}
+                      onClick={() => handleCardClick(activeTab, index, content.title)}
+                      isSelected={
+                        selectedCard.tabId === activeTab && selectedCard.cardIndex === index
+                      }
+                    />
+                </div>
+              ))}
+            </Slider>
+          )}
         </div>
       </div>
     </>

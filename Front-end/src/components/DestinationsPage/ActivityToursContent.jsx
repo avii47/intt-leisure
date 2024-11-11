@@ -23,7 +23,7 @@ function ActivityToursContent({content}) {
 
               <DGallery images={content.galleryImages}/>
 
-              <ContactFrom />
+              <ContactFrom defPackageName={content.title} />
               
             </div>
           </section>

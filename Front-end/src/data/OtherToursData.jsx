@@ -83,10 +83,10 @@ const contentData = [
     id: 2,
     tag: "indonesia",
     img: bali1,
-    title: "Pattaya and Bangkok",
+    title: "Jounery through Pattaya and Bangkok",
     subTitle: "An Enchanting 6-Day Adventure",
     cardTxt:
-      "You will be met on arrival at the Bandaranaike International Airport by our INTT leisure...",
+      "The context of the document is a travel package offering stays in Bangkok Pratunam...",
     overview:
       "The context of the document is a travel package offering stays in Bangkok Pratunam, featuring accommodations in 3-star hotels with a bed and breakfast option. Included in the package are return airport transfers in a private car, a Chaopraya Princess River Cruise with an international buffet, and tours to Dreamworld and Safari World, complete with lunch.",
     details: [
@@ -274,8 +274,8 @@ const contentData = [
     id: 5,
     tag: "indonesia",
     img: img_03,
-    title: "A Indonesian Adventure",
-    subTitle: "Explore the World While Creating Unforgettable Memories",
+    title: "An Indonesian Adventure",
+    subTitle: "Creating Memories in Indonesia",
     cardTxt:
       "This Indonesia Tour offers a meticulously crafted journey that takes travelers through breathtaking...",
     overview:

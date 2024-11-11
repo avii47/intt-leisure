@@ -1,7 +1,7 @@
 import authentic_practice_icon from "../assets/icons/authentic-practice-icon.svg";
 import forbes_certified_coach_icon from "../assets/icons/forbes-certified-coach-icon.svg";
 import eyes_of_locals_icon from "../assets/icons/eyes-of-locals-icon.svg";
-import backed_by_research_icon from "../assets/icons/backed-by-research-icon.svg";
+import backed_by_research_icon from "../assets/icons/mind.png";
 import ancient_root_icon from "../assets/icons/ancient-roots-icon.svg";
 import travel_wisdom_icon from "../assets/icons/travel-wisdom-icon.svg";
 
@@ -9,22 +9,22 @@ const contentData = [
   {
     img: authentic_practice_icon,
     title: "24x7 Service",
-    sub: "Our mindfulness techniques follow authentic Buddhist teachings, offering a distinct approach from Western ideologies.",
+    sub: "Rely on our 24/7 service to ensure you are looked after at every step, ultimately guiding you to fully immerse yourself in the beauty of your mindfulness journey.",
   },
   {
     img: forbes_certified_coach_icon,
     title: "Travel Insurance",
-    sub: "All mindfulness programs are designed by Dr. Gamini Hewawasam, a Forbes-certified coach specializing in mindfulness in leadership.",
+    sub: "Our holiday packages offer more than just relaxation and adventure. With comprehensive insurance, you can embark on your mindful journey worry-free.",
   },
   {
     img: eyes_of_locals_icon,
     title: "Air Travel/Tickets",
-    sub: "Discover Sri Lanka through the eyes of locals. As natives, we offer an authentic journey deeply rooted in our heritage and heartfelt connection to the land.",
+    sub: "We enhance your mindful journey with comprehensive services. From meditation programs to convenient air ticketing, we ensure a seamless Sri Lankan experience.",
   },
   {
     img: backed_by_research_icon,
-    title: "Mindfulness workshops",
-    sub: "Our approach to mindfulness is rooted in extensive research conducted by Dr. Hewawasam through his doctoral dissertation and includes benefits derived from other mindfulness-based studies.",
+    title: "Mindfulness Coaching",
+    sub: "NTT Leisure offers introspective coaching and workshops to alleviate stress, rooted in academic research on personal growth and leadership.",
   },
   {
     img: ancient_root_icon,

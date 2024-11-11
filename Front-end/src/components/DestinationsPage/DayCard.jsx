@@ -62,10 +62,12 @@ function DayCard({ content, isExpanded, onExpand }) {
               {para}
             </li>
           ))}
-          <div className="day-card-footer">
-            <span>{content.distance}</span>
-            <span>{content.duration}</span>
-          </div>
+          {(content.distance || content.duration) && (
+            <div className="day-card-footer">
+              {content.distance && <span>{content.distance}</span>}
+              {content.duration && <span>{content.duration}</span>}
+            </div>
+          )}
         </div>
       </div>
     </div>

@@ -71,7 +71,7 @@ const ServicesSection = () => {
     infinite: false,
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToScroll: 1,
     beforeChange: (current, next) => setCurrentSlide2(next),
     afterChange: (current) => updateButtonVisibility2(current),
     responsive: [
@@ -79,7 +79,7 @@ const ServicesSection = () => {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           dots: true,
         },
       },
@@ -87,7 +87,7 @@ const ServicesSection = () => {
         breakpoint: 1300,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           dots: true,
         },
       },
@@ -149,7 +149,7 @@ const ServicesSection = () => {
           <div className="slider-container" style={{ paddingBottom: "20px" }}>
             <Slider
                 ref={(slider) => {
-                  sliderRef = slider;
+                  sliderRef = slider
                 }}
                 {...settings}
               >

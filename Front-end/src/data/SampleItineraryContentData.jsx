@@ -92,8 +92,6 @@ const contentData = [
                 "Accommodation in Nuwara Eliya hotel.",
                 "Dinner included."
             ],
-            distance: "depends",
-            duration: "depends",
             route: ['Nuwara Eliya']
         },
         {
@@ -220,8 +218,6 @@ const contentData = [
                 "City tour of Nuwara Eliya.",
                 "Overnight stay at a hotel in Nuwara Eliya."
             ],
-            distance: "depends",
-            duration: "depends",
             route: ['Nuwara Eliya']
         },
         {
@@ -258,8 +254,6 @@ const contentData = [
                 "Relaxation time at the hotel.",
                 "Overnight stay at a hotel in Bentota."
             ],
-            distance: "depends",
-            duration: "depends",
             route: ['Bentota']
         },
         {
@@ -360,8 +354,6 @@ const contentData = [
                 "Commence a city tour of Nuwara Eliya.",
                 "Overnight stay at the hotel in Nuwara Eliya.",
             ],
-            distance: "depends",
-            duration: "depends",
             route: ['Nuwara Eliya']
         },
         {
@@ -393,8 +385,6 @@ const contentData = [
                 "Proceed to Balapitiya for a river cruise (Optional).",
                 "Overnight stay at the hotel in Bentota."
             ],
-            distance: "depends",
-            duration: "depends",
             route: ['Bentota']
         },
         {
@@ -527,8 +517,6 @@ const contentData = [
                 "Return to the hotel in Bentota.",
                 "Relax and enjoy your day at the hotel."
             ],
-            distance: "depends",
-            duration: "depends",
             route: ['Bentota']
         },
         {
@@ -622,8 +610,6 @@ const contentData = [
                 "Return to the hotel in Dambulla.",
                 "Dinner and overnight stay at the hotel."
             ],
-            distance: "depends",
-            duration: "depends",
             route: ['Dambulla']
         },
         {
@@ -686,8 +672,6 @@ const contentData = [
                 "City tour of Nuwara Eliya.",
                 "Dinner and overnight stay at the hotel in Nuwara Eliya."
             ],
-            distance: "depends",
-            duration: "depends",
             route: ['Nuwara Eliya']
         },
         {
@@ -728,8 +712,6 @@ const contentData = [
                 "Relaxation time at the hotel.",
                 "Dinner and overnight stay at the hotel."
             ],
-            distance: "depends",
-            duration: "depends",
             route: ['Bentota']
         },
         {

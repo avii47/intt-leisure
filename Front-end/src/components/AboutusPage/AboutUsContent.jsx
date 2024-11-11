@@ -143,13 +143,13 @@ const AboutUsContent = () => {
               <div className="col-lg-6">
                 <div className="achivement-item">
                   <img className='achivement-img' src={achievement_img1} alt="forbes logo" />
-                  <p className="font-secondary">Every aspect of your journey is tailored to resonate with your unique leadership needs, providing a deep and meaningful experience that goes beyond conventional practices. Discover the true depth and serenity of mindfulness, guided by Dr. Hewawasam’s expertise, and enrich your leadership journey with us.</p>
+                  <p className="font-secondary" style={{fontWeight:'200'}}>The Forbes Coaches Council is an esteemed community of leading coaches and experts who share their insights and strategies to help businesses thrive. Dr. Gamini Hewawasam is a valued member of this council, where he contributes to Forbes Expert Panels and authors articles on leadership and mindfulness. His work emphasizes the transformative power of mindfulness in leadership, guiding professionals to enhance their decision-making and foster a culture of introspection and resilience.</p>
                 </div>
               </div>
               <div className="col-lg-6 d-flex">
                 <div className="achivement-item achivement-item-right">
                   <img className='achivement-img' src={achievement_img2} alt="harvard business review logo" style={{height: '180px'}}/>
-                  <p className="font-secondary">Every aspect of your journey is tailored to resonate with your unique leadership needs, providing a deep and meaningful experience that goes beyond conventional practices. Discover the true depth and serenity of mindfulness, guided by Dr. Hewawasam’s expertise, and enrich your leadership journey with us.</p>
+                  <p className="font-secondary" style={{fontWeight:'200'}}>As an advisory council member at Harvard Business Review, Dr. Gamini Hewawasam provides valuable insights into the intersection of leadership and mindfulness. His contributions help guide the publication's exploration of effective management strategies, emphasizing the transformative potential of mindfulness in enhancing decision-making and cultivating a resilient organizational culture</p>
                 </div>
               </div>
             </div></div>

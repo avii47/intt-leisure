@@ -107,6 +107,11 @@
     border-radius: 0px 0px 10px 10px; 
     font-size: 14px;
     color: #333;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+  }
+  .tab-content.loading {
+    opacity: 0;
   }
   
   

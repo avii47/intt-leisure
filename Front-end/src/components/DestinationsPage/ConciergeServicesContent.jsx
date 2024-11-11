@@ -31,7 +31,7 @@ function ConciergeServicesContent({ content }) {
                     ))}
                 </div>
 
-                <ContactFrom />
+                <ContactFrom defPackageName={content.title} />
 
             </div>
         </section>
