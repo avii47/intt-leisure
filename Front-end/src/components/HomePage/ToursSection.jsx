@@ -15,7 +15,7 @@ function ToursSection({ imageUrl, title, sub, description, spec1, spec1Icon, spe
     return (
         <div className={`tourSection-container section ${isMobileView ? 'mobile-view' : ''}`}>
             <div className="tourSection-content">
-                <div className="col-md-6 d-flex" style={{justifyContent:'left'}}>
+                <div className="col-md-6 d-flex" style={{justifyContent:'center'}}>
                     <img src={imageUrl} alt="Tour" className="card-image" />
                 </div>
                 <div className="col-md-6 tourSection-card-con">

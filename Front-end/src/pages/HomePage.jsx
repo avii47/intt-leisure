@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import ScrollToTopButton from '../components/ScrollToTopButton';
 import useInView from '../hooks/useInView';
 import LoadingSpinner from '../components/LoadingSpinner'; 
-import img from '../assets/images/dmc.png'
+import img from '../assets/images/dmc-min.png'
 import mindfulnessImg from '../assets/images/mindfulness.jpg'
 import icon1 from '../assets/icons/spec1-icon.png'
 import icon2 from '../assets/icons/spec2-icon.png'
@@ -48,9 +48,9 @@ const HomePage = () => {
                 <HeroSection />
             </Suspense>
             <SectionLoader Component={WhyChooseUsSection} />
-            {/* <SectionLoader Component={MindfulnessTourismSection} /> */}
+            <SectionLoader Component={MindfulnessTourismSection} />
 
-            <TourPackageCard
+            {/* <TourPackageCard
                 imageUrl={mindfulnessImg}
                 title="Mindfulness Tourism"
                 sub="Explore"
@@ -61,7 +61,7 @@ const HomePage = () => {
                 spec2Icon={icon2}
                 buttonLabel="Learn More"
                 link="mindfulness"
-            />
+            /> */}
             
             <SectionLoader Component={ServicesSection} />
 

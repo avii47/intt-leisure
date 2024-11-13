@@ -17,8 +17,8 @@
 }
 
 .card-image {
-    width: 93%;
-    /* height: 800px; */
+    /* width: 93%; */
+    height: 800px;
     object-fit: cover;
 }
 .mobile-view .card-image {
@@ -26,7 +26,7 @@
 }
 
 .tourSection-card-content{
-    padding: 6%;
+    /* padding: 6%; */
     height: fit-content;
 }
 .tourSection-card-con{
