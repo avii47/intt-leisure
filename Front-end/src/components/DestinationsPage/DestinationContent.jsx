@@ -221,7 +221,7 @@ const DestinationsContent = () => {
     >
       <div className="destination-section-content page-section">
         <div className="main-dcards-section-container">
-          <h2 className="font-primary">Where to next?</h2>
+          <h2 className="font-primary">Tour with Us</h2>
           <p className="font-secondary">
 
           </p>

@@ -13,7 +13,7 @@ const MobileButton = lazy(() => import('../components/MobileBookNowButton'));
 const DestinationPage = () => {
 
     const title = 'Destinations';
-    const sub = 'Explore Our Services';
+    const sub = 'Your Trusted Destination Management Company in Sri Lanka';
     const aboutImg = 'Sigiriya, the ancient rock fortress of Sri Lanka, rises proudly from the lush plains, a striking symbol of history. Standing nearly 200 meters tall, this massive rock once held a royal palace at its summit. As you climb the carved pathways, you will find beautiful frescoes of maidens painted on the rock walls.'
 
     return (

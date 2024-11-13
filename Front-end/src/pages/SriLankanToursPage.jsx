@@ -20,7 +20,7 @@ function SriLankanToursPage() {
         <HeroSection
           img={heroImg}
           title={"Sri Lanka"}
-          sub={"explore sri lankan tours"}
+          sub={"With INTT Leisure, touring Sri Lanka is simple and stress-free – we handle everything for you."}
         />
       </Suspense>
       <Suspense fallback={<LoadingSpinner />}>

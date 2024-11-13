@@ -52,16 +52,16 @@ function DayCard({ content, isExpanded, onExpand }) {
 
         <div className="day-card-content">
           {content.content.map((para, i) => (
-            <li className="font-secondary" style={{ marginTop: '20px', listStyleType: 'none' }} key={i}>
+            <li className="font-secondary" style={{ marginTop: '20px' }} key={i}>
               {para}
             </li>
           ))}
-          <h6 className="font-secondary" style={{ fontSize: '22px', marginTop: '20px' }}>Inclusion</h6>
+          {/* <h6 className="font-secondary" style={{ fontSize: '22px', marginTop: '20px' }}>Inclusion</h6>
           {content.inclusion.map((para, i) => (
             <li className="font-secondary" style={{ marginTop: '0px' }} key={i}>
               {para}
             </li>
-          ))}
+          ))} */}
           {(content.distance || content.duration) && (
             <div className="day-card-footer">
               {content.distance && <span>{content.distance}</span>}

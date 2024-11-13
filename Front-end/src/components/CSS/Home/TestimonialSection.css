@@ -1,3 +1,8 @@
+.testimonial-section{
+    /* background-image: url('C:\Users\ashan\Desktop\Projects\intt-leisure\Front-end\src\assets\images\testmonials.jpg'); */
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
 .testimonial-content{
     width: 80vw;
     margin-bottom: 12rem;

@@ -66,7 +66,7 @@ const TestimonialSection = () => {
 
 
   return (
-    <section id="testimonial-section" className={`section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`}>
+    <section id="testimonial-section" className={`section testimonial-section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`}>
       <div className="testimonial-content">
         <div className="row" style={{ gap: '60px', flexDirection: isMobileView? 'column-reverse':"inherit" }}>
           <div className="col-md testimonial-video-coontainer">

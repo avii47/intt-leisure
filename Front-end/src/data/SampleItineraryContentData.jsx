@@ -28,8 +28,8 @@ const contentData = [
     img: CulturalOdyssey,
     title: "Cultural Odyssey",
     subTitle: "A 5-Day Journey Through Sri Lanka",
-    cardTxt: "Get ready for an unforgettable five Days adventure in the beautiful island of Sri Lanka...",
-    overview: "Get ready for an unforgettable 04 Nights / 05 Days adventure in the beautiful island of Sri Lanka! Your journey begins with a warm welcome at Bandaranaike International Airport, where our friendly representative will assist you. You'll travel to the enchanting city of Kandy, known for its rich culture and stunning landscapes. Along the way, you have the option to visit the Pinnawela Elephant Orphanage, a heartwarming sanctuary for elephants in need. Explore the vibrant city of Kandy, visit a gem lapidary, and immerse yourself in the captivating Kandy Cultural Dance Show. This trip promises to be filled with joy, culture, and unforgettable memories!",
+    cardTxt: "Discover Sri Lanka’s charm with a blend of culture, nature, and adventure. From Kandy’s...",
+    overview: "Discover Sri Lanka’s charm with a blend of culture, nature, and adventure. From Kandy’s iconic sites and Nuwara Eliya’s lush tea plantations to thrilling rafting in Kitulgala and Colombo’s buzzing nightlife, this tour has it all.",
     galleryImages: [
         CulturalOdyssey, kandy_img, nuwaraEliya_img, nuwaraEliya2_img, gregaryLake_img, colombo_img
     ],
@@ -39,10 +39,13 @@ const contentData = [
             img: kandy_img,
             title: "Bandaranaike International Airport to Kandy",
             content: [
-                "Upon arrival at Bandaranaike International Airport, an INTT Leisure representative will meet you, assist with luggage, and introduce you to your chauffeur for a transfer to Kandy.",
-                "In Kandy, enjoy a visit to Pinnawala Elephant Orphanage (optional), a sanctuary dedicated to caring for abandoned and injured elephants.",
-                "Explore the vibrant city of Kandy, Sri Lanka’s cultural and religious hill capital and a UNESCO World Heritage City. Highlights include a visit to a Gem Lapidary and the Kandy Cultural Dance Show (optional), showcasing traditional drumming, fire dancing, and folklore performances.",
-                "Return to the hotel in Kandy for an overnight stay."
+                "Upon arrival at Bandaranaike International Airport, you will be warmly greeted by our INTT Leisure representative.",
+                "Transfer from the airport to Kandy.",
+                "Visit the Pinnawela Elephant Orphanage (Optional – Entrance Fee Supplement).",
+                "Proceed to your hotel in Kandy for check-in.",
+                "Embark on a city tour of Kandy, exploring its rich cultural heritage.",
+                "Visit a gem lapidary in Kandy to witness the intricate art of gem cutting.",
+                "Return to the hotel for an overnight stay."
             ],
             inclusion: [
                 "Meet and assist at Bandaranaike International Airport.",
