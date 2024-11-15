@@ -108,6 +108,7 @@ const ServicesSection = () => {
       className={`section d-flex justify-content-center ${
         isMobileView ? "mobile-view" : ""
       }`}
+      style={{marginTop: isMobileView? '4rem':'8rem'}}
     >
       <div className="services-content justify-content-center">
         <div className="col-12 d-flex">

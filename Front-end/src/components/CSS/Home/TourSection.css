@@ -16,13 +16,22 @@
     flex-wrap: wrap;
 }
 
-.card-image {
+.tourSection-card-image {
+    width: 93%;
+    /* height: 800px; */
+    object-fit: cover;
+}
+.mobile-view .tourSection-card-image {
+    height: 580px;
+}
+
+.tourSection-card-image-v {
     /* width: 93%; */
     height: 800px;
     object-fit: cover;
 }
-.mobile-view .card-image {
-    width: 100%;
+.mobile-view .tourSection-card-image-v {
+    height: 580px;
 }
 
 .tourSection-card-content{

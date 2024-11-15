@@ -62,10 +62,12 @@ const contentData = [
             img: nuwaraEliya_img,
             title: "Kandy To Nuwara Eliya",
             content: [
-                "After breakfast at the hotel, depart from Kandy to Nuwara Eliya.",
-                "On the way, visit a tea plantation to observe tea plucking and a factory to learn about processing tea leaves into graded products.",
-                "Continue to your hotel in Nuwara Eliya, where you can relax and enjoy the cool climate.",
-                "Dinner and an overnight stay at the hotel."
+                "Enjoy a delightful breakfast at the hotel.",
+                "Depart for Nuwara Eliya.",
+                "En route, visit a renowned tea plantation and factory to observe the tea-plucking process and see how raw green leaves are transformed into graded tea products.",
+                "Continue your journey to Nuwara Eliya and check in to your hotel.",
+                "Relax and enjoy the cool, refreshing climate of Nuwara Eliya.",
+                "Dinner and overnight stay at the hotel."
             ],
             inclusion: [
                 "Breakfast at the hotel in Kandy.",
@@ -84,9 +86,9 @@ const contentData = [
             title: "Nuwara Eliya",
             content: [
                 "After breakfast, begin a city tour of Nuwara Eliya.",
-                "Explore the heart of Sri Lankan hill country, famed for Ceylon tea and scenic green tea plantations, streams, and waterfalls. The area’s cool climate, misty landscapes, and colonial charm make it a highlight of Sri Lanka.",
-                "Visit historical landmarks and stroll around Lake Gregory, enjoying its serene atmosphere (entrance fee included).",
-                "Return to your hotel in Nuwara Eliya to relax and savor the cool climate, followed by dinner and an overnight stay."
+                "Take a city tour of Nuwara Eliya, exploring historical landmarks and the area’s colonial heritage. Enjoy a leisurely stroll around Lake Gregory, soaking in the serene atmosphere.",
+                "Return to the hotel for some free time to unwind and enjoy the cool climate.",
+                "Dinner and overnight stay at the hotel."
             ],
             inclusion: [
                 "Breakfast at the hotel.",
@@ -102,10 +104,11 @@ const contentData = [
             img: colombo_img,
             title: "Nuwara Eliya to Colombo",
             content: [
-                "After breakfast, depart from Nuwara Eliya to Colombo, stopping en route at Kitulgala for optional white-water rafting, a prime spot for adventure sports amid serene surroundings.",
-                "Continue to Colombo and check in at the hotel. Embark on a city tour and enjoy shopping in Sri Lanka's vibrant commercial capital, where a blend of east and west offers unique dining and shopping experiences.",
-                "Stroll along Galle Face Green, a beachfront park perfect for a sunset walk and local street foods like isso wade. For nightlife, visit a popular nightclub or Casino Marina Colombo for gaming and live entertainment.",
-                "Return to your hotel in Colombo for an overnight stay."
+                "After breakfast, depart for Colombo.",
+                "En route, stop at Kitulgala for an exhilarating white-water rafting experience. Known for its sago palm cultivation, Kitulgala is a popular destination for adventure sports, including rafting, jungle trekking, and cave explorations. (Optional – 2 hours, Supplement Fee Applies)",
+                "Continue your journey to Colombo and check in to your hotel.",
+                "Enjoy a city tour of Colombo, which includes a visit to Galle Face Green, a scenic urban park along the beachfront. Relax, take in the sea breeze, and enjoy local street food such as prawn fritters (isso wade). Later, experience Colombo’s vibrant nightlife, including popular nightclubs and the Casino Marina Colombo, where you can enjoy live entertainment and gaming.",
+                "Return to the hotel for an overnight stay."
             ],
             inclusion: [
                 "Breakfast at the hotel.",
@@ -126,8 +129,8 @@ const contentData = [
                 "After breakfast at the hotel, depart from Colombo for Bandaranaike International Airport in time for your flight out of Sri Lanka."
             ],
             inclusion: [
-                "Breakfast at the hotel.",
-                "Transfer to Bandaranaike International Airport for departure."
+                "Enjoy a final breakfast at the hotel.",
+                "Transfer to the airport in time for your departure flight from Sri Lanka."
             ],
             distance: "115 km",
             duration: "02 hours 50 minutes",
@@ -140,8 +143,8 @@ const contentData = [
     img: SriLankaAwaits,
     title: "Sri Lanka Awaits",
     subTitle: "An 8-Day Tour of Nature, Culture, and History",
-    cardTxt: "Get ready for an unforgettable journey through the enchanting landscapes and rich cultural heritage of Sri Lanka...",
-    overview: "Get ready for an unforgettable journey through the enchanting landscapes and rich cultural heritage of Sri Lanka! Over the course of 7 nights and 8 days, you'll explore breathtaking sites, including the Pinnawala Elephant Orphanage and the historic Dambulla Cave Temple. Your adventure begins at Bandaranaike International Airport, where our friendly representative will greet you and assist you throughout your travels. From the majestic Sigiriya Rock Fortress to the serene beauty of Kandy, each day promises new experiences and memories. Enjoy delicious meals and comfortable accommodations as you immerse yourself in the vibrant culture and stunning scenery of this beautiful island nation.",
+    cardTxt: "This 8-day tour of Sri Lanka offers a blend of culture, history, and nature. Visit Pinnawala’s Elephant Orphanage...",
+    overview: "This 8-day tour of Sri Lanka offers a blend of culture, history, and nature. Visit Pinnawala’s Elephant Orphanage, Sigiriya Rock Fortress, and the Royal Botanical Gardens. Explore Nuwara Eliya’s tea plantations, enjoy a river safari in Bentota, and experience the vibrant culture of Colombo. Stay in comfortable hotels throughout, with plenty of opportunities for relaxation and discovery. Perfect for experiencing Sri Lanka’s heritage and natural beauty.",
     galleryImages: [
         SriLankaAwaits, dambulla_img, sigiriya_img, peradeniya_img, bentota_img, maduRiver_img
     ],
@@ -151,10 +154,11 @@ const contentData = [
             img: dambulla_img,
             title: "Bandaranaike International Airport – Pinnawala - Dambulla",
             content: [
-                "Upon arrival at Bandaranaike International Airport, an INTT Leisure representative will meet you, assist with luggage, and introduce you to your chauffeur for the journey to Dambulla via Pinnawala.",
-                "En route, visit the Pinnawala Elephant Orphanage (optional), a unique sanctuary providing special care for orphaned and injured elephants.",
-                "In Dambulla, explore the UNESCO-listed Dambulla Cave Temple, featuring intricate Buddhist murals and over 150 statues, including a massive reclining Buddha. This historic site is set against a backdrop of traditional Sri Lankan countryside and vibrant markets.",
-                "Continue to your hotel in Dambulla for dinner and an overnight stay."
+                "Meet our representative at Bandaranaike International Airport and transfer to Dambulla via Pinnawala.",
+                "Visit Pinnawala Elephant Orphanage – Sri Lanka’s only elephant orphanage, serving as a sanctuary for elephants in need of care.",
+                "Visit Dambulla Cave Temple – Explore the UNESCO World Heritage site with Buddhist murals and over 150 statues, including a massive reclining Buddha.",
+                "Proceed to the hotel in Dambulla for check-in.",
+                "Dinner & overnight stay at the hotel in Dambulla.",
             ],
             inclusion: [
                 "Meet and assist at Bandaranaike International Airport.",
@@ -172,10 +176,15 @@ const contentData = [
             img: sigiriya_img,
             title: "Dambulla to Kandy",
             content: [
-                "After breakfast, climb the Sigiriya Rock Fortress (optional), a UNESCO World Heritage site and 5th-century marvel built by King Kashyapa. Known as the Lion Rock, this 200-meter-high fortress features extensive gardens, moats, and the famed frescoes of the ‘Heavenly Maidens,’ accessible by a spiral stairway.",
-                "Depart for Kandy, stopping en route at the Spice Garden in Matale to experience Sri Lanka’s rich spice heritage and explore the plantations that made the island renowned for its quality spices in ancient times.",
-                "Arriving in Kandy, begin a city tour of this cultural capital, a UNESCO World Heritage City set amidst scenic hills and looped by the Mahaweli River. Key highlights include a visit to a Gem Lapidary and an optional evening Kandy Cultural Dance Show, featuring traditional drumming, fire dancing, and folklore performances.",
-                "Return to your hotel in Kandy for dinner and an overnight stay."
+                "Breakfast at the hotel.",
+                "Climb Sigiriya Rock Fortress (optional) – Explore the 5th-century fortress, famous for its frescoes and panoramic views.",
+                "Leave for Kandy.",
+                "En route visit the Spice Garden in Matale. – Experience Sri Lanka’s spice heritage and explore spice gardens promoting local cultivation.",
+                "Proceed to the hotel in Kandy for check-in.",
+                "Kandy City Tour – Visit the cultural heart of Sri Lanka, surrounded by hills and the Mahaweli river.",
+                "Visit a Gem Lapidary – Learn about Sri Lanka’s famous gemstone industry.",
+                "Kandy Cultural Dance Show (optional) – Enjoy an exciting traditional dance performance, featuring drumming, Kandyan dance, fire dancers, and folklore.",
+                "Dinner & overnight stay at the hotel in Kandy."
             ],
             inclusion: [
                 "Breakfast at the hotel.",
@@ -199,9 +208,11 @@ const contentData = [
             ],
             inclusion: [
                 "Breakfast at the hotel.",
-                "Visit to the Royal Botanical Gardens in Peradeniya (optional entrance fee).",
-                "Visit to a tea plantation and factory.",
-                "Overnight stay at a hotel in Nuwara Eliya."
+                "Visit Royal Botanical Gardens, Peradeniya (optional) – Explore the stunning 147-acre garden, once a royal pleasure garden, with a diverse range of plants.",
+                "Leave for Nuwara Eliya.",
+                "En route to Nuwara Eliya, visit a Tea Plantation – Learn how tea is plucked and see the processing of green tea leaves at a local factory.",
+                "Proceed to the hotel in Nuwara Eliya for check-in.",
+                "Dinner & overnight stay at the hotel in Nuwara Eliya."
             ],
             distance: "80 km",
             duration: "02 hours 40 minutes approx",
@@ -212,9 +223,10 @@ const contentData = [
             img: nuwaraEliya2_img,
             title: "Nuwara Eliya",
             content: [
-                "After breakfast, embark on a city tour of Nuwara Eliya, the heart of Sri Lanka’s hill country, known for its lush green tea plantations, misty glens, and charming British character.",
-                "Discover historical landmarks and immerse yourself in the colonial heritage of the area. Take a peaceful stroll around Lake Gregory to enjoy the calming atmosphere.",
-                "Return to your hotel in Nuwara Eliya to relax and enjoy the cool climate, followed by dinner and an overnight stay.",
+                "Breakfast at the hotel.",
+                "City tour of Nuwara Eliya: Explore colonial landmarks and tea plantations, then stroll around Lake Gregory to enjoy its serene atmosphere.",
+                "Return to the hotel in Nuwara Eliya for relaxation.",
+                "Dinner & overnight stay at the hotel in Nuwara Eliya.",
             ],
             inclusion: [
                 "Breakfast at the hotel.",
@@ -228,15 +240,18 @@ const contentData = [
             img: bentota_img,
             title: "Nuwara Eliya To Bentota",
             content: [
-                "After breakfast, depart from Nuwara Eliya for Bentota.",
-                "Upon arrival, check in at your beach hotel, where you can relax and enjoy a leisurely day by the beach.",
-                "Conclude your day with dinner and an overnight stay at the hotel.",
+                "Breakfast at the hotel.",
+                "Transfer to Bentota and check in at the beach hotel.",
+                "Relax and enjoy the beach and coastal beauty.",
+                "Dinner & overnight stay at the hotel in Bentota."
             ],
             inclusion: [
                 "Breakfast at the hotel.",
-                "Transportation to Bentota.",
-                "Relaxation time at the beach hotel.",
-                "Overnight stay at a hotel in Bentota."
+                "Depart for Colombo.",
+                "City tour and shopping in Colombo.",
+                "Check in to your hotel in Colombo.",
+                "Relax and enjoy the evening.",
+                "Dinner and overnight stay at the hotel."
             ],
             distance: "200 km",
             duration: "05 hours 20 minutes approx.",
@@ -247,15 +262,14 @@ const contentData = [
             img: maduRiver_img,
             title: "Bentota",
             content: [
-                "After breakfast at the hotel, head to Balapitiya for an optional river cruise along the Madu River.",
-                "As you glide through the clear waters, take in the blend of ecology and culture, visiting Kotu Duwa, a small island home to an ancient temple. Sail through shady mangrove tunnels, experiencing the tranquility of this biodiversity hotspot, rich in reptiles, mollusks, and over 70 species of freshwater fish. Balapitiya is also known for its cinnamon plantations and unique fish pedicure centers, making it a favorite for bird watchers and those seeking rejuvenation.",
-                "Return to your hotel in Kalutara to relax and enjoy the day. Conclude with dinner and an overnight stay at the hotel.",
+                "Breakfast at the hotel.",
+                "Madu River Safari (optional) – Explore the serene Madu River, its mangroves, biodiversity, and visit Kotu Duwa island with its ancient temple.",
+                "Return to the hotel in Bentota for relaxation.",
+                "Dinner & overnight stay at the hotel in Bentota."
             ],
             inclusion: [
                 "Breakfast at the hotel.",
-                "Optional river cruise in Balapitiya (supplement fee may apply).",
-                "Relaxation time at the hotel.",
-                "Overnight stay at a hotel in Bentota."
+                "Transfer to Bandaranaike International Airport for your departure.",
             ],
             route: ['Bentota']
         },
@@ -264,9 +278,11 @@ const contentData = [
             img: colombo2_img,
             title: "Bentota to Colombo",
             content: [
-                "After breakfast, depart from Bentota for Colombo.",
-                "Upon arrival, enjoy shopping and a city tour of Colombo, the trade and commercial capital known as a traditional gateway to the Orient. This vibrant city offers a unique blend of eastern and western influences, rich history, and charm. Colombo boasts an impressive array of high-quality restaurants and some of the best shopping opportunities in Asia.",
-                "Proceed to your hotel in Colombo, where you can relax and enjoy the rest of your day. End the day with dinner and an overnight stay at the hotel.",
+                "Breakfast at the hotel.",
+                "Transfer to Colombo for a city tour and shopping experience.",
+                "Discover Colombo’s blend of modern attractions and historical landmarks.",
+                "Proceed to the hotel in Colombo for check-in.",
+                "Dinner & overnight stay at the hotel in Colombo."
             ],
             inclusion: [
                 "Breakfast at the hotel.",
@@ -287,7 +303,7 @@ const contentData = [
             ],
             inclusion: [
                 "Breakfast at the hotel.",
-                "Transportation to Bandaranaike International Airport for departure."
+                "Transfer to Bandaranaike International Airport in time for your departure flight."
             ],
             distance: "40 km",
             duration: "35 minutes approx.",
@@ -300,8 +316,8 @@ const contentData = [
     img: JourneyThroughParadise,
     title: "Journey Through Paradise",
     subTitle: "7 Days in Captivating Sri Lanka",
-    cardTxt: "This package offers an immersive experience across the island's cultural and scenic highlights...",
-    overview: "This package offers an immersive experience across the island's cultural and scenic highlights. Beginning at Bandaranaike International Airport, you’ll travel to Kandy to visit the Pinnawala Elephant Orphanage and enjoy a cultural show. The journey continues to Nuwara Eliya, the heart of Sri Lanka’s tea country, where you can explore historic landmarks and relax in the cool hill country climate. From Nuwara Eliya, you’ll head to the coastal town of Bentota to unwind by the beach and experience a river cruise through Balapitiya’s biodiverse mangroves. The tour ends in Colombo, where you’ll enjoy a city tour, shopping, and a glimpse of Sri Lanka’s vibrant urban culture before departing. This itinerary blends nature, history, and relaxation, providing a well-rounded Sri Lankan adventure​",
+    cardTxt: "This tour offers a blend of culture, scenic beauty, and relaxation. Begin with Kandy's rich heritage...",
+    overview: "This tour offers a blend of culture, scenic beauty, and relaxation. Begin with Kandy's rich heritage and iconic dance show, explore the lush tea plantations and colonial charm of Nuwara Eliya, unwind on Bentota's beaches with a serene river cruise, and end in Colombo with its lively mix of history, shopping, and coastal views.​",
     galleryImages: [
         JourneyThroughParadise, kandy_img, nuwaraEliya_img, bentota_img, maduRiver_img, colombo_img
     ],
@@ -311,11 +327,13 @@ const contentData = [
             img: kandy_img,
             title: "Bandaranaike International Airport to Kandy",
             content: [
-                "Upon arrival at Bandaranaike International Airport, you will be greeted by our INTT leisure representative, who will assist with your luggage and guide you to your vehicle, where your personal chauffeur awaits.",
-                "You'll transfer to Kandy, stopping at the Pinnawala Elephant Orphanage (optional), which provides shelter and care for abandoned, injured, and maimed elephants, particularly focusing on baby elephants in need of nurturing.",
-                "After your visit, proceed to your hotel in Kandy and embark on a city tour. Kandy, the charming hill capital of Sri Lanka and the second largest city on the island, is nestled amidst low hills and the Mahaweli River, standing at 465 meters above sea level. It is renowned as the country’s religious and cultural center and is recognized as a World Heritage City.",
-                "During the tour, visit a gem lapidary to learn about Sri Lanka’s precious stones. In the evening, you have the option to attend the Kandy Cultural Dance Show, a captivating experience featuring traditional drumming and various art forms, including fire dancers and traditional Kandyan dancers.",
-                "Return to your hotel in Kandy for dinner and an overnight stay."
+                "Arrive at Bandaranaike International Airport and meet your INTT Leisure representative.",
+                "Visit Pinnawela Elephant Orphanage (Optional): Shelter for abandoned and injured elephants.",
+                "Check-in to your hotel in Kandy.",
+                "City tour of Kandy: The charming hill capital of Sri Lanka and the island’s second-largest city, rich in cultural heritage.",
+                "Visit a gem lapidary: Learn about Sri Lanka’s precious gems.",
+                "Enjoy the Kandy Cultural Dance Show (Optional): One of the city’s famed evening events, featuring captivating traditional drummers, mesmerizing fire dancers, and performances from up-country and low-country folklore that create an unforgettable experience.",
+                "Dinner and Overnight stay at the hotel."
             ],
             inclusion: [
                 "Transfer from Bandaranaike International Airport to Kandy.",
@@ -331,9 +349,11 @@ const contentData = [
             img: peradeniya_img,
             title: "Kandy To Nuwara Eliya",
             content: [
-                "After enjoying breakfast at the hotel, you'll visit the Royal Botanical Gardens in Peradeniya (optional), which spans 147 acres and features a stunning variety of trees, plants, and flowers. Originally established as a pleasure garden by a Sinhala king, it was later expanded by the British.",
-                "Following your visit, depart for Nuwara Eliya, stopping at a tea plantation along the way. Here, you’ll see how tea is hand-plucked and visit a factory to witness the processing of the raw green leaf into graded tea products.",
-                "Once you arrive in Nuwara Eliya, proceed to your hotel for dinner and an overnight stay.",
+                "Breakfast at the hotel.",
+                "Visit Royal Botanical Gardens (Optional): Originally a pleasure garden for a Sinhala king and later expanded by the British, featuring an incredible variety of trees, plants, and flowers.",
+                "En route, visit a tea plantation to observe the tea-plucking process and a factory to witness how raw green leaves are processed into the graded product.",
+                "Check-in to your hotel in Nuwara Eliya.",
+                "Dinner and Overnight stay at the hotel."
             ],
             inclusion: [
                 "Visit the Royal Botanical Gardens in Peradeniya (Optional).",
@@ -349,9 +369,11 @@ const contentData = [
             img: nuwaraEliya2_img,
             title: "Nuwara Eliya",
             content: [
-                "After enjoying breakfast at the hotel, you'll embark on a city tour of Nuwara Eliya, the heart of Sri Lanka's hill country. Known for its lush Ceylon tea plantations, Nuwara Eliya features rolling mountains, gushing streams, and beautiful waterfalls, all set against a refreshing climate and misty glens.",
-                "During the tour, you'll explore historical landmarks, absorbing the colonial heritage of the area. You’ll also have the opportunity to stroll around Lake Gregory, taking in its serene and calming atmosphere.",
-                "After your tour, return to the hotel to relax and enjoy the cool climate of Nuwara Eliya. Later, enjoy dinner and an overnight stay at the hotel."
+                "Breakfast at the hotel.",
+                "City tour of Nuwara Eliya: Explore colonial landmarks and tea plantations, then stroll around Lake Gregory to enjoy its serene atmosphere.",
+                "Return to the hotel in Nuwara Eliya.",
+                "Relax in Nuwara Eliya’s cool climate.",
+                "Dinner & Overnight stay at the hotel."
             ],
             inclusion: [
                 "Commence a city tour of Nuwara Eliya.",
@@ -364,8 +386,10 @@ const contentData = [
             img: bentota_img,
             title: "Nuwara Eliya To Bentota",
             content: [
-                "After breakfast at the hotel, you'll depart for Bentota, a beautiful coastal destination. Upon arrival, check in at your hotel and take some time to relax and unwind. Enjoy your day soaking up the sun and the beach atmosphere.",
-                "In the evening, savor a delightful dinner and then enjoy an overnight stay at the hotel, surrounded by the tranquil sounds of the ocean.",
+                "Breakfast at the hotel.",
+                "Depart for Bentota, check-in at your beach hotel.",
+                "Relax and unwind by the beach.",
+                "Dinner & Overnight stay at the hotel."
             ],
             inclusion: [
                 "Proceed to the hotel in Bentota.",
@@ -381,8 +405,11 @@ const contentData = [
             img: maduRiver_img,
             title: "Bentota",
             content: [
-                "On Day 05, you'll start your morning with breakfast at the hotel. Then, you'll head to Balapitiya for an optional river cruise on the Madu River. This serene cruise offers a chance to experience the stunning combination of ecology and culture in the area. You'll navigate through the clear waters, heading towards Kotu Duwa, a small island home to a temple dating back to ancient Sinhalese kings.",
-                "As you glide through the shaded mangroves, you'll encounter a vibrant ecosystem teeming with diverse wildlife, including reptiles, mollusks, and over 70 species of freshwater fish. The region is also known for its abundant cinnamon plantations and unique experiences, such as a 'fish pedicure' center, perfect for relaxation. Bird watchers will find plenty to enjoy here as well.",
+                "Breakfast at the hotel.",
+                "Head to Balapitiya for a river cruise on Madu River (Optional – Entrance Fee). Sail through the crystal-clear waters of the Madu River, a vital lifeline for Balapitiya. Visit Kotu Duwa, a small island with an ancient temple dating back to Sinhalese kings, or explore the shady mangrove tunnels teeming with diverse wildlife and ecological wonders.",
+                "Return to the hotel in Kalutara.",
+                "Relax and enjoy your day at the hotel.",
+                "Dinner & Overnight stay at the hotel."
             ],
             inclusion: [
                 "Proceed to Balapitiya for a river cruise (Optional).",
@@ -395,10 +422,9 @@ const contentData = [
             img: colombo2_img,
             title: "Bentota to Colombo",
             content: [
-                "On Day 06, after enjoying breakfast at the hotel, you will depart for Colombo. The journey will take approximately 1 hour and 50 minutes.",
-                "Upon your arrival in Colombo, you will kick off your visit with a shopping excursion and a city tour. Colombo, as the trade and commercial capital of Sri Lanka, is a vibrant city that beautifully blends Eastern and Western influences, showcasing a rich tapestry of history and modernity.",
-                "You'll find an array of high-quality restaurants offering diverse cuisines from around the world, making it a delightful destination for food lovers. The shopping opportunities in Colombo are also noteworthy, with a mix of local boutiques and international brands.",
-                "After your exploration, you will check into your hotel in Colombo. Take some time to relax and unwind before dinner. You'll enjoy a meal at the hotel and spend the night there, recharging for the next day’s adventures."
+                "Breakfast at the hotel.",
+                "Depart for Colombo, shopping and city tour: Discover Colombo’s blend of history, modernity, and culture.",
+                "Dinner & Overnight stay at the hotel.",
             ],
             inclusion: [
                 "Commence shopping and a city tour of Colombo.",
@@ -419,8 +445,8 @@ const contentData = [
                 "Safe travels! If you have any last-minute questions or need assistance, feel free to ask."
             ],
             inclusion: [
-                "Leave for airport in time for flight out of Sri Lanka.",
-                "Dinner and breakfast at the hotel"
+                "Breakfast at the hotel.",
+                "Transfer to the airport for departure."
             ],
             distance: "40 km",
             duration: "35 minutes approx.",
@@ -444,12 +470,14 @@ const contentData = [
             img: pinnawala_img,
             title: "Bandaranaike International Airport to Kandy",
             content: [
-                "Upon your arrival at Bandaranaike International Airport, you will be warmly greeted by our INTT Leisure representative. They will assist you with your luggage and guide you to your vehicle, where your personal chauffeur awaits to start your journey.",
-                "You will then embark on a scenic drive to Kandy, taking in the beautiful landscapes that Sri Lanka has to offer. On your way, you’ll have the opportunity to visit the Pinnawala Elephant Orphanage (optional - entrance fee supplement). This renowned sanctuary was established to provide shelter and nourishment to abandoned, injured, and maimed elephants, particularly focusing on the care of baby elephants who cannot survive without their mothers.",
-                "After your visit to the orphanage, proceed to your hotel in Kandy, where you will check in and settle down. Once you’re refreshed, you’ll begin your city tour of Kandy. This charming hill capital is not only Sri Lanka’s second-largest city but also a UNESCO World Heritage Site. Nestled amidst low hills and looped by the Mahaweli River, Kandy serves as the country’s religious and cultural center.",
-                "During your city tour, you will also visit a gem lapidary in Kandy, where you can discover the exquisite craftsmanship of Sri Lankan gem artisans. The variety and quality of gemstones in the area are truly remarkable.",
-                "In the evening, you’ll have the chance to immerse yourself in the vibrant Kandy Cultural Dance Show. This performance is one of the most famous evening events in the heritage city. It features captivating traditional drummers and showcases a variety of dance forms, including fire dancers, Demon dancers, and Traditional Kandyan dancers. The show runs for over an hour and promises a breathtaking experience of local culture.",
-                "After the cultural show, you will return to your hotel for dinner and an overnight stay, ending your first day in Sri Lanka filled with unforgettable experiences."
+                "Arrive at Bandaranaike International Airport and meet your INTT Leisure representative.",
+                "Transfer to Kandy.",
+                "Visit the Pinnawela Elephant Orphanage (Optional – Entrance Fee).",
+                "Check in to your hotel in Kandy.",
+                "City tour of Kandy, including the Temple of the Sacred Tooth Relic and Kandy Lake.",
+                "Visit a gem lapidary in Kandy.",
+                "Attend the Kandy Cultural Dance Show – A captivating evening event showcasing traditional drummers, fire dancers, and performances of Kandyan and low-country dances. This show offers an unforgettable cultural experience.",
+                "Return to the hotel for dinner and overnight stay."
             ],
             inclusion: [
                 "Meet and assist at Bandaranaike International Airport.",
@@ -466,10 +494,12 @@ const contentData = [
             img: peradeniya_img,
             title: "Kandy To Nuwara Eliya",
             content: [
-                "After enjoying breakfast at the hotel, you will set out for a visit to the Royal Botanical Gardens in Peradeniya (optional - entrance fee supplement). This beautiful botanical garden was initially established as a pleasure garden by a Sinhala king and was later expanded by the British. Spanning 147 acres, it showcases an amazing variety of trees, plants, and flowers, making it a perfect spot for nature lovers.",
-                "Following your exploration of the gardens, you will leave for Nuwara Eliya. En route, you will visit a tea plantation, where you can witness firsthand how tea is carefully plucked from the lush bushes. Additionally, you will have the opportunity to tour a factory, observing the intricate process of turning raw green tea leaves into the graded product that is world-renowned.",
-                "Once you arrive in Nuwara Eliya, you will commence a city tour of this picturesque town. Known as the heart of Sri Lankan hill country, Nuwara Eliya is famous for its Ceylon tea and features rolling mountains covered in velvety green tea plantations, interspersed with gushing streams and tumbling waterfalls. The salubrious climate, misty glens, and distinctly British character make Nuwara Eliya a must-visit destination in Sri Lanka.",
-                "Finally, you will proceed to your hotel in Nuwara Eliya, where you can relax and enjoy the serene surroundings."
+                "Breakfast at the hotel.",
+                "Visit the Royal Botanical Gardens in Peradeniya (Optional – Entrance Fee). This botanical garden was originally built as a pleasure garden by a Sinhala king and later expanded by the British. It is home to an impressive variety of trees, plants, and flowers.",
+                "En route, visit a tea plantation and factory.",
+                "Arrive in Nuwara Eliya – the heart of Sri Lanka’s hill country. Known for its famous Ceylon tea, Nuwara Eliya is a stunning region with rolling mountains blanketed in velvety green tea plantations, interspersed with sparkling streams and cascading waterfalls.",
+                "Check in to your hotel and enjoy the cooler climate.",
+                "Dinner and overnight stay at the hotel."
             ],
             inclusion: [
                 "Breakfast at the hotel in Kandy.",
@@ -487,10 +517,9 @@ const contentData = [
             img: bentota_img,
             title: "Nuwara Eliya to Bentota",
             content: [
-                "After enjoying breakfast at the hotel, you will begin your journey from Nuwara Eliya to Bentota. The scenic drive will take you through the breathtaking landscapes of Sri Lanka, showcasing the country's natural beauty along the way.",
-                "Upon arrival in Bentota, you will proceed to your hotel, where you can unwind and soak in the relaxing atmosphere. With its stunning beaches and tranquil surroundings, Bentota offers the perfect opportunity to recharge after your travels.",
-                "Spend the rest of the day enjoying the amenities of your beach hotel. Whether you prefer lounging by the pool, strolling along the sandy shores, or indulging in a spa treatment, Bentota has something for everyone to enjoy.",
-                "In the evening, you will have dinner at the hotel, followed by an overnight stay, ensuring you are refreshed for the adventures that lie ahead."
+                "After breakfast, visit the Royal Botanical Gardens in Peradeniya (optional), originally a royal pleasure garden, now spanning 147 acres with a remarkable variety of plants, trees, and flowers.",
+                "Depart for Nuwara Eliya, stopping en route at a tea plantation to observe tea plucking and a factory to see the transformation of green leaves into graded tea.",
+                "Continue to your hotel in Nuwara Eliya for dinner and an overnight stay.",
             ],
             inclusion: [
                 "Breakfast at the hotel in Nuwara Eliya.",
@@ -507,11 +536,11 @@ const contentData = [
             img: maduRiver_img,
             title: "Bentota",
             content: [
-                "Start your day with breakfast at the hotel, preparing you for an exciting adventure ahead. After breakfast, you will proceed to Balapitiya for a river cruise (optional – entrance fee supplement may apply).",
-                "In Balapitiya, you can sit back and appreciate how ecology and culture blend harmoniously under the sun. As you cruise through the clear waters of the Madu River, you will head towards Kotu Duwa, a small island that houses a temple dating back to the ancient Sinhalese kings. You’ll also have the opportunity to sail through tunnels of shady mangroves that line the riverbanks, revealing an ecological treasure trove. This biodiverse hotspot is home to various reptiles, mollusks, and over 70 species of freshwater fish.",
-                "The region is not only rich in natural beauty but also offers a glimpse into rural life on the island. Here, you can explore cinnamon plantations and discover a unique 'fish pedicure' center—one of the latest rejuvenation techniques that has gained popularity. Additionally, Balapitiya is a well-known destination for bird watchers, making it an exciting spot for nature enthusiasts.",
-                "After your cruise, you will return to the hotel in Bentota, where you can relax and enjoy the rest of your day at leisure. Whether you choose to lounge by the beach or indulge in the hotel's amenities, you will have plenty of options to unwind.",
-                "In the evening, enjoy dinner at the hotel, followed by an overnight stay, ensuring you are well-rested for the next day's adventures."
+                "Breakfast at the hotel.",
+                "Head to Balapitiya for a river cruise on Madu River (Optional – Entrance Fee).",
+                "Return to your hotel in Nuwara Eliya to relax and enjoy the cool climate, followed by dinner and an overnight stay. Sail through the crystal-clear waters of the Madu River, a vital lifeline for Balapitiya. Visit Kotu Duwa, a small island with an ancient temple dating back to Sinhalese kings, or explore the shady mangrove tunnels teeming with diverse wildlife and ecological wonders.",
+                "Return to the hotel and relax.",
+                "Dinner and overnight stay at the hotel."
             ],
             inclusion: [
                 "Breakfast at the hotel in Bentota.",
@@ -527,11 +556,9 @@ const contentData = [
             img: colombo_img,
             title: "Bentota to Colombo",
             content: [
-                "Begin your day with a delicious breakfast at the hotel before preparing for your journey to Colombo. After breakfast, you will leave for Colombo, which is approximately 105 km away and takes around 1 hour and 50 minutes to reach.",
-                "Upon your arrival in Colombo, you will kick off your exploration with shopping and a city tour. As the trade and commercial capital of Sri Lanka, Colombo has long served as a traditional gateway to the Orient. This vibrant city is a fascinating blend of East and West, where the past harmoniously meets the present, creating a unique charm that captivates visitors.",
-                "One of Colombo's lesser-known but remarkable features is its exceptional range of high-quality restaurants offering diverse cuisines from around the globe. Whether you crave local delicacies or international dishes, you will find plenty of options to satisfy your palate. Additionally, Colombo boasts some of the best shopping opportunities in Asia, making it a great place to indulge in retail therapy.",
-                "After your city tour and shopping experience, proceed to your hotel in Colombo. Once settled in, take some time to relax and enjoy the amenities the hotel offers, or simply unwind from your day of exploration",
-                "In the evening, you will enjoy dinner at the hotel, followed by an overnight stay, ensuring you are refreshed and ready for the adventures that await you tomorrow."
+                "After breakfast, depart from Nuwara Eliya for Bentota.",
+                "Upon arrival, check in at your beach hotel, where you can relax and enjoy a leisurely day by the beach.",
+                "Conclude your day with dinner and an overnight stay at the hotel.",
             ],
             inclusion: [
                 "Breakfast at the hotel in Bentota.",
@@ -549,10 +576,9 @@ const contentData = [
             img: airport_img,
             title: "Colombo to Bandaranaike International Airport",
             content: [
-                "Start your day with a satisfying breakfast at the hotel, savoring the last moments of your stay in Colombo. After breakfast, it’s time to prepare for your journey to the airport.",
-                "You will leave for Bandaranaike International Airport, which is approximately 40 km away and takes around 35 minutes to reach. Make sure to keep your travel documents handy and ensure you have everything packed for your departure.",
-                "Arriving at the airport, you’ll have time to check in for your flight and complete any necessary formalities. As you reflect on your journey through Sri Lanka, you can cherish the memories made during your travels.",
-                "Wishing you a safe flight and a pleasant journey home!"
+                "After breakfast at the hotel, head to Balapitiya for an optional river cruise along the Madu River.",
+                "As you glide through the clear waters, take in the blend of ecology and culture, visiting Kotu Duwa, a small island home to an ancient temple. Sail through shady mangrove tunnels, experiencing the tranquility of this biodiversity hotspot, rich in reptiles, mollusks, and over 70 species of freshwater fish. Balapitiya is also known for its cinnamon plantations and unique fish pedicure centers, making it a favorite for bird watchers and those seeking rejuvenation.",
+                "Return to your hotel in Kalutara to relax and enjoy the day. Conclude with dinner and an overnight stay at the hotel.",
             ],
             inclusion: [
                 "Breakfast at the hotel in Colombo.",
@@ -569,8 +595,8 @@ const contentData = [
     img: WondersOfSriLanka,
     title: "Wonders of Sri Lanka",
     subTitle: "9 Days of Scenic Journeys",
-    cardTxt: "Get ready for an unforgettable journey through the enchanting landscapes and rich culture...",
-    overview: "Get ready for an unforgettable journey through the enchanting landscapes and rich culture of Sri Lanka! Over the course of 08 nights and 09 days, you'll explore breathtaking sites, including the Pinnawala Elephant Orphanage and the historic Dambulla Cave Temple, a UNESCO World Heritage Site. Experience the warmth of Sri Lankan hospitality as you enjoy delicious meals and comfortable accommodations. Each day promises new adventures, from village tours to wildlife encounters. We can't wait for you to embark on this incredible experience!",
+    cardTxt: "This 9-day tour of Sri Lanka combines cultural exploration, nature experiences...",
+    overview: "This 9-day tour of Sri Lanka combines cultural exploration, nature experiences, and relaxation. Visit the Pinnawala Elephant Orphanage, Dambulla Cave Temple, and witness traditional village life in Hiriwaduna. Explore the Sigiriya Rock Fortress, spice gardens, and enjoy a cultural dance show in Kandy. Continue to Nuwara Eliya, known for its tea plantations and colonial charm, then relax in Bentota. The tour concludes with a river cruise in Balapitiya and a city tour in Colombo before departing from Bandaranaike International Airport.",
     galleryImages: [
         WondersOfSriLanka, pinnawala_img, dambulla_img, kandy_img, nuwaraEliya_img, bentota_img
     ],
@@ -580,10 +606,12 @@ const contentData = [
             img: pinnawala_img,
             title: "Bandaranaike International Airport – Pinnawala - Dambulla",
             content: [
-                "Upon arrival at Bandaranaike International Airport, you will be warmly greeted by our INTT Leisure representative, who will assist you with your luggage and guide you to your waiting vehicle. Here, your personal chauffeur will be ready to begin your journey through Sri Lanka.",
-                "Depart from the airport and set off for Dambulla, with a scenic stop at the Pinnawala Elephant Orphanage along the way. This unique establishment is the only one of its kind in Sri Lanka, serving as a sanctuary, nursery, and breeding ground for elephants in need. The orphanage provides a safe haven for abandoned and injured elephants, ensuring they receive special care and attention.",
-                "Continue your journey to Dambulla, where you’ll explore the famed Dambulla Cave Temple, a UNESCO World Heritage Site. This remarkable complex is nestled within a massive rock and features intricate Buddhist murals and over 150 statues, including a colossal reclining Buddha. Dambulla's cave temples offer a mesmerizing glimpse into ancient Buddhist artistry and devotion. The surrounding area, with its lively markets and serene countryside, allows you to experience the charm of traditional Sri Lankan life.",
-                "After your visit, proceed to your hotel in Dambulla. Enjoy a delicious dinner and settle in for a restful overnight stay, preparing for more adventures to come."
+                "Meet and greet at Bandaranaike International Airport by INTT Leisure representative.",
+                "Transfer to Dambulla via Pinnawala.",
+                "Visit Pinnawala Elephant Orphanage (Optional – Entrance Fee Supplement).",
+                "Visit Dambulla Cave Temple (UNESCO World Heritage Site).",
+                "Proceed to hotel in Dambulla.",
+                "Dinner & Overnight stay at the hotel."
             ],
             inclusion: [
                 "Meet and assist at Bandaranaike International Airport.",
@@ -601,10 +629,11 @@ const contentData = [
             img: dambulla_img,
             title: "Dambulla - Minneriya",
             content: [
-                "Begin your day with a hearty breakfast at the hotel, preparing for a day filled with exploration and adventure.",
-                "For those seeking an authentic cultural experience, embark on an optional village tour of Hiriwaduna. Located in Habarana in Sri Lanka’s North Central Province, Hiriwaduna offers a charming glimpse into traditional village life. This quiet, rural village, nestled between dry-zone shrub forests and shaded by towering trees, invites visitors to meet friendly locals and observe a simpler, unhurried way of life. Wander along gravel paths, surrounded by scenic countryside, and immerse yourself in the peaceful environment of typical Sri Lankan village life.",
-                "In the afternoon, head to Minneriya National Park for an exciting Jeep safari. This optional adventure provides a unique opportunity to see wild elephants gathering in their natural habitat. Minneriya is one of Sri Lanka’s most renowned national parks, known for its large elephant population, particularly during the dry season when herds gather around the park’s reservoir. The safari offers not only a close view of these majestic creatures but also sightings of various bird species and other wildlife.",
-                "After an unforgettable day of cultural immersion and wildlife sightings, return to your hotel in Dambulla. Enjoy a delicious dinner and settle in for an overnight stay, reflecting on the day’s memorable experiences."
+                "Breakfast at the hotel.",
+                "Village tour of Hiriwaduna (Optional). Hiriwaduna is a rural village located in Habarana, North Central Province. If you wish to meet the country folks, this is one of the ideal spots. The charming village, shaded on either side by a dry zone shrub forest, with unpaved gravel paths and humble village folk, offers a chance to witness the environment of typical Sri Lankan village life.",
+                "Visit Minneriya National Park & Jeep Safari (Optional – Entrance Fee Supplement). It is one of the most prominent attractions of the island, visited by locals and tourists alike in great numbers.",
+                "Return to hotel in Dambulla.",
+                "Dinner & Overnight stay at the hotel."
             ],
             inclusion: [
                 "Breakfast at the hotel.",
@@ -620,12 +649,17 @@ const contentData = [
             img: kandy_img,
             title: "Dambulla to Kandy",
             content: [
-                "Start your day with a delicious breakfast at the hotel, preparing for an adventurous journey to some of Sri Lanka's most iconic sites.",
-                "For those inclined to explore ancient architecture and history, an optional climb of the Sigiriya Rock Fortress awaits. This 5th-century marvel, designated as a UNESCO World Heritage site, was constructed by King Kashyapa (477-495 AD). Known as the Lion Rock, Sigiriya stands at 200 meters and offers breathtaking views of the surrounding jungle. At the base, a moat, ramparts, and extensive water gardens frame the rock’s base, while midway up the rock, visitors can view the famous frescoes of the 'Heavenly Maidens.' These frescoes, painted in earth pigments, depict beautiful maidens and add an air of mystique to the fortress.",
-                "After descending from Sigiriya, embark on a scenic journey to Kandy, stopping en route at a Spice Garden in Matale. Sri Lanka’s spice gardens are renowned for their aromatic spices and herbs. These gardens provide visitors with insights into Sri Lanka's spice trade, a heritage that dates back centuries. Learn about the various spices that have long enriched Sri Lankan cuisine, medicine, and traditions.",
-                "Arriving in Kandy, check in at your hotel before setting out to explore this enchanting hill city. Known as Sri Lanka’s cultural capital, Kandy is nestled amidst lush hills and sits beside the Mahaweli River. A UNESCO World Heritage site, it is home to temples, historic sites, and a rich blend of cultural traditions. During the city tour, visit a Gem Lapidary, where you can observe Sri Lanka's renowned gemstone industry, famous for sapphires and other precious stones.",
-                "In the evening, attend the optional Kandy Cultural Dance Show. This captivating performance showcases traditional Kandyan dances, including fire dancers, drum performances, and various regional dances that offer a vivid glimpse into Sri Lanka's folklore and traditions. The show, lasting over an hour, provides a truly memorable experience.",
-                "Return to your hotel in Kandy for dinner and an overnight stay, wrapping up a day steeped in culture, history, and natural beauty."
+                "Breakfast at the hotel.",
+                "Climb Sigiriya Rock Fortress (Optional – Entrance Fee Supplement).",
+                "Leave for Kandy.",
+                "En route visit the Spice Garden in Matale.",
+                "En route visit the Spice Garden in Matale. Sri Lanka is famous for its spices and spice gardens. These spice gardens offer tourists memorable visits to various spice plantations. To promote and uplift spice growing, a spice council was established with all key industry private and public sector stakeholders. Historically known as Taprobane, Sri Lanka was world-renowned for its high-quality spices. During ancient times, the Greeks, Romans, and Arabs maintained links with Sri Lanka through the spice trade.",
+                "Proceed to Kandy.",
+                "City tour of Kandy",
+                "Visit a Gem Lapidary in Kandy.",
+                "In the evening view the Kandy Cultural Dance Show. (Optional) A captivating evening event showcasing traditional drummers, fire dancers, and performances of Kandyan and low-country dances. This show offers an unforgettable cultural experience.",
+                "Return to hotel in Kandy.",
+                "Dinner & Overnight stay at the hotel."
             ],
             inclusion: [
                 "Breakfast at the hotel.",
@@ -642,11 +676,12 @@ const contentData = [
             img: nuwaraEliya_img,
             title: "Kandy to Nuwara Eliya",
             content: [
-                "Begin your day with breakfast at the hotel, fueling up for a scenic journey into the heart of Sri Lanka’s tea country.",
-                "The first stop of the day is an optional visit to the Royal Botanical Gardens in Peradeniya, just outside of Kandy. Initially established as a pleasure garden by a Sinhala king, the gardens were expanded by the British and now cover 147 acres. Known for their vast variety of trees, plants, and flowers, these gardens are an oasis of beauty and a haven for plant lovers. Stroll through avenues of towering palms, see the famous orchid collection, and immerse yourself in the vibrant, lush environment.",
-                "After the gardens, continue on your journey toward Nuwara Eliya. On the way, visit a Tea Plantation to witness Sri Lanka’s renowned tea-making process firsthand. Here, you’ll see skilled workers carefully plucking tea leaves by hand and can tour the tea factory to learn about the intricate process of turning raw green leaves into graded, ready-to-use tea. You may even have a chance to sample some fresh Ceylon tea, renowned for its distinctive flavor.",
-                "Arrive in Nuwara Eliya, also known as 'Little England' due to its cool climate and colonial architecture. Check into your hotel, where you can relax and unwind, enjoying the crisp mountain air.",
-                "In the evening, savor a hearty dinner and enjoy a restful overnight stay at your hotel in Nuwara Eliya, ready to explore more of this picturesque hill town the next day."
+                "Breakfast at the hotel.",
+                "Visit Royal Botanical Gardens in Peradeniya (Optional – Entrance Fee Supplement). Explore the stunning 147-acre garden, once a royal pleasure garden, with a diverse range of plants.",
+                "Leave for Nuwara Eliya.",
+                "En route visit Tea Plantation and Factory.",
+                "Proceed to hotel in Nuwara Eliya.",
+                "Dinner & Overnight stay at the hotel."
             ],
             inclusion: [
                 "Breakfast at the hotel.",
@@ -663,12 +698,11 @@ const contentData = [
             img: nuwaraEliya2_img,
             title: "Nuwara Eliya",
             content: [
-                "Begin your day with breakfast at the hotel, preparing for a full exploration of Nuwara Eliya, often referred to as the 'Heart of Sri Lankan Hill Country.'",
-                "Embark on a city tour of Nuwara Eliya, where you'll find yourself surrounded by rolling mountains carpeted with lush, green tea plantations, along with bubbling streams and picturesque waterfalls. This area is not only the center of Sri Lanka’s famed tea industry but also a unique blend of British charm and Sri Lankan heritage. With its refreshing climate and mist-covered landscapes, Nuwara Eliya feels worlds away from the tropical heat of the coast.",
-                "Explore the historical landmarks that showcase Nuwara Eliya’s colonial past. Wander through streets lined with quaint, British-style cottages and old buildings that lend the town its nickname, 'Little England.' You’ll see how the town’s architecture and layout reflect its colonial roots, offering a charming and distinctive atmosphere.",
-                "Take a peaceful stroll around Lake Gregory, a tranquil spot in the heart of Nuwara Eliya. The lake, surrounded by misty hills and greenery, is perfect for relaxing or simply taking in the serene views. You can walk along the shoreline, take a boat ride, or simply sit and enjoy the calming environment.",
-                "After your tour, return to the hotel to relax and unwind in the cool climate of Nuwara Eliya. Enjoy a leisurely evening and a delicious dinner at the hotel, rounding off a refreshing day in this enchanting town.",
-                "Dinner and overnight stay at the hotel in Nuwara Eliya."
+                "Breakfast at the hotel.",
+                "City tour of Nuwara Eliya.",
+                "Return to hotel in Nuwara Eliya.",
+                "Relax and enjoy the cool climate.",
+                "Dinner & Overnight stay at the hotel."
             ],
             inclusion: [
                 "Breakfast at the hotel.",
@@ -682,10 +716,11 @@ const contentData = [
             img: maduRiver_img,
             title: "Nuwara Eliya to Bentota",
             content: [
-                "Start your day with a satisfying breakfast at the hotel, savoring the last moments of your stay in Colombo. After breakfast, it’s time to prepare for your journey to the airport.",
-                "You will leave for Bandaranaike International Airport, which is approximately 40 km away and takes around 35 minutes to reach. Make sure to keep your travel documents handy and ensure you have everything packed for your departure.",
-                "Arriving at the airport, you’ll have time to check in for your flight and complete any necessary formalities. As you reflect on your journey through Sri Lanka, you can cherish the memories made during your travels.",
-                "Wishing you a safe flight and a pleasant journey home!"
+                "Breakfast at the hotel.",
+                "Leave for Bentota.",
+                "Proceed to hotel in Bentota.",
+                "Relax & enjoy the beach hotel.",
+                "Dinner & Overnight stay at the hotel"
             ],
             inclusion: [
                 "Breakfast at the hotel.",
@@ -702,10 +737,10 @@ const contentData = [
             img: bentota_img,
             title: "Bentota",
             content: [
-                "Start your day with a delightful breakfast at the hotel before setting out on an optional river cruise in Balapitiya, a charming coastal town. This journey along the serene Madu River is a true immersion into Sri Lanka's rich ecological tapestry, where culture and nature seamlessly converge. As you glide across the water, witness the unique beauty of Kotu Duwa, a small island that houses an ancient temple, symbolizing a link to the region's storied past.",
-                "The cruise will lead you through narrow mangrove tunnels, a habitat for an abundance of biodiversity. Here, you may encounter various species of reptiles, mollusks, and over 70 kinds of freshwater fish, all while soaking in the quietude of this remarkable environment. The shores of Balapitiya are also renowned for their sprawling cinnamon plantations and a popular “fish pedicure” center, where visitors can experience a natural form of relaxation and rejuvenation.",
-                "For birdwatchers, this journey is a feast for the senses, as the river banks attract a wide variety of bird species, making for a memorable offshore adventure.",
-                "After the river cruise, return to your hotel in Kalutara. Spend the rest of the day at your leisure, unwinding in the comfort of the hotel and enjoying the serene surroundings.",
+                "Breakfast at the hotel.",
+                "Visit Balapitiya for river cruise (Optional – Supplement Fee Given).",
+                "Return to hotel in Bentota.",
+                "Relax & enjoy the day at the hotel.",
                 "Dinner & Overnight stay at the hotel."
             ],
             inclusion: [
@@ -722,9 +757,11 @@ const contentData = [
             img: colombo2_img,
             title: "Bentota to Colombo",
             content: [
-                "Begin your day with a hearty breakfast at the hotel before setting off for Colombo, the vibrant capital city of Sri Lanka. The approximately two-hour scenic drive will lead you to the heart of this bustling metropolis, renowned as a traditional gateway between East and West. Colombo is a fascinating city with a unique blend of modern flair and historical charm, where ancient temples and colonial buildings stand side by side with sleek skyscrapers.",
-                "Upon arrival, embark on a city tour that captures the essence of Colombo's eclectic spirit. Dive into the city's vibrant shopping scene, where an array of high-quality local and international products await, from colorful textiles to intricate handicrafts. Colombo also boasts an impressive array of culinary options, featuring restaurants offering cuisines from around the world, reflecting the city’s diverse cultural influences.",
-                "After exploring, check in to your hotel in Colombo, where you can unwind and enjoy the rest of the day at your leisure, immersing yourself in the city's unique rhythm.",
+                "Breakfast at the hotel.",
+                "Leave for Colombo.",
+                "Shopping and city tour of Colombo.",
+                "Proceed to hotel in Colombo.",
+                "Relax & enjoy the day.",
                 "Dinner & Overnight stay at the hotel."
             ],
             inclusion: [
@@ -742,9 +779,8 @@ const contentData = [
             img: airport_img,
             title: "Colombo to Bandaranaike International Airport",
             content: [
-                "On your final day in Sri Lanka, enjoy breakfast at your hotel in Colombo before preparing for your journey home. After breakfast, gather your belongings and check out from the hotel, reflecting on the incredible experiences and memories you’ve gathered throughout your travels.",
-                "Your chauffeur will transport you to Bandaranaike International Airport, a drive of approximately 35 minutes, ensuring you arrive with ample time for your flight. As you leave Colombo behind, bid farewell to this beautiful island, taking with you the sights, sounds, and spirit of Sri Lanka.",
-                "Safe travels, and may your memories of Sri Lanka’s warmth, hospitality, and natural beauty remain with you until you return again."
+                "Breakfast at the hotel.",
+                "Transfer to Bandaranaike International Airport for departure.",
             ],
             inclusion: [
                 "Breakfast at the hotel.",

@@ -53,7 +53,7 @@ const MindfulnessTourismSection = () => {
   };
 
   return (
-    <section id="mindfulness-tourism-section" className={`mindfulness-tourism-section ${isMobileView ? 'mobile-view' : ''}`} style={{marginTop: isMobileView? '8rem':'12rem'}}>
+    <section id="mindfulness-tourism-section" className={`mindfulness-tourism-section ${isMobileView ? 'mobile-view' : ''}`} style={{marginTop: isMobileView? '4rem':'0rem'}}>
       <div className="overlayert"></div>
       <img src={mindfulness_section_bg} className="mindfulness-img" alt="mindfulness section background image" loading='lazy'/>
       <div className="mindfulness-tourism-content">

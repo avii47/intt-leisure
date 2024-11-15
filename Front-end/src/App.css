@@ -55,7 +55,7 @@ body {
 }
 
 .section {
-  padding-top: 12rem;
+  padding-top: 0rem;
   overflow: hidden;
 }
 
@@ -64,7 +64,7 @@ body {
 }
 
 .mobile-view .page-section{
-  margin: 5rem 0 6rem 0;
+  margin: 4rem 0 6rem 0;
 }
 
 .font-primary {
