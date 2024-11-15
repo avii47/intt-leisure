@@ -21,7 +21,7 @@ function ToursSection({ imageUrl, title, sub, description, spec1, spec1Icon, spe
     };
 
     return (
-        <div className={`tourSection-container section ${isMobileView ? 'mobile-view' : ''}`} style={{ marginTop: isMobileView ? '4rem' : '8rem' }}>
+        <div className={`tourSection-container  ${isMobileView ? 'mobile-view' : ''}`} style={{ marginTop: isMobileView ? '4rem' : '8rem' }}>
             <div className="tourSection-content">
                 {(vertical) && (<div className="col-md-6 d-flex" style={{ justifyContent: 'center' }}>
                     <img src={imageUrl} alt="Tour" className="tourSection-card-image-v" />

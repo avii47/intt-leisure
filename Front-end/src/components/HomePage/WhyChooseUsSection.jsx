@@ -96,7 +96,7 @@ const WhyChooseUsSection = () => {
 
 
   return (
-    <section id="why-chooseus-Section" className={`section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`} style={{marginTop: isMobileView? '4rem':'8rem'}}>
+    <section id="why-chooseus-Section" className={`section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`} style={{marginTop: isMobileView? '6rem':'0rem'}}>
       <div className="why-chooseus-content justify-content-center">
         <div className="col-12 d-flex">
           <div className="col why-cu-text-col">

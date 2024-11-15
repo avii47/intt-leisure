@@ -80,7 +80,7 @@ const EventsNewsSection = ({ exclude }) => {
   };
 
   return (
-    <section id="eventsNews-section" className={`section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`} style={{marginTop: isMobileView? '4rem':'8rem'}}>
+    <section id="eventsNews-section" className={`section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`} style={{marginTop: isMobileView? '0rem':'0rem'}}>
       <div className="eventsNews-content justify-content-center">
 
         <div className="col-12 d-flex">

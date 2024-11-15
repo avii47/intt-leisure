@@ -12,17 +12,16 @@
 }
 .mobile-view .tourSection-content{
     width: 100vw;
-    padding: 3rem 2rem 0rem 2rem;
+    padding: 0rem 2rem 0rem 2rem;
     flex-wrap: wrap;
 }
 
 .tourSection-card-image {
     width: 93%;
-    /* height: 800px; */
     object-fit: cover;
 }
 .mobile-view .tourSection-card-image {
-    height: 580px;
+    width: 100%;
 }
 
 .tourSection-card-image-v {
@@ -32,6 +31,7 @@
 }
 .mobile-view .tourSection-card-image-v {
     height: 580px;
+    margin-left: -20px;
 }
 
 .tourSection-card-content{
