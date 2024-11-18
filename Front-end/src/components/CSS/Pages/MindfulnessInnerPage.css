@@ -1,0 +1,62 @@
+.mindfulnessInner-section{
+    display: flex;
+    justify-content: center;
+}
+.mindfulnessInner-content {
+    width: 80vw;
+    flex-wrap: wrap; 
+}
+.mindfulnessInner-content p{
+    text-align: justify;
+    margin-top: 0.625rem;
+}
+.mindfulnessInner-cards-container{
+    justify-content: center;
+    width: 100%;
+}
+.mobile-view .mindfulnessInner-content{
+    width: 100vw;
+    height: fit-content;
+    margin-bottom: 4.5rem;
+    padding: 0rem 2rem 0rem 2rem;
+}
+.mobile-view .mindfulnessInner-content p{
+    text-align: left;
+}
+.mobile-view .mindfulnessInner-cards-container img{
+    height: auto;
+    object-fit: cover;
+}
+.animate-text{
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}
+.card-subtitle {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+}
+.pkg-text-col{
+    margin-top: 80px;
+}
+.mobile-view .pkg-text-col{
+    width: 80vw;
+}
+.pkg-nav-icons{
+    display: flex;
+    flex-direction: row;
+    align-items:baseline;
+    gap: 10px;
+    float: right;
+    margin-top: 130px;
+}
+@media (max-width: 664px) {
+    .nav-icon-col{
+        display: none;
+    } 
+}
+.nav-icon{
+    color: white;
+    height: 30px;
+    cursor: pointer;
+}

@@ -56,9 +56,9 @@ const HomePage = () => {
                 sub="Explore"
                 description="Experience mindfulness in Sri Lanka with techniques supported by research and teachings rooted in original practices. Our approach is distinct from common Western ideologies, offering a unique way to deepen your mindfulness practice and find true relaxation."
                 spec1="Authentic Practices"
-                spec1Icon={icon3}
+                spec1Icon={icon4}
                 spec2="Research Based"
-                spec2Icon={icon4}
+                spec2Icon={icon3}
                 buttonLabel="Learn More"
                 link="mindfulness"
             />
@@ -71,9 +71,9 @@ const HomePage = () => {
                 sub="Sri Lanka Tour Packages"
                 description="No Matter Your Travel Style, We Have You Covered With Both Tailored And Ready-Made Tours Across Sri Lanka. From Romantic Escapes And Nature-Filled Adventures To Incentive Trips And Group Getaways, We Offer Something Special For Everyone."
                 spec1="Sri Lankan Tours"
-                spec1Icon={icon1}
+                spec1Icon={icon2}
                 spec2="Concierge Services"
-                spec2Icon={icon2}
+                spec2Icon={icon1}
                 buttonLabel="Learn More"
                 link="destinations"
             />

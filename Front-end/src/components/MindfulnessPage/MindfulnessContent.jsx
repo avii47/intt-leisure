@@ -1,4 +1,5 @@
 import React, { useEffect, lazy } from "react";
+import { useNavigate } from 'react-router-dom';
 import { useMobileView } from "../../contexts/MobileViewContext";
 import contentData from "../../data/MindfulnessPageData";
 
@@ -6,6 +7,7 @@ const ContentBlock = lazy(() => import("./MindfulnessCard"));
 
 const MindfulnessContent = () => {
   const isMobileView = useMobileView();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const section = document.getElementById("rw1");
@@ -79,6 +81,10 @@ const MindfulnessContent = () => {
     };
   }, []);
 
+  const handleMindfulnessCardClick = (id) => {
+    navigate(`/mindfulness/${id}`);
+  };
+
   return (
     <section
       id="mindfulness-content-section"
@@ -102,6 +108,7 @@ const MindfulnessContent = () => {
               text={content.sub}
               buttonText={content.buttonText}
               imagePosition={content.imagePosition}
+              onClick={() => handleMindfulnessCardClick(content.id)}
             />
           ))}
         </div>

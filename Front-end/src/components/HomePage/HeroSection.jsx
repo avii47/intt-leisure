@@ -86,8 +86,8 @@ const HeroSection = () => {
       )}
       <div className="hero-content home-hero">
         <div id="hero-heading" className={`hero-heading-section ${isCursorMoving ? '' : 'hidden'}`}>
-          <h1 className="hero-heading font-primary">Mindfulness Vacations for Business Leaders</h1>
-          <p className="font-secondary">Leaders change the world and we change how they experience it.</p>
+          <h1 className="hero-heading font-primary">Discover Inner Peace in Sri Lanka</h1>
+          <p className="font-secondary">Exclusive Mindfulness Journeys Curated by Your Trusted Destination Management Partner - INTT Leisure</p>
           <Lottie className="arrow-icon" animationData={animationData}></Lottie>
         </div>
         <div className={`bottom-viewbar d-flex ${isCursorMoving ? 'slide-up' : 'slide-down'}`}>

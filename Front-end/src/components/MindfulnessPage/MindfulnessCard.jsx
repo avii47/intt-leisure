@@ -1,10 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
 
-const ContentBlock = ({ image, title, text, imagePosition }) => {
+const ContentBlock = ({ image, title, text, imagePosition, onClick }) => {
   const [isMobileView, setIsMobileView] = useState(false);
   const contentRef = useRef(null);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const handleResize = () => {
@@ -41,9 +39,6 @@ const ContentBlock = ({ image, title, text, imagePosition }) => {
     };
   }, [imagePosition]);
 
-  const handleOnClick = (path) => {
-    navigate(path);
-  };
 
   return (
     <div ref={contentRef} className={`content-block ${imagePosition === 'left' ? 'left' : 'right'}`}>
@@ -57,7 +52,7 @@ const ContentBlock = ({ image, title, text, imagePosition }) => {
             <hr style={{ width: '3.7rem', marginTop: '-1px' }} />
             <h3 className="font-primary">{title}</h3>
             <p className="font-secondary">{text}</p>
-            <button className="btn btn-dark" onClick={() => handleOnClick('/services')}>Explore more</button>
+            <button className="btn btn-dark" onClick={onClick}>Explore more</button>
           </div>
         </>
       )}
@@ -73,7 +68,7 @@ const ContentBlock = ({ image, title, text, imagePosition }) => {
           </div>
           <div className="content-block__text">
             <p className="font-secondary">{text}</p>
-            <button className="btn btn-dark" onClick={() => handleOnClick('/services')}>Explore more</button>
+            <button className="btn btn-dark" onClick={onClick}>Explore more</button>
           </div>
         </>
       )}

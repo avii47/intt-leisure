@@ -13,6 +13,7 @@ const ServicePage = lazy(() => import('../src/pages/ServicePage'));
 const DestinationsPage = lazy(() => import('../src/pages/DestinationsPage'));
 const EventsNewsPage = lazy(() => import('../src/pages/Events&News'));
 const MindfulnessPage = lazy(() => import('../src/pages/MindfulnessPage'));
+const MindfulnessInnerPage = lazy(() => import('../src/pages/MindfulnessInnerPage'));
 const AboutUsPage = lazy(() => import('../src/pages/AboutUsPage'));
 const ContactUsPage = lazy(() => import('../src/pages/ContactUsPage'));
 const BookNowPage = lazy(() => import('../src/pages/BookNowPage'));
@@ -87,6 +88,14 @@ const App = () => {
               element={
                 <motion.div initial="initial" animate="enter" exit="exit" variants={pageVariants} className="page-transition">
                   <MindfulnessPage />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/mindfulness/:id"
+              element={
+                <motion.div initial="initial" animate="enter" exit="exit" variants={pageVariants} className="page-transition">
+                  <MindfulnessInnerPage />
                 </motion.div>
               }
             />
