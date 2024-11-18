@@ -37,6 +37,9 @@
     margin-right: 10px; 
     font-size: 30px;
 }
+.mobile-view .main-dcard-text {
+    font-size: 20px;
+}
 
 .main-dcard-arrow {
     color: white;

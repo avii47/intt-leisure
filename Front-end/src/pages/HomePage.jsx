@@ -4,7 +4,7 @@ import ScrollToTopButton from '../components/ScrollToTopButton';
 import useInView from '../hooks/useInView';
 import LoadingSpinner from '../components/LoadingSpinner'; 
 import img from '../assets/images/Map outline 1.gif'
-import mindfulnessImg from '../assets/images/mindfulnessPage-authentic-practices.jpg'
+import mindfulnessImg from '../assets/images/mindfulness_particles_movement_optimized.gif'
 import icon1 from '../assets/icons/spec1-icon.png'
 import icon2 from '../assets/icons/spec2-icon.png'
 import icon3 from '../assets/icons/spec3-icon.png'
