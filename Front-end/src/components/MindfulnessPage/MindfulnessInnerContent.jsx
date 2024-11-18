@@ -115,8 +115,8 @@ function MindfulnessInnerContent({ content }) {
     >
       <div className="mindfulnessInner-content">
         <h5 className="card-subtitle font-secondary">Explore</h5>
-        <hr style={{ width: isMobileView ? "20%" : "5%", marginTop: "-3px" }} />
-        <h1 className="font-primary" style={{ marginBottom: "50px" }}>
+        <hr style={{ width: isMobileView ? "20%" : "4%", marginTop: "8px" }} />
+        <h1 className="font-primary mindfulnessInner-title" style={{ marginBottom: "0px" }}>
           {content.title}
         </h1>
         {content.content.map((para, i) => (
@@ -127,7 +127,7 @@ function MindfulnessInnerContent({ content }) {
 
         <div className="col-12 d-flex">
           <div className="col pkg-text-col">
-            <h3 className="font-primary">Choose your Journey</h3>
+            <h3 className="font-primary mindfulnessInner-title">Choose your Journey</h3>
             <p className="font-secondary" style={{ marginTop: "10px" }}>
               As you immerse yourself in this enchanting destination, we invite
               you to participate in profound self-reflection and practice
@@ -149,7 +149,7 @@ function MindfulnessInnerContent({ content }) {
             </div>
           </div>
         </div>
-        <div className="icon-container-wrapper">
+        <div className="pkg-container-wrapper">
           <div
             className="slider-container"
             style={{ paddingBottom: "20px", textAlign: "center" }}

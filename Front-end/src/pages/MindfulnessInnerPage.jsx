@@ -22,13 +22,13 @@ function MindfulnessInnerPage() {
       return <div>Content not found</div>;
     }
 
-    const topic = "Read Our Latest Blogs"
+    const topic = "Mindfulness Tourism"
 
     return (
         <>
             <Helmet>
                 <meta name="description" content="A Forbes Coach Council member and a leading practitioner of the original form of mindfulness. With over 12 years of experience in the travel industry in the USA, Dr. Hewawasam has recognized a gap between traditional mindfulness teachings preserved in Sri Lanka and their often diluted Western practices." />
-                <link rel="canonical" href="https://inttleisure.com/blogs" />
+                <link rel="canonical" href="https://inttleisure.com/mindfulness" />
             </Helmet>
             <Suspense fallback={<LoadingSpinner />}>
                 <HeroSection img={content.img} title={content.title} topic={topic} />
