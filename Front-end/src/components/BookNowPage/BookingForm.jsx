@@ -367,7 +367,7 @@ function BookingForm({ defPackageName }) {
             >
               Submit Inquiry
             </button>
-            <a href="tel:+1234567890" className="btn btn-outline-dark cl-btn">
+            <a href="tel:+1(312)2421662" className="btn btn-outline-dark cl-btn">
               <img
                 src={callIcon}
                 width={25}
