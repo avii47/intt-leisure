@@ -1,4 +1,5 @@
 import React, { useState, useEffect, Suspense } from "react";
+import { useMobileView } from "../../contexts/MobileViewContext";
 import "./BookingForm.css";
 import PackageCard from "../BookNowPage/PackageCard";
 import LoadingSpinner from "../../components/LoadingSpinner";
@@ -14,7 +15,11 @@ import conciergeServiceContentData from "../../data/ConciergeServiceContentData"
 import otherToursContentData from "../../data/OtherToursData";
 
 function PackageSelector({ onSelectPackage, onTabChange }) {
-  const [selectedCard, setSelectedCard] = useState({ tabId: null, cardIndex: null });
+  const isMobileView = useMobileView();
+  const [selectedCard, setSelectedCard] = useState({
+    tabId: null,
+    cardIndex: null,
+  });
   const [activeTab, setActiveTab] = useState(0);
   const [loading, setLoading] = useState(true);
 
@@ -66,7 +71,7 @@ function PackageSelector({ onSelectPackage, onTabChange }) {
 
   useEffect(() => {
     setLoading(true);
-    const timer = setTimeout(() => setLoading(false), 500); // Adjust delay if needed
+    const timer = setTimeout(() => setLoading(false), 500);
     return () => clearTimeout(timer);
   }, [activeTab]);
 
@@ -77,51 +82,58 @@ function PackageSelector({ onSelectPackage, onTabChange }) {
 
   const handleTabClick = (tabId) => {
     setActiveTab(tabId);
-    onTabChange(tabId); // Notify BookingForm of the tab change
+    onTabChange(tabId);
   };
 
   return (
-    <>
-      <h3 className="font-primary" style={{ fontSize: "30px" }}>
-        Select Your Experience
-      </h3>
+    <div className={`package-selector-section ${isMobileView ? "mobile-view" : ""}`}>
+      <div className="package-selector-content">
+        <h3 className="font-primary" style={{ fontSize: "25px" }}>
+          Select Your Experience
+        </h3>
 
-      <div className="package-card-container">
-        {/* Tab Controls */}
-        <div className="tab-controls">
-          {tabs.map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => handleTabClick(tab.id)}
-              className={`tab-button ${activeTab === tab.id ? "active" : ""}`}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </div>
+        <div className="package-card-container">
+          {/* Tab Controls */}
+          <div className="tab-controls">
+            {tabs.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => handleTabClick(tab.id)}
+                className={`tab-button ${activeTab === tab.id ? "active" : ""}`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
 
-        {/* Tab Content */}
-        <div className="tab-content">
-          {loading ? (
-            <div className="loading-indicator"><LoadingSpinner /></div>
-          ) : (
-            <Slider {...settings}>
-              {tabs[activeTab].content.map((content, index) => (
-                <div key={index} className="slider-item">
+          {/* Tab Content */}
+          <div className="tab-content">
+            {loading ? (
+              <div className="loading-indicator">
+                <LoadingSpinner />
+              </div>
+            ) : (
+              <Slider {...settings}>
+                {tabs[activeTab].content.map((content, index) => (
+                  <div key={index} className="slider-item">
                     <PackageCard
                       content={content}
-                      onClick={() => handleCardClick(activeTab, index, content.title)}
+                      onClick={() =>
+                        handleCardClick(activeTab, index, content.title)
+                      }
                       isSelected={
-                        selectedCard.tabId === activeTab && selectedCard.cardIndex === index
+                        selectedCard.tabId === activeTab &&
+                        selectedCard.cardIndex === index
                       }
                     />
-                </div>
-              ))}
-            </Slider>
-          )}
+                  </div>
+                ))}
+              </Slider>
+            )}
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

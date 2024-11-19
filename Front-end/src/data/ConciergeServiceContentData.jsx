@@ -55,7 +55,7 @@ const ContentData = [
   {
     id: 2,
     img: img2,
-    title: "Coporate Travelo",
+    title: "Corporate Travel",
     subTitle: "Airport Concierge Service",
     cardTxt:
       "Expert travel management for worry-free corporate travel with optimized budgets...",
@@ -97,7 +97,7 @@ const ContentData = [
   {
     id: 3,
     img: img3,
-    title: "Demestic Travel",
+    title: "Domestic Travel",
     subTitle: "Airport Concierge Service",
     cardTxt:
       "Unparalleled domestic travel in Sri Lanka with private charters, helicopters, and luxury cars...",

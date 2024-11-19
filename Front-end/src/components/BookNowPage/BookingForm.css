@@ -10,6 +10,14 @@
     text-align: left;
     overflow: hidden;
   }
+  .mobile-view .bookingForm-content{
+    width: 100vw;
+    padding: 5rem 2rem;
+  }
+  .mobile-view .bookingForm-content h3{
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
   .booking-form{
     width: 100%;
     padding: 50px 0;
@@ -29,8 +37,9 @@
   
   .date-label {
     position: absolute;
-    left: 10px;
+    padding-left: 12px;
     top: 50%;
+    width: 80%;
     transform: translateY(-50%);
     color: #636363;
     background-color: rgb(255, 255, 255);
@@ -54,10 +63,13 @@
     color: #555;
   }
 
+  .mobile-view .package-selector-content{
+    width: 80vw;
+  }
+
   .package-card-container {
     width: 100%;
     padding: 20px 0 50px 0;
-    margin-left: 10px;
   }
   
   .tab-container {
@@ -66,6 +78,9 @@
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #f0f0f0; 
+  }
+  .mobile-view .tab-controls{
+    font-size: 12px;
   }
   
   .tab-headers {
@@ -86,6 +101,10 @@
     border-radius: 10px 10px 0px 0; 
     transition: all 0.3s ease-in-out;
   }
+  .mobile-view .tab-button{
+    font-size: 12px;
+    padding: 5px;
+  }
   
   .tab-button.active {
     background: linear-gradient(to bottom, #a5a5a5, #cecece);
@@ -94,6 +113,9 @@
     font-weight: 500;
     transition: all 0.3s ease-in-out;
   }
+  .mobile-view .tab-button.active{
+    font-size: 15px;
+  }
   
   .tab-button:not(.active):hover {
     background-color: transparent;
@@ -101,7 +123,7 @@
   }
   
   .tab-content {
-    width: 98%;
+    width: 100%;
     padding: 10px 35px 40px 35px;
     background: linear-gradient(to bottom, #cecece, transparent);
     border-radius: 0px 0px 10px 10px; 
@@ -109,6 +131,10 @@
     color: #333;
     transition: opacity 0.3s ease-in-out;
     opacity: 1;
+  }
+  .mobile-view .tab-content{
+    width: 100%;
+    padding: 10px 35px 40px 35px;
   }
   .tab-content.loading {
     opacity: 0;
@@ -145,7 +171,34 @@
   pointer-events: none;
   transition: top 0.3s, font-size 0.3s;
 }
-
+.noOfPax-group{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  padding: 6px 12px;
+  justify-content: space-between;
+}
+.pax-label{
+  display: block;
+  font-size: 16px;
+  color: #777;
+}
+.pax-input{
+  width: 80px;
+  padding-right: 20px;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  text-align: center;
+  appearance: none;
+  outline: none;
+}
+.dropdown-icon{
+  position: absolute;
+  pointer-Events: none;
+  color: #ccc;
+  right: 10px;
+}
   
   
 

@@ -36,7 +36,7 @@ const CountrySelector = ({ onSelectCountry }) => {
         className='form-control'
         options={options}
         onChange={handleChange}
-        placeholder="Select your country"
+        placeholder="Nationality"
         styles={customStyles} 
       />
     

@@ -19,9 +19,10 @@ function BookingForm({ defPackageName }) {
   const [mobile, setMobile] = useState("");
   const [nationality, setNationality] = useState("");
   const [arrivalDate, setArrivalDate] = useState("");
-  const [numPeople, setNumPeople] = useState("");
-  const [numDays, setNumDays] = useState("");
-  const [pack, setPackage] = useState("");
+  const [departureDate, setDepartureDate] = useState("");
+  const [adults, setAdults] = useState(1);
+  const [kids, setKids] = useState(0);
+  const [pack, setPackage] = useState(defPackageName);
   const [message, setMessage] = useState("");
   const [activeTab, setActiveTab] = useState(0);
   const [showModal, setShowModal] = useState(false);
@@ -31,15 +32,13 @@ function BookingForm({ defPackageName }) {
   const validateForm = () => {
     const newErrors = {};
     if (!name) newErrors.name = "Name is required";
-    if (!email || !/\S+@\S+\.\S+/.test(email)) newErrors.email = "Invalid email";
-    if (!mobile || !/^\+?[0-9]{7,15}$/.test(mobile)) newErrors.mobile = "Invalid mobile number";
-    if (!arrivalDate) newErrors.arrivalDate = "Arrival date is required";
+    if (!email || !/\S+@\S+\.\S+/.test(email))
+      newErrors.email = "Invalid email";
+    if (!mobile || !/^\+?[0-9]{7,15}$/.test(mobile))
+      newErrors.mobile = "Invalid mobile number";
+    // if (!arrivalDate) newErrors.arrivalDate = "Arrival date is required";
     if (!nationality) newErrors.nationality = "Nationality is required";
-    if (!numPeople || !/^[1-9][0-9]*$/.test(numPeople)) newErrors.numPeople = "Enter a valid number of people";
-    if (!defPackageName && (!numDays || !/^[1-9][0-9]*$/.test(numDays))) {
-      newErrors.numDays = "Enter a valid number of days";
-    }
-    if (!message) newErrors.message = "Message is required";
+    // if (!message) newErrors.message = "Message is required";
     if (!pack) newErrors.pack = "Package is required";
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -53,8 +52,10 @@ function BookingForm({ defPackageName }) {
         Mobile: mobile,
         Nationality: nationality,
         ArrivalDate: arrivalDate,
-        NumPeople: numPeople,
-        NumDays: numDays,
+        DepartureDate: departureDate,
+        Adults: adults,
+        Kids: kids,
+        Package: pack,
         Message: message,
       });
     } catch (error) {
@@ -74,9 +75,10 @@ function BookingForm({ defPackageName }) {
       mobile,
       nationality,
       arrivalDate,
-      defPackageName,
-      numPeople,
-      numDays,
+      departureDate,
+      adults,
+      kids,
+      pack,
       message,
     };
 
@@ -103,20 +105,31 @@ function BookingForm({ defPackageName }) {
   const handleProceedClick = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      setShowBookingSummary(true); 
+      setShowBookingSummary(true);
     }
+  };
+
+  const handleAdultChange = (e) => {
+    setAdults(e.target.value);
+  };
+
+  const handleKidsChange = (e) => {
+    setKids(e.target.value);
   };
 
   return (
     <section
       id="bookingForm-container"
-      className={`bookingForm-container d-flex ${isMobileView ? "mobile-view" : ""}`}
+      className={`bookingForm-container d-flex ${
+        isMobileView ? "mobile-view" : ""
+      }`}
     >
       <div className="bookingForm-content">
         <h3 className="font-primary">Get In Touch With Us</h3>
         <p className="font-secondary">
-          Thank you for choosing us for your transformative journey. Every leader is unique,
-          so we begin by understanding you deeply to craft a mindfulness vacation that's perfectly tailored to your needs.
+          Thank you for choosing us for your transformative journey. Every
+          leader is unique, so we begin by understanding you deeply to craft a
+          mindfulness vacation that's perfectly tailored to your needs.
         </p>
 
         <form className="booking-form">
@@ -131,7 +144,9 @@ function BookingForm({ defPackageName }) {
                   onChange={(e) => setName(e.target.value)}
                   required
                 />
-                {errors.name && <small className="error-text">{errors.name}</small>}
+                {errors.name && (
+                  <small className="error-text">{errors.name}</small>
+                )}
               </div>
               <div className="form-group">
                 <input
@@ -142,14 +157,19 @@ function BookingForm({ defPackageName }) {
                   onChange={(e) => setMobile(e.target.value)}
                   required
                 />
-                {errors.mobile && <small className="error-text">{errors.mobile}</small>}
+                {errors.mobile && (
+                  <small className="error-text">{errors.mobile}</small>
+                )}
               </div>
-              <div className={`form-group ${errors.arrivalDate ? "err" : ""}`} style={{ position: "relative" }}>
+              <div
+                className={`form-group ${errors.arrivalDate ? "err" : ""}`}
+                style={{ position: "relative" }}
+              >
                 <label
                   htmlFor="arrivalDate"
                   className={`date-label ${arrivalDate ? "filled" : ""}`}
                 >
-                  Select arrival date
+                  Arrival Date
                 </label>
                 <input
                   id="arrivalDate"
@@ -159,37 +179,21 @@ function BookingForm({ defPackageName }) {
                   onChange={(e) => setArrivalDate(e.target.value)}
                   required
                 />
-                {errors.arrivalDate && <small className="error-text">{errors.arrivalDate}</small>}
+                {errors.arrivalDate && (
+                  <small className="error-text">{errors.arrivalDate}</small>
+                )}
               </div>
 
-              {!defPackageName && activeTab === 0 && (
-                <div className="form-group">
-                  <input
-                    type="number"
-                    className="form-control"
-                    placeholder="Number of Days"
-                    value={numDays}
-                    onChange={(e) => setNumDays(e.target.value)}
-                    required
-                  />
-                  {errors.numDays && <small className="error-text">{errors.numDays}</small>}
-                </div>
-              )}
-
-              {defPackageName && (
-                <div className="form-group Dfeedback-ft">
-                  <input
-                    type="text"
-                    className="form-control in-f"
-                    placeholder="Package Name"
-                    value={defPackageName}
-                    readOnly
-                    required
-                  />
-                </div>
-              )}
-
-
+              <div className="form-group Dfeedback-ft">
+                <input
+                  type="text"
+                  className="form-control in-f"
+                  placeholder="Package Name"
+                  value={pack}
+                  readOnly
+                  required
+                />
+              </div>
             </div>
 
             <div className="col-md-6">
@@ -202,42 +206,135 @@ function BookingForm({ defPackageName }) {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                 />
-                {errors.email && <small className="error-text">{errors.email}</small>}
+                {errors.email && (
+                  <small className="error-text">{errors.email}</small>
+                )}
               </div>
 
               <div className="form-group">
                 <CountrySelector onSelectCountry={setNationality} />
-                {errors.nationality && <small className="error-text">{errors.nationality}</small>}
-              </div>
-              
-              <div className="form-group">
-                <input
-                  type="number"
-                  className="form-control"
-                  placeholder="Number of People"
-                  value={numPeople}
-                  onChange={(e) => setNumPeople(e.target.value)}
-                  required
-                />
-                {errors.numPeople && <small className="error-text">{errors.numPeople}</small>}
+                {errors.nationality && (
+                  <small className="error-text">{errors.nationality}</small>
+                )}
               </div>
 
+              <div
+                className={`form-group ${errors.departurelDate ? "err" : ""}`}
+                style={{ position: "relative", paddingRight: "8px" }}
+              >
+                <label
+                  htmlFor="departureDate"
+                  className={`date-label ${departureDate ? "filled" : ""}`}
+                >
+                  Departure date
+                </label>
+                <input
+                  id="departureDate"
+                  type="date"
+                  className="form-control"
+                  value={departureDate}
+                  onChange={(e) => setDepartureDate(e.target.value)}
+                  required
+                />
+                {errors.departureDate && (
+                  <small className="error-text">{errors.departurelDate}</small>
+                )}
+              </div>
+
+              <div className="form-group">
+                <div className="noOfPax-group">
+                  <div
+                    style={{
+                      display: "flex",
+                      position: "relative",
+                      alignItems: "center",
+                    }}
+                  >
+                    <label htmlFor="adults" className="pax-label">
+                      Adults
+                    </label>
+                    <select
+                      id="adults"
+                      className="pax-input"
+                      value={adults}
+                      onChange={handleAdultChange}
+                    >
+                      {[...Array(15).keys()].map((num) => (
+                        <option key={num} value={num + 1}>
+                          {num + 1}
+                        </option>
+                      ))}
+                    </select>
+
+                    <span className="dropdown-icon">
+                      <i class="fa-solid fa-angle-down"></i>
+                    </span>
+                  </div>
+
+                  <div
+                    style={{
+                      width: "1px",
+                      background: "#ccc",
+                      height: "24px",
+                      margin: "0 20px",
+                    }}
+                  ></div>
+
+                  <div
+                    style={{
+                      display: "flex",
+                      position: "relative",
+                      alignItems: "center",
+                    }}
+                  >
+                    <label htmlFor="kids" className="pax-label">
+                      Kids
+                    </label>
+                    <select
+                      id="kids"
+                      className="pax-input"
+                      value={kids}
+                      onChange={handleKidsChange}
+                    >
+                      {[...Array(10).keys()].map((num) => (
+                        <option key={num} value={num}>
+                          {num}
+                        </option>
+                      ))}
+                    </select>
+                    <span className="dropdown-icon">
+                      <i class="fa-solid fa-angle-down"></i>
+                    </span>
+                  </div>
+                </div>
+
+                {(errors.adults || errors.kids) && (
+                  <small className="error-text">
+                    {errors.adults || errors.kids}
+                  </small>
+                )}
+              </div>
             </div>
           </div>
 
-          
           {!defPackageName && (
-            <div className="row" style={{margin:'50px 0 20px 0'}}>
+            <div className="row" style={{ margin: "50px -10px 20px -10px" }}>
               <PackageSelector
                 onSelectPackage={setPackage}
-                onTabChange={handleTabChange} 
+                onTabChange={handleTabChange}
               />
-              {errors.pack && <small className="error-text package-error">{errors.pack}</small>}
+              {errors.pack && (
+                <small className="error-text package-error">
+                  {errors.pack}
+                </small>
+              )}
             </div>
           )}
-          
 
-          <div className="form-group" style={{ width: "100%", marginTop: "20px" }}>
+          <div
+            className="form-group"
+            style={{ width: "100%", marginTop: "20px" }}
+          >
             <textarea
               style={{
                 width: "100%",
@@ -252,8 +349,15 @@ function BookingForm({ defPackageName }) {
               onChange={(e) => setMessage(e.target.value)}
               required
             ></textarea>
-            {errors.message && <small className="error-text">{errors.message}</small>}
+            {errors.message && (
+              <small className="error-text">{errors.message}</small>
+            )}
           </div>
+          <p className="font-secondary" style={{ fontSize: "15px" }}>
+            Note : Thank you for choosing us for your transformative journey.
+            Every leader is unique, so we begin by understanding you deeply to
+            craft
+          </p>
 
           <div className="d-flex" style={{ gap: "20px", marginTop: "50px" }}>
             <button
@@ -275,90 +379,90 @@ function BookingForm({ defPackageName }) {
           </div>
         </form>
 
-        <Modal2 show={showBookingSummary} onClose={() => setShowBookingSummary(false)} onSubmit={handleBookingConfirm}>
+        <Modal2
+          show={showBookingSummary}
+          onClose={() => setShowBookingSummary(false)}
+          onSubmit={handleBookingConfirm}
+        >
           <h2>Booking Summary</h2>
           <br />
           <div className="booking-summary-content">
-            <div className="col-md-6" style={{paddingRight:'30px'}}>
-            <div className="form-group">
-              <input
-                className="form-control form-control-sm"
-                type="text"
-                value={name}
-                readOnly
-              />
-              <label className="label-text">Name</label>
+            <div className="col-md-6" style={{ paddingRight: "30px" }}>
+              <div className="form-group">
+                <input
+                  className="form-control form-control-sm"
+                  type="text"
+                  value={name}
+                  readOnly
+                />
+                <label className="label-text">Name</label>
+              </div>
+              <div className="form-group">
+                <input
+                  className="form-control form-control-sm"
+                  type="text"
+                  value={mobile}
+                  readOnly
+                />
+                <label className="label-text">Mobile</label>
+              </div>
+              <div className="form-group">
+                <input
+                  className="form-control form-control-sm"
+                  type="text"
+                  value={arrivalDate}
+                  readOnly
+                />
+                <label className="label-text">Arrival Date</label>
+              </div>
+              <div className="form-group">
+                <input
+                  className="form-control form-control-sm"
+                  type="text"
+                  value={pack}
+                  readOnly
+                />
+                <label className="label-text">Package Details</label>
+              </div>
             </div>
-            <div className="form-group">
-              <input
-                className="form-control form-control-sm"
-                type="text"
-                value={email}
-                readOnly
-              />
-              <label className="label-text">Email</label>
+            <div className="col-md-6" style={{ paddingleft: "30px" }}>
+              <div className="form-group">
+                <input
+                  className="form-control form-control-sm"
+                  type="text"
+                  value={email}
+                  readOnly
+                />
+                <label className="label-text">Email</label>
+              </div>
+              <div className="form-group">
+                <input
+                  className="form-control form-control-sm"
+                  type="text"
+                  value={nationality}
+                  readOnly
+                />
+                <label className="label-text">Nationality</label>
+              </div>
+              <div className="form-group">
+                <input
+                  className="form-control form-control-sm"
+                  type="text"
+                  value={departureDate}
+                  readOnly
+                />
+                <label className="label-text">Departure Date</label>
+              </div>
+              <div className="form-group">
+                <input
+                  className="form-control form-control-sm"
+                  type="text"
+                  value={adults + " Adults and " + kids + " Children"}
+                  readOnly
+                />
+                <label className="label-text">Number of People</label>
+              </div>
             </div>
-            <div className="form-group">
-              <input
-                className="form-control form-control-sm"
-                type="text"
-                value={mobile}
-                readOnly
-              />
-              <label className="label-text">Mobile</label>
-            </div>
-            <div className="form-group">
-              <input
-                className="form-control form-control-sm"
-                type="text"
-                value={nationality}
-                readOnly
-              />
-              <label className="label-text">Country</label>
-            </div>
-            </div>
-            <div className="col-md-6" style={{paddingleft:'30px'}}>
-            <div className="form-group">
-              <input
-                className="form-control form-control-sm"
-                type="text"
-                value={numPeople}
-                readOnly
-              />
-              <label className="label-text">Number of People</label>
-            </div>
-            <div className="form-group">
-              <input
-                className="form-control form-control-sm"
-                type="text"
-                value={numDays}
-                readOnly
-              />
-              <label className="label-text">Number of Days</label>
-            </div>
-            <div className="form-group">
-              <input
-                className="form-control form-control-sm"
-                type="text"
-                value={arrivalDate}
-                readOnly
-              />
-              <label className="label-text">
-                Arrival Date
-              </label>
-            </div>
-            <div className="form-group">
-              <input
-                className="form-control form-control-sm"
-                type="text"
-                value={pack}
-                readOnly
-              />
-              <label className="label-text">Package Details</label>
-            </div>
-            </div>
-
-
           </div>
         </Modal2>
 

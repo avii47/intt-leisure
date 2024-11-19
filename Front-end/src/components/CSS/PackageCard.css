@@ -1,6 +1,6 @@
 .package-card{
     flex: 1 1 18.75rem; 
-    min-width: 14.4rem;
+    min-width: 13rem;
     height: 9.6rem;
     text-align: left;
     border-radius: 10px;
@@ -12,6 +12,7 @@
     border-radius: 10px;
 }
 .package-card-img{
+    object-fit: cover;
     width: 100%;
     height: 100%;
     transition: transform 0.3s ease-out;
