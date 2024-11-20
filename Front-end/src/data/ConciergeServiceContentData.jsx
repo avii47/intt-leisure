@@ -14,7 +14,7 @@ const ContentData = [
     id: 1,
     img: img1,
     title: "Private Travel",
-    subTitle: "Airport Concierge Service",
+    subTitle: "Your Exclusive Private Travel Concierge Service",
     cardTxt:
       "Experience the art of personalized private travel, from booking to arrival and every moment...",
     overview:
@@ -56,7 +56,7 @@ const ContentData = [
     id: 2,
     img: img2,
     title: "Corporate Travel",
-    subTitle: "Airport Concierge Service",
+    subTitle: "Streamline Your Corporate Travel with Our Concierge Expertise",
     cardTxt:
       "Expert travel management for worry-free corporate travel with optimized budgets...",
     overview:
@@ -98,7 +98,7 @@ const ContentData = [
     id: 3,
     img: img3,
     title: "Domestic Travel",
-    subTitle: "Airport Concierge Service",
+    subTitle: "Unparalleled Domestic Travel with Our Expert Concierge Services",
     cardTxt:
       "Unparalleled domestic travel in Sri Lanka with private charters, helicopters, and luxury cars...",
     overview:

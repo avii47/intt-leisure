@@ -259,7 +259,7 @@ function BookingForm({ defPackageName }) {
                       value={adults}
                       onChange={handleAdultChange}
                     >
-                      {[...Array(15).keys()].map((num) => (
+                      {[...Array(14).keys()].map((num) => (
                         <option key={num} value={num + 1}>
                           {num + 1}
                         </option>
@@ -296,7 +296,7 @@ function BookingForm({ defPackageName }) {
                       value={kids}
                       onChange={handleKidsChange}
                     >
-                      {[...Array(10).keys()].map((num) => (
+                      {[...Array(8).keys()].map((num) => (
                         <option key={num} value={num}>
                           {num}
                         </option>
@@ -354,9 +354,7 @@ function BookingForm({ defPackageName }) {
             )}
           </div>
           <p className="font-secondary" style={{ fontSize: "15px" }}>
-            Note : Thank you for choosing us for your transformative journey.
-            Every leader is unique, so we begin by understanding you deeply to
-            craft
+            Should you have any specific preferences or requirements, please feel free to share them in the message box below. Our team of experts will promptly reach out to you to assist in customizing the tour to suit your needs.
           </p>
 
           <div className="d-flex" style={{ gap: "20px", marginTop: "50px" }}>

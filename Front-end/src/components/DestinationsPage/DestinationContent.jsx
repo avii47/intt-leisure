@@ -327,7 +327,7 @@ const DestinationsContent = () => {
               </div>
               <div className="col-md-4" style={{textAlign:'center'}}>
                 <img className="dlogo" src={dLogo3} alt="Sri Lankan Aviation Authority Sri Lanka logo" />
-                <h3 className="font-secondary dlogo-txt">Sri Lankan Aviation Authority Sri Lanka</h3>
+                <h3 className="font-secondary dlogo-txt">Civil Aviation Authority Sri Lanka</h3>
               </div>
             </div>
           </div>

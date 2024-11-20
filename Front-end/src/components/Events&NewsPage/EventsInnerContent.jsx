@@ -65,6 +65,15 @@ function EventsInnerContent({ content }) {
                 ))}
               </ul>
             )}
+            {/* {content.EventHighlights && (
+              <ul className="event-details-list">
+                {content.EventHighlights.map((desc, index) => (
+                  <li key={index} className="font-secondary event-des-list">
+                    {desc}
+                  </li>
+                ))}
+              </ul>
+            )} */}
           </div>
           <div className="col-md-6" style={{paddingLeft: isMobileView ? '0px': '50px'}}>
             {showVideo ? (

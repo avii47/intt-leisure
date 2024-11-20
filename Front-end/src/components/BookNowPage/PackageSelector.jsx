@@ -3,6 +3,7 @@ import { useMobileView } from "../../contexts/MobileViewContext";
 import "./BookingForm.css";
 import PackageCard from "../BookNowPage/PackageCard";
 import LoadingSpinner from "../../components/LoadingSpinner";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -107,30 +108,38 @@ function PackageSelector({ onSelectPackage, onTabChange }) {
           </div>
 
           {/* Tab Content */}
-          <div className="tab-content">
-            {loading ? (
-              <div className="loading-indicator">
-                <LoadingSpinner />
-              </div>
-            ) : (
-              <Slider {...settings}>
-                {tabs[activeTab].content.map((content, index) => (
-                  <div key={index} className="slider-item">
-                    <PackageCard
-                      content={content}
-                      onClick={() =>
-                        handleCardClick(activeTab, index, content.title)
-                      }
-                      isSelected={
-                        selectedCard.tabId === activeTab &&
-                        selectedCard.cardIndex === index
-                      }
-                    />
-                  </div>
-                ))}
-              </Slider>
-            )}
-          </div>
+          <TransitionGroup>
+  <CSSTransition
+    key={activeTab} // Use activeTab as a unique key
+    classNames="fade"
+    timeout={300}
+  >
+    <div className="tab-content">
+      {loading ? (
+        <div className="loading-indicator">
+          <LoadingSpinner />
+        </div>
+      ) : (
+        <Slider {...settings}>
+          {tabs[activeTab].content.map((content, index) => (
+            <div key={index} className="slider-item">
+              <PackageCard
+                content={content}
+                onClick={() =>
+                  handleCardClick(activeTab, index, content.title)
+                }
+                isSelected={
+                  selectedCard.tabId === activeTab &&
+                  selectedCard.cardIndex === index
+                }
+              />
+            </div>
+          ))}
+        </Slider>
+      )}
+    </div>
+  </CSSTransition>
+</TransitionGroup>
         </div>
       </div>
     </div>

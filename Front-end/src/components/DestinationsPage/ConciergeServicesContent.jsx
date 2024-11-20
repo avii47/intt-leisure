@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useMobileView } from "../../contexts/MobileViewContext";
-import ContactFrom from './DContactForm'
+import ContactFrom from "../BookNowPage/BookingForm";
 import "../CSS/Pages/ItineraryContent.css";
 
 import FastTrackCard from './ConciergeSpecsCard';
@@ -17,7 +17,7 @@ function ConciergeServicesContent({ content }) {
                 }`}
         >
             <div className="itinerary-section-content justify-content-center page-section">
-                <h3 className="font-primary">Itineraries Overview</h3>
+                <h3 className="font-primary">Service Overview</h3>
                 <p className="font-secondary" style={{ marginTop: "10px", marginBottom: '50px' }}>
                     {content.overview}
                 </p>

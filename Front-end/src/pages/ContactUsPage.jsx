@@ -12,7 +12,7 @@ const MobileButton = lazy(() => import('../components/MobileBookNowButton'));
 
 const ContactUsPage = () => {
     const title = 'Contact Us';
-    const sub = 'Connect with the Ultimate Luxury of Mindfulness in Sri Lanka';
+    const sub = 'Reach Out to Us for Your Mindful Luxury Experience in Sri Lanka';
     const aboutImg = 'In Sri Lanka, the Hawksbill sea turtle is released into the ocean, its flippers moving smoothly as it returns to its natural habitat. The sunlight highlights the beautiful patterns on its shell, with shades of amber and brown.'
     
     return (

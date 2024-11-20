@@ -12,7 +12,7 @@ const MobileButton = lazy(() => import('../components/MobileBookNowButton'));
 
 const ContactUsPage = () => {
     const title = 'Events & News';
-    const sub = 'Connect with the Ultimate Luxury of Mindfulness in Sri Lanka';
+    const sub = 'Latest Updates in Mindfulness and Travel';
     const aboutImg = ''
 
     return (

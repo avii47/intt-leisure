@@ -149,7 +149,7 @@ const AboutUsContent = () => {
               <div className="col-lg-6 d-flex">
                 <div className="achivement-item achivement-item-right">
                   <img className='achivement-img' src={achievement_img2} alt="harvard business review logo" style={{height: '180px'}}/>
-                  <p className="font-secondary" style={{fontWeight:'200'}}>As an advisory council member at Harvard Business Review, Dr. Gamini Hewawasam provides valuable insights into the intersection of leadership and mindfulness. His contributions help guide the publication's exploration of effective management strategies, emphasizing the transformative potential of mindfulness in enhancing decision-making and cultivating a resilient organizational culture</p>
+                  <p className="font-secondary" style={{fontWeight:'200'}}>As an advisory council member at Harvard Business Review, Dr. Gamini Hewawasam provides valuable insights into the intersection of leadership and mindfulness. His contributions help guide the publication's exploration of effective management strategies, emphasizing the transformative potential of mindfulness in enhancing decision-making and cultivating a resilient organizational culture.</p>
                 </div>
               </div>
             </div></div>

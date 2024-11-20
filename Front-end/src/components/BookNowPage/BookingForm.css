@@ -109,7 +109,7 @@
   .tab-button.active {
     background: linear-gradient(to bottom, #a5a5a5, #cecece);
     color: #333;
-    font-size: 20px;
+    
     font-weight: 500;
     transition: all 0.3s ease-in-out;
   }
@@ -117,10 +117,10 @@
     font-size: 15px;
   }
   
-  .tab-button:not(.active):hover {
+  /* .tab-button:not(.active):hover {
     background-color: transparent;
     transform: translateY(-20%);
-  }
+  } */
   
   .tab-content {
     width: 100%;
@@ -129,7 +129,7 @@
     border-radius: 0px 0px 10px 10px; 
     font-size: 14px;
     color: #333;
-    transition: opacity 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     opacity: 1;
   }
   .mobile-view .tab-content{

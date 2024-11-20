@@ -35,7 +35,7 @@ function ItineraryContent({ content }) {
       }`}
     >
       <div className="itinerary-section-content justify-content-center page-section">
-        <h3 className="font-primary">Itineraries Overview</h3>
+        <h3 className="font-primary">Itinerary Overview</h3>
         <p className="font-secondary" style={{ marginTop: "10px" }}>
           {content.overview}
         </p>

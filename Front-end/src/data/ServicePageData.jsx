@@ -3,8 +3,9 @@ import img2 from "../assets/images/educatorsPage-hero-img.jpg";
 import img3 from "../assets/images/coparatesPage-hero-img.jpg";
 import img4 from "../assets/images/seekersPage-hero-img.jpg";
 import img5 from "../assets/images/studentsPage-hero-img.jpg";
+import img6 from "../assets/images/customize-package.jpg";
 
-const img6 = "https://img.freepik.com/free-photo/back-view-woman-doing-yoga-outdoors_23-2148769551.jpg?t=st=1726225399~exp=1726228999~hmac=ecaf4b00aa9acc543b0324daca432cd61131bc193e49bb3f774a2dca29807fcf&w=1380";
+
 
 const contentData = [
   {
@@ -12,7 +13,7 @@ const contentData = [
     img: img1,
     title: "Leaders",
     sub: "Mindfulness for Leaders",
-    text: "Unlock Your Leadership Potential with Mindfulness in Sri Lanka",
+    text: "Lead with Clarity, Resilience, and Ancient Wisdom",
     label: "Explore Package",
   },
   {
@@ -20,7 +21,7 @@ const contentData = [
     img: img2,
     title: "Educators",
     sub: "Mindfulness for Educators",
-    text: "Uncover the Luxury of Mindfulness in Sri Lanka for Educators",
+    text: "Empowering Minds, Elevating Education through Mindfulness",
     label: "Explore Package",
   },
   {
@@ -28,7 +29,7 @@ const contentData = [
     img: img3,
     title: "Corporates",
     sub: "Mindfulness for Corporates",
-    text: "Is your corporate team ready to embark on a transformative journey?",
+    text: "Enhance Productivity, Foster Well-Being, and Build Stronger Teams",
     label: "Explore Package",
   },
   {
@@ -36,7 +37,7 @@ const contentData = [
     img: img4,
     title: "Seekers",
     sub: "Mindfulness for Seekers",
-    text: "Are you seeking inner peace, balance, and personal growth?",
+    text: "Discover Inner Peace and Personal Growth in the Heart of Sri Lanka",
     label: "Explore Package",
   },
   {
@@ -44,7 +45,7 @@ const contentData = [
     img: img5,
     title: "Students",
     sub: "Mindfulness for Students",
-    text: "Uncover the Luxury of Mindfulness in Sri Lanka for Students",
+    text: "Empowering Minds, Elevating Education through Mindfulness",
     label: "Explore Package",
   },
   {
