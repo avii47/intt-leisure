@@ -142,7 +142,6 @@ function BookingForm({ defPackageName }) {
                   placeholder="Name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  required
                 />
                 {errors.name && (
                   <small className="error-text">{errors.name}</small>
@@ -155,7 +154,6 @@ function BookingForm({ defPackageName }) {
                   placeholder="Mobile number"
                   value={mobile}
                   onChange={(e) => setMobile(e.target.value)}
-                  required
                 />
                 {errors.mobile && (
                   <small className="error-text">{errors.mobile}</small>
@@ -177,7 +175,6 @@ function BookingForm({ defPackageName }) {
                   className="form-control"
                   value={arrivalDate}
                   onChange={(e) => setArrivalDate(e.target.value)}
-                  required
                 />
                 {errors.arrivalDate && (
                   <small className="error-text">{errors.arrivalDate}</small>
@@ -191,7 +188,6 @@ function BookingForm({ defPackageName }) {
                   placeholder="Package Name"
                   value={pack}
                   readOnly
-                  required
                 />
               </div>
             </div>
@@ -204,7 +200,6 @@ function BookingForm({ defPackageName }) {
                   placeholder="Email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  required
                 />
                 {errors.email && (
                   <small className="error-text">{errors.email}</small>
@@ -234,7 +229,6 @@ function BookingForm({ defPackageName }) {
                   className="form-control"
                   value={departureDate}
                   onChange={(e) => setDepartureDate(e.target.value)}
-                  required
                 />
                 {errors.departureDate && (
                   <small className="error-text">{errors.departurelDate}</small>
@@ -318,7 +312,7 @@ function BookingForm({ defPackageName }) {
           </div>
 
           {!defPackageName && (
-            <div className="row" style={{ margin: "50px -10px 20px -10px" }}>
+            <div className="row" style={{ margin: "50px -10px -80px -10px" }}>
               <PackageSelector
                 onSelectPackage={setPackage}
                 onTabChange={handleTabChange}
@@ -333,7 +327,7 @@ function BookingForm({ defPackageName }) {
 
           <div
             className="form-group"
-            style={{ width: "100%", marginTop: "20px" }}
+            style={{ width: "100%", marginTop: "40px" }}
           >
             <textarea
               style={{
@@ -347,14 +341,16 @@ function BookingForm({ defPackageName }) {
               placeholder="Message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              required
             ></textarea>
             {errors.message && (
               <small className="error-text">{errors.message}</small>
             )}
           </div>
           <p className="font-secondary" style={{ fontSize: "15px" }}>
-            Should you have any specific preferences or requirements, please feel free to share them in the message box below. Our team of experts will promptly reach out to you to assist in customizing the tour to suit your needs.
+            Should you have any specific preferences or requirements, please
+            feel free to share them in the message box below. Our team of
+            experts will promptly reach out to you to assist in customizing the
+            tour to suit your needs.
           </p>
 
           <div className="d-flex" style={{ gap: "20px", marginTop: "50px" }}>
@@ -365,7 +361,10 @@ function BookingForm({ defPackageName }) {
             >
               Submit Inquiry
             </button>
-            <a href="tel:+1(312)2421662" className="btn btn-outline-dark cl-btn">
+            <a
+              href="tel:+1(312)2421662"
+              className="btn btn-outline-dark cl-btn"
+            >
               <img
                 src={callIcon}
                 width={25}

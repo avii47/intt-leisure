@@ -7,7 +7,7 @@
     width: 100%;
 }
 .tourSection-content{
-    display: flex;
+    display: block;
     width: 80vw;
 }
 .mobile-view .tourSection-content{
@@ -25,7 +25,7 @@
 }
 
 .tourSection-card-image-v {
-    height: 500px;
+    height: 600px;
     object-fit: cover;
 }
 .mobile-view .tourSection-card-image-v {
@@ -101,4 +101,10 @@
 
 .mobile-view .tourSection-card-description {
     order: 3;
+}
+
+.carousel-container{
+    width: 100%;
+    height: 200px;
+    padding: 20px;
 }

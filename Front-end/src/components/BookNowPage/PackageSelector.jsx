@@ -1,10 +1,9 @@
-import React, { useState, useEffect, Suspense } from "react";
+import React, { useState, useEffect } from "react";
 import { useMobileView } from "../../contexts/MobileViewContext";
 import "./BookingForm.css";
 import PackageCard from "../BookNowPage/PackageCard";
 import LoadingSpinner from "../../components/LoadingSpinner";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -78,16 +77,24 @@ function PackageSelector({ onSelectPackage, onTabChange }) {
 
   const handleCardClick = (tabId, index, title) => {
     setSelectedCard({ tabId, cardIndex: index });
-    onSelectPackage(title);
+    if (onSelectPackage) {
+      onSelectPackage(title); // Ensure this doesn't trigger a reload
+    }
   };
 
   const handleTabClick = (tabId) => {
     setActiveTab(tabId);
-    onTabChange(tabId);
+    if (onTabChange) {
+      onTabChange(tabId); // Ensure no unintended navigation occurs
+    }
   };
 
   return (
-    <div className={`package-selector-section ${isMobileView ? "mobile-view" : ""}`}>
+    <div
+      className={`package-selector-section ${
+        isMobileView ? "mobile-view" : ""
+      }`}
+    >
       <div className="package-selector-content">
         <h3 className="font-primary" style={{ fontSize: "25px" }}>
           Select Your Experience
@@ -97,49 +104,44 @@ function PackageSelector({ onSelectPackage, onTabChange }) {
           {/* Tab Controls */}
           <div className="tab-controls">
             {tabs.map((tab) => (
-              <button
+              <div
                 key={tab.id}
                 onClick={() => handleTabClick(tab.id)}
                 className={`tab-button ${activeTab === tab.id ? "active" : ""}`}
               >
                 {tab.label}
-              </button>
+              </div>
             ))}
           </div>
 
           {/* Tab Content */}
           <TransitionGroup>
-  <CSSTransition
-    key={activeTab} // Use activeTab as a unique key
-    classNames="fade"
-    timeout={300}
-  >
-    <div className="tab-content">
-      {loading ? (
-        <div className="loading-indicator">
-          <LoadingSpinner />
-        </div>
-      ) : (
-        <Slider {...settings}>
-          {tabs[activeTab].content.map((content, index) => (
-            <div key={index} className="slider-item">
-              <PackageCard
-                content={content}
-                onClick={() =>
-                  handleCardClick(activeTab, index, content.title)
-                }
-                isSelected={
-                  selectedCard.tabId === activeTab &&
-                  selectedCard.cardIndex === index
-                }
-              />
-            </div>
-          ))}
-        </Slider>
-      )}
-    </div>
-  </CSSTransition>
-</TransitionGroup>
+            <CSSTransition key={activeTab} classNames="fade" timeout={300}>
+              <div className="tab-content">
+                <div className={`loading-indicator ${loading ? "visible" : ""}`} >
+                  <LoadingSpinner />
+                </div>
+                <div  className={`pkg-card-container ${loading ? "" : "visible"}`} >
+                  <Slider {...settings}>
+                    {tabs[activeTab].content.map((content, index) => (
+                      <div key={index} className="slider-item">
+                        <PackageCard
+                          content={content}
+                          onClick={() =>
+                            handleCardClick(activeTab, index, content.title)
+                          }
+                          isSelected={
+                            selectedCard.tabId === activeTab &&
+                            selectedCard.cardIndex === index
+                          }
+                        />
+                      </div>
+                    ))}
+                  </Slider>
+                </div>
+              </div>
+            </CSSTransition>
+          </TransitionGroup>
         </div>
       </div>
     </div>
