@@ -87,3 +87,19 @@
     cursor: pointer;
     font-size: 16px;
 }
+
+/* Specific order for mobile */
+.mobile-view .tourSection-card-headings {
+    order: 1;
+    text-align: center;
+}
+
+.mobile-view .tourSection-card-image-container {
+    order: 2;
+    justify-content: center;
+    display: flex;
+}
+
+.mobile-view .tourSection-card-description {
+    order: 3;
+}

@@ -87,3 +87,8 @@
     pointer-events: none; /* Prevent clicking */
     filter: grayscale(100%);
 }
+@media (max-width: 664px) {
+    .nav-icon-col{
+        display: none;
+    } 
+}
