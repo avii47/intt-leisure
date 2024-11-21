@@ -1,5 +1,5 @@
 // File: src/components/CircularSlider.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -26,10 +26,6 @@ const CircularSlider = () => {
     { id: 3, icon: icon3, label: "Surfing" },
     { id: 4, icon: icon4, label: "Hiking" },
     { id: 5, icon: icon5, label: "Cycling" },
-
-
-
-    
     { id: 6, icon: icon6, label: "Swimming" },
     { id: 7, icon: icon7, label: "Diving" },
     { id: 8, icon: icon8, label: "Dolphin" },
@@ -47,6 +43,18 @@ const CircularSlider = () => {
     prevArrow: <CustomPrevArrow />,
     beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex), // Update the current slide
   };
+
+  // Function to get the active (center) item
+  const getActiveItem = () => {
+    const activeItem = sliderItems[currentSlide];
+    console.log(`Active item:`, activeItem);
+    return activeItem;
+  };
+
+  // Call `getActiveItem` initially and whenever `currentSlide` changes
+  useEffect(() => {
+    getActiveItem();
+  }, [currentSlide]); // Triggered on mount and when `currentSlide` changes
 
   return (
     <div className="circular-slider">
