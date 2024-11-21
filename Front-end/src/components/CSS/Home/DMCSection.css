@@ -1,49 +1,49 @@
 /* TourPackageCard.css */
 
-.tourSection-container {
+.DMC-container {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
 }
-.tourSection-content{
+.DMC-content{
     display: block;
     width: 80vw;
 }
-.mobile-view .tourSection-content{
+.mobile-view .DMC-content{
     width: 100vw;
     padding: 0rem 2rem 0rem 2rem;
     flex-wrap: wrap;
 }
 
-.tourSection-card-image {
+.DMC-card-image {
     width: 93%;
     object-fit: cover;
 }
-.mobile-view .tourSection-card-image {
+.mobile-view .DMC-card-image {
     width: 100%;
 }
 
-.tourSection-card-image-v {
-    height: 600px;
+.DMC-card-image-v {
+    height: 900px;
     object-fit: cover;
 }
-.mobile-view .tourSection-card-image-v {
+.mobile-view .DMC-card-image-v {
     height: 350px;
     margin-left: -30px;
 }
 
-.tourSection-card-content{
+.DMC-card-content{
     /* padding: 6%; */
     height: fit-content;
 }
-.tourSection-card-con{
+.DMC-card-con{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.mobile-view .tourSection-card-content{
+.mobile-view .DMC-card-content{
     padding: 2rem 0% ;
 }
 
@@ -53,7 +53,8 @@
     margin-bottom: 8px;
 }
 
-.card-description {
+.DMC-card-description {
+    height: 100px;
     font-size: 16px;
     line-height: 1.5;
     margin-top: 20px;
@@ -88,18 +89,18 @@
 }
 
 /* Specific order for mobile */
-.mobile-view .tourSection-card-headings {
+.mobile-view .DMC-card-headings {
     order: 1;
     text-align: center;
 }
 
-.mobile-view .tourSection-card-image-container {
+.mobile-view .DMC-card-image-container {
     order: 2;
     justify-content: center;
     display: flex;
 }
 
-.mobile-view .tourSection-card-description {
+.mobile-view .DMC-card-description {
     order: 3;
 }
 

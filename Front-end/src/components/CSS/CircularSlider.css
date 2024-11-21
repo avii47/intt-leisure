@@ -1,7 +1,9 @@
 /* File: src/components/CircularSlider.css */
 
 .circular-slider {
-    width: 700px;
+    width: 760px;
+    display: inline-block;
+    justify-content: center;
   }
   
   .slider-item {
@@ -11,7 +13,7 @@
     justify-content: center;
     padding: 35px;
     opacity: 0.1; /* Default opacity for far items */
-    transform: scale(0.8);
+    transform: scale(1);
     transition: opacity 0.3s ease, transform 0.3s ease;
   }
   
@@ -27,6 +29,7 @@
     margin-bottom: 10px;
   }
   .slider-icon img {
+    object-fit: cover;
     width: 30px;
     height: 30px;
   }
