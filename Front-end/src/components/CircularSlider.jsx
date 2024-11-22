@@ -1,28 +1,19 @@
 // File: src/components/CircularSlider.jsx
 import React, { useState, useEffect } from "react";
+import { useMobileView } from "../contexts/MobileViewContext";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../components/CSS/CircularSlider.css";
 
-import left from "../assets/icons/left.png"
-import right from "../assets/icons/right.png"
+import left from "../assets/icons/left.png";
+import right from "../assets/icons/right.png";
 
 import contentData from "../data/DMCSectionData";
 
 const CircularSlider = ({ onActiveItemChange }) => {
   const [currentSlide, setCurrentSlide] = useState(0); // Track the current slide
-
-  // const sliderItems = [
-  //   { id: 1, icon: icon1, label: "Surfing" },
-  //   { id: 2, icon: icon2, label: "Golf" },
-  //   { id: 3, icon: icon3, label: "Hiking" },
-  //   { id: 4, icon: icon4, label: "Birds Watching" },
-  //   { id: 5, icon: icon5, label: "Mindfulness" },
-  //   { id: 6, icon: icon6, label: "Water Rafting" },
-  //   { id: 7, icon: icon7, label: "Cycling" },
-  //   { id: 8, icon: icon8, label: "Sri Lanka" },
-  // ];
+  const isMobileView = useMobileView();
 
   const sliderItems = contentData;
 
@@ -51,28 +42,36 @@ const CircularSlider = ({ onActiveItemChange }) => {
   }, [currentSlide, onActiveItemChange]); // Run on currentSlide change
 
   return (
-    <div className="circular-slider">
-      <Slider {...settings}>
-        {sliderItems.map((item, index) => {
-          // Determine classes based on distance from the current slide
-          const isCenter = index === currentSlide;
-          const isNear = Math.abs(index - currentSlide) === 1;
-          const isFar = Math.abs(index - currentSlide) === 2;
+    <div className={`DMC-container  ${isMobileView ? "mobile-view" : ""}`}>
+      <div className="circular-slider">
+        <Slider {...settings}>
+          {sliderItems.map((item, index) => {
+            // Determine classes based on distance from the current slide
+            const isCenter = index === currentSlide;
+            const isNear = Math.abs(index - currentSlide) === 1;
+            const isFar = Math.abs(index - currentSlide) === 2;
 
-          return (
-            <div
-              key={item.id}
-              className={`slider-item ${
-                isCenter ? "center" : isNear ? "near" : isFar? "far" : "tooFar"
-              }`}
-            >
-              <div className="slider-icon">
-                <img className="" src={item.icon} alt="" />
+            return (
+              <div
+                key={item.id}
+                className={`slider-item ${
+                  isCenter
+                    ? "center"
+                    : isNear
+                    ? "near"
+                    : isFar
+                    ? "far"
+                    : "tooFar"
+                }`}
+              >
+                <div className="slider-icon">
+                  <img className="" src={item.icon} alt="" />
+                </div>
               </div>
-            </div>
-          );
-        })}
-      </Slider>
+            );
+          })}
+        </Slider>
+      </div>
     </div>
   );
 };

@@ -12,7 +12,7 @@
 }
 .mobile-view .DMC-content{
     width: 100vw;
-    padding: 0rem 2rem 0rem 2rem;
+    padding: 0rem 2rem 2rem 2rem;
     flex-wrap: wrap;
 }
 
@@ -29,8 +29,8 @@
     object-fit: cover;
 }
 .mobile-view .DMC-card-image-v {
-    height: 350px;
-    margin-left: -30px;
+    height: 570px;
+    margin-left: 0px;
 }
 
 .DMC-card-content{
@@ -47,7 +47,7 @@
     padding: 2rem 0% ;
 }
 
-.card-subtitle {
+.DMC-card-subtitle {
     font-size: 16px;
     color: #555;
     margin-bottom: 8px;
@@ -59,6 +59,9 @@
     line-height: 1.5;
     margin-top: 20px;
     color: #333;
+}
+.mobile-view .DMC-card-description{
+    height: 240px;
 }
 
 .card-options {
@@ -108,4 +111,7 @@
     width: 100%;
     height: 200px;
     padding: 20px;
+}
+.mobile-view .carousel-container{
+    height: 100px;
 }

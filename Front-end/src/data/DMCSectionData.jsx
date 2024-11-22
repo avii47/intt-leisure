@@ -5,7 +5,7 @@ import birdsWatching_icon from "../assets/icons/DMC/bird.png"
 import mindfulness_icon from "../assets/icons/DMC/man.png"
 import waterRafting_icon from "../assets/icons/DMC/river-rafting.png"
 import cycling_icon from "../assets/icons/DMC/bicycle.png"
-import sriLanka_icon from "../assets/icons/DMC/Map img  (1587 x 2445 px) (2).png"
+import sriLanka_icon from "../assets/icons/DMC/default.png"
 
 import default_map from "../assets/icons/DMC/maps/default 2.gif";
 import surfing_map from "../assets/icons/DMC/maps/surfing.gif";

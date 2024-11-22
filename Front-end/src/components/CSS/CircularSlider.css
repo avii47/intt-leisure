@@ -5,6 +5,9 @@
     display: inline-block;
     justify-content: center;
   }
+  .mobile-view .circular-slider {
+    width: 300px;
+  }
   
   .slider-item {
     display: flex;
@@ -15,6 +18,9 @@
     opacity: 0.1; /* Default opacity for far items */
     transform: scale(1);
     transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  .mobile-view .slider-item{
+    padding: 30px 0 30px 8px;
   }
   
   .slider-icon {
@@ -28,10 +34,18 @@
     align-items: center;
     margin-bottom: 10px;
   }
+  .mobile-view .slider-icon{
+    width: 25px;
+    height: 25px;
+  }
   .slider-icon img {
     object-fit: cover;
     width: 30px;
     height: 30px;
+  }
+  .mobile-view .slider-icon img{
+    width: 15px;
+    height: 15px;
   }
   .slider-label {
     font-size: 12px;
