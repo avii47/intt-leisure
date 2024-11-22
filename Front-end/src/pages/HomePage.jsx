@@ -11,7 +11,7 @@ const ServicesSection = lazy(() => import('../components/HomePage/ServicesSectio
 const TestimonialSection = lazy(() => import('../components/HomePage/TestimonialSection'));
 const DMCSection = lazy(() => import('../components/HomePage/DMCSection'));
 const EventsNewsSection = lazy(() => import('../components/HomePage/Events&NewsSection'));
-const FooterSection = lazy(() => import('../components/FooterSection'));
+const FooterSection = lazy(() => import('../components/Footer'));
 const MobileButton = lazy(() => import('../components/MobileBookNowButton'));
 
 const SectionLoader = ({ Component }) => {

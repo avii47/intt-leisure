@@ -6,7 +6,7 @@ import "./CSS/FooterSection.css";
 import addressIcon from "../assets/icons/icons8-location-pin-50.png";
 import callIcon from "../assets/icons/icons8-call-50.png";
 import emailIcon from "../assets/icons/icons8-email-50.png";
-import logo from "../assets/images/INTT LEISURE VERTICLE.png";
+import logo from "../assets/icons/INTT Leisure Logo-01.png";
 import ft_icon1 from "../assets/images/footer-icon1.png";
 import ft_icon2 from "../assets/images/footer-icon2.png";
 
@@ -35,7 +35,7 @@ const Footer = () => {
       }`}
     >
       <div className="footer-content justify-content-center">
-        <div className="footer-nav d-flex col-md-12">
+        {/* <div className="footer-nav d-flex col-md-12">
           <div>
             <a href="/mindfulness">MINDFULNESS</a>
           </div>
@@ -48,16 +48,27 @@ const Footer = () => {
           <div>
             <a href="/contact-us">CONTACT US</a>
           </div>
-        </div>
+        </div> */}
+        <p style={{ letterSpacing: "0.9px" }}>
+          Keep the vacation bliss alive! Join us to deepen your mindfulness
+          practice and turn tranquility into a lasting lifestyle. Register now
+          and stay connected to your inner peace!
+        </p>
         <hr style={{ width: "90%", margin: "20px auto" }}></hr>
 
         <div
           className="col-md-12 d-flex footer-2nd-row"
           style={{ justifyContent: "center" }}
         >
-          <div className="col-lg-8">
+          <div className="col-lg-4">
             <div className="footer-subscription">
-              <h3>Connect</h3>
+              <img
+                loading="lazy"
+                src={logo}
+                className="ft-logo"
+                style={{}}
+                alt="logo"
+              />
               <p style={{ margin: "22px 0" }}>
                 Keep the vacation bliss alive! Join us to deepen your
                 mindfulness practice and turn tranquility into a lasting
