@@ -1,5 +1,5 @@
 .testimonial-section{
-    background-image: url('C:\Users\pc\Desktop\Projects\intt-leisure\Front-end\src\assets\images\Testimonial-bg.png');
+    background-image: url('/src/assets/images/Testimonial-bg.png');
     background-repeat: no-repeat;
     object-fit: cover;
     padding: 50px 0;
