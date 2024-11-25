@@ -35,8 +35,6 @@
 }
 .content-card:hover {
   transition: 0.2s ease-in-out;
-  top: -4px;
-  border: 1px solid #cccccc;
 }
 .content-card:hover .card-img {
   transform: scale(1.1);

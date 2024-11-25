@@ -1,4 +1,4 @@
-import React, { useEffect, Suspense, useRef } from "react";
+import React, { Suspense, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useMobileView } from "../../contexts/MobileViewContext";
 import BlogCard from "./BlogCard";

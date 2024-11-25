@@ -9,7 +9,7 @@ import "../components/CSS/Pages/BlogsPage.css";
 
 const HeroSection = lazy(() => import("../components/ContentHeroSection"));
 const BlogsContent = lazy(() => import('../components/BlogsPage/BlogsContentTemplate'));
-const FooterSection = lazy(() => import('../components/FooterSection'));
+const FooterSection = lazy(() => import('../components/Footer'));
 const MobileButton = lazy(() => import('../components/MobileBookNowButton'));
 
 const BlogsContentPage = () => {

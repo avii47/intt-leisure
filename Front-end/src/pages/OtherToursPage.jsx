@@ -7,7 +7,7 @@ import heroImg from "../assets/images/otherTours-img.jpg"
 
 const HeroSection = lazy(() => import("../components/HeroSection"));
 const DestinationContent = lazy(() => import("../components/DestinationsPage/OtherToursContent"));
-const FooterSection = lazy(() => import("../components/FooterSection"));
+const FooterSection = lazy(() => import('../components/Footer'));
 
 function OtherToursPage() {
   return (
@@ -20,7 +20,7 @@ function OtherToursPage() {
         <HeroSection
           img={heroImg}
           title={"Other Tours"}
-          sub={"explore glable tours"}
+          sub={"Explore Exclusive Global Destinations Tailored to You."}
         />
       </Suspense>
       <Suspense fallback={<LoadingSpinner />}>

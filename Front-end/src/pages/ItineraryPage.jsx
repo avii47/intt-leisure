@@ -15,7 +15,7 @@ const ItineraryContent = lazy(() => import("../components/DestinationsPage/Sampl
 const OtherItineraryContent = lazy(() => import("../components/DestinationsPage/OtherItineraryContent"));
 const ActivityToursContent = lazy(() => import("../components/DestinationsPage/ActivityToursContent"));
 const ConciergeServicesContent = lazy(() => import("../components/DestinationsPage/ConciergeServicesContent"));
-const FooterSection = lazy(() => import("../components/FooterSection"));
+const FooterSection = lazy(() => import('../components/Footer'));
 
 const ItineraryPage = () => {
   const { category, id } = useParams();
@@ -23,7 +23,6 @@ const ItineraryPage = () => {
   const contentId = parseInt(id, 10);
   let itineraryContent;
   let content;
-  const img = "https://img.freepik.com/free-photo/people-taking-part-high-protocol-event_23-2150951233.jpg?t=st=1728458926~exp=1728462526~hmac=4069696c2cd9754efe1aa650f777777495ce3a02c9b703ad0cb66ee708e17b15&w=1380";
 
   switch (category) {
     case 'sampleItinery':

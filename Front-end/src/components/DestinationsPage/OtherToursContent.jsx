@@ -16,9 +16,9 @@ function OtherToursContent() {
         }`}
     >
       <div className="sl-tours-content justify-content-center page-section">
-        <h3 className="font-primary">Discover the World like a Traveler</h3>
+        <h3 className="font-primary">Wander the World</h3>
         <p className="font-secondary" style={{ marginTop: "10px", marginBottom:'100px' }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+         Curated global journeys to the world’s most iconic destinations, crafted for those seeking unforgettable experiences and exclusive adventures.
         </p>
 
         <ItineraryCategorySection contentCat={"dubai"} topic={"Dubai Tours"} />

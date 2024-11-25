@@ -7,7 +7,7 @@ import bg from '../assets/images/whoWeArePage-hero-img.jpg';
 
 const HeroSection = lazy(() => import('../components/HeroSection'));
 const AboutUsContent = lazy(() => import('../components/AboutusPage/AboutUsContent'));
-const FooterSection = lazy(() => import('../components/FooterSection'));
+const FooterSection = lazy(() => import('../components/Footer'));
 const MobileButton = lazy(() => import('../components/MobileBookNowButton'));
 
 const AboutUsPage = () => {

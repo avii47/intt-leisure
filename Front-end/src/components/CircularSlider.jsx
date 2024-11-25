@@ -1,4 +1,3 @@
-// File: src/components/CircularSlider.jsx
 import React, { useState, useEffect } from "react";
 import { useMobileView } from "../contexts/MobileViewContext";
 import Slider from "react-slick";
@@ -17,6 +16,8 @@ const CircularSlider = ({ onActiveItemChange }) => {
 
   const sliderItems = contentData;
 
+  const totalItems = sliderItems.length;
+
   const settings = {
     dots: false,
     infinite: true,
@@ -28,6 +29,15 @@ const CircularSlider = ({ onActiveItemChange }) => {
     nextArrow: <CustomNextArrow />,
     prevArrow: <CustomPrevArrow />,
     beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex), // Update the current slide
+    responsive: [
+      {
+        breakpoint: 768, // Mobile breakpoint (e.g., tablets and smaller screens)
+        settings: {
+          slidesToShow: 5, // Show 5 slides on mobile view
+          centerMode: true, // Keep centerMode enabled
+        },
+      },
+    ],
   };
 
   // Function to get the active item
@@ -46,10 +56,11 @@ const CircularSlider = ({ onActiveItemChange }) => {
       <div className="circular-slider">
         <Slider {...settings}>
           {sliderItems.map((item, index) => {
-            // Determine classes based on distance from the current slide
-            const isCenter = index === currentSlide;
-            const isNear = Math.abs(index - currentSlide) === 1;
-            const isFar = Math.abs(index - currentSlide) === 2;
+            // Determine classes based on distance from the current slide with wraparound logic
+            const distance = (index - currentSlide + totalItems) % totalItems;
+            const isCenter = distance === 0;
+            const isNear = distance === 1 || distance === totalItems - 1;
+            const isFar = distance === 2 || distance === totalItems - 2;
 
             return (
               <div

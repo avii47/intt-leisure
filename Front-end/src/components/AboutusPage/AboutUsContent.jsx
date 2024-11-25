@@ -1,4 +1,4 @@
-import React, { useState, useEffect, lazy, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useMobileView } from '../../contexts/MobileViewContext';
 import cardLoader from '../../hooks/cardLoader';
 import "../../components/CSS/Home/AboutSection.css";
@@ -113,6 +113,7 @@ const AboutUsContent = () => {
                 />
               </div>
             ))}
+
           </div>
         </section>
 

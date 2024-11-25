@@ -121,7 +121,8 @@
     width: 100vw;
 }
 .event-iframe{
-    height: 70%;
+    object-fit: cover;
+    height: 65%;
     width: 100%;
     border-radius: 8px;
 }

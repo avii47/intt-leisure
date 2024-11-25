@@ -23,8 +23,8 @@ const ExperienceDropdownItems = [
     id: 3,
     path: "/services/3",
     imageSrc: img3,
-    altText: "Coparates",
-    label: "Coparates",
+    altText: "Corporates",
+    label: "Corporates",
   },
   {
     id: 4,

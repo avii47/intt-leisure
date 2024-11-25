@@ -7,7 +7,7 @@ import bg from '../assets/images/destinationsPage-hero-img.jpg'
 
 const HeroSection = lazy(() => import('../components/HeroSection'));
 const DestinationsContent = lazy(() => import('../components/DestinationsPage/DestinationContent'));
-const FooterSection = lazy(() => import('../components/FooterSection'));
+const FooterSection = lazy(() => import('../components/Footer'));
 const MobileButton = lazy(() => import('../components/MobileBookNowButton'));
 
 const DestinationPage = () => {

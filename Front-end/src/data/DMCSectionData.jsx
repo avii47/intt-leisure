@@ -5,6 +5,7 @@ import birdsWatching_icon from "../assets/icons/DMC/bird.png"
 import mindfulness_icon from "../assets/icons/DMC/man.png"
 import waterRafting_icon from "../assets/icons/DMC/river-rafting.png"
 import cycling_icon from "../assets/icons/DMC/bicycle.png"
+import walesWatching_icon from "../assets/icons/DMC/dolphin.png"
 import sriLanka_icon from "../assets/icons/DMC/default.png"
 
 import default_map from "../assets/icons/DMC/maps/default 2.gif";
@@ -15,6 +16,7 @@ import birdsWatching_map from "../assets/icons/DMC/maps/birds watching.gif";
 import mindfulness_map from "../assets/icons/DMC/maps/mindfulness.gif";
 import waterRafting_map from "../assets/icons/DMC/maps/water rafting.gif";
 import cycling_map from "../assets/icons/DMC/maps/cycling.gif";
+import walesWatching_map from "../assets/icons/DMC/maps/whales watching.gif";
 
 const contentData = [
     {
@@ -79,6 +81,14 @@ const contentData = [
         map: cycling_map,
         title: "Cycling in Sri Lanka",
         description: "Cycling in Sri Lanka unveils the island's hidden beauty, from tea plantations and jungles to ancient temples and vibrant wildlife. Every turn offers new sights, with mountains, beaches, and forests creating a magical cycling experience.",
+        link: "destinations/sriLankan/activityTours/6"
+    },
+    {
+        id: 9,
+        icon: walesWatching_icon,
+        map: walesWatching_map,
+        title: "Wales Watching in Sri Lanka",
+        description: "description about wales watching....",
         link: "destinations/sriLankan/activityTours/6"
     }
   ];

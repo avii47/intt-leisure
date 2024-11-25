@@ -37,22 +37,18 @@ const Footer = () => {
       }`}
     >
       <div className="footer-content justify-content-center">
-        <p style={{ letterSpacing: "1.8px", fontSize: "16px" }}>
+        <p className="ft-top-txt">
           Keep the vacation bliss alive! Join us to deepen your mindfulness
           practice and turn tranquility into a lasting lifestyle. Register now
           and stay connected to your inner peace!
         </p>
         <hr></hr>
 
-        <div className="d-flex footer-main-container">
+        <div
+          className={`footer-main-container ${isMobileView ? "" : "d-flex"}`}
+        >
           <div className="col-md-4" style={{ textAlign: "left" }}>
-            <img
-              loading="lazy"
-              src={logo}
-              className="ft-logo"
-              style={{}}
-              alt="logo"
-            />
+            <img loading="lazy" src={logo} className="ft-logo" alt="logo" />
             <p>
               By subscribing you agree to our Privacy Policy and consent to
               receive updates from our company.
@@ -68,235 +64,311 @@ const Footer = () => {
                 Subscribe Now
               </button>
             </form>
-            <div className="certificated-container">
+            <div className="certificate-container">
               <h5 style={{ margin: "50px 0 20px 0" }}>Our Certificates</h5>
               <div
-                className="footer-logos"
+                className="footer-logos col-md-12"
                 style={{ marginTop: isMobileView ? "10px" : "0px" }}
               >
-                <img loading="lazy" src={IATA_logo} alt="iata Logo" />
-                <img loading="lazy" src={ARC_logo} alt="pata Logo" />
-                <img
-                  loading="lazy"
-                  src={SLTDA_Certified}
-                  alt="iata Logo"
-                  style={{ height: "35px", marginTop: "23px" }}
+                <div className="col-md-3">
+                <img loading="lazy" className="certificate-img" src={IATA_logo} alt="iata Logo" />
+                </div>
+                <div className="col-md-3">
+                <img loading="lazy" className="certificate-img" src={ARC_logo} alt="pata Logo" />
+                </div>
+                <div className="col-md-3">
+                <img loading="lazy" className="certificate-img" src={SLTDA_Certified} alt="iata Logo"
                 />
-                <img
-                  loading="lazy"
-                  src={Civil_aviation_License}
-                  alt="pata Logo"
-                  style={{
-                    height: "35px",
-                    marginTop: isMobileView ? "-15px" : "23px",
-                    marginInline: isMobileView ? "auto" : "",
-                  }}
+                </div>
+                <div className="col-md-3">
+                <img loading="lazy" className="certificate-img" src={Civil_aviation_License} alt="pata Logo"
                 />
+                </div>
               </div>
             </div>
           </div>
 
           {isMobileView ? (
-            <div
-              className="col-md footer-nav d-flex"
-              style={{
-                textAlign: "left",
-                paddingLeft: isMobileView ? "" : "70px",
-              }}
-            >
-              <h5 style={{ marginBottom: "-20px" }}>Useful Links</h5>
-              <div className="col-md-12 d-flex" style={{gap:'80px'}}>
-                <div className="col-md-6">
-                  <div>
-                    <a href="/mindfulness">Mindfulness</a>
+            <>
+              <div
+                className="col-md footer-nav d-flex"
+                style={{
+                  textAlign: "left",
+                  paddingLeft: isMobileView ? "" : "70px",
+                }}
+              >
+                <h5 style={{ marginBottom: "-20px" }}>Useful Links</h5>
+                <div className="col-md-12 d-flex" style={{ gap: "80px" }}>
+                  <div className="col-md-6">
+                    <div>
+                      <a href="/mindfulness">Mindfulness</a>
+                    </div>
+                    <div>
+                      <a href="/services">Experience</a>
+                    </div>
+                    <div>
+                      <a href="/why-choose-us">Why Choose Us</a>
+                    </div>
+                    <div>
+                      <a href="/contact-us">Contact Us</a>
+                    </div>
+                    <div>
+                      <a href="/termsConditions">Terms of Service</a>
+                    </div>
                   </div>
-                  <div>
-                    <a href="/services">Experience</a>
-                  </div>
-                  <div>
-                    <a href="/why-choose-us">Why Choose Us</a>
-                  </div>
-                  <div>
-                    <a href="/contact-us">Contact Us</a>
-                  </div>
-                  <div>
-                    <a href="/privacyPolicy">Privacy Policy</a>
-                  </div>
-                  <div>
-                    <a href="/termsConditions">Terms of Service</a>
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div>
-                    <a href="/destinations">Destinations</a>
-                  </div>
-                  <div>
-                    <a href="/blogs">Blogs</a>
-                  </div>
-                  <div>
-                    <a href="/events&news">Events & News</a>
+                  <div className="col-md-6">
+                    <div>
+                      <a href="/destinations">Destinations</a>
+                    </div>
+                    <div>
+                      <a href="/blogs">Blogs</a>
+                    </div>
+                    <div>
+                      <a href="/events&news">Events & News</a>
+                    </div>
+                    <div>
+                      <a href="/privacyPolicy">Privacy Policy</a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+              <div className="col-md-2 footer-con">
+                <h5 style={{ marginBottom: "20px" }}>Contact Info</h5>
+                <div className="ftc">
+                  <address className="d-flex">
+                    <div
+                      className="col"
+                    >
+                      <h5>Sri Lanka</h5>
+                      No.26/6
+                      <br />
+                      Major LV Gunarathna Mawatha,
+                      <br />
+                      Station Road, Dehiwala
+                      <br />
+                      Sri Lanka
+                    </div>
+                  </address>
+                  <address className="d-flex">
+                    <div className="col">
+                      <a href="tel:+94 774 48 48 48" className="link-text">
+                        +94 774 48 48 48
+                      </a>
+                      <br />
+                    </div>
+                  </address>
+                  <address className="d-flex">
+                    <div className="col">
+                      <a
+                        href="mailto:sales@intterminal.com"
+                        className="link-text"
+                      >
+                        sales@intterminal.com
+                      </a>
+                    </div>
+                  </address>
+                </div>
+              </div>
+              <div className="footer-con">
+                <div className="ftc" style={{ marginTop: "45px" }}>
+                  <address className="d-flex">
+                    <div
+                      className="col"
+                    >
+                      <h5>United States of America</h5>
+                      1803 Wicklow Road Naperville
+                      <br />
+                      IL 60564,
+                      Chicago,
+                      USA
+                    </div>
+                  </address>
+                  <address className="d-flex">
+                    <div className="col">
+                      <a href="tel:+1 312-242-1662" className="link-text">
+                        +1 312-242-1662
+                      </a>
+                      <br />
+                    </div>
+                  </address>
+                  <address className="d-flex">
+                    <div className="col">
+                      <a
+                        href="mailto:info@intterminal.com"
+                        className="link-text"
+                      >
+                        info@intterminal.com
+                      </a>
+                    </div>
+                  </address>
+                </div>
+              </div>
+            </>
           ) : (
-            <div
-              className="col-md footer-nav"
-              style={{
-                textAlign: "left",
-                paddingLeft: isMobileView ? "" : "70px",
-              }}
-            >
-              <h5 style={{ marginBottom: "20px" }}>Useful Links</h5>
-              <div>
-                <a href="/mindfulness">Mindfulness</a>
+            <>
+              <div
+                className="col-md-1 footer-nav"
+                style={{
+                  textAlign: "left",
+                  paddingLeft: isMobileView ? "" : "",
+                }}
+              >
+                <h5 style={{ marginBottom: "20px" }}>Useful Links</h5>
+                <div>
+                  <a href="/mindfulness">Mindfulness</a>
+                </div>
+                <div>
+                  <a href="/services">Experience</a>
+                </div>
+                <div>
+                  <a href="/why-choose-us">Why Choose Us</a>
+                </div>
+                <div>
+                  <a href="/contact-us">Contact Us</a>
+                </div>
+                <div>
+                  <a href="/privacyPolicy">Privacy Policy</a>
+                </div>
+                <div>
+                  <a href="/termsConditions">Terms of Service</a>
+                </div>
               </div>
-              <div>
-                <a href="/services">Experience</a>
+              <div className="col-md-1 footer-nav" style={{ textAlign: "left" }}>
+                <h5 style={{ marginBottom: "20px" }}>Explore</h5>
+                <div>
+                  <a href="/destinations">Destinations</a>
+                </div>
+                <div>
+                  <a href="/blogs">Blogs</a>
+                </div>
+                <div>
+                  <a href="/events&news">Events & News</a>
+                </div>
               </div>
-              <div>
-                <a href="/why-choose-us">Why Choose Us</a>
+              <div className="col-md-2 footer-con">
+                <h5 style={{ marginBottom: "20px" }}>Contact Info</h5>
+                <div className="ftc">
+                  <address className="d-flex">
+                    <div className="col-1">
+                      <img
+                        loading="lazy"
+                        src={addressIcon}
+                        className="contact-icons"
+                        alt="address icon"
+                      />
+                    </div>
+                    <div
+                      className="col-11"
+                      style={{ marginLeft: "20px", width: "300px" }}
+                    >
+                      <h5>Sri Lanka</h5>
+                      No.26/6
+                      <br />
+                      Major LV Gunarathna Mawatha,
+                      <br />
+                      Station Road, Dehiwala
+                      <br />
+                      Sri Lanka
+                    </div>
+                  </address>
+                  <address className="d-flex">
+                    <div className="col-1">
+                      <img
+                        loading="lazy"
+                        src={callIcon}
+                        className="contact-icons"
+                        alt="call icon"
+                      />
+                    </div>
+                    <div className="col-12" style={{ marginLeft: "20px" }}>
+                      <a href="tel:+94 774 48 48 48" className="link-text">
+                        +94 774 48 48 48
+                      </a>
+                      <br />
+                    </div>
+                  </address>
+                  <address className="d-flex">
+                    <div className="col-1">
+                      <img
+                        loading="lazy"
+                        src={emailIcon}
+                        className="contact-icons"
+                        alt="email icon"
+                      />
+                    </div>
+                    <div className="col-12" style={{ marginLeft: "20px" }}>
+                      <a
+                        href="mailto:sales@intterminal.com"
+                        className="link-text"
+                      >
+                        sales@intterminal.com
+                      </a>
+                    </div>
+                  </address>
+                </div>
               </div>
-              <div>
-                <a href="/contact-us">Contact Us</a>
+              <div className="col-2 footer-con" style={{ textAlign: "left" }}>
+                <div className="ftc" style={{ marginTop: "45px" }}>
+                  <address className="d-flex">
+                    <div className="col-1">
+                      <img
+                        loading="lazy"
+                        src={addressIcon}
+                        className="contact-icons"
+                        alt="address icon"
+                      />
+                    </div>
+                    <div
+                      className="col-11"
+                      style={{ marginLeft: "20px", width: "300px" }}
+                    >
+                      <h5>United States of America</h5>
+                      1803 Wicklow Road Naperville
+                      <br />
+                      IL 60564
+                      <br />
+                      Chicago <br />
+                      USA
+                    </div>
+                  </address>
+                  <address className="d-flex">
+                    <div className="col-1">
+                      <img
+                        loading="lazy"
+                        src={callIcon}
+                        className="contact-icons"
+                        alt="call icon"
+                      />
+                    </div>
+                    <div className="col-12" style={{ marginLeft: "20px" }}>
+                      <a href="tel:+1 312-242-1662" className="link-text">
+                        +1 312-242-1662
+                      </a>
+                      <br />
+                    </div>
+                  </address>
+                  <address className="d-flex">
+                    <div className="col-1">
+                      <img
+                        loading="lazy"
+                        src={emailIcon}
+                        className="contact-icons"
+                        alt="email icon"
+                      />
+                    </div>
+                    <div className="col-12" style={{ marginLeft: "20px" }}>
+                      <a
+                        href="mailto:info@intterminal.com"
+                        className="link-text"
+                      >
+                        info@intterminal.com
+                      </a>
+                    </div>
+                  </address>
+                </div>
               </div>
-              <div>
-                <a href="/privacyPolicy">Privacy Policy</a>
-              </div>
-              <div>
-                <a href="/termsConditions">Terms of Service</a>
-              </div>
-            </div>
+            </>
           )}
-          
-          <div className="col-md footer-nav" style={{ textAlign: "left" }}>
-            <h5 style={{ marginBottom: "20px" }}>Explore</h5>
-            <div>
-              <a href="/destinations">Destinations</a>
-            </div>
-            <div>
-              <a href="/blogs">Blogs</a>
-            </div>
-            <div>
-              <a href="/events&news">Events & News</a>
-            </div>
-          </div>
-          <div className="col-md-2 footer-con" style={{ textAlign: "left" }}>
-            <h5 style={{ marginBottom: "20px" }}>Contact Info</h5>
-            <div className="ftc">
-              <address className="d-flex">
-                <div className="col-1">
-                  <img
-                    loading="lazy"
-                    src={addressIcon}
-                    className="contact-icons"
-                    alt="address icon"
-                  />
-                </div>
-                <div
-                  className="col-11"
-                  style={{ marginLeft: "20px", width: "300px" }}
-                >
-                  <h5>Sri Lanka</h5>
-                  No.26/6
-                  <br />
-                  Major LV Gunarathna Mawatha,
-                  <br />
-                  Station Road, Dehiwala
-                  <br />
-                  Sri Lanka
-                </div>
-              </address>
-              <address className="d-flex">
-                <div className="col-1">
-                  <img
-                    loading="lazy"
-                    src={callIcon}
-                    className="contact-icons"
-                    alt="call icon"
-                  />
-                </div>
-                <div className="col-12" style={{ marginLeft: "20px" }}>
-                  <a href="tel:+94 774 48 48 48" className="link-text">
-                    +94 774 48 48 48
-                  </a>
-                  <br />
-                </div>
-              </address>
-              <address className="d-flex">
-                <div className="col-1">
-                  <img
-                    loading="lazy"
-                    src={emailIcon}
-                    className="contact-icons"
-                    alt="email icon"
-                  />
-                </div>
-                <div className="col-12" style={{ marginLeft: "20px" }}>
-                  <a href="mailto:sales@intterminal.com" className="link-text">
-                    sales@intterminal.com
-                  </a>
-                </div>
-              </address>
-            </div>
-          </div>
-          <div className="col-2 footer-con" style={{ textAlign: "left" }}>
-            <div className="ftc" style={{ marginTop: "45px" }}>
-              <address className="d-flex">
-                <div className="col-1">
-                  <img
-                    loading="lazy"
-                    src={addressIcon}
-                    className="contact-icons"
-                    alt="address icon"
-                  />
-                </div>
-                <div
-                  className="col-11"
-                  style={{ marginLeft: "20px", width: "300px" }}
-                >
-                  <h5>United States of America</h5>
-                  1803 Wicklow Road Naperville
-                  <br />
-                  IL 60564
-                  <br />
-                  Chicago <br />
-                  USA
-                </div>
-              </address>
-              <address className="d-flex">
-                <div className="col-1">
-                  <img
-                    loading="lazy"
-                    src={callIcon}
-                    className="contact-icons"
-                    alt="call icon"
-                  />
-                </div>
-                <div className="col-12" style={{ marginLeft: "20px" }}>
-                  <a href="tel:+1 312-242-1662" className="link-text">
-                    +1 312-242-1662
-                  </a>
-                  <br />
-                </div>
-              </address>
-              <address className="d-flex">
-                <div className="col-1">
-                  <img
-                    loading="lazy"
-                    src={emailIcon}
-                    className="contact-icons"
-                    alt="email icon"
-                  />
-                </div>
-                <div className="col-12" style={{ marginLeft: "20px" }}>
-                  <a href="mailto:info@intterminal.com" className="link-text">
-                    info@intterminal.com
-                  </a>
-                </div>
-              </address>
-            </div>
-          </div>
         </div>
 
         <div className="footer-social">

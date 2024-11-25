@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { useMobileView } from '../contexts/MobileViewContext';
 import "../components/CSS/Pages/TermsConditions.css";
 

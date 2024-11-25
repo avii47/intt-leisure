@@ -253,7 +253,7 @@ function BookingForm({ defPackageName }) {
                       value={adults}
                       onChange={handleAdultChange}
                     >
-                      {[...Array(14).keys()].map((num) => (
+                      {[...Array(15).keys()].map((num) => (
                         <option key={num} value={num + 1}>
                           {num + 1}
                         </option>
@@ -290,7 +290,7 @@ function BookingForm({ defPackageName }) {
                       value={kids}
                       onChange={handleKidsChange}
                     >
-                      {[...Array(8).keys()].map((num) => (
+                      {[...Array(9).keys()].map((num) => (
                         <option key={num} value={num}>
                           {num}
                         </option>
@@ -325,9 +325,16 @@ function BookingForm({ defPackageName }) {
             </div>
           )}
 
+          <p className="font-secondary" style={{ fontSize: "15px", marginTop: "20px" }}>
+            Note: 
+            Should you have any specific preferences or requirements, please
+            feel free to share them in the message box below. Our team of
+            experts will promptly reach out to you to assist in customizing the
+            tour to suit your needs.
+          </p>
           <div
             className="form-group"
-            style={{ width: "100%", marginTop: "40px" }}
+            style={{ width: "100%", marginTop: "20px" }}
           >
             <textarea
               style={{
@@ -346,12 +353,6 @@ function BookingForm({ defPackageName }) {
               <small className="error-text">{errors.message}</small>
             )}
           </div>
-          <p className="font-secondary" style={{ fontSize: "15px" }}>
-            Should you have any specific preferences or requirements, please
-            feel free to share them in the message box below. Our team of
-            experts will promptly reach out to you to assist in customizing the
-            tour to suit your needs.
-          </p>
 
           <div className="d-flex" style={{ gap: "20px", marginTop: "50px" }}>
             <button

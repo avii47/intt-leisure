@@ -8,7 +8,7 @@ import "../components/CSS/Pages/EventsInnerPage.css";
 
 const HeroSection = lazy(() => import("../components/ContentHeroSection"));
 const EventsInnerContent = lazy(() => import("../components/Events&NewsPage/EventsInnerContent"));
-const FooterSection = lazy(() => import("../components/FooterSection"));
+const FooterSection = lazy(() => import('../components/Footer'));
 
 const EventsInnerPage = () => {
   const { id } = useParams();
@@ -16,7 +16,7 @@ const EventsInnerPage = () => {
   const contentId = parseInt(id, 10);
   const content = contentData.find((item) => item.id === contentId);
   const img = "https://img.freepik.com/free-photo/people-taking-part-high-protocol-event_23-2150951233.jpg?t=st=1728458926~exp=1728462526~hmac=4069696c2cd9754efe1aa650f777777495ce3a02c9b703ad0cb66ee708e17b15&w=1380";
-  const topic = "Visit Our Latest Events and News"
+  const topic = "Latest Events and News"
 
   if (!content) {
     return <div>Content not found</div>;

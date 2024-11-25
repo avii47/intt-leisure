@@ -86,9 +86,9 @@ const contentData = [
     title: "Jounery through Pattaya and Bangkok",
     subTitle: "An Enchanting 6-Day Adventure",
     cardTxt:
-      "The context of the document is a travel package offering stays in Bangkok Pratunam...",
+      "Embark on a Bangkok Pratunam getaway with a stay in a 3-star hotel...",
     overview:
-      "The context of the document is a travel package offering stays in Bangkok Pratunam, featuring accommodations in 3-star hotels with a bed and breakfast option. Included in the package are return airport transfers in a private car, a Chaopraya Princess River Cruise with an international buffet, and tours to Dreamworld and Safari World, complete with lunch.",
+      "Embark on a Bangkok Pratunam getaway with a stay in a 3-star hotel, including bed and breakfast. Enjoy private airport transfers, a Chaopraya Princess River Cruise with an international buffet, and tours to Dreamworld and Safari World with lunch. Book your unforgettable adventure today!",
     details: [
       "Discover the rich history and artistic heritage of Dubai",
       "Visit the Museum of Modern Art",

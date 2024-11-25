@@ -7,7 +7,7 @@ import bg from '../assets/images/mindfulnessPage-hero-img.jpg';
 
 const HeroSection = lazy(() => import('../components/HeroSection'));
 const MindfulnessContent = lazy(() => import('../components/MindfulnessPage/MindfulnessContent'));
-const FooterSection = lazy(() => import('../components/FooterSection'));
+const FooterSection = lazy(() => import('../components/Footer'));
 const MobileButton = lazy(() => import('../components/MobileBookNowButton'));
 
 const MindfulnessPage = () => {

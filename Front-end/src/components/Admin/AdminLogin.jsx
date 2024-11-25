@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../firebase"; 
-import { getFirestore, addDoc, collection, getDocs } from "firebase/firestore";
+import { getFirestore, collection, getDocs } from "firebase/firestore";
 import "./AdminLogin.css";
 import img from "../../assets/images/adminLogin-img.jpg";
 

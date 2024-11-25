@@ -7,7 +7,7 @@ import heroImg from "../assets/images/destination-sl.jpg"
 
 const HeroSection = lazy(() => import("../components/HeroSection"));
 const DestinationContent = lazy(() => import("../components/DestinationsPage/SriLankanToursContent"));
-const FooterSection = lazy(() => import("../components/FooterSection"));
+const FooterSection = lazy(() => import('../components/Footer'));
 
 function SriLankanToursPage() {
   return (

@@ -77,32 +77,9 @@ const BlogsContentTemplate = ({content}) => {
             </p>
             <ShareButtons url={content.blogUrl} title={content.title} thumbnail={content.blogThumbnail} />
           </div>
-
-          {/* Render Recommended Links */}
-          {/* <div className="recommended">
-            <h3>Recommended for you:</h3>
-            <div className="col-12 d-flex">
-              {content.recommendedLinks.map((col, i) => (
-                <div className="col-6" key={i} style={{ padding: "0 20px" }}>
-                  {col.map((link, idx) => (
-                    <li key={idx}>
-                      <a
-                        href={link.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {link.text}
-                      </a>
-                      <i className="fas fa-chevron-right"></i>
-                    </li>
-                  ))}
-                </div>
-              ))}
-            </div>
-          </div> */}
         </div>
-        <div className="col-md-4" style={{ paddingLeft: isMobileView? "0":"30px" }}>
 
+        <div className="col-md-4" style={{ paddingLeft: isMobileView? "0":"30px" }}>
           <NewsLetterSubBox 
             email={email} 
             setEmail={setEmail} 
@@ -124,9 +101,8 @@ const BlogsContentTemplate = ({content}) => {
                 />
               ))}
           </div>
-
-
         </div>
+
         <Modal show={showModal} onClose={() => setShowModal(false)}>
           <h2>Your subscription to our list has been confirmed.</h2>
           <br></br>
@@ -135,6 +111,7 @@ const BlogsContentTemplate = ({content}) => {
           Look out for news and updates
           </p>
         </Modal>
+        
       </div>
     </section>
   );

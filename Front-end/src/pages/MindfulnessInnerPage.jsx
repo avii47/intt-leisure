@@ -9,7 +9,7 @@ import "../components/CSS/Pages/BlogsPage.css";
 
 const HeroSection = lazy(() => import("../components/ContentHeroSection"));
 const MindfulnessContent = lazy(() => import('../components/MindfulnessPage/MindfulnessInnerContent'));
-const FooterSection = lazy(() => import('../components/FooterSection'));
+const FooterSection = lazy(() => import('../components/Footer'));
 const MobileButton = lazy(() => import('../components/MobileBookNowButton'));
 
 function MindfulnessInnerPage() {

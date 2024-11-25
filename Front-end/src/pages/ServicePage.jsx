@@ -7,7 +7,7 @@ import bg from '../assets/images/servicesPage-hero-img.jpg';
 
 const HeroSection = lazy(() => import('../components/HeroSection'));
 const ServiceContent = lazy(() => import('../components/ServicePage/ServiceContent'));
-const FooterSection = lazy(() => import('../components/FooterSection'));
+const FooterSection = lazy(() => import('../components/Footer'));
 const MobileButton = lazy(() => import('../components/MobileBookNowButton'));
 
 const ServicePage = () => {

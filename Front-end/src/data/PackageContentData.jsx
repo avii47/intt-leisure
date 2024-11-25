@@ -9,7 +9,7 @@ const contentData = [
     id: 1,
     img: img1,
     title: "Mindfulness for Leaders",
-    subtitle: "Unlock Your Leadership Potential with Mindfulness in Sri Lanka",
+    subtitle: "Lead with Clarity, Resilience, and Ancient Wisdom",
     description:
       "In the serene and culturally rich backdrop of Sri Lanka, where mindfulness has thrived for centuries, INTT Leisure invites leaders like you to embark on a transformative journey towards becoming more mindful and effective in your leadership role.",
     offers: [
@@ -34,7 +34,7 @@ const contentData = [
     id: 2,
     img: img2,
     title: "Mindfulness for Educators",
-    subtitle: "Uncover the Luxury of Mindfulness in Sri Lanka for Educators",
+    subtitle: "Elevating Teaching, Nurturing Calm and Clarity in the Classroom",
     description:
       "Are you a student seeking academic excellence and personal growth? Are you an educator looking to enhance your teaching and create a more mindful classroom environment? Look no further. Join us at INTT Leisure for a transformative journey that blends the luxury of Sri Lanka with mindfulness experiences tailored for both students and educators.",
     offers: [
@@ -59,6 +59,7 @@ const contentData = [
     id: 3,
     img: img3,
     title: "Mindfulness for Corporates",
+    subtitle: "Enhance Productivity, Foster Well-Being, and Build Stronger Teams",
     description:
       "Is your corporate team ready to embark on a transformative journey that combines productivity enhancement with holistic well-being? Join us at INTT Leisure as we take your team on a mindful tour of Sri Lanka. Immerse yourselves in the island’s beauty while honing mindfulness skills that boost both productivity and overall well-being.",
     offers: [
@@ -88,6 +89,7 @@ const contentData = [
     id: 4,
     img: img4,
     title: "Mindfulness for Seekers",
+    subtitle: "Discover Inner Peace and Personal Growth in the Heart of Sri Lanka",
     description:
       "Are you seeking inner peace, balance, and personal growth? Look no further. At INTT Leisure, we offer a range of transformative mindfulness workshops designed exclusively for seekers like you. Our workshops are more than just classes; they are your gateway to a luxury mindfulness tour, with the enchanting landscapes of Sri Lanka as your backdrop.",
     offers: [
@@ -117,7 +119,7 @@ const contentData = [
     id: 5,
     img: img5,
     title: "Mindfulness for Students",
-    subtitle: "Uncover the Luxury of Mindfulness in Sri Lanka for Students",
+    subtitle: "Empowering Minds, Enhancing Focus and Well-being in Education",
     description:
       "Are you a student seeking academic excellence and personal growth? Are you an educator looking to enhance your teaching and create a more mindful classroom environment? Look no further. Join us at INTT Leisure for a transformative journey that blends the luxury of Sri Lanka with mindfulness experiences tailored for both students and educators.",
     offers: [

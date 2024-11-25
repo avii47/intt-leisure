@@ -10,7 +10,7 @@ import img3 from '../assets/images/destination-sriLanka.jpeg';
 
 const HeroSection = lazy(() => import('../components/HeroSection'));
 const DestinationContent = lazy(() => import('../components/DestinationsPage/DestinationInnerContent'));
-const FooterSection = lazy(() => import('../components/FooterSection'));
+const FooterSection = lazy(() => import('../components/Footer'));
 
 const DestinationInnerPage = () => {
 

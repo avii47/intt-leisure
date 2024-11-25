@@ -8,7 +8,7 @@ import "../components/CSS/Pages/PackageContent.css";
 
 const HeroSection = lazy(() => import("../components/HeroSection"));
 const PackageContent = lazy(() => import("../components/PackageContentPage/PackageContent"));
-const FooterSection = lazy(() => import("../components/FooterSection"));
+const FooterSection = lazy(() => import('../components/Footer'));
 
 const PackageContentPage = () => {
   const { id } = useParams();

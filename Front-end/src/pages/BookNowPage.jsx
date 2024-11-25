@@ -7,7 +7,7 @@ import bg from '../assets/images/bookNowPage-hero-img.jpg'
 
 const HeroSection = lazy(() => import('../components/HeroSection'));
 const BookNowContent = lazy(() => import('../components/BookNowPage/BookingForm'));
-const FooterSection = lazy(() => import('../components/FooterSection'));
+const FooterSection = lazy(() => import('../components/Footer'));
 
 const BookNowPage = () => {
     const title = 'Book Now';
