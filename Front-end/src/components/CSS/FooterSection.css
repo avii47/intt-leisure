@@ -79,6 +79,7 @@
   height: 3rem;
 }
 .mobile-view .footer-logos {
+  flex-wrap: wrap;
   gap: 2.5rem;
 }
 .mobile-view .footer-logos {
