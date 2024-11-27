@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Modal from "../components/BookNowPage/Modal";
-import { useNewsletterSubscription } from "../hooks/useNewsletterSubscription";
+import Modal from "../BookNowPage/Modal";
+import { useNewsletterSubscription } from "../../hooks/useNewsletterSubscription";
 import "./CSS/FooterSection.css";
 
 import addressIcon from "../assets/icons/icons8-location-pin-50.png";

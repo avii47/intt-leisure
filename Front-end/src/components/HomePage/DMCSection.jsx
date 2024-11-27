@@ -85,7 +85,7 @@ function DMCSection() {
               </p>
               <div className="card-options">
                 <div className="card-option">
-                  <img src={icon1} className="card-icon" />
+                  <img src={icon2} className="card-icon" />
                   <span className="font-secondary" style={{ fontSize: "12px" }}>
                     Sri Lankan tours
                   </span>

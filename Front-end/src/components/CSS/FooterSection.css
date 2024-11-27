@@ -7,16 +7,19 @@
   color: white;
   text-align: center;
 }
+.mobile-view .footer-content {
+  width: 100vw;
+  padding: 2rem 2rem 5rem 2rem;
+}
 .ft-top-txt{
   letter-spacing: 1.8px; 
   font-size: 16px;
 }
 .mobile-view .ft-top-txt{
-  letter-spacing: 1px; 
-  font-size: 10px;
-  font-weight: 200;
+display: none;
 }
 .footer-nav {
+  text-align: left;
   margin-top: 100px;
   margin-left: 4rem;
 }
@@ -146,10 +149,7 @@
   color: black;
 }
 
-.mobile-view .footer-content {
-  width: 100vw;
-  padding: 2rem 2rem 5rem 2rem;
-}
+
 .mobile-view .footer-nav {
   display: flex;
   flex-wrap: wrap;
@@ -233,5 +233,5 @@
   display: flex;
 }
 .mobile-view .footer-main-container {
-  display: block;
+  display: block !important;
 }

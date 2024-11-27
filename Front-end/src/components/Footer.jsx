@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Modal from "../components/BookNowPage/Modal";
+import { useMobileView } from "../contexts/MobileViewContext";
 import { useNewsletterSubscription } from "../hooks/useNewsletterSubscription";
 import "./CSS/FooterSection.css";
 
@@ -13,22 +14,9 @@ import Civil_aviation_License from "../assets/icons/Civil aviation License.png";
 import SLTDA_Certified from "../assets/icons/SLTDA Certified.png";
 
 const Footer = () => {
-  const [isMobileView, setIsMobileView] = useState(false);
+  const isMobileView = useMobileView();
   const { email, setEmail, showModal, handleSubscribe, setShowModal } =
     useNewsletterSubscription();
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobileView(window.innerWidth <= 840);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   return (
     <footer
@@ -42,11 +30,9 @@ const Footer = () => {
           practice and turn tranquility into a lasting lifestyle. Register now
           and stay connected to your inner peace!
         </p>
-        <hr></hr>
+        <hr style={{display: isMobileView?'none':'block'}}></hr>
 
-        <div
-          className={`footer-main-container`}
-        >
+        <div className={`footer-main-container`}>
           <div className="col-md-4" style={{ textAlign: "left" }}>
             <img loading="lazy" src={logo} className="ft-logo" alt="logo" />
             <p>
@@ -71,18 +57,36 @@ const Footer = () => {
                 style={{ marginTop: isMobileView ? "10px" : "0px" }}
               >
                 <div className="col-sm-3">
-                  <img loading="lazy" className="certificate-img" src={IATA_logo} alt="iata Logo" />
+                  <img
+                    loading="lazy"
+                    className="certificate-img"
+                    src={IATA_logo}
+                    alt="iata Logo"
+                  />
                 </div>
                 <div className="col-sm-3">
-                  <img loading="lazy" className="certificate-img" src={ARC_logo} alt="pata Logo" />
+                  <img
+                    loading="lazy"
+                    className="certificate-img"
+                    src={ARC_logo}
+                    alt="pata Logo"
+                  />
                 </div>
                 <div className="col-sm-3">
-                  <img loading="lazy" className="certificate-img" src={SLTDA_Certified} alt="iata Logo"
-                />
+                  <img
+                    loading="lazy"
+                    className="certificate-img"
+                    src={SLTDA_Certified}
+                    alt="iata Logo"
+                  />
                 </div>
                 <div className="col-sm-3">
-                  <img loading="lazy" className="certificate-img" src={Civil_aviation_License} alt="pata Logo"
-                />
+                  <img
+                    loading="lazy"
+                    className="certificate-img"
+                    src={Civil_aviation_License}
+                    alt="pata Logo"
+                  />
                 </div>
               </div>
             </div>
@@ -90,13 +94,7 @@ const Footer = () => {
 
           {isMobileView ? (
             <>
-              <div
-                className="col-md footer-nav d-flex"
-                style={{
-                  textAlign: "left",
-                  paddingLeft: isMobileView ? "" : "70px",
-                }}
-              >
+              <div className="col-md footer-nav d-flex">
                 <h5 style={{ marginBottom: "-20px" }}>Useful Links</h5>
                 <div className="col-md-12 d-flex" style={{ gap: "80px" }}>
                   <div className="col-md-6">
@@ -136,9 +134,7 @@ const Footer = () => {
                 <h5 style={{ marginBottom: "20px" }}>Contact Info</h5>
                 <div className="ftc">
                   <address className="d-flex">
-                    <div
-                      className="col"
-                    >
+                    <div className="col">
                       <h5>Sri Lanka</h5>
                       No.26/6
                       <br />
@@ -172,15 +168,11 @@ const Footer = () => {
               <div className="footer-con">
                 <div className="ftc" style={{ marginTop: "45px" }}>
                   <address className="d-flex">
-                    <div
-                      className="col"
-                    >
+                    <div className="col">
                       <h5>United States of America</h5>
                       1803 Wicklow Road Naperville
                       <br />
-                      IL 60564,
-                      Chicago,
-                      USA
+                      IL 60564, Chicago, USA
                     </div>
                   </address>
                   <address className="d-flex">
@@ -206,13 +198,7 @@ const Footer = () => {
             </>
           ) : (
             <>
-              <div
-                className="col-md-1 footer-nav"
-                style={{
-                  textAlign: "left",
-                  paddingLeft: isMobileView ? "" : "",
-                }}
-              >
+              <div className="col-md-1 footer-nav">
                 <h5 style={{ marginBottom: "20px" }}>Useful Links</h5>
                 <div>
                   <a href="/mindfulness">Mindfulness</a>
@@ -233,7 +219,7 @@ const Footer = () => {
                   <a href="/termsConditions">Terms of Service</a>
                 </div>
               </div>
-              <div className="col-md-1 footer-nav" style={{ textAlign: "left" }}>
+              <div className="col-md-1 footer-nav">
                 <h5 style={{ marginBottom: "20px" }}>Explore</h5>
                 <div>
                   <a href="/destinations">Destinations</a>

@@ -66,7 +66,6 @@
 .mobile-view #our-achievements {
     width: 100vw;
     margin-left: -2rem;
-    background-color: aqua;
 }
 .our-achievements-bg {
     width: 100%;
@@ -75,7 +74,7 @@
     z-index: 0; 
 }
 .mobile-view .our-achievements-bg {
-    height: 1000px;
+    height: 1250px;
 }
 .our-achievements-overlayer {
     position: absolute;

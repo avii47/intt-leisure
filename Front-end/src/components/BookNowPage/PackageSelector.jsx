@@ -48,7 +48,7 @@ function PackageSelector({ onSelectPackage, onTabChange }) {
   ];
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: false,
     speed: 500,
     slidesToShow: 4,
@@ -121,10 +121,10 @@ function PackageSelector({ onSelectPackage, onTabChange }) {
                 <div className={`loading-indicator ${loading ? "visible" : ""}`} >
                   <LoadingSpinner />
                 </div>
-                <div  className={`pkg-card-container ${loading ? "" : "visible"}`} >
+                <div className={`pkg-card-container ${loading ? "" : "visible"}`} >
                   <Slider {...settings}>
                     {tabs[activeTab].content.map((content, index) => (
-                      <div key={index} className="slider-item">
+                      <div key={index} className="slider-item2">
                         <PackageCard
                           content={content}
                           onClick={() =>
