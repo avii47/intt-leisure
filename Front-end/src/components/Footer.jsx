@@ -45,7 +45,7 @@ const Footer = () => {
         <hr></hr>
 
         <div
-          className={`footer-main-container ${isMobileView ? "" : "d-flex"}`}
+          className={`footer-main-container`}
         >
           <div className="col-md-4" style={{ textAlign: "left" }}>
             <img loading="lazy" src={logo} className="ft-logo" alt="logo" />
@@ -67,21 +67,21 @@ const Footer = () => {
             <div className="certificate-container">
               <h5 style={{ margin: "50px 0 20px 0" }}>Our Certificates</h5>
               <div
-                className="footer-logos col-md-12"
+                className="footer-logos"
                 style={{ marginTop: isMobileView ? "10px" : "0px" }}
               >
-                <div className="col-md-3">
-                <img loading="lazy" className="certificate-img" src={IATA_logo} alt="iata Logo" />
+                <div className="col-sm-3">
+                  <img loading="lazy" className="certificate-img" src={IATA_logo} alt="iata Logo" />
                 </div>
-                <div className="col-md-3">
-                <img loading="lazy" className="certificate-img" src={ARC_logo} alt="pata Logo" />
+                <div className="col-sm-3">
+                  <img loading="lazy" className="certificate-img" src={ARC_logo} alt="pata Logo" />
                 </div>
-                <div className="col-md-3">
-                <img loading="lazy" className="certificate-img" src={SLTDA_Certified} alt="iata Logo"
+                <div className="col-sm-3">
+                  <img loading="lazy" className="certificate-img" src={SLTDA_Certified} alt="iata Logo"
                 />
                 </div>
-                <div className="col-md-3">
-                <img loading="lazy" className="certificate-img" src={Civil_aviation_License} alt="pata Logo"
+                <div className="col-sm-3">
+                  <img loading="lazy" className="certificate-img" src={Civil_aviation_License} alt="pata Logo"
                 />
                 </div>
               </div>

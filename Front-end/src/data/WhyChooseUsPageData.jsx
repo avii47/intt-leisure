@@ -5,19 +5,23 @@ import backed_by_research_icon from "../assets/icons/mind.png";
 import ancient_root_icon from "../assets/icons/ancient-roots-icon.svg";
 import travel_wisdom_icon from "../assets/icons/travel-wisdom-icon.svg";
 
+import twenty47_icon from "../assets/icons/24-hours (2).png"
+import airTravel_icon from "../assets/icons/air travel.png"
+import travelInsurance_icon from "../assets/icons/travel insurance.png"
+
 const contentData = [
   {
-    img: authentic_practice_icon,
+    img: twenty47_icon,
     title: "24x7 Service",
     sub: "Rely on our 24/7 service to ensure you are looked after at every step, ultimately guiding you to fully immerse yourself in the beauty of your mindfulness journey.",
   },
   {
-    img: forbes_certified_coach_icon,
+    img: travelInsurance_icon,
     title: "Travel Insurance",
     sub: "Our holiday packages offer more than just relaxation and adventure. With comprehensive insurance, you can embark on your mindful journey worry-free.",
   },
   {
-    img: eyes_of_locals_icon,
+    img: airTravel_icon,
     title: "Air Travel/Tickets",
     sub: "We enhance your mindful journey with comprehensive services. From meditation programs to convenient air ticketing, we ensure a seamless Sri Lankan experience.",
   },

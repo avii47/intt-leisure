@@ -80,7 +80,8 @@
 }
 .mobile-view .footer-logos {
   flex-wrap: wrap;
-  gap: 2.5rem;
+  gap: 2rem;
+  padding-left: 0.5rem;
 }
 .mobile-view .footer-logos {
   display: flex;
@@ -89,7 +90,7 @@
   height: 90px;
 }
 .mobile-view .footer-logos img {
-  height: 3.5rem;
+  height: 3.2rem;
 }
 
 .footer-social {
@@ -100,18 +101,19 @@
   position: relative;
   margin-bottom: 20px;
   padding: 0 10px;
-  background-color: #2c261e;
+  background-color: #2f281f;
   justify-self: center;
 }
 .footer-social .social-icons {
   position: relative;
-  z-index: 1 !important; /* Ensure icons are above the hr */
+  z-index: 1 !important; 
+  background-color: #322b22;
 }
 
 .footer-social hr {
   position: relative;
-  z-index: 0 !important; /* Ensure hr stays behind */
-  margin-top: -35px; /* Adjust spacing to move hr below icons */
+  z-index: 0 !important;
+  margin-top: -35px; 
 }
 
 .footer-social .social-icons a {
@@ -227,16 +229,9 @@
   height: 6rem;
   margin-bottom: 10px;
 }
+.footer-main-container{
+  display: flex;
+}
 .mobile-view .footer-main-container {
   display: block;
-  flex-wrap: wrap;
-}
-.certificate-container{
-    
-}
-.certificate-img{
-
-}
-.mobile-view .certificate-container{
-    
 }
