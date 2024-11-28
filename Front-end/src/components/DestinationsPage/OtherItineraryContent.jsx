@@ -1,10 +1,8 @@
 import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useMobileView } from "../../contexts/MobileViewContext";
-import DayCard from "./DayCard";
-import ContactFrom from "./DContactForm";
+import ContactFrom from "../BookNowPage/BookingForm";
 import DGallery from "./DGallery";
-import TourMap from "./MapComponent";
 import "../CSS/Pages/ItineraryContent.css";
 
 import ItineraryCategorySection from "./ItineraryCategorySection";
@@ -31,7 +29,7 @@ function OtherItineraryContent({ content }) {
         >
           Inclusion
         </h6>
-        <ul>
+        <ul className="other-tours-inclusion-list">
           {content.inclusion.map((item, i) => (
             <li
               key={i}
@@ -52,10 +50,7 @@ function OtherItineraryContent({ content }) {
 
         <DGallery images={content.galleryImages} />
 
-        <ContactFrom />
-        <br />
-        <br />
-        <br />
+        <ContactFrom defPackageName={content.title} />
 
         <ItineraryCategorySection
           contentCat={"dubai"}

@@ -119,8 +119,7 @@ const ServicesSection = () => {
             >
               Choose Your Journey
             </h6>
-            <hr className="" style={{ width: "11rem" }}></hr>
-            <br></br>
+            <hr style={{ width: "11rem", marginTop:'-2px' }}></hr>
             <h3 className="font-primary left-align">
               Experience the Experience
             </h3>

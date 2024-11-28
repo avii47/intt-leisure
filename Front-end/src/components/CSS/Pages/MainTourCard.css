@@ -54,7 +54,6 @@
     width: 100%;
     padding: 0 1.5rem;
     color: white;
-    
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
@@ -70,7 +69,11 @@
 }
 
 .tour-card .tour-card-content h4 {
-    font-size: 28px;
+    font-size: 25px !important;
+    margin: 10px 0;
+}
+.mobile-view .tour-card .tour-card-content h4 {
+    font-size: 22px !important;
     margin: 10px 0;
 }
 
@@ -83,10 +86,11 @@
 }
 .mobile-view .tour-card .tour-card-content p {
     opacity: 1;
+    font-size: 12px;
 }
 
 .tour-card:hover .tour-card-content {
-    transform: translateY(-50%);
+    transform: translateY(-30%);
     opacity: 1;
 }
 

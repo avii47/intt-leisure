@@ -26,7 +26,7 @@ function MindfulnessTourismSection() {
           <>
             <div>
               <h5 className="card-subtitle font-secondary">Explore</h5>
-              <hr />
+              <hr style={{marginTop:'-2px'}} />
             </div>
 
             <h1 className="font-primary">Mindfulness Tourism</h1>

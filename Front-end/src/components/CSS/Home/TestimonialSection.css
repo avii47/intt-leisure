@@ -15,6 +15,9 @@
     opacity: 0;
     transition: all 1s ease;
 }
+.mobile-view .testimonial-iframe{
+    margin-left: 0px;
+}
 .testimonial-text{
     display: flex;
     flex-direction: row;

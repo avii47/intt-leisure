@@ -26,7 +26,7 @@ const contentData = [
     id: 1,
     tag: "dubai",
     img: dubai1,
-    title: "Winter Break in Dubai.",
+    title: "Winter Break in Dubai",
     subTitle: "A Four-day Experience in Dubai",
     cardTxt:
       "This tour itinerary outlines a four-day experience in Dubai, starting with a private transfer...",

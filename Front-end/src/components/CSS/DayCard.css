@@ -83,14 +83,14 @@
 
 /* Content section inside the expanded details */
 .day-card-content {
-  padding-top: 10px;
+  padding-top: 0.625rem;
+  margin-left: 1.25rem;
 }
 
 /* Footer details */
 .day-card-footer {
   display: flex;
   justify-content: space-between;
-  font-weight: bold;
-  margin-top: 15px;
+  margin-top: 1rem;
   color: #666;
 }

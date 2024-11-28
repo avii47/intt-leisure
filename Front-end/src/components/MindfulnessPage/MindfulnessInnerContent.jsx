@@ -109,11 +109,11 @@ function MindfulnessInnerContent({ content }) {
 
   return (
     <div
-      className={`mindfulnessInner-section page-section ${
+      className={`mindfulnessInner-section ${
         isMobileView ? "mobile-view" : ""
       }`}
     >
-      <div className="mindfulnessInner-content">
+      <div className="mindfulnessInner-content page-section">
         <h5 className="card-subtitle font-secondary">Explore</h5>
         <hr style={{ width: isMobileView ? "20%" : "4%", marginTop: "8px" }} />
         <h1 className="font-primary mindfulnessInner-title" style={{ marginBottom: "0px" }}>

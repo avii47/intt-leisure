@@ -101,7 +101,7 @@ const WhyChooseUsSection = () => {
         <div className="col-12 d-flex">
           <div className="col why-cu-text-col">
             <h3 className='font-primary'>What Makes Us Unique?</h3>
-            <hr style={{ width: '400px', marginTop: '-1px' }}></hr>
+            <hr style={{ width: isMobileView? '9rem': '25rem', marginTop: '-1px' }}></hr>
             <br></br>
             <p className='font-secondary'>Experience authentic mindfulness according to Buddha’s teachings, designed by Forbes-certified coach Dr. Gamini Hewawasam. Rooted in Sri Lankan heritage and backed by research, our programs guide you through ancient practices in carefully chosen locations, ensuring a seamless, expert-managed journey.</p>
           </div>

@@ -8,11 +8,7 @@
     text-align: left;
 }
 .get-itinerary-btn{
-    height: 60px;
-    width: 250px;
-    font-size: 20px;
-    margin-bottom: 60px;
-}
-.mobile-view .package-section-content{
-    
+    height: 3.75rem;
+    width: 15.625rem;
+    font-size: 1.25rem;
 }

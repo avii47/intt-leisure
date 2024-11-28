@@ -35,7 +35,7 @@ function DMCSection() {
           <h5 className="card-subtitle font-secondary">
             Sri Lanka Tour Packages
           </h5>
-          <hr style={{ width: isMobileView? "60%":"13%", marginTop: "-2px", marginleft: "10px" }} />
+          <hr style={{ width: isMobileView? "64%":"14%", marginTop: "-2px", marginleft: "10px" }} />
           <h1 className="font-primary">
             Your Trusted Destination Management Company for Sri Lanka
           </h1>

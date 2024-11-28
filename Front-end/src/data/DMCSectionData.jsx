@@ -8,14 +8,14 @@ import cycling_icon from "../assets/icons/DMC/bicycle.png"
 import walesWatching_icon from "../assets/icons/DMC/dolphin.png"
 import sriLanka_icon from "../assets/icons/DMC/default.png"
 
-import default_map from "../assets/icons/DMC/maps/default 2.gif";
+import default_map from "../assets/icons/DMC/maps/Default map.png";
 import surfing_map from "../assets/icons/DMC/maps/surfing.gif";
 import golf_map from "../assets/icons/DMC/maps/golf.gif";
 import hiking_map from "../assets/icons/DMC/maps/hiking.gif";
 import birdsWatching_map from "../assets/icons/DMC/maps/birds watching.gif";
 import mindfulness_map from "../assets/icons/DMC/maps/mindfulness.gif";
 import waterRafting_map from "../assets/icons/DMC/maps/water rafting.gif";
-import cycling_map from "../assets/icons/DMC/maps/cycling.gif";
+import cycling_map from "../assets/icons/DMC/maps/cycling.png";
 import walesWatching_map from "../assets/icons/DMC/maps/whales watching.gif";
 
 const contentData = [

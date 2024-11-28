@@ -9,7 +9,7 @@ const contentData = [
     id: 1,
     img: img1,
     title: "Mindfulness for Leaders",
-    subtitle: "Lead with Clarity, Resilience, and Ancient Wisdom",
+    subtitle: "Lead with Clarity, Resilience, and Ancient Wisdom of Mindfulness",
     description:
       "In the serene and culturally rich backdrop of Sri Lanka, where mindfulness has thrived for centuries, INTT Leisure invites leaders like you to embark on a transformative journey towards becoming more mindful and effective in your leadership role.",
     offers: [

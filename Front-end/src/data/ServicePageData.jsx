@@ -13,7 +13,7 @@ const contentData = [
     img: img1,
     title: "Leaders",
     sub: "Mindfulness for Leaders",
-    text: "Lead with Clarity, Resilience, and Ancient Wisdom",
+    text: "Lead with Clarity, Resilience, and Ancient Wisdom of Mindfulness",
     label: "Explore Package",
   },
   {
