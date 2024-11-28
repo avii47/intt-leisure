@@ -123,7 +123,10 @@ display: none;
   padding: 0 10px;
   z-index: 1 !important; 
   background-color: #322b22;
-  justify-self: center;
+  justify-self: center !important;
+}
+.mobile-view .social-icons{
+  margin-left: 0%;
 }
 
 .footer-social hr {
@@ -173,9 +176,7 @@ display: none;
   margin-left: 0;
   font-size: small;
 }
-.mobile-view .footer-social {
-  margin: 0;
-}
+
 .mobile-view .footer-copyright {
   margin: 0;
   padding-top: 40px;

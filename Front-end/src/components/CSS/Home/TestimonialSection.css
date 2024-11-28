@@ -1,6 +1,5 @@
 .testimonial-section{
     background-image: url('/src/assets/images/Testimonial-bg.png');
-    background-repeat: no-repeat;
     background-attachment: fixed;
     object-fit: cover;
     padding: 50px 0;

@@ -1,5 +1,5 @@
 .hero-section {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   position: relative;
 }
@@ -29,7 +29,6 @@ video {
 }
 .mobile-view .hero-content {
   width: 100vw;
-  height: 100vh;
   padding: 0 2rem 0 2rem;
 }
 .hero-heading-section {
@@ -90,7 +89,7 @@ video {
   transition: 0.1s ease-in-out;
 }
 .mobile-view .hero-heading-section {
-  margin-top: 50%;
+  margin-top: 40%;
 }
 .mobile-view .hero-heading-section p{
   font-size: small;
