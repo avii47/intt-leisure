@@ -33,7 +33,7 @@ function DMCSection() {
       <div className="DMC-content">
         <div>
           <h5 className="card-subtitle font-secondary">
-            sri lanka tour packages
+            Sri Lanka Tour Packages
           </h5>
           <hr style={{ width: isMobileView? "60%":"13%", marginTop: "-2px", marginleft: "10px" }} />
           <h1 className="font-primary">

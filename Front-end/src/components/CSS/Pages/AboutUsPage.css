@@ -115,17 +115,36 @@
 }
 
 .vm-container{
-    min-height: 520px;
-    width: 470px;
-    padding: 50px;
+    min-height: 32.5rem;
+    width: 29.375rem;
+    padding: 3.125rem;
     border-radius: 15px;
     background-color: rgb(255, 255, 255);
     box-shadow: #d5b693 0px 3px 8px;
 }
+.vm-container p, .values-li li{
+    font-size: 20px;
+}
+.mobile-view .vm-container p, .mobile-view .values-li li{
+    font-size: 15px;
+}
 .mobile-view .vm-container{
     min-height: fit-content;
     width: auto;
+    padding: 2rem;
 }
+.vm-icon{
+    height: 12.5rem;
+    margin-bottom: 2.5rem;
+}
+.values-li{
+    text-align: left;
+    padding-left: 3.5rem;
+}
+.mobile-view .values-li{
+    padding-left: 1rem;
+}
+
 .achivement-img{
     height: 180px;
     margin-bottom: 50px;

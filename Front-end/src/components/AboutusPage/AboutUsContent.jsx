@@ -163,25 +163,25 @@ const AboutUsContent = () => {
               <div className="col-md-4 d-flex vm-card-col">
                 <div className='vm-container'>
                   <h3 className="font-primary">Our Vision</h3>
-                  <img src={vision_icon} alt="vision icon" style={{height:'200px', marginBottom:'40px'}} loading='lazy'/>
-                  <p className="font-secondary" style={{fontSize:'20px'}}>To unlock leadership potential with mindfulness vacations.</p>
+                  <img className='vm-icon' src={vision_icon} alt="vision icon" loading='lazy'/>
+                  <p className="font-secondary">To unlock leadership potential with mindfulness vacations.</p>
                 </div>
               </div>
               <div className="col-md-4 d-flex vm-card-col" style={{justifyContent:'center'}}>
                 <div className='vm-container'>
                   <h3 className="font-primary">Our Mission</h3>
-                  <img src={mission_icon} alt="mission icon" style={{height:'200px', marginBottom:'40px'}} loading='lazy'/>
-                  <p className="font-secondary" style={{fontSize:'20px'}}>To uncover the hidden gem of authentic Buddhist teachings that provide the key to intellectual and emotional balance.</p>
+                  <img className='vm-icon' src={mission_icon} alt="mission icon" loading='lazy'/>
+                  <p className="font-secondary">To uncover the hidden gem of authentic Buddhist teachings that provide the key to intellectual and emotional balance.</p>
                 </div>
               </div>
               <div className="col-md-4 d-flex vm-card-col" style={{justifyContent:'right' }}>
                 <div className='vm-container'>
                   <h3 className="font-primary">Our Values</h3>
-                  <img src={goal_icon} alt="mission icon" style={{height:'200px', marginBottom:'40px'}} loading='lazy'/>
-                  <ul style={{textAlign:'left', paddingLeft:'60px'}}>
-                    <li className="font-secondary" style={{fontSize:'20px'}}>Introspection</li>
-                    <li className="font-secondary" style={{fontSize:'20px'}}>Compassionate Leadership</li>
-                    <li className="font-secondary" style={{fontSize:'20px'}}>Holistic Well-being</li>
+                  <img className='vm-icon' src={goal_icon} alt="mission icon" loading='lazy'/>
+                  <ul className='values-li'>
+                    <li className="font-secondary">Introspection</li>
+                    <li className="font-secondary">Compassionate Leadership</li>
+                    <li className="font-secondary">Holistic Well-being</li>
                   </ul>
                   {/* <p className="font-secondary" style={{fontSize:'20px'}}>To uncover the hidden gem of authentic Buddhist teachings that provide the key to intellectual and emotional balance.</p> */}
                 </div>

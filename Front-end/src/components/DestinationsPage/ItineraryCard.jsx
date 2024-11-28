@@ -12,7 +12,7 @@ const ItineraryCard = React.forwardRef(({ content, style, onClick }, ref) => {
       <div className="outer-div">
         <div className="itinerary-card" ref={ref} style={style} onClick={onClick}>
           <div className="image-overlay">
-            <img src={content.img} alt="Itinerary" className="card-image" />
+            <img src={content.img} alt="Itinerary-image" className="itinerary-card-image" />
             <div className="overlay-bg"></div> 
             <div className="overlay-text">
               <div style={{textAlign:'center'}}>

@@ -106,16 +106,20 @@
     opacity: 0.4;
   }
   
-  .arrow {
+  .arrow-cs {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     font-size: 24px;
     cursor: pointer;
     z-index: 10;
+    object-fit: cover;
+  }
+  .mobile-view .arrow-cs{
+    display: none !important;
   }
   
-  .arrow.next {
+  .arrow-cs.next {
     display: flex;
     width: 30px;
     height: 30px;
@@ -124,7 +128,7 @@
     justify-content: center;
   }
   
-  .arrow.prev {
+  .arrow-cs.prev {
     display: flex;
     width: 30px;
     height: 30px;

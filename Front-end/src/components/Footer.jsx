@@ -19,18 +19,14 @@ const Footer = () => {
     useNewsletterSubscription();
 
   return (
-    <footer
-      className={`footer justify-content-center d-flex ${
-        isMobileView ? "mobile-view" : ""
-      }`}
-    >
+    <footer className={`footer justify-content-center d-flex ${isMobileView ? "mobile-view" : ""}`}>
       <div className="footer-content justify-content-center">
         <p className="ft-top-txt">
           Keep the vacation bliss alive! Join us to deepen your mindfulness
           practice and turn tranquility into a lasting lifestyle. Register now
           and stay connected to your inner peace!
         </p>
-        <hr style={{display: isMobileView?'none':'block'}}></hr>
+        <hr style={{display: isMobileView? 'none': 'block'}}></hr>
 
         <div className={`footer-main-container`}>
           <div className="col-md-4" style={{ textAlign: "left" }}>
@@ -52,10 +48,7 @@ const Footer = () => {
             </form>
             <div className="certificate-container">
               <h5 style={{ margin: "50px 0 20px 0" }}>Our Certificates</h5>
-              <div
-                className="footer-logos"
-                style={{ marginTop: isMobileView ? "10px" : "0px" }}
-              >
+              <div className="footer-logos">
                 <div className="col-sm-3">
                   <img
                     loading="lazy"

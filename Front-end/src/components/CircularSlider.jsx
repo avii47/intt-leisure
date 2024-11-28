@@ -88,13 +88,13 @@ const CircularSlider = ({ onActiveItemChange }) => {
 };
 
 const CustomNextArrow = ({ onClick }) => (
-  <div className="arrow next" onClick={onClick}>
+  <div className="arrow-cs next" onClick={onClick}>
     <img src={right} alt="" />
   </div>
 );
 
 const CustomPrevArrow = ({ onClick }) => (
-  <div className="arrow prev" onClick={onClick}>
+  <div className="arrow-cs prev" onClick={onClick}>
     <img src={left} alt="" />
   </div>
 );

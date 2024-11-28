@@ -143,7 +143,7 @@ const contentData = [
     img: SriLankaAwaits,
     title: "Sri Lanka Awaits",
     subTitle: "An 8-Day Tour of Nature, Culture, and History",
-    cardTxt: "This 8-day tour of Sri Lanka offers a blend of culture, history, and nature. Visit Pinnawala’s Elephant Orphanage...",
+    cardTxt: "This 8-day tour of Sri Lanka offers a blend of culture, history, and nature...",
     overview: "This 8-day tour of Sri Lanka offers a blend of culture, history, and nature. Visit Pinnawala’s Elephant Orphanage, Sigiriya Rock Fortress, and the Royal Botanical Gardens. Explore Nuwara Eliya’s tea plantations, enjoy a river safari in Bentota, and experience the vibrant culture of Colombo. Stay in comfortable hotels throughout, with plenty of opportunities for relaxation and discovery. Perfect for experiencing Sri Lanka’s heritage and natural beauty.",
     galleryImages: [
         SriLankaAwaits, dambulla_img, sigiriya_img, peradeniya_img, bentota_img, maduRiver_img

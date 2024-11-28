@@ -23,6 +23,14 @@ display: none;
   margin-top: 100px;
   margin-left: 4rem;
 }
+.mobile-view .footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-left: 0rem;
+  margin-top: 3.5rem;
+}
+
 .footer-nav div {
   margin-top: 16px;
 }
@@ -70,6 +78,19 @@ display: none;
   border-radius: 4px;
   cursor: pointer;
 }
+.mobile-view .subscription-form {
+  width: 100%;
+}
+.mobile-view .subscription-form input {
+  width: 60%;
+  height: 40px;
+  font-size: small;
+}
+.mobile-view .subscription-form button {
+  width: 35%;
+  height: 40px;
+  font-size: 12px !important;
+}
 .footer-contact address {
   font-style: normal;
 }
@@ -82,16 +103,12 @@ display: none;
   height: 3rem;
 }
 .mobile-view .footer-logos {
-  flex-wrap: wrap;
-  gap: 2rem;
-  padding-left: 0.5rem;
+  justify-content: center; 
+  flex-wrap: wrap;        
+  gap: 1.5rem;              
+  padding-left: 0; 
 }
-.mobile-view .footer-logos {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  height: 90px;
-}
+
 .mobile-view .footer-logos img {
   height: 3.2rem;
 }
@@ -104,13 +121,9 @@ display: none;
   position: relative;
   margin-bottom: 20px;
   padding: 0 10px;
-  background-color: #2f281f;
-  justify-self: center;
-}
-.footer-social .social-icons {
-  position: relative;
   z-index: 1 !important; 
   background-color: #322b22;
+  justify-self: center;
 }
 
 .footer-social hr {
@@ -119,11 +132,7 @@ display: none;
   margin-top: -35px; 
 }
 
-.footer-social .social-icons a {
-  margin: 0 0.313rem;
-}
-
-.footer-social img {
+.social-icons img {
   height: 1.875rem;
 }
 
@@ -150,25 +159,8 @@ display: none;
 }
 
 
-.mobile-view .footer-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-left: 0rem;
-}
-.mobile-view .subscription-form {
-  width: 100%;
-}
-.mobile-view .subscription-form input {
-  width: 60%;
-  height: 40px;
-  font-size: small;
-}
-.mobile-view .subscription-form button {
-  width: 35%;
-  height: 40px;
-  font-size: 12px !important;
-}
+
+
 .mobile-view .footer-contact {
   margin: 0;
   padding: 5% 0%;
@@ -189,41 +181,7 @@ display: none;
   padding-top: 40px;
 }
 
-/* @media (max-width: 930px) {
-  .subscription-form {
-    flex-wrap: wrap;
-  }
-  .subscription-form button {
-    width: 100%;
-  }
-  .footer-nav{
-        gap: 1rem;
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-  .footer-2nd-row {
-    column-gap: 30px;
-  }
-  .footer-contact {
-    justify-content: center;
-  }
-  .ftc {
-    padding-left: 80px;
-  }
-}
-@media (max-width: 840px) {
-  .subscription-form {
-    flex-wrap: nowrap;
-  }
-  .subscription-form button {
-    width: 85%;
-  }
-  .footer-contact {
-    height: 320px;
-  }
-} */
+
 
 .ft-logo {
   height: 6rem;
@@ -233,5 +191,5 @@ display: none;
   display: flex;
 }
 .mobile-view .footer-main-container {
-  display: block !important;
+  display: block;
 }

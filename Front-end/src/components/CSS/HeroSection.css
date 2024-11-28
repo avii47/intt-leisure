@@ -1,5 +1,5 @@
 .hero-section {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   position: relative;
 }
@@ -29,6 +29,7 @@ video {
 }
 .mobile-view .hero-content {
   width: 100vw;
+  height: 100vh;
   padding: 0 2rem 0 2rem;
 }
 .hero-heading-section {
@@ -50,7 +51,7 @@ video {
   margin-top: 9.375rem;
 }
 .mobile-view .arrow-icon {
-  margin-top: 15rem;
+  margin-top: 8rem;
 }
 .bottom-viewbar-content {
   flex-wrap: wrap;
@@ -89,7 +90,7 @@ video {
   transition: 0.1s ease-in-out;
 }
 .mobile-view .hero-heading-section {
-  margin-top: 60%;
+  margin-top: 50%;
 }
 .mobile-view .hero-heading-section p{
   font-size: small;
