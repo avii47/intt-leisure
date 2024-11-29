@@ -5,10 +5,6 @@ import "../CSS/Home/DMCSection.css";
 
 import CircularSlider from "../CircularSlider";
 
-import icon1 from "../../assets/icons/spec1-icon.png";
-import icon2 from "../../assets/icons/spec2-icon.png";
-import bg from "../../assets/images/dmc-bg.png";
-
 function DMCSection() {
   const isMobileView = useMobileView();
   const navigate = useNavigate();
@@ -22,7 +18,6 @@ function DMCSection() {
   // Callback to handle active item changes
   const handleActiveItemChange = (item) => {
     setActiveItem(item);
-    console.log("Active item updated:", item); // Log for debugging or other actions
   };
 
   return (
@@ -50,18 +45,6 @@ function DMCSection() {
         <div className={`${isMobileView ? "" : "d-flex"}`}>
           {isMobileView && (
             <>
-              <div>
-                <h5 className="DMC-card-subtitle font-secondary" style={{marginTop:'50px'}}>Explore</h5>
-                <hr style={{width:'20%', marginTop:'-2px'}} />
-              </div>
-
-              <h1 className="font-primary" style={{ fontSize: "25px" }}>
-                {activeItem.title}
-              </h1>
-
-              <p className="DMC-card-description font-secondary">
-                {activeItem.description}
-              </p>
               <div className="carousel-container">
                 <CircularSlider onActiveItemChange={handleActiveItemChange} />
               </div>
@@ -75,90 +58,67 @@ function DMCSection() {
                   className="DMC-card-image-v"
                 />
               </div>
+              <img src={activeItem.bg} className="DMC-bg-img" alt="" />
 
-              <p className="card-description font-secondary">
-                Experience mindfulness in Sri Lanka with techniques supported by
-                research and teachings rooted in original practices. Our
-                approach is distinct from common Western ideologies, offering a
-                unique way to deepen your mindfulness practice and find true
-                relaxation.
-              </p>
-              <div className="card-options">
-                <div className="card-option">
-                  <img src={icon2} className="card-icon" />
-                  <span className="font-secondary" style={{ fontSize: "12px" }}>
-                    Sri Lankan tours
-                  </span>
+              <div style={{height:'25rem'}}>
+                <div>
+                  <h5 className="DMC-card-subtitle font-secondary" >Explore</h5>
+                  <hr style={{width:'20%', marginTop:'-2px', color:'white'}} />
                 </div>
-                <div className="card-option">
-                  <img src={icon1} className="card-icon" />
-                  <span className="font-secondary" style={{ fontSize: "12px" }}>
-                    Concierge Service
-                  </span>
-                </div>
+
+                <h1 className="font-primary" style={{ fontSize: "28px", color:'white' }}>
+                  {activeItem.title}
+                </h1>
+
+                <p className="DMC-card-description font-secondary">
+                  {activeItem.description}
+                </p>
+                <button
+                  className="card-button"
+                  onClick={() => handleOnClick(`${activeItem.link}`)}
+                >
+                  Learn More
+                </button>
               </div>
-              <button
-                className="card-button"
-                onClick={() => handleOnClick(`mindfulness`)}
-              >
-                Learn More
-              </button>
+
             </>
           )}
 
           {!isMobileView && (
             <>
               <div
-                className="col-md-6 d-flex"
+                className="col-md-2 d-flex"
                 style={{ justifyContent: "left" }}
               >
-                <img
+                   <div className="carousel-container">
+                    <CircularSlider
+                      onActiveItemChange={handleActiveItemChange}
+                    />
+                  </div>
+
+              </div>
+              <div className="col-md-10 DMC-card-con">
+              <img
                   src={activeItem.map}
                   alt="Tour"
                   className="DMC-card-image-v"
                 />
-              </div>
-              <div className="col-md-6 DMC-card-con">
-                <div className="DMC-card-content">
-                  <img
-                    src={bg}
-                    alt=""
-                    style={{
-                      position: "absolute",
-                      height: "500px",
-                      right: "-180px",
-                      rotate: "20deg",
-                    }}
-                  />
+                <img src={activeItem.bg} className="DMC-bg-img" key={activeItem.bg} alt={activeItem.bg} />
+                <div className="DMC-card-content" key={activeItem.title}>
                   <h5 className="DMC-card-subtitle font-secondary">Explore</h5>
                   <hr style={{ width: "9%", marginTop: "-2px" }} />
-                  <h1 className="font-primary" style={{ fontSize: "25px" }}>
+                  <h1 className="font-primary" style={{ fontSize: "28px" }}>
                     {activeItem.title}
                   </h1>
                   <p className="DMC-card-description font-secondary">
                     {activeItem.description}
                   </p>
-                  <div className="card-options">
-                    <div className="card-option">
-                      <img src={icon2} className="card-icon" />
-                      <span className="font-secondary">Sri Lankan tours</span>
-                    </div>
-                    <div className="card-option">
-                      <img src={icon1} className="card-icon" />
-                      <span className="font-secondary">Concierge Service</span>
-                    </div>
-                  </div>
                   <button
-                    className="card-button"
+                    className="DMC-card-button"
                     onClick={() => handleOnClick(`${activeItem.link}`)}
                   >
                     Learn More
                   </button>
-                  <div className="carousel-container">
-                    <CircularSlider
-                      onActiveItemChange={handleActiveItemChange}
-                    />
-                  </div>
                 </div>
               </div>
             </>

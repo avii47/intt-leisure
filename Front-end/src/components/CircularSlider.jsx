@@ -5,9 +5,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../components/CSS/CircularSlider.css";
 
-import left from "../assets/icons/left.png";
-import right from "../assets/icons/right.png";
-
 import contentData from "../data/DMCSectionData";
 
 const CircularSlider = ({ onActiveItemChange }) => {
@@ -28,13 +25,15 @@ const CircularSlider = ({ onActiveItemChange }) => {
     focusOnSelect: true,
     nextArrow: <CustomNextArrow />,
     prevArrow: <CustomPrevArrow />,
-    beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex), // Update the current slide
+    vertical: true, // Enable vertical scrolling
+    beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex),
     responsive: [
       {
-        breakpoint: 768, // Mobile breakpoint (e.g., tablets and smaller screens)
+        breakpoint: 768,
         settings: {
-          slidesToShow: 5, // Show 5 slides on mobile view
-          centerMode: true, // Keep centerMode enabled
+          slidesToShow: 7,
+          centerMode: true,
+          vertical: true, // Ensure vertical mode on mobile too
         },
       },
     ],
@@ -88,14 +87,14 @@ const CircularSlider = ({ onActiveItemChange }) => {
 };
 
 const CustomNextArrow = ({ onClick }) => (
-  <div className="arrow-cs next" onClick={onClick}>
-    <img src={right} alt="" />
+  <div className="arrow-cs prev" onClick={onClick}>
+    <i class="fa fa-angle-up" aria-hidden="true" style={{ transform: "rotate(30deg)"}}></i>
   </div>
 );
 
 const CustomPrevArrow = ({ onClick }) => (
-  <div className="arrow-cs prev" onClick={onClick}>
-    <img src={left} alt="" />
+  <div className="arrow-cs next" onClick={onClick}>
+    <i class="fa fa-angle-down" aria-hidden="true" style={{ transform: "rotate(-30deg)"}}></i>
   </div>
 );
 
