@@ -2,7 +2,7 @@ import React from 'react';
 import '../CSS/PackageCard.css';
 
 const PackageCard = ({ content, onClick, isSelected }) => (
-    
+    <div className="pkg-outer-div">
         <div className={`package-card ${isSelected ? 'selected' : ''}`} onClick={onClick}>
             <div class="package-image-zoom-container">
             <div className="sc-overlayer"></div>
@@ -12,7 +12,7 @@ const PackageCard = ({ content, onClick, isSelected }) => (
                 </div>
             </div>
         </div>
-    
+    </div>
   );
   
   export default PackageCard;

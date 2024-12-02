@@ -78,14 +78,14 @@ function PackageSelector({ onSelectPackage, onTabChange }) {
   const handleCardClick = (tabId, index, title) => {
     setSelectedCard({ tabId, cardIndex: index });
     if (onSelectPackage) {
-      onSelectPackage(title); // Ensure this doesn't trigger a reload
+      onSelectPackage(title); 
     }
   };
 
   const handleTabClick = (tabId) => {
     setActiveTab(tabId);
     if (onTabChange) {
-      onTabChange(tabId); // Ensure no unintended navigation occurs
+      onTabChange(tabId); 
     }
   };
 

@@ -49,9 +49,8 @@
     right: 10px;
     transform: translateX(50%);
   }
-  .mobile-view .left {
+  .mobile-view .a-left {
     left: -10px;
-    transform: translateX(-50%);
   }
   
   .thumbnail-row {

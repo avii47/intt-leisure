@@ -1,10 +1,19 @@
 .package-card{
-    flex: 1 1 18.75rem; 
-    min-width: 13rem;
-    height: 9.6rem;
+    flex: 1 1 14rem; 
+    min-width: 100%;
     text-align: left;
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
+}
+.pkg-outer-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+.mobile-view .pkg-outer-div{
+    padding: 10px;
 }
 .package-image-zoom-container {
     overflow: hidden;

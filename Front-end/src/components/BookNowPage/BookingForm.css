@@ -139,9 +139,8 @@
   
   
   .slider-item2 {
-    width: fit-content;
-    padding: 20px;
-    max-width: 280px; 
+    justify-content: center;
+    display: flex;
     box-sizing: border-box;
   }
   .cl-btn:hover{
