@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useMobileView } from "../../contexts/MobileViewContext";
 import { useNavigate } from "react-router-dom";
 import "../CSS/Home/DMCSection.css";
 
+import ContentData from "../../data/DMCSectionData";
 import CircularSlider from "../CircularSlider";
 
 function DMCSection() {
   const isMobileView = useMobileView();
   const navigate = useNavigate();
 
-  const [activeItem, setActiveItem] = useState(0);
+  const [activeItem, setActiveItem] = useState({});
+  const [preloadedImages, setPreloadedImages] = useState({}); // Store preloaded images for bg and map
 
   const handleOnClick = (path) => {
     navigate(path);
@@ -19,6 +21,30 @@ function DMCSection() {
   const handleActiveItemChange = (item) => {
     setActiveItem(item);
   };
+
+  // Utility function to preload images (both bg and map)
+  const preloadImages = (items) => {
+    const preloaded = {};
+    items.forEach((item) => {
+      if (item.bg) {
+        const bgImg = new Image();
+        bgImg.src = item.bg;
+        preloaded[item.bg] = bgImg; // Save the preloaded bg image
+      }
+      if (item.map) {
+        const mapImg = new Image();
+        mapImg.src = item.map;
+        preloaded[item.map] = mapImg; // Save the preloaded map image
+      }
+    });
+    return preloaded;
+  };
+
+  // Preload all images on component mount
+  useEffect(() => {
+    const preloaded = preloadImages(ContentData); // Preload both bg and map images
+    setPreloadedImages(preloaded);
+  }, []); // Run once on mount
 
   return (
     <div
@@ -30,7 +56,13 @@ function DMCSection() {
           <h5 className="card-subtitle font-secondary">
             Sri Lanka Tour Packages
           </h5>
-          <hr style={{ width: isMobileView? "64%":"14%", marginTop: "-2px", marginleft: "10px" }} />
+          <hr
+            style={{
+              width: isMobileView ? "64%" : "14%",
+              marginTop: "-2px",
+              marginleft: "10px",
+            }}
+          />
           <h1 className="font-primary">
             Your Trusted Destination Management Company for Sri Lanka
           </h1>
@@ -53,20 +85,29 @@ function DMCSection() {
                 style={{ justifyContent: "center" }}
               >
                 <img
-                  src={activeItem.map}
+                  src={preloadedImages[activeItem.map]?.src || activeItem.map}
                   alt="Tour"
                   className="DMC-card-image-v"
                 />
               </div>
-              <img src={activeItem.bg} className="DMC-bg-img" alt="" />
+              <img
+                src={preloadedImages[activeItem.bg]?.src || activeItem.bg}
+                className="DMC-bg-img"
+                alt=""
+              />
 
-              <div style={{height:'25rem'}}>
+              <div style={{ height: "25rem" }}>
                 <div>
-                  <h5 className="DMC-card-subtitle font-secondary" >Explore</h5>
-                  <hr style={{width:'20%', marginTop:'-2px', color:'white'}} />
+                  <h5 className="DMC-card-subtitle font-secondary">Explore</h5>
+                  <hr
+                    style={{ width: "20%", marginTop: "-2px", color: "white" }}
+                  />
                 </div>
 
-                <h1 className="font-primary" style={{ fontSize: "28px", color:'white' }}>
+                <h1
+                  className="font-primary"
+                  style={{ fontSize: "28px", color: "white" }}
+                >
                   {activeItem.title}
                 </h1>
 
@@ -80,7 +121,6 @@ function DMCSection() {
                   Learn More
                 </button>
               </div>
-
             </>
           )}
 
@@ -90,20 +130,22 @@ function DMCSection() {
                 className="col-md-2 d-flex"
                 style={{ justifyContent: "left" }}
               >
-                   <div className="carousel-container">
-                    <CircularSlider
-                      onActiveItemChange={handleActiveItemChange}
-                    />
-                  </div>
-
+                <div className="carousel-container">
+                  <CircularSlider onActiveItemChange={handleActiveItemChange} />
+                </div>
               </div>
               <div className="col-md-10 DMC-card-con">
-              <img
-                  src={activeItem.map}
+                <img
+                  src={preloadedImages[activeItem.map]?.src || activeItem.map}
                   alt="Tour"
                   className="DMC-card-image-v"
                 />
-                <img src={activeItem.bg} className="DMC-bg-img" key={activeItem.bg} alt={activeItem.bg} />
+                <img
+                  src={preloadedImages[activeItem.bg]?.src || activeItem.bg}
+                  className="DMC-bg-img"
+                  key={activeItem.bg}
+                  alt={activeItem.bg}
+                />
                 <div className="DMC-card-content" key={activeItem.title}>
                   <h5 className="DMC-card-subtitle font-secondary">Explore</h5>
                   <hr style={{ width: "9%", marginTop: "-2px" }} />
