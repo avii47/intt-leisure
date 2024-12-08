@@ -1,4 +1,5 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
+import useStore from '../contexts/Store';
 import { Helmet } from 'react-helmet-async';
 import ScrollToTopButton from '../components/ScrollToTopButton';
 import LoadingSpinner from '../components/LoadingSpinner';
@@ -14,6 +15,21 @@ const ContactUsPage = () => {
     const title = 'Events & News';
     const sub = 'Latest Updates in Mindfulness and Travel';
     const aboutImg = ''
+
+    const { events, isLoading, error, fetchEvents } = useStore();
+  
+    useEffect(() => {
+      fetchEvents(); 
+    }, [fetchEvents]);
+  
+    if (isLoading || error) {
+      return (
+        <div>
+          {isLoading && <p>Loading events...</p>}
+          {error && <p>Error: {error}</p>}
+        </div>
+      );
+    }
 
     return (
         <>

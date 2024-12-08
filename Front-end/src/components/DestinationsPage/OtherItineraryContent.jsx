@@ -1,5 +1,4 @@
-import React, { useState, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react";
 import { useMobileView } from "../../contexts/MobileViewContext";
 import ContactFrom from "../BookNowPage/BookingForm";
 import DGallery from "./DGallery";
@@ -8,7 +7,7 @@ import "../CSS/Pages/ItineraryContent.css";
 import ItineraryCategorySection from "./ItineraryCategorySection";
 
 function OtherItineraryContent({ content }) {
-  const navigate = useNavigate();
+
   const isMobileView = useMobileView();
 
   return (
@@ -30,7 +29,7 @@ function OtherItineraryContent({ content }) {
           Inclusion
         </h6>
         <ul className="other-tours-inclusion-list">
-          {content.inclusion.map((item, i) => (
+          {content.inclusions.map((item, i) => (
             <li
               key={i}
               className="font-secondary"
@@ -38,7 +37,7 @@ function OtherItineraryContent({ content }) {
             >
               <strong>{item.name}</strong>
               <ul style={{ marginLeft: "20px", marginTop: "10px" }}>
-                {item.details.map((detail, j) => (
+                {JSON.parse(item.details).map((detail, j) => (
                   <li className="font-secondary" key={j} style={{ marginTop: "5px" }}>
                     {detail}
                   </li>
@@ -48,7 +47,7 @@ function OtherItineraryContent({ content }) {
           ))}
         </ul>
 
-        <DGallery images={content.galleryImages} />
+        <DGallery images={JSON.parse(content.galleryImages)} />
 
         <ContactFrom defPackageName={content.title} />
 

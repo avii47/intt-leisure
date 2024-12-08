@@ -1,4 +1,5 @@
-import React, { Suspense, lazy } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
+import useStore from '../contexts/Store';
 import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import blogsContentData from '../data/BlogsData';
@@ -16,8 +17,14 @@ const BlogsContentPage = () => {
 
     const { id } = useParams();
 
+    const { blogs, fetchBlogs } = useStore();
+  
+    useEffect(() => {
+      fetchBlogs (); 
+    }, [fetchBlogs ]);
+
     const contentId = parseInt(id, 10);
-    const content = blogsContentData.find(item => item.id === contentId);
+    const content = blogs.find(item => item.id === contentId);
   
     if (!content) {
       return <div>Content not found</div>;

@@ -1,9 +1,10 @@
-import React, { Suspense, lazy } from "react";
+import React, { useEffect, Suspense, lazy } from "react";
 import { useParams } from "react-router-dom";
+import useStore from '../contexts/Store';
+import useImage from '../hooks/useImage';
 import { Helmet } from "react-helmet-async";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 import LoadingSpinner from '../components/LoadingSpinner';
-import contentData from "../data/PackageContentData";
 import "../components/CSS/Pages/PackageContent.css";
 
 const HeroSection = lazy(() => import("../components/HeroSection"));
@@ -12,9 +13,22 @@ const FooterSection = lazy(() => import('../components/Footer'));
 
 const PackageContentPage = () => {
   const { id } = useParams();
+  const { services, isLoading, fetchServices } = useStore();
+
+  useEffect(() => {
+    if (!services.length) {
+      fetchServices(); 
+    }
+  }, [fetchServices, services]);
 
   const contentId = parseInt(id, 10);
-  const content = contentData.find((item) => item.id === contentId);
+  const content = services.find((item) => item.id === contentId);
+
+  const { loading, error, image } = useImage(content?.img || null);
+
+  if (isLoading) {
+    return <LoadingSpinner />;
+  }
 
   if (!content) {
     return <div>Content not found</div>;
@@ -28,9 +42,9 @@ const PackageContentPage = () => {
       </Helmet>
       <Suspense fallback={<LoadingSpinner />}>
         <HeroSection
-          img={content.img}
+          img={image} 
           title={content.title}
-          sub={content.subtitle}
+          sub={content.sub3}
         />
       </Suspense>
       <Suspense fallback={<LoadingSpinner />}>

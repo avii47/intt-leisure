@@ -1,10 +1,10 @@
 import React, { Suspense, useRef } from "react";
 import { useMobileView } from "../../contexts/MobileViewContext";
+import useStore from '../../contexts/Store';
 import { useNavigate } from "react-router-dom";
 import EventCard from './EventCard';
 import BlogCard from '../BlogsPage/BlogCard';
 import cardLoader from '../../hooks/cardLoader';
-import eventstData from "../../data/EventstData";
 import contentData from "../../data/BlogsData";
 import "../../components/CSS/Pages/BlogsListPage.css";
 
@@ -13,6 +13,7 @@ const EventsNewsContent = () => {
   const navigate = useNavigate();
   const eventCardsRef = useRef([]);
   const blogCardsRef2 = useRef([]);
+  const { events } = useStore();
 
   if(!isMobileView) {
     cardLoader(eventCardsRef, 'visible', 200, { threshold: 0.5 });
@@ -39,7 +40,7 @@ const EventsNewsContent = () => {
           <b>Latest Events</b>
         </h3>
         <div className="events-cards-container">
-          {eventstData.map((content, index) => (
+          {events.map((content, index) => (
             <EventCard 
               key={index} 
               content={content} 

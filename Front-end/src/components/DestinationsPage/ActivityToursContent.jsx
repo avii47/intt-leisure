@@ -21,7 +21,7 @@ function ActivityToursContent({content}) {
                 {content.overview}
               </p>
 
-              <DGallery images={content.galleryImages}/>
+              <DGallery images={JSON.parse(content.galleryImages)}/>
 
               <ContactFrom defPackageName={content.title} />
               

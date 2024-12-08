@@ -1,5 +1,6 @@
 // ItineraryCard.js
 import React from 'react';
+import useImage from '../../hooks/useImage'
 import { useMobileView } from "../../contexts/MobileViewContext";
 import arrowIcon from '../../assets/icons/icons8-right-black-arrow.gif'
 import '../CSS/ItineraryCard.css';
@@ -7,12 +8,13 @@ import '../CSS/ItineraryCard.css';
 const ItineraryCard = React.forwardRef(({ content, style, onClick }, ref) => {
 
   const isMobileView = useMobileView();
+  const { loading, error, image } = useImage(content.img)
 
     return (
       <div className="outer-div">
         <div className="itinerary-card" ref={ref} style={style} onClick={onClick}>
           <div className="image-overlay">
-            <img src={content.img} alt="Itinerary-image" className="itinerary-card-image" />
+            <img src={image} alt="Itinerary-image" className="itinerary-card-image" />
             <div className="overlay-bg"></div> 
             <div className="overlay-text">
               <div style={{textAlign:'center'}}>

@@ -1,11 +1,11 @@
-import React, { useState, useRef} from 'react';
+import React, { useState, useEffect, useRef} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useMobileView } from '../../contexts/MobileViewContext';
+import useStore from '../../contexts/Store';
 import ContentCard from './ContentCard'
 import cardLoader from '../../hooks/cardLoader';
 import "../../components/CSS/Home/Events&NewsSection.css";
 import Slider from "react-slick";
-import contentData from "../../data/EventstData";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -19,9 +19,10 @@ const EventsNewsSection = ({ exclude }) => {
   const [showRightButton3, setShowRightButton3] = useState(true);
   const [currentSlide3, setCurrentSlide3] = useState(0);
   const navigate = useNavigate();
-  let sliderRef = useRef(null);
-
   const isMobileView = useMobileView();
+  let sliderRef = useRef(null);
+  
+  const { events } = useStore();
 
   if(!isMobileView) { 
     cardLoader(newsCardsRef, 'visible', 200, { threshold: 0.5 });
@@ -33,7 +34,7 @@ const EventsNewsSection = ({ exclude }) => {
 
   const updateButtonVisibility3 = (currentSlide3) => {
     setShowLeftButton3(currentSlide3 > 0);
-    setShowRightButton3(currentSlide3 < contentData.length - 3);
+    setShowRightButton3(currentSlide3 < events.length - 3);
   }; 
 
   const next = () => {
@@ -97,7 +98,7 @@ const EventsNewsSection = ({ exclude }) => {
         <div className='eventsNews-wrapper'>
           <div className="slider-container" style={{ paddingBottom: '100px', textAlign: 'center' }} >
               <Slider ref={slider => { sliderRef = slider; }} {...settings}>
-                {contentData
+                {events
                   .filter((content) => content.id !== exclude)
                   .map((content, index) => (
                     <ContentCard

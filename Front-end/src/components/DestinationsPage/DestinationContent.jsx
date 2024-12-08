@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
+import useStore from "../../contexts/Store";
 import { useNavigate } from "react-router-dom";
 import { useMobileView } from "../../contexts/MobileViewContext";
 import contentData from "../../data/OtherToursData";
 import TourCard from "./TourCard";
+import cardLoader from '../../hooks/cardLoader';
 import MainTourCard from "./MainTourCard";
 
 import Slider from "react-slick";
@@ -29,6 +31,7 @@ const DestinationsContent = () => {
   const [showLeftButton4, setShowLeftButton4] = useState(false);
   const [showRightButton4, setShowRightButton4] = useState(true);
   const [currentSlide4, setCurrentSlide4] = useState(0);
+  const { otherTours } = useStore();
 
   const [typedText1, setTypedText1] = useState("");
   const [typedText2, setTypedText2] = useState("");
@@ -103,35 +106,39 @@ const DestinationsContent = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry, index) => {
-          if (entry.isIntersecting) {
-            setTimeout(() => {
-              entry.target.classList.add("visible");
-            }, index * 200);
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach((entry, index) => {
+  //         if (entry.isIntersecting) {
+  //           setTimeout(() => {
+  //             entry.target.classList.add("visible");
+  //           }, index * 200);
+  //           observer.unobserve(entry.target);
+  //         }
+  //       });
+  //     },
+  //     { threshold: 0.5 }
+  //   );
 
-    tourCardsRef.current.forEach((card) => {
-      if (card) {
-        observer.observe(card);
-      }
-    });
+  //   tourCardsRef.current.forEach((card2) => {
+  //     if (card2) {
+  //       observer.observe(card2);
+  //     }
+  //   });
 
-    return () => {
-      tourCardsRef.current.forEach((card) => {
-        if (card) {
-          observer.unobserve(card);
-        }
-      });
-    };
-  }, [tourCardsRef]);
+  //   return () => {
+  //     tourCardsRef.current.forEach((card2) => {
+  //       if (card2) {
+  //         observer.unobserve(card2);
+  //       }
+  //     });
+  //   };
+  // }, [tourCardsRef]);
+
+  if(!isMobileView) {
+    cardLoader(tourCardsRef, 'visible', 200, { threshold: 0.5 });
+  }
 
   useEffect(() => {
     const handleMouseMove = () => {
@@ -300,9 +307,9 @@ const DestinationsContent = () => {
                 }}
                 {...settings}
               >
-                {contentData.map((content, index) => (
+                {otherTours.map((content, index) => (
                   <TourCard
-                    className={`mian-tour-card card-item${index}`}
+                    className={`mian-tour-card card-item`}
                     key={index}
                     content={content}
                     ref={(el) => (tourCardsRef.current[index] = el)}

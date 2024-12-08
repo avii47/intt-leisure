@@ -1,4 +1,5 @@
-import React, { Suspense, lazy } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
+import useStore from '../contexts/Store';
 import { Helmet } from 'react-helmet-async';
 import ScrollToTopButton from '../components/ScrollToTopButton';
 import LoadingSpinner from '../components/LoadingSpinner';
@@ -14,6 +15,21 @@ const ServicePage = () => {
     const title = 'Experience the Experience';
     const sub = 'Choose Your Journey';
     const aboutImg = ''
+
+    const { services, isLoading, error, fetchServices } = useStore();
+
+    useEffect(() => {
+        fetchServices(); 
+      }, [fetchServices]);
+  
+    if (isLoading || error) {
+      return (
+        <div>
+          {isLoading && <p>Loading events...</p>}
+          {error && <p>Error: {error}</p>}
+        </div>
+      );
+    }
 
     return (
         <>

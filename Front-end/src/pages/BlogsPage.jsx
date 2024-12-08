@@ -1,4 +1,5 @@
-import React, { Suspense, lazy } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
+import useStore from '../contexts/Store';
 import { Helmet } from 'react-helmet-async';
 import ScrollToTopButton from '../components/ScrollToTopButton';
 import LoadingSpinner from '../components/LoadingSpinner';
@@ -15,6 +16,21 @@ const BlogsPage = () => {
     const title = 'Blogs';
     const sub = 'Explore Our Practice';
     const aboutImg = ''
+
+    const { blogs, isLoading, error, fetchBlogs } = useStore();
+  
+    useEffect(() => {
+      fetchBlogs(); 
+    }, [fetchBlogs]);
+  
+    if (isLoading || error) {
+      return (
+        <div>
+          {isLoading && <p>Loading blogs...</p>}
+          {error && <p>Error: {error}</p>}
+        </div>
+      );
+    }
 
     return (
         <>

@@ -1,15 +1,16 @@
 import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import useStore from '../../contexts/Store';
 import { useMobileView } from "../../contexts/MobileViewContext";
 import ContentCard from "./ServiceContentCard"
 import cardLoader from '../../hooks/cardLoader';
-import contentData from "../../data/ServicePageData";
 import "../CSS/Pages/ServicePage.css";
 
 const ServiceContent = () => {
   const isMobileView = useMobileView();
   const navigate = useNavigate();
   const pkgCardsRef = useRef([]);
+  const { services } = useStore();
 
   if(!isMobileView) {
     cardLoader(pkgCardsRef, 'visible', 200, { threshold: 0.5 });
@@ -40,7 +41,7 @@ const ServiceContent = () => {
           id="service-content-cards-container"
           className="d-flex service-content-cards-container"
         >
-          {contentData.map((content, index) => (
+          {services.map((content, index) => (
             <ContentCard
               key={index}
               content={content}

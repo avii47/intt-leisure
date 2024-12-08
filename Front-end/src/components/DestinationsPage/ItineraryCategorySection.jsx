@@ -1,14 +1,10 @@
 import React, { useState, useRef } from "react";
+import useStore from '../../contexts/Store';
 import { useNavigate } from "react-router-dom";
 import { useMobileView } from "../../contexts/MobileViewContext";
 import cardLoader from '../../hooks/cardLoader';
 import ItineraryCard from './ItineraryCard';
 import "../CSS/ItineraryCategorySection.css";
-
-import sampleItineryContentData from "../../data/SampleItineraryContentData"
-import activityToursContentData from "../../data/ActivityToursContentData"
-import ConciergeServiceContentData from "../../data/ConciergeServiceContentData";
-import OtherToursContentData from "../../data/OtherToursData";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -18,15 +14,17 @@ import right_arrow from "../../assets/icons/right-arrow.png";
 
 function ItineraryCategorySection({ contentCat, topic, exclude }) {
 
+    const { sampleItineraries, activityTours, conciergeServices, otherTours } = useStore();
+
     let contentData = [];
     if (contentCat === "sampleItinery") {
-        contentData = sampleItineryContentData;
+        contentData = sampleItineraries;
     } else if (contentCat === "activityTours") {
-        contentData = activityToursContentData;
+        contentData = activityTours;
     } else if (contentCat === "conciergeService") {
-        contentData = ConciergeServiceContentData;
+        contentData = conciergeServices;
     } else if (["dubai", "indonesia", "thailand"].includes(contentCat)) {
-        OtherToursContentData.forEach((content) => {
+        otherTours.forEach((content) => {
             if (content.tag === contentCat) {
                 contentData.push(content);
             }
@@ -41,7 +39,7 @@ function ItineraryCategorySection({ contentCat, topic, exclude }) {
 
     const [STshowLeftButton, setSTshowLeftButton] = useState(false);
     const [STshowRightButton, setSTshowRightButton] = useState(true);
-    const [itineraryCurrentSlide, setItineraryCurrentSlide] = useState(0);
+    const [setItineraryCurrentSlide] = useState(0);
 
     let itinerarySliderRef = useRef(null);
 
@@ -55,10 +53,10 @@ function ItineraryCategorySection({ contentCat, topic, exclude }) {
     };
 
     const handleItineraryCardClick = (id) => {
-        if(contentCat == 'sampleItinery' || contentCat == 'activityTours' || contentCat=='conciergeService') {
+        if(contentCat === 'sampleItinery' || contentCat === 'activityTours' || contentCat === 'conciergeService') {
             navigate(`/destinations/sriLankan/${contentCat}/${id}`);
         }
-        else if(contentCat == 'dubai' || contentCat == 'indonesia' || contentCat == 'thailand') {
+        else if(contentCat === 'dubai' || contentCat === 'indonesia' || contentCat === 'thailand') {
             navigate(`/destinations/other/${contentCat}/${id}`);
         }
         

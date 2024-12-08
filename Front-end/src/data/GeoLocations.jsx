@@ -18,6 +18,10 @@ const contentData = [
     {
         location: 'Dambulla',
         geo: [7.8742, 80.6511]
+    },
+    {
+        location: 'Bentota',
+        geo: [6.42598, 79.99575]
     }
 ]
 

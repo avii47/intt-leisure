@@ -1,5 +1,6 @@
 import React, { lazy, Suspense, useState, useEffect } from "react";
 import { useMobileView } from "../../contexts/MobileViewContext";
+import useImage from '../../hooks/useImage'
 import "../../components/CSS/Home/Events&NewsSection.css";
 
 const ContactUsForm = lazy(() => import("../ContactUsForm"));
@@ -9,6 +10,7 @@ const EventsNewsSection = lazy(() => import('../../components/HomePage/Events&Ne
 function EventsInnerContent({ content }) {
   const isMobileView = useMobileView();
   const [showVideo, setShowVideo] = useState(false);
+  const { loading, error, image } = useImage(content.img)
 
   useEffect(() => {
     setShowVideo(content.id === 2);
@@ -58,7 +60,7 @@ function EventsInnerContent({ content }) {
             </div>
             {content.description && (
               <ul className="event-details-list">
-                {content.description.map((desc, index) => (
+                {JSON.parse(content.description).map((desc, index) => (
                   <li key={index} className="font-secondary event-des-list">
                     {desc}
                   </li>
@@ -80,7 +82,7 @@ function EventsInnerContent({ content }) {
               />
             ) : (
               <img
-                src={content.img}
+                src={image}
                 alt={`${content.eventTitle}-image`}
                 className="event-img"
               />

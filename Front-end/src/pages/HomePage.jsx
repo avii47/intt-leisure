@@ -1,8 +1,9 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import ScrollToTopButton from '../components/ScrollToTopButton';
 import useInView from '../hooks/useInView';
 import LoadingSpinner from '../components/LoadingSpinner'; 
+import useStore from '../contexts/Store';
 
 const HeroSection = lazy(() => import('../components/HomePage/HeroSection'));
 const MindfulnessTourismSection = lazy(() => import('../components/HomePage/MindfulnessTourismSection'));
@@ -16,6 +17,26 @@ const MobileButton = lazy(() => import('../components/MobileBookNowButton'));
 
 const SectionLoader = ({ Component }) => {
     const [setRef, isInView] = useInView({ threshold: 0.25 });
+
+    const { services, isLoading, error, fetchServices } = useStore();
+    const { events, fetchEvents } = useStore();
+  
+    useEffect(() => {
+      fetchEvents(); 
+    }, [fetchEvents]);
+
+    useEffect(() => {
+        fetchServices(); 
+      }, [fetchServices]);
+  
+    if (isLoading || error) {
+      return (
+        <div>
+          {isLoading && <p>Loading events...</p>}
+          {error && <p>Error: {error}</p>}
+        </div>
+      );
+    }
 
     return (
         <div ref={setRef}>

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { useMobileView } from "../../contexts/MobileViewContext";
 import DayCard from "./DayCard";
 import ContactFrom from "../BookNowPage/BookingForm";
@@ -8,14 +7,11 @@ import TourMap from "./MapComponent";
 import "../CSS/Pages/ItineraryContent.css";
 
 function ItineraryContent({ content }) {
-  const navigate = useNavigate();
+
   const isMobileView = useMobileView();
 
   const [expandedDayId, setExpandedDayId] = useState(null);
-  const [selectedRoute, setSelectedRoute] = useState({
-    start: null,
-    end: null,
-  });
+  const [selectedRoute, setSelectedRoute] = useState({start: null, end: null});
 
   const handleDayCardExpand = (dayId, route) => {
     if (expandedDayId === dayId) {

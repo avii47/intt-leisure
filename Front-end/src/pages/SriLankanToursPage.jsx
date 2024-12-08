@@ -1,4 +1,5 @@
-import React, { Suspense, lazy } from "react";
+import React, { useEffect, Suspense, lazy } from "react";
+import useStore from "../contexts/Store";
 import { Helmet } from "react-helmet-async";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 import LoadingSpinner from '../components/LoadingSpinner';
@@ -10,6 +11,27 @@ const DestinationContent = lazy(() => import("../components/DestinationsPage/Sri
 const FooterSection = lazy(() => import('../components/Footer'));
 
 function SriLankanToursPage() {
+
+  const { fetchSampleItineraries, fetchActivityTours, fetchConciergeServices } = useStore();
+
+  useEffect(() => {
+    if (fetchSampleItineraries) {
+        fetchSampleItineraries();
+    }
+  }, [fetchSampleItineraries]);
+
+  useEffect(() => {
+      if (fetchActivityTours) {
+          fetchActivityTours();
+      }
+  }, [fetchActivityTours]);
+
+  useEffect(() => {
+      if (fetchConciergeServices) {
+          fetchConciergeServices();
+      }
+  }, [fetchConciergeServices]);
+
   return (
     <>
       <Helmet>

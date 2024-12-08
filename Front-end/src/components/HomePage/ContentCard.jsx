@@ -1,15 +1,18 @@
 import React from "react";
 import ShareButtons from './EventsShareBtn';
+import useImage from '../../hooks/useImage'
 import "../../components/CSS/ContentCard.css";
 
 const ContentCard = React.forwardRef(({ content, className, style, onClick }, ref) => {
+
+  const { loading, error, image } = useImage(content.img)
 
   return (
     <div className="outer-div">
       <div ref={ref} className={`${className}`} style={style}>
         <div className="image-zoom-container">
           <div className="image-overlay-container">
-            <img className="card-img top" src={`${content.img}`} alt={`${content.eventTitle}-image`} />
+            <img className="card-img top" src={`${image}`} alt={`${content.eventTitle}-image`} />
             <div className="overlay">
               <button className="btn btn-outline-light read-btn" onClick={onClick}>Read</button>
             </div>

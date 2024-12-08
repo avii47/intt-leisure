@@ -1,16 +1,18 @@
 import React from "react";
 import { useMobileView } from "../../contexts/MobileViewContext";
+import useImage from '../../hooks/useImage'
 
 const EventCard = React.forwardRef(({ content, style, onClick }, ref) => {
 
   const isMobileView = useMobileView();
+  const { loading, error, image } = useImage(content.img)
 
   return (
     <div id="event-card" className={`col-12 event-card d-flex`} ref={ref} style={style}>
       <div className="col-md-4 eventsNews-img-col font-secondary">
         <img
           className="eventsNews-img"
-          src={content.img}
+          src={image}
           alt={`${content.eventTitle}-image`}
           loading="lazy"
         />

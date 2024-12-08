@@ -25,18 +25,18 @@ import WondersOfSriLanka from "../assets/images/Wonders of Sri Lanka.jpg"
 const contentData = [
   {
     id: 1,
-    img: CulturalOdyssey,
+    img: 'Cultural Odyssey.jpg',
     title: "Cultural Odyssey",
     subTitle: "A 5-Day Journey Through Sri Lanka",
     cardTxt: "Discover Sri Lanka’s charm with a blend of culture, nature, and adventure. From Kandy’s...",
     overview: "Discover Sri Lanka’s charm with a blend of culture, nature, and adventure. From Kandy’s iconic sites and Nuwara Eliya’s lush tea plantations to thrilling rafting in Kitulgala and Colombo’s buzzing nightlife, this tour has it all.",
     galleryImages: [
-        CulturalOdyssey, kandy_img, nuwaraEliya_img, nuwaraEliya2_img, gregaryLake_img, colombo_img
+        'Cultural Odyssey.jpg', 'destinations/Kandy.jpg', 'destinations/Nuwara Eliya.jpg', 'destinations/Nuwara Eliya2.jpg', 'destinations/Gregary Lake.jpg', 'destinations/Colombo.jpg'
     ],
     days: [
         {
             id: 1,
-            img: kandy_img,
+            img: 'destinations/Kandy.jpg',
             title: "Bandaranaike International Airport to Kandy",
             content: [
                 "Upon arrival at Bandaranaike International Airport, you will be warmly greeted by our INTT Leisure representative.",
@@ -59,7 +59,7 @@ const contentData = [
         },
         {
             id: 2,
-            img: nuwaraEliya_img,
+            img: 'destinations/Nuwara Eliya.jpg',
             title: "Kandy To Nuwara Eliya",
             content: [
                 "Enjoy a delightful breakfast at the hotel.",
@@ -82,7 +82,7 @@ const contentData = [
         },
         {
             id: 3,
-            img: gregaryLake_img,
+            img: 'destinations/Gregary Lake.jpg',
             title: "Nuwara Eliya",
             content: [
                 "After breakfast, begin a city tour of Nuwara Eliya.",
@@ -97,11 +97,11 @@ const contentData = [
                 "Accommodation in Nuwara Eliya hotel.",
                 "Dinner included."
             ],
-            route: ['Nuwara Eliya']
+            route: ["Nuwara Eliya"]
         },
         {
             id: 4,
-            img: colombo_img,
+            img: 'destinations/Colombo.jpg',
             title: "Nuwara Eliya to Colombo",
             content: [
                 "After breakfast, depart for Colombo.",
@@ -119,11 +119,11 @@ const contentData = [
             ],
             distance: "115 km",
             duration: "02 hours 50 minutes",
-            route: ['Nuwara Eliya', 'colombo']
+            route: ["Nuwara Eliya", "colombo"]
         },
         {
             id: 5,
-            img: airport_img,
+            img: 'destinations/BIA.jpg',
             title: "Colombo to Bandaranaike International Airport",
             content: [
                 "After breakfast at the hotel, depart from Colombo for Bandaranaike International Airport in time for your flight out of Sri Lanka."
@@ -134,7 +134,7 @@ const contentData = [
             ],
             distance: "115 km",
             duration: "02 hours 50 minutes",
-            route: ['Colombo', 'BIA']
+            route: ["Colombo", "BIA"]
         },
     ] 
   },
@@ -169,7 +169,7 @@ const contentData = [
             ],
             distance: "180 km",
             duration: "03 hours approx.",
-            route: ['BIA', 'Dambulla']
+            route: ["BIA", "Dambulla"]
         },
         {
             id: 2,
@@ -195,7 +195,7 @@ const contentData = [
             ],
             distance: "80 km",
             duration: "02 hours 10 minutes approx.",
-            route: ['Dabulla ', 'Kandy']
+            route: ["Dabulla", "Kandy"]
         },
         {
             id: 3,
@@ -216,7 +216,7 @@ const contentData = [
             ],
             distance: "80 km",
             duration: "02 hours 40 minutes approx",
-            route: ['Kandy', 'Nuwara Eliya']
+            route: ["Kandy", "Nuwara Eliya"]
         },
         {
             id: 4,
@@ -233,7 +233,7 @@ const contentData = [
                 "City tour of Nuwara Eliya.",
                 "Overnight stay at a hotel in Nuwara Eliya."
             ],
-            route: ['Nuwara Eliya']
+            route: ["Nuwara Eliya"]
         },
         {
             id: 5,
@@ -255,7 +255,7 @@ const contentData = [
             ],
             distance: "200 km",
             duration: "05 hours 20 minutes approx.",
-            route: ['Nuwara Eliya', 'Bentota']
+            route: ["Nuwara Eliya", "Bentota"]
         },
         {
             id: 6,

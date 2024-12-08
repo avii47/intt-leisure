@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
-import blogsData from '../../data/BlogsData';
+import useStore from '../../contexts/Store';
+import useImage from '../../hooks/useImage'
 import { useMobileView } from "../../contexts/MobileViewContext";
 import { useNewsletterSubscription } from '../../hooks/useNewsletterSubscription';
 import Modal from "../../components/BookNowPage/Modal";
@@ -19,6 +20,8 @@ const BlogsContentTemplate = ({content}) => {
   const blogCardHrsRef = useRef([]);
   const excludeId = content.id;
   const { email, setEmail, showModal, handleSubscribe, setShowModal } = useNewsletterSubscription();
+  const { blogs } = useStore();
+  const { loading, error, image } = useImage(content.img)
 
   const [isLiked, setIsLiked] = useState(false);
   const [likeCount, setLikeCount] = useState(content.likeCount);
@@ -51,7 +54,7 @@ const BlogsContentTemplate = ({content}) => {
           <p className="font-secondary" style={{marginTop:'20px'}}>{content.description}</p>
             <img
               className="blogs-img-t2"
-              src={content.img}
+              src={image}
               alt={`${content.title}-image`}
               loading="lazy"
             />
@@ -62,7 +65,7 @@ const BlogsContentTemplate = ({content}) => {
             {content.imgSrc}
           </p>
 
-          <ContentLayout paragraphs={content.paragraphs}/>
+          <ContentLayout paragraphs={JSON.parse(content.paragraphs)}/>
 
           <p className="font-secondary">Click <a href={content.blogUrl} target="_blank" rel="noopener noreferrer">here</a> to view the full Forbes Expert Panel article.</p><hr />
 
@@ -88,7 +91,7 @@ const BlogsContentTemplate = ({content}) => {
 
           <h3 className="font-primary" style={{ margin: '50px 0 0 0', fontSize: '30px' }}>Recent Blogs</h3><hr />
           <div className="r-blog-container">
-            {blogsData
+            {blogs
               .filter((content) => content.id !== excludeId)
               .slice(0, 5)
               .map((content, index) => (

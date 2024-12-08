@@ -1,6 +1,3 @@
-import authentic_practice_icon from "../assets/icons/authentic-practice-icon.svg";
-import forbes_certified_coach_icon from "../assets/icons/forbes-certified-coach-icon.svg";
-import eyes_of_locals_icon from "../assets/icons/eyes-of-locals-icon.svg";
 import backed_by_research_icon from "../assets/icons/mind.png";
 import ancient_root_icon from "../assets/icons/ancient-roots-icon.svg";
 import travel_wisdom_icon from "../assets/icons/travel-wisdom-icon.svg";

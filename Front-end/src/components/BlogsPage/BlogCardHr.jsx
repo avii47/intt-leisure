@@ -1,15 +1,17 @@
 import React from 'react'
 import { useMobileView } from "../../contexts/MobileViewContext";
+import useImage from '../../hooks/useImage'
 import '../CSS/BlogCardHr.css'
 
 const BlogCardHr = React.forwardRef(({content, style, onClick}, ref) => {
 
   const isMobileView = useMobileView();
+  const { loading, error, image } = useImage(content.img)
 
   return (
     <div className={`blogCardHr-container ${isMobileView ? "mobile-view" : "" }`} ref={ref} style={style} onClick={onClick}>
         <div className="col-md-4">
-            <img src={`${content.img}`} className='blogCardHr-img' alt={`${content.title}-image`} />
+            <img src={image} className='blogCardHr-img' alt={`${content.title}-image`} />
         </div>
         <div className="col-md-8" style={{paddingLeft: isMobileView? '15px':'50px'}}>
             <p className="font-secondary blogCardHr-date">

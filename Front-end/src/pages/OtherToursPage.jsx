@@ -1,4 +1,5 @@
-import React, { Suspense, lazy } from "react";
+import React, { useEffect, Suspense, lazy } from "react";
+import useStore from "../contexts/Store";
 import { Helmet } from "react-helmet-async";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 import LoadingSpinner from '../components/LoadingSpinner';
@@ -10,6 +11,14 @@ const DestinationContent = lazy(() => import("../components/DestinationsPage/Oth
 const FooterSection = lazy(() => import('../components/Footer'));
 
 function OtherToursPage() {
+
+  const { fetchOtherTours } = useStore();
+  useEffect(() => {
+    if (fetchOtherTours) {
+        fetchOtherTours();
+    }
+  }, [fetchOtherTours]);
+
   return (
     <>
       <Helmet>

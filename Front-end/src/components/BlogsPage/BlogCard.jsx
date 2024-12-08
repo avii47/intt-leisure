@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import useImage from '../../hooks/useImage'
 import ShareButtons from '../HomePage/EventsShareBtn';
 import { useMobileView } from "../../contexts/MobileViewContext";
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -9,6 +10,7 @@ const BlogCard = React.forwardRef(({content, style, onClick}, ref) => {
     const isMobileView = useMobileView();
     const [isLiked, setIsLiked] = useState(false);
     const [likeCount, setLikeCount] = useState(content.likeCount);
+    const { loading, error, image } = useImage(content.img)
 
     const handleLikeClick = () => {
         setIsLiked(!isLiked);
@@ -19,7 +21,7 @@ const BlogCard = React.forwardRef(({content, style, onClick}, ref) => {
         <div className="blog-content-card" ref={ref} style={style}>
             <div class="blog-content-image-zoom-container">
                 <div className="sc-overlayer"></div>
-                <img loading='lazy' className="blog-content-card-img top" src={`${content.img}`} alt={`${content.title}-image`}></img>
+                <img loading='lazy' className="blog-content-card-img top" src={image} alt={`${content.title}-image`}></img>
                 <div className="share-buttons">
                     <ShareButtons url={content.blogUrl} title={content.title} thumbnail={content.blogThumbnail} />
                 </div>

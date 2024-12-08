@@ -82,7 +82,7 @@ const ContentData = [
     subTitle: "Soar above the waves",
     cardTxt: "Sri Lanka is a true paradise for kitesurfing and water adventures. Along the northern peninsula...",
     overview: "Sri Lanka is a true paradise for kitesurfing and water adventures. Along the northern peninsula, a playground of islets, vibrant reefs, and shifting sandbanks offers perfect conditions for every kitesurfing style, from thrilling downwinders to scenic kite trips.",
-    galleryImages: [kiteSurfing1, kiteSurfing2, kiteSurfing3, kiteSurfing4, kiteSurfing5, kiteSurfing5],
+    galleryImages: [kiteSurfing1, kiteSurfing2, kiteSurfing3, kiteSurfing4, kiteSurfing5, kiteSurfing6],
   },
   {
     id: 5,

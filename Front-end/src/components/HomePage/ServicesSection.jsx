@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import useStore from '../../contexts/Store';
 import left_arrow from "../../assets/icons/left-arrow.png";
 import right_arrow from "../../assets/icons/right-arrow.png";
 import ServiceCard from "./ServiceCard"; 
 import { useMobileView } from "../../contexts/MobileViewContext";
-import contentData from "../../data/ServicesSectionData";
+import cardLoader from '../../hooks/cardLoader';
 import "../../components/CSS/Home/ServicesSection.css";
 
 import Slider from "react-slick";
@@ -19,40 +20,15 @@ const ServicesSection = () => {
   const [currentSlide2, setCurrentSlide2] = useState(0);
   let sliderRef = useRef(null);
   const isMobileView = useMobileView();
+  const { services } = useStore();
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry, index) => {
-          if (entry.isIntersecting) {
-            setTimeout(() => {
-              entry.target.classList.add("visible");
-            }, index * 200);
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    serviceCardsRef.current.forEach((card) => {
-      if (card) {
-        observer.observe(card);
-      }
-    });
-
-    return () => {
-      serviceCardsRef.current.forEach((card) => {
-        if (card) {
-          observer.unobserve(card);
-        }
-      });
-    };
-  }, [serviceCardsRef]);
+  if(!isMobileView) {
+    cardLoader(serviceCardsRef, 'visible', 200, { threshold: 0.5 });
+  }
 
   const updateButtonVisibility2 = (currentSlide2) => {
     setShowLeftButton2(currentSlide2 > 0);
-    setShowRightButton2(currentSlide2 < contentData.length - 4);
+    setShowRightButton2(currentSlide2 < services.length - 4);
   };
 
   const handleServiceCardClick = (id) => {
@@ -134,11 +110,13 @@ const ServicesSection = () => {
               <img
                 className={`nav-icon ${!showLeftButton2 ? "disabled" : ""}`}
                 src={left_arrow}
+                alt="previous-arrow-icon"
                 onClick={previous}
               ></img>
               <img
                 className={`nav-icon ${!showRightButton2 ? "disabled" : ""}`}
                 src={right_arrow}
+                alt="next-arrow-icon"
                 onClick={next}
               ></img>
             </div>
@@ -153,16 +131,16 @@ const ServicesSection = () => {
                 }}
                 {...settings}
               >
-                {contentData.map((content, index) => (
-                  <ServiceCard
-                    className={`service-card card card-item${index}`}
-                    key={index}
-                    content={content}
-                    ref={(el) => (serviceCardsRef.current[index] = el)}
-                    style={{ "--animation-order": index }}
-                    onClick={() => handleServiceCardClick(content.id)}
-                  />
-                ))}
+              {services.filter(content => content.sub1 !== "Customize").map((content, index) => (
+                <ServiceCard
+                  className={`service-card card card-item${index}`}
+                  key={index}
+                  content={content}
+                  ref={(el) => (serviceCardsRef.current[index] = el)}
+                  style={{ "--animation-order": index }}
+                  onClick={() => handleServiceCardClick(content.id)}
+                />
+              ))}
             </Slider>
           </div>
         </div>

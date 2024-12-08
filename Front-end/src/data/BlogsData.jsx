@@ -8,7 +8,7 @@ import img6 from "../assets/images/blog6-img.jpg";
 const contentData = [
     {
       id: 1,
-      img: img1,
+      img: 'blog1-img.jpg',
       imgSrc:'getty image',
       title:
         "Embracing Mindfulness In Leadership In The Age Of AI And Corporate Complexity",
@@ -25,40 +25,10 @@ const contentData = [
         "The Bureau of Cyberspace and Digital Policy recently introduced the Risk Management Profile for Artificial Intelligence and Human Rights on July 25, 2024, highlighting the ethical and human rights considerations in AI deployment. This underscores the growing importance of integrating emotional intelligence and ethical decision-making into leadership practices to manage the complex risks associated with AI."
       ],
       likeCount: 25,
-      recommendedLinks: [
-        [
-          {
-            url: "https://www.forbes.com/councils/forbescoachescouncil/2024/07/10/16-insightful-ways-to-measure-the-impact-of-your-keynote-presentations",
-            text: "16 Insightful Ways To Measure The Impact Of Your Keynote Presentations",
-          },
-          {
-            url: "https://www.forbes.com/councils/forbescoachescouncil/2024/07/03/16-bad-workplace-habits-and-how-to-break-them",
-            text: "16 Bad Workplace Habits And How To Break Them",
-          },
-          {
-            url: "https://www.forbes.com/councils/forbescoachescouncil/2024/06/04/mindfulness-in-leadership-a-personal-journey-through-the-eightfold-process",
-            text: "Mindfulness In Leadership: A Personal Journey Through The Eightfold Process",
-          },
-        ],
-        [
-          {
-            url: "https://www.forbes.com/councils/forbescoachescouncil/2024/07/10/16-insightful-ways-to-measure-the-impact-of-your-keynote-presentations",
-            text: "16 Insightful Ways To Measure The Impact Of Your Keynote Presentations",
-          },
-          {
-            url: "https://www.forbes.com/councils/forbescoachescouncil/2024/07/03/16-bad-workplace-habits-and-how-to-break-them",
-            text: "16 Bad Workplace Habits And How To Break Them",
-          },
-          {
-            url: "https://www.forbes.com/councils/forbescoachescouncil/2024/06/04/mindfulness-in-leadership-a-personal-journey-through-the-eightfold-process",
-            text: "Mindfulness In Leadership: A Personal Journey Through The Eightfold Process",
-          },
-        ],
-      ],
     },
     {
         id: 2,
-        img: img2,
+        img: 'blog2-img.jpg',
         imgSrc:'getty image',
         title:
           "Mindfulness in Leadership: Harnessing the Power of Breath for Effective Decision-Making",
@@ -74,40 +44,10 @@ const contentData = [
           "Leaders have a vital duty to guide their team to success and ensure collective well-being. To achieve this, they must first learn how to guide themselves during times of high-stress or complexity. In this article, Dr. Gamini Hewawasam explores how mindfulness and breathing techniques can benefit leaders.",
         ],
         likeCount: 25,
-        recommendedLinks: [
-          [
-            {
-              url: "https://www.forbes.com/councils/forbescoachescouncil/2024/07/10/16-insightful-ways-to-measure-the-impact-of-your-keynote-presentations",
-              text: "16 Insightful Ways To Measure The Impact Of Your Keynote Presentations",
-            },
-            {
-              url: "https://www.forbes.com/councils/forbescoachescouncil/2024/07/03/16-bad-workplace-habits-and-how-to-break-them",
-              text: "16 Bad Workplace Habits And How To Break Them",
-            },
-            {
-              url: "https://www.forbes.com/councils/forbescoachescouncil/2024/06/04/mindfulness-in-leadership-a-personal-journey-through-the-eightfold-process",
-              text: "Mindfulness In Leadership: A Personal Journey Through The Eightfold Process",
-            },
-          ],
-          [
-            {
-              url: "https://www.forbes.com/councils/forbescoachescouncil/2024/07/10/16-insightful-ways-to-measure-the-impact-of-your-keynote-presentations",
-              text: "16 Insightful Ways To Measure The Impact Of Your Keynote Presentations",
-            },
-            {
-              url: "https://www.forbes.com/councils/forbescoachescouncil/2024/07/03/16-bad-workplace-habits-and-how-to-break-them",
-              text: "16 Bad Workplace Habits And How To Break Them",
-            },
-            {
-              url: "https://www.forbes.com/councils/forbescoachescouncil/2024/06/04/mindfulness-in-leadership-a-personal-journey-through-the-eightfold-process",
-              text: "Mindfulness In Leadership: A Personal Journey Through The Eightfold Process",
-            },
-          ],
-        ],
       },
       {
         id: 3,
-        img: img3,
+        img: 'blog3-img.jpg',
         imgSrc:'getty image',
         title:
           "16 Insightful Ways To Measure The Impact Of Your Keynote Presentations by Forbes Expert Panel®",
@@ -127,7 +67,7 @@ const contentData = [
       },
       {
         id: 4,
-        img: img4,
+        img: 'blog4-img.jpg',
         imgSrc:'getty image',
         title:
           "16 Bad Workplace Habits And How To Break Them by Forbes Expert Panel®",
@@ -143,40 +83,10 @@ const contentData = [
           "“One bad habit is hoarding information out of greed, where employees withhold critical information to maintain control or gain an advantage. To break this habit, foster a culture of transparency and collaboration. Encourage regular knowledge-sharing sessions and implement team-based incentives or recognition programs for sharing information. This enhances team productivity and trust.”",
         ],
         likeCount: 25,
-            recommendedLinks: [
-      [
-        {
-          url: "https://www.forbes.com/councils/forbescoachescouncil/2024/07/10/16-insightful-ways-to-measure-the-impact-of-your-keynote-presentations",
-          text: "16 Insightful Ways To Measure The Impact Of Your Keynote Presentations",
-        },
-        {
-          url: "https://www.forbes.com/councils/forbescoachescouncil/2024/07/03/16-bad-workplace-habits-and-how-to-break-them",
-          text: "16 Bad Workplace Habits And How To Break Them",
-        },
-        {
-          url: "https://www.forbes.com/councils/forbescoachescouncil/2024/06/04/mindfulness-in-leadership-a-personal-journey-through-the-eightfold-process",
-          text: "Mindfulness In Leadership: A Personal Journey Through The Eightfold Process",
-        },
-      ],
-      [
-        {
-          url: "https://www.forbes.com/councils/forbescoachescouncil/2024/07/10/16-insightful-ways-to-measure-the-impact-of-your-keynote-presentations",
-          text: "16 Insightful Ways To Measure The Impact Of Your Keynote Presentations",
-        },
-        {
-          url: "https://www.forbes.com/councils/forbescoachescouncil/2024/07/03/16-bad-workplace-habits-and-how-to-break-them",
-          text: "16 Bad Workplace Habits And How To Break Them",
-        },
-        {
-          url: "https://www.forbes.com/councils/forbescoachescouncil/2024/06/04/mindfulness-in-leadership-a-personal-journey-through-the-eightfold-process",
-          text: "Mindfulness In Leadership: A Personal Journey Through The Eightfold Process",
-        },
-      ],
-    ],
       },
       {
         id: 5,
-        img: img5,
+        img: 'blog5-img.jpg',
         imgSrc:'getty image',
         title:
           "14 Reasons Entrepreneurs Give Up Too Soon (And How To Avoid Doing So) by Forbes Expert Panel®",
@@ -192,40 +102,10 @@ const contentData = [
           "“Entrepreneurs often give up too soon due to reacting impulsively to challenges, rather than responding thoughtfully. To avoid making premature decisions, it’s crucial to transform reactions—emotional and impulsive—into responses that are calm, rational and considered. This shift can enable entrepreneurs to exhaust all options and potentially find success where they might otherwise have seen failure.”",
         ],
         likeCount: 25,
-            recommendedLinks: [
-      [
-        {
-          url: "https://www.forbes.com/councils/forbescoachescouncil/2024/07/10/16-insightful-ways-to-measure-the-impact-of-your-keynote-presentations",
-          text: "16 Insightful Ways To Measure The Impact Of Your Keynote Presentations",
-        },
-        {
-          url: "https://www.forbes.com/councils/forbescoachescouncil/2024/07/03/16-bad-workplace-habits-and-how-to-break-them",
-          text: "16 Bad Workplace Habits And How To Break Them",
-        },
-        {
-          url: "https://www.forbes.com/councils/forbescoachescouncil/2024/06/04/mindfulness-in-leadership-a-personal-journey-through-the-eightfold-process",
-          text: "Mindfulness In Leadership: A Personal Journey Through The Eightfold Process",
-        },
-      ],
-      [
-        {
-          url: "https://www.forbes.com/councils/forbescoachescouncil/2024/07/10/16-insightful-ways-to-measure-the-impact-of-your-keynote-presentations",
-          text: "16 Insightful Ways To Measure The Impact Of Your Keynote Presentations",
-        },
-        {
-          url: "https://www.forbes.com/councils/forbescoachescouncil/2024/07/03/16-bad-workplace-habits-and-how-to-break-them",
-          text: "16 Bad Workplace Habits And How To Break Them",
-        },
-        {
-          url: "https://www.forbes.com/councils/forbescoachescouncil/2024/06/04/mindfulness-in-leadership-a-personal-journey-through-the-eightfold-process",
-          text: "Mindfulness In Leadership: A Personal Journey Through The Eightfold Process",
-        },
-      ],
-    ],
       },
       {
         id: 6,
-        img: img6,
+        img: 'blog6-img.jpg',
         imgSrc:'getty image',
         title:
           "Mindfulness In Leadership: A Personal Journey Through The Eightfold Process",
@@ -243,36 +123,6 @@ const contentData = [
           "By implementing a daily 15-minute mindfulness practice, Dr. Gamini Hewawasam created a work environment where employees find happiness and fulfillment."
         ],
         likeCount: 25,
-            recommendedLinks: [
-      [
-        {
-          url: "https://www.forbes.com/councils/forbescoachescouncil/2024/07/10/16-insightful-ways-to-measure-the-impact-of-your-keynote-presentations",
-          text: "16 Insightful Ways To Measure The Impact Of Your Keynote Presentations",
-        },
-        {
-          url: "https://www.forbes.com/councils/forbescoachescouncil/2024/07/03/16-bad-workplace-habits-and-how-to-break-them",
-          text: "16 Bad Workplace Habits And How To Break Them",
-        },
-        {
-          url: "https://www.forbes.com/councils/forbescoachescouncil/2024/06/04/mindfulness-in-leadership-a-personal-journey-through-the-eightfold-process",
-          text: "Mindfulness In Leadership: A Personal Journey Through The Eightfold Process",
-        },
-      ],
-      [
-        {
-          url: "https://www.forbes.com/councils/forbescoachescouncil/2024/07/10/16-insightful-ways-to-measure-the-impact-of-your-keynote-presentations",
-          text: "16 Insightful Ways To Measure The Impact Of Your Keynote Presentations",
-        },
-        {
-          url: "https://www.forbes.com/councils/forbescoachescouncil/2024/07/03/16-bad-workplace-habits-and-how-to-break-them",
-          text: "16 Bad Workplace Habits And How To Break Them",
-        },
-        {
-          url: "https://www.forbes.com/councils/forbescoachescouncil/2024/06/04/mindfulness-in-leadership-a-personal-journey-through-the-eightfold-process",
-          text: "Mindfulness In Leadership: A Personal Journey Through The Eightfold Process",
-        },
-      ],
-    ],
       },
 ]
 

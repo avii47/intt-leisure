@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { useMobileView } from "../../contexts/MobileViewContext";
+import useImage from '../../hooks/useImage'
 import '../CSS/DayCard.css';
 
 function DayCard({ content, isExpanded, onExpand }) {
@@ -7,6 +8,7 @@ function DayCard({ content, isExpanded, onExpand }) {
   const contentRef = useRef(null); 
   const [maxHeight, setMaxHeight] = useState('0px');
   const isMobileView = useMobileView();
+  const { loading, error, image } = useImage(content.img)
 
   // Adjust maxHeight dynamically based on isExpanded
   useEffect(() => {
@@ -25,7 +27,7 @@ function DayCard({ content, isExpanded, onExpand }) {
     <div className={`day-card ${ isMobileView ? "mobile-view" : "" }`} ref={cardRef}> 
       <div className="day-card-header" onClick={onExpand}>
         <div className="day-col" >
-          <span className="day-card-day">{`Day ${content.id}`}</span>
+          <span className="day-card-day">{`Day ${content.day_number}`}</span>
         </div>
         <div className="title-col d-flex">
           <span className="day-card-title">{content.title}</span>
@@ -44,7 +46,7 @@ function DayCard({ content, isExpanded, onExpand }) {
       >
         <div className="day-card-img-container">
           <img
-            src={content.img}
+            src={image}
             alt="Elephants at Pinnawala"
             className="day-card-image"
           />
