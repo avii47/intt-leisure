@@ -8,8 +8,10 @@
     text-align: left;
 }
 .eventsNews-img{
-    height: 250px;
+    height: 18rem;
+    width: 85%;
     border-radius: 10px;
+    object-fit: cover;
 }
 .mobile-view .eventsNews-img{
     height: auto;
@@ -19,21 +21,24 @@
     flex: 1; 
     overflow: hidden; 
 }
+.eventsNews-txt h2{
+   font-size: 1.75rem;
+}
 .news-card-btn{
     width: 10rem;
 }
 .event-card {
     margin-bottom: 8rem;
     display: flex;
-    gap: 50px;
+    gap: 3.125rem;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 1s ease, transform 1s ease;
 }
 .news-cards-container{
-    gap: 100px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    gap: 6.25rem;
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
 }
 
 .mobile-view .eventsNews-section-content{
@@ -73,6 +78,7 @@
     height: fit-content;
 }
 .event-date-place2{
+    font-size: 0.8rem;
     color: rgb(129, 129, 129);
 }
 .events-meta-icons{
@@ -83,10 +89,10 @@
 }
 .img-overlay-date{
     position: absolute;
-    bottom: -25px;
-    right: 30px;
-    width: 100px;
-    height: 100px;
+    bottom: -1.563rem;
+    right: 1.875rem;
+    width: 6.25rem;
+    height: 6.25rem;
     border-radius: 10px;
     display: flex;
     flex-direction: row;
@@ -121,7 +127,7 @@
     flex-direction: column;
 }
 .event-content-txt{
-    height: 105px;
+    height: 6.563rem;
     overflow-y: hidden;
 }
 .mobile-view .event-content-txt{
@@ -153,3 +159,35 @@
     opacity: 1;
     transform: translateY(0);
 }
+
+@media only screen and (min-width: 768px) and 
+  (min--moz-device-pixel-ratio: 1.25) and (max--moz-device-pixel-ratio: 2),
+  (-o-min-device-pixel-ratio: 5/4) and (-o-max-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 1.25) and (-webkit-max-device-pixel-ratio: 2),
+  (min-device-pixel-ratio: 1.25) and (max-device-pixel-ratio: 2){
+    .eventsNews-txt h2{
+        font-size: 1.3rem;
+     }
+     .event-date-place2{
+        font-size: 0.7rem;
+    }
+    .img-overlay-date{
+        scale: 0.8;
+        bottom: -2rem;
+        right: 0rem;
+    }
+    .eventsNews-img{
+        height: 13rem;
+        width: 90%
+    }
+    .event-content-txt{
+        height: 6rem;
+    }
+    .news-card-btn{
+        width: 8rem;
+        font-size: 0.8rem;
+    }
+    .news-cards-container{
+        gap: 3rem;
+    }
+  }

@@ -41,7 +41,7 @@ video {
   transition: opacity 1s ease, transform 1s ease;
 }
 .hero-heading {
-  font-size: 55px;
+  font-size: 3.438rem;
   font-weight: 500;
   letter-spacing: 0.15rem;
 }
@@ -68,7 +68,7 @@ video {
   transition: transform 1s ease;
 }
 .bottom-viewbar-text {
-  font-size: 16px;
+  font-size: 1rem;
   padding-top: 1rem;
 }
 .bottom-viewbar-img {
@@ -146,6 +146,7 @@ video {
   animation: typewriter 4s steps(44) 1s 1 normal both,
     blinkTextCursor 500ms steps(44) infinite normal;
   animation-delay: 10s;
+  font-size: 0.8rem;
 }
 @keyframes typewriter {
 }
@@ -156,4 +157,30 @@ video {
   to {
     border-right-color: transparent;
   }
+}
+
+@media only screen and (min-width: 768px) and 
+  (min--moz-device-pixel-ratio: 1.25) and (max--moz-device-pixel-ratio: 2),
+  (-o-min-device-pixel-ratio: 5/4) and (-o-max-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 1.25) and (-webkit-max-device-pixel-ratio: 2),
+  (min-device-pixel-ratio: 1.25) and (max-device-pixel-ratio: 2)  {
+      .hero-heading {
+        font-size: 2.7rem !important;
+      }
+      .bottom-viewbar-text{
+        font-size: 0.8rem;
+        margin-top: -0.15rem;
+      }
+      .bottom-viewbar{
+        height: 2.8rem;
+      }
+      .bottom-viewbar-img{
+        height: 1.5rem;
+        margin-top: 0.6rem;
+        margin-left: 1.875rem;
+        margin-right: 1.25rem;
+      }
+      .anim-typewriter{
+        font-size: 0.7rem;
+      }
 }

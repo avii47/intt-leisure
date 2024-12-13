@@ -12,7 +12,7 @@ const ServiceCard = React.forwardRef(({ content, className, style, onClick }, re
         <div className="overlayer"></div>
         <img className='crd-img' src={image} alt={content.title +" img"} loading='lazy' />
         <div className="card-content">
-          <h4 className='font-primary' style={{ fontSize: '28px', letterSpacing: '1px' }}>{content.title}</h4>
+          <h4 className='font-primary' style={{ letterSpacing: '1px' }}>{content.title}</h4>
           <p style={{ letterSpacing: '0px', fontWeight: '250' }} className='font-secondary'>{content.sub2}</p>
         </div>
       </div>

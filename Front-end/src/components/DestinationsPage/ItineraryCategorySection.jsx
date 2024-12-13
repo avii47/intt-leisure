@@ -39,7 +39,7 @@ function ItineraryCategorySection({ contentCat, topic, exclude }) {
 
     const [STshowLeftButton, setSTshowLeftButton] = useState(false);
     const [STshowRightButton, setSTshowRightButton] = useState(true);
-    const [setItineraryCurrentSlide] = useState(0);
+    const [itineraryCurrentSlide, setItineraryCurrentSlide] = useState(0);
 
     let itinerarySliderRef = useRef(null);
 
@@ -127,7 +127,7 @@ function ItineraryCategorySection({ contentCat, topic, exclude }) {
                 </div>
             </div>
             <div className='itinerary-wrapper'>
-                <div className="slider-container" style={{ paddingBottom: '100px' }} >
+                <div className="itinerary-slider-container" >
                     <Slider ref={slider => { itinerarySliderRef = slider; }} {...settings}>
                         {contentData
                             .filter((content) => content.id !== exclude )

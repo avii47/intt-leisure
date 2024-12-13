@@ -10,6 +10,7 @@ const useStore = create((set, get) => ({
   activityTours: [], 
   conciergeServices: [],
   otherTours: [],
+  dmc: [],
 
   isLoading: false, 
   error: null, 
@@ -87,6 +88,17 @@ const useStore = create((set, get) => ({
     try {
         const response = await axios.get('/api/otherTours');
         set({ otherTours: response.data, isLoading: false });
+    } catch (error) {
+        set({ error: error.message, isLoading: false });
+    }
+  },
+
+  fetchDmc: async () => {
+    if (get().dmc.length > 0) return; 
+    set({ isLoading: true });
+    try {
+        const response = await axios.get('/api/dmc');
+        set({ dmc: response.data, isLoading: false });
     } catch (error) {
         set({ error: error.message, isLoading: false });
     }

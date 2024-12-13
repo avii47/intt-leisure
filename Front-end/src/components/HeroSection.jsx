@@ -8,11 +8,12 @@ import animationData from '../assets/icons/down-arrow2.json';
 const HeroSection = ({ img, title, sub, aboutImg }) => {
   const isMobileView = useMobileView();
   const [isblogTitle, setIsblogTitle] = useState(false);
-  const [displayedText, setDisplayedText] = useState(''); 
-  const [textIndex, setTextIndex] = useState(0); 
+  const [displayedText, setDisplayedText] = useState('');
+  const [textIndex, setTextIndex] = useState(0);
+  const [loop, setLoop] = useState(true); // Controls whether typing animation should loop
 
   const typingText = aboutImg;
-  const typingSpeed = 50; 
+  const typingSpeed = 50;
 
   useEffect(() => {
     const wordCount = title.trim().length === 0 ? 0 : title.trim().split(/\s+/).length;
@@ -42,27 +43,22 @@ const HeroSection = ({ img, title, sub, aboutImg }) => {
       }
     };
   }, []);
-  
+
   useEffect(() => {
-    if(aboutImg){
+    if (aboutImg && loop) {
       if (textIndex < typingText.length) {
         const timeoutId = setTimeout(() => {
-          setDisplayedText((prev) => prev + typingText.charAt(textIndex)); 
-          setTextIndex(textIndex + 1); 
+          setDisplayedText((prev) => prev + typingText.charAt(textIndex));
+          setTextIndex(textIndex + 1);
         }, typingSpeed);
-        
-        return () => clearTimeout(timeoutId); 
+
+        return () => clearTimeout(timeoutId);
       } else {
-        
-        const resetTimeout = setTimeout(() => {
-          setDisplayedText(''); 
-          setTextIndex(0);
-        }, 3000); 
-  
-        return () => clearTimeout(resetTimeout);
+        // Once typing completes, stop looping
+        setLoop(false); // Prevent reset
       }
     }
-  }, [textIndex, typingText, typingSpeed]);
+  }, [textIndex, typingText, typingSpeed, loop]);
 
   return (
     <div id="Hero-section" className={`hero-section justify-content-center d-flex ${isMobileView ? 'mobile-view' : ''}`}>
@@ -83,11 +79,10 @@ const HeroSection = ({ img, title, sub, aboutImg }) => {
             <Lottie loading="lazy" className='arrow-icon' animationData={animationData}></Lottie>
           </div>
           {!isMobileView ? (
-            <p className="line-1 anim-typewriter" style={{width:'600px'}}>{displayedText}</p>
-          ): (
+            <p className="line-1 anim-typewriter" style={{ width: '600px' }}>{displayedText}</p>
+          ) : (
             <p></p>
           )}
-          
         </div>
       )}
     </div>

@@ -118,6 +118,11 @@
     background-color: transparent;
     transform: translateY(-20%);
   } */
+
+  .pkg-err{
+    margin-top: -150px;
+    margin-left: 20px;
+  }
   
   .tab-content {
     width: 100%;
@@ -177,7 +182,7 @@
 .pax-label{
   display: block;
   font-size: 16px;
-  color: #777;
+  color: #636363;
 }
 .pax-input{
   width: 80px;

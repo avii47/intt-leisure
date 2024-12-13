@@ -25,3 +25,10 @@
     margin-bottom: 0px;
     background-color: antiquewhite;
 }
+.error-text{
+    color: red;
+    font-size: 0.8rem;
+  }
+  .mobile-view .error-text{
+    font-size: 12px;
+  }

@@ -37,7 +37,7 @@ function OtherItineraryContent({ content }) {
             >
               <strong>{item.name}</strong>
               <ul style={{ marginLeft: "20px", marginTop: "10px" }}>
-                {JSON.parse(item.details).map((detail, j) => (
+                {item.details.map((detail, j) => (
                   <li className="font-secondary" key={j} style={{ marginTop: "5px" }}>
                     {detail}
                   </li>
@@ -47,7 +47,7 @@ function OtherItineraryContent({ content }) {
           ))}
         </ul>
 
-        <DGallery images={JSON.parse(content.galleryImages)} />
+        <DGallery images={content.galleryImages} />
 
         <ContactFrom defPackageName={content.title} />
 

@@ -34,3 +34,20 @@
   align-items: flex-start; /* Aligns items to the top if needed */
   justify-content: flex-start; /* Aligns items to the left */
 }
+.itinerary-slider-container{
+  padding-bottom: 6.25rem !important;
+}
+
+@media only screen and (min-width: 768px) and 
+  (min--moz-device-pixel-ratio: 1.25) and (max--moz-device-pixel-ratio: 2),
+  (-o-min-device-pixel-ratio: 5/4) and (-o-max-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 1.25) and (-webkit-max-device-pixel-ratio: 2),
+  (min-device-pixel-ratio: 1.25) and (max-device-pixel-ratio: 2) {
+    .mainTourCards-nav-icons {
+      scale: 0.8;
+      margin-top: 0.6rem;
+    }
+    .itinerary-slider-container{
+      padding-bottom: 3rem !important;
+    }
+  }

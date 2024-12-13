@@ -65,7 +65,7 @@ const BlogsContentTemplate = ({content}) => {
             {content.imgSrc}
           </p>
 
-          <ContentLayout paragraphs={JSON.parse(content.paragraphs)}/>
+          <ContentLayout paragraphs={content.paragraphs}/>
 
           <p className="font-secondary">Click <a href={content.blogUrl} target="_blank" rel="noopener noreferrer">here</a> to view the full Forbes Expert Panel article.</p><hr />
 

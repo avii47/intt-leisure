@@ -20,26 +20,28 @@ const CountrySelector = ({ onSelectCountry }) => {
     onSelectCountry(option.value);  
   };
 
-  // Custom styles for react-select to remove the border
+  // Custom styles for react-select
   const customStyles = {
     control: (provided) => ({
       ...provided,
       border: 'none',
       boxShadow: 'none', 
       margin: '-0.5rem 0 -0.3rem -0.6rem',
-    })
+    }),
+    placeholder: (provided) => ({
+      ...provided,
+      color: '#636363', // Change this to your desired placeholder color
+    }),
   };
 
   return (
-    
-      <Select
-        className='form-control'
-        options={options}
-        onChange={handleChange}
-        placeholder="Nationality"
-        styles={customStyles} 
-      />
-    
+    <Select
+      className="form-control"
+      options={options}
+      onChange={handleChange}
+      placeholder="Nationality"
+      styles={customStyles}
+    />
   );
 };
 

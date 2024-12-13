@@ -194,3 +194,56 @@ display: none;
 .mobile-view .footer-main-container {
   display: block;
 }
+.footer-nav-link-txt{
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+
+@media only screen and (min-width: 768px) and 
+  (min--moz-device-pixel-ratio: 1.25) and (max--moz-device-pixel-ratio: 2),
+  (-o-min-device-pixel-ratio: 5/4) and (-o-max-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 1.25) and (-webkit-max-device-pixel-ratio: 2),
+  (min-device-pixel-ratio: 1.25) and (max-device-pixel-ratio: 2){
+    .ft-top-txt{
+      letter-spacing: 1.5px; 
+      font-size: 0.75rem;
+    }
+    .subscription-form {
+      height: 2rem;
+      font-size: 0.8rem;
+    }
+    .footer-logos img {
+      height: 2rem;
+    }
+    .footer-nav {
+      margin-left: 3rem;
+    }
+    .footer-nav div {
+      margin-top: 8px;
+    }
+    .footer-nav h5{
+      font-size: 1rem;
+    }
+    .footer-con h5{
+      font-size: 1rem;
+    }
+    .footer-nav-link-txt{
+      font-size: 0.8rem;
+      font-weight: 400;
+    }
+    .contact-icons {
+      height: 1rem;
+      margin-top: -5px;
+    }
+    .address-txt{
+      font-size: 0.8rem;
+      margin-bottom: -10px;
+    }
+    .footer-con {
+      margin-left: 2rem;
+    }
+    .ftc2{
+      margin-top: 2.6rem !important;
+    }
+  }

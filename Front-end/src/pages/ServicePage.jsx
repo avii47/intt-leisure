@@ -16,20 +16,11 @@ const ServicePage = () => {
     const sub = 'Choose Your Journey';
     const aboutImg = ''
 
-    const { services, isLoading, error, fetchServices } = useStore();
+    const { fetchServices } = useStore();
 
     useEffect(() => {
         fetchServices(); 
-      }, [fetchServices]);
-  
-    if (isLoading || error) {
-      return (
-        <div>
-          {isLoading && <p>Loading events...</p>}
-          {error && <p>Error: {error}</p>}
-        </div>
-      );
-    }
+    }, [fetchServices]);
 
     return (
         <>

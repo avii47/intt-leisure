@@ -22,28 +22,28 @@ const EventCard = React.forwardRef(({ content, style, onClick }, ref) => {
       </div>
       <div className="col-md-8 eventsNews-txt">
         <div>
-          <h2 className="font-secondary" style={{fontSize: isMobileView ? '23px': '28px'}}>{content.eventTitle}</h2>
+          <h2 className="font-secondary" style={{fontSize: isMobileView ? '23px': ''}}>{content.eventTitle}</h2>
           <div className="d-flex meta-tags2">
             <div className="col-sm-3">
-              <p className="Font-secondary event-date-place2">
+              <p className="font-secondary event-date-place2">
                 <i class="fa-regular fa-calendar-check events-meta-icons"></i>
                 {content.tag}
               </p>
             </div>
             <div className="col-sm-3">
-              <p className="Font-secondary event-date-place2">
+              <p className="font-secondary event-date-place2">
                 <i className="fa-solid fa-calendar-days events-meta-icons"></i>
                 {content.date}
               </p>
             </div>
             <div className="col-sm-3">
-              <p className="Font-secondary event-date-place2">
+              <p className="font-secondary event-date-place2">
                 <i className="fa-regular fa-clock events-meta-icons"></i>
                 {content.time}
               </p>
             </div>
             <div className="col-sm-3">
-              <p className="Font-secondary event-date-place2">
+              <p className="font-secondary event-date-place2">
                 <i className="fa-solid fa-location-dot events-meta-icons"></i>
                 {content.venue}
               </p>

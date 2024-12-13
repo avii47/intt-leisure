@@ -1,16 +1,16 @@
 .circular-slider {
-  height: 600px; 
-  width: 180px; 
+  height: 37.5rem; 
+  width: 11.25rem; 
   display: flex; 
   flex-direction: column; 
   justify-content: center; 
   margin-left: 0px;
- 
+  z-index: 111;
 }
 
 .mobile-view .circular-slider {
-  height: 300px; 
-  width: 150px; 
+  height: 18.75rem; 
+  width: 9.375rem; 
 }
 
 .slider-item {
@@ -148,4 +148,16 @@
 
 .mobile-view .arrow-cs {
   display: none !important;
+}
+
+@media only screen and (min-width: 768px) and 
+  (min--moz-device-pixel-ratio: 1.25) and (max--moz-device-pixel-ratio: 2),
+  (-o-min-device-pixel-ratio: 5/4) and (-o-max-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 1.25) and (-webkit-max-device-pixel-ratio: 2),
+  (min-device-pixel-ratio: 1.25) and (max-device-pixel-ratio: 2) {
+      .circular-slider{
+        scale: 0.78;
+        margin-left: -2rem;
+        margin-top: -5.5rem;
+      }
 }

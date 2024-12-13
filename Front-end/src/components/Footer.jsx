@@ -15,13 +15,12 @@ import SLTDA_Certified from "../assets/icons/SLTDA Certified.png";
 
 const Footer = () => {
   const isMobileView = useMobileView();
-  const { email, setEmail, showModal, handleSubscribe, setShowModal } =
-    useNewsletterSubscription();
+  const { email, setEmail, showModal, handleSubscribe, setShowModal } = useNewsletterSubscription();
 
   return (
     <footer className={`footer justify-content-center d-flex ${isMobileView ? "mobile-view" : ""}`}>
       <div className="footer-content justify-content-center">
-        <p className="ft-top-txt">
+        <p className="ft-top-txt font-secondary">
           Keep the vacation bliss alive! Join us to deepen your mindfulness
           practice and turn tranquility into a lasting lifestyle. Register now
           and stay connected to your inner peace!
@@ -31,7 +30,7 @@ const Footer = () => {
         <div className={`footer-main-container`}>
           <div className="col-md-4" style={{ textAlign: "left" }}>
             <img loading="lazy" src={logo} className="ft-logo" alt="logo" />
-            <p>
+            <p className="font-secondary">
               By subscribing you agree to our Privacy Policy and consent to
               receive updates from our company.
             </p>
@@ -194,34 +193,34 @@ const Footer = () => {
               <div className="col-md-1 footer-nav">
                 <h5 style={{ marginBottom: "20px" }}>Useful Links</h5>
                 <div>
-                  <a href="/mindfulness">Mindfulness</a>
+                  <a className="footer-nav-link-txt" href="/mindfulness">Mindfulness</a>
                 </div>
                 <div>
-                  <a href="/services">Experience</a>
+                  <a className="footer-nav-link-txt" href="/services">Experience</a>
                 </div>
                 <div>
-                  <a href="/why-choose-us">Why Choose Us</a>
+                  <a className="footer-nav-link-txt" href="/why-choose-us">Why Choose Us</a>
                 </div>
                 <div>
-                  <a href="/contact-us">Contact Us</a>
+                  <a className="footer-nav-link-txt" href="/contact-us">Contact Us</a>
                 </div>
                 <div>
-                  <a href="/privacyPolicy">Privacy Policy</a>
+                  <a className="footer-nav-link-txt" href="/privacyPolicy">Privacy Policy</a>
                 </div>
                 <div>
-                  <a href="/termsConditions">Terms of Service</a>
+                  <a className="footer-nav-link-txt" href="/termsConditions">Terms of Service</a>
                 </div>
               </div>
               <div className="col-md-1 footer-nav">
                 <h5 style={{ marginBottom: "20px" }}>Explore</h5>
                 <div>
-                  <a href="/destinations">Destinations</a>
+                  <a className="footer-nav-link-txt" href="/destinations">Destinations</a>
                 </div>
                 <div>
-                  <a href="/blogs">Blogs</a>
+                  <a className="footer-nav-link-txt" href="/blogs">Blogs</a>
                 </div>
                 <div>
-                  <a href="/events&news">Events & News</a>
+                  <a className="footer-nav-link-txt" href="/events&news">Events & News</a>
                 </div>
               </div>
               <div className="col-md-2 footer-con">
@@ -237,7 +236,7 @@ const Footer = () => {
                       />
                     </div>
                     <div
-                      className="col-11"
+                      className="col-11 address-txt"
                       style={{ marginLeft: "20px", width: "300px" }}
                     >
                       <h5>Sri Lanka</h5>
@@ -259,7 +258,7 @@ const Footer = () => {
                         alt="call icon"
                       />
                     </div>
-                    <div className="col-12" style={{ marginLeft: "20px" }}>
+                    <div className="col-12 address-txt" style={{ marginLeft: "20px" }}>
                       <a href="tel:+94 774 48 48 48" className="link-text">
                         +94 774 48 48 48
                       </a>
@@ -275,7 +274,7 @@ const Footer = () => {
                         alt="email icon"
                       />
                     </div>
-                    <div className="col-12" style={{ marginLeft: "20px" }}>
+                    <div className="col-12 address-txt" style={{ marginLeft: "20px" }}>
                       <a
                         href="mailto:sales@intterminal.com"
                         className="link-text"
@@ -287,7 +286,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="col-2 footer-con" style={{ textAlign: "left" }}>
-                <div className="ftc" style={{ marginTop: "45px" }}>
+                <div className="ftc2" style={{ marginTop: "2.813rem" }}>
                   <address className="d-flex">
                     <div className="col-1">
                       <img
@@ -298,7 +297,7 @@ const Footer = () => {
                       />
                     </div>
                     <div
-                      className="col-11"
+                      className="col-11 address-txt"
                       style={{ marginLeft: "20px", width: "300px" }}
                     >
                       <h5>United States of America</h5>
@@ -319,7 +318,7 @@ const Footer = () => {
                         alt="call icon"
                       />
                     </div>
-                    <div className="col-12" style={{ marginLeft: "20px" }}>
+                    <div className="col-12 address-txt" style={{ marginLeft: "20px" }}>
                       <a href="tel:+1 312-242-1662" className="link-text">
                         +1 312-242-1662
                       </a>
@@ -335,7 +334,7 @@ const Footer = () => {
                         alt="email icon"
                       />
                     </div>
-                    <div className="col-12" style={{ marginLeft: "20px" }}>
+                    <div className="col-12 address-txt" style={{ marginLeft: "20px" }}>
                       <a
                         href="mailto:info@intterminal.com"
                         className="link-text"
@@ -398,9 +397,9 @@ const Footer = () => {
         </div>
 
         <Modal show={showModal} onClose={() => setShowModal(false)}>
-          <h2>Your subscription to our list has been confirmed.</h2>
+          <h2 className="newsletter-modal-txt">Your subscription to our list has been confirmed.</h2>
           <br></br>
-          <p>
+          <p className="newsletter-modal-txt">
             Thank you for subscribing! <br />
             Look out for news and updates
           </p>

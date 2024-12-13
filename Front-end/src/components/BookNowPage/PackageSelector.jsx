@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useMobileView } from "../../contexts/MobileViewContext";
+import useStore from '../../contexts/Store';
 import "./BookingForm.css";
 import PackageCard from "../BookNowPage/PackageCard";
 import LoadingSpinner from "../../components/LoadingSpinner";
@@ -7,12 +8,6 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-import mindfulnessContentData from "../../data/ServicePageData";
-import sampleItineraryContentData from "../../data/SampleItineraryContentData";
-import activityToursContentData from "../../data/ActivityToursContentData";
-import conciergeServiceContentData from "../../data/ConciergeServiceContentData";
-import otherToursContentData from "../../data/OtherToursData";
 
 function PackageSelector({ onSelectPackage, onTabChange }) {
   const isMobileView = useMobileView();
@@ -22,18 +17,19 @@ function PackageSelector({ onSelectPackage, onTabChange }) {
   });
   const [activeTab, setActiveTab] = useState(0);
   const [loading, setLoading] = useState(true);
+  const { sampleItineraries, activityTours, conciergeServices, otherTours, services } = useStore();
 
   const sriLankanContentData = [
-    ...sampleItineraryContentData,
-    ...activityToursContentData,
-    ...conciergeServiceContentData,
+    ...sampleItineraries,
+    ...activityTours,
+    ...conciergeServices,
   ];
 
   const tabs = [
     {
       id: 0,
       label: "Mindfulness Tours",
-      content: mindfulnessContentData,
+      content: services,
     },
     {
       id: 1,
@@ -43,7 +39,7 @@ function PackageSelector({ onSelectPackage, onTabChange }) {
     {
       id: 2,
       label: "Other Tours",
-      content: otherToursContentData,
+      content: otherTours,
     },
   ];
 

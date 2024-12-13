@@ -14,7 +14,7 @@
   
   .main-image img {
     width: 60vw;
-    height: 700px;
+    height: 43.75rem;
     object-fit: cover;
   }
 
@@ -56,14 +56,14 @@
   .thumbnail-row {
     display: flex;
     justify-content: center;
-    margin-top: -180px;
+    margin-top: -11.25rem;
     z-index: 1;
   }
 
   .thumbnail-img-container{
-    padding-top: 50px;
-    width: 1200px;
-    height: 180px;
+    padding-top: 3.125rem;
+    width: 75rem;
+    height: 11.25rem;
     overflow: hidden;
     z-index: 1;
     opacity: 0;
@@ -75,7 +75,7 @@
   }
   
   .thumbnail {
-    width: 150px;
+    width: 9.375rem;
     margin: 0 15px;
     object-fit: cover;
     cursor: pointer;
@@ -111,4 +111,30 @@
     opacity: 1;
     transform: translateX(0%);
     transition: all 0.3s ease-in-out;
+  }
+
+  @media only screen and (min-width: 768px) and 
+  (min--moz-device-pixel-ratio: 1.25) and (max--moz-device-pixel-ratio: 2),
+  (-o-min-device-pixel-ratio: 5/4) and (-o-max-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 1.25) and (-webkit-max-device-pixel-ratio: 2),
+  (min-device-pixel-ratio: 1.25) and (max-device-pixel-ratio: 2) {
+    .main-image img {
+      width: 60vw;
+      height: 31rem;
+    }
+    .thumbnail-row {
+      margin-top: -10rem;
+    }
+    .thumbnail{
+      width: 7rem;
+      margin: 0 5px;
+    }
+    .arrow{
+      scale: 0.6;
+    }
+    .thumbnail-img-container{
+      padding-top: 3.5rem;
+      width: 75rem;
+      height: 10rem;
+    }
   }

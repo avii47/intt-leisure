@@ -22,7 +22,7 @@ const ContentCard = React.forwardRef(({ content, className, style, onClick }, re
           </div>
         </div>
         <div className="content-card-body">
-          <h5 className="card-title font-secondary" style={{ fontSize: "20px" }}>
+          <h5 className="content-card-title font-secondary">
             {content.eventTitle}
           </h5>
           <div className="d-flex"> 

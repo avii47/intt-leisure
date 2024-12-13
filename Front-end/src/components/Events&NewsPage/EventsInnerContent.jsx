@@ -60,7 +60,7 @@ function EventsInnerContent({ content }) {
             </div>
             {content.description && (
               <ul className="event-details-list">
-                {JSON.parse(content.description).map((desc, index) => (
+                {content.description.map((desc, index) => (
                   <li key={index} className="font-secondary event-des-list">
                     {desc}
                   </li>

@@ -1,5 +1,4 @@
-import React, { useState, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react";
 import { useMobileView } from "../../contexts/MobileViewContext";
 import "../CSS/Pages/SriLankanToursPage.css";
 
@@ -7,7 +6,6 @@ import ItineraryCategorySection from "./ItineraryCategorySection";
 
 function SriLankanToursContent() {
 
-  const navigate = useNavigate();
   const isMobileView = useMobileView();
 
   return (

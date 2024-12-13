@@ -138,7 +138,7 @@ function FeedbackForm() {
           <br></br>
           <button
             type="submit"
-            className="btn btn-dark"
+            className="btn btn-dark event-feedback-submit-btn"
             onClick={handleSendClick}
           >
             Submit

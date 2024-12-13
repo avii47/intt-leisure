@@ -44,7 +44,7 @@
 }
 .story-img{
     max-height: 37.5rem;
-    border-radius: 20px;
+    border-radius: 1.25rem;
 }
 .our-missionVision-content{
     text-align: center;
@@ -111,7 +111,7 @@
     width: 100%;
 }
 .mobile-view .achivement-item-right {
-    margin-top: 50px;
+    margin-top: 3.125rem;
 }
 
 .vm-container{
@@ -123,15 +123,18 @@
     box-shadow: #d5b693 0px 3px 8px;
 }
 .vm-container p, .values-li li{
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 .mobile-view .vm-container p, .mobile-view .values-li li{
-    font-size: 15px;
+    font-size: 0.938rem;
 }
 .mobile-view .vm-container{
     min-height: fit-content;
     width: auto;
     padding: 2rem;
+}
+.mobile-view .vmc3{
+    width: 80vw;
 }
 .vm-icon{
     height: 12.5rem;
@@ -146,12 +149,13 @@
 }
 
 .achivement-img{
-    height: 180px;
-    margin-bottom: 50px;
+    height: 11.25rem;
+    margin-bottom: 3.125rem;
 }
+
 .mobile-view .achivement-img{
-    height: 80px;
-    margin-bottom: 50px;
+    height: 5rem;
+    margin-bottom: 3.125rem;
 }
 
 .mobile-view .aboutus-section-content {
@@ -163,7 +167,7 @@
 }
 .mobile-view .why-choose-item h3{
     font-size: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
 }
 .mobile-view .txt-col{
     text-align: left;
@@ -172,24 +176,24 @@
 .mobile-view .story-img{
     width: 100%;
     height: auto;
-    margin-top: 50px;
+    margin-top: 3.125rem;
 }
 .mobile-view .vm-card-col{
     justify-content: center !important;
     padding-right: 0 !important;
     padding-left: 0 !important;
-    margin-bottom: 50px;
+    margin-bottom: 3.125rem;
 }
 .mobile-view .vm-contaioner{
     height: auto;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 3.125rem;
 }
 .mobile-view .txt-col-p{
-    margin-top: -70px;
+    margin-top: -4.375rem;
 }
 .mobile-view .txt-col-p2{
-    margin-top: -20px;
+    margin-top: -1.25rem;
 }
 
 .mobile-view .top-cards{
@@ -198,7 +202,7 @@
 }
 .mobile-view .top-cards-content{
     width: 105vw;
-    margin-left: -40px;
+    margin-left: -2.5rem;
 }
 
 .animate-block{
@@ -213,6 +217,32 @@
 }
 
 .mobile-view .tc-head {
-    margin-left: 20px;
+    margin-left: 1.25rem;
     width: 98%;
 }
+
+@media only screen and (min-width: 768px) and 
+  (min--moz-device-pixel-ratio: 1.25) and (max--moz-device-pixel-ratio: 2),
+  (-o-min-device-pixel-ratio: 5/4) and (-o-max-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 1.25) and (-webkit-max-device-pixel-ratio: 2),
+  (min-device-pixel-ratio: 1.25) and (max-device-pixel-ratio: 2) {
+    .achivement-img{
+        height: 8rem !important;
+        margin-bottom: 3.125rem;
+    }
+    .vm-container{
+        min-height: 30rem;
+        width: 22rem;
+        padding: 2rem;
+    }
+    .vm-icon{
+        height: 10rem;
+        margin-bottom: 1.5rem;
+    }
+    .vm-container p, .values-li li{
+        font-size: 1rem;
+    }
+    .values-li{
+        padding-left: 2.5rem;
+    }
+  }

@@ -1,54 +1,69 @@
 import React, { useState, useEffect } from "react";
 import { useMobileView } from "../../contexts/MobileViewContext";
 import { useNavigate } from "react-router-dom";
+import useStore from '../../contexts/Store';
 import "../CSS/Home/DMCSection.css";
-
-import ContentData from "../../data/DMCSectionData";
 import CircularSlider from "../CircularSlider";
 
 function DMCSection() {
   const isMobileView = useMobileView();
   const navigate = useNavigate();
+  const { dmc } = useStore();
 
-  const [activeItem, setActiveItem] = useState({});
-  const [preloadedImages, setPreloadedImages] = useState({}); // Store preloaded images for bg and map
+  const [contentData, setContentData] = useState([]);
+  const [activeItem, setActiveItem] = useState(null);
+  const [preloadedImages, setPreloadedImages] = useState({});
+
+  // Preload all images and transform dmc data
+  useEffect(() => {
+    const preloadImagesAndTransformData = async () => {
+      const transformedData = await Promise.all(
+        dmc.map(async (item) => {
+          const [bg, map, icon] = await Promise.all([
+            import(`../../assets/icons/${item.bg}`).then(res => res.default).catch(() => null),
+            import(`../../assets/icons/${item.map}`).then(res => res.default).catch(() => null),
+            import(`../../assets/icons/${item.icon}`).then(res => res.default).catch(() => null),
+          ]);
+
+          // Store preloaded images in a separate object for instant access
+          setPreloadedImages((prev) => ({
+            ...prev,
+            [item.bg]: bg,
+            [item.map]: map,
+            [item.icon]: icon,
+          }));
+
+          return {
+            id: item.id,
+            title: item.title,
+            description: item.description,
+            link: item.link,
+            bg,
+            map,
+            icon,
+          };
+        })
+      );
+      setContentData(transformedData);
+      setActiveItem(transformedData[0]); // Default active item
+    };
+
+    preloadImagesAndTransformData();
+  }, [dmc]);
 
   const handleOnClick = (path) => {
     navigate(path);
   };
 
-  // Callback to handle active item changes
   const handleActiveItemChange = (item) => {
     setActiveItem(item);
   };
 
-  // Utility function to preload images (both bg and map)
-  const preloadImages = (items) => {
-    const preloaded = {};
-    items.forEach((item) => {
-      if (item.bg) {
-        const bgImg = new Image();
-        bgImg.src = item.bg;
-        preloaded[item.bg] = bgImg; // Save the preloaded bg image
-      }
-      if (item.map) {
-        const mapImg = new Image();
-        mapImg.src = item.map;
-        preloaded[item.map] = mapImg; // Save the preloaded map image
-      }
-    });
-    return preloaded;
-  };
-
-  // Preload all images on component mount
-  useEffect(() => {
-    const preloaded = preloadImages(ContentData); // Preload both bg and map images
-    setPreloadedImages(preloaded);
-  }, []); // Run once on mount
+  if (!contentData.length) return <div>Loading...</div>; // Loading state
 
   return (
     <div
-      className={`DMC-container  ${isMobileView ? "mobile-view" : ""}`}
+      className={`DMC-container ${isMobileView ? "mobile-view" : ""}`}
       style={{ marginTop: isMobileView ? "4rem" : "8rem" }}
     >
       <div className="DMC-content">
@@ -78,22 +93,25 @@ function DMCSection() {
           {isMobileView && (
             <>
               <div className="carousel-container">
-                <CircularSlider onActiveItemChange={handleActiveItemChange} />
+                <CircularSlider
+                  items={contentData}
+                  onActiveItemChange={handleActiveItemChange}
+                />
               </div>
               <div
                 className="col-md-6 d-flex"
                 style={{ justifyContent: "center" }}
               >
                 <img
-                  src={preloadedImages[activeItem.map]?.src || activeItem.map}
+                  src={preloadedImages[activeItem?.map] || activeItem?.map}
                   alt="Tour"
                   className="DMC-card-image-v"
                 />
               </div>
               <img
-                src={preloadedImages[activeItem.bg]?.src || activeItem.bg}
+                src={preloadedImages[activeItem?.bg] || activeItem?.bg}
                 className="DMC-bg-img"
-                alt=""
+                alt="Background"
               />
 
               <div style={{ height: "25rem" }}>
@@ -108,15 +126,15 @@ function DMCSection() {
                   className="font-primary"
                   style={{ fontSize: "28px", color: "white" }}
                 >
-                  {activeItem.title}
+                  {activeItem?.title}
                 </h1>
 
                 <p className="DMC-card-description font-secondary">
-                  {activeItem.description}
+                  {activeItem?.description}
                 </p>
                 <button
                   className="card-button"
-                  onClick={() => handleOnClick(`${activeItem.link}`)}
+                  onClick={() => handleOnClick(`${activeItem?.link}`)}
                 >
                   Learn More
                 </button>
@@ -131,33 +149,35 @@ function DMCSection() {
                 style={{ justifyContent: "left" }}
               >
                 <div className="carousel-container">
-                  <CircularSlider onActiveItemChange={handleActiveItemChange} />
+                  <CircularSlider
+                    items={contentData}
+                    onActiveItemChange={handleActiveItemChange}
+                  />
                 </div>
               </div>
               <div className="col-md-10 DMC-card-con">
                 <img
-                  src={preloadedImages[activeItem.map]?.src || activeItem.map}
+                  src={preloadedImages[activeItem?.map] || activeItem?.map}
                   alt="Tour"
                   className="DMC-card-image-v"
                 />
                 <img
-                  src={preloadedImages[activeItem.bg]?.src || activeItem.bg}
+                  src={preloadedImages[activeItem?.bg] || activeItem?.bg}
                   className="DMC-bg-img"
-                  key={activeItem.bg}
-                  alt={activeItem.bg}
+                  alt="Background"
                 />
-                <div className="DMC-card-content" key={activeItem.title}>
+                <div className={`DMC-card-content`} key={activeItem?.id}>
                   <h5 className="DMC-card-subtitle font-secondary">Explore</h5>
                   <hr style={{ width: "9%", marginTop: "-2px" }} />
                   <h1 className="font-primary" style={{ fontSize: "28px" }}>
-                    {activeItem.title}
+                    {activeItem?.title}
                   </h1>
                   <p className="DMC-card-description font-secondary">
-                    {activeItem.description}
+                    {activeItem?.description}
                   </p>
                   <button
                     className="DMC-card-button"
-                    onClick={() => handleOnClick(`${activeItem.link}`)}
+                    onClick={() => handleOnClick(`${activeItem?.link}`)}
                   >
                     Learn More
                   </button>

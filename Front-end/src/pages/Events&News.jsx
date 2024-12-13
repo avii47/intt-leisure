@@ -16,20 +16,16 @@ const ContactUsPage = () => {
     const sub = 'Latest Updates in Mindfulness and Travel';
     const aboutImg = ''
 
-    const { events, isLoading, error, fetchEvents } = useStore();
+    const { fetchEvents, fetchBlogs } = useStore();
   
     useEffect(() => {
       fetchEvents(); 
     }, [fetchEvents]);
+
+    useEffect(() => {
+      fetchBlogs(); 
+    }, [fetchBlogs]);
   
-    if (isLoading || error) {
-      return (
-        <div>
-          {isLoading && <p>Loading events...</p>}
-          {error && <p>Error: {error}</p>}
-        </div>
-      );
-    }
 
     return (
         <>

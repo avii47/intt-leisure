@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { createInquiry } from "../../api/inquiry";
 import { useMobileView } from "../../contexts/MobileViewContext";
 import emailjs from "emailjs-com";
 import Modal from "../BookNowPage/Modal";
@@ -28,6 +29,20 @@ function BookingForm({ defPackageName }) {
   const [showModal, setShowModal] = useState(false);
   const [errors, setErrors] = useState({});
   const [showBookingSummary, setShowBookingSummary] = useState(false);
+  const [status, setStatus] = useState({ success: null, message: '',});
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    mobile: "",
+    nationality: "",
+    arrivalDate: "",
+    departureDate: "",
+    adults: "",
+    kids: "",
+    pack: defPackageName || "",
+    message: "",
+  });
 
   const validateForm = () => {
     const newErrors = {};
@@ -43,31 +58,31 @@ function BookingForm({ defPackageName }) {
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
-
-  const saveDataToFirestore = async () => {
-    try {
-      await addDoc(collection(db, "Contact_Collection"), {
-        Name: name,
-        Email: email,
-        Mobile: mobile,
-        Nationality: nationality,
-        ArrivalDate: arrivalDate,
-        DepartureDate: departureDate,
-        Adults: adults,
-        Kids: kids,
-        Package: pack,
-        Message: message,
-      });
-    } catch (error) {
-      console.error("Error saving data to Firestore:", error);
-    }
-  };
+  
+  // const saveDataToFirestore = async () => {
+  //   try {
+  //     await addDoc(collection(db, "Contact_Collection"), {
+  //       Name: name,
+  //       Email: email,
+  //       Mobile: mobile,
+  //       Nationality: nationality,
+  //       ArrivalDate: arrivalDate,
+  //       DepartureDate: departureDate,
+  //       Adults: adults,
+  //       Kids: kids,
+  //       Package: pack,
+  //       Message: message,
+  //     });
+  //   } catch (error) {
+  //     console.error("Error saving data to Firestore:", error);
+  //   }
+  // };
 
   const handleBookingConfirm = async (e) => {
     e.preventDefault();
     if (!validateForm()) return;
 
-    await saveDataToFirestore();
+    // await saveDataToFirestore();
 
     const bookingDetails = {
       name,
@@ -91,6 +106,7 @@ function BookingForm({ defPackageName }) {
       )
       .then((response) => {
         console.log("Email sent successfully!", response.status, response.text);
+        saveToDatabase();
         setShowModal(true);
       })
       .catch((error) => {
@@ -105,7 +121,28 @@ function BookingForm({ defPackageName }) {
   const handleProceedClick = (e) => {
     e.preventDefault();
     if (validateForm()) {
+      setFormData({
+        name: name,
+        email: email,
+        mobile: mobile,
+        nationality: nationality,
+        arrivalDate: arrivalDate,
+        departureDate: departureDate,
+        adults: adults,
+        kids: kids,
+        pack: pack,
+        message: message,
+      });
       setShowBookingSummary(true);
+    }
+  };
+
+  const saveToDatabase = async (e) => {
+    try {
+      const data = await createInquiry(formData);
+      setStatus({ success: true, message: data.message });
+    } catch (error) {
+      setStatus({ success: false, message: error });
     }
   };
 
@@ -318,7 +355,7 @@ function BookingForm({ defPackageName }) {
                 onTabChange={handleTabChange}
               />
               {errors.pack && (
-                <small className="error-text package-error">
+                <small className="error-text package-error pkg-err">
                   {errors.pack}
                 </small>
               )}

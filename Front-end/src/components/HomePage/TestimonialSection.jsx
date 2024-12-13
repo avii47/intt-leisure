@@ -83,7 +83,7 @@ const TestimonialSection = () => {
           </div>
           <div className="col-md testimonial-text" ref={sectionRef2}>
             <div>
-              <h4 className='font-primary' style={{ fontSize: '28px' }}>Testimonial</h4>
+              <h4 className='font-primary' style={{  }}>Testimonial</h4>
               <hr style={{ width: '9.5rem', marginTop:'-2px' }} />
               <div>
                 <i class="fa-solid fa-star star"></i>

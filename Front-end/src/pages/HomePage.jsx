@@ -18,8 +18,7 @@ const MobileButton = lazy(() => import('../components/MobileBookNowButton'));
 const SectionLoader = ({ Component }) => {
     const [setRef, isInView] = useInView({ threshold: 0.25 });
 
-    const { services, isLoading, error, fetchServices } = useStore();
-    const { events, fetchEvents } = useStore();
+    const { fetchServices, fetchEvents, fetchDmc } = useStore();
   
     useEffect(() => {
       fetchEvents(); 
@@ -27,16 +26,20 @@ const SectionLoader = ({ Component }) => {
 
     useEffect(() => {
         fetchServices(); 
-      }, [fetchServices]);
+    }, [fetchServices]);
+
+    useEffect(() => {
+        fetchDmc(); 
+    }, [fetchDmc]);
   
-    if (isLoading || error) {
-      return (
-        <div>
-          {isLoading && <p>Loading events...</p>}
-          {error && <p>Error: {error}</p>}
-        </div>
-      );
-    }
+    // if (isLoading || error) {
+    //   return (
+    //     <div>
+    //       {isLoading && <p>Loading events...</p>}
+    //       {error && <p>Error: {error}</p>}
+    //     </div>
+    //   );
+    // }
 
     return (
         <div ref={setRef}>

@@ -55,10 +55,11 @@
     align-items: center;
     color: white;
     z-index: 2;
+    padding: 0 0.5rem;
   }
   
   .title {
-    font-size: 30px;
+    font-size: 1.875rem;
     letter-spacing: 1px;
   }
   
@@ -102,4 +103,22 @@
     opacity: 1;
     transform: translateX(0); 
 }
+
+@media only screen and (min-width: 768px) and 
+  (min--moz-device-pixel-ratio: 1.25) and (max--moz-device-pixel-ratio: 2),
+  (-o-min-device-pixel-ratio: 5/4) and (-o-max-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 1.25) and (-webkit-max-device-pixel-ratio: 2),
+  (min-device-pixel-ratio: 1.25) and (max-device-pixel-ratio: 2) {
+    .title {
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+    .duration {
+      font-size: 0.6rem;
+      font-weight: 200;
+    }
+    .description p{
+      font-size: 0.8rem;
+    }
+  }
   

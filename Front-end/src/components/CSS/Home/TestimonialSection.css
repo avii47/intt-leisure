@@ -22,11 +22,14 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 28px;
+    font-size: 1.75rem;
     opacity: 0;
     transition: all 1s ease;
     color: white;
     font-weight: 300;
+}
+.testimonial-text h4{
+    font-size: 1.75rem;
 }
 .star{
     margin-right: 1rem;
@@ -77,4 +80,20 @@
 .mobile-view .testimonial-video-container,
 .mobile-view .testimonial-text {
     animation: none; 
+}
+
+@media only screen and (min-width: 768px) and 
+  (min--moz-device-pixel-ratio: 1.25) and (max--moz-device-pixel-ratio: 2),
+  (-o-min-device-pixel-ratio: 5/4) and (-o-max-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 1.25) and (-webkit-max-device-pixel-ratio: 2),
+  (min-device-pixel-ratio: 1.25) and (max-device-pixel-ratio: 2)  {
+        .testimonial-iframe{
+            height: 21rem;
+        }
+        .testimonial-text{
+            font-size: 1.4rem;
+        }
+        .testimonial-text h4{
+            font-size: 1.6rem;
+        }
 }

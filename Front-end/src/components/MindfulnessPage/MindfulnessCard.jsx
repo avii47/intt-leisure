@@ -48,7 +48,7 @@ const ContentBlock = ({ image, title, text, imagePosition, onClick }) => {
             <img src={image} alt={`${title}-image`} style={{ borderRadius: '10px' }} loading='lazy'/>
           </div>
           <div className={`content-block__text ${imagePosition === 'left' ? 'left' : 'right'}`}>
-            <h6 className="font-secondary" style={{ fontWeight: '350', fontSize: '15px' }}>Explore</h6>
+            <h6 className="font-secondary" style={{ fontWeight: '350' }}>Explore</h6>
             <hr style={{ width: '3.7rem', marginTop: '-1px' }} />
             <h3 className="font-primary">{title}</h3>
             <p className="font-secondary">{text}</p>
@@ -59,7 +59,7 @@ const ContentBlock = ({ image, title, text, imagePosition, onClick }) => {
       {isMobileView && (
         <>
           <div className="content-block__text" style={{ width: '100%' }}>
-            <h6 className="font-secondary" style={{ fontWeight: '350', fontSize: '15px' }}>Explore</h6>
+            <h6 className="font-secondary" style={{ fontWeight: '350' }}>Explore</h6>
             <hr style={{ width: '3.7rem', marginTop: '-1px' }} />
             <h3 className="font-primary">{title}</h3>
           </div>

@@ -25,7 +25,7 @@
 }
 
 .tourSection-card-image-v {
-    height: 500px;
+    height: 33rem;
     object-fit: cover;
 }
 .mobile-view .tourSection-card-image-v {
@@ -48,15 +48,14 @@
 }
 
 .card-subtitle {
-    font-size: 16px;
     color: #555;
     margin-bottom: 8px;
 }
 
 .card-description {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.5;
-    margin-top: 20px;
+    margin-top: 1.25rem;
     color: #333;
 }
 
@@ -73,18 +72,18 @@
     color: #333;
 }
 .card-icon{
-    height: 40px;
+    height: 2.5rem;
 }
 
 .card-button {
-    width: 200px;
+    width: 12.5rem;
     padding: 10px 20px;
     background-color: #000;
     color: #fff;
     border-radius: 10px;
     border: none;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 /* Specific order for mobile */
@@ -101,4 +100,24 @@
 
 .mobile-view .tourSection-card-description {
     order: 3;
+}
+
+@media only screen and (min-width: 768px) and 
+  (min--moz-device-pixel-ratio: 1.25) and (max--moz-device-pixel-ratio: 2),
+  (-o-min-device-pixel-ratio: 5/4) and (-o-max-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 1.25) and (-webkit-max-device-pixel-ratio: 2),
+  (min-device-pixel-ratio: 1.25) and (max-device-pixel-ratio: 2)  {
+        .tourSection-card-image-v{
+            height: 28rem;
+        }
+        .card-icon{
+            height: 2.1rem !important;
+        }
+        .card-button{
+            scale: 0.85;
+            margin-left: -0.8rem;
+        }
+        .card-description{
+            font-size: 0.8rem;
+        }
 }

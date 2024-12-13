@@ -13,16 +13,52 @@
     overflow: hidden;
     position: relative;
 }
+/* Ultra-large screens (e.g., 4K displays) */
+@media (max-width: 2400px) {
+    .service-content-card {
+        flex: 1 1 30rem; /* Larger cards */
+        max-width: 50rem; /* Cap width */
+    }
+}
+
+/* Large screens (e.g., desktops and laptops) */
 @media (max-width: 2000px) {
     .service-content-card {
         flex: 1 1 25rem; 
-        max-width:45rem;
+        max-width: 45rem; /* Match container space */
     }
 }
+
+/* Medium screens (e.g., smaller desktops and tablets) */
 @media (max-width: 1600px) {
     .service-content-card {
         flex: 1 1 20rem; 
-        max-width:30rem;
+        max-width: 30rem;
+    }
+}
+
+/* Small screens (e.g., tablets and phones) */
+@media (max-width: 1200px) {
+    .service-content-card {
+        flex: 1 1 18rem; 
+        max-width: 25rem; /* Adjust for smaller cards */
+    }
+}
+
+/* Extra-small screens (e.g., phones) */
+@media (max-width: 768px) {
+    .service-content-card {
+        flex: 1 1 calc(100% - 2rem); /* Full-width minus margin */
+        max-width: 100%; /* Take full width */
+        margin: 0 auto; /* Center the card */
+    }
+}
+
+/* Ultra-small screens (e.g., very small phones) */
+@media (max-width: 480px) {
+    .service-content-card {
+        flex: 1 1 calc(100% - 1rem); /* Extra padding for smaller screens */
+        max-width: 100%;
     }
 }
 

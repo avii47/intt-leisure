@@ -21,6 +21,7 @@ const ServicesSection = () => {
   let sliderRef = useRef(null);
   const isMobileView = useMobileView();
   const { services } = useStore();
+  const excludedServices = services.filter(service => service.sub1 !== "Customize");
 
   if(!isMobileView) {
     cardLoader(serviceCardsRef, 'visible', 200, { threshold: 0.5 });
@@ -28,7 +29,7 @@ const ServicesSection = () => {
 
   const updateButtonVisibility2 = (currentSlide2) => {
     setShowLeftButton2(currentSlide2 > 0);
-    setShowRightButton2(currentSlide2 < services.length - 4);
+    setShowRightButton2(currentSlide2 < excludedServices.length - 4);
   };
 
   const handleServiceCardClick = (id) => {
@@ -131,15 +132,16 @@ const ServicesSection = () => {
                 }}
                 {...settings}
               >
-              {services.filter(content => content.sub1 !== "Customize").map((content, index) => (
-                <ServiceCard
-                  className={`service-card card card-item${index}`}
-                  key={index}
-                  content={content}
-                  ref={(el) => (serviceCardsRef.current[index] = el)}
-                  style={{ "--animation-order": index }}
-                  onClick={() => handleServiceCardClick(content.id)}
-                />
+              {excludedServices
+                .map((content, index) => (
+                  <ServiceCard
+                    className={`service-card card card-item${index}`}
+                    key={index}
+                    content={content}
+                    ref={(el) => (serviceCardsRef.current[index] = el)}
+                    style={{ "--animation-order": index }}
+                    onClick={() => handleServiceCardClick(content.id)}
+                  />
               ))}
             </Slider>
           </div>
